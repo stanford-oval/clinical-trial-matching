@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+.venv/
+venv/
+
+# Editor / OS
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Build / runtime artifacts
+*.db
+*.log
+mbench/
+checkpoints/
+run_logs/
+out_compose_*/
+retrieved_mappings*/
+trialgptref/
+*_out/
+# ...but the vendored matcher's prompts are INPUT, not output. The rule above
+# is for run artifacts (cmsrc_out/, match_out/); without this negation the
+# prompt snapshot the matcher loads is silently absent from a clone.
+!verdict/engine/prompts/prompt_out/
+!verdict/engine/prompts/prompt_out/**
+.ipynb_checkpoints/
+
+# === Large directories (artifacts that don't belong in the GitHub repo) ===
+# Historical backups and overnight runs
+backup/
+# cmsrc build artifacts (mine outputs, prompt-root caches)
+build/
+experiments/53_v2_full/
+# Counterfactual cache (re-derivable from matcher outputs; also contains >100MB files)
+experiments/counterfactual/05_self_faithfulness/ablation_full_corpus/out/
+# Stale archives
+**/_archive_preTruncFix/
+**/_archive_*/
+
+# Single files >100 MB (GitHub hard limit) — keep these explicit even if dir
+# is also ignored, in case the dir rule changes later.
+**/records.merged.jsonl
+
+# Big binary attachments unrelated to the paper
+*.zip
+*.tar.gz
+*.jar
+
+# Local matcher caches
+matchers/systems/*/__pycache__/
+
+# Snapshot/backup files (re-derivable from canonical files)
+*.bak
+*.pre_rerun.bak
+*.independent_backup
+**/backup_pre_*/
+**/_archive*/
+*.firstrun
+
+# Verbose / log scratch
+*.log
+**/lm_only_*.log
+
+# Stale experiment data outside the canonical set
+matchers/systems/aegis/rationales_v9_clean.jsonl
+matchers/systems/aegis/rationales_v9_arbiter_templated.jsonl
+matchers/systems/single_shot_llm/v5_verbose.jsonl
+matchers/systems/single_shot_llm/v5_verbose_v2_templated.jsonl
+matchers/systems/single_shot_llm/lm_only_V5_TWO_STEP_templated.jsonl
+matchers/systems/shahlab/rerun_parser_fix.jsonl
+
+# typed_policy: per-pair raw mining cache (consolidated into observed_values_strict.jsonl)
+experiments/typed_policy/data/mine_out/

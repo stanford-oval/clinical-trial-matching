@@ -1,0 +1,99 @@
+[project]
+name = "oval-clinical-trial-matcher"
+version = "0.2.0"
+description = "Stanford OVAL Clinical Trial Matcher: constraint-satisfaction trial retrieval (SatIR) and auditable eligibility matching (VERDICT)"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+
+# Runtime deps, derived from the actual imports (see scripts/check_invariants.py
+# :: deps:declared-match-imports). requirements.txt is a pinned lock of one
+# working environment -- these are the real constraints.
+dependencies = [
+    "z3-solver>=4.12",        # the solver every SMT variant calls
+    "requests>=2.31",         # HTTP inference engines
+]
+
+[project.optional-dependencies]
+llm = [                        # hosted-model backends
+    "openai>=1.30",
+    "azure-identity>=1.19",
+    "azure-ai-inference>=1.0.0b9",
+    "dspy-ai>=2.5",
+]
+local = [                      # running an open-weight model on your own GPU
+    "torch>=2.2",
+    "transformers>=4.44",
+    "sentence-transformers>=3.0",
+]
+compile = [                    # the trial compile chain (verdict compile)
+    "ucumvert>=0.1",           # UCUM unit parsing in normalize_units
+    "pint>=0.23",              # unit conversion
+]
+search = ["elasticsearch>=8.13"]
+analysis = ["pandas>=2.2", "tqdm>=4.66", "psutil>=5.9", "numpy>=1.26", "scipy>=1.12"]
+viz = ["matplotlib>=3.8", "openpyxl>=3.1"]     # SatIR retrieval figures / workbooks
+nlp = ["nltk>=3.8"]                            # smt_matcher TrialGPT judge
+units = ["ucumvert>=0.1"]                      # UCUM unit normalisation (db_indexer)
+costing = ["tiktoken>=0.7"]                    # token accounting (trial_compiler)
+dev = ["pytest>=8.0"]
+all = [
+    "openai>=1.30", "azure-identity>=1.19", "azure-ai-inference>=1.0.0b9",
+    "dspy-ai>=2.5", "torch>=2.2", "transformers>=4.44",
+    "sentence-transformers>=3.0", "elasticsearch>=8.13",
+    "pandas>=2.2", "tqdm>=4.66", "psutil>=5.9", "numpy>=1.26", "scipy>=1.12",
+    "matplotlib>=3.8", "openpyxl>=3.1", "nltk>=3.8",
+    "ucumvert>=0.1", "tiktoken>=0.7",
+]
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["verdict_cli", "satir_cli"]
+
+[tool.setuptools.packages.find]
+include = [
+    # public APIs
+    "satir*",
+    "verdict*",
+    # VERDICT
+    "matchers*",
+    "verbalizer*",
+    "rationale_generators*",
+    "counterfactual_modifier*",
+    # shared / SatIR
+    "smt_core*",
+    "db_indexer*",
+    "sql_retrieval*",
+    "smt_matcher*",
+    "matching_batch*",
+    "trial_compiler*",
+    "patient_compiler*",
+    "db_indexer*",
+    "sql_retrieval*",
+    "smt_matcher*",
+]
+exclude = [
+    "*.prompts*",
+    "*.prompt*",
+    "*.mbench*",
+    "*.checkpoints*",
+    "*.run_logs*",
+]
+
+[project.scripts]
+verdict = "verdict_cli:main"
+satir = "satir_cli:main"
+compile-trial = "trial_compiler.cli:main"
+compile-patient = "patient_compiler.cli:main"
+index-db = "db_indexer.cli:main"
+match-trial = "smt_matcher.cli:main"
+
+[tool.pytest.ini_options]
+# Default `pytest` runs only the fast, hermetic unit suite. The scripts at
+# tests/*.py are service-level (Elasticsearch, Snowstorm, a built trial.db)
+# and are run explicitly, e.g. `python tests/test_end_to_end.py`; collecting
+# them by default would fail on any machine without those services.
+testpaths = ["tests/unit"]
+addopts = "-q"

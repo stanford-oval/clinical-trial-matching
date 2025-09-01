@@ -1,0 +1,26 @@
+Stanford OVAL Clinical Trial Matcher
+Copyright 2026 The Board of Trustees of the Leland Stanford Junior University
+
+This product includes software developed at the Stanford Open Virtual
+Assistant Lab (OVAL) in collaboration with Mayo Clinic.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Evaluation corpora are third-party and carry their own terms; see DATA.md.
+
+--------------------------------------------------------------------------
+Third-party material
+--------------------------------------------------------------------------
+
+None. This repository contains no third-party source.
+
+TrialGPT (NCBI/NLM) was previously vendored here as a comparison baseline and
+has been removed; see docs/MATCHERS.md, "Why the TrialGPT baseline is not
+shipped". It is still cited as prior work in prose, which requires no notice.
+
+Evaluation corpora remain third-party and carry their own terms; see
+docs/DATA.md.

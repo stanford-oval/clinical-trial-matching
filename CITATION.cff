@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+title: Clinical Trial Matcher
+message: If you use this software, please cite it as below.
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/zikai-zhou/clinical-trial-matching"
+authors:
+  - given-names: Zikai
+    family-names: Zhou
+  - given-names: Yufei
+    family-names: Jin
+  - given-names: Yilin
+    family-names: Xu
+  - given-names: Chieh-Ju
+    family-names: Chao
+    name-suffix: MD
+  - given-names: Yu-Chiang
+    family-names: Wang
+    name-suffix: MD
+  - given-names: Monica
+    family-names: Lam
+    name-particle: S.
+preferred-citation:
+  type: article
+  title: "Accountable AI with Grounded, Faithful, Consistent, Actionable Rationales: A Case Study in Clinical Trial Matching with VERDICT"
+  year: 2026
+  journal: "arXiv preprint arXiv:2609.03366"
+  authors:
+    - given-names: Zikai
+      family-names: Zhou
+    - given-names: Yufei
+      family-names: Jin
+    - given-names: Yilin
+      family-names: Xu
+    - given-names: Yu-Chiang
+      family-names: Wang
+    - given-names: Chieh-Ju
+      family-names: Chao
+    - given-names: Monica
+      family-names: Lam
+      name-particle: S.
+references:
+  - type: article
+    title: "SatIR: Scalable High-Recall Constraint-Satisfaction-Based Information Retrieval for Clinical Trials Matching"
+    year: 2026
+    journal: "arXiv preprint arXiv:2604.08849"
+    authors:
+      - given-names: Zikai
+        family-names: Zhou
+      - given-names: Yufei
+        family-names: Jin
+      - given-names: Yilin
+        family-names: Xu
+      - given-names: Yu-Chiang
+        family-names: Wang
+      - given-names: Chieh-Ju
+        family-names: Chao
+      - given-names: Monica
+        family-names: Lam
+        name-particle: S.
