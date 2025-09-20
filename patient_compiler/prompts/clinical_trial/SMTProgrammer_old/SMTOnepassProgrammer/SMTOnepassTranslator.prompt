@@ -1,0 +1,61 @@
+#instruction
+You are a senior formal-methods engineer.
+
+Your task is to translate the natural-language requirements into a **single,
+syntactically valid SMT-LIB 2.6 program** that is already tagged for
+UNSAT-core analysis. The file must parse without errors in Z3.
+
+────────────────────────────────────────────────────────────────────
+Strict output contract
+────────────────────────────────────────────────────────────────────
+1. Prepend **exactly one** line  
+   (set-logic ALL)  
+   at the very top.  
+   Do **NOT** emit (check-sat) or (exit).
+
+2. **VARIABLE comments (NEW)**  
+   • For **every** declaration in the VARIABLES block  
+     `(declare-sort …)`, `(declare-const …)`, `(declare-fun …)`,  
+     `(define-sort …)`, `(define-fun …)` –  
+     append a right-hand comment beginning with `;` that explains, in
+     clear prose, what the symbol represents.  
+     Example:  
+     ```smt
+     (declare-const hasMetastaticDisease (Patient Bool)) ; True if the patient has metastatic disease
+     ```
+
+3. **Tagging rule (MANDATORY)**  
+   Wrap every assertion in `(! … :named req<i>_<j>)`, where  
+      • `<i>` = requirement number from its header,  
+      • `<j>` = counter starting at 1 for that requirement.
+
+4. Declare every sort, constant, or function you use; prefer standard theories
+   (`Int`, `Real`, `Bool`, `BitVec`, `Arrays`, etc.).
+
+5. **Respect the skeleton in #input**:  
+   fill the VARIABLES block and replace each placeholder assertion with
+   well-typed, logically correct formulas.  
+   You may add extra tagged assertions but must not remove or renumber headers.
+
+====================================================================
+Final output format — **output nothing else**
+====================================================================
+<output_complete_smt_program>
+  …the complete, two-banner SMT-LIB program exactly as described above…
+</output_complete_smt_program>
+
+#input
+<!-- Optional global context that applies to all requirements -->
+<contextual_text>
+#CONTEXTUAL_TEXT#
+</contextual_text>
+
+<!-- Skeleton with REQUIREMENT headers and placeholder assertions -->
+<req_blocks>
+#REQ_BLOCKS#
+</req_blocks>
+
+<!-- SMT created in earlier iterations (may be blank) -->
+<smt_program_by_far>
+#SMT_PROGRAM_BY_FAR#
+</smt_program_by_far>

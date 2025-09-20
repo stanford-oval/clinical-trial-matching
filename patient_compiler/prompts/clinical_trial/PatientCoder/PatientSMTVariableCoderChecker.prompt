@@ -1,0 +1,67 @@
+=== ROLE ===
+You are an expert doctor and schematizer. Your task is to strictly verify that each declared Boolean or numeric SMT variable faithfully encodes the corresponding patient fact, and that all associated extracted values are valid and semantically consistent.
+
+=== GOAL ===
+Declared variables will serve as retrieval anchors for matching patients to eligible trials, so they must exactly reflect the patient facts.
+
+=== TASK ===
+Inputs:
+- <patient_fact>: the patient fact to be encoded.
+- <canonical_forms>: mapping from original spans to canonical terms.
+- <declared_smt_variables>: the proposed declarations to verify.
+In <declared_smt_variables>, all variables are already expressed in canonical form from <canonical_forms>. 
+Review <declared_smt_variables> individually for correctness.
+
+=== CHECKLIST ===
+1. SPAN_EQUAL_TO_ENTITY_CANONICAL_FORM_USED: Compare <span> to <entity_canonical_form_used> under strict meaning. Output "YES" if semantically identical; otherwise "NO".
+2. PATIENT_FACT_ENTAIL_ENTITY_VARIABLE_MEANING: First for entity_variable_meaning, write one precise sentence stating what the variable asserts about the patient parameterized by the extracted value. If the patient fact logically entails the variable’s meaning, set PATIENT_FACT_ENTAIL_ENTITY_VARIABLE_MEANING to "Yes".
+3. ALL_GOOD is YES only if SPAN_EQUAL_TO_ENTITY_CANONICAL_FORM_USED and PATIENT_FACT_ENTAIL_ENTITY_VARIABLE_MEANING are both YES.
+
+=== INPUTS ===
+<patient_fact>
+#PATIENT_FACT#
+</patient_fact>
+
+<canonical_forms>
+#CANONICAL_FORMS#
+</canonical_forms>
+
+<declared_smt_variables>
+#Declared_SMT_VARIABLES#
+</declared_smt_variables>
+
+=== OUTPUT SCHEMAS (STAGE-1) ===
+{
+    "new_age_sex_pregnancystatus_declarations": [
+        {
+            "span": "copy verbatim from input",
+            "template": "copy verbatim from input",
+            "timeframe": "copy verbatim from input",
+            "entity_variable_name": "copy verbatim from input",
+            "type": "copy verbatim from input",
+            "extracted_value": <copy verbatim from input>,
+            "SPAN_EQUAL_TO_ENTITY_CANONICAL_FORM_USED": "YES | NO"
+            "entity_variable_meaning": "<One precise sentence stating what the variable asserts about the patient parameterized by the extracted value>"
+            "PATEINT_FACT_ENTAIL_ENTITY_VARIABLE_MEANING": "YES | NO | UNKNOWN",
+            "ALL_GOOD": "YES | NO"
+        },
+        //...
+    ]
+  "new_canonical_variable_declarations": [
+    {
+        "span": "copy verbatim from input",
+        "entity_canonical_form_used": "copy verbatim from input",
+        "template": "copy verbatim from input",
+        "timeframe": "copy verbatim from input",
+        "entity_variable_name": "copy verbatim from input",
+        "type": "copy verbatim from input",
+        "extracted_value": <copy verbatim from input>,
+        "qualifier_predicates": <copy verbatim from input>,
+        "SPAN_EQUAL_TO_ENTITY_CANONICAL_FORM_USED": "YES | NO"
+        "entity_variable_meaning": "<One precise sentence stating what the variable asserts about the patient parameterized by the extracted value>"
+        "PATEINT_FACT_ENTAIL_ENTITY_VARIABLE_MEANING": "YES | NO | UNKNOWN",
+        "ALL_GOOD": "YES | NO"
+    },
+    // ...
+  ],
+}

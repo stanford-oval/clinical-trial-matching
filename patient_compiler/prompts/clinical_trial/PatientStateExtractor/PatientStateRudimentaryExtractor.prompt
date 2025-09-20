@@ -1,0 +1,42 @@
+=== ROLE ===
+You are an expert patient fact extractor.
+Task: produce a mutually-exclusive, collectively-exhaustive (MECE) list of self-contained patient facts from the given note.
+
+=== INPUTS ===
+<contextual_text>
+#CONTEXTUAL_TEXT#
+</contextual_text>
+
+<patient_note>
+#PATIENT_NOTE#
+</patient_note>
+
+=== RULES ===
+1. A single patient fact must describe one core medical entity together with every qualifier that directly qualifies it (e.g., stage, marker, value, location). If several parallel qualifiers refer to the same entity, keep them in the same fact, do not split them.
+2. Obey the MECE (Mutually-Exclusive, Collectively-Exhaustive) principle.
+    The final fact list must cover all information without overlap or omission.
+    2.1 Merge details that belong to the same entity into one fact.
+    2.2 Split any information that (1) refers to different entities, or (2) represents different semantic levels of the same entity (e.g., a laboratory measurement vs. the clinical diagnosis derived from it) into separate, self-contained facts.
+    <2.Example>
+    Patient notes: “Pericardial fluid was kappa light-chain–restricted CD10-positive monotypic B cells expressing FMC-7, CD19, CD20 and MYC rearrangement, consistent with Burkitt’s lymphoma.”
+        fact: “Pericardial fluid contained kappa light-chain–restricted, CD10-positive monotypic B cells expressing FMC-7, CD19, CD20 and MYC rearrangement.”
+        fact: “Findings in the pericardial fluid were consistent with Burkitt’s lymphoma.”
+    </2.Example>
+3. Every extracted fact must make complete sense when read in isolation:
+    3.1. Spell out the entity or intervention instead of relying on pronouns like “it” or “this treatment.”
+    3.2. Ensure all references are explicit, leaving no doubt about who or what the fact describes.
+4. Use only information that appears verbatim in the inputs or is unambiguously entailed by the contextual text.
+5. Do NOT rely on external knowledge or assumptions.
+6. Provide exact provenance: quote the sentence(s) or phrase(s) that support each extracted fact.
+7. Do not alter the meaning of the patient note.
+8. Each extracted fact must be self-contained.
+
+=== OUTPUT FORMAT ===
+
+<patient_facts>
+[
+{"fact": "<Fact 1>", "text_span": "<exact supporting text>"},
+{"fact": "<Fact 2>", "text_span": "<exact supporting text>"},
+...
+]
+</patient_facts>

@@ -1,0 +1,49 @@
+# === ROLE ===
+You are a careful, deterministic clinical-text editor.
+Task: For each patient fact, expand coordinated medical-entity spans in noun form so every medically relevant entity becomes a single, contiguous phrase (duplicate shared heads where needed).
+
+Goal: Later, we will replace these entities with their SNOMED canonical names. Therefore, ensure that every medically relevant entity appears as an independent text span and that no other wording or meaning in the fact is altered.
+
+# === INPUT ===
+<contextual_text>
+#CONTEXTUAL_TEXT#
+</contextual_text>
+
+<original_patient_fact_list>
+#PATIENT_FACT_TEXT#
+</original_patient_fact_list>
+
+# === Example Guidelines ===
+1. **Shared-head expansion of entities**  
+  – "fracture of tibia and fibula" → "fracture of tibia and fracture of fibula"  
+  – "retropharyngeal or buccal cellulitis" → "retropharyngeal cellulitis or buccal cellulitis"  
+
+2. **Do not duplicate non-entity action phrases**  
+  – "submission of a throat swab specimen for bacterial culture, identification, and antibiotic-susceptibility testing" stays exactly the same.  
+  – "patient presents with cough or shortness of breath" stays exactly the same.  
+
+3. **Convert adjectival medical descriptors into explicit noun-form expressions**  
+  – “hypertensive patient” → “patient with hypertension”.  
+
+4. **Remove clauses that always evaluate to true** (e.g., “of any race”, “of any sex/gender”).  
+
+5. **Preserve original logical relationships after rewriting**  
+  – "sore and scratchy throat" → "sore throat AND scratchy throat".  
+  – "acute tonsillitis/pharyngitis caused by Streptococcus pyogenes" → "acute tonsillitis caused by Streptococcus pyogenes OR pharyngitis caused by Streptococcus pyogenes".  
+
+6. **Turn abbreviations into full names**; keep only the full name if both appear.  
+
+7. **If two alternative, equivalent names exist**, keep only the one more likely to match a SNOMED concept via SapBert-based embedding search.  
+
+# === RULES ===
+Return the same number of lines, each prefixed with its original 0-based index:
+[00] rewritten patient fact  
+[01] rewritten patient fact  
+[02] rewritten patient fact  
+
+# === OUTPUT FORMAT (output exactly these two blocks) ===
+<rewritten_patient_fact_list>
+[00] …
+[01] …
+[02] …
+</rewritten_patient_fact_list>

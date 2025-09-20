@@ -1,0 +1,37 @@
+# instruction
+You are an expert SMT-LIB engineer and Z3 debugger.
+
+Below are (a) the program producing an solver error or unsat result, (b) the details of the solver result.  Produce **only JSON** describing the
+minimal edits required so the whole program becomes `{target_outcome}` while making sure each requirement (see the comment to the right to each assertion) is still correctly implemented (not losing any semantic meaning).
+Prioritize preservation of semantic meanings above the consiceness of the modifcations.
+
+## Validated program so far
+```smt2
+{whole_program}
+```
+
+## Last solver result
+    • status      : {status}
+    • message     : {message}
+    • unsat_core  : {unsat_core}
+        - Do not address UNSAT core simply by removing conflicting requirements; Make sure that each requirement (annotated as comments) keeps their semantic meaning in the SMT requirements.
+
+## Strategy → Outcome log (newest first – max 5)
+{strategy_map}
+
+## Schema for ONE edit batch
+{schema_block}
+
+
+## Operator semantics reminder (DO NOT VIOLATE)
+    • create   – new symbol/sort/assertion that didn’t exist before.
+    • replace  – *complete* re-declaration of an existing target.  Use this
+                to extend an enum (add variants) while keeping its name.
+    • remove   – delete the target altogether.
+
+## Constraints
+    1. Return either a single object **or** a list of objects, BUT NO
+        extra text or markdown fencing.
+    2. For `"target.kind":"assertion"` you **must** give an
+        `"assert_tag": "R<req>_<k>"` that identifies which requirement
+        the assertion belongs to.

@@ -1,0 +1,211 @@
+# === ROLE ===
+You are a Medical Entity Recognizer.
+Task: Our goal is to optimize for medical entity recognition recall. Place all entity you recognize from text into "entity_name" and record the contiguous span you recognized this entity from in "extracted_span". Then return ONLY a JSON array specifying the surface / text span of each entity and the explanation of what it (potentially) means as an entity.
+
+# === INPUT ===
+<criterion>
+#REQUIREMENT_TEXT#
+</criterion>
+
+
+# === EXTRACTION RULES ===
+1. Our goal is to optimize for entity recognition recall. Identify as many entities as possible.
+2. Again, our goal is to optimize for entity recognition recall. For situations under which multiple entities have overlapping text spans, extract all of them.
+3. Place all entity you recognize from text into "entity_name" and record the contiguous span you recognized this entity from in "extracted_span", exactly as the output format. The definition to entity is the smallest contiguous span needed to completely identify this identity.
+4. If you know the concept name is in SMOWMED, then put down the snowmed concept as the entity name.
+5. Medical entities we want to extract include but are not limited to drugs, procedures, symptoms, diseases, organisms, anatomy/body structure, events, specimen, and substance.
+6. For each extracted entity, explain what it potentially means as a medical entity.
+7. Make sure that you keep the extracted entity surface AS IS. Do not modify, paraphrase, or abbreviate any extracted entity.
+8. Comparators (e.g., greater than, equal to) and numerical values should usually not appear in any extracted surface string unless they are necessary components of an entity name.
+  8.a. e.g., from "Patients aged ≥18 years and ≤90 years presenting with dysphagia or presenting with food impaction.", we should not extract "Patients aged ≥18 years and ≤90 years" or "aged ≥18 years"; rather, we should only extract "dysphagia" and "food impaction".
+9. Phrases such as "diagnosis of", "patients with", "clinical suspicion of", "history of", “prior", "current", "in the future", and "ability to" are redundant information and do not help to form seperate meaninful entities.
+  9.a. e.g., from requirement "Clinical diagnosis of hypertension.", we should only extract "hypertension", not "clinical diagnosis of hypertension".
+  9.b. e.g., from requirement "Patients with the ability to undergo esophagogastroduodenoscopy and the ability to undergo esophageal biopsies.", we should not extract "Patients with the ability to undergo esophagogastroduodenoscopy", "ability to undergo esophagogastroduodenoscopy", or "ability to undergo esophageal biopsies"; instead, we should extract "esophagogastroduodenoscopy", "esophageal biopsies", and "biopsies".
+  9.c. e.g., from "Patients aged ≥ 18 years of either sex.", you should extract nothing. e.g., from "Age of the patient is 65 years or older.", you should extract nothing.
+10. Do not extract anything sheerly related to gender, informed consent, study procedures, study restrictions, pregnancy status, ability to get pregnant, or voluntariness of participation.
+  10.a., e.g., from requirement "Patient and/or patient’s parents or patient’s guardian signed an informed consent form.", you should extract nothing.
+11. Do not extract standalone obvious qualifiers (e.g., ECOG performance status, NYHA classes)
+  11.a., e.g., from "chronic heart failure classified as New York Heart Association class III", we should only extract "chronic heart failure" and "heart failure", not "New York Heart Association class III".
+
+
+# === EXTRACTION EXAMPLES ===
+<example_1>
+  Input:
+    <example_input>
+    "Contradiction to esophagogastroduodenoscopy or contradiction to esophageal biopsies, such as presence of Boerhaave's syndrome, or history of bleeding disorder, or elevated international normalized ratio (INR)."
+    </example_input>
+  Identified Entities:
+    <identified_medical_entities>
+    [
+      {"entity_name": "contradiction to esophagogastroduodenoscopy", "extracted_span": "Contradiction to esophagogastroduodenoscopy"},
+      {"entity_name": "esophagogastroduodenoscopy", "extracted_span": "esophagogastroduodenoscopy"},
+      {"entity_name": "contradiction to esophageal biopsies", "extracted_span": "contradiction to esophageal biopsies"},
+      {"entity_name": "esophageal biopsy", "extracted_span": "esophageal biopsies"},
+      {"entity_name": "biopsy", "extracted_span": "biopsies"},
+      {"entity_name": "Boerhaave's syndrome", "extracted_span": "Boerhaave's syndrome"},
+      {"entity_name": "bleeding disorder", "extracted_span": "bleeding disorder"},
+      {"entity_name": "International Normalized Ratio raised", "extracted_span": "elevated international normalized ratio (INR)"},
+      {"entity_name": "International normalized ratio", "extracted_span": "international normalized ratio (INR)"},
+    ]
+    </identified_medical_entities>
+</example_1>
+
+
+<example_2>
+  Input:
+    <example_input>
+    "Clinical diagnosis of acute tonsillitis caused by Streptococcus pyogenes and clinical diagnosis of acute pharyngitis caused by Streptococcus pyogenes."
+    </example_input>
+  Identified Entities:
+    <identified_medical_entities>
+    [
+      {"entity_name": "Acute staphylococcal tonsillitis", "extracted_span": "acute tonsillitis caused by Streptococcus pyogenes"},
+      {"entity_name": "acute tonsillitis", "extracted_span": "acute tonsillitis"},
+      {"entity_name": "tonsillitis", "extracted_span": "tonsillitis"},
+      {"entity_name": "streptococcus pyogenes infection", "extracted_span": "Streptococcus pyogenes"},
+      {"entity_name": "acute infective pharyngitis caused by Streptococcus", "extracted_span": "acute pharyngitis caused by Streptococcus pyogenes"},
+      {"entity_name": "acute pharyngitis", "extracted_span": "acute pharyngitis"},
+      {"entity_name": "pharyngitis", "extracted_span": "pharyngitis"}
+    ]
+    </identified_medical_entities>
+</example_2>
+
+
+<example_3>
+  Input:
+    <example_input>
+    "Adequate liver function defined as serum bilirubin <1.5x upper level of normal (ULN), aspartate aminotransferase (AST) <2.5x ULN, and alanine aminotransferase (ALT) <3x ULN, with ULN defined as per institutional standard."
+    </example_input>
+  Identified Entities:
+    <identified_medical_entities>
+    [
+      {"entity_name": "liver normal", "extracted_span": "Adequate liver function"},
+      {"entity_name": "Serum bilirubin level", "extracted_span": "serum bilirubin"},
+      {"entity_name": "bilirubin", "extracted_span": "bilirubin"},
+      {"entity_name": "AST - aspartate transaminase", "extracted_span": "aspartate aminotransferase (AST)"},
+      {"entity_name": "ALT - alanine aminotransferase", "extracted_span": "alanine aminotransferase (ALT)"}
+    ]
+    </identified_medical_entities>
+</example_3>
+
+
+<example_4>
+  Input:
+    <example_input>
+      "Patients with standard analytical parameters defined by: leukocyte count ≥ 3000 cells/μL, neutrophil count ≥ 1500 cells/μL, platelet count ≥ 100,000 cells/μL, aspartate aminotransferase (AST) level ≤ 1.5 times the standard institutional range, alanine aminotransferase (ALT) level ≤ 1.5 times the standard institutional range, and creatinine level ≤ 1.5 mg/dL."
+    </example_input>
+  Identified Entities:
+    <identified_medical_entities>
+    [
+      {"entity_name": "standard analytical parameters", "extracted_span": "standard analytical parameters"},
+      {"entity_name": "white blood cell count", "extracted_span": "leukocyte count"},
+      {"entity_name": "Leukocyte component of blood", "extracted_span": "leukocyte"},
+      {"entity_name": "neutrophil count", "extracted_span": "neutrophil count"},
+      {"entity_name": "platelet count", "extracted_span": "platelet count"},
+      {"entity_name": "Platelet component of blood", "extracted_span": "platelet"},
+      {"entity_name": "AST - aspartate transaminase", "extracted_span": "aspartate aminotransferase (AST)"},
+      {"entity_name": "ALT - alanine aminotransferase", "extracted_span": "alanine aminotransferase (ALT)"},
+      {"entity_name": "creatinine level", "extracted_span": "creatinine level"},
+      {"entity_name": "creatinine", "extracted_span": "creatinine"}
+    ]
+    </identified_medical_entities>
+</example_4>
+
+
+<example_5>
+  Input:
+    <example_input>
+    "The results of the patient's pap smear showed positive human papillomavirus results (indicating the presence of human papillomavirus DNA in the cervical sample)."
+    </example_input>
+  Identified Entities:
+    <identified_medical_entities>
+    [
+      {"entity_name": "pap smear", "extracted_span": "pap smear"},
+      {"entity_name": "High risk human papillomavirus positive", "extracted_span": "positive human papillomavirus results"},
+      {"entity_name": "Human papillomavirus DNA", "extracted_span": "human papillomavirus DNA"},
+      {"entity_name": "Human papillomavirus", "extracted_span": "human papillomavirus"},
+    ]
+    </identified_medical_entities>
+</example_5>
+
+
+<example_6>
+  Input:
+    <example_input>
+    "Male patients OR female patients."
+    </example_input>
+  Identified Entities (none!):
+    <identified_medical_entities>
+    []
+    </identified_medical_entities>
+</example_6>
+
+
+<example_7>
+  Input:
+    <example_input>
+    "Clinical diagnosis of at least one risk factor, such as clinical diagnosis of diabetes, clinical diagnosis of smoking habit, clinical diagnosis of lipid metabolism abnormality, clinical diagnosis of history of ischemic heart disease (IHD), clinical diagnosis of history of cerebrovascular disease, clinical diagnosis of obesity with body mass index (BMI) > 25, clinical diagnosis of chronic heart failure classified as New York Heart Association (NYHA) class II or NYHA class III, or clinical diagnosis of electrocardiogram (ECG) abnormality showing left ventricular hypertrophy (LVH)."
+    </example_input>
+  Identified Entities (none!):
+
+    <identified_medical_entities>
+      [
+      {"entity_name": "risk factor", "extracted_span": "risk factor"},
+      {"entity_name": "diabetes", "extracted_span": "diabetes"},
+      {"entity_name": "risk factor", "extracted_span": "risk factor"},
+      {"entity_name": "smoking", "extracted_span": "smoking habit"},
+      {"entity_name": "lipid metabolism disorder", "extracted_span": "lipid metabolism abnormality"},
+      {"entity_name": "ischemic heart disease", "extracted_span": "ischemic heart disease (IHD)"},
+      {"entity_name": "cerebrovascular disease", "extracted_span": "cerebrovascular disease"},
+      {"entity_name": "obesity", "extracted_span": "obesity"},
+      {"entity_name": "BMI - Body mass index", "extracted_span": "BMI"},
+      {"entity_name": "chronic heart failure", "extracted_span": "chronic heart failure"},
+      {"entity_name": "ECG abnormality showing left ventricular hypertrophy", "extracted_span": "ECG abnormality showing left ventricular hypertrophy"},
+      {"entity_name": "abnormal ECG", "extracted_span": "ECG abnormality"},
+      {"entity_name": "left ventricular hypertrophy", "extracted_span": "left ventricular hypertrophy (LVH)"},
+      ]
+    </identified_medical_entities>
+</example_7>
+
+
+<example_8>
+  Input:
+    <example_input>
+    "Adults aged ≥18 years weighing ≤150 kg."
+    </example_input>
+  Identified Entities (none!):
+    <identified_medical_entities>
+    []
+    </identified_medical_entities>
+</example_8>
+
+<example_9>
+  Input:
+    <example_input>
+    "The patient has positive urine protein."
+    <example_input>
+  Identified Entities (none!):
+    <identified_medical_entities>
+      [
+        {"entity_name": "urine", "extracted_span": "urine"},
+        {"entity_name": "protein", "extracted_span": "protein"},
+        {"entity_name": "positive urine protein", "extracted_span": "positive urine protein"},
+        {"entity_name": "urine protein", "extracted_span": "urine protein"},
+      ]
+    </identified_medical_entities>
+</example_9>
+
+
+
+
+# === OUTPUT FORMAT ===
+
+<identified_medical_entities>
+{
+  [
+    {"entity_name": <entity_name1>, extracted_span: <exact_span1>},
+    {"entity_name": <entity_name2>, extracted_span: <exact_span2>},
+    {"entity_name": <entity_name3>, extracted_span: <exact_span3>},
+  ]
+}
+</identified_medical_entities>

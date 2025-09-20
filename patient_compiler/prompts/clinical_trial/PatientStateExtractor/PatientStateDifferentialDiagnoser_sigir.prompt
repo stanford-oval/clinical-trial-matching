@@ -1,0 +1,125 @@
+# === ROLE ===
+You are an experienced clinician writing a structured DIFFERENTIAL DIAGNOSIS from a full patient note.
+
+# === PATIENT NOTE ===
+#PATIENT_NOTE#
+
+# === TASK ===
+Produce a differential diagnosis: a concise, ranked shortlist of diagnoses that may be derived from the patient note
+For EACH diagnosis include: rationale, brief supporting snippets, calibrated confidence, and a status bucket
+from the set {"almost_certain","likely","possible"} — no other categories.
+
+# === GUIDELINES ===
+1. Come up with all diagnoses that may be reasonably derived from the patient note. The diagnoses should be conrete diseases, syndromes, or conditions.
+2. Infer potential diagnoses only with information present in the patient note. Do not invent new information about the patient.
+3. For each diagnosis, explicate the supporting evidence in the "supporting_evidence" field.
+4. For each diagnosis, give a confidence score within [0, 1]. For your reference, a diagnosis is almost certain if we give a confidence greater than 0.80, likely if the confidence score is between 0.60 and 0.80, and possible if confidence is below 0.60.
+5. For each diagnosis, put down two fields for temporal context. (1) confirmable_latest_start_time: this refers to the time at which the onset of disease/syndrome/condition could have occured, given all currently available evidence. (2) confirmable_earliest_end_time: this refers to the earliest timepoint at which the disease/syndrome/condition is resolved or ended, given all currently available evidence. The current time "now" is defined as the time that the written prescreen note and patient note is captured.
+  5.1. In most cases, the start and end time boundary is [-inf, 0.0], indicating the disease/syndrome/condition could happen in all possible time range in the past. This is always true unless the patient notes have clear evidence supporting a specific start or end time of the disease/syndrome/condition. In other words, if there's no explicit temporal evidence, the start_time should always be -Inf and end_time time is 0.0. Record the reason you choose this timeframe in field "timeframe_rationale".
+  5.2. NEVER assign a future time. For past diagnoses that are no longer active, use the time when the condition was last documented as resolved or no longer present.
+  5.3. Special cases for confirmable_latest_start_time & confirmable_earliest_end_time: if the temporal_direction is now, set temporal_magnitude to 0.0. If you are uncertain about temporal units, set it to "hours".
+6. For both confirmable_latest_start_time and confirmable_earliest_end_time, decide whether it is inclusive or exclusive based on the clinical context and how the condition is described.
+  - A bound is inclusive if the condition definitely holds at that time (e.g., “currently has diabetes,” “symptoms present as of now”).
+  - A bound is exclusive if the condition ended before or started after that time (e.g., “had a history of stroke,” meaning no longer present now).
+7. Make sure confirmable_latest_start_time is not later than confirmable_earliest_end_time.
+8. Try your best to align your diagnoses with terms in SNOMED.
+9. Note that you should only do diagnosis what the patient has right now (at the time the note) or in the history (before the note is written).
+10. If both more specific and more general findings may be derived, output BOTH! We want as many diagnosis about this patient as possible.
+
+
+# === TEMPORAL FIELDS GRAMMAR ===
+TEMPORAL FIELDS — STRICT GRAMMARS (no spaces, lowercase)
+- "confirmable_latest_start_time" and "confirmable_earliest_end_time" (REQUIRED, in following format):
+    {"temporal_direction": "past" | "now ", 
+    "temporal_magnitude": "<value: Real | "Inf">", 
+    "units": "<temporal_unit_in_plural>", 
+    "inclusive": true | false}
+- Units allowed for temporal fields:
+    minutes | hours | days | weeks | months | years
+
+
+# === OUTPUT FORMAT ===
+- Return ONLY a JSON array wrapped inside the tags <diagnosis_list> ... </diagnosis_list>.
+- For each item, use keys exactly as:
+    {
+      "diagnosis": "<string>",
+      "confidence": <float in [0,1]>,
+      "supporting_evidence": ["<short snippet 1>", "..."],
+      "rationale": " ... rationale why we come to this diagnosis ...",
+      "confirmable_latest_start_time": "<see grammar>",
+      "confirmable_earliest_end_time": "<see grammar>",
+      "timeframe_rationale": " ... rationale why this time window applies to this diagnosis ...",
+    }
+- Do NOT include any extra keys, comments, or trailing commas.
+
+
+
+# === EXAMPLE OUTPUT ===
+<diagnosis_list>
+[
+  {
+    "diagnosis": "Alzheimer disease",
+    "confidence": 0.88,
+    "supporting_evidence": [
+      "progressive memory impairment over several years",
+      "word-finding difficulty",
+      "impaired activities of daily living"
+    ],
+    "rationale": "Insidious, progressive amnestic syndrome with functional decline is most consistent with AD.",
+    "confirmable_latest_start_time": {
+      "temporal_direction": "past", 
+      "temporal_magnitude": "Inf", 
+      "units": "hours", 
+      "inclusive": true
+    },
+    "confirmable_earliest_end_time": {
+      "temporal_direction": "now", 
+      "temporal_magnitude": "0.0", 
+      "units": "hours", 
+      "inclusive": true
+    }
+  },
+  {
+    "diagnosis": "Frontotemporal dementia",
+    "confidence": 0.65,
+    "supporting_evidence": [
+      "personality/behavior change",
+      "disinhibition noted by family"
+    ],
+    "rationale": "Early behavioral and executive changes raise concern for FTD despite overlapping cognitive symptoms.",
+    "confirmable_latest_start_time": {
+      "temporal_direction": "past",
+      "temporal_magnitude": "Inf",
+      "units": "hours",
+      "inclusive": true
+    },
+    "confirmable_earliest_end_time": {
+      "temporal_direction": "now",
+      "temporal_magnitude": "0.0",
+      "units": "hours",
+      "inclusive": true
+    }
+  },
+  {
+    "diagnosis": "Major depressive disorder (pseudodementia)",
+    "confidence": 0.42,
+    "supporting_evidence": [
+      "apathy and reduced initiative",
+      "sleep disturbance"
+    ],
+    "rationale": "Affective symptoms can mimic or exacerbate cognitive deficits; consider as a comorbid/alternative cause.",
+    "confirmable_latest_start_time": {
+      "temporal_direction": "past",
+      "temporal_magnitude": "Inf",
+      "units": "months",
+      "inclusive": true
+    },
+    "confirmable_earliest_end_time": {
+      "temporal_direction": "now",
+      "temporal_magnitude": 0.0,
+      "units": "hours",
+      "inclusive": true
+    }
+  }
+]
+</diagnosis_list>

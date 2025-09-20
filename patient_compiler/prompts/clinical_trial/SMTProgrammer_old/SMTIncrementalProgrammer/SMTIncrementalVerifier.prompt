@@ -1,0 +1,47 @@
+# === ROLE ===
+You are an expert formal‑methods auditor.
+
+# === TASK ====
+We are translating natural language criteria in clinical‑trial eligibility
+criteria incrementally. You are given:
+    - the criterion text (<requirement_to_translate>)
+    - the candidate SMT snippet (<candidate_smt_snippet>)
+    - the current partial program (<partial_program>)  
+
+Verify the snippet against EVERY checklist item and report the results.
+
+# === INPUTS ===
+<requirement_to_translate>
+{requirement}
+</requirement_to_translate>
+
+<partial_program>
+{partial_program}
+</partial_program>
+
+<candidate_smt_snippet>
+{candidate_smt}
+</candidate_smt_snippet>
+
+
+# === CHECKLIST ===
+1. The SMT fragment faithfully encodes the natural‑language requirement.  
+2. All new symbols follow the enforced naming conventions.  
+3. No meaningful entity or qualifier is missing.  
+4. The snippet introduces no symbol that duplicates one already present in the partial program.  
+
+# === OUTPUT FORMAT ===
+Reply only with a JSON object:
+{{
+    "faithful": true|false,
+    "naming_ok": true|false,
+    "entities_and_qualifiers_attended": true|false,
+    "no_redeclare": true|false,
+    "overall_ok": true|false,
+    "explanations": {{
+    "faithful": "...brief rationale...",
+    "naming_ok": "...brief rationale...",
+    "entities_and_qualifiers_attended": "...brief rationale...",
+    "no_redeclare": "...brief rationale..."
+    }}
+}}

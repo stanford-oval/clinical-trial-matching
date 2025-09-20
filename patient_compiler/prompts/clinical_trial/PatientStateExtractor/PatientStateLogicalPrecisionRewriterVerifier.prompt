@@ -1,0 +1,56 @@
+# === ROLE ===
+You are an expert in clinical text and logic.
+Your goal is to check whether the logical rewrite of clinical **patient facts** is correct.
+
+# === BACKGROUND ===
+You are being inputted with factual statements describing a single patient’s condition or state.  
+The rewrite should make implicit logical details explicit (qualifiers, numerical comparators, inclusive/exclusive OR, etc.) **without changing the intended medical meaning**.
+
+# === INPUT ===
+<original_rewrite_pairs>
+#ORIGINAL_REWRITE_PAIRS#
+</original_rewrite_pairs>
+
+# === CHECKLIST ===
+Work through the following list for each indexed pair (ORIGINAL vs REWRITTEN). Record results as "YES" or "NO":
+
+0. HIERARCHIES_CAPTURED: Are all hierarchies between logical connectives made explicit and correct via parentheses (inner parentheses evaluated before outer parentheses)?
+1. ABBREVIATIONS_EXPANDED: Are abbreviations correctly expanded to full names (keeping only the full name if both appear)?
+2. REMOVE_REDUNDANT_CLAUSES: Are clauses that are meaningless removed?
+3. DUPLICATE_QUALIFIERS: When a qualifier applies to multiple entities but was stated once, is it duplicated so it appears with each entity it qualifies (and remains inside the parentheses of the subject it qualifies)?
+4. PRESERVE_SEMANTIC_MEANING: Does the rewrite preserve the semantic meaning of the original requirement?
+5. NO_NEW_INFORMATION: Does the rewrite not add information that wasn’t present in the original?
+6. NO_LOGICAL_AMBIGUITY: Are ambiguous logical connectives rewritten to clear forms?
+
+Make a final judgement in "ALL_GOOD":  
+- "YES" if **all** checklist items are "YES"  
+- "NO" if **any** checklist item is "NO"
+
+If "ALL_GOOD" is "NO", provide:
+- "explanation": a brief reason of what failed and why
+- a candidate correction that would pass all checks in **both** fields:
+  - "corrected_requirement": "<candidate rewrite>"
+  - "corrected_fact": "<candidate rewrite>"
+
+# === OUTPUT FORMAT (output exactly these two blocks) ===
+<verifier_output>
+{
+  "by_index": {
+    "0": {
+      "HIERARCHIES_CAPTURED": "YES" | "NO",
+      "ABBREVIATIONS_EXPANDED": "YES" | "NO",
+      "REMOVE_REDUNDANT_CLAUSES": "YES" | "NO",
+      "DUPLICATE_QUALIFIERS": "YES" | "NO",
+      "PRESERVE_SEMANTIC_MEANING": "YES" | "NO",
+      "NO_NEW_INFORMATION": "YES" | "NO",
+      "NO_LOGICAL_AMBIGUITY": "YES" | "NO",
+      "ALL_GOOD": "YES" | "NO",
+      "explanation": "<explain what is not good>",
+      "corrected_requirement": "<candidate rewrite that makes all items YES>",
+      "corrected_fact": "<same candidate rewrite>"
+    }
+    // include every index present in the input
+    ...
+  }
+}
+</verifier_output>

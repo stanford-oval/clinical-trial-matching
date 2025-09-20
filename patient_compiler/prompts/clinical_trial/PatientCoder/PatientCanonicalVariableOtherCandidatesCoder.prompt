@@ -1,0 +1,278 @@
+=== ROLE ===
+You are an expert SMT engineer and doctor. Your task is to declare variables (Boolean and numeric) and qualifier variables needed to encode patient facts from a patient note. 
+
+=== TASK ===
+You will be given <patient_fact> and, for each extracted span, one candidate canonical form (candidate_entity_canonical_name) related to that span. A candidate may be broader, more specific, identical, related, or unrelated to the extracted_span (entity_name).
+For the candidate:
+Choose the most suitable template from the allowed templates based on the candidate’s type.
+Create a variable using the candidate_entity_canonical_name.
+Decide CAN_BE_INFERRED_FROM_PATIENT_FACT: set "YES" if the variable’s meaning exactly matches <patient_fact> or is unambiguously inferable from it; otherwise set "NO".
+Provide a concise reason explaining why the variable is / is not supported by <patient_fact>.
+
+=== INPUT DESCRIPTIONS===
+You will be given the following inputs:
+1. <patient_fact>: This is the source patient fact you should be doing variable codings for.
+2. <canonical_forms>: A JSON list of entities from <patient_fact> for which canonical forms were found.
+   2.1 Use "extracted_span" to identify the surface substring in <patient_fact>.
+   2.2 Use "candidate_entity_canonical_form" (exact string) to plug into {entity_canonical_form} in stems.
+   2.3 DO NOT use preferred terms anywhere. DO NOT invent or alter canonical forms.
+   2.4 Use "type" to guide which template(s) to use.
+   2.5 If multiple identical spans occur, consult "start" and "end" character offsets.
+
+=== INPUTS ===
+<patient_fact>
+#PATIENT_FACT#
+</patient_fact>
+
+<canonical_forms>
+#CANONICAL_FORMS#
+</canonical_forms>
+
+=== NAMING SYSTEM / NAMING TEMPLATES ===
+Stems (lowercase snake_case; strip punctuation; numerals normalized).
+
+<stems_templates>
+
+  Clinical Finding:
+    <stems_templates::findings>
+      patient_has_diagnosis_of_{entity_canonical_form} |
+      patient_has_finding_of_{entity_canonical_form} |
+      patient_has_symptoms_of_{entity_canonical_form} |
+      patient_has_clinical_signs_of_{entity_canonical_form} |
+      patient_has_suspicion_of_{entity_canonical_form} 
+    </stems_templates::findings>
+    
+  Procedure:
+    <stems_templates::procedures>
+      patient_has_undergone_{entity_canonical_form} |
+      patient_has_undergone_{entity_canonical_form}_outcome_is_positive |
+      patient_has_undergone_{entity_canonical_form}_outcome_is_negative |
+      patient_has_undergone_{entity_canonical_form}_outcome_is_normal |
+      patient_has_undergone_{entity_canonical_form}_outcome_is_abnormal |
+      patient_is_undergoing_{entity_canonical_form} |
+      patient_needs_to_undergo_{entity_canonical_form}_{timeframe} |
+      patient_will_undergo_{entity_canonical_form} |
+      patient_can_undergo_{entity_canonical_form} |
+    </stems_templates::procedures>
+
+  Observable Entities (numeric):
+    <stems_templates::observable_entities_numeric>
+      patient_{entity_canonical_form}_value_recorded_withunit_{unit}
+    </stems_templates::observable_entities_numeric>
+
+  Observable Entities (status / categorical):
+    <stems_templates::observable_entities_status>
+      patients_{entity_canonical_form}_is_positive |
+      patients_{entity_canonical_form}_is_negative |
+      patients_{entity_canonical_form}_is_normal |
+      patients_{entity_canonical_form}_is_abnormal |   
+    </stems_templates::observable_entities_status>
+
+  Product:
+    <stems_templates::product>
+      patient_is_taking_{entity_canonical_form} |
+      patient_has_taken_{entity_canonical_form} |
+      patient_has_hypersensitivity_to_{entity_canonical_form} |
+      patient_has_intolerance_to_{entity_canonical_form} |      
+      patient_has_allergy_to_{entity_canonical_form} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form} |
+    </stems_templates::product>
+
+  Substance: 
+    <stems_templates::substance>
+      patient_is_exposed_to_{entity_canonical_form} |
+      patient_has_hypersensitivity_to_{entity_canonical_form} |
+      patient_has_intolerance_to_{entity_canonical_form} |      
+      patient_has_allergy_to_{entity_canonical_form} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form} |
+    </stems_templates::substance>
+
+</stems_templates>
+
+
+Temporal Units: minutes | hours | days | weeks | months | years
+
+
+<qualifiers>
+  Attach with: {stem}@@{qualifier_snake_case}
+  Qualifiers must NOT repeat value/unit; they encode leftover semantics (e.g., temporal anchors other than “today”, context like “at baseline”, or dependencies like “after percutaneous coronary intervention”). Use qualifiers sparingly and ONLY when needed for later assertions.
+</qualifiers>
+
+=== GUIDELINES ===
+1) SCOPE & GATING: ONLY entities present in <canonical_forms> may appear in <all_other_variable_declarations>. If <canonical_forms> is empty, output an empty array.
+1.1) Canonical-only: You must use candidate_entity_canonical_form (exact string) wherever a canonical string is needed. Never use preferred terms.
+2) MATCH THE FACT:
+A candidate may be broader, more specific, identical, related, or unrelated to the extracted_span (entity_name).
+For the candidate:
+2.0) Each candidate should have a corresponding block in the output. Don't skip anyone.
+2.1) Choose the most suitable template from the allowed templates based on the candidate’s type.
+2.2) Create a variable using the candidate_entity_canonical_name.
+2.3) Decide CAN_BE_INFERRED_FROM_PATIENT_FACT: set "YES" if the variable’s meaning exactly matches <patient_fact> or is unambiguously inferable from it; otherwise set "NO".
+2.4) Provide a concise reason explaining why the variable is / is not supported by <patient_fact>.
+3) STYLE: lowercase snake_case; numerals normalized; no temporal information;
+4) For every canonicalized entity, put down two temporal fields describing the time span of an event or patient state: (1) "timewindow_this_patient_fact_certainly_holds": timewindow during which we can certainly assert that this patient fact holds; (2) "largest_timewindow_this_patient_fact_may_hold": the largest time window wherein the finding may exist;
+5) Rules apply to both temporal fields:
+  5.1) Consistency between “now” and zero magnitude: if temporal_direction is "now", set temporal_magnitude to 0.0; if temporal_magnitude is 0.0, set temporal_direction to "now".
+  5.2) Default temporal units: if you are uncertain about temporal units, set to "hours". 
+  5.3) Decide whether timepoints are inclusive independently and based on contextual cues.
+  5.4) Temporal ordering: for both timeframe pairs, ensure that the start_time is not later than the end_time.
+  5.5) Make sure the timewindow_this_patient_fact_certainly_holds is a subset of largest_timewindow_this_patient_fact_may_hold.
+  5.6) Both timewindows cannot be in future, unless explicitly stated in the patient notes.
+6) NUMERIC-FIRST: When the requirement expresses a quantity (threshold/range/value), declare numeric stems (e.g., {entity}_value_recorded_withunit_{unit}). Threshold/range logic is asserted later, not here.
+7) QUALIFIERS: Only encode semantics not already captured by the stem template; never encode numeric thresholds or the whole comparator clause as a qualifier. If there is a relative window anchored to an event, represent it as a qualifier (e.g., temporalcontext_within6months_after_percutaneous_coronary_intervention). Do not include qualifier in "entity_variable_name" field.
+8) TYPES: Choose "Bool" for findings/procedures/status/category flags; "Int" or "Real" for numeric quantities as appropriate. Note that you should be using input concept type as the only source of truth when choosing the concept type and should never infer types based on the concept name yourself. For example, if the input type in <canonical_forms> is "Clinical finding", you may only use templates listed under clinical finding
+
+
+=== OUTPUT FORMAT ===
+Emit EXACTLY one block: <all_other_variable_declarations>. If there are no new variables, emit an empty JSON array in the block.
+
+<all_other_variable_declarations> 
+[
+  {
+    "span": "<copy from canonical_forms>",
+    "entity_canonical_form_used": "<exact string from canonical_forms>",
+    "conceptId": "<copy from the input>",
+    "template": "<findings|procedures|observable_entities_numeric|observable_entities_status|product|substance>",
+    "entity_variable_name": "<stem>",
+    "type": "<Bool | Int | Real>",
+    "extracted_value": "<extracted value for the variable from the patient fact>",
+    "CAN_BE_INFERRED_FROM_PATIENT_FACT": "YES|NO",
+    "reason": "brief reason about why this varible can be inferred from patient fact",
+    "usage": "<<How this variable creates a stable, indexable marker of the patient note that IR can retrieve.>",
+    "qualifier_predicates": ["<stem@@qualifier>", ...]，
+    "timewindow_this_patient_fact_certainly_holds": {
+      "start_time": {
+        "temporal_direction": "past | now | future", 
+        "temporal_magnitude": <value: Real | "Inf">, 
+        "units": "<temporal_unit_in_plural>", 
+        "inclusive": true | false},
+      "end_time": {
+        "temporal_direction": "past | now | future", 
+        "temporal_magnitude": <value: Real | "Inf">, 
+        "units": "<temporal_unit_in_plural>", 
+        "inclusive": true | false},
+    },
+    "largest_timewindow_this_patient_fact_may_hold": {
+      "start_time": {
+        "temporal_direction": "past | now | future", 
+        "temporal_magnitude": <value: Real | "Inf">, 
+        "units": "<temporal_unit_in_plural>", 
+        "inclusive": true | false},
+      "end_time": {
+        "temporal_direction": "past | now | future", 
+        "temporal_magnitude": <value: Real | "Inf">, 
+        "units": "<temporal_unit_in_plural>", 
+        "inclusive": true | false},
+    }
+  }
+]
+</all_other_variable_declarations>
+
+
+
+
+=== EXAMPLE OUTPUT ===
+<example1>
+  <example_patient_fact1>
+    "The patient denies a family history of ischemic heart disease."
+  <example_patient_fact1/>
+
+  <example_output_list1>
+    [
+      {
+        "span": "ischemic heart disease",
+        "entity_canonical_form_used": "ischemic_heart_disease",
+        "conceptId": "414545008",
+        "template": "findings",
+        "entity_variable_name": "patient_has_diagnosis_of_ischemic_heart_disease",
+        "type": "Bool",
+        "extracted_value": false,
+        "CAN_BE_INFERRED_FROM_PATIENT_FACT": "YES",
+        "reason": "The note explicitly denies the presence of ischemic heart disease, providing direct negative evidence",
+        "usage": "This variable encodes the patient's denial of a family history of ischemic heart disease, providing a stable marker for retrieval and reasoning about the absence of this clinical finding.",
+        "qualifier_predicates": [],
+        "timewindow_this_patient_fact_certainly_holds": {
+          "start_time": {
+            "temporal_direction": "now", 
+            "temporal_magnitude": 0.0, 
+            "units": "hours", 
+            "inclusive": true
+          },
+          "end_time": {
+            "temporal_direction": "now", 
+            "temporal_magnitude": 0.0, 
+            "units": "hours", 
+            "inclusive": true
+          }
+        },
+        "largest_timewindow_this_patient_fact_may_hold": {
+          "start_time": {
+            "temporal_direction": "past", 
+            "temporal_magnitude": "Inf", 
+            "units": "hours", 
+            "inclusive": true
+          },
+          "end_time": {
+            "temporal_direction": "now", 
+            "temporal_magnitude": 0.0, 
+            "units": "hours", 
+            "inclusive": true
+          }
+        }
+      }
+    ]
+  <example_output_list1/>
+<example1/>
+
+
+<example2>
+  <example_patient_fact2>
+    "The patient denies a family history of smoking."
+  <example_patient_fact2/>
+
+  <example_output_list2>
+    [
+      {
+        "span": "smoking",
+        "entity_canonical_form_used": "tobacco_smoking_behavior_finding",
+        "conceptId": "365981007",
+        "template": "findings",
+        "entity_variable_name": "patient_has_finding_of_tobacco_smoking_behavior_finding",
+        "type": "Bool",
+        "extracted_value": false,
+        "CAN_BE_INFERRED_FROM_PATIENT_FACT": "YES",
+        "reason": "The note explicitly denies a family history of smoking; per the task rules, this explicit denial is treated as direct negative evidence for the patient-level smoking-related finding."
+        "usage": "This variable encodes the patient's history of heavy smoking as a clinical finding, providing a stable marker for retrieval and indexing in IR systems.",
+        "qualifier_predicates": [],
+        "timewindow_this_patient_fact_certainly_holds": {
+          "start_time": {
+            "temporal_direction": "now", 
+            "temporal_magnitude": "0.0", 
+            "units": "hours", 
+            "inclusive": true
+          },
+          "end_time": {
+            "temporal_direction": "now", 
+            "temporal_magnitude": 0.0, 
+            "units": "hours", 
+            "inclusive": true
+          }
+        },
+        "largest_timewindow_this_patient_fact_may_hold": {
+          "start_time": {
+            "temporal_direction": "past", 
+            "temporal_magnitude": "Inf", 
+            "units": "hours", 
+            "inclusive": true
+          },
+          "end_time": {
+            "temporal_direction": "now", 
+            "temporal_magnitude": 0.0, 
+            "units": "hours", 
+            "inclusive": true
+          }
+        }
+      }
+    ]
+  <example_output_list2/>
+<example2/>

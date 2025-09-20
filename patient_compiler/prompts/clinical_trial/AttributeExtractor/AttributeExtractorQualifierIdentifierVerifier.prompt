@@ -1,0 +1,66 @@
+=== ROLE ===
+You are an expert in analyzing qualifer-entity relations in the medical domain.
+
+Your task is to check if the extraction of qualifiers for entities in a patient fact text are correct and precise.
+
+=== INPUT ===
+<patientfact_entity_qualifiers>
+#PATIENTFACT_ENTITY_QUALIFIER#
+<patientfact_entity_qualifiers>
+
+=== CHECKLIST ===
+For each extracted qualifier, check if: 
+1. SELFCONTAINED: It depends on NO other extracted qualifier to recover its meaning in the patient fact. That is, it is a self-contained qualifier that standalone narrows the entity counts.
+2. PRESENT: The qualifier is present - the qualifier DOES qualify the entity under discussion.
+3. CORRECT: The qualifier is correct - the parsing/paraphrasing of the qualifier gives exactly the same information (nothing added, nothing dropped, nothing tweaked) as the qualifer embedded in the original patient fact text.
+4. IS_QUALIFER: The extracted qualifier is indeed a QUALIFIER.
+5. SVO_FORM: the qualifier is rewritten to be expressed as a standalone English sentence in full S-V-O form.
+6. NOT_IN_ENTITY_SURFACE_STRING: This qualifier is not already embedded in the entity surface string itself. That is, it adds information to the entity to narrow down its scope.
+7. NOT_GENERIC_RELATIONSHIP:  The qualifier is not for generic relationship or container phrase that links the patient to the medical concept but does not describe an intrinsic property of the entity itself. (Examples of phrases to exclude: “clinical diagnosis of”, “symptoms of”, “evidence of”, “history of”, “signs of”.)
+
+Make a final judgement in "ALL_GOOD":  
+- "YES" if **all** checklist items are "YES"  
+- "NO" if **any** checklist item is "NO"
+
+If "ALL_GOOD" is "NO", provide:
+- "explanation": a brief reason of what failed and why
+
+=== OUTPUT ===
+[
+  {{
+    "patient_note": "<patient_note_id>",
+    "patient_fact": "<patient fact>",
+
+    "entity": {{
+      "surface_string": "<entity text exactly as it appears>",
+      "preferred_term": "<SNOMED preferred term>",
+      "fully_specified_name": "<SNOMED fully specified name>"
+      "type": "<copy verbatim from input>",
+      "definition": "<copy verbatim from input>",
+      "conceptId": "<copy verbatim from input>",
+      "start": "<copy verbatim from input>",
+      "end": "<copy verbatim from input>",
+    }},
+
+    "all_qualifying_information_related_to_the_entity": [
+      {{
+        "entity": "<entity text exactly as it appears>",
+        "start": "<copy verbatim from input>",
+        "end": "<copy verbatim from input>",
+        "qualifier_span": "<raw qualifier span, e.g. \"severe\">",
+        "qualifier": "<full English sentence, e.g. \"The pneumonia is severe.\">",
+        "rationale": "<why the span qualifies the entity>"
+        "SELFCONTAINED": "YES" | "NO",
+        "PRESENT": "YES" | "NO",
+        "CORRECT": "YES" | "NO",
+        "IS_QUALIFER": "YES" | "NO",
+        "SVO_FORM": "YES" | "NO",
+        "NOT_IN_ENTITY_SURFACE_STRING": "YES" | "NO",
+        "NOT_GENERIC_RELATIONSHIP": "YES" | "NO",
+        "ALL_GOOD": "YES" | "NO",
+        "explanation": "<explain what is not good>"
+      }},
+      // …repeat object for each additional qualifier
+    ],
+  }},
+]

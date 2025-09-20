@@ -1,0 +1,94 @@
+=== ROLE ===
+You are a clinical NLP annotator.
+Task:
+    The input is
+        1. A <entity_qualifier_list> including entity-qualifier pairs. In one pair, there is a pre-identified entity in a trial eligibility criterion and a pre-identified qualifier that qualifies the entity.
+    The output is
+        Return one JSON object that, for every entity-qualifier pair in the <entity_qualifier_list>, lists all attribute_type-attribute_value pairs that qualify and describe the entity in the criterion.
+
+Goal:
+    This is a part of an LLM-based pipeline that turns natural-language criteria into SMT programs. In this stage, your purpose is to transform each entity subject’s qualifiers in the criterion into a faithful, structured representation with attribute-value pairs linked to the subject.
+
+=== INPUT ===
+<entity_qualifier_list>
+{entity_qualifier}
+</entity_qualifier_list>
+
+
+=== GUIDELINES ===
+    1. For each qualifier span, follow this syntax: 'entity's some aspect is some value' to write a qualifier_description.
+        For example, 
+        "requirement": "Severe acute bacterial pneumonia diagnosed within the last 48 hours.",
+        "entity": "pneumonia",
+        "attribute_value_pairs": [
+        {{
+            "entity": "pneumonia",
+            "qualifier_span": "bacterial",
+            "qualifier": "The pneumonia is bacterial.",
+            "qualifier_description": "pneumonia's etiology is bacterial",
+            "attribute_type": "etiology",
+            "attribute_value": "bacterial",
+            "rationale": "The term 'bacterial' identifies the causal agent of the pneumonia, so the attribute_type must be 'etiology', and the value captured is precisely 'bacterial' (as opposed to viral or fungal)."
+        }},
+        {{
+            "entity": "pneumonia",
+            "qualifier_span": "severe",
+            "qualifier": "The pneumonia is severe.",
+            "qualifier_description": "pneumonia's severity is severe",
+            "attribute_type": "severity",
+            "attribute_value": "severe",
+            "rationale": "Because the adjective measures intensity, it maps naturally to the attribute_type 'severity', and the explicit intensity level conveyed is 'severe'."
+        }},
+        {{
+            "entity": "pneumonia",
+            "qualifier_span": "acute",
+            "qualifier": "The pneumonia is acute.",
+            "qualifier_description": "pneumonia's duration is acute",
+            "attribute_type": "duration",
+            "attribute_value": "acute",
+            "rationale": "The word 'acute' speaks to the time-course of the condition, so the correct attribute_type is 'duration', with value 'acute' to capture its sudden, short course."
+        }},
+        {{
+            "entity": "pneumonia",
+            "qualifier_span": "diagnosed within the last 48 hours",
+            "qualifier": "The pneumonia was diagnosed within the last 48 hours.",
+            "qualifier_description": "pneumonia's diagnosis window is within the last 48 hours",
+            "attribute_type": "diagnosis window",
+            "attribute_value": "within the last 48 hours",
+            "rationale": "This phrase gives a temporal eligibility constraint, so the attribute_type chosen is 'diagnosis window', and the specific timeframe captured is 'within the last 48 hours'."
+        }}
+        ]
+
+    2. For every attribute_type-attribute_value pair, explain why you chose that specific attribute_type and attribute_value.
+
+=== OUTPUT ===
+Return one JSON array (no Markdown, no extra keys).
+Each JSON object represents a single entity subject and must follow *exactly* this schema (key names and order):
+
+[
+  {{
+    "task_id": "<task_id>",
+    "trial": "<trial_id>",
+    "requirement": "<criterion>",
+
+    "entity": {{
+      "surface_string": "<entity text exactly as it appears>",
+      "preferred_term": "<SNOMED preferred term>",
+      "fully_specified_name": "<SNOMED fully specified name>"
+    }},
+
+    "attribute_value_pairs": [
+      {{
+        "entity": "<entity text exactly as it appears>",
+        "qualifier_span": "<raw qualifier span, e.g. \"severe\">",
+        "qualifier": "<full English sentence, e.g. \"The pneumonia is severe.\">",
+        "qualifier_description": "<Follow this syntax: 'entity's some aspect is some value'>",
+        "attribute_type": "<simply keep the some aspect part between the 'entity's part and is some value part from qualifier_description above>",
+        "attribute_value": "<simply use the some value part from qualifier_description>",
+        "rationale": "<why this attribute_type / attribute_value was chosen>"
+      }}
+      // …repeat object for each additional attribute-value pair
+    ]
+  }}
+  // …repeat for every entity found in every criterion
+]

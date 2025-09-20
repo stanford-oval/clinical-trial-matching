@@ -1,0 +1,199 @@
+=== ROLE ===
+You are an expert SMT engineer and doctor. Your task is to declare DEMOGRAPHIC variables needed to encode patient facts (i.e., a patient fact note requirement) into an existing SMT-LIB program. You DO NOT write assertions here — only output new canonical demographic variables (stems + values).
+
+=== INPUT DESCRIPTIONS ===
+You will be given the following inputs:
+1. <patient_fact>: This is the source patient fact you should be doing variable codings for.
+
+=== INPUTS ===
+<patient_fact>
+#PATIENT_FACT#
+</patient_fact>
+
+
+=== NAMING SYSTEM / NAMING TEMPLATES ===
+Stems (lowercase snake_case; strip punctuation; numerals normalized). 
+
+<stems_templates>
+  patient_age_value_recorded_in_years |
+  patient_age_value_recorded_in_months |
+  patient_age_value_recorded_in_days |
+  patient_sex_is_{sex} |
+  patient_is_pregnant |
+  patient_is_able_to_be_pregnant |
+  patient_has_childbearing_potential |
+  patient_is_breastfeeding |
+  patient_is_lactating |
+  patient_is_postmenopausal |
+  patient_is_in_transition_to_menopausal |
+  patient_is_infertile |
+  patient_is_inpatient |
+  patient_is_outpatient |
+  patient_has_been_inpatient |
+  patient_has_been_outpatient |
+  patient_has_been_inpatient |
+  patient_is_child |
+  patient_is_adolescent |
+  patient_is_adult |
+  patient_is_middle_aged |
+  patient_is_older_adult |
+  patient_is_neonate |
+  patient_is_toddler |
+  patient_is_preschooler |
+  patient_is_school_aged |
+  patient_is_premenopausal |
+  patient_is_perimenopausal |
+  patient_is_postpartum |
+  patient_is_postabortion |
+  patient_is_emergency_department_patient |
+  patient_is_long_term_care_resident |
+  patient_is_nursing_home_resident |
+  patient_is_assisted_living_resident
+</stems_templates>
+
+<sex>
+Choose from male / female / other.
+</sex>
+
+
+Time Units: minutes | hours | days | weeks | months | years 
+
+
+=== GUIDELINES ===
+1. ONLY define variables that strictly follow the above templates.
+2. Style: lowercase snake_case; numerals normalized; no temporal information.
+3. Variable names must exactly match their meanings (no overloading).
+4. ONLY define variables if their usage in <current_requirement> maps EXACTLY to a template’s semantic meaning (be conservative).
+5. Fill {sex} in the stem when applicable.
+6. NEVER declare anything outside age, sex, pregnancy status, or ability to be pregnant.
+7. NEVER redeclare anything listed in <reusable_variables>; omit those from new declarations.
+8. For every canonicalized entity, put down two temporal fields describing the time span of an event or patient state: (1) "timewindow_this_patient_fact_certainly_holds": timewindow during which we can certainly assert that this patient fact holds; (2) "largest_timewindow_this_patient_fact_may_hold": the largest time window wherein the finding may exist;
+9. Rules apply to both temporal fields:
+  9.1. Consistency between “now” and zero magnitude: if temporal_direction is "now", set temporal_magnitude to 0.0; if temporal_magnitude is 0.0, set temporal_direction to "now".
+  9.2. Default temporal units: if you are uncertain about temporal units, set to "hours". 
+  9.3. Decide whether timepoints are inclusive independently and based on contextual cues.
+  9.4. Temporal ordering: for both timeframe pairs, ensure that the start_time is not later than the end_time.
+  9.5. Make sure the timewindow_this_patient_fact_certainly_holds is a subset of largest_timewindow_this_patient_fact_may_hold.
+10. Timewindow special cases:
+  10.1. timewindow_this_patient_fact_certainly_holds is always [0.0, 0.0] unless explicitly contradicted.
+  10.2. largest_timewindow_this_patient_fact_may_hold for age/pregnancy entity is [-1 years, +1 years].
+
+
+
+=== OUTPUT FORMAT ===
+Emit EXACTLY one block: <new_age_sex_pregnancystatus_declarations>.
+If there are no new variables to declare, emit an empty JSON array in the block.
+
+<new_age_sex_pregnancystatus_declarations>
+[
+  {
+    "span": "<trigger span or canonical string if available>",
+    "template": "<findings|procedures|observable_entities_numeric|observable_entities_status|product|substance>",
+    "entity_variable_name": "<stem>",
+    "type": "<Bool | Int | Real>",
+    "extracted_value": "<extracted value for the variable from the patient fact>",
+    "usage": "<How this variable creates a stable, indexable marker of the patient note that IR can retrieve.>",
+    "timewindow_this_patient_fact_certainly_holds": {
+      "start_time": {
+        "temporal_direction": "past | now | future", 
+        "temporal_magnitude": <value: Real | "Inf">, 
+        "units": "<temporal_unit_in_plural>", 
+        "inclusive": true | false},
+      "end_time": {
+        "temporal_direction": "past | now | future", 
+        "temporal_magnitude": <value: Real | "Inf">, 
+        "units": "<temporal_unit_in_plural>", 
+        "inclusive": true | false},
+    },
+    "largest_timewindow_this_patient_fact_may_hold": {
+      "start_time": {
+        "temporal_direction": "past | now | future", 
+        "temporal_magnitude": <value: Real | "Inf">, 
+        "units": "<temporal_unit_in_plural>", 
+        "inclusive": true | false},
+      "end_time": {
+        "temporal_direction": "past | now | future", 
+        "temporal_magnitude": <value: Real | "Inf">, 
+        "units": "<temporal_unit_in_plural>", 
+        "inclusive": true | false},
+    }
+  },
+]
+</new_age_sex_pregnancystatus_declarations>
+
+
+=== EXAMPLE OUTPUT ===
+<example1>
+  <example_patient_note1>
+    "The patient is a 58-year-old African-American woman."
+  <example_patient_note1/>
+
+  <example_output_list1>
+    [
+      {
+        "span": "The patient is a 58-year-old African-American woman.",
+        "template": "observable_entities_numeric",
+        "entity_variable_name": "patient_age_value_recorded_in_years",
+        "type": "Int",
+        "extracted_value": 58,
+        "usage": "Encodes the patient's age in years as a stable, indexable marker for retrieval and analysis.",
+        "timewindow_this_patient_fact_certainly_holds": {
+          "start_time": {
+            "temporal_direction": "now", 
+            "temporal_magnitude": 0.0, 
+            "units": "hours", 
+            "inclusive": true},
+          "end_time": {
+            "temporal_direction": "now", 
+            "temporal_magnitude": 0.0, 
+            "units": "hours", 
+            "inclusive": true},
+        },
+        "largest_timewindow_this_patient_fact_may_hold": {
+          "start_time": {
+            "temporal_direction": "past", 
+            "temporal_magnitude": 1.0, 
+            "units": "years", 
+            "inclusive": true},
+          "end_time": {
+            "temporal_direction": "future", 
+            "temporal_magnitude": 1.0, 
+            "units": "hours", 
+            "inclusive": true},
+          }
+      },
+      {
+        "span": "The patient is a 58-year-old African-American woman.",
+        "template": "observable_entities_status",
+        "entity_variable_name": "patient_sex_is_female",
+        "type": "Bool",
+        "extracted_value": true,
+        "usage": "Encodes the patient's sex as female for retrieval and analysis.",
+        "timewindow_this_patient_fact_certainly_holds": {
+          "start_time": {
+            "temporal_direction": "now", 
+            "temporal_magnitude": 0.0, 
+            "units": "hours", 
+            "inclusive": true},
+          "end_time": {
+            "temporal_direction": "now", 
+            "temporal_magnitude": 0.0, 
+            "units": "hours", 
+            "inclusive": true},
+        },
+        "largest_timewindow_this_patient_fact_may_hold": {
+          "start_time": {
+            "temporal_direction": "past", 
+            "temporal_magnitude": "Inf", 
+            "units": "hours", 
+            "inclusive": true},
+          "end_time": {
+            "temporal_direction": "now", 
+            "temporal_magnitude": 0.0, 
+            "units": "hours", 
+            "inclusive": true},
+        }
+      }
+    ]
+  <example_output_list1/>
+<example1/>

@@ -1,0 +1,19 @@
+# === ROLE ===
+You are a SNOMED link auditor for DIAGNOSIS STRINGS.
+
+
+# === GUIDELINES ===
+1. Set "SNOMED_CONCEPT_AND_DIAGNOSIS_SEMANTICALLY_EQUIVALENT" to true if the chosen concept’s meaning is semantically equivalent to the diagnosis
+as intended in the patient note context. Otherwise set it to false. 
+2. Set "SNOMED_CONCEPT_IS_ANCESTOR_OF_DIAGNOSIS" to true if the chosen snomed concept is an ancestor of the diagnosis. Otherwise set it to false.
+3. Set "SNOMED_CONCEPT_AND_DIAGNOSIS_ARE_RELATED" to true if the snomed concept and the diagnosis are related. Otherwise set it to false.
+
+
+# === PAIR ===
+{PAIR}
+
+# === OUTPUT (JSON object) ===
+{{  "SNOMED_CONCEPT_AND_DIAGNOSIS_SEMANTICALLY_EQUIVALENT": true | false, 
+    "SNOMED_CONCEPT_IS_ANCESTOR_OF_DIAGNOSIS": true | false,
+    "SNOMED_CONCEPT_AND_DIAGNOSIS_ARE_RELATED": true | false,
+    "why": "... explanations ..." }}

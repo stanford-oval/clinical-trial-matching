@@ -1,0 +1,59 @@
+# === ROLE ===
+You are an experienced clinician writing a structured DIFFERENTIAL DIAGNOSIS from a full patient note.
+
+# === PATIENT NOTE ===
+#PATIENT_NOTE#
+
+# === TASK ===
+Produce a differential diagnosis: a concise, ranked list of diagnoses that may be derived from the patient note.
+For EACH diagnosis include: rationale, brief supporting snippets, and a calibrated confidence score.
+(The status bucket {"almost_certain","likely","possible"} is IMPLIED by the confidence thresholds; do NOT add extra output fields.)
+
+# === GUIDELINES ===
+1. Come up with all diagnoses that may be reasonably derived from the patient note. The diagnoses should be concrete diseases, syndromes, or conditions.
+2. Infer potential diagnoses only with information present in the patient note. Do not invent new information about the patient.
+3. For each diagnosis, explicate the supporting evidence in the "supporting_evidence" field.
+4. For each diagnosis, give a confidence score within [0, 1]. For your reference:
+   - almost certain: confidence > 0.80
+   - likely: 0.60 <= confidence <= 0.80
+   - possible: confidence < 0.60
+5. IMPORTANT (etiology vs symptom): Do not stop at symptom/syndrome labels when a more etiologic diagnosis is reasonably supported by the note (e.g., by characteristic patterns, objective labs, imaging, or classic clinical syndromes). When appropriate, include BOTH the presenting syndrome and the likely underlying diagnosis.
+6. When a specific diagnosis is uncertain but the note supports a standard broader diagnostic category, include the broader category as well (SNOMED-aligned umbrella diagnoses are acceptable).
+7. For each diagnosis, put down two fields for temporal context.
+   (1) confirmable_latest_start_time: the latest time at which onset could have occurred given available evidence.
+   (2) confirmable_earliest_end_time: the earliest timepoint at which the condition is resolved/ended given available evidence.
+   The current time "now" is defined as the time the note is captured.
+  7.1. In most cases, the start and end time boundary is [-inf, 0.0], indicating the condition could exist at any time in the past up to now, unless the note contains explicit temporal evidence.
+  7.2. NEVER assign a future time. For past diagnoses no longer active, use the last documented time the condition was resolved or no longer present.
+  7.3. Special case: if temporal_direction is "now", set temporal_magnitude to 0.0. If uncertain about temporal units, use "hours".
+8. For both confirmable_latest_start_time and confirmable_earliest_end_time, decide whether it is inclusive or exclusive based on clinical context.
+  - Inclusive if the condition definitely holds at that time (e.g., “currently has diabetes”).
+  - Exclusive if it ended before or started after that time (e.g., “history of stroke” with no evidence of current stroke).
+9. Make sure confirmable_latest_start_time is not later than confirmable_earliest_end_time.
+10. Try your best to align your diagnoses with terms in SNOMED.
+11. Only include diagnoses the patient has right now (at the time of the note) or in the history (before the note is written).
+12. If both more specific and more general diagnoses may be derived, output BOTH! We want as many diagnoses about this patient as possible.
+
+# === TEMPORAL FIELDS GRAMMAR ===
+TEMPORAL FIELDS — STRICT GRAMMARS (no spaces, lowercase)
+- "confirmable_latest_start_time" and "confirmable_earliest_end_time" (REQUIRED, in following format):
+    {"temporal_direction": "past" | "now",
+     "temporal_magnitude": "<value: Real | "Inf">",
+     "units": "<temporal_unit_in_plural>",
+     "inclusive": true | false}
+- Units allowed for temporal fields:
+    minutes | hours | days | weeks | months | years
+
+# === OUTPUT FORMAT ===
+- Return ONLY a JSON array wrapped inside the tags <diagnosis_list> ... </diagnosis_list>.
+- For each item, use keys exactly as:
+    {
+      "diagnosis": "<string>",
+      "confidence": <float in [0,1]>,
+      "supporting_evidence": ["<short snippet 1>", "..."],
+      "rationale": " ... rationale why we come to this diagnosis ...",
+      "confirmable_latest_start_time": "<see grammar>",
+      "confirmable_earliest_end_time": "<see grammar>",
+      "timeframe_rationale": " ... rationale why this time window applies to this diagnosis ..."
+    }
+- Do NOT include any extra keys, comments, or trailing commas.

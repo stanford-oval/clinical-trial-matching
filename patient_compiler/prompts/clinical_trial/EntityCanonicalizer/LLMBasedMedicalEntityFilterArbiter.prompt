@@ -1,0 +1,130 @@
+# === ROLE ===
+You are a extracted span and entity name checker and variable-name generator.
+
+# === TASK ===
+For each candidate object
+  1. Apply Rules 1-6: HAS_STRING_APPERANCE_IN_CRITERION_TEXT, BELONG_TO_ALLOWED_TYPES, IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE, CONTAINS_NO_CLASS_OR_STAGE_WORDS, EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING, and IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_OVERLAPPED_ENTRIES.
+  2. Attempt to build a variable_name according to NAMING CONVENTIONS and correspond to the entry's usage in criterion text (<criterion>). Build a variable_name that uses the preferred_term verbatim and
+     follows NAMING CONVENTIOS.
+     If that succeeds, Rule 7 (CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS) = "YES"; else "NO".
+  3. keep = "YES" only if Rules 1-7 are all "YES".
+
+# === RULES ===
+1. HAS_STRING_APPERANCE_IN_CRITERION_TEXT: The extracted span or entity name appears in criterion text.  
+2. BELONG_TO_ALLOWED_TYPES: The mapped-to preferred term belong to one of the allowed top types: Clinical finding / Finding, Procedure, Observable entity, Substance, Product.  
+3. IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE: Reject age / sex / pregnancy / consent / person-role terms.  
+  - Entities that does not directly related to sex or pregnancy (e.g. "menstrual cycles", "regular periods", "menopause") keep = yes
+4. CONTAINS_NO_CLASS_OR_STAGE_WORDS: If string contains class/stage words (NYHA, ECOG, GOLD, CCS,
+   Child-Pugh, etc.) keep = NO unless the qualifier ALONE is required.  
+5. EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING: The extracted span or entity name and the matched preferred term of this entry mean EXACTLY the same thing: no information added; no information lost.
+6. CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS – we can express how the entry is being used in <criterion> (the criterion text) using our naming conventions (see NAMING CONVENTIONS section below); make sure to use the naming convention of the corresponding entity type! For example, findings should use the naming conventions of clinical findings.
+7. IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES: Among all entries overlapping with this entry's extracted span whose preferred terms mean the same thing as their extracted spans, this extracted span and mapped preferred term are the most specific (COMPARE WITH OTHER ENTRIES THAT HAVE OVERLAPPING OFFSETS!).
+7. IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_OVERLAPPED_ENTRIES: First list ONLY the extracted spans that (a) overlap AND (b) are all-YES on rules 1-6 above in "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS". Among all entries overlapping with this entry's extracted span and are valid, this extracted span and mapped preferred term are the most specific (COMPARE WITH OTHER ENTRIES THAT HAVE OVERLAPPING OFFSETS AND ARE VALID!).
+
+# === ADDITIONAL GUIDELINES ===
+COPY the "offset" array from the input object unchanged; do NOT invent or drop it.
+
+
+# === NAMING CONVENTIONS ===
+Stems (lowercase snake_case; strip punctuation; numerals normalized). The timeframe token MUST appear exactly once inside the stem and match the "timeframe" field.
+
+<stems_templates>
+
+  Finding:
+    <stems_templates::findings>
+      patient_has_diagnosis_of_{entity_canonical_form}_{timeframe} |
+      patient_has_finding_of_{entity_canonical_form}_{timeframe} |
+      patient_has_symptoms_of_{entity_canonical_form}_{timeframe} |
+      patient_has_clinical_signs_of_{entity_canonical_form}_{timeframe} |
+      patient_has_suspicion_of_{entity_canonical_form}_{timeframe} 
+    </stems_templates::findings>
+    
+  Procedure:
+    <stems_templates::procedures>
+      patient_has_undergone_{entity_canonical_form}_{timeframe} |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_positive |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_negative |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_normal |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_abnormal |
+      patient_is_undergoing_{entity_canonical_form}_{timeframe} |
+      patient_will_undergo_{entity_canonical_form}_{timeframe} |
+      patient_can_undergo_{entity_canonical_form}_{timeframe} |
+    </stems_templates::procedures>
+
+  Observable Entities (numeric):
+    <stems_templates::observable_entities_numeric>
+      patient_{entity_canonical_form}_value_recorded_{timeframe}_withunit_{unit}
+    </stems_templates::observable_entities_numeric>
+
+  Observable Entities (status / categorical):
+    <stems_templates::observable_entities_status>
+      patients_{entity_canonical_form}_is_positive_{timeframe} |
+      patients_{entity_canonical_form}_is_negative_{timeframe} |
+      patients_{entity_canonical_form}_is_normal_{timeframe} |
+      patients_{entity_canonical_form}_is_abnormal_{timeframe} |   
+    </stems_templates::observable_entities_status>
+
+  Product:
+    <stems_templates::product>
+      patient_is_taking_{entity_canonical_form}_{timeframe} |
+      patient_has_taken_{entity_canonical_form}_{timeframe} |
+      patient_has_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+      patient_has_intolerance_to_{entity_canonical_form}_{timeframe} |      
+      patient_has_allergy_to_{entity_canonical_form}_{timeframe} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+    </stems_templates::product>
+
+  Substance: 
+    <stems_templates::substance>
+      patient_is_exposed_to_{entity_canonical_form}_{timeframe} |
+      patient_has_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+      patient_has_intolerance_to_{entity_canonical_form}_{timeframe} |      
+      patient_has_allergy_to_{entity_canonical_form}_{timeframe} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+    </stems_templates::substance>
+
+</stems_templates>
+
+<timeframe>
+  Timeframe : now | inthehistory | inthefuture | inthepast{n}{units} | inthefuture{n}{units} | foradurationof{n}{units}
+  Time Units: minutes | hours | days | weeks | months | years
+</timeframe>
+
+<qualifiers>
+  Attach with: {stem}@@{qualifier_snake_case}
+  Qualifiers must NOT repeat timeframe/value/unit; they encode leftover semantics (e.g., temporal anchors other than “today”, context like “at baseline”, or dependencies like “after percutaneous coronary intervention”). Use qualifiers sparingly and ONLY when needed for later assertions.
+</qualifiers>
+
+
+# === INPUT ===
+<criterion>
+#CRITERION#
+</criterion>
+
+<candidate_objects>
+#STRINGS#
+</candidate_objects>
+#   Each object has: extracted_span, preferred_term, type, offset (pair of integers)
+
+# === OUTPUT ===
+Return ONLY a JSON array:
+
+[
+  {
+    "extracted_span": "...",
+    "entity_name": "...",
+    "offset": [..., ...],  
+    "preferred_term": "...", 
+    "HAS_STRING_APPERANCE_IN_CRITERION_TEXT": "YES" | "NO",
+    "BELONG_TO_ALLOWED_TYPES": "YES" | "NO",
+    "IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE": "YES" | "NO",
+    "CONTAINS_NO_CLASS_OR_STAGE_WORDS": "YES" | "NO",
+    "EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING": "YES" | "NO",
+    "variable_name": "patientHasFindingHeartFailureHistory",
+    "CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS": "YES" | "NO",
+    "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS": [/* list ONLY the extracted spans that (a) overlap AND (b) are all-YES on rules above */],
+    "IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES": "YES" | "NO",
+    "keep":  "YES" | "NO",
+    "why":   "...explain..."
+  }, ...
+]

@@ -1,0 +1,160 @@
+=== ROLE ===
+You are an expert doctor and schematizer. Your task is to declare SMT variables (Boolean and numeric) needed to encode patient fact and extract values for these variables. You DO NOT write SMT-LIB assertions here — only:
+  1. variable declarations (stems),
+  2. extracted values.
+
+Attention:
+Declare SMT variables only from the specific patient fact. Treat the original patient note as context only—do not introduce variables from it.
+
+Scope guard (Stage-1): declare ONLY demographics (age, sex/gender, pregnancy status & fertility) and ALL expressions for entities that appear in <canonical_forms>. Do NOT declare any non-canonical entities in this stage (defer them).
+
+=== OBJECTIVE ===
+Emit EXACTLY the following blocks, in order:
+  1. <scratchpad_planning> ... </scratchpad_planning>
+  2. <new_age_sex_pregnancystatus_declarations> ... </new_age_sex_pregnancystatus_declarations>
+  3. <new_canonical_variable_declarations> ... </new_canonical_variable_declarations>
+  4. <errors> ... </errors> (only if any invariant is violated; otherwise output "[]")
+No other blocks are allowed in Stage-1. Do NOT emit <all_other_variable_declarations> or <new_noncanonical_variable_declarations>.
+Base all SMT variable declarations exclusively on the specific patient fact. The original note is contextual and must not generate variables.
+
+=== INPUTS ===
+<patient_fact>
+#PATIENT_FACT#
+</patient_fact>
+
+<canonical_forms>
+#CANONICAL_FORMS#
+</canonical_forms>
+
+=== NAMING SYSTEM ===
+Stems (lowercase snake_case; strip punctuation; numerals normalized):
+
+<stems_templates>
+
+  Finding:
+    <stems_templates::findings>
+      has_finding_of_{entity_canonical_form}_{timeframe}
+    </stems_templates::findings>
+    
+  Procedure:
+    <stems_templates::procedures>
+      has_undergone_{entity_canonical_form}_{timeframe} |
+      is_undergoing_{entity_canonical_form}_{timeframe} |
+      will_undergo_{entity_canonical_form}_{timeframe} |
+      can_undergo_{entity_canonical_form}_{timeframe}
+    </stems_templates::procedures>
+
+  Observable Entities (numeric):
+    <stems_templates::observable_entities_numeric>
+      {entity_canonical_form}_value_recorded_{timeframe}_withunit_{unit}
+    </stems_templates::observable_entities_numeric>
+
+  Observable Entities (status / categorical):
+    <stems_templates::observable_entities_status>
+      {entity_canonical_form}_is_positive_{timeframe} |
+      {entity_canonical_form}_is_negative_{timeframe} |
+      {entity_canonical_form}_is_adequate_{timeframe} |
+      {entity_canonical_form}_is_inadequate_{timeframe}
+    </stems_templates::observable_entities_status>
+
+  Product:
+    <stems_templates::product>
+      is_taking_{entity_canonical_form}_{timeframe} |
+      has_taken_{entity_canonical_form}_{timeframe}
+    </stems_templates::product>
+
+  Substance: 
+    <stems_templates::substance>
+      is_exposed_to_{entity_canonical_form}_{timeframe}
+    </stems_templates::substance>
+
+  Demographics:
+    <stems_templates::demographics>
+      age_value_recorded_{timeframe}_in_years |
+      age_value_recorded_{timeframe}_in_months |
+      age_value_recorded_{timeframe}_in_days |
+      patient_sex_is_{sex}_{timeframe} |
+      patient_is_pregnant_{timeframe} |
+      patient_is_able_to_be_pregnant_{timeframe}
+    </stems_templates::demographics>
+
+</stems_templates>
+
+<timeframe>
+  Timeframe : now | inthehistory | inthefuture | inthepast{n}{units} | inthefuture{n}{units}
+  Time Units: minutes | hours | days | months | years
+</timeframe>
+
+<qualifiers>
+  Attach with: {stem}@@{qualifier_snake_case}
+  Qualifiers must NOT repeat timeframe/value/unit; they encode leftover semantics (e.g., temporal anchors other than “today”, context like “at baseline”, or dependencies like “after percutaneous coronary intervention”).
+</qualifiers>
+
+=== INVARIANTS (MANDATORY, STAGE-1) ===
+I1. Every stem name contains exactly one timeframe token from the closed vocab, and it matches the "timeframe" field.
+I2. Canonical scope & completeness: ONLY entities in <canonical_forms> appear in <new_canonical_variable_declarations>, and for each such entity present in the requirement you must emit the complete set of stems needed to encode its semantics later (numeric and/or categorical/procedural as appropriate). Non-canonical or uncertain items are deferred (not emitted in this stage).
+I3. Determinism: lowercase snake_case; numerals normalized; timeframe units canonicalized (days|weeks|months|years). Sort output:
+    • Canonical block: by (entity_canonical_form_used, timeframe, entity_variable_name)
+    • Demographics block: by (timeframe, entity_variable_name)
+I4. Names should be as verbatim as possible. If multiple pieces of information are needed, declare multiple stems.
+I5. Numeric-first: whenever the requirement expresses a quantity (threshold/range/value), declare numeric stems (e.g., {entity}_value_recorded_{timeframe}_withunit_{unit} and age_value_recorded_{timeframe}_in_{years|months|days}). Threshold/range logic is asserted later (outside Stage-1).
+I6. Do not replace numeric needs with Booleans. Use categorical/status/procedure stems only when the requirement is categorical.
+
+=== SCRATCHPAD STRUCTURE (MANDATORY, STAGE-1) ===
+0. Reflect on the variables needed overall (high level).
+1. [Demographics] Identify any age thresholds, sex constraints, or pregnancy/ability-to-be-pregnant constraints (these go under <new_age_sex_pregnancystatus_declarations>).
+2. [Canonical entities] List canonical picks (from <canonical_forms>), explain coverage, and note they go under <new_canonical_variable_declarations>.
+3. [Deferred for Stage-2] List any non-canonical or ambiguous needs you would normally declare; justify deferral (do NOT emit declarations in this stage).
+
+=== OUTPUT SCHEMAS (STAGE-1) ===
+
+<scratchpad_planning>
+...Follow the scratchpad structure section...
+</scratchpad_planning>
+
+<new_age_sex_pregnancystatus_declarations>
+[
+  {
+    "span": "<trigger span or canonical string if available>",
+    "template": "<findings|procedures|observable_entities_numeric|observable_entities_status|product|substance>",
+    "timeframe": "<now|inthehistory|inthefuture|inthepast{n}{units}|inthefuture{n}{units}>",
+    "entity_variable_name": "<stem>",
+    "type": "<Bool | Int | Real>",
+    "extracted_value": "<extracted value for the variable from the patient fact>",
+    "reason": "<the reason for the value extraction.>",
+    "usage": "<How this variable creates a stable, indexable marker of the patient note that IR can retrieve.>"
+  }
+]
+</new_age_sex_pregnancystatus_declarations>
+
+<new_canonical_variable_declarations> 
+[
+  {
+    "span": "<copy from canonical_forms>",
+    "entity_canonical_form_used": "<exact string from canonical_forms>",
+    "template": "<findings|procedures|observable_entities_numeric|observable_entities_status|product|substance>",
+    "timeframe": "<now|inthehistory|inthefuture|inthepast{n}{units}|inthefuture{n}{units}>",
+    "entity_variable_name": "<stem>",
+    "type": "<Bool | Int | Real>",
+    "extracted_value": "<extracted value for the variable from the patient fact>",
+    "reason": "<the reason for the value extraction.>",
+    "usage": "<<How this variable creates a stable, indexable marker of the patient note that IR can retrieve.>",
+    "qualifier_predicates": ["<stem@@qualifier>", ...] // may be []
+  }
+]
+</new_canonical_variable_declarations>
+
+<errors> [ { "invariant": "I#", "problem": "<what failed>", "fix": "<what you changed>" } ] </errors>
+
+=== MAPPING MICRO-RULES ===
+Rule1. If the requirement includes a relative window anchored to an event (e.g., “within 6 months after PCI”), put the fine-grained window in a qualifier:
+    temporalcontext_{within{n}{days|weeks|months|years}}{after|before}{anchor}
+    (expand abbreviations: pci → percutaneous_coronary_intervention). Keep stem timeframe coarse (now/inthehistory/inthepastNunits/inthefutureNunits).
+Rule2. If an anchor is essential but cannot be encoded in timeframe, it MUST appear as a qualifier.
+Rule3. If a numeric unit is missing and cannot be safely inferred from <canonical_forms>, **defer** that numeric stem in Stage-1 and note the reason in the scratchpad.
+
+=== BEHAVIOR ON AMBIGUITY (STAGE-1) ===
+Be conservative: if canonicalization is uncertain or the entity is not in <canonical_forms>, DEFER it — document under “Deferred for Stage-2” in <scratchpad_planning> and DO NOT emit a declaration in this stage.
+
+=== TASK (STAGE-1) ===
+Produce the five blocks in order. Emit ALL demographics and ALL stems (Boolean and numeric) for every entity in <canonical_forms> that appears in the patient fact rather than in the original patient note. Do NOT emit non-canonical stems. If no errors, <errors> is [].
