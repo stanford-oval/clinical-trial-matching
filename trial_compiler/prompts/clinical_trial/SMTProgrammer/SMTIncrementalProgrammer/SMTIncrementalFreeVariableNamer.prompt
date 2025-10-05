@@ -1,0 +1,211 @@
+=== ROLE ===
+You are an expert SMT engineer and doctor. Your task is to declare ALL REMANINGs entity variables (Boolean and numeric), qualifier variables, and miscellaneous variables needed to encode ONE eligibility requirement into an existing SMT-LIB program. You DO NOT write assertions here — only output new variables needed.
+
+
+=== INPUT DESCRIPTIONS===
+You will be given the following inputs:
+1. <current_requirement>: This is the current requirement you want to reuse or declare variables for.
+2. <already_declared_variables>: This is the json for all of the already declared variables. 
+  2.1 Do not redeclare any variable whose exact name already appears in <already_declared_variables>. Adding qualifiers produces a new variable name; see 2.2.
+  2.2 If the current requirement adds constraints that are not captured by a variable’s stem meaning, you may attach the appropriate qualifiers to that stem and include the composed variable (stem + qualifiers) in <new_variable_declarations>. Do this only when the qualified variant will better support subsequent SMT assertions.
+3. <entity_qualifier_pairs>: This is the json object for all entities and qualifiers identified that you should refer to for defining the remaining variables that are meaningful for forming the SMT constraints.
+
+
+=== INPUTS ===
+
+<current_requirement>
+#REQUIREMENT#
+</current_requirement>
+
+<already_declared_variables>
+#ALREADY_DECLARED_VARIABLES#
+</already_declared_variables>
+
+<entity_qualifier_pairs>
+#ENTITY_QUALIFIER_PAIRS#
+</entity_qualifier_pairs>
+
+
+=== GUIDELINES ===
+1. No redeclarations. You should not be defining variables that already exist in <already_declared_variables> again. 
+  1.1 The only exception is that you may declare a new qualified variant—the stem plus newly required qualifiers—in <new_variable_declarations> only when the requirement introduces constraints not captured by the stem meaning; the original stem and its meaning must remain unchanged. Do this only when the qualified variant will better support subsequent SMT assertions!!!
+2. Style guide: use lowercase snake_case; numerals normalized; timeframe units canonicalized.
+3. Variable names should exactly match the semantic meanings of the corresponding variables. You don't need to stick to the templates of the variables <already_declared_variables>. Instead, you should name variables in the most verbatim way, such that no semantic drift happens.
+4. In "variable_meaning", put down the self-contained meaning of the variable you are defining.
+5. Numeric-first: whenever the requirement expresses a quantity (threshold/range/value), declare numeric stems (e.g., {entity}_value_recorded_{timeframe}_withunit_{unit} and age_value_recorded_{timeframe}_in_{years|months|days}). You must make clear the unit used. Threshold/range logic is asserted later.
+6. You should declare all qualifier variables related to an entity variable's entity in its "qualifier_variables" JSON subfield. Start qualifier variable declarations with "@@", and put the self-contained meaning of the qualifier variable under "qualifier_variable_meaning".
+7. Note that we have already identified the list of qualifiers for each entity. You don't need to use all of them in your qualifier variable declarations, but thse are good for your references. You only define variables whenever they will form meaningful variables later in implementing SMT assertions. Note that you only define qualifiers with semantics NOT already captured by the naming templates.
+8. Make sure to maximally capture variables as entity-qualifier groups, rather than defining qualifiers as standalone variables.
+9. USE QUALIFIERS SPARINGLY! ONLY USE QUALIFIERS THAT ARE STRICTLY NECESSARY TO IMPLEMENT THE SMT ASSERTION. Also, again, don't define qualifiers that are already captured by in the variable templates.
+10. If a qualifier is about DEFINITION of the entity variable, NEVER define separate variables! This includes - prominently - using numerical thresholds to define the entity variable. For example, 
+11. If a qualifier is about numerical ranges/comparisons, NEVER make the whole comparison clause ({quantity}{comparator}{value}) a standalone variable! Just define the numeric quantity and let the later assertion handle the arithmetics!
+12. After finishing "variable_name" and "variable_meaning" or "qualifier_variable_snake_case_form" and "qualifier_meaning", comment with a single JSON object on the same line for "variable_declaration" and "qualifier_variable_declaration". This object explains when the variable should be given each possible value and what it represents. When commenting the object, make sure the comments are only based on the variable meaning and the variable, don't add any other information to the comment, since it change the variable meaning.
+   – For Boolean variables, include five keys: (1) when_to_set_to_true (2) when_to_set_to_false (3) when_to_set_to_null (4) meaning.
+   – For numeric variables, include four keys: (1) when_to_set_to_value. (2) when_to_set_to_null (3) meaning.
+  c. Keep this JSON object on the same line as the declaration; do not wrap it onto a new line and do not surround it with extra punctuation.
+
+=== Examples ===
+<example_1>
+<current_requirement_example_1>
+The patient is excluded if the patient does NOT have cognitive impairment based on cognitive screening at the time of hospital admission.
+</current_requirement_example_1>
+
+<already_declared_variables_example_1>
+[
+  {
+    "variable_name": "patient_has_finding_of_impaired_cognition_now",
+    "variable_meaning": "Boolean clinical finding indicating whether the patient currently has cognitive impairment.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has cognitive impairment.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have cognitive impairment.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has cognitive impairment.\",\"meaning\":\"Boolean indicating whether the patient currently has cognitive impairment.\"}",
+  },
+  {
+    "variable_name": "patient_has_undergone_cognitive_assessment_in_the_history",
+    "variable_meaning": "Boolean procedure indicating whether the patient has undergone cognitive screening in the history.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient has undergone cognitive screening in the past.\",\"when_to_set_to_false\":\"Set to false if the patient has not undergone cognitive screening in the past.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone cognitive screening in the past.\",\"meaning\":\"Boolean indicating whether the patient has undergone cognitive screening in the history.\"}",
+
+  },
+  {
+    "variable_name": "patient_is_undergoing_hospital_admission_now",
+    "variable_meaning": "Boolean procedure indicating whether the patient is currently at the time of hospital admission.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient is currently at the time of hospital admission.\",\"when_to_set_to_false\":\"Set to false if the patient is not currently at the time of hospital admission.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently at the time of hospital admission.\",\"meaning\":\"Boolean indicating whether the patient is currently at the time of hospital admission.\"}"
+
+  },
+]
+</already_declared_variables_example_1>
+
+<entity_qualifier_pairs_example_1>
+</entity_qualifier_pairs_example_1>
+
+<new_variable_declarations_example_1>
+[
+  {
+    "variable_name": "patient_has_finding_of_impaired_cognition_now",
+    "variable_meaning": "Boolean clinical finding indicating whether the patient currently has cognitive impairment.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has cognitive impairment.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have cognitive impairment.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has cognitive impairment.\",\"meaning\":\"Boolean indicating whether the patient currently has cognitive impairment.\"}"
+    "qualifier_variables": [
+      {
+        "qualifier_variable_name": "@@based_on_cognitive_screening_at_hospital_admission",
+        "qualifier_variable_meaning": "Boolean clinical finding indicating whether the patient currently has cognitive impairment. And the coginitive impairment is identified based on the cognitive screening at the time of hospital admission.",
+        "qualifier_variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient's current cognitive impairment is identified based on cognitive screening at the time of hospital admission.\",\"when_to_set_to_false\":\"Set to false if the patient's current cognitive impairment is not identified based on cognitive screening at the time of hospital admission.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether cognitive screening at the time of hospital admission identifies the patient's current cognitive impairment.\",\"meaning\":\"Boolean indicating whether the patient's current cognitive impairment is identified based on cognitive screening at the time of hospital admission.\"}",
+      }
+    ]
+  },
+  {
+    "variable_name": "patient_has_undergone_cognitive_assessment_in_the_history",
+    "variable_meaning": "Boolean procedure indicating whether the patient has undergone cognitive screening in the history.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient has undergone cognitive screening in the past.\",\"when_to_set_to_false\":\"Set to false if the patient has not undergone cognitive screening in the past.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient has undergone cognitive screening in the past.\",\"meaning\":\"Boolean indicating whether the patient has undergone cognitive screening in the history.\"}",
+    "qualifier_variables": [
+      {
+        "qualifier_variable_name": "@@at_the_time_of_hospital_admission",
+        "qualifier_variable_meaning": "Boolean procedure indicating whether the patient has undergone cognitive screening in the history, which is at the time of hospital_admission",
+        "qualifier_variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient's cognitive screening in the history occurred at the time of hospital admission.\",\"when_to_set_to_false\":\"Set to false if the patient's cognitive screening in the history did not occur at the time of hospital admission.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient's cognitive screening in the history occurred at the time of hospital admission.\",\"meaning\":\"Boolean indicating whether the patient's cognitive screening in the history occurred at the time of hospital admission.\"}"
+      }
+    ]
+  },
+]
+</new_variable_declarations_example_1>
+</example_1>
+
+
+<example_2>
+<current_requirement_example_2>
+To be included, the patient must have (a clinical diagnosis of diabetes) OR (a clinical diagnosis of smoking habit) OR (a clinical diagnosis of lipid metabolism abnormality) OR (a clinical diagnosis of history of ischemic heart disease) OR (a clinical diagnosis of cerebrovascular disease) OR (a clinical diagnosis of obesity (body mass index > 25)) OR (a clinical diagnosis of chronic heart failure (New York Heart Association Class II OR Class III)) OR (a clinical diagnosis of electrocardiogram abnormality (left ventricular hypertrophy)).
+</current_requirement_example_2>
+
+<already_declared_variables_example_2>
+[
+  {
+    "variable_name": "patient_has_finding_of_cerebrovascular_disease_now",
+    "variable_meaning": "Boolean clinical finding indicating whether the patient currently has a clinical diagnosis of cerebrovascular disease.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has a clinical diagnosis of cerebrovascular disease.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have a clinical diagnosis of cerebrovascular disease.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of cerebrovascular disease.\",\"meaning\":\"Boolean indicating whether the patient currently has a clinical diagnosis of cerebrovascular disease.\"}"
+  },
+  {
+    "variable_name": "patient_has_finding_of_diabetes_mellitus_now",
+    "variable_meaning": "Boolean clinical finding indicating whether the patient currently has a clinical diagnosis of diabetes mellitus.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has a clinical diagnosis of diabetes mellitus.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have a clinical diagnosis of diabetes mellitus.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of diabetes mellitus.\",\"meaning\":\"Boolean indicating whether the patient currently has a clinical diagnosis of diabetes mellitus.\"}"
+  },
+  {
+    "variable_name": "patient_has_finding_of_disorder_of_lipid_metabolism_now",
+    "variable_meaning": "Boolean clinical finding indicating whether the patient currently has a clinical diagnosis of a disorder of lipid metabolism.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has a clinical diagnosis of a disorder of lipid metabolism.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have a clinical diagnosis of a disorder of lipid metabolism.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of a disorder of lipid metabolism.\",\"meaning\":\"Boolean indicating whether the patient currently has a clinical diagnosis of a disorder of lipid metabolism.\"}"
+  },
+  {
+    "variable_name": "patient_has_finding_of_ischemic_heart_disease_now",
+    "variable_meaning": "Boolean clinical finding indicating whether the patient currently has a clinical diagnosis of ischemic heart disease.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has a clinical diagnosis of ischemic heart disease.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have a clinical diagnosis of ischemic heart disease.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of ischemic heart disease.\",\"meaning\":\"Boolean indicating whether the patient currently has a clinical diagnosis of ischemic heart disease.\"}"
+  },
+  {
+    "variable_name": "patient_has_finding_of_left_ventricular_hypertrophy_now",
+    "variable_meaning": "Boolean clinical finding indicating whether the patient currently has a clinical diagnosis of left ventricular hypertrophy.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has a clinical diagnosis of left ventricular hypertrophy.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have a clinical diagnosis of left ventricular hypertrophy.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of left ventricular hypertrophy.\",\"meaning\":\"Boolean indicating whether the patient currently has a clinical diagnosis of left ventricular hypertrophy.\"}"
+  },
+  {
+    "variable_name": "patient_has_finding_of_obesity_now",
+    "variable_meaning": "Boolean clinical finding indicating whether the patient currently has a clinical diagnosis of obesity.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has a clinical diagnosis of obesity.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have a clinical diagnosis of obesity.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of obesity.\",\"meaning\":\"Boolean indicating whether the patient currently has a clinical diagnosis of obesity.\"}"
+  },
+  {
+    "variable_name": "patient_has_finding_of_tobacco_smoking_behavior_finding_now",
+    "variable_meaning": "Boolean clinical finding indicating whether the patient currently has a clinical diagnosis of tobacco smoking behavior.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has a clinical diagnosis of tobacco smoking behavior.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have a clinical diagnosis of tobacco smoking behavior.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a clinical diagnosis of tobacco smoking behavior.\",\"meaning\":\"Boolean indicating whether the patient currently has a clinical diagnosis of tobacco smoking behavior.\"}"
+  }
+]
+</already_declared_variables_example_2>
+
+<entity_qualifier_pairs_example_2>
+[
+  {
+    "entity": {
+      "surface_string": "clinical diagnosis of chronic heart failure",
+      "type": "FreeEntity",
+      "start": 356,
+      "end": 399,
+      "preferred_term": null,
+      "conceptId": null
+    },
+    "qualifiers": []
+  }
+]
+</entity_qualifier_pairs_example_2>
+
+<new_variable_declarations_example_2>
+[
+  {
+    "variable_name": "patient_has_finding_of_chronic_heart_failure_now",
+    "variable_meaning": "Boolean clinical finding indicating whether the patient currently has chronic heart failure.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has chronic heart failure.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have chronic heart failure.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has chronic heart failure.\",\"meaning\":\"Boolean indicating whether the patient currently has chronic heart failure.\"}",
+    "qualifier_variables": [
+      {
+        "qualifier_variable_name": "@@classified_as_nyha_class_ii_or_iii",
+        "qualifier_variable_meaning": "Boolean clinical finding indicating whether the patient currently has chronic heart failure, which is classified as New York Heart Association Class II or Class III.",
+        "qualifier_variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient's current chronic heart failure is classified as New York Heart Association Class II or Class III.\",\"when_to_set_to_false\":\"Set to false if the patient's current chronic heart failure is not classified as New York Heart Association Class II or Class III.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient's current chronic heart failure is classified as New York Heart Association Class II or Class III.\",\"meaning\":\"Boolean indicating whether the patient's current chronic heart failure is classified as New York Heart Association Class II or Class III.\"}"
+      }
+    ]
+  }
+]
+</new_variable_declarations_example_2>
+
+</example_2>
+
+
+
+=== OUTPUT FORMATS ===
+Emit EXACTLY the following block:
+  1. <new_variable_declarations>. All remaining free entity variables (Boolean and numeric), qualifier variables, and any other variables required to encode ONE eligibility requirement into SMT-LIB program declared at this stage.
+Note if things are empty, just emit empty blocks. But make sure that all blocks are present. Similarly, if a field is empty, still emit an empty version of that field. 
+
+<new_variable_declarations>
+[
+  {
+    "variable_name": "...",
+    "variable_meaning": "...",
+    "variable_declaration": "explains when the variable should be given each possible value and what it represents",
+    "qualifier_variables": [
+      {
+        "qualifier_variable_name": "@@<qualifier_1>",
+        "qualifier_variable_meaning": "first include variable meaning, then include qualifier meaning",
+        "qualifier_variable_declaration": "explains when the variable should be given each possible value and what it represents",
+      }
+    ]
+  }
+]
+</new_variable_declarations>

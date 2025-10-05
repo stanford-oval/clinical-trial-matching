@@ -1,0 +1,109 @@
+# === ROLE ===
+You are an expert in human language logic and logical decomposition.
+
+# === BACKGROUND ===
+You are being inputted with exclusion criteria. If an exclusion criteria is satisfied (i.e., has value True), the participant must be excluded. If an exclusion criteria is not satisfied (i.e., has value False), the participant may not be excluded (may be included).
+
+# === TASK ===
+Your task is to decompose each exclusion criterion into independent component requirements that - once any one of them are satisfied - the whole requirement is satisfied. That is, only when all components are NOT SATISFIED, can the original requirement be NOT SATISFIED.
+
+
+# === INPUT ===
+<requirements>
+##REQUIREMENTS_JSON##
+</requirements>
+
+
+# === GENERAL GUIDELINES ===
+GENERAL.INSTRUCTION_0. Logical connectives (ANDs, ORs, NOTs) have their priorities shown with paranetheses, where expressions in inner parantheses are evaluated before those belonging to outerparantheses. Think of it as inside out recursive evaluation. Also, preserve as many of them as possible after the decomposition.
+GENERAL.INSTRUCTION_1. NEVER decompose examples, explanations, purposes, or qualifiers into separete components!
+    For example: "severe hepatic impairment like hepatic failure or cirrhosis" should never be split into "severe hepatic impairment like hepatic failure" and "severe hepatic impairment like cirrhosis"
+   Becasue the decomposition splits 'severe hepatic impairment' into 'hepatic failure' and 'cirrhosis,' which are examples or subcategories of severe hepatic impairment. This is not a valid decomposition because satisfying one component does not necessarily satisfy the original requirement."
+GENERAL.INSTRUCTION_2. Keep the leading "The patient is excluded if the patient ..." part in every component from decomposition.
+GENERAL.INSTRUCTION_3. Make sure that you decompose the requirements into the finest statement (note: not examples or explanations) granularity!
+GENERAL.INSTRUCTION_4. Be sure to distinguish between cases where "statements are NOT WRAPPED BY A 'NOT'" and cases where "statements are WRAPPED BY A 'NOT'". See guidelines for each category below.
+GENERAL.INSTRUCTION_5. If there are phrases such as "has a history of" at the front of requirements as top level logic, make sure to include this logic to every umbrellaed component requirements.
+
+
+
+
+# === GUIDELINES FOR STATEMENTS NOT WRAPPED BY A "NOT" ===
+NOT_WRAPPED_BY_NOT.INSTRUCTION_0. If two component requirements are linked by "and", "AND", or "as well as" (i.e., any conjunctive logic), under NO circumstances split them!
+   - Treat the whole clause as ONE atomic requirement.  
+   - This rule overrides every other instruction.
+NOT_WRAPPED_BY_NOT.INSTRUCTION_1. Separate component requirements only by "OR"s. That is, if two component requirements are linked by disjunctive logic, you can confidently seprate them.
+
+
+
+# === EXAMPLES STATEMENTS NOT WRAPPED BY A "NOT" ===
+
+NOT_WRAPPED_BY_NOT.EXAMPLE_0:
+"The patient is excluded if ((the patient has a contradiction to esophagogastroduodenoscopy and the patient has a contradiction to biopsies (inclusive))) such as Boerhaave's syndrome, or ((the patient has a history of bleeding disorder or the patient has a history of elevated international normalized ratio (inclusive))).": [
+    "A patient is excluded if the patient has a contradiction to esophagogastroduodenoscopy and the patient has a contradiction to biopsies (inclusive) such as Boerhaave's syndrome.",
+    "A patient is excluded if the patient has a history of bleeding disorder.",
+    "A patient is excluded if the patient has a history of elevated international normalized ratio (inclusive)."
+],
+
+
+NOT_WRAPPED_BY_NOT.EXAMPLE_1:
+"The patient is excluded if the patient has ((clinically significant lung disease, defined as forced expiratory volume in 1 second (FEV1) <65% of predicted)).": [
+    "The patient is excluded if the patient has ((clinically significant lung disease, defined as forced expiratory volume in 1 second (FEV1) <65% of predicted))."
+],
+
+NOT_WRAPPED_BY_NOT.EXAMPLE_2:
+"The patient is excluded if the patient has a history of (heart failure within the preceding six months) OR (unstable angina within the preceding six months)": [
+    "The patient is excluded if the patient has a history of heart failure within the preceding six months.",
+    "The patient is excluded if the patient has a history of unstable angina within the preceding six months."
+]
+
+
+# === GUIDELINES FOR STATEMENTS WRAPPED BY A "NOT" ===
+IS_WRAPPED_BY_NOT.INSTRUCTION_0. If two component requirements are linked by "or", "OR", or "either ... or ..." (i.e., any disjunctive logic), under NO circumstances split them!
+   - Treat the whole clause as ONE atomic requirement.  
+   - This rule overrides every other instruction.
+IS_WRAPPED_BY_NOT.INSTRUCTION_1. Separate component requirements only by "AND"s. That is, if two component requirements are linked by conjunctive logic, you can confidently seprate them.
+
+
+# === EXAMPLES FOR STATEMENTS WRAPPED BY A "NOT" ===
+
+IS_WRAPPED_BY_NOT.EXAMPLE_0. 
+"The patient is excluded if the patient does not have disease A and cancer B":	 [
+  "The patient is excluded if the patient does not have disease A",
+  "The patient is excluded if the patient does not have cancer B".
+]
+
+# === NEVER SPLIT STATEMENTS WITHIN EXAMPLES, EXPALANTIONS, AND DEFINITIONS ===
+
+DONT_SPLIT_EXAMPLES.EXAMPLE_0:
+"The patient is excluded if the patient has ((a contraindication to esophagogastroduodenoscopy) or (a contraindication to biopsies)) such as ((Boerhaave's syndrome) or (a history of bleeding disorder) or (a history of elevated international normalized ratio)).": [
+  "The patient is excluded if the patient has ((a contraindication to esophagogastroduodenoscopy) or (a contraindication to biopsies)) such as ((Boerhaave's syndrome) or (a history of bleeding disorder) or (a history of elevated international normalized ratio))."
+]
+
+DONT_SPLIT_EXAMPLES.EXAMPLE_1:
+"The patient is excluded if the patient has severe hepatic impairment, including ((hepatic failure) or (cirrhosis)) (inclusive).": [
+  "The patient is excluded if the patient has severe hepatic impairment, including ((hepatic failure) or (cirrhosis)) (inclusive)."
+]
+
+DONT_SPLIT_EXAMPLES.EXAMPLE_2:
+"The patient is excluded if the patient (is in respiratory failure OR is in incipient respiratory failure) AND (is NOT a candidate for mechanical ventilation for any reason).": [
+  "The patient is excluded if the patient (is in respiratory failure OR is in incipient respiratory failure) AND (is NOT a candidate for mechanical ventilation for any reason)."
+]
+
+DONT_SPLIT_EXAMPLES.EXAMPLE_3:
+"The patient is excluded if the patient has clinically significant cardiac disease (such as symptomatic coronary artery disease OR myocardial infarction within the last 12 months).": [
+  "The patient is excluded if the patient has clinically significant cardiac disease (such as symptomatic coronary artery disease OR myocardial infarction within the last 12 months)."
+]
+
+
+# === OUTPUT (JSON only) ===
+[
+  {
+    "requirement_index": 1,
+    "components": [
+      "<component 1>",
+      "<component 2>",
+      "..."
+    ]
+  },
+  ...
+]

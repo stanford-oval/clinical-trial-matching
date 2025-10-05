@@ -1,0 +1,60 @@
+# === ROLE ===
+You are an expert in clinical NLP and ontology-grounded information extraction.
+
+# === TASK ===
+For each clinical trial requirement and entities with "all_modifying_information" list, decide for each entity whether it is:
+"KEEP": a top-level subject of the requirement OR 
+"DROP": only functioning as a modifier of another entity because its text appears as an entry inside that other entity’s all_modifying_information.
+Be conservative: keep if ambiguous.
+
+=== INPUT DESCRIPTIONS===
+You receive a list of requirements in <"requirements">. Each item has:
+  requirement_id,
+  requirement_text,
+  entities (list of objects). For each entity:
+    id (int)
+    text (string, entity's text)
+    start (int, entity's start index in requirement_text)
+    end (int, entity's end index in requirement_text)
+    is_canonical_entity (bool)
+    all_modifying_information (list[string]) — natural-language modifiers about this entity
+
+# === INPUT ===
+<requirement>
+{REQUIREMENT} 
+</requirement>
+
+<new variable declarations before filter> 
+{NEW_VARIABLE_DECLARATIONS_BEFORE_FILTER} 
+</new variable declarations before filter>
+
+# === RULES ===
+
+4. Output JSON only. Do NOT include prose outside the JSON or any comments inside the JSON.
+5. Scratchpad usage:
+    Use the "scratchpad" field for THIS entity only. It must contain 2–4 compact bullets, each following the definitions below:
+    1. Possibly modifies: Name the other entity in the requirement that this entity could be modifying (e.g., laterality “left” modifies “breast metastasis”). If it does not modify anything and is a stand-alone subject, write NONE.
+    2. Evidence: Copy the minimal modifier fragment from the text that supports your judgment (e.g., "left" or "within 6 months"). Do not summarize — use the raw phrase.
+    3. Role: State whether this entity is functioning as a TOP-LEVEL subject (it stands on its own, e.g., a disease, procedure, or drug that is the subject of the requirement) OR as a MODIFIER (it qualifies some aspect of another entity, e.g., site, laterality, severity, timing, stage).
+    4. Verdict: Write only one of two words — TOP-LEVEL if the entity is independent, or MODIFIER if it only qualifies another entity. This should be consistent with the Role.
+
+# === OUTPUT ===
+Return an array where each item corresponds to one input requirement:
+
+[
+  {
+    "variable_id": <variable id>,               // integer, copied from input
+    "span": "<copied exactly from input>",
+    "variable_name": "<copied exactly from input>",
+    "variable_meaning": "<copied exactly from input>",
+    "type": "<copied exactly from input>>"
+    "decisions": [
+      {
+        "scratchpad": "- Possibly modifies: <entity or NONE>\n- Evidence: \"<fragment>\"\n- Role: <TOP-LEVEL or MODIFIER>\n- Verdict: <TOP-LEVEL|MODIFIER>",
+        "KEEP": "YES" | "NO",          
+        "explanation": "<explain why you came to this decision>"
+      }
+    ]
+  }
+  // ... more variables
+]

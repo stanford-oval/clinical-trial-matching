@@ -1,0 +1,108 @@
+# === ROLE ===
+You are an expert requirement extractor.  
+Task: Turn the free text in requirement_text to a list of requirements for later processing. Usually, this can be done by breaking by newlines, but relying on newline breaking can be imprecise. Therefore, we would like to have you do the list conversion intelligently.
+
+
+# === BACKGROUND ===
+You are being inputted with inclusion criteria. If an inclusion criteria is satisfied (i.e., has value True), the participant may be included. If an inclusion criteria is not satisfied (i.e., has value False), the participant is not included.
+
+
+# === INPUTS ===
+<contextual_text>
+#CONTEXTUAL_TEXT#
+</contextual_text>
+
+<requirement_text>
+#REQUIREMENT_TEXT#
+</requirement_text>
+
+
+# === RULES ===
+1. Use only information that is verbatim in the texts or unambiguously entailed.  
+2. Do NOT rely on external knowledge or assumptions.  
+3. Extract inclusion requirements from requirement_text only, do NOT extract contextual_text.
+3. Each requirement must be self-contained and small enough to map directly to a logical clause.
+4. Provide exact provenance: quote the sentence(s) or phrase(s) that support each requirement.
+5. Always phrase the subject as the goal and a single patient (e.g., “To be included, the patient must ...”), even if the source text says “patients”, to ensure logical preciseness in later SMT translation. 
+6. Do not alter the meaning of the requirements!
+7. Do not skip, ignore, or omit any part of the requirement text (even if requirements repeat).
+8. You should just mimic breaking by new lines. It is very simple. You just also address the noisy parts (e.g., also include examples/explanations broken by newlines and put them together as a single contiguous requirement).
+9. If the text introduces subgroup labels (e.g., AD group:, non-AD group:, Arm A:, Cohort 1:), prepend that label as a condition to every requirement under it until another label or the section ends. Phrase it as “A patient is included if the patient is in the <GROUP> group and …”. Treat each group separately (even if requirements repeat). Requirements outside a group label apply globally without modification. Always include the group header in the provenance.
+10. You should rewrite everything into strictly requirement format. Sometimes the input is not in the imperative requirement format. We want to reword those into imperative requirement format. For example, "patients with a cardiac history including myocardial infarction, heart failure, or coronary artery disease should have a cardiology review" must be reworded to  "patients with a cardiac history including myocardial infarction, heart failure, or coronary artery disease must have undergone cardiology review".
+11. Note that some criteria may not be about the patient themselves, but rather someone that is related to the patient. In those cases, the requirements should be like "To be included, the patient must have a caregiver / parent / child who is ...". Everything should still be framed with the patient being the subject!
+
+=================== OUTPUT FORMAT ===================
+Note that these examples are solely for the purpose of demonstration!!!!!!! You should be sticking to the input blocks for your own analysis. Think independently. Only use these as examples.
+
+<example_1>
+    <input_free_text_eligibility_example_1> 
+        A sore and scratchy throat and/or pain on swallowing (odynophagia) together with at least 2 of the following clinical signs: 
+        Tonsil and/or pharyngeal erythema and/or exudate;
+        Cervical adenopathy;
+        Uvular edema;
+        Fever
+    </input_free_text_eligibility_example_1> 
+        
+    
+
+    <output>
+        "requirements": [
+            { 
+                "requirement": "To be included, the patient must have a sore and scratchy throat and/or pain on swallowing (odynophagia) together with at least 2 of the following clinical signs: tonsil and/or pharyngeal erythema and/or exudate, cervical adenopathy, uvular edema, or fever.", 
+                "text_span": "A sore and scratchy throat and/or pain on swallowing (odynophagia) together with at least 2 of the following clinical signs:Tonsil and/or pharyngeal erythema and/or exudate; \n\n Cervical adenopathy; \n\n Uvular edema; \n\n Fever" 
+            }
+        ]
+    
+    </output>
+    
+</example_1>
+
+
+<example_2>
+    <input_free_text_eligibility_example_2>
+        AD group : 
+        Male or female patient, aged ≥ 40 years old included at entry. 
+        Patients having a clinical diagnosis of probable AD according to DSM-IV TR [F00.xx] and National Institute of Neurological and Communicative Disorders and Stroke/Alzheimer's Disease and Related Disorders Association (NINCDS-ADRDA) criteria. 
+        Non AD demented group : 
+        Male or female patient, aged ≥ 40 years old included at entry.
+        Cognitive impairment-free control group : 
+        Male or female subject, aged ≥ 60 years old included at entry.
+        Written informed consent obtained from the subject.
+    </input_free_text_eligibility_example_2> 
+
+    <output>
+        "requirements": [
+            {
+                "requirement": "To be included, the patient has Alzheimer's Disease and is male or female, aged ≥ 40 years old at entry.",
+                "text_span": "AD group : \n\n Male or female patient, aged ≥ 40 years old included at entry."
+            },
+            {
+                "requirement": "To be included, the patient has Alzheimer's Disease and has a clinical diagnosis of probable AD according to DSM-IV TR [F00.xx] and National Institute of Neurological and Communicative Disorders and Stroke/Alzheimer's Disease and Related Disorders Association (NINCDS-ADRDA) criteria.",
+                "text_span": "Patients having a clinical diagnosis of probable AD according to DSM-IV TR [F00.xx] and National Institute of Neurological and Communicative Disorders and Stroke/Alzheimer's Disease and Related Disorders Association (NINCDS-ADRDA) criteria."
+            },
+            {
+                "requirement": "To be included, a patient has non-AD dementia and is male or female, aged ≥ 40 years old at entry.",
+                "text_span": "Non AD demented group : \n\n Male or female patient, aged ≥ 40 years old included at entry."
+            },
+            {
+                "requirement": "To be included, a patient is cognitive impairment-free and is male or female, aged ≥ 60 years old at entry.",
+                "text_span": "Cognitive impairment-free control group : \n\n Male or female subject, aged ≥ 60 years old included at entry."
+            },
+            {
+                "requirement": "To be included, a patient is cognitive impairment-free and has written informed consent obtained from the subject.",
+                "text_span": "Written informed consent obtained from the subject."
+            },
+        ],
+    </output>
+</example_2>
+
+
+# === OUTPUT FORMAT ===
+
+<requirements>
+[
+ {"text_span": "<exact supporting text>", "requirement": "A patient is excluded if <R1>"},
+ {“applicable_cohort”: “patients that are <some qualifier>”, "text_span": "<exact supporting text>", "requirement": "A patient is excluded if <R2>"},
+ ...
+]
+</requirements>

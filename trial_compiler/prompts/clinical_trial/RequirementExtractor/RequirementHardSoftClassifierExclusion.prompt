@@ -1,0 +1,60 @@
+# === ROLE ===
+You are an expert in clinical-trial eligibility criteria.
+
+# === BACKGROUND ===
+You are being inputted with exclusion criteria. If an exclusion criteria is satisfied (i.e., has value True), the participant must be excluded. If an exclusion criteria is not satisfied (i.e., has value False), the participant may not be excluded (may be included).
+
+# === TASK ===
+Eligibility criteria are noisy. Some phrases in the criteria are not really hard constraints. To better match patients with clinical trials, we would like to identify which components - once have value True (i.e., are satisfied) at screening time - can not become unsatisfied (i.e., value False), which components may be reverted to be unsatisfied depending on the outcome on the patient's state, and which components can always go from satisfied (True) to satisfied (False).
+
+Note that we are doing this to filter down to only the "hard" constraints so as to maximize the recall on matching patients when we do trial-patient matching. 
+
+Here is your task:
+Label each disjunctively linked component of a requirement as NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ACTION
+OTHER_REQUIREMENTS
+
+# === LABEL DEFINITIONS & EXAMPLES ====
+(Consider, if a criterion is satisfied at screening, can it possibly be not satisfied before randomization of the trial? Then choose among the following two labels. Take examples as references)
+
+1. NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ONEOFF_ACTION: Use for items that do not determine patient–trial relevance. They’re either not true eligibility requirements or can always be fulfilled by a simple, one-time action during prescreening. Do not treat these as inclusion/exclusion gates.
+  - Example 1.1: Completing required paperwork (e.g., signing an updated informed-consent form or providing vaccination records) –  aka submitting missing documentation | finalising paperwork | providing proof of immunisation.
+  - Example 1.2: Observing a short-term abstinence (e.g., avoiding alcohol for 24 h)   aka temporary lifestyle adjustment | behavioural compliance | brief abstention.
+  - Example 1.3: Fasting as instructed before baseline assessments (e.g., ≥ 8 h pre-test fast) –  aka observing protocol-mandated fast | undertaking required fasting | pre-lab fasting.
+  - Example 1.4: Attending a follow-up visit or screening procedure (e.g., receiving a booster injection, undergoing an ECG) –  aka returning for clinic visit | completing mandatory screening test | attending scheduled appointment.
+  - Example 1.5: Initiating or adjusting contraception to meet study requirements –  aka beginning reliable contraception | starting birth-control regimen | implementing contraceptive measures.
+  - Example 1.6: Using or wearing a study-mandated device/app as instructed –  aka complying with device usage | adopting required study device | wearing activity tracker.
+
+2. OTHER_REQUIREMENTS: Requirements that used to determine patient-trial relevance. They cannot be fulfilled by a simple, one-time action during prescreening.
+  - Example 2.1: The patient is excluded if the patient has a history of treatment with any antimalarial drug, including at least one of the following: (chloroquine) OR (quinine) OR (mefloquine) OR (Malarone) OR (sulfadoxine-pyrimethamine) OR (artemisinin compounds), within two weeks prior to enrollment into the study.
+  - Example 2.2: The patient is excluded if the patient is breastfeeding.
+
+
+# === GUIDELINES ===
+1. Note that we are ONLY interested in if an exclusion criterion can be turned from True (satisfied) to False (not satisfied); we never care about the other way around.
+2. After you label a component, explain why you made that labelling choice in the "reason" field. Use the following template for your explanation":
+   - "By doing [something] [some results] may occur, so the criterion can be turned from True to False".
+3. Explicitly state what correction is required to turn a criterion from True to False in the "correction" field. If a component cannot be turned from satisfied to not satisfied, keep the field empty.
+4. Fill the label in the "label" field.
+5. If the "correction" is related to medical interventions (e.g. treatement, medicine, etc.), it should NOT be labelled as NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ONEOFF_ACTION, because any medical-related correction is NOT simple oneoff action.
+6. In "satisfied_meaning", state what it means for this requirement to be satisfied; In "not_satisfied_meaning", state what it means for this requirement to be not_satisfied; In "correctable_meaning", state what is means to go from "satisfied_meaning" to "not_satisfied_meaning".
+7. Note that the constraint you assign to suspicion, possibility, clinical signs, and symptoms of a disease (or more generally, a finding) should be decided by the constraint you would assign to that disease. This is because having a disease (or a finding) ALWAYS implies having suspicion, possibility, clinical signs, and symptoms of a disease under our context. Reaching a concrete diagnosis of a disease/finding NEVER cancels the suspicion, possibility, clinical signs, or symptoms of it. Rather, it confirms these aspects. Therefore, it should NOT be categorized to "NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ACTION".
+8. If the requirement is "having history of <disease/symptom/treatement>" without any time restrictions (such as within 2 weeks), this requirement should be categorized to "OTHER_REQUIREMENTS". Because a disease history or treatement history can NOT be undone by any action. Waiting for a period does NOT turn the fact of treatment history from true to false.
+9. Evaluate action needed for correction by its difficulty in reality and ethical feasibility. Although some correction action is oneoff theoretically, they are not always satisfiable in reality (e.g. losing/gaining weight; getting married; abstain from drug use, etc.). Similarly, requirements such as breastfeeding and pregnancy should also be labeled under OTHER_REQUIREMENTS, since cessation is technically possible but ethically and practically infeasible for most participants.
+
+
+# === INPUT ===
+<requirements>
+##COMPONENTS_JSON##
+</requirements>
+
+# === OUTPUT (JSON only) ===
+[ { "requirement_index": 1,
+    "components": [
+      { 
+        "text": "<component>",
+        "satisfied_meaning": "<satisfied_meaning>",
+        "not_satisfied_meaning": "<not_satisfied_meaning>",
+        "correctable_meaning": "how to go from <satisfied_meaning> to <not_satisfied_meaning>?",
+        "label": "NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ACTION" | "OTHER_REQUIREMENTS"
+        "reason": "<why>",
+        "correction": "<action>"} ] } ]

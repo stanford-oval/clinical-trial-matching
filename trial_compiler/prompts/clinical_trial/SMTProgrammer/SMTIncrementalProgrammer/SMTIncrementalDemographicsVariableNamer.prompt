@@ -1,0 +1,134 @@
+=== ROLE ===
+You are an expert SMT engineer and doctor. Your task is to declare DEMOGRAHIC variables needed to encode ONE eligibility requirement into an existing SMT-LIB program. You DO NOT write assertions here — only output new canonical demographic variables.
+
+
+=== INPUT DESCRIPTIONS===
+You will be given the following inputs:
+1. <current_requirement>: This is the current requirement you want to reuse or declare variables for.
+2. <reusable_variables>: This is the list of identified variables that already exist in the SMT program and are thus reusable. You should never redeclare these variables. If you need exactly these variabes, you will always be able to use them without redeclaring.
+
+=== INPUTS ===
+<current_requirement>
+#REQUIREMENT#
+</current_requirement>
+
+<reusable_variables>
+#REUSABLE_VARIABLES#
+</reusable_variables>
+
+
+=== NAMING SYSTEM / NAMING TEMPLATES ===
+Stems (lowercase snake_case; strip punctuation; numerals normalized). The timeframe token MUST appear exactly once inside the stem and match the "timeframe" field.
+
+<stems_templates>
+  patient_age_value_recorded_{timeframe}_in_years |
+  patient_age_value_recorded_{timeframe}_in_months |
+  patient_age_value_recorded_{timeframe}_in_days |
+  patient_sex_is_{sex}_{timeframe} |
+  patient_is_pregnant_{timeframe} |
+  patient_is_able_to_be_pregnant_{timeframe} |
+  patient_has_childbearing_potential_{timeframe} |
+  patient_is_breastfeeding_{timeframe} |
+  patient_is_lactating_{timeframe} |
+  patient_is_postmenopausal_{timeframe} |
+  patient_is_in_transition_to_menopausal_{timeframe} |
+  patient_is_infertile_{timeframe} |
+  patient_is_inpatient_{timeframe} |
+  patient_is_outpatient_{timeframe} |
+  patient_has_been_inpatient_{timeframe} |
+  patient_has_been_outpatient_{timeframe} |
+  patient_has_been_inpatient_{timeframe} |
+  patient_is_child_{timeframe}
+  patient_is_adolescent_{timeframe}
+  patient_is_adult_{timeframe}
+  patient_is_middle_aged_{timeframe}
+  patient_is_older_adult_{timeframe}
+  patient_is_neonate_{timeframe}
+  patient_is_toddler_{timeframe}
+  patient_is_preschooler_{timeframe}
+  patient_is_school_aged_{timeframe}
+  patient_is_premenopausal_{timeframe}
+  patient_is_perimenopausal_{timeframe}
+  patient_is_postpartum_{timeframe}
+  patient_is_postabortion_{timeframe}
+  patient_is_emergency_department_patient_{timeframe}
+  patient_is_long_term_care_resident_{timeframe}
+  patient_is_nursing_home_resident_{timeframe}
+  patient_is_assisted_living_resident_{timeframe}
+  patient_was_born_preterm_{timeframe}
+  patient_was_born_at_term_{timeframe}
+  patient_was_born_postterm_{timeframe}
+  patient_has_history_of_preterm_delivery_{timeframe}
+  patient_has_history_of_term_delivery_{timeframe}
+  patient_has_history_of_postterm_delivery_{timeframe}
+  patient_has_history_of_recurrent_preterm_delivery_{timeframe}
+  patient_has_history_of_preterm_premature_rupture_of_membranes_{timeframe}
+  patient_has_history_of_stillbirth_{timeframe}
+  patient_has_history_of_spontaneous_abortion_{timeframe}
+</stems_templates>
+
+<sex>
+Choose from male / female / other.
+</sex>
+
+<timeframe>
+  Timeframe : now | inthehistory | inthefuture | inthepast{n}{units} | inthefuture{n}{units} | foradurationof{n}{units}
+  Time Units: minutes | hours | days | weeks | months | years 
+</timeframe>
+
+=== EXAMPLES ===
+<example_1>
+
+<current_requirement>
+To be included, the patient must be aged ≥ 18 years.
+</current_requirement>
+
+<reusable_variables>
+</reusable_variables>
+
+<new_age_sex_pregnancystatus_declarations>
+[
+  {
+    "span": "aged ≥ 18 years",
+    "template": "patient_age_value_recorded_{timeframe}_in_years",
+    "timeframe": "now",
+    "variable_meaning": "Numeric value indicating the patient's current age in years.",
+    "variable_declaration": "{\"when_to_set_to_value\":\"Set to the patient's current age in years if it is known and documented.\",\"when_to_set_to_null\":\"Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.\",\"meaning\":\"Numeric value indicating the patient's current age in years.\"}",
+    "usage_description": "Used to determine if the patient meets the age eligibility requirement of being 18 years or older."
+    "entity_variable_name": "patient_age_value_recorded_now_in_years",
+  }
+]
+</new_age_sex_pregnancystatus_declarations>
+
+</example_1>
+
+=== GUIDELINES ===
+1. You are ONLY allowed to define variables that strictl follow the given templates.
+2. Style guide: use lowercase snake_case; numerals normalized; timeframe units canonicalized.
+3. Variable names should exactly match what they mean.
+4. ONLY define variables if their usages in the original requirement can be EXACTLY map to the template's semantic meaning. Be conservative on this.
+5. Replace the corresponding {sex} and <timeframe> blocks with <sex> and <timeframe> entries.
+6. These are all the templates you should use. NEVER declare any variable that is not about age, sex, pregnancy status, and potential to be pregnant.
+7. After finishing "variable_name" and "variable_meaning", comment with a single JSON object on the same line for "variable_declaration". This object explains when the variable should be given each possible value and what it represents. When commenting the object, make sure the comments are only based on the variable meaning and the variable, don't add any other information to the comment, since it change the variable meaning.
+   – For Boolean variables, include five keys: (1) when_to_set_to_true (2) when_to_set_to_false (3) when_to_set_to_null (4) meaning.
+   – For numeric variables, include four keys: (1) when_to_set_to_value. (2) when_to_set_to_null (3) meaning.
+  Keep this JSON object on the same line as the declaration; do not wrap it onto a new line and do not surround it with extra punctuation.
+
+=== OUTPUT FORMATS ===
+Emit  <new_age_sex_pregnancystatus_declarations>. This refers to everything that ses templates from <stems_templates::demographics> that you have to newly declare (does not exist in <smt_program_by_far>).
+
+Note if things are empty, just emit empty blocks. But make sure that all blocks are present. Similarly, if a field is empty, still emit an empty version of that field. 
+
+<new_age_sex_pregnancystatus_declarations>
+[
+  {
+    "span": "<relevant span>",
+    "template": "<which template name>",
+    "timeframe": "<now|inthehistory|inthefuture|inthepast{n}{units}|inthefuture{n}{units}>",
+    "variable_meaning": "<meaning of the variable>",
+    "variable_declaration": "explains when the variable should be given each possible value and what it represents",
+    "usage_description": "<mechanistic role in the future assertion>"
+    "entity_variable_name": "<stem>",
+  }
+]
+</new_age_sex_pregnancystatus_declarations>

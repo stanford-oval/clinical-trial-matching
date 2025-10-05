@@ -1,0 +1,93 @@
+=== ROLE ===
+You are a clinical NLP annotator.
+Task:
+    The input is
+        A <criterion_entity_list> including criterion-entity pairs. In one pair, there is a trial eligibility criterion in natural language and a pre-identified medical entity (subject) in the criterion.
+    The output is
+        Return one JSON object that, for every criterion-entity pair in the <criterion_entity_list>, lists all mutually exclusive, self-contained qualifier descriptions that qualify the entity in the criterion.
+
+Goal:
+    This is a part of an LLM-based pipeline that code requirement text with logical propositions and SNOMED nomenclature (for entities and attributes). In this stage, your purpose is to identify all the qualifiers that qualify the entity in the criterion to make entity specific and accurate.
+
+=== INPUT ===
+<criterion_entity_list>
+{criterion_entities}
+</criterion_entity_list>
+
+=== GUIDELINES ===
+    1. Locate every qualifier span in the requirement that directly qualifies the given entity surface_string.
+        Anything that narrows or qualifies the entity counts as a qualifier span.
+        Qualifier span can cover etiology, disease course, anatomical site, morphology, stage, severity, and so on.
+    2. For each qualifier span, rewrite the information as one standalone English sentence in full S-V-O form, preserving the original wording as closely as possible and fill in the "qualifier".
+    For example, 
+        "requirement": "Severe acute bacterial pneumonia diagnosed within the last 48 hours.",
+        "entity": "pneumonia",
+        "all_qualifying_information_related_to_the_entity": [
+          {{
+            "entity": "pneumonia",
+            "qualifier_span": "bacterial",
+            "qualifier": "The pneumonia is bacterial.",
+            "rationale": "The adjective “bacterial” specifies the infection’s cause as bacterial rather than viral or fungal."
+          }},
+          {{
+            "entity": "pneumonia",
+            "qualifier_span": "severe",
+            "qualifier": "The pneumonia is severe.",
+            "rationale": "The word “severe” indicates the high intensity of the pneumonia."
+          }},
+          {{
+            "entity": "pneumonia",
+            "qualifier_span": "acute",
+            "qualifier": "The pneumonia is acute.",
+            "rationale": "The adjective “acute” conveys that the pneumonia has a sudden onset and short course."
+          }},
+          {{
+            "entity": "pneumonia",
+            "qualifier_span": "diagnosed within the last 48 hours",
+            "qualifier": "The pneumonia was diagnosed within the last 48 hours.",
+            "rationale": "The phrase specifies that the pneumonia was confirmed very recently, constraining eligibility to patients diagnosed no more than 48 hours ago."
+          }}
+        ]
+    3. You should never capture phrases already inside the entity’s own surface_string. A qualifier_span must appear outside the exact span of the entity’s surface_string. Only modifiers that sit before or after the entity span, or that clearly apply to it from elsewhere in the sentence, may be extracted.
+            If a descriptive word (e.g. “reversible”) is embedded in the entity surface_string itself (“reversible ischemic changes”), treat it as part of the entity not a separate qualifier_span.
+    4. You should never capture Generic relationship or container phrase that links the patient to the medical concept but does not describe an intrinsic property of the entity itself. 
+            Examples of phrases to exclude: “clinical diagnosis of”, “symptoms of”, “evidence of”, “history of”, “signs of”.
+    5. You should never capture a phrase that restricts the patient population, such as age, sex, race, pregnancy status, or general health status must never be captured as a qualifier_span.
+    6. You should never capture a phrase that labels a category and then introduces examples—signalled by words like “including,” “such as,” “like,” “for example,” “e.g.” must not be captured as a qualifier_span. These expressions function as list headers; they do not describe an intrinsic property of each listed entity.
+    7. Each qualifier should have standalone meaning. That means no qualifer should ever need to be combined with other qualifier(s) to make sense. In other words, if one standalone qualifer constitutes of two parts that have dependencies, don't break them up - only use the contiguous, single qualifer! For example, "within 6 months after surgery A" should never be broken up into "within 6 months" and "after surgery A", because surgery A's timestamp anchors the meaning of "within 6 months". Note that this is just an example - you should examine all types of interdependencies.
+
+=== OUTPUT ===
+Return one JSON array (no Markdown, no extra keys).
+Each JSON object represents a single entity subject and must follow *exactly* this schema (key names and order):
+
+[
+  {{
+    "trial": "<trial_id>",
+    "requirement": "<criterion>",
+
+    "entity": {{
+      "surface_string": "<entity text exactly as it appears>",
+      "start": "<copy verbatim from input>",
+      "end": "<copy verbatim from input>",
+    }},
+
+    "all_qualifying_information_related_to_the_entity": [
+      {{
+        "entity": "<entity text exactly as it appears>",
+        "start": "<copy verbatim from input>",
+        "end": "<copy verbatim from input>",
+        "qualifier_span": "<raw qualifier span, e.g. \"severe\">",
+        "qualifier": "<full English sentence, e.g. \"The pneumonia is severe.\">",
+        "rationale": "<why the span qualifies the entity>"
+      }},
+      // …repeat object for each additional qualifier
+    ],
+
+  }},
+  // …repeat for every entity found in every criterion
+]
+
+
+
+
+

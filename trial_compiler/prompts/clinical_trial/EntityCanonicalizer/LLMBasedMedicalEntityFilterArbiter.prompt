@@ -1,0 +1,344 @@
+# === ROLE ===
+You are a extracted span checker and variable-name generator (with SNOMED terminology knowledge).
+
+# === TASK ===
+For each candidate object
+  1. Apply Rules 1-6: HAS_STRING_APPERANCE_IN_CRITERION_TEXT, BELONG_TO_ALLOWED_TYPES, IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE, CONTAINS_NO_CLASS_OR_STAGE_WORDS, EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING, and IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_OVERLAPPED_ENTRIES.
+  2. Attempt to build a variable_name according to NAMING CONVENTIONS and correspond to the entry's usage in criterion text (<criterion>). Build a variable_name that uses the preferred_term verbatim and
+     follows NAMING CONVENTIOS.
+     If that succeeds, Rule 7 (CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS) = "YES"; else "NO".
+  3. keep = "YES" only if Rules 1-7 are all "YES".
+
+
+
+# === INPUT ===
+<criterion>
+#CRITERION#
+</criterion>
+
+<candidate_objects>
+#STRINGS#
+</candidate_objects>
+#   Each object has: extracted_span, preferred_term, type, offset (pair of integers)
+
+
+# === RULES ===
+1. HAS_STRING_APPERANCE_IN_CRITERION_TEXT: The extracted span or entity name appears in criterion text.  
+2. BELONG_TO_ALLOWED_TYPES: The mapped-to preferred term belong to one of the allowed top types: Clinical finding / Finding, Procedure, Observable entity, Substance, Product.  
+3. IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE: Reject age / sex / pregnancy / consent / person-role terms.  
+4. CONTAINS_NO_CLASS_OR_STAGE_WORDS: If string contains class/stage words (NYHA, ECOG, GOLD, CCS,
+   Child-Pugh, etc.) keep = NO unless the qualifier ALONE is required.  
+5. EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING: The extracted span or entity name and the matched preferred term of this entry mean EXACTLY the same thing: no information added; no information lost.
+6. CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS – we can express how the entry is being used in <criterion> (the criterion text) using our naming conventions (see NAMING CONVENTIONS section below); make sure to use the naming convention of the corresponding entity type! For example, findings should use the naming conventions of clinical findings.
+7. IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES: Among all entries overlapping with this entry's extracted span whose preferred terms mean the same thing as their extracted spans, this extracted span and mapped preferred term are the most specific (COMPARE WITH OTHER ENTRIES THAT HAVE OVERLAPPING OFFSETS!).
+8. IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_OVERLAPPED_ENTRIES: First list ONLY the extracted spans that (a) overlap AND (b) are all-YES on rules 1-6 above in "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS". Among all entries overlapping with this entry's extracted span and are valid, this extracted span and mapped preferred term are the most specific (COMPARE WITH OTHER ENTRIES THAT HAVE OVERLAPPING OFFSETS AND ARE VALID!).
+9. Note that two concepts are the same under our discussion if they are "close enough", meaning that the preferred term is a reasonable representation of the extracted_span/extracted_entity. Sometimes the SNOMED terminology (the concept we are linking to) may have slightly different meaning than what we are searching for. But you are already given the closest match in SNOMED. Keep it as long as they are reasonably the same thing. For example, "android obesity" is a reasonable entity match for "abdominal obesity" in SNOMED.
+
+
+# === ADDITIONAL GUIDELINES ===
+COPY the "offset" array from the input object unchanged; do NOT invent or drop it.
+
+=== NAMING SYSTEM / NAMING TEMPLATES ===
+Stems (lowercase snake_case; strip punctuation; numerals normalized). The timeframe token MUST appear exactly once inside the stem and match the "timeframe" field.
+
+<stems_templates>
+
+  Finding:
+    <stems_templates::findings>
+      patient_has_diagnosis_of_{entity_canonical_form}_{timeframe} |
+      patient_has_finding_of_{entity_canonical_form}_{timeframe} |
+      patient_has_symptoms_of_{entity_canonical_form}_{timeframe} |
+      patient_has_clinical_signs_of_{entity_canonical_form}_{timeframe} |
+      patient_has_suspicion_of_{entity_canonical_form}_{timeframe} 
+    </stems_templates::findings>
+    
+  Procedure:
+    <stems_templates::procedures>
+      patient_has_undergone_{entity_canonical_form}_{timeframe} |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_positive |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_negative |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_normal |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_abnormal |
+      patient_is_undergoing_{entity_canonical_form}_{timeframe} |
+      patient_needs_to_undergo_{entity_canonical_form}_{timeframe} |
+      patient_will_undergo_{entity_canonical_form}_{timeframe} |
+      patient_can_undergo_{entity_canonical_form}_{timeframe} |
+    </stems_templates::procedures>
+
+  Observable Entities (numeric):
+    <stems_templates::observable_entities_numeric>
+      patient_{entity_canonical_form}_value_recorded_{timeframe}_withunit_{unit}
+    </stems_templates::observable_entities_numeric>
+
+  Product:
+    <stems_templates::product>
+      patient_is_taking_{entity_canonical_form}_{timeframe} |
+      patient_has_taken_{entity_canonical_form}_{timeframe} |
+      patient_has_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+      patient_has_intolerance_to_{entity_canonical_form}_{timeframe} |      
+      patient_has_allergy_to_{entity_canonical_form}_{timeframe} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+    </stems_templates::product>
+
+  Substance: 
+    <stems_templates::substance>
+      patient_is_exposed_to_{entity_canonical_form}_{timeframe} |
+      patient_has_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+      patient_has_intolerance_to_{entity_canonical_form}_{timeframe} |      
+      patient_has_allergy_to_{entity_canonical_form}_{timeframe} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+    </stems_templates::substance>
+
+</stems_templates>
+
+<timeframe>
+  Timeframe : now | inthehistory | inthefuture | inthepast{n}{units} | inthefuture{n}{units} | foradurationof{n}{units}
+  Time Units: minutes | hours | days | weeks | months | years
+</timeframe>
+
+<qualifiers>
+  Attach with: {stem}@@{qualifier_snake_case}
+  Qualifiers must NOT repeat timeframe/value/unit; they encode leftover semantics (e.g., temporal anchors other than “today”, context like “at baseline”, or dependencies like “after percutaneous coronary intervention”). Use qualifiers sparingly and ONLY when needed for later assertions.
+</qualifiers>
+
+
+# === EXAMPLE ===
+
+<example_input>
+  <example_criterion>
+  To be included, the patient must have (an elevated total peripheral white blood cell count > 10,000/mm³) OR (> 15% immature neutrophils (bands), regardless of total peripheral white blood cell count) OR (leukopenia with total peripheral white blood cell count < 4,500/mm³).
+  </example_criterion>
+
+  <example_candidate_objects>
+  [
+    {
+      "extracted_span": "elevated total peripheral white blood cell count",
+      "offset": [42, 90],
+      "preferred_term": "Increased blood leukocyte number",
+      "type": "Clinical finding"
+    },
+    {
+      "extracted_span": "total peripheral white blood cell count",
+      "offset": [51, 90],
+      "preferred_term": "Total white blood count",
+      "type": "Procedure"
+    },
+    {
+      "extracted_span": "white blood cell count",
+      "offset": [68, 90],
+      "preferred_term": "White blood cell count",
+      "type": "Procedure"
+    },
+    {
+      "extracted_span": "total peripheral white blood cell count",
+      "offset": [159, 198],
+      "preferred_term": "Total white blood count",
+      "type": "Procedure"
+    },
+    {
+      "extracted_span": "white blood cell count",
+      "offset": [176, 198],
+      "preferred_term": "White blood cell count",
+      "type": "Procedure"
+    },
+    {
+      "extracted_span": "total peripheral white blood cell count",
+      "offset": [220, 259],
+      "preferred_term": "Total white blood count",
+      "type": "Procedure"
+    },
+    {
+      "extracted_span": "white blood cell count",
+      "offset": [237, 259],
+      "preferred_term": "White blood cell count",
+      "type": "Procedure"
+    },
+    {
+      "extracted_span": "immature neutrophils (bands)",
+      "offset": [115, 143],
+      "preferred_term": "Neutrophil band count",
+      "type": "Procedure"
+    },
+    {
+      "extracted_span": "leukopenia",
+      "offset": [204, 214],
+      "preferred_term": "Decreased blood leukocyte number",
+      "type": "Clinical finding"
+    }
+  ]
+  </example_candidate_objects>
+</example_input>
+
+
+<example_output>
+[
+  {
+    "extracted_span": "elevated total peripheral white blood cell count",
+    "offset": [42, 90],
+    "preferred_term": "Increased blood leukocyte number",
+    "HAS_STRING_APPERANCE_IN_CRITERION_TEXT": "YES",
+    "BELONG_TO_ALLOWED_TYPES": "YES",
+    "IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE": "YES",
+    "CONTAINS_NO_CLASS_OR_STAGE_WORDS": "YES",
+    "EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING": "YES",
+    "variable_name": "has_finding_of_increased_blood_leukocyte_number_now",
+    "CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS": "YES",
+    "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS": ["total peripheral white blood cell count", "white blood cell count"],
+    "IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES": "YES",
+    "keep": "YES",
+    "why": "Abnormal finding (elevated WBC) is more specific than overlapping generic test mentions."
+  },
+  {
+    "extracted_span": "total peripheral white blood cell count",
+    "offset": [51, 90],
+    "preferred_term": "Total white blood count",
+    "HAS_STRING_APPERANCE_IN_CRITERION_TEXT": "YES",
+    "BELONG_TO_ALLOWED_TYPES": "YES",
+    "IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE": "YES",
+    "CONTAINS_NO_CLASS_OR_STAGE_WORDS": "YES",
+    "EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING": "YES",
+    "variable_name": "has_undergone_total_white_blood_count_now",
+    "CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS": "YES",
+    "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS": ["elevated total peripheral white blood cell count", "white blood cell count"],
+    "IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES": "NO",
+    "keep": "NO",
+    "why": "Overlapped and less specific than the abnormal finding mention."
+  },
+  {
+    "extracted_span": "white blood cell count",
+    "offset": [68, 90],
+    "preferred_term": "White blood cell count",
+    "HAS_STRING_APPERANCE_IN_CRITERION_TEXT": "YES",
+    "BELONG_TO_ALLOWED_TYPES": "YES",
+    "IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE": "YES",
+    "CONTAINS_NO_CLASS_OR_STAGE_WORDS": "YES",
+    "EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING": "YES",
+    "variable_name": "has_undergone_white_blood_cell_count_now",
+    "CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS": "YES",
+    "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS": ["elevated total peripheral white blood cell count", "total peripheral white blood cell count"],
+    "IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES": "NO",
+    "keep": "NO",
+    "why": "Generic test mention; less specific than the overlapping abnormal finding."
+  },
+  {
+    "extracted_span": "total peripheral white blood cell count",
+    "offset": [159, 198],
+    "preferred_term": "Total white blood count",
+    "HAS_STRING_APPERANCE_IN_CRITERION_TEXT": "YES",
+    "BELONG_TO_ALLOWED_TYPES": "YES",
+    "IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE": "YES",
+    "CONTAINS_NO_CLASS_OR_STAGE_WORDS": "YES",
+    "EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING": "YES",
+    "variable_name": "has_undergone_total_white_blood_count_now",
+    "CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS": "YES",
+    "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS": ["white blood cell count"],
+    "IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES": "YES",
+    "keep": "YES",
+    "why": "More specific than overlapping generic 'white blood cell count' at this location."
+  },
+  {
+    "extracted_span": "white blood cell count",
+    "offset": [176, 198],
+    "preferred_term": "White blood cell count",
+    "HAS_STRING_APPERANCE_IN_CRITERION_TEXT": "YES",
+    "BELONG_TO_ALLOWED_TYPES": "YES",
+    "IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE": "YES",
+    "CONTAINS_NO_CLASS_OR_STAGE_WORDS": "YES",
+    "EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING": "YES",
+    "variable_name": "has_undergone_white_blood_cell_count_now",
+    "CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS": "YES",
+    "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS": ["total peripheral white blood cell count"],
+    "IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES": "NO",
+    "keep": "NO",
+    "why": "Less specific than 'total peripheral white blood cell count' in the same span range."
+  },
+  {
+    "extracted_span": "total peripheral white blood cell count",
+    "offset": [220, 259],
+    "preferred_term": "Total white blood count",
+    "HAS_STRING_APPERANCE_IN_CRITERION_TEXT": "YES",
+    "BELONG_TO_ALLOWED_TYPES": "YES",
+    "IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE": "YES",
+    "CONTAINS_NO_CLASS_OR_STAGE_WORDS": "YES",
+    "EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING": "YES",
+    "variable_name": "has_undergone_total_white_blood_count_now",
+    "CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS": "YES",
+    "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS": ["white blood cell count"],
+    "IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES": "YES",
+    "keep": "YES",
+    "why": "More specific than overlapping 'white blood cell count' for the leukopenia clause."
+  },
+  {
+    "extracted_span": "white blood cell count",
+    "offset": [237, 259],
+    "preferred_term": "White blood cell count",
+    "HAS_STRING_APPERANCE_IN_CRITERION_TEXT": "YES",
+    "BELONG_TO_ALLOWED_TYPES": "YES",
+    "IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE": "YES",
+    "CONTAINS_NO_CLASS_OR_STAGE_WORDS": "YES",
+    "EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING": "YES",
+    "variable_name": "has_undergone_white_blood_cell_count_now",
+    "CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS": "YES",
+    "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS": ["total peripheral white blood cell count"],
+    "IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES": "NO",
+    "keep": "NO",
+    "why": "Less specific than overlapping 'total peripheral white blood cell count'."
+  },
+  {
+    "extracted_span": "immature neutrophils (bands)",
+    "offset": [115, 143],
+    "preferred_term": "Neutrophil band count",
+    "HAS_STRING_APPERANCE_IN_CRITERION_TEXT": "YES",
+    "BELONG_TO_ALLOWED_TYPES": "YES",
+    "IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE": "YES",
+    "CONTAINS_NO_CLASS_OR_STAGE_WORDS": "YES",
+    "EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING": "YES",
+    "variable_name": "has_undergone_neutrophil_band_count_now",
+    "CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS": "YES",
+    "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS": [],
+    "IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES": "YES",
+    "keep": "YES",
+    "why": "Directly names the test for band neutrophils; no valid overlaps."
+  },
+  {
+    "extracted_span": "leukopenia",
+    "offset": [204, 214],
+    "preferred_term": "Decreased blood leukocyte number",
+    "HAS_STRING_APPERANCE_IN_CRITERION_TEXT": "YES",
+    "BELONG_TO_ALLOWED_TYPES": "YES",
+    "IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE": "YES",
+    "CONTAINS_NO_CLASS_OR_STAGE_WORDS": "YES",
+    "EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING": "YES",
+    "variable_name": "has_finding_of_decreased_blood_leukocyte_number_now",
+    "CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS": "YES",
+    "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS": [],
+    "IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES": "YES",
+    "keep": "YES",
+    "why": "Clinical finding encoding low WBC; stands alone without overlaps."
+  }
+]
+</example_output>
+
+
+# === OUTPUT ===
+Return ONLY a JSON array:
+
+[
+  {
+    "extracted_span": "...",
+    "entity_name": "...",
+    "offset": [..., ...],  
+    "preferred_term": "...", 
+    "HAS_STRING_APPERANCE_IN_CRITERION_TEXT": "YES" | "NO",
+    "BELONG_TO_ALLOWED_TYPES": "YES" | "NO",
+    "IS_NOT_AGE_SEX_PREGNANCY_CONSENT_PERSONAL_RULE": "YES" | "NO",
+    "CONTAINS_NO_CLASS_OR_STAGE_WORDS": "YES" | "NO",
+    "EXTRACTED_SPAN_PREFERRED_TERM_SAME_THING": "YES" | "NO",
+    "variable_name": "patientHasFindingHeartFailureHistory",
+    "CAN_BE_EXPRESSED_WITH_CORRESPONDING_NAMING_CONVENTIONS": "YES" | "NO",
+    "ALL_VALID_OVERLAPPED_EXTRACTED_SPANS": [/* list ONLY the extracted spans that (a) overlap AND (b) are all-YES on rules above */],
+    "IS_THE_MOST_SPECIFIC_MAPPED_TO_PHRASE_AMONG_ALL_VALID_OVERLAPPED_ENTRIES": "YES" | "NO",
+    "keep":  "YES" | "NO",
+    "why":   "...explain..."
+  }, ...
+]

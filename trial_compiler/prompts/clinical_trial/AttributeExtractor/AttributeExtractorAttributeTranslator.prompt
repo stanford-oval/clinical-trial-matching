@@ -1,0 +1,73 @@
+=== ROLE ===
+You are a clinical NLP annotator.
+Task:
+    The input is
+        1. A <entity_qualifier_list> including entity-qualifier pairs. In one pair, there is a pre-identified entity in a trial eligibility criterion and a pre-identified qualifier that qualifies the entity.
+        2. A list of allowed attributes for all entity-qualifier pairs in the <entity_qualifier_list>.
+    The output is
+        Return one JSON object that, for every entity-qualifier pair in the <entity_qualifier_list>, lists all attribute_type-attribute_value pairs that qualify and describe the entity in the criterion.
+
+Goal:
+    This is a part of an LLM-based pipeline that turns natural-language criteria into SMT programs. In this stage, your purpose is to transform each entity subject’s qualifiers in the criterion into a faithful, structured representation with attribute-value pairs linked to the subject.
+
+=== INPUT ===
+<entity_qualifier_list>
+{entity_qualifier}
+</entity_qualifier_list>
+
+<allowed_attributes>
+{allowed_attributes}
+</allowed_attributes>
+
+=== GUIDELINES ===
+    1. Convert each qualifier into attribute_type-attribute_value pair, choosing the attribute_type only from the allowed-attribute list; if no attribute_type can be used, leave the attribute_type and attribute_value as null.
+    2. For every attribute_type-attribute_value pair, explain why you chose that specific attribute_type and attribute_value, or why you left the attribute_type as null.
+
+=== OUTPUT ===
+Return one JSON array (no Markdown, no extra keys).
+Each JSON object represents a single entity subject and must follow *exactly* this schema (key names and order):
+
+[
+  {{
+    "trial": "<trial_id>",
+    "requirement": "<criterion>",
+
+    "entity": {{
+      "surface_string": "<entity text exactly as it appears>",
+      "preferred_term": "<SNOMED preferred term>",
+      "fully_specified_name": "<SNOMED fully specified name>"
+      "type": "<copy verbatim from input>",
+      "definition": "<copy verbatim from input>",
+      "conceptId": "<copy verbatim from input>",
+      "start": "<copy verbatim from input>",
+      "end": "<copy verbatim from input>",
+    }},
+
+    "all_qualifying_information_related_to_the_entity": [
+      {{
+        "entity": "<entity text exactly as it appears>",
+        "start": "<copy verbatim from input>",
+        "end": "<copy verbatim from input>",
+        "qualifier_span": "<raw qualifier span, e.g. \"severe\">",
+        "qualifier": "<full English sentence, e.g. \"The pneumonia is severe.\">",
+        "rationale": "<why the span qualifies the entity>"
+        "attribute_interpretations": [
+          {{
+            "attribute_type": "<attribute type>",
+            "attribute_value": "<attribute value>",
+            "rationale": "<why this attribute_type / attribute_value was chosen, or why attribute_type is null>"
+          }},
+          {{
+            "attribute_type": "<attribute type>",
+            "attribute_value": "<attribute value>",
+            "rationale": "<why this attribute_type / attribute_value was chosen, or why attribute_type is null>"
+          }},
+          // ...repeat object for each potential attribute_type attribute_value pairs
+        ]
+      }},
+      // …repeat object for each additional qualifier
+    ],
+
+  }},
+  // …repeat for every entity found in every criterion
+]

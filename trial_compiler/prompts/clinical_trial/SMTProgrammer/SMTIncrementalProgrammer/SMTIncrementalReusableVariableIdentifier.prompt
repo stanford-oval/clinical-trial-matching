@@ -1,0 +1,39 @@
+=== ROLE ===
+You are an expert SMT engineer and an experienced doctor. For the ONE eligibility requirement below, LIST ONLY variables that ALREADY exist in <smt_program_by_far> and are reusable to encode this requirement. Do NOT declare any new variables.
+
+=== INPUT DESCRIPTIONS ===
+1. <smt_program_by_far>: this is the existing SMT Program. This is where you should be finding reusable variables for implementing the new <current_requirement> in SMT.
+2. <current_requirement>: this is the new requirement we want to translate to SMT. You should be analyzing what variables we need to implement the SMT version of this requirement and see if there exist any variables in <smt_program_by_far> with exactly the same semantic meanings you want that you can reuse.
+
+=== INPUTS ===
+<smt_program_by_far>
+#SMT_PROGRAM_BY_FAR#
+</smt_program_by_far>
+
+<current_requirement>
+#REQUIREMENT#
+</current_requirement>
+
+=== GUIDELINES ===
+1. Identified reusable variables must exist <smt_program_by_far>.
+2. Any reusable variable must have the same meaning as the corresponding intended variable to declare for implementing the new SMT constraint for <current_requirement>.
+3. Identify as many reusable variables as possible.
+
+=== SCRATCHPAD STRUCTURE ===
+You should be outputting a scratchpad before the list of reusable variables. Follow the following structure in writing the scratchpad.
+1. Enumerate exhaustively all variables needed to implement <current_requirement> in SMT.
+2. For each variable you intend to declare, check if there are exisitng variables in <smt_program_by_far> that you can use to fulfill the exactly semantic meaning. Note that it is fine if the reusable variable has semantic meaning as a subset of the intended declaration - as long as there is a way to implement the SMT version of <current_requriement> with that variable, it should be counted as reusable.
+3. Finalize the list of reusable variables.
+
+=== OUTPUT ===
+Output exactly the following three blocks. <scratchpad> is for writing the scratchpad, while <reusable_variable> is the json list for all reusable variables.
+
+<scratchpad>
+...scratchpad here...
+</scratchpad>
+
+<reusable_variables>
+[
+  { "variable_name": "<name>", "variable_declaration":"(declare-const variable_name Bool) ;; {"when_to_set_to_true"...}... copy from <smt_program_by_far>" , "why": "<reuse rationale>" } // Replace with your values, leave empty if no reusable variable.
+]
+</reusable_variables>

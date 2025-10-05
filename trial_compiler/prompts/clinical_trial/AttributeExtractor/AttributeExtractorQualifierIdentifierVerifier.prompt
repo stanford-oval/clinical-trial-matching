@@ -1,0 +1,82 @@
+=== ROLE ===
+You are an expert in analyzing qualifer-entity relations in the medical domain.
+
+Your task is to check if the extraction of qualifiers for entities in a clinical trial eligibility criteria text are correct and really narrowing the scope of the entity, sometimes the qualifier is just a fact or inherent property of the entity.
+
+=== INPUT ===
+<requirement_entity_qualifiers>
+#REQUIREMENT_ENTITY_QUALIFIER#
+<requirement_entity_qualifiers>
+
+=== CHECKLIST ===
+For each extracted qualifier, check if: 
+1. SELFCONTAINED: It depends on NO other extracted qualifier to recover its meaning in the criterion requirement. That is, it is a self-contained qualifier that standalone narrows the entity counts.
+2. qualified_entity: the referenced entity constrained by the qualifier span (i.e., entity ∧ qualifier), expressed as a self-contained noun phrase.
+3. QUALIFIED_ENTITY_REFERENCED_ENTITY_IS_SAME_ENTITY_UNDER_DIFFERENT_SCOPE: The qualified_entity preserves the ontological identity of the referenced entity (same type/class); the qualifier only adds scope constraints (time, site, laterality, stage, severity, subtype, dose/formulation, etc.) without changing the entity into a different concept (e.g., a condition, relation, or meta-fact).
+    YES: “pneumonia” → “pneumonia during hospitalization”; “biopsy” → “liver biopsy”.
+    NO: “EGD (procedure)” → “contraindication to EGD” (becomes a contraindication fact, not the procedure).
+4. QUALIFIED_ENTITY_NARROWER_THEN_REFERENCED_ENTITY: The qualified_entity is a proper subset of the referenced entity’s denotation set: every instance of the qualified_entity is an instance of the referenced entity, and not all instances of the referenced entity satisfy the qualifier.
+5. QUALIFIER_IS_NOT_AN_INHERENT_PROPERTY_OF_ENTITY: Decide whether a candidate qualifier truly adds new, narrowing information about the entity, rather than restating something already true of every instance of that entity (or already guaranteed by the requirement’s context). Mark YES iff the qualifier is not (a) intrinsic to the entity type, and not (b) entailed by the requirement context.
+    For example, the requirement declares a category with property P and then enumerates items; each item inherits P by construction. Adding P to any item does not shrink its denotation.
+    NO: The patient is excluded if the patient requires treatment with at least one of the following during the study that might interfere with the evaluation of the study drug: (nelfinavir), (digoxin), (ergot alkaloids).
+    entity: nelfinavir, qualifier span: might interfere with the evaluation of the study drug. Why: The clause modifies the list header; by membership, each listed item already satisfies this property. Adding it to nelfinavir does not narrow its scope.
+    
+    YES: the patient must have histologically verified adenocarcinoma of the esophagus (according to the Union for International Cancer Control (UICC) definition, Tumor Node Metastasis (TNM) classification, 7th edition).
+    entity: adenocarcinoma of the esophagus
+    qualifier span: histologically verified. Not every adenocarcinoma case in practice is histologically verified (could be suspected/pending). Counterexample exists → YES.
+    qualifier span: according to UICC TNM7. The edition is not intrinsic to the disease; some trials use AJCC 8th, TNM 8th, etc. Counterexample exists → YES.
+
+6. MAKE_ENTITY_SCOPE_MORE_SPECIFIC: The qualifier narrowly constrains the entity rather than merely describe the entity's intrinsic property/fact so it matches how the requirement expresses it—i.e., it reduces the entity’s denotation set (via site, laterality, stage, severity, timing, subtype, dose/formulation).
+7. TARGETS_THIS_ENTITY: The qualifier must unambiguously modify the current entity mention, not the patient or another entity in the sentence. Reject qualifiers whose syntactic head attaches to a different entity.
+8. CORRECT: The qualifier is correct - the parsing/paraphrasing of the qualifier gives exactly the same information (nothing added, nothing dropped, nothing tweaked) as the qualifer embedded in the original requirement text.
+9. NOT_IN_ENTITY_SURFACE_STRING: This qualifier is not already embedded in the entity surface string itself. That is, it adds information to the entity to narrow down its scope.
+10. NOT_GENERIC_RELATIONSHIP:  The qualifier is not for generic relationship or container phrase that links the patient to the medical concept but does not describe a property of the entity itself. (Examples of phrases to exclude: “clinical diagnosis of”, “symptoms of”, “evidence of”, “history of”, “signs of”.)
+11. NOT_EXAMPLES_TO_ILLUSTRATE_ENTITY: The qualifier is not merely introduced examples for an entity. If the qualifier span is behind triggers including, such as, like, for example, for instance, do not capture it as qualifier_span. For example, “A, including B, C, and D”, Do not capture "B", "C", and "D” as a qualifier_span for A.
+12. NOT_SUPERCLASS_AS_QUALIFIER_FOR_EXAMPLE: The qualifier must not be a superclass/category that merely introduces the entity as an example. If a qualifier is the noun phrase before triggers like including, such as, like, for example, mark "NO".
+    NO: infection of the deep tissues of the upper respiratory tract, including epiglottitis …, 
+        entity: epiglottitis, qualfier: of the deep tissues of the upper respiratory tract
+13. NOT_A_DEFINITION_QUALIFIER: Mark a span as a definition qualifier only if it contains an explicit definitional/confirmation trigger (e.g., “defined as,” “confirmed by,” “diagnosed when,” “meets/satisfies criteria”) and an operational measurement element (e.g., a numeric comparator or range with units, or a named scale threshold).
+    NO: Requirement: "The patient is excluded if the patient has severe renal impairment (defined as serum creatinine greater than 3.0 mg/dl)."
+        Entity: renal impairment
+        Qualifier_span: "defined as serum creatinine greater than 3.0 mg/dl"
+
+Make a final judgement in "ALL_GOOD":  
+- "YES" if **all** checklist items are "YES"  
+- "NO" if **any** checklist item is "NO"
+
+If "ALL_GOOD" is "NO", provide:
+- "explanation": a brief reason of what failed and why
+
+=== OUTPUT ===
+[
+  {
+    "requirement_id": <copy verbatim from input>,
+    "requirement": <copy verbatim from input>,
+    "entity_qualifier": {
+        "entity_id": <copy verbatim from input>,
+        "extracted_span": <copy verbatim from input>,
+        "start": <copy verbatim from input>,
+        "end": <copy verbatim from input>,
+        "type": <copy verbatim from input>,
+        "qualifier": <copy verbatim from input>,
+        "qualifier_span": <copy verbatim from input>,
+        "rationale": <how the span narrows the entity’s scope>,
+        "SELFCONTAINED": "YES" | "NO",
+        "qualified_entity": "<the referenced entity constrained by the qualifier span>",
+        "QUALIFIED_ENTITY_REFERENCED_ENTITY_IS_SAME_ENTITY_UNDER_DIFFERENT_SCOPE": "YES" | "NO",
+        "QUALIFIED_ENTITY_NARROWER_THEN_REFERENCED_ENTITY": "YES" | "NO",
+        "QUALIFIER_IS_NOT_AN_INHERENT_PROPERTY_OF_ENTITY": "YES" | "NO",
+        "MAKE_ENTITY_SCOPE_MORE_SPECIFIC": "YES" | "NO",
+        "TARGETS_THIS_ENTITY": "YES" | "NO",
+        "CORRECT": "YES" | "NO",
+        "NOT_IN_ENTITY_SURFACE_STRING": "YES" | "NO",
+        "NOT_GENERIC_RELATIONSHIP": "YES" | "NO",
+        "NOT_EXAMPLES_TO_ILLUSTRATE_ENTITY": "YES" | "NO",
+        "NOT_SUPERCLASS_AS_QUALIFIER_FOR_EXAMPLE": "YES" | "NO",
+        "NOT_A_DEFINITION": "YES" | "NO",
+        "ALL_GOOD": "YES" | "NO",
+        "explanation": "<explain what is not good>"
+    },
+  }
+  //...
+]

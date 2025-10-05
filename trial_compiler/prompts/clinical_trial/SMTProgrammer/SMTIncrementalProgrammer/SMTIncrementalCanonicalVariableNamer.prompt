@@ -1,0 +1,298 @@
+=== ROLE ===
+You are an expert SMT engineer and doctor. Your task is to declare variables (Boolean and numeric) and qualifier variables needed to encode ONE eligibility requirement into an existing SMT-LIB program. You DO NOT write assertions here — only output new canonical variables with canonicalizable entities and their qualifiers (qualifiers don't need to be canonical).
+
+
+=== INPUT DESCRIPTIONS===
+You will be given the following inputs:
+1. <current_requirement>: This is the current requirement you want to reuse or declare variables for.
+2. <canonical_forms>: This is a json object containing all entities in <current_requirement> for whom we found their canonical forms. 
+  2.1. Please use "span" field for understanding what surface span from <current_requirement> we are talking about. 
+  2.2. Please use "entity_canonical_form" to plug into {entity_canonical_form} in the naming templates. 
+  2.3. Please use "type" for undersatnding which templates you should use. 
+  2.4. In cases under which multiple occurances of the same span exist, refer to "start" and "end" (positional indices of the span) to see which instance we are referring to.
+3. <reusable_variables>: This is the list of identified variables that already exist in the SMT program and are thus reusable. You should never redeclare these variables(without adding qualifier predicates), even if they correspond to entries in <canonical_forms>. If the requirement needs constraints on a reusable variable, you may include an item in <new_canonical_variable_declarations> only to attach qualifiers.
+
+=== INPUTS ===
+<current_requirement>
+#REQUIREMENT#
+</current_requirement>
+
+<canonical_forms>
+#CANONICAL_FORMS#
+</canonical_forms>
+
+<reusable_variables>
+#REUSABLE_VARIABLES#
+</reusable_variables>
+
+
+=== NAMING SYSTEM / NAMING TEMPLATES ===
+Stems (lowercase snake_case; strip punctuation; numerals normalized). The timeframe token MUST appear exactly once inside the stem and match the "timeframe" field.
+
+<stems_templates>
+
+  Clinical Finding:
+    <stems_templates::findings>
+      patient_has_diagnosis_of_{entity_canonical_form}_{timeframe} |
+      patient_has_finding_of_{entity_canonical_form}_{timeframe} |
+      patient_has_symptoms_of_{entity_canonical_form}_{timeframe} |
+      patient_has_clinical_signs_of_{entity_canonical_form}_{timeframe} |
+      patient_has_suspicion_of_{entity_canonical_form}_{timeframe} 
+    </stems_templates::findings>
+    
+  Procedure:
+    <stems_templates::procedures>
+      patient_has_undergone_{entity_canonical_form}_{timeframe} |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_positive |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_negative |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_normal |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_abnormal |
+      patient_is_undergoing_{entity_canonical_form}_{timeframe} |
+      patient_needs_to_undergo_{entity_canonical_form}_{timeframe} |
+      patient_will_undergo_{entity_canonical_form}_{timeframe} |
+      patient_can_undergo_{entity_canonical_form}_{timeframe} |
+    </stems_templates::procedures>
+
+  Observable Entities (numeric):
+    <stems_templates::observable_entities_numeric>
+      patient_{entity_canonical_form}_value_recorded_{timeframe}_withunit_{unit}
+    </stems_templates::observable_entities_numeric>
+
+  Product:
+    <stems_templates::product>
+      patient_is_taking_{entity_canonical_form}_{timeframe} |
+      patient_has_taken_{entity_canonical_form}_{timeframe} |
+      patient_has_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+      patient_has_intolerance_to_{entity_canonical_form}_{timeframe} |      
+      patient_has_allergy_to_{entity_canonical_form}_{timeframe} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+    </stems_templates::product>
+
+  Substance: 
+    <stems_templates::substance>
+      patient_is_exposed_to_{entity_canonical_form}_{timeframe} |
+      patient_has_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+      patient_has_intolerance_to_{entity_canonical_form}_{timeframe} |      
+      patient_has_allergy_to_{entity_canonical_form}_{timeframe} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+    </stems_templates::substance>
+
+</stems_templates>
+
+<timeframe>
+  Timeframe : now | inthehistory | inthefuture | inthepast{n}{units} | inthefuture{n}{units}
+  Time Units: minutes | hours | days | weeks | months | years
+</timeframe>
+
+<qualifiers>
+  Attach with: {stem}@@{qualifier_snake_case}
+  Qualifiers must NOT repeat timeframe/value/unit; they encode leftover semantics (e.g., temporal anchors other than “today”, context like “at baseline”, or dependencies like “after percutaneous coronary intervention”). Use qualifiers sparingly and ONLY when needed for later assertions.
+</qualifiers>
+
+
+=== GUIDELINES ===
+1. ONLY entities present in <canonical_forms> should appear in <new_canonical_variable_declarations>. NEVER DECLARE IN <new_canonical_variable_declarations> ENTITIES THAT ARE NOT PRESENT IN <canonical_forms>!!!!! This means that if <canonical_forms> is empty, <new_canonical_variable_declarations> is automatically empty.
+  1. MAXIMIZING RECALL: You should use as many entries in <canonical_forms> as possible. 
+  2. MAXIMIZING PRECISION: Nevertheless, ONLY use entries from <canonical_forms> when the variable you intend to define has meaning matching exactly with that entity's. All naming templates are anchored to the index patient; do not create variables that describe anyone else (e.g., sibling, parent).
+2. If an entity in <canonical_forms> already has a declared variable in <reusable_variables> and the requirement adds additional constraints beyond that variable’s stem meaning (i.e., a gap that can be closed by qualifiers, which means in <canonical_forms>, the entity's "qualifiers" is not empty), then include the same variable in <new_canonical_variable_declarations> only to attach qualifiers needed for this requirement.
+3. Every stem name contains exactly one timeframe token from the closed vocab, and it matches the <timeframe> field.
+4. Style guide: use lowercase snake_case; numerals normalized; timeframe units canonicalized.
+5. Variable names should exactly match what they mean. 
+    5.1 The variable stem must exactly encode its meaning.
+    5.2 If the same canonical entity appears multiple times and you declare the same stem, keep variable_meaning identical across all occurrences; capture mention-specific nuances via qualifiers, not by changing the stem’s meaning.
+6. Numeric-first: whenever the requirement expresses a quantity (threshold/range/value), declare numeric stems (e.g., {entity}_value_recorded_{timeframe}_withunit_{unit}). Threshold/range logic is asserted later.
+7. Timeframes: 
+  7.a. If the requirement includes a relative window anchored to an event (e.g., “within 6 months after PCI”), put the fine-grained window in a qualifier:
+    temporalcontext_{within{n}{days|weeks|months|years}}{after|before}{anchor}
+    (expand abbreviations: pci → percutaneous_coronary_intervention). Keep stem timeframe coarse (now/inthehistory/inthepastNunits/inthefutureNunits).
+  7.b. If an anchor is essential but cannot be encoded in timeframe, it MUST appear as a qualifier.
+8. ONLY define variables if their usages in the original requirement can be EXACTLY map to the template's semantic meaning. Be conservative on this.
+
+9. First plan the meaning for the entity's variable and write a "planned_variable_meaning" that states the required semantics in the requirement for this entity. That is, what kind of variables should be declared about this entity to implement SMT assertions later. Then build the variable stem and add qualifier predicates only for constraints not already captured by the stem. 
+
+10. Note that we have already identified the list of qualifiers for each entity. You don't need to use all of them in your qualifier variable declarations, but thse are good for your references. You only define variables when they will form meaningful variables later in implementing SMT assertions. Note that you only define qualifiers with semantics NOT already captured by the naming templates. 
+11. USE QUALIFIERS SPARINGLY! ONLY USE QUALIFIERS THAT ARE STRICTLY NECESSARY TO IMPLEMENT THE SMT ASSERTION. Also, again, don't define qualifiers that are already captured by in the variable templates.
+12. In "qualifier_predicates_for_semantics_not_already_captured_with_stem", declare variables for all MEANINGFUL qualifiers that are not ALREADY captured by the naming templates. Reflect first about what qualifiers are not already captured with the stem template before outputting. For example, if the stem already states "inthehistory", then we should ignore qualifiers like "prior".
+13. If a qualifier is about DEFINITION of the entity variable, NEVER define separate variables! This includes - prominently - using numerical thresholds to define the entity variable.
+14. If a qualifier is about numerical ranges/comparisons, NEVER make the whole comparison clause ({quantity}{comparator}{value}) a standalone variable! Just define the numeric quantity and let the later assertion handle the arithmetics!
+
+15. After finishing "variable_name" and "variable_meaning" or "qualifier_variable_snake_case_form" and "qualifier_meaning", comment with a single JSON object on the same line for "variable_declaration" and "qualifier_variable_declaration". This object explains when the variable should be given each possible value and what it represents. When commenting the object, make sure the comments are only based on the variable meaning and the variable, don't add any other information to the comment, since it change the variable meaning.
+   – For Boolean variables, include five keys: (1) when_to_set_to_true (2) when_to_set_to_false (3) when_to_set_to_null (4) meaning.
+   – For numeric variables, include four keys: (1) when_to_set_to_value. (2) when_to_set_to_null (3) meaning.
+  Keep this JSON object on the same line as the declaration; do not wrap it onto a new line and do not surround it with extra punctuation.
+
+=== EXAMPLE ===
+<example_1>
+<example_1_current_requirement> To be included, the patient must have (an elevated total peripheral white blood cell count, defined as white blood cell count > 10,000/mm³) OR (an elevated count of > 15% immature neutrophils (bands), regardless of total peripheral white blood cell count) OR (leukopenia, defined as total white blood cell count < 4,500/mm³). </example_1_current_requirement> 
+<example_1_canonical_forms> [ { "entity_canonical_form_from_entity_canonical_forms_block": "increased_blood_leukocyte_number", "type": "Clinical finding", "span": "elevated total peripheral white blood cell count", "start": 42, "end": 90, "qualifiers": [], "canon_index": 0 }, { "entity_canonical_form_from_entity_canonical_forms_block": "immature_white_blood_cells", "type": "Clinical finding", "span": "immature neutrophils", "start": 171, "end": 191, "qualifiers": [], "canon_index": 1 }, { "entity_canonical_form_from_entity_canonical_forms_block": "decreased_blood_leukocyte_number", "type": "Clinical finding", "span": "leukopenia", "start": 260, "end": 270, "qualifiers": [], "canon_index": 2 } ] </example_1canonical_forms> 
+<example_1_reusable_variables> [] </example_1reusable_variables>
+
+<example_1_new_canonical_variable_declarations>
+[
+  {
+    "index_in_canonical_forms": "0",
+    "entity_canonical_form_from_entity_canonical_forms_block": "increased_blood_leukocyte_number",
+    "span": "elevated total peripheral white blood cell count",
+    "planned_variable_meaning": "Boolean clinical finding indicating the patient currently has an increased total peripheral white blood cell count (elevated WBC).",
+    "usage_description": "Used as a finding flag for the OR-branch corresponding to elevated WBC; exact thresholding (>10,000/mm3) will be handled in assertions or via auxiliary links to measurements if present.",
+    "entity_type": "Clinical finding",
+    "template": "patient_has_finding_of_{entity_canonical_form}{timeframe}",
+    "timeframe": "now",
+    "entity_variable_name": "patient_has_finding_of_increased_blood_leukocyte_number_now",
+    "variable_meaning": "Boolean clinical finding indicating the patient currently has an increased total peripheral white blood cell count (elevated WBC).",
+    "variable_declaration": "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has the clinical finding of increased total peripheral white blood cell count.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have the clinical finding of increased total peripheral white blood cell count.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of increased total peripheral white blood cell count.\",\"meaning\":\"Boolean indicating whether the patient currently has increased total peripheral white blood cell count.\"}",
+    "scratchpad_reflect_what_qualifiers_not_already_captured_with_entity_variable_stem": "No additional temporal/context qualifiers are required; the definition by numeric threshold (>10,000/mm3) is not a qualifier and will not be encoded here.",
+    "qualifier_predicates_for_semantics_not_already_captured_with_stem": []
+  },
+  {
+    "index_in_canonical_forms": "1",
+    "entity_canonical_form_from_entity_canonical_forms_block": "immature_white_blood_cells",
+    "span": "immature neutrophils",
+    "planned_variable_meaning": "Numeric observable capturing the percentage of immature neutrophils (bands) recorded now.",
+    "usage_description": "Provides the numeric quantity to express the criterion '> 15% immature neutrophils (bands), regardless of total WBC' in the OR-branch.",
+    "entity_type": "Clinical finding",
+    "template": "patient_{entity_canonical_form}_value_recorded{timeframe}withunit{unit}",
+    "timeframe": "now",
+    "entity_variable_name": "patient_immature_white_blood_cells_value_recorded_now_withunit_percent",
+    "variable_meaning": "Numeric observable capturing the percentage of immature neutrophils (bands) recorded now.",
+    "variable_declaration": "{\"when_to_set_to_value\":\"Set to the measured percentage value if a numeric measurement of the percentage of immature neutrophils (bands) recorded now is available.\",\"when_to_set_to_null\":\"Set to null if no such percentage measurement recorded now is available or the value is indeterminate.\",\"meaning\":\"Numeric percentage representing the patient's current proportion of immature neutrophils (bands).\"}",
+    "scratchpad_reflect_what_qualifiers_not_already_captured_with_entity_variable_stem": "The clause 'regardless of total WBC' is logical context, not a qualifier. No extra temporal anchors beyond 'now'.",
+    "qualifier_predicates_for_semantics_not_already_captured_with_stem": []
+  },
+  {
+    "index_in_canonical_forms": "2",
+    "entity_canonical_form_from_entity_canonical_forms_block": "decreased_blood_leukocyte_number",
+    "span": "leukopenia",
+    "planned_variable_meaning": "Boolean clinical finding indicating the patient currently has decreased total peripheral white blood cell count (leukopenia).",
+    "usage_description": "Used as a finding flag for the OR-branch corresponding to leukopenia; the defining threshold (<4,500/mm3) will be enforced in assertions or aligned via auxiliary mapping to measurements if available.",
+    "entity_type": "Clinical finding",
+    "template": "patient_has_finding_of_{entity_canonical_form}_{timeframe}",
+    "timeframe": "now",
+    "entity_variable_name": "patient_has_finding_of_decreased_blood_leukocyte_number_now",
+    "variable_meaning": "Boolean clinical finding indicating the patient currently has decreased total peripheral white blood cell count (leukopenia).",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the patient currently has the clinical finding of decreased total peripheral white blood cell count.\",\"when_to_set_to_false\":\"Set to false if the patient currently does not have the clinical finding of decreased total peripheral white blood cell count.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has the clinical finding of decreased total peripheral white blood cell count.\",\"meaning\":\"Boolean indicating whether the patient currently has decreased total peripheral white blood cell count.\"}",
+    "scratchpad_reflect_what_qualifiers_not_already_captured_with_entity_variable_stem": "Numeric threshold (<4,500/mm3) is part of assertion logic, not a qualifier. No additional qualifiers needed.",
+    "qualifier_predicates_for_semantics_not_already_captured_with_stem": []
+  }
+]
+</example_1_new_canonical_variable_declarations>
+
+</example_1>
+
+
+<example_2>
+<example_2_current_requirement>
+To be included, the patient must be ((a sibling of a patient with insulin resistance) OR (a parent of a patient with insulin resistance)) AND (insulin resistance must be documented in the index subject by either (oral glucose tolerance test (OGTT)) OR (intravenous glucose tolerance test (IVGTT))).
+</example_2_current_requirement>
+
+<example_2_canonical_forms>
+[
+  {
+    "entity_canonical_form_from_entity_canonical_forms_block": "insulin_resistance",
+    "type": "Clinical finding",
+    "span": "insulin resistance",
+    "start": 66,
+    "end": 84,
+    "qualifiers": [],
+    "canon_index": 0
+  },
+  {
+    "entity_canonical_form_from_entity_canonical_forms_block": "insulin_resistance",
+    "type": "Clinical finding",
+    "span": "insulin resistance",
+    "start": 117,
+    "end": 135,
+    "qualifiers": [],
+    "canon_index": 1
+  },
+  {
+    "entity_canonical_form_from_entity_canonical_forms_block": "insulin_resistance",
+    "type": "Clinical finding",
+    "span": "insulin resistance",
+    "start": 143,
+    "end": 161,
+    "qualifiers": [
+      "Insulin resistance has constraints that it must be documented in the index subject by either oral glucose tolerance test (OGTT) or intravenous glucose tolerance test (IVGTT)."
+    ],
+    "canon_index": 2
+  }
+]
+</example_2_canonical_forms>
+
+<example_2_reusable_variables>
+[
+  {
+    "variable_name": "patient_has_finding_of_insulin_resistance_now",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the index subject currently has insulin resistance.\",\"when_to_set_to_false\":\"Set to false if the index subject currently does not have insulin resistance.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the index subject currently has insulin resistance.\",\"meaning\":\"Boolean indicating whether the index subject currently has insulin resistance.\"}",
+    "why": "This variable indicates whether the patient currently has insulin resistance, which matches the meaning of 'insulin resistance is documented in the index subject' at the core; the current requirement further constrains the documentation method (OGTT/IVGTT)."
+  }
+]
+</example_2_reusable_variables>
+
+<example_2_new_canonical_variable_declarations>
+[
+  {
+    "index_in_canonical_forms": "2",
+    "entity_canonical_form_from_entity_canonical_forms_block": "insulin_resistance",
+    "span": "insulin resistance",
+    "planned_variable_meaning": "The index subject currently has insulin resistance documented by either an oral glucose tolerance test (OGTT) or an intravenous glucose tolerance test (IVGTT).",
+    "usage_description": "Reuse the existing insulin-resistance flag and attach method-of-documentation qualifiers required by this requirement. (Family relationship constraints—sibling/parent—are modeled elsewhere, not as qualifiers of this finding.)",
+    "entity_type": "Clinical finding",
+    "template": "patient_has_finding_of_{entity_canonical_form}_{timeframe}",
+    "timeframe": "now",
+    "entity_variable_name": "patient_has_finding_of_insulin_resistance_now",
+    "variable_meaning": "Boolean clinical finding indicating whether the index subject currently has insulin resistance.",
+    "variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the index subject currently has insulin resistance.\",\"when_to_set_to_false\":\"Set to false if the index subject currently does not have insulin resistance.\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether the index subject currently has insulin resistance.\",\"meaning\":\"Boolean indicating whether the index subject currently has insulin resistance.\"}",
+    "scratchpad_reflect_what_qualifiers_not_already_captured_with_entity_variable_stem": "The stem captures presence and timeframe; the documentation method (OGTT/IVGTT) must be carried as qualifiers.",
+    "qualifier_predicates_detailed": [
+      {
+        "qualifier_variable_snake_case_form": "@@documented_by_oral_glucose_tolerance_test",
+        "qualifier_meaning": "Boolean clinical finding indicating whether the index subject currently has insulin resistance and the finding is documented by an oral glucose tolerance test (OGTT).",
+        "qualifier_variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the index subject's insulin resistance is documented by an oral glucose tolerance test (OGTT).\",\"when_to_set_to_false\":\"Set to false if the index subject's insulin resistance is not documented by an oral glucose tolerance test (OGTT).\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether an oral glucose tolerance test (OGTT) documents the index subject's insulin resistance.\",\"meaning\":\"Boolean indicating whether the index subject's insulin resistance is documented by an oral glucose tolerance test (OGTT).\"}",
+      },
+      {
+        "qualifier_variable_snake_case_form": "@@documented_by_intravenous_glucose_tolerance_test",
+        "qualifier_meaning": "Boolean clinical finding indicating whether the index subject currently has insulin resistance and the finding is documented by an intravenous glucose tolerance test (IVGTT).",
+        "qualifier_variable_declaration": "{\"when_to_set_to_true\":\"Set to true if the index subject's insulin resistance is documented by an intravenous glucose tolerance test (IVGTT).\",\"when_to_set_to_false\":\"Set to false if the index subject's insulin resistance is not documented by an intravenous glucose tolerance test (IVGTT).\",\"when_to_set_to_null\":\"Set to null if it is unknown, not documented, or cannot be determined whether an intravenous glucose tolerance test (IVGTT) documents the index subject's insulin resistance.\",\"meaning\":\"Boolean indicating whether the index subject's insulin resistance is documented by an intravenous glucose tolerance test (IVGTT).\"}",
+      }
+    ],
+    "qualifier_predicates_for_semantics_not_already_captured_with_stem": [
+      "documented_by_oral_glucose_tolerance_test",
+      "documented_by_intravenous_glucose_tolerance_test"
+    ],
+  }
+]
+</example_2_new_canonical_variable_declarations>
+</example_2>
+
+
+
+=== OUTPUT FORMATS ===
+Emit EXACTLY the following block:
+  1. <new_canonical_variable_declarations>. This refers to everything that uses templates from <stems_templates::findings>, <stems_templates::procedures>, <stems_templates::observable_entities_numeric>, <stems_templates::product>, <stems_templates::substance>, as well as their <qualifiers>.
+
+Note if things are empty, just emit empty blocks. But make sure that all blocks are present. Similarly, if a field is empty, still emit an empty version of that field. 
+
+<new_canonical_variable_declarations>
+[
+  {
+    "index_in_canonical_forms": "<index_from_canonical_forms>",
+    "entity_canonical_form_from_entity_canonical_forms_block": "<exact string from canonical_forms>", // NOTE must be an entry present in canonical forms
+    "span": "<copy from canonical_forms>",
+    "planned_variable_meaning": "plan the meaning for the entity's variable, one sentence stating the exact, requirement-specific semantics that must hold for this entity’s variable.",
+    "usage_description": "<mechanistic role in the future assertion>",
+    "entity_type": "<which SNOMED type the entity_canonical_form_used belongs to, used to aid template selection>".
+    "template": "<reiterate the exact template you use>,
+    "timeframe": "<now|inthehistory|inthefuture|inthepast{n}{units}|inthefuture{n}{units}>",
+    "entity_variable_name": "<stem>", // THIS IS JUST THE STEM! No @@ qualifiers. Also note that you must include timeframe here!!!!!!!!!!! Everything shold be snakecase as well.
+    "variable_meaning": "<exact stem-only meaning of entity_variable_name>", // Describe only what the variable *stem* itself denotes. Do not add any meaning the stem does not encode.
+    "variable_declaration": "explains when the variable should be given each possible value and what it represents",
+    "scratchpad_reflect_what_qualifiers_not_already_captured_with_entity_variable_stem": "... reflections for later output ..."
+    "qualifier_predicates_for_semantics_not_already_captured_with_stem": [{
+      "qualifier_variable_snake_case_form": "<@@qualifier1>", // Note that this must start with @@ and is a variable snake case form"
+      "qualifier_meaning": "... meaning of qualifier 1 ... ", // When giving the "qualifier_meaning", first include the "variable_stem_meaning", then add the qualifier's meaning.
+      "qualifier_variable_declaration": "explains when the variable should be given each possible value and what it represents",
+    }], // may be [], this means all things that qualify this entity that are not already captured by the naming template. Note that you don't need stem here.
+  }
+]
+</new_canonical_variable_declarations>

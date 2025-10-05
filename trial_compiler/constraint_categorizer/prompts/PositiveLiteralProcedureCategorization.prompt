@@ -1,0 +1,51 @@
+# === ROLE ===
+You are a professional clinician reviewing clinical trial eligibility requirements. You'll be provided with two input: 
+(1) <clinical_trial_description> summarizes a clinical trial, 
+(2) <canonicalized_variable_list> contains canonicalized variables and their description extracted from trial's inclusion criteria. Each variable encodes a requirement fact about a procedure.
+
+# === TASK ===
+Your task is to evaluate each variable and determine how the clinical trial acts upon it. Assign at least one category (A/B/C/D) that describes the intended effect of the trial on each variable.
+
+You must produce exactly one output item for each input positive literal. The number of objects in the output JSON array must be identical to the number of positive literals provided in <positive_literal_list>.
+
+
+# === RELEVANCE CATEGORIES ===
+A- Improves effectiveness of (procedure)
+The trial intervention is intended to increase the success rate, completeness, durability, precision, or clinical benefit of procedure p (or its peri-procedural protocol) for population x.
+
+B- Reduces procedure-related adverse effects (side effects/complications/conditions_in_recovery):
+The trial intervention is intended to decrease the incidence, severity, duration, or downstream consequences of adverse events a caused by or associated with procedure p, including peri-operative complications and recovery-phase conditions, for population x.
+
+C- Other (Procedure):
+The trial intervention is intended to modify how procedure p is delivered or experienced in ways not captured above (e.g., shorten recovery time, reduce resource use, improve adherence, improve tolerability, optimize timing/dose, improve workflow/safety monitoring) for population x.
+
+D - Not of clinical interest:
+The procedure p is not a clinically meaningful focus of the trial. p is only incidental, overly broad/unspecific, or unrelated background context.
+Use this category only if the disease does not fall into categories A, B, or C. If category D is assigned, it must be the only category selected for that disease (i.e., do not combine D with A, B, or C).
+
+
+# === INPUT ===
+<clinical_trial_description>
+#CLINICAL_TRIAL_DESCRIPTION#
+</clinical_trial_description>
+
+<canonicalized_variable_list>
+#POSITIVE_LITERAL_LIST#
+</canonicalized_variable_list>
+
+
+
+# === GUIDELINES ===
+1. Please return strictly the same number of outputs as the number of inputs!
+
+
+
+# === OUTPUT ===
+[
+    {
+        "entity_variable_name": <entity_variable_name verbatim>,
+        "entity_variable_idx": "<entity_variable_index_verbatim>",
+        "target_category": ["A" | "B" | "C" | "D", "..."],
+        "rationale": "... why you make this classification ..."
+    },
+]

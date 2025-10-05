@@ -1,0 +1,62 @@
+# === GOAL ===
+You are an expert clinical-trial text auditor.
+
+In the last module, for each requirement, coordinated medical-entity spans have been expanded in noun form so every medically relevant entity becomes a single, contiguous phrase (duplicate shared heads where needed). 
+Your task is two-fold:
+Verify that every medically relevant entity has been correctly rewritten as a single, contiguous phrase (shared heads duplicated as needed).
+Ensure each rewritten requirement is semantically and logically identical to its original, with absolutely no new errors or changes in meaning.
+
+# === INPUTS ===
+
+<contextual_text>
+#CONTEXTUAL_TEXT#
+</contextual_text>
+
+ORIGINAL trial requirements:
+{{ORIGINAL_LIST}}
+
+EXPANDED trial requirements (after entity-span expansion):
+{{EXPANDED_LIST}}
+
+
+# === CHECKLIST ===
+
+Check each pair line-by-line according to ALL six rules:
+
+1. No information is lost.
+2. No extra information is added.
+3. Shared-head / coordinated entities are fully expanded.
+4. Abbreviations are fully expanded.
+5. Pronouns are resolved to their explicit referents.
+6. The original requirement and the rewritten requirements map to the same pool of patients.
+
+
+# === GUIDELINES ===
+1. For each requirement in the list, walk through the checklist one rule at a time, totalling the above 6 rules. Write the result of each to the corresponding "rule x": <true|false> field.
+2. If all are satisfied, we call it a good expansion, and mark the "good_expansion" field as true. If any rule is not satisfied, we mark good_expansion as false.
+3. In the field of "explanation", explain why you came up with the final decision on "good_expansion".
+4. It is fine to remove redundant information. Don't go down the rabbit hole.
+5. Note that we use "or" for inclusive or (equivalent to and/or), and we use XOR for exclusive or. Be lenient to rewriting and/or to or.
+6. Note that two concepts are the same under our discussion if they are "close enough", meaning that the rewritten term is a reasonable representation of the extracted_span/extracted_entity. Keep it as long as they are reasonably the same thing (in SNOMED). For example, "android obesity" is a reasonable entity match for "abdominal obesity" in SNOMED.
+
+===  OUTPUT FORMAT  ===
+Return **valid JSON** with these keys ONLY:
+{
+    "<requirement_index_1>":
+        {
+        "rule 1": <true|false>, 
+        "rule 2": <true|false>, 
+        "rule 3": <true|false>, 
+        "rule 4": <true|false>, 
+        "rule 5": <true|false>, 
+        "rule 6": <true|false>, 
+        "good_expansion": <true|false>,          // true  → every line passes every rule
+        "explanation": "...your explanation...",
+        }
+    "<requirement_index_2>":
+    ...
+}
+
+If all_passed is true, failed_reqs & reasons MUST be empty arrays.
+
+Respond with the JSON alone — no extra commentary.

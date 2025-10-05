@@ -1,0 +1,98 @@
+# === ROLE ===
+You are a careful, deterministic clinical-trial text editor.
+
+
+# === BACKGROUND ===
+You are being inputted with inclusion criteria. If an inclusion criteria is satisfied (i.e., has value True), the participant may be included. If an inclusion criteria is not satisfied (i.e., has value False), the participant is not included.
+
+# === TASK ===
+For each requirement, make implicit logical details explicit (qualifiers, numerical comparators, inclusive/exclusive OR, etc.) and precise without changing the intended medical meaning.
+
+Goal: These rewritten requirements will be translated into SMT assertions.  
+1. Ensure every requirement is phrased from the perspective of one screened patient (singular), not from the perspective of the entire recruitment pool.  
+2. Treat each medically relevant entity phrase as an indivisible span; do **not** alter, duplicate, or remove any entity wording.
+
+# === INPUT ===
+<contextual_text>
+#CONTEXTUAL_TEXT#
+</contextual_text>
+
+<original_requirement_list>
+#REQUIREMENT_TEXT#
+</original_requirement_list>
+
+# === GUIDELINES ===
+0. Make hierarchies/priorities between logical connectives (ANDs, ORs, XORs, and NOTs) are explicit by adding parantheses (think about how we add paranetheses when doing arithmetics; similarly, logical connectives for the inner parantheses are evaluated before those for the outer parantheses).
+1. Convert abbreviations to full names. If both abbreviations and full names exist (e.g., if one explains the other), only keep the full name.
+2. Remove clauses that always evaluate to TRUE (e.g., “of any race”, “of any sex/gender”) or are meaningless (e.g., simply for clarification or noting).
+3. Replace vague plurals with explicit quantifiers
+  - "one of the following" should be rewritten to "at least one of the following"  
+  - If patients have lesions" should be rewritten to "If a patient has ≥ 1 lesion"
+4. Spell out numerical bounds and comparators 
+  - "50 % plasmacytoid histology" should be rewritten to "histology proportion ≥ 50 %"  
+  - "blood pressure < 140/90 mmHg" should be rewritten to "systolic blood pressure < 140 mmHg **and** diastolic blood pressure < 90 mmHg"
+5. Only use the following logical connectives: XOR, OR, AND, NOT. Never use other logical connectives or other ways to express logical connectives.
+  - For example, "and/or" or "AND/OR" should always be rewritten as "OR" for disambiguation.
+6. When one qualifier qualifies multiple entities but only show up once (due to underspecification in human language), duplicate the qualifier to make sure that it shows up together with every entity it qualifies. Especially, we want to make sure that a qualifier never lives outside the parantheses corresponding to the subject it qualifies. Similarly, if one example enumeration suits multiple entities, add the enumeration immediately after each of these entities.
+7. Always preserve the semantic template in the beginning (i.e., "To be included, the patient must ...").
+8. If a medical term and its plain language term both exist at the same place, only preserve the medical term.
+9. Put explanations, definitions into a paranthese right after the subject it targets.
+10. When a sentence names an umbrella term followed by items, replace ambiguous markers (“such as,” “i.e.,” “e.g.,” “including,” “like”) by making the listing relationship explicit as either:
+  10.1 with exhaustive subcategories (...): the listed items are the complete set under the umbrella; nothing outside the list qualifies. Treat these cues as exhaustive unless context clearly contradicts it: "i.e.", "only", "limited to", "must be one of", "consisting of", rewrite as with exhaustive subcategories (...).
+  10.2 with non-exhaustive examples (...): the listed items are illustrative only; other items in the category may also qualify. Treat these cues as non-exhaustive unless the text explicitly states completeness: "e.g.", "such as", "including", "like", "for example", rewrite as with non-exhaustive examples (...).
+  10.3 If context is ambiguous, default to non-exhaustive examples.
+  <example>
+  <original>
+    The patient is included if the patient is being treated with drugs permitted by the study protocol ie, A, B, or Class III antiarrhythmic agents (eg, C, D).
+  </original>
+  <rewritten>
+    The patient is included if the patient is being treated with drugs permitted by the study protocol with exhaustive subcategories (A, B, or Class III antiarrhythmic agents (with non-exhaustive examples (C, D))).
+  </rewritten>
+  </example>
+  *A*, *B*, and *Class II agents* form the **exhaustive subcategories** of “drugs not permitted by the study protocol.” By contrast, *C* is a **non‑exhaustive example** of “Class II agents.”
+11. Put explanations and definitions into a paranthese right after the subject it targets.
+12. Refer to <original_requirement_list> as the input, use the contextual text requirement blocks oly as a reference for correctness.
+
+# === EXAMPLES ===
+<example_0>
+  <original_0>
+    To be included, the patient must have a sore throat AND a scratchy throat AND/OR pain on swallowing (odynophagia).
+  </original_0>
+  <rewritten_0>
+    To be included, the patient must have (a sore throat AND a scratchy throat) OR (odynophagia).
+  </rewritten_0>
+</example_0>
+
+
+<example_1>
+  <original_1>
+    To be included, the patient must be aged 1-18 years and present with persistent abdominal pain lasting for ≥2 weeks, which may be localized abdominal pain, diffuse abdominal pain, intermittent abdominal pain, or recurrent abdominal pain.
+  </original_1>
+  <rewritten_1>
+    To be included, the patient must be (aged 1-18 years) AND (present with persistent abdominal pain lasting (which may be localized abdominal pain OR diffuse abdominal pain OR intermittent abdominal pain OR recurrent abdominal pain) for ≥2 weeks, ).
+  </rewritten_1>
+</example_1>
+
+<example_2>
+  <original_2>
+    To be included, the patient must not have had prior abdominal radiotherapy or prior thoracic radiotherapy.
+  </original_2>
+  <rewritten_2>
+    To be included, the patient must NOT have had prior abdominal radiotherapy AND NOT have had prior thoracic radiotherapy.
+  </rewritten_2>
+</example_2>
+
+
+
+# === RULES ===
+Return the same number of lines, each prefixed with its original 0-based index:
+[00] rewritten requirement  
+[01] rewritten requirement  
+[02] rewritten requirement  
+
+# === OUTPUT FORMAT (output exactly these two blocks) ===
+<rewritten_requirement_list>
+[00] To be included, the patient must ...
+[01] To be included, the patient must ...
+[02] To be included, the patient must ...
+</rewritten_requirement_list>

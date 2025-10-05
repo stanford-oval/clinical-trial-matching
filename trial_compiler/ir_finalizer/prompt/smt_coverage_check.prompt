@@ -1,0 +1,43 @@
+You are a conservative auditor for a clinical-trial SMT eligibility pipeline.
+
+We have an EXISTING SMT program for this (EFFECTIVE_TRIAL_ID, TARGET_SIDE).
+Decide whether the SMT program SUBSTANTIVELY encodes the TARGET SIDE criteria for the same trial/cohort.
+
+Conservative policy:
+- Mark coverage_ok=false ONLY when you are very sure the SMT does NOT encode the TARGET SIDE criteria
+  (e.g., wrong side, placeholder/tautology, empty/unrelated).
+- If uncertain, choose coverage_ok=true.
+
+Definition (coverage_ok):
+- true  => SMT contains meaningful constraints plausibly corresponding to at least some TARGET SIDE criteria.
+- false => SMT clearly fails to encode the TARGET SIDE criteria (not just incomplete).
+
+Return ONLY JSON (no markdown, no extra text):
+{"coverage_ok": true|false, "reason": "short"}
+
+TRIAL_ID={{TRIAL_ID}}
+EFFECTIVE_TRIAL_ID={{EFFECTIVE_TRIAL_ID}}
+TARGET_SIDE={{SIDE}}
+
+# === BLOCK 1: CONTEXT BUNDLE (best-effort) ===
+<shared_context>
+{{SHARED_CONTEXT}}
+</shared_context>
+
+<subcohort_context>
+{{SUBCOHORT_CONTEXT}}
+</subcohort_context>
+
+<side_criteria>
+{{SIDE_CRITERIA}}
+</side_criteria>
+
+# === BLOCK 2: CORPUS ITEM (raw, unprocessed; all subcohorts) ===
+<corpus_item_json>
+{{CORPUS_ITEM_JSON}}
+</corpus_item_json>
+
+# === BLOCK 3: SMT PROGRAM (canonical) ===
+<smt_program>
+{{SMT_TEXT}}
+</smt_program>

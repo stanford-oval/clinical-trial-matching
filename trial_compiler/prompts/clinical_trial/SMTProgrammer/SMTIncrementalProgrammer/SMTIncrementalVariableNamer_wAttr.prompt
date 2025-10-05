@@ -1,0 +1,157 @@
+# === ROLE ===
+You are an expert SMT programmer.
+Your job is to declare canonical variable names required for encoding a clinical trial eligibility criteria into SMT propositions.
+
+# === INPUT DESCRIPTIONS ===
+You will be given the following inputs:
+- <original_requirement_text> - this is the chunk of text containing all requirements in there original form; and this is where we initially extracted our atomic requirement text to translate. Use <original_requirement_text> as a context for understanding dependencies (i.e., for variable naming and constraint implementation) among requirements.
+- <smt_program_by_far> - this is the SMT-LIB program generated so far and you are going to append the newly translated SMT snippet to. Use this to check what variables are already declared and understand potential dependencies between constraints.
+- <requirement_json> - THIS IS THE REQUIREMENT YOU SHOULD TRANSLATE TO THE SMT PROGRAM TO BE APPENDED!!! 
+- <canonical_forms> - This is a JSON file that contains all confirmed canonical forms of entities and their related attributes that are found in the current requirement. 
+
+# === INPUTS ===
+<original_requirement_text>
+#REQUIREMENT_TEXT#
+</original_requirement_text>
+
+<smt_program_by_far>
+#SMT_PROGRAM_BY_FAR#
+</smt_program_by_far>
+
+<requirement_json>
+#REQUIREMENT#
+</requirement_json>
+
+<canonical_forms>
+#CANONICAL_FORMS#
+</canonical_forms>
+
+
+# === VARIABLE NAMING TEMPLATES ===
+(identifiers are all lowercase snake‑case; no spaces or special chars)
+
+-------------------- 0. DEFINITION OF “STEM” --------------------
+• A stem is the core predicate generated directly from one of the
+  templates below. It captures the primary clinical fact including any timeframe
+  suffix, but without attribute segments.  
+  Example stems:
+    has_finding_of_colon_cancer_history
+    is_taking_cisplatin_now
+    lvef_is_lessthan_40_percent_within3months
+
+-------------------- 1. CORE STEM TEMPLATES --------------------
+In the following template definition, you should replace {entity_canonical_form}, {attribute_class_canonical_form}, and {attribute_value_canonical_form} with the corresponding entries (same name) from <canonical_forms>.
+
+• Finding
+  has_finding_of_{entity_canonical_form}_{timeframe?}
+
+• Procedure
+  – Completed : has_undergone_{entity_canonical_form}_{timeframe?}
+  – Ongoing   : is_undergoing_{entity_canonical_form}_{timeframe?}
+  – Planned   : will_undergo_{entity_canonical_form}_{timeframe?}
+  – Capability: can_undergo_{entity_canonical_form}_{timeframe?}
+
+• Observable entity
+  – Numeric    : {entity_canonical_form}_is_{comparator}_{value}_{unit}_{timeframe?}
+  – Qualitative: {entity_canonical_form}_is_{status}_{timeframe?}
+
+• Product
+  – Current: is_taking_{entity_canonical_form}_{timeframe?}
+  – Past   : has_taken_{entity_canonical_form}_{timeframe?}
+
+• Substance
+  is_exposed_to_{entity_canonical_form}_{timeframe?}
+
+-------------------- 2. ATTRIBUTE PREDICATES --------------------
+(attach qualifiers to any stem; do not repeat the timeframe)
+
+• Qualitative attribute
+    {stem}@@{attribute_class_canonical_form}_is_{attribute_value_canonical_form}
+
+• Numeric attribute
+    {stem}@@{attribute_class_canonical_form}_is_{comparator}_{attribute_value_canonical_form}_{unit}
+
+• Non-canonicalizable attribute
+    {stem}@@rawattr_{raw_attribute_phrase_snake_case}
+
+-------------------- 3. TOKEN VOCABULARIES --------------------
+TimeFrame  : now | history | within{n}{units}
+Comparator : greaterthan | greaterorequal | lessthan | lessorequal | equal
+Status     : positive | negative
+
+-------------------- 4. OTHER VARIABLE NAMINGS --------------------
+(identifiers are all lowercase snake‑case; no spaces or special chars)
+
+• Patient age (numeric observable)
+    Pattern :  age_is_{comparator}_{value}_{timeunit}
+        Comparator : greaterthan | greaterorequal | lessthan | lessorequal | equal
+        Timeunit       : years | months | days
+    Note: Use composite logic to specify intervals.
+
+• Patient sex / gender (qualitative)
+    Pattern :  patient_sex_is_{sex}
+        Sex : female | male | nonbinary | intersex | unknown
+
+• Pregnancy status (qualitative)
+    Pattern A : patient_is_pregnant_{timeframe?}
+    Pattern B : patient_is_able_to_be_pregnant
+        TimeFrame : optional (now | history | within{n}{units})
+
+
+# === GUIDELINES ===
+1. In variable naming, whenever canonical forms of entities and attributes exist, you should always be using them in the "CanonForm" part of the corresponding template. 
+2. Strictly follow the naming conventions in the "VARIABLE NAMING TEMPLATES" section for variable definitions.
+3. Output all identified reusable variables in <reusable_variables> (see below); also, answer why these variables are reusable.
+4. In <new_variable_declarations> output one valid JSON array that—
+  4.a. contains one object per stem. Each object must have these keys in this order:
+    4.a.1. entity_variable_name  – the stem identifier, following the templates
+    4.a.2. why          – ≤ 120-char quotation/paraphrase of the text trigger
+    4.a.3. is_canonical     – "YES" if every token comes from <canonical_forms>, otherwise "NO"
+    4.a.4. usage         – brief role description (antecedent, numeric bound, etc.)
+    4.a.5. attributes      – an array (possibly empty) whose items each have (1) attribute_variable_name (2) is_canonical (3) why (4) usage
+
+
+# === OUTPUT FORMAT ===
+<reusable_variables>
+[
+  {
+    "variable_name": "has_finding_of_hypertension_history",
+    "why": "already declared earlier – needed again as antecedent"
+  },
+  {
+    "variable_name": "age_is_lessthan_65_years",
+    "why": "upper-bound age check already present in SMT program"
+  }
+]
+</reusable_variables>
+
+<new_variable_declarations>
+[
+  {
+    "entity_variable_name": "has_finding_of_colon_cancer_history",
+    "why": "phrase: 'history of colon cancer'",
+    "is_canonical": "YES/NO",
+    "usage": "antecedent for stage attributes",
+    "attributes": [
+      {
+        "attribute_variable_name": "has_finding_of_colon_cancer_history_stage_is_iii",
+        "is_canonical": "YES/NO",
+        "why": "phrase: 'stage III'",
+        "usage": "part of eligibility OR"
+      },
+      {
+        "attribute_variable_name": "has_finding_of_colon_cancer_history_stage_is_iv",
+        "is_canonical": "YES/NO",
+        "why": "phrase: 'stage IV'",
+        "usage": "part of eligibility OR"
+      }
+    ]
+  },
+    {
+    "entity_variable_name": "age_is_greaterorequal_18_years",
+    "why": "phrase: '≥ 18 years'",
+    "usage": "numeric lower bound",
+    "attributes": []
+    }
+]
+</new_variable_declarations>

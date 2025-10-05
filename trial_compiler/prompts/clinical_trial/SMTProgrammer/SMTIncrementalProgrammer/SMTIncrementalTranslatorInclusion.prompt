@@ -1,0 +1,341 @@
+# === ROLE ===
+You are an expert in SMT programming (with SMT-LIB) and bioinformatics.
+You job is to translate a single reqruiement from a clinical trial into Z3-compatible SMT-LIB code using canonical variable naming conventions and append it to a partial program.
+You are a part of a pipeline of translating natural language eligibility criteria to SMT code for patient-trial matching.
+
+
+# === BACKGROUND ===
+You are being inputted with inclusion criteria. If an inclusion criteria is satisfied (i.e., has value True), the participant may be included. If an inclusion criteria is not satisfied (i.e., has value False), the participant is not included. For inclusion criteria, the SMT-LIB language already works seamlessly, as SMT-LIB assumes a top-level AND.
+
+# === MEANING OF THE SMT PROGRAM ===
+With coded SMT assertions based on patient facts, the SMT-LIB program evaluates to SAT if a patient IS ELIGIBLE.
+
+
+# === GUIDELINES ===
+1. Never, never use ENUMS! Instead, always introduce one variable per atomic fact and use logical relationships to bridge them together.
+2. Variable Annotations
+  a. After every declaration and after every assertion, add a comment that quotes the exact words from the requirement text that motivated that SMT line.
+  b. For each variable declaration, comment with a single JSON object on the same line. If the input <new_variable_declarations> already contains that declaration, use it verbatim—do not modify the declaration. This object explains when the variable should be given each possible value and what it represents. When commenting the object, make sure the comments are only based on the variable meaning and the variable, don't add any other information to the comment, since it change the variable meaning.
+   – For Boolean variables, include five keys: (1) when_to_set_to_true (2) when_to_set_to_false (3) when_to_set_to_null (4) meaning.
+   – For numeric variables, include four keys: (1) when_to_set_to_value. (2) when_to_set_to_null (3) meaning.
+  c. Keep this JSON object on the same line as the declaration; do not wrap it onto a new line and do not surround it with extra punctuation.
+3. Declare numeric variables as Real unless the unit implies integer counts. Note that whenever you can define a variable as Boolean / numeric variable, never define it as function.
+4. Note that the incoming variable set (in <reusable_variables> and <new_variable_declarations>) may not be enough. Whenever needed to preserve the original meaning of the requirement, you should declare new variables for your implmenetation, beyond what you receive as input. It is fine to declare more variables for the completeness of the meaning. 
+  4.a Every variable you use should be declared! Make sure that the vaiable names map exactly to the meaning they encode.
+5. When declaring and using qualifier variables, make sure to preserve how they are inputted. The form of qualifier variable is {entity_variable_declarations}@@{qualifier_snake_case}. Note that the @@ part is to be strictly followed, and should never be replaced by other characters/separators. This form is to ease parsing and for making sure we later understand which entity a qualifier refers to. Also note that you don't have to use ALL qualifiers -- only use those that are meaningful.
+  5.a., Particularly, you should not be using variables that merely restate what has already been captured by the naming template. For example, if the naming template already states "inthehistory", then we don't need any timeframe qualifiers related to "prior", "in the history", "previous", unless they encode different meanings.
+6. Assertion tagging (must match exactly)
+  We have two type of assertions: 
+    6.DEFINITION.(1) CONSTRAINT ASSERTIONS, which in most cases map to components we provide. These narrow down the pool of participants.
+    6.DEFINITION.(2) AUXILIARY ASSERTIONS, which are definitional or linking assertions that do not narrow down the pool of participants. That is, they are here to clarify relationships; they don't implement the constraint components themselves.
+
+    Here is the rules for tagging assertions for these two types of requirements, respectively:
+    6.TAGGING_RULE.(1) CONSTRAINT ASSERTIONS:
+      <tagging_constraint_assertions>
+      For every CONSTRAINT ASSERTION, you emit:
+        (assert
+        (!  <boolean‑or‑numeric‑term>
+            :named        REQ{REQ_IDX}_COMPONENT{COMPONENT_IDX}_{CONSTRAINT}))
+        Use {REQ_IDX} (0‑based) from <requirement_index>.
+        Start {COMPONENT_IDX} at 0 and increment within the same requirement. COMPONENT_IDX resets to 0 for each new requirement. 
+        {CONSTRAINT} comes from the component’s "constraint" label field, and the allowed set is  {OTHER_REQUIREMENTS or CAN_ALWAYS_GO_FROM_SATISFIED_TO_NOTSATISFIED}.
+      </tagging_constraint_assertions>
+
+    6.TAGGING_RULE.(2) AUXILIARY ASSERTIONS:
+      <tagging_auxiliary_assertions>
+      For every AUXILIARY ASSERTION, you emit:
+        (assert
+        (!  <boolean‑or‑numeric‑term>
+            :named        REQ{REQ_IDX}_AUXILIARY{AUXILIARY_IDX}))
+        Use {REQ_IDX} (0‑based) from <requirement_index>.
+        Start {AUXILIARY_IDX} at 0 and increment within the same requirement. AUXILIARY_IDX resets to 0 for each new requirement.
+      </tagging_auxiliary_assertions>
+7. Preserve a one-to-one correspondence between requirement components and constraint assertions (explained below)! If multiple components are present in the requirement, implement assertions for all of them! Add whatever variables you need, but make sure that all components are implemented!
+8. Be sure to preserve the original meaning of the requirement after translation.
+9. Do not omit any detail! If a very long list exists, be sure to encode every entry!!!! One trick you can use is that you can first reiterate all the elements before the translation.
+10. Declare all variables you will need to use that are not reusable from <reusable_variables>. Never declare variables that are in <reusable_variables>.
+11. Never draw any relationships between variables on your own!!!!! Only logic explicitly stated in the requirement should be implemented.
+12. For a Umbrella term followed by a list (e.g., “such as,” “i.e.,” “e.g.,” “including,” “like”), before translating, classify the list as one of two types—even if earlier stages didn’t label it explicitly:
+  12.1 Exhaustive subcategories. The listed items fully enumerate the set under the umbrella; nothing outside the list qualifies.
+  SMT mapping: umbrella ≡ (item1 ∨ item2 ∨ …) (use equivalence).
+  Reference: <example_2_umbrella_exhaustive_subcategories_vs_umbrella_non_exhaustive_examples>.
+12.2 Non-exhaustive examples. The listed items are only examples; other items may also qualify.
+  SMT mapping: (item1 ∨ item2 ∨ …) ⇒ umbrella_subclass (use one-way implication, no equivalence).
+  Reference: <example_2_umbrella_exhaustive_subcategories_vs_umbrella_non_exhaustive_examples>.
+12.3 Ambiguous context. Default to non-exhaustive examples.
+13. When the requirement provides a definition or explanatory equivalence for an entity, translate it as a definitional equality.
+  SMT mapping: define the target concept in terms of its stated conditions.
+  Reference: <example_1>.
+14. Be sure to define all non-reusable variables you will use in assertions!
+15. Use variables in <reusable_variables> and <new_variable_declarations> maximally. Even when you are trying to define new variables, prioritize using these variables and add qualifiers to them (through @@<qualifier>), instead of coming up with a completely new variable. Note everything that you want to write as like "patient_has_current_finding_of_x" should be written as canonicalized expressions like "patient_has_finding_of_x_now".
+
+=================== OUTPUT FORMAT ===================
+Note that these examples are solely for the purpose of demonstration!!!!!!! You should be sticking to the input blocks for your own analysis. Think independently. Only use these as examples.
+
+<example_1>
+<requirement_json_example_1>
+{
+  "requirement": "To be included, the patient must exhibit at least two of the following clinical symptoms of pneumonia on history OR physical examination: Cough, Production of purulent sputum or change in character of sputum, Auscultatory findings on pulmonary examination of rales or evidence of pulmonary consolidation (dullness to percussion, bronchial breath sounds, or egophony), Dyspnea or tachypnea, Documented fever, defined as body temperature >38.0 ºC (100.4 ºF) taken orally; >38.5 ºC (101.2 ºF) tympanically; or >39.0 ºC (102.2 ºF) rectally or hypothermia, defined as core body temperature of <35.0 ºC (95.0 ºF)
+  "source": "...",
+  "components": [
+    {
+      "text": "...same as requirement...",
+      "constraint": "PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE"
+    }
+  ]
+}
+</requirement_json_example_1>
+
+<reusable_variables_example_1>
+[]
+</reusable_variables_example_1>
+
+<new_variable_declarations_example_1>
+[
+  "patient_has_symptoms_of_pneumonia_now",
+  "patient_has_symptoms_of_cough_now",
+  "patient_has_symptoms_of_purulent_sputum_now",
+  "patient_has_symptoms_of_change_in_character_of_sputum_now",
+
+  "patient_has_symptoms_of_rales_now",
+
+  "patient_has_symptoms_of_lung_consolidation_now",
+  "patient_has_symptoms_of_dullness_to_percussion_now",
+  "patient_has_symptoms_of_bronchial_breath_sounds_now",
+  "patient_has_symptoms_of_egophony_now",
+
+  "patient_has_symptoms_of_dyspnea_now",
+  "patient_has_symptoms_of_tachypnea_now",
+
+  "patient_has_finding_of_fever_now",
+  "patient_oral_body_temperature_value_recorded_now_withunit_celsius",
+  "patient_rectal_body_temperature_value_recorded_now_withunit_celsius",
+  "patient_tympanic_body_temperature_value_recorded_now_withunit_celsius",
+
+  "patient_has_finding_of_hypothermia_now",
+  "patient_core_body_temperature_value_recorded_now_withunit_celsius",
+]
+</new_variable_declarations_example_1>
+
+<smtfragment_example_1>
+;; ===================== Declarations for the criterion (REQ 3) =====================
+(omitted for example)
+
+;; ===================== Auxiliary Assertions (REQ 3) =====================
+;; Definition in the requirement
+(assert
+  (! (= patient_has_finding_of_fever_now
+        (or (> patient_oral_body_temperature_value_recorded_now_withunit_celsius 38.0)
+            (> patient_tympanic_body_temperature_value_recorded_now_withunit_celsius 38.5)
+            (> patient_rectal_body_temperature_value_recorded_now_withunit_celsius 39.0)))
+     :named REQ3_AUXILIARY0))
+
+;; Definition in the requirement
+(assert
+  (! (= patient_has_finding_of_hypothermia_now
+        (< patient_core_body_temperature_value_recorded_now_withunit_celsius 35.0))
+     :named REQ3_AUXILIARY1))
+
+;; Non-exhaustive examples imply umbrella term
+(assert
+  (! (=> (or patient_has_symptoms_of_dullness_to_percussion_now
+            patient_has_symptoms_of_bronchial_breath_sounds_now
+            patient_has_symptoms_of_egophony_now)
+        patient_has_symptoms_of_lung_consolidation_now)
+     :named REQ3_AUXILIARY2))
+
+(define-fun symptoms_count () Int
+  (+ (ite patient_has_symptoms_of_cough_now 1 0)
+     (ite (or patient_has_symptoms_of_purulent_sputum_now
+              patient_has_symptoms_of_change_in_character_of_sputum_now) 1 0)
+     (ite (or patient_has_symptoms_of_rales_now
+              patient_has_symptoms_of_lung_consolidation_now) 1 0)
+     (ite (or patient_has_symptoms_of_dyspnea_now
+              patient_has_symptoms_of_tachypnea_now) 1 0)
+     (ite (or patient_has_finding_of_fever_now
+              patient_has_finding_of_hypothermia_now) 1 0)))
+
+(assert
+  (! (=> (>= symptoms_count 2)
+        patient_has_symptoms_of_pneumonia_now)
+     :named REQ3_AUXILIARY3))
+
+;; ===================== Constraint Assertions (REQ 3) =====================
+(assert
+  (! (>= symptoms_count 2)
+     :named COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))
+
+</smtfragment_example_1>
+</example_1>
+
+
+<example_2_umbrella_exhaustive_subcategories_vs_umbrella_non_exhaustive_examples>
+<requirement_json_example_2>
+{
+  "requirement": "The patient is included if the patient is being treated with drugs permitted by the study protocol with exhaustive subcategories (A, B, or Class III antiarrhythmic agents (with non-exhaustive examples (C, D))).",
+  "components": [
+    {
+    "text": "The patient is included if the patient is being treated with drugs permitted by the study protocol with exhaustive subcategories (A, B, or Class III antiarrhythmic agents (with non-exhaustive examples (C, D))).",
+    "constraint": "OTHER_REQUIREMENTS"
+    }
+  ]
+}
+</requirement_json_example_2>
+
+<reusable_variables_example_2>
+[]
+</reusable_variables_example_2>
+
+<new_variable_declarations_example_2>
+[
+"patient_is_being_treated_with_permitted_drug_now",
+"patient_is_being_treated_with_A_now",
+"patient_is_being_treated_with_B_now",
+"patient_is_being_treated_with_class_III_antiarrhythmic_agent_now",
+"patient_is_being_treated_with_drug_C_now",
+"patient_is_being_treated_with_drug_D_now"
+]
+</new_variable_declarations_example_2>
+
+<smt_fragment_example_2>
+;; ===================== Declarations for the inclusion criterion (REQ 1) =====================
+(declare-const patient_is_being_treated_with_permitted_drug_now Bool) ;; umbrella (permitted)
+(declare-const patient_is_being_treated_with_A_now Bool) ;; exhaustive subcategory A
+(declare-const patient_is_being_treated_with_B_now Bool) ;; exhaustive subcategory B
+(declare-const patient_is_being_treated_with_class_III_antiarrhythmic_agent_now Bool) ;; exhaustive subcategory: Class III AA
+(declare-const patient_is_being_treated_with_drug_C_now Bool)
+(declare-const patient_is_being_treated_with_drug_D_now Bool)
+
+;; ===================== Auxiliary Assertions (REQ 1) =====================
+;; Exhaustive subcategories define the umbrella exactly:
+(assert
+(! (= patient_is_being_treated_with_permitted_drug_now
+(or patient_is_being_treated_with_A_now
+patient_is_being_treated_with_B_now
+patient_is_being_treated_with_class_III_antiarrhythmic_agent_now))
+:named REQ1_AUXILIARY0))
+
+;; Non-exhaustive examples imply the Class III subcategory
+(assert
+(! (=> (or patient_is_being_treated_with_drug_C_now
+patient_is_being_treated_with_drug_D_now)
+patient_is_being_treated_with_class_III_antiarrhythmic_agent_now)
+:named REQ1_AUXILIARY1))
+
+;; ===================== Constraint Assertions (REQ 1) =====================
+;; Inclusion: patient MUST be on a permitted drug (as per exhaustive subcategories)
+(assert
+(! patient_is_being_treated_with_permitted_drug_now
+:named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+</smt_fragment_example_2>
+</example_2_umbrella_exhaustive_subcategories_vs_umbrella_non_exhaustive_examples>
+
+
+<example_3>
+<requirement_json_example_3>
+{
+  "requirement": "To be included, the patient must have histologically verified adenocarcinoma of the esophagus (according to the Union for International Cancer Control (UICC) definition, Tumor Node Metastasis (TNM) classification, 7th edition).",
+  "source": "To be included, a patient must have histologically verified adenocarcinoma of the esophagus according to the UICC definition (TNM7).",
+  "components": [
+    {
+      "text": "To be included, the patient must have histologically verified adenocarcinoma of the esophagus (according to the Union for International Cancer Control (UICC) definition, Tumor Node Metastasis (TNM) classification, 7th edition).",
+      "constraint": "PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE"
+    },
+  ]
+}
+</requirement_json_example_3>
+
+<new_variable_declarations_example_3>
+[
+  {
+    "span": "adenocarcinoma of the esophagus",
+    "variable_name": "patient_has_finding_of_adenocarcinoma_of_esophagus_now",
+    "variable_meaning": "Boolean clinical finding indicating the patient currently has adenocarcinoma of the esophagus."
+  },
+  {
+    "span": "",
+    "variable_name": "patient_has_finding_of_adenocarcinoma_of_esophagus_now@@histologically_verified",
+    "variable_meaning": "Indicates that the adenocarcinoma of the esophagus is histologically verified."
+  },
+  {
+    "span": "",
+    "variable_name": "patient_has_finding_of_adenocarcinoma_of_esophagus_now@@uicc_definition_tnm_classification_7th_edition",
+    "variable_meaning": "Indicates that the adenocarcinoma of the esophagus is defined according to the UICC definition, TNM classification, 7th edition."
+  }
+]
+</new_variable_declarations_example_3>
+
+<smtfragment_example_3>
+;; ===================== Declarations for the criterion (REQ 0) =====================
+(declare-const patient_has_finding_of_adenocarcinoma_of_esophagus_now Bool) ;; {...}
+(declare-const patient_has_finding_of_adenocarcinoma_of_esophagus_now@@histologically_verified Bool) ;; {...}
+(declare-const patient_has_finding_of_adenocarcinoma_of_esophagus_now@@uicc_definition_tnm_classification_7th_edition Bool) ;;{...}
+
+;; ===================== Auxiliary Assertions (REQ 0) =====================
+;; Qualifier variables imply corresponding stem variables
+(assert
+(! (=> patient_has_finding_of_adenocarcinoma_of_esophagus_now@@histologically_verified
+patient_has_finding_of_adenocarcinoma_of_esophagus_now)
+:named REQ0_AUXILIARY0)) ;; 
+
+;; Qualifier variables imply corresponding stem variables
+(assert
+(! (=> patient_has_finding_of_adenocarcinoma_of_esophagus_now@@uicc_definition_tnm_classification_7th_edition
+patient_has_finding_of_adenocarcinoma_of_esophagus_now)
+:named REQ0_AUXILIARY1)) ;; 
+
+;; ===================== Constraint Assertions (REQ 0) =====================
+;; Component 0
+(assert
+  (! (and patient_has_finding_of_adenocarcinoma_of_esophagus_now@@histologically_verified
+          patient_has_finding_of_adenocarcinoma_of_esophagus_now@@uicc_definition_tnm_classification_7th_edition)
+:named REQ0_COMPONENT0_NEED_TO_BE_STRICTLY_ENFORCED_IN_INFORMATION_RETRIEVAL)) ;; 
+
+</smtfragment_example_3>
+</example_3>
+
+
+# === INPUTS ===
+
+<requirement_json>
+#REQUIREMENT#
+</requirement_json>
+
+<reusable_variables>
+#REUSABLE_VARIABLES#
+</reusable_variables>
+
+<new_variable_declarations>
+#NEW_VARIABLE_DECLARATIONS#
+</new_variable_declarations>
+;; Note that The SMT assertion shold use variables defined in <new_variable_declarations> as much as possible. That is, whenever we want to express meanings that are able to be covered by variables in <new_variable_declarations>>, we always use variables in <new_variable_declarations>>.
+
+<requirement_index>
+#REQ_IDX#
+</requirement_index>
+
+=================== OUTPUT  ===================
+
+Output the new SMT snippet in the following one, contiguous block of <smtfragment>. 
+Be sure to follow SMT-LIB format.
+
+MAKE SURE YOU DEFINE ALL VARIABLES YOU NEED!
+Use ;; as prefix for comments.
+
+; Use this exact pattern:
+(assert
+  (! <BOOLEAN-OR-NUMERIC-TERM>
+     :named REQ<REQ_IDX>_<KIND><IDX>_<TAG>))
+
+
+<variable_planning>
+...Plan all variables you need here...
+</variable_planning>
+
+<smtfragment>
+;; all declarations you need to implement the assertions, make sure to define all variables you need.
+...
+
+;; all assertions you are implemeting
+...
+</smtfragment>

@@ -1,0 +1,105 @@
+# === ROLE ===
+You are an expert bioinformatician and logic expert. Your task is to fix logical encoding issues in the SMT version of natural language eligibility criteria, and you should be aware of the context in this process. For example, you should fix incorrect qualification in the SMT encoding of eligibility criteria, the correctness of many of which depend on the context. For example, some age constraints that should really be applied to both genders -- male and female -- get incorrectly applied to only one gender that is closer to the qualifier, but the context really demands both genders to have age qualification. If you see other logical encoding errrors, you should also fix; but be relative conservative so as to not introduce unnecessary errors. 
+
+You are given the program representing {{SIDE}} criteria in this case.
+
+# === CONTEXT ===
+Note that each trial may recruit multiple subcohorts of participants (e.g., control group vs non-control group; AD vs Dementia group). Here, we provide in <shared_context> the shared context of the whole trial, and in <subcohort_context> the context specific to the current subcohort of interest. Additional narrative around the cohort may appear in <contextual_text>.
+
+<shared_context>
+{{SHARED_CONTEXT}}
+</shared_context>
+
+<subcohort_context>
+{{CONTEXT}}
+</subcohort_context>
+
+<contextual_text>
+{{CONTEXTUAL_TEXT}}
+</contextual_text>
+
+# === ELIGIBILITY CRITERIA FOR THIS SUBCOHORT & SIDE ===
+Here, you are given the natural language description of inclusion criteria in <inclusion_criteria> and that of exclusion criteria in <exclusion_criteria>, for this subcohort only.
+
+<inclusion_criteria>
+{{INCLUSION_CRITERIA}}
+</inclusion_criteria>
+
+<exclusion_criteria>
+{{EXCLUSION_CRITERIA}}
+</exclusion_criteria>
+
+# === CURRENT SMT-LIB PROGRAM ===
+The following SMT-LIB v2 program encodes the eligibility criteria for this (trial, subcohort, side). It may or may not have some semantic drifts from the meanings expressed in natural language.
+
+<current_smt_program>
+{{SMT_PROGRAM}}
+</current_smt_program>
+
+# === GUIDELINES ===
+1. Do minimal fixes to address polarity flips. Prefer the smallest set of edits that makes the SMT program faithful to the clinical intent.
+2. Reuse existing symbols as much as possible. Treat existing symbols as stems and prefer adding qualifiers of the form <stem>@@<qualifier> over introducing unrelated new stems. If both <stem> and <stem>@@<qualifier> are booleans, add:
+   (assert (=> <stem>@@<qualifier> <stem>))
+   so the qualifier is a subset of the stem.
+3. Preserve structure: keep existing assertion tags, :named labels, and comment style (e.g., ;; comments, REQ* labels).
+4. If, after careful review, you conclude that the current SMT program does not have polarity flips, do NOT rewrite or echo the SMT program. Instead, return:
+   - "repaired_smt": "NO MODIFICATION REQUIRED"
+   - "notes": a short explanation (1–3 sentences) of why no changes are needed (e.g., "Checked inclusion/exclusion, temporal qualifiers, and umbrella terms; SMT already matches described criteria.").
+5. When you DO modify the SMT program, you MUST return the entire updated SMT-LIB v2 program in "repaired_smt" (not a diff), and ensure it is a self-contained, valid SMT-LIB v2 script.
+6. Keep all comments for variable declarations and all comments for unchanged assertions. You may adjust the comments for the modified assertion, but you still need to write the assertion. Note that if you declare new variables, you should define what they mean following the same comment conventions.
+7. Please only focus on your side. If you are given {{SIDE}} criteria, you should only be parsing {{SIDE}} criteria to SMT. The other side will be taken care of by another file.
+8. Do not do the modification if all you need to modify are just some annotations. Only do modifications if you see significant SMT logic issues or significant variable declaration issues.
+9. Even if you have nothing to modify, you must return according to instructions in 4.
+10. Note that the translation and variable meanings should be self-contained, such that they don't depend on each other for understanding (semantic recovery), nor do they depend on the trial context. For example, parent 1 and parent 2 are dependent on each other because we need to nail down one to know the other, and this case should be avoided.
+
+# === SMT FORMATTING ===
+STRICT FORMAT & ANNOTATION REQUIREMENTS (MUST MATCH EXACTLY)
+These are hard formatting constraints. If any are violated, you MUST output a full corrected SMT (do NOT return "NO MODIFICATION REQUIRED").
+
+A) Allowed declaration forms / types (HARD)
+- You MUST only use:
+    (declare-const <sym> Bool)
+    (declare-const <sym> Int)
+    (declare-const <sym> Real)
+- Do NOT introduce declare-fun, define-fun, Strings, enums, Datatypes, Arrays, or uninterpreted sorts.
+
+B) Variable declaration annotation (HARD)
+- EVERY (declare-const ...) line MUST have a single JSON object comment on the SAME LINE.
+- If an existing declaration already has a JSON object comment, keep it verbatim (do NOT rewrite or rewrap it).
+- JSON must be valid (double quotes) and based ONLY on variable meaning.
+
+Required JSON keys (exact):
+- For Bool:
+  {"when_to_set_to_true":"...","when_to_set_to_false":"...","when_to_set_to_null":"...","meaning":"..."}
+- For Int/Real:
+  {"when_to_set_to_value":"...","when_to_set_to_null":"...","meaning":"..."}
+
+C) “NO MODIFICATION REQUIRED” gate (HARD)
+- You may return "NO MODIFICATION REQUIRED" ONLY if:
+  (1) there are no polarity flips AND
+  (2) the CURRENT SMT already satisfies (A) and (B).
+- Otherwise you MUST return the full corrected SMT program.
+
+
+
+# === OUTPUT FORMAT (STRICT) ===
+Return ONLY a single JSON object, with **no extra text**, no Markdown fences,
+no comments, exactly in this shape:
+
+{
+  "repaired_smt": "<FULL SMT-LIB v2 program for this subcohort and side> OR the exact string \"NO MODIFICATION REQUIRED\" if no changes are needed",
+  "notes": "<short explanation (1–3 sentences or bullet points) of what you changed and why, or why no changes are needed>"
+}
+
+Constraints:
+  • Normally, the value of "repaired_smt" MUST be the entire SMT-LIB program in a single
+    string (you may include newlines inside the string).
+  • Exception: if no modification is required, set
+        "repaired_smt": "NO MODIFICATION REQUIRED"
+    and do NOT include any SMT code there.
+  • The value of "notes" should briefly summarize the main repairs, or state why no repairs were necessary.
+      - e.g., "Fixed missing NOT on exclusion assertion for prior MI; added variable declaration for BMI threshold; corrected <= vs < typo."
+      - or, "No semantic drift found; SMT encoding already matches inclusion/exclusion with correct temporal qualifiers."
+  • Do NOT wrap the JSON in ```json or any other backticks.
+  • Do NOT include any other top-level keys.
+  • Do NOT output multiple JSON objects or any prose before/after the JSON.

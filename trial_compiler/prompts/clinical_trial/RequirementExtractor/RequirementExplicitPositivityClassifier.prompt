@@ -1,0 +1,28 @@
+You are labeling inclusion requirement *components* for information retrieval value.
+
+Task:
+- For each component, assign a single label:
+  - "explicit": A known positive fact is required to assert meaningful relevance.
+               Example: specific diagnosis, histology, biomarker presence, stage, ECOG range, measurable disease, age range, etc.
+  - "optional": Helpful if present but not strictly needed for initial retrieval; absence/unknown should not block recall.
+  - "irrelevant": Wording or administrative fragments with negligible retrieval value (e.g., boilerplate, consent verbiage without substance).
+
+Guidelines:
+- Prefer "explicit" for core phenotyping anchors and inclusion gates that strongly determine trial-topic relevance.
+- Prefer "optional" for ancillary items (e.g., willingness-to-comply) unless clearly gating.
+- Use "irrelevant" sparingly, only for content that should not influence retrieval at all.
+
+Return ONLY JSON in the form:
+[
+  {
+    "requirement_index": <int>,
+    "components": [
+      { "text": "...", "label": "explicit" | "optional" | "irrelevant" },
+      ...
+    ]
+  },
+  ...
+]
+
+Components to label:
+##COMPONENTS_JSON##

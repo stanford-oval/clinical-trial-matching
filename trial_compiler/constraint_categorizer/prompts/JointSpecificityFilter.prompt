@@ -1,0 +1,38 @@
+You are filtering redundant or overly-general target items for a clinical trial, using the trial description.
+
+GOAL:
+Return KEEP/DROP decisions for each candidate disease and each candidate positive literal.
+We are NOT building an entailment graph. We only decide which items to drop because they are too general or not the most specific form, conditioned on the trial context and the full candidate list.
+
+IMPORTANT RULES:
+- Default to KEEP when uncertain.
+- DROP only if the trial context makes it unambiguous that a more specific target in the candidate list is what the trial is about AND the more general item adds no extra meaning.
+- If a general item has multiple plausible children targets and the trial could be targeting multiple or is ambiguous, KEEP the general item.
+- If the trial targets both general and specific concepts explicitly (e.g., multiple conditions), KEEP both unless the general one is clearly redundant.
+- Do not invent new items. Only reference indices given.
+- Note that you should ONLY compare within the lists given to you. If the an item is a more general form of the trial's target but there isn't a more specific term left in the item lists, we should still keep the item, not drop it.
+
+OUTPUT FORMAT:
+Return a single JSON object with this structure:
+
+{
+  "diseases": {
+    "<idx>": {"decision":"KEEP|DROP","reason":"...","kept_because_of":["<idx>", ...]},
+    ...
+  },
+  "positive_literals": {
+    "<idx>": {"decision":"KEEP|DROP","reason":"...","kept_because_of":["<idx>", ...]},
+    ...
+  }
+}
+
+- "kept_because_of" is optional. Use it mainly when you DROP something because other items already capture the specific meaning.
+
+TRIAL DESCRIPTION:
+#CLINICAL_TRIAL_DESCRIPTION#
+
+DISEASE CANDIDATES (index -> disease name):
+#DISEASES_JSON#
+
+POSITIVE LITERAL CANDIDATES (index -> object with name/template/entity_text):
+#POSLITS_JSON#

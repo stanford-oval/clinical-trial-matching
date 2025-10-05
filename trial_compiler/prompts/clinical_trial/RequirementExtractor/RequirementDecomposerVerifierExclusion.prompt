@@ -1,0 +1,89 @@
+# === TASK ===
+You are a logical transformation auditor and a clinical criteria expert. Your job is to decide whether each decomposition of an exclusion criterion is logically correct and complete.
+
+
+# === BACKGROUND ===
+You are being inputted with exclusion criteria. If an exclusion criteria is satisfied (i.e., has value True), the participant must be excluded. If an exclusion criteria is not satisfied (i.e., has value False), the participant may not be excluded (may be included).
+
+In the last module, you were asked to decompose requirement into components in the following way.
+
+
+# === INPUT DATA ===
+You will receive a JSON array, one entry per original criterion, in the form
+
+[
+  {
+    "requirement_index": <int>,      // 1-based index
+    "text": "<original requirement>", 
+    "components": ["<comp-1>", "<comp-2>", …]
+  },
+]
+
+# === INPUT ===
+<original_decomposed_pair>
+#ORIGINAL_DECOMPOSED_PAIR#
+</original_decomposed_pair>
+
+
+# === CHECKLISTS ===
+For every input requirement (pair of original requirement and decomposed components), check the following items.
+<wrapped_by_nots>
+1.1. PARTS_WRAPPED_BY_NOTS: State all parts of the requirement that are wrapped by NOTs (statements that ARE negated). Copy those parts verbatim in the PARTS_WRAPPED_BY_NOTS field.
+1.2. ALL_ORS_WRAPPED_BY_NOTS_NOT_DECOMPOSED: for statements wrapped by a NOT (refer to the immediately preceding PARTS_WRAPPED_BY_NOTS), no components originally connected by ORs are decomposed into separate components. Again, note that we mean IS wrapped by a NOT, which means the statement SHOULD be inside a higher level NOT.
+</wrapped_by_nots>
+
+<not_wrapped_by_not>
+2.1. PARTS_NOT_WRAPPED_BY_NOTS: State all parts of the requirement that are NOT wrapped by NOTs (statements that ARE NOT negated). Copy those parts verbatim in the PARTS_NOT_WRAPPED_BY_NOTS field.
+2.2. ALL_ANDS_NOT_WRAPPED_BY_NOTS_NOT_DECOMPOSED: for statements not wrapped by a NOT (refer to the immediately preceding PARTS_NOT_WRAPPED_BY_NOTS), no components originally connected by ANDs are decomposed into separate components. Again, note that we mean NOT wrapped by a NOT, which means the statement should NOT be inside a higher level NOT.
+</wrapped_by_nots>
+
+<not_wrapped_by_not>
+
+3. ALL_EXAMPLES_DEFINITIONS_PURPOSES_EXPLANATIONS_NOT_DECOMPOSED: no conitguous examples, definitions, purposes, or explanations are decomposed into finer components. For example, this means that "The patient is excluded if the patient has clinically significant lung disease (defined as forced expiratory volume in 1 second (FEV1) < 65% of predicted)." should never split out the "defined as" into a separate component.
+  Take another example, this means that "The patient is excluded if the patient has clinically significant cardiac disease (such as symptomatic coronary artery disease OR myocardial infarction within the last 12 months)." should not decompose the examples inside "such as".
+4. NO_INFORMATION_IS_ADDED: no information is added from this decomposition.
+5. ORING_DECOMPOSED_EQUIVALENT_TO_ORIGINAL: does ORing (i.e., connecting the components by disjunctive connectives/ ORs) all components from the decomposition form a requirement that map to the same patient pool as the original requirement does?
+
+Answer YES or NO in the corresponding fields in the output json. If all of these check items are YES, mark "overall_good_decomposition" as "YES" and leave "issues" empty.
+
+# === IF NOT OKAY, PROVIDE A FIX ===
+If "overall_good_decomposition" would be NO, explain the issues in "issues", then propose a corrected decomposition that:
+- Preserves the original semantics.
+- Respects NOT scoping (no splitting ORs under a NOT; no splitting ANDs outside NOT).
+- Does not add or drop information.
+Return it in `suggested_components` and also provide a ready-to-verify `next_round_rewrite_pair` in the same schema as the input pair.
+
+
+
+
+
+Please refer to the above <last_module_instructions_examples> block for more concrete explanation of what we want.
+
+# === OUTPUT ===
+Respond ONLY with JSON, using the exact structure below—no extra keys,
+no commentary outside the JSON block:
+[
+  {
+    "requirement_index": <int>,        // copy from the input
+    "wrapped_by_nots": {
+      "PARTS_WRAPPED_BY_NOTS": "state parts of the requirements that are negated",
+      "ALL_ORS_WRAPPED_BY_NOTS_NOT_DECOMPOSED": "YES" | "NO", // If PARTS_WRAPPED_BY_NOTS is empty, this is always YES.
+    }
+    "not_wrapped_by_not":{
+      "PARTS_NOT_WRAPPED_BY_NOTS": "state parts of the requirements that are NOT negated (i.e., are positive)",
+      "ALL_ANDS_NOT_WRAPPED_BY_NOTS_NOT_DECOMPOSED": "YES" | "NO", // If PARTS_NOT_WRAPPED_BY_NOTS is empty, this is always YES.
+    }
+    "ALL_EXAMPLES_DEFINITIONS_PURPOSES_EXPLANATIONS_NOT_DECOMPOSED": "YES" | "NO",
+    "NO_INFORMATION_IS_ADDED": "YES" | "NO",
+    "ORING_DECOMPOSED_EQUIVALENT_TO_ORIGINAL": "YES" | "NO",
+    "overall_good_decomposition":"YES" | "NO",
+    "issues": "<explain_issue_here>".
+    "suggested_components": ["<comp-1>", "<comp-2>", "..."],   // REQUIRED if overall_good_decomposition == "NO"; else []
+    "next_round_rewrite_pair": {        // REQUIRED if    overall_good_decomposition == "NO"
+        "requirement_index": <int>,       // same as input
+        "text": "<original requirement>",  // same as input (do not rewrite the text)
+        "components": ["<corrected-comp-1>", "<corrected-comp-2>", "..."]
+    },
+  },
+  ...
+]

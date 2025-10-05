@@ -1,0 +1,240 @@
+# === ROLE ===
+You are an expert formal‑methods auditor.
+
+# === TASK ====
+We are translating natural language criteria in clinical‑trial eligibility
+criteria incrementally. You are given:
+    - the criterion text (<requirement_to_translate>)
+    - the candidate SMT snippet (<candidate_smt_snippet>)
+    - the canonicalizable variable list (<canonicalizable_variable_list>)
+    - the current existing declared variables (<partial_program>)  
+
+Verify the snippet against EVERY checklist item and report the results.
+
+
+# === BACKGROUND ===
+You are being inputted with exclusion criteria. If an exclusion criteria is satisfied (i.e., has value True), the participant must be excluded. If an exclusion criteria is not satisfied (i.e., has value False), the participant may not be excluded (may be included). As SMT-LIB assumes a top-level AND across all assertions, you would need to wrap each top-level exclusion criteria assertion in a NOT to negate it. That is, the original requirements are connected by a NOT of OR, but we would love to cast it into an AND.
+
+
+# === INPUT DESCRIPTION ===
+1. <requirement_to_translate> is the current requirement to translate into SMT snippet to be appended to the existing declared variables (<partial_program>).
+2. <candidate_smt_snippet> is the candidate SMT snippet we translated from <requirement_to_translate>: if it passes the checks it will be appeneded to <partial_program>.
+3. <canonicalizable_variable_list> is the list of canonical variables the SMT translation can choose from. The SMT snippet does not necessarily have to use all variables in this list, but should use variables in the list whenever it can (i.e,. has to use the meaning of these variables).
+4. <partial_program> is the existing declared variables for all previous requirements in the eligibility criteria section of the clinical trial.
+
+
+
+=== NAMING SYSTEM / NAMING TEMPLATES ===
+Stems (lowercase snake_case; strip punctuation; numerals normalized). The timeframe token MUST appear exactly once inside the stem and match the "timeframe" field.
+
+<stems_templates>
+
+  Finding:
+    <stems_templates::findings>
+      patient_has_diagnosis_of_{entity_canonical_form}_{timeframe} |
+      patient_has_finding_of_{entity_canonical_form}_{timeframe} |
+      patient_has_symptoms_of_{entity_canonical_form}_{timeframe} |
+      patient_has_clinical_signs_of_{entity_canonical_form}_{timeframe} |
+      patient_has_suspicion_of_{entity_canonical_form}_{timeframe} 
+    </stems_templates::findings>
+    
+  Procedure:
+    <stems_templates::procedures>
+      patient_has_undergone_{entity_canonical_form}_{timeframe} |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_positive |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_negative |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_normal |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_abnormal |
+      patient_is_undergoing_{entity_canonical_form}_{timeframe} |
+      patient_will_undergo_{entity_canonical_form}_{timeframe} |
+      patient_can_undergo_{entity_canonical_form}_{timeframe} |
+    </stems_templates::procedures>
+
+  Observable Entities (numeric):
+    <stems_templates::observable_entities_numeric>
+      patient_{entity_canonical_form}_value_recorded_{timeframe}_withunit_{unit}
+    </stems_templates::observable_entities_numeric>
+
+  Product:
+    <stems_templates::product>
+      patient_is_taking_{entity_canonical_form}_{timeframe} |
+      patient_has_taken_{entity_canonical_form}_{timeframe} |
+      patient_has_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+      patient_has_intolerance_to_{entity_canonical_form}_{timeframe} |      
+      patient_has_allergy_to_{entity_canonical_form}_{timeframe} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+    </stems_templates::product>
+
+  Substance: 
+    <stems_templates::substance>
+      patient_is_exposed_to_{entity_canonical_form}_{timeframe} |
+      patient_has_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+      patient_has_intolerance_to_{entity_canonical_form}_{timeframe} |      
+      patient_has_allergy_to_{entity_canonical_form}_{timeframe} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+    </stems_templates::substance>
+
+</stems_templates>
+
+<timeframe>
+  Timeframe : now | inthehistory | inthefuture | inthepast{n}{units} | inthefuture{n}{units} | foradurationof{n}{units}
+  Time Units: minutes | hours | days | weeks | months | years
+</timeframe>
+
+<qualifiers>
+  Attach with: {stem}@@{qualifier_snake_case}
+  Qualifiers must NOT repeat timeframe/value/unit; they encode leftover semantics (e.g., temporal anchors other than “today”, context like “at baseline”, or dependencies like “after percutaneous coronary intervention”). Use qualifiers sparingly and ONLY when needed for later assertions.
+</qualifiers>
+
+
+# === CHECKLIST ===
+1. MEANING_FAITHFULNESS. The SMT fragment <candidate_smt_snippet> faithfully encodes the natural‑language requirement <requirement_to_translate>. Note that you should allow for some imperfections in the code as long as the meaning is kept equivalent.
+    1.a., for example, it is perfectly viable to define two separate variables for one value for cases such as the upper bound and lower bound are defined in different units.
+2. ENTITY_AND_QUALIFIER_COMPLETENESSS: No meaningful entity or qualifier is missing.  
+3. NO_VARIABLE_DUPLICATION: The snippet introduces no symbol with meaning that duplicates one already present in the partial program.  
+4. POLARITY_CORRECTNESS. If the snippet (<candidate_smt_snippet>) evaluates to SAT, then the patient MAY BE INCLUDED. If the snippet (<candidate_smt_snippet>) evaluates to UNSAT, the patient IS EXCLUDED.
+5. VARIABLE_NAME_VERBATIMNESS: Variable names and their definitions EXACTLY match up. Note ths has nothing to do with the <canonicalizable_variable_list>
+6. USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE: The SMT assertion used variables defined in <canonicalizable_variable_list> as much as possible. That is, whenever we want to express meanings that are able to be covered by variables in <canonicalizable_variable_list>, we always use variables in <canonicalizable_variable_list>.
+    6.a., !!!!! Note that it is FINE for the SMT program to use variables that are NOT in the list. 
+    6.b., !!!!! Also note that the only source of truth for this is <canonicalizable_variable_list>. 
+7. QUALIFIER_ENTITY_RELATIONSHIPS_CAPTURED: Note this applies to ALL variables in the SMT implemetation. Make sure that qualifiers of entities are not defined independently without specifying what entity it refers to (i.e., without using the {stem}@@{qualifier} template). Anything that narrows or qualifies the entity counts as a qualifier span. Qualifier span can cover etiology, disease course, anatomical site, morphology, stage, severity, and so on.
+8. OVEARLL_OK: If all of the above checklists are true.
+
+# === EXAMPLES ===
+
+<example_polarity_1>
+<requirement_to_translate> The patient is excluded if the patient has (previous enrollment in this study) OR (previous treatment with telithromycin). </requirement_to_translate> <candidate_smt_snippet> ;; Declare variable for previous enrollment in this study (declare-const has_previous_enrollment_in_this_study Bool) ;; {"when_to_set_to_true":"Set to true iff the patient has previously enrolled in this study.","when_to_set_to_false":"Set to false iff the patient has not previously enrolled in this study.","when_to_set_to_null":"Never set to null.","meaning":"The patient has previously enrolled in this study.","use_variable_from_new_variable_declarations": false} ;; "The patient is excluded if the patient has previous enrollment in this study." ;; Declare variable for previous treatment with telithromycin (declare-const is_exposed_to_telithromycin_inthehistory Bool) ;; {"when_to_set_to_true":"Set to true iff the patient has been exposed to telithromycin in the past.","when_to_set_to_false":"Set to false iff the patient has not been exposed to telithromycin in the past.","when_to_set_to_null":"Never set to null.","meaning":"The patient has been exposed to telithromycin in the past.","use_variable_from_new_variable_declarations": true} ;; "The patient is excluded if the patient has previous treatment with telithromycin." ;; ===================== Constraint Assertions (REQ 14) ===================== (assert (! (not has_previous_enrollment_in_this_study) :named REQ14_COMPONENT0_OTHER_REQUIREMENTS)) ;; "The patient is excluded if the patient has previous enrollment in this study." (assert (! (not is_exposed_to_telithromycin_inthehistory) :named REQ14_COMPONENT1_OTHER_REQUIREMENTS)) ;; "The patient is excluded if the patient has previous treatment with telithromycin." </candidate_smt_snippet>
+
+<output>
+{
+"MEANING_FAITHFULNESS": true,
+"ENTITY_AND_QUALIFIER_COMPLETENESSS": true,
+"NO_VARIABLE_DUPLICATION": true,
+"POLARITY_CORRECTNESS": true,
+"VARIABLE_NAME_VERBATIMNESS": true,
+"variables_in_canonicalizble_variable_list": "...",
+"USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE": true,
+"QUALIFIER_ENTITY_RELATIONSHIPS_CAPTURED": true,
+"OVEARLL_OK": true,
+"explanations": {
+"MEANING_FAITHFULNESS": "The NL requirement is an OR of two exclusion conditions. The snippet negates each atom separately ((not A) and (not B)), which is equivalent to ¬(A∨B) under the top-level AND convention, preserving meaning.",
+"ENTITY_AND_QUALIFIER_COMPLETENESSS": "Both atoms are represented: prior enrollment (captured in the stem) and prior telithromycin treatment (captured as exposure with timeframe ‘inthehistory’). No additional qualifiers are implied by the text.",
+"NO_VARIABLE_DUPLICATION": "Neither has_previous_enrollment_in_this_study nor is_exposed_to_telithromycin_inthehistory is declared elsewhere in the provided partial program; no redeclarations detected.",
+"POLARITY_CORRECTNESS": "Because each exclusion atom appears under NOT, SAT implies the patient lacks both conditions (hence may be included), and UNSAT occurs if either exclusion holds.",
+"VARIABLE_NAME_VERBATIMNESS": "Names match their meanings: ‘has_previous_enrollment_in_this_study’ ↔ previously enrolled in this study; ‘is_exposed_to_telithromycin_inthehistory’ ↔ previously treated/exposed.",
+"USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE": "The telithromycin variable exactly matches the canonicalizable entry and is used. The enrollment concept has no canonicalizable entry, so a new variable is appropriate.",
+"OVEARLL_OK": "All checklist items pass; the snippet is semantically correct, uses canonical variables where available, and follows exclusion-as-NOT conventions."
+}
+}
+</output>
+
+</example_polarity_1>
+
+<example_polarity_2>
+<requirement_to_translate>
+The patient is excluded if the patient does NOT have cognitive impairment based on cognitive screening at the time of hospital admission.
+</requirement_to_translate>
+
+<candidate_smt_snippet>
+;; Declare variables for the exclusion criteria
+(declare-const patient_has_finding_of_impaired_cognition_now Bool) ;; {"when_to_set_to_true":"Set to true iff the patient has cognitive impairment at the current time.","when_to_set_to_false":"Set to false iff the patient does not have cognitive impairment at the current time.","when_to_set_to_null":"Never set to null.","meaning":"The patient has cognitive impairment.","use_variable_from_new_variable_declarations": true} ;; "cognitive impairment"
+
+(declare-const patient_has_finding_of_impaired_cognition_now@@based_on_cognitive_screening_at_hospital_admission Bool) ;; {"when_to_set_to_true":"Set to true iff the cognitive impairment is determined based on cognitive screening at the time of hospital admission.","when_to_set_to_false":"Set to false iff the cognitive impairment is not determined based on cognitive screening at the time of hospital admission.","when_to_set_to_null":"Never set to null.","meaning":"The cognitive impairment is determined based on cognitive screening at the time of hospital admission.","use_variable_from_new_variable_declarations": true} ;; "based on cognitive screening at the time of hospital admission"
+
+;; ===================== Auxiliary Assertions (REQ 6) =====================
+(assert
+(! (=> patient_has_finding_of_impaired_cognition_now@@based_on_cognitive_screening_at_hospital_admission
+patient_has_finding_of_impaired_cognition_now)
+:named REQ6_AUXILIARY0)) ;; "If impairment is determined by admission screening, impairment holds."
+
+;; ===================== Constraint Assertions (REQ 6) =====================
+;; Exclusion predicate E = (not Q), where Q := qualified impairment at admission screening.
+;; Encode AND-of-NOT by asserting (not E) = (not (not Q)) ≡ Q.
+(assert
+(! (not (not patient_has_finding_of_impaired_cognition_now@@based_on_cognitive_screening_at_hospital_admission))
+:named REQ6_COMPONENT0_OTHER_REQUIREMENTS)) ;; "The patient is excluded if the patient does NOT have cognitive impairment based on admission screening."
+</candidate_smt_snippet>
+
+<output> { "MEANING_FAITHFULNESS": true, "ENTITY_AND_QUALIFIER_COMPLETENESSS": true, "NO_VARIABLE_DUPLICATION": true, "POLARITY_CORRECTNESS": true, "VARIABLE_NAME_VERBATIMNESS": true, "variables_in_canonicalizble_variable_list": "has_finding_of_impaired_cognition_now (allowed qualifier: @@based_on_cognitive_screening_at_hospital_admission)", "all_variables_used_in_the_smt_snippet": "has_finding_of_impaired_cognition_now; has_finding_of_impaired_cognition_now@@based_on_cognitive_screening_at_hospital_admission", "USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE": true, "QUALIFIER_ENTITY_RELATIONSHIPS_CAPTURED": true, "OVEARLL_OK": true, "explanations": { "MEANING_FAITHFULNESS": "Let Q be 'impaired cognition based on admission screening'. The NL exclusion is E := ¬Q. The snippet asserts ¬E = ¬(¬Q) = Q, which is equivalent under the top-level AND convention.", "ENTITY_AND_QUALIFIER_COMPLETENESSS": "Both the entity (impaired cognition) and its qualifier (based on cognitive screening at hospital admission) are explicitly modeled via the {stem}@@{qualifier} template.", "NO_VARIABLE_DUPLICATION": "The introduced symbols are local to this snippet and do not redeclare anything else (example context).", "POLARITY_CORRECTNESS": "Because we assert (not E) where E is the exclusion predicate, SAT ⇒ Q holds (patient may be included); UNSAT when Q is false (exclusion applies).", "VARIABLE_NAME_VERBATIMNESS": "Names match meanings: base variable encodes current impairment; the qualified variable encodes that the impairment is determined by admission screening.", "USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE": "We use the canonical stem 'has_finding_of_impaired_cognition_now' with the allowed qualifier '@@based_on_cognitive_screening_at_hospital_admission'.", "OVEARLL_OK": "All checklist items pass; the encoding correctly demonstrates double-negation polarity handling for an exclusion of the form 'exclude if NOT Q'." } } </output> </example_polarity_2>
+
+
+# === CORRECT EXAMPLE FOR ENCODING FAITHFULNESS ===
+
+<requirement_json>
+{
+  "requirement": "The patient is excluded if the patient has (stage cT1N0 esophageal adenocarcinoma) OR (stage cT4b esophageal adenocarcinoma).",
+  "source": "A patient is excluded if the patient has stage cT1N0 esophageal adenocarcinoma or stage cT4b esophageal adenocarcinoma.",
+  "components": [
+    {
+      "text": "The patient is excluded if the patient has stage cT1N0 esophageal adenocarcinoma.",
+      "constraint": "OTHER_REQUIREMENTS"
+    },
+    {
+      "text": "The patient is excluded if the patient has stage cT4b esophageal adenocarcinoma.",
+      "constraint": "OTHER_REQUIREMENTS"
+    }
+  ]
+}
+</requirement_json>
+
+
+<candidate_smt_snippet>
+;; ===================== Declarations for the exclusion criterion (REQ 2) =====================
+(declare-const patient_has_stage_ct1n0_esophageal_adenocarcinoma Bool) ;; {"when_to_set_to_true": "Set to true if the patient has stage cT1N0 esophageal adenocarcinoma.", "when_to_set_to_false": "Set to false if the patient does not have stage cT1N0 esophageal adenocarcinoma.", "when_to_set_to_null": "Set to null if the stage cT1N0 esophageal adenocarcinoma status is unknown or cannot be determined.", "meaning": "Boolean variable indicating whether the patient has stage cT1N0 esophageal adenocarcinoma."}
+
+(declare-const patient_has_stage_ct4b_esophageal_adenocarcinoma Bool) ;; {"when_to_set_to_true": "Set to true if the patient has stage cT4b esophageal adenocarcinoma.", "when_to_set_to_false": "Set to false if the patient does not have stage cT4b esophageal adenocarcinoma.", "when_to_set_to_null": "Set to null if the stage cT4b esophageal adenocarcinoma status is unknown or cannot be determined.", "meaning": "Boolean variable indicating whether the patient has stage cT4b esophageal adenocarcinoma."}
+
+;; ===================== Constraint Assertions (REQ 2) =====================
+(assert
+(! (not patient_has_stage_ct1n0_esophageal_adenocarcinoma)
+    :named REQ2_COMPONENT0_OTHER_REQUIREMENTS)) ;; "The patient is excluded if the patient has stage cT1N0 esophageal adenocarcinoma."
+
+(assert
+(! (not patient_has_stage_ct4b_esophageal_adenocarcinoma)
+    :named REQ2_COMPONENT1_OTHER_REQUIREMENTS)) ;; "The patient is excluded if the patient has stage cT4b esophageal adenocarcinoma."
+</candidate_smt_snippet>
+
+
+
+# === INPUTS ===
+<requirement_to_translate>
+#REQUIREMENT#
+</requirement_to_translate>
+
+<candidate_smt_snippet>
+#CANDIDATE_SMT#
+</candidate_smt_snippet>
+
+<canonicalizable_variable_list>
+#CANONICALIZABLE_VARIABLE_LIST#
+</canonicalizable_variable_list>
+
+
+<partial_program>
+#SMT_VARIABLES_BY_FAR#
+</partial_program>
+
+
+# === OUTPUT FORMAT ===
+Reply only with a JSON object:
+{
+    "MEANING_FAITHFULNESS": true|false,
+    "ENTITY_AND_QUALIFIER_COMPLETENESSS": true|false,
+    "NO_VARIABLE_DUPLICATION": true|false,
+    "POLARITY_CORRECTNESS": true|false,
+    "VARIABLE_NAME_VERBATIMNESS": true|false,
+    "variables_in_canonicalizble_variable_list": "...reiterate all the variables present in the <canonicalizable_variable_list>...",
+    "all_variables_used_in_the_smt_snippet": "...reiterate all variables used, used to help decide USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE...",
+    "USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE": true|false, // ONLY variables in <canonicalizable_variable_list> is under discussion here.
+    "QUALIFIER_ENTITY_RELATIONSHIPS_CAPTURED": true|false,
+    "OVEARLL_OK": true|false,
+    "explanations": {
+        "MEANING_FAITHFULNESS": "...brief rationale...",
+        "ENTITY_AND_QUALIFIER_COMPLETENESSS": "...brief rationale...",
+        "NO_VARIABLE_DUPLICATION": "...brief rationale...",
+        "POLARITY_CORRECTNESS": "...brief rationale...",
+        "VARIABLE_NAME_VERBATIMNESS": "...brief rationale...",
+        "USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE": "...brief rationale...",
+        "OVEARLL_OK": "...brief rationale...",
+    }
+}

@@ -1,0 +1,65 @@
+# === ROLE ===
+You are a careful, deterministic clinical-trial text editor.
+Task: For each requirement, make implicit logical details explicit (quantifiers, numerical comparators, inclusive/exclusive OR, etc.) without changing the intended medical meaning.
+
+Goal: These rewritten requirements will be translated into SMT assertions.  
+1. Ensure every requirement is phrased from the perspective of one screened patient (singular), *not* from the perspective of the entire recruitment pool.  
+2. Treat each medically relevant entity phrase as an indivisible span; do **not** alter, duplicate, or remove any entity wording.
+
+# === INPUT ===
+<contextual_text>
+#CONTEXTUAL_TEXT#
+</contextual_text>
+
+<original_requirement_list>
+#REQUIREMENT_TEXT#
+</original_requirement_list>
+
+# === Example Guidelines ===
+0. Single-patient viewpoint 
+  - Write "the patient has condition A or condition B (inclusive)" – **not** "patients with condition A or patients with condition B".  
+  - Use singular subjects such as "the patient", "a participant", "this individual". Avoid plural cohort language ("patients", "subjects", "participants") unless the original text explicitly requires population wording.
+1. Replace vague plurals with explicit quantifiers
+  - "one of the following" should be rewritten to "at least one of the following"  
+  - If patients have lesions" should be rewritten to "If a patient has ≥ 1 lesion"
+2. Spell out numerical bounds and comparators 
+  - "50 % plasmacytoid histology" should be rewritten to "histology proportion ≥ 50 %"  
+  - "blood pressure < 140/90 mmHg" should be rewritten to "systolic blood pressure < 140 mmHg **and** diastolic blood pressure < 90 mmHg"
+3. Clarify inclusive/exclusive disjunctions  
+  – "A or B" may be rewritten to "A or B (inclusive)" or "A or B (exclusive)" depending on the context. Specifically, logical relationships expressed with "A and/or B" should usually be rewritten to "A or B (inclusive)"; logical relationships that say "A or B, but not both" explicitly state that the "or" is exclusive. For others, infer based on the context.
+4. Preserve original logical relationships after rewriting (ANDs should stay ANDs, ORs should stay ORs), depending on the context:
+  - "A sore and scratchy throat" should be rewritten to "A sore throat and a scratchy throat" not "A sore throat or a scratchy throat"
+  - "Patients of chronic stable angina with abnormal Exercise Myocardial Perfusion Spect Scan with reversible and partially reversible ischemic changes." should be rewritten to "Patients of chronic stable angina with abnormal Exercise Myocardial Perfusion Spect Scan showing reversible ischemic changes OR abnormal Exercise Myocardial Perfusion Spect Scan showing partially reversible ischemic changes."
+5. Do not modify entity wording; treat each entity span as atomic text.
+6. Remove clauses that always evaluate to TRUE (e.g., “of any race”, “of any sex/gender”).
+7. Convert abbreviations to full names; keep only the full name if both appear (e.g., keep “Body Mass Index” and drop “BMI”).
+8. Logical grouping  
+   - No implicit precedence: treat `and` and `or` as having equal priority.  
+   - always wrap each maximal contiguous sequence joined by the same operator - whether "and" **or** "or" — in **double parentheses**.  
+     * “A or B or C and D and E or F” should be rigorously expressed as “((A or B or C)) and ((D and E)) or ((F))”  
+   - If a single clause sits between two different operators, wrap it as its own cluster.
+     Example – “A or B and C”
+     * A or B is an OR‑cluster --> ((A or B))
+     * C is by itself after an and, so it forms a one‑item AND‑cluster --> ((C))
+     * Reassembled: ((A or B)) and ((C))
+   - Do NOT rely on default order‑of‑operations; the SMT solver must infer logic solely from these parentheses.  
+   - Preserve single parentheses already present inside an entity span (e.g., “Human immunodeficiency virus (HIV)”).  
+   - Never insert, delete, or split text inside an entity span.  
+9. Handling existing parentheses
+  - Preserve single parentheses already present inside an entity span, e.g., “Human immunodeficiency virus (HIV)”.  
+  - Never insert, delete, or split text inside an entity span.  
+  - Double parentheses are for added logical grouping only.
+
+
+# === RULES ===
+Return the same number of lines, each prefixed with its original 0-based index:
+[00] rewritten requirement  
+[01] rewritten requirement  
+[02] rewritten requirement  
+
+# === OUTPUT FORMAT (output exactly these two blocks) ===
+<rewritten_requirement_list>
+[00] The patient ...
+[01] The patient ...
+[02] The individual ...
+</rewritten_requirement_list>

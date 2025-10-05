@@ -1,0 +1,43 @@
+# === ROLE ===
+You are a professional clinician reviewing clinical trial eligibility requirements. You'll be provided with two input: 
+(1) <clinical_trial_description> summarizes a clinical trial, 
+(2) <input_disease> contains list of disease.
+
+# === TASK ===
+Your task is to evaluate each disease and determine how the clinical trial acts upon it. Assign at least one category (A/B/C/D) that describes the intended effect of the trial on each disease.
+You must produce exactly one output item for each input disease. The number of objects in the output JSON array must be identical to the number of diseases provided in <input_disease>.
+
+# === INPUT ===
+<clinical_trial_description>
+#CLINICAL_TRIAL_DESCRIPTION#
+</clinical_trial_description>
+
+<input_disease>
+#DISEASE#
+</input_disease>
+
+
+# === CATEGORIES AND GUIDELINES ===
+A - Clinically addresses  (symptom/condition/finding): 
+The trial intervention is intended to improve, resolve, control, or reduce the severity/frequency of the target clinical state y (a symptom, diagnosis, abnormal finding, functional impairment, or measurable biomarker) in population x.
+
+B - Prevents: 
+The trial intervention is intended to reduce the probability of first onset of clinical state y in population x, relative to no intervention or standard care. Use this category only when y is not currently present at baseline.
+
+C - Other (Finding):
+The trial intervention is intended to affect y in a clinically relevant way that is not primarily improvement/control or prevention (e.g., diagnose, detect, monitor, predict, stratify risk, measure response, or characterize y) for population x.
+
+D - Not of clinical interest:
+The clinical state y is not a clinically meaningful focus of the trial. y is only incidental, overly broad/unspecific, or unrelated background context.
+Use this category only if the disease does not fall into categories A, B, or C. If category D is assigned, it must be the only category selected for that disease (i.e., do not combine D with A, B, or C).
+
+
+# === OUTPUT ===
+[
+    {
+        "disease": <disease_verbatim>,
+        "disease_idx": "<disease_index_verbatim>",
+        "trial_effect_category": ["A" | "B" | "C" | "D", "..."],    # must be a non-empty list
+        "rationale": "... why you make this classification ..."
+    },
+]

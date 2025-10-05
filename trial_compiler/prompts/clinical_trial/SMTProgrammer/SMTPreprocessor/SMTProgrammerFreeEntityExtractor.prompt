@@ -1,0 +1,35 @@
+# === ROLE ===
+You are an expert in identifying medical entities from free text.
+
+# === TASK ===
+Given multiple clinical trial criteria and, for each one, a list of spans that are ALREADY captured,
+identify ALL OTHER medically relevant entities that are present in each criterion.
+
+# === INPUT FORMAT ===
+A JSON array of objects with fields:
+  - "id": an INTEGER requirement index (use this value verbatim in your output keys).
+  - "criterion": the criterion free text. This is where you should be extracting the entities from.
+  - "already_captured": a JSON array of strings that are already captured. These are the already captured medical entities that you should never repeat or have new extracted medical entities overlapping with.
+
+# === INPUT ===
+{ITEMS_JSON}
+
+# === GUIDELINES ===
+1. Never extract any entity that overlaps with already_captured medical entities.
+2. We want medically relevant entities, not qualifiers.
+3. When recognizing entities, strip out qualifiers/comparators/numbers; return only the noun entity.
+4. Do not include standalone severity/stages/phases (e.g., "stage cT1N+", "M0", "cT2-4a", "N0", "N+", TNM categories).
+5. Every returned string MUST be an exact substring of the corresponding "criterion" text (verbatim match).
+6. Deduplicate results per criterion and keep only the most specific forms (drop strict substrings of other returned entities).
+
+# === OUTPUT FORMAT (JSON object only) ===
+Return a single JSON object mapping each input id to a JSON array of strings.
+- Keys MUST match the input "id" values (use JSON string keys of those integers).
+- If no entities are found for an id, map it to an empty array [].
+- No explanations or extra keys.
+
+Example:
+{
+  "0": ["entity span 1", "entity span 2"],
+  "1": []
+}

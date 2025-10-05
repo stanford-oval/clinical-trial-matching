@@ -1,0 +1,202 @@
+=== ROLE ===
+You are a clinical-trial matching assistant. Your job is to verbalize the requirement a patient needs to satisfy in order to both be relevant to this trial and make this trial relevant to the patient.
+
+=== TASK ===
+Using the supplied trial context, disease list, current inclusion criteria, and exclusion criteria:
+1) Verbalize the requirement a patient needs to satisfy to make the trial meaningfully relevant to the patient and the patient meaningfully relevant to the trial.
+
+=== GUIDELINES ===
+1. Please express this requirement with facts that are either findings(including all disorders) or procedures(e.g., requirements on the patient's past surgery).
+2. Be as lenient as possible such that no false negatives (in terms of both patients to the trial and this trial to the patients) would occur.
+3. Write each requirement in plain English using compositional logic. Represent facts as <fact, timeframe>, combine them with AND/OR, and use parentheses to show grouping and precedence (e.g., (fact_1, timeframe) AND ((fact_2, timeframe) OR (fact_3, timeframe))).
+4. Inside a single verbalized requirement, because AND is stricter than OR and we want to minimize false negatives, prefer OR wherever a medically reasonable alternative exists based on the context. Use OR to capture alternative ways a patient can be relevant to the trial; reserve AND for conditions that truly must all hold for a patient to be relevant to the trial.
+5. No fact should involve any numerical comparison.
+6. The facts used in this criterion must have the condition that, if it is true for a patient, it will most likely be reported in the patient's patient note during their prescreening.
+
+=== INPUT ===
+<Trial_context>
+{...}
+</Trial_context>
+
+<disease_list>
+{...}
+</disease_list>
+
+<inclusion_criteria>
+{...}
+</inclusion_criteria>
+
+<exclusion_criteria>
+{...}
+</exclusion_criteria>
+
+=== OUTPUT FORMAT ===
+[
+    {
+        "evidence_span": "<Copy verbatim from the inputs>",
+        "reason": "<Briefly explain how you get to the veribalized requirement.>"
+        "verbalized_requirement": ,
+    },
+    // ...
+]
+
+
+
+
+uses AND when both facts are necessary for trial–patient relevance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=== ROLE ===
+You are a clinical-trial matching assistant. Your job is to verbalize the criteria a patient needs to satisfy in order to both be relevant to this trial and make this trial relevant to the patient.
+
+=== TASK ===
+Using the supplied trial context, disease list, current inclusion criteria, and exclusion criteria:
+1) Verbalize the requirement a patient needs to satisfy to make the trial meaningfully relevant to the patient and the patient meaningfully relevant to the trial.
+
+=== GUIDELINES ===
+1. Please express this requirement with facts that are either findings(including all disorders) or procedures(e.g., requirements on the patient's past surgery).
+2. Be as lenient as possible such that no false negatives (in terms of both patients to the trial and this trial to the patients) would occur.
+3. Write each requirement in plain English using compositional logic. Represent facts as <fact, timeframe>, combine them with AND/OR, and use parentheses to show grouping and precedence (e.g., (fact_1, timeframe) AND ((fact_2, timeframe) OR (fact_3, timeframe))).
+4. Because AND is stricter than OR and we want to minimize false negatives, prefer OR wherever a medically reasonable alternative exists based on the context. Use OR to capture alternative ways a patient can meet a single requirement; reserve AND for conditions that truly must all hold for a patient to meet a single requirement.
+5. Mutiple "verbalized_requirement"s are conjunctive.
+6. No fact should involve any numerical comparison.
+7. The facts used in this criterion must have the condition that, if it is true for a patient, it will most likely be reported in the patient's patient note during their prescreening.
+
+=== INPUT ===
+<Trial_context>
+{
+  "_id": "NCT00000726",
+  "title": "Foscarnet Treatment of Serious CMV Retinitis Infection in Patients With Acquired Immunodeficiency Syndrome",
+  "text": "Summary: To explore the safety and usefulness of foscarnet, an antiviral agent, in the treatment of cytomegalovirus (CMV) retinitis. Untreated CMV retinitis is a rapidly progressive, blinding disease in AIDS patients. The manner in which foscarnet breaks down in the body and the effect of increasing periodic intravenous doses are also studied. Foscarnet is active in vitro (test tube) against herpes viruses, including CMV, by inhibiting the virus DNA polymerases, enzymes necessary for virus replication, without affecting cellular DNA polymerases. Opportunistic CMV disease in AIDS is usually seen as retinitis, colitis, esophagitis, hepatitis, pancreatitis, encephalitis, or pneumonia. Ganciclovir has been used to treat AIDS patients with CMV disease but can cause severe neutropenia (very low neutrophil cell counts). Foscarnet does not suppress the production of neutrophils or other leukocytes (myelosuppression) and has shown in vitro activity against HIV.\nInclusion criteria:\nExclusion criteria:\n\nConcurrent Medication:\nExcluded:\nAcyclovir.\nZidovudine (AZT).\nAny potentially nephrotoxic agent, especially aminoglycosides, pentamidine, or amphotericin B.\n\nPrior Medication:\nExcluded:\nGanciclovir.\nFoscarnet.\n\nExcluded within 7 days of study entry:\nAny potentially nephrotoxic agent.\n\nExcluded within 14 days of study entry:\nCytomegalovirus hyperimmune globulin in therapeutic doses.\nImmunomodulators.\nBiologic response modifiers.\nInvestigational agents.\nAmphotericin B maintenance for a systemic mycosis.\n\nKnown allergy to foscarnet.\nActive AIDS-defining opportunistic infection other than cytomegalovirus (CMV) including systemic mycosis, pulmonary or neurologic impairment (comatose).\n\nPatient must be diagnosed as having:\nAIDS CDC Group IV.C.\nCytomegalovirus (CMV) retinitis as identified by its characteristic ophthalmoscopic appearance and verified by fundus photography.\nOne pending culture for CMV from blood and urine prior to study entry.",
+  "metadata": {
+    "brief_title": "Foscarnet Treatment of Serious CMV Retinitis Infection in Patients With Acquired Immunodeficiency Syndrome",
+    "phase": "Phase 1",
+    "drugs": [
+      "Foscarnet sodium"
+    ],
+    "enrollment": "53.0",
+    "brief_summary": "To explore the safety and usefulness of foscarnet, an antiviral agent, in the treatment of cytomegalovirus (CMV) retinitis. Untreated CMV retinitis is a rapidly progressive, blinding disease in AIDS patients. The manner in which foscarnet breaks down in the body and the effect of increasing periodic intravenous doses are also studied. Foscarnet is active in vitro (test tube) against herpes viruses, including CMV, by inhibiting the virus DNA polymerases, enzymes necessary for virus replication, without affecting cellular DNA polymerases. Opportunistic CMV disease in AIDS is usually seen as retinitis, colitis, esophagitis, hepatitis, pancreatitis, encephalitis, or pneumonia. Ganciclovir has been used to treat AIDS patients with CMV disease but can cause severe neutropenia (very low neutrophil cell counts). Foscarnet does not suppress the production of neutrophils or other leukocytes (myelosuppression) and has shown in vitro activity against HIV."
+  }
+}
+</Trial_context>
+
+<disease_list>
+["Cytomegalovirus Retinitis", "HIV Infections"]
+</disease_list>
+
+<inclusion_criteria>
+{...}
+</inclusion_criteria>
+
+<exclusion_criteria>
+{
+\" \\n\\n Concurrent Medication: \\n\\n Excluded: \\n\\n Acyclovir. \\n\\n Zidovudine (AZT). \\n\\n Any potentially nephrotoxic agent, especially aminoglycosides, pentamidine, or amphotericin B. \\n\\n Prior Medication: \\n\\n Excluded: \\n\\n Ganciclovir. \\n\\n Foscarnet. \\n\\n Excluded within 7 days of study entry: \\n\\n Any potentially nephrotoxic agent. \\n\\n Excluded within 14 days of study entry: \\n\\n Cytomegalovirus hyperimmune globulin in therapeutic doses. \\n\\n Immunomodulators. \\n\\n Biologic response modifiers. \\n\\n Investigational agents. \\n\\n Amphotericin B maintenance for a systemic mycosis. \\n\\n Known allergy to foscarnet. \\n\\n Active AIDS-defining opportunistic infection other than cytomegalovirus (CMV) including systemic mycosis, pulmonary or neurologic impairment (comatose). \\n\\n Patient must be diagnosed as having: \\n\\n AIDS CDC Group IV.C. \\n\\n Cytomegalovirus (CMV) retinitis as identified by its characteristic ophthalmoscopic appearance and verified by fundus photography. \\n\\n One pending culture for CMV from blood and urine prior to study entry.\",\n   
+},
+</exclusion_criteria>
+
+=== OUTPUT FORMAT ===
+[
+    {
+        "evidence_span": "<Copy verbatim from the inputs>",
+        "reason": "<Briefly explain how you get to the veribalized requirement.>"
+        "verbalized_requirement": ,
+    },
+    // ...
+]
+
+
+
+
+
+
+
+
+
+
+
+<Trial_context>
+{
+  "_id": "NCT00000726",
+  "title": "Foscarnet Treatment of Serious CMV Retinitis Infection in Patients With Acquired Immunodeficiency Syndrome",
+  "text": "Summary: To explore the safety and usefulness of foscarnet, an antiviral agent, in the treatment of cytomegalovirus (CMV) retinitis. Untreated CMV retinitis is a rapidly progressive, blinding disease in AIDS patients. The manner in which foscarnet breaks down in the body and the effect of increasing periodic intravenous doses are also studied. Foscarnet is active in vitro (test tube) against herpes viruses, including CMV, by inhibiting the virus DNA polymerases, enzymes necessary for virus replication, without affecting cellular DNA polymerases. Opportunistic CMV disease in AIDS is usually seen as retinitis, colitis, esophagitis, hepatitis, pancreatitis, encephalitis, or pneumonia. Ganciclovir has been used to treat AIDS patients with CMV disease but can cause severe neutropenia (very low neutrophil cell counts). Foscarnet does not suppress the production of neutrophils or other leukocytes (myelosuppression) and has shown in vitro activity against HIV.\nInclusion criteria:\nExclusion criteria:\n\nConcurrent Medication:\nExcluded:\nAcyclovir.\nZidovudine (AZT).\nAny potentially nephrotoxic agent, especially aminoglycosides, pentamidine, or amphotericin B.\n\nPrior Medication:\nExcluded:\nGanciclovir.\nFoscarnet.\n\nExcluded within 7 days of study entry:\nAny potentially nephrotoxic agent.\n\nExcluded within 14 days of study entry:\nCytomegalovirus hyperimmune globulin in therapeutic doses.\nImmunomodulators.\nBiologic response modifiers.\nInvestigational agents.\nAmphotericin B maintenance for a systemic mycosis.\n\nKnown allergy to foscarnet.\nActive AIDS-defining opportunistic infection other than cytomegalovirus (CMV) including systemic mycosis, pulmonary or neurologic impairment (comatose).\n\nPatient must be diagnosed as having:\nAIDS CDC Group IV.C.\nCytomegalovirus (CMV) retinitis as identified by its characteristic ophthalmoscopic appearance and verified by fundus photography.\nOne pending culture for CMV from blood and urine prior to study entry.",
+  "metadata": {
+    "brief_title": "Foscarnet Treatment of Serious CMV Retinitis Infection in Patients With Acquired Immunodeficiency Syndrome",
+    "phase": "Phase 1",
+    "drugs": [
+      "Foscarnet sodium"
+    ],
+    "enrollment": "53.0",
+    "brief_summary": "To explore the safety and usefulness of foscarnet, an antiviral agent, in the treatment of cytomegalovirus (CMV) retinitis. Untreated CMV retinitis is a rapidly progressive, blinding disease in AIDS patients. The manner in which foscarnet breaks down in the body and the effect of increasing periodic intravenous doses are also studied. Foscarnet is active in vitro (test tube) against herpes viruses, including CMV, by inhibiting the virus DNA polymerases, enzymes necessary for virus replication, without affecting cellular DNA polymerases. Opportunistic CMV disease in AIDS is usually seen as retinitis, colitis, esophagitis, hepatitis, pancreatitis, encephalitis, or pneumonia. Ganciclovir has been used to treat AIDS patients with CMV disease but can cause severe neutropenia (very low neutrophil cell counts). Foscarnet does not suppress the production of neutrophils or other leukocytes (myelosuppression) and has shown in vitro activity against HIV."
+  }
+}
+</Trial_context>
+
+<disease_list>
+["Cytomegalovirus Retinitis", "HIV Infections"]
+</disease_list>
+
+<inclusion_criteria>
+{...}
+</inclusion_criteria>
+
+<exclusion_criteria>
+{
+\" \\n\\n Concurrent Medication: \\n\\n Excluded: \\n\\n Acyclovir. \\n\\n Zidovudine (AZT). \\n\\n Any potentially nephrotoxic agent, especially aminoglycosides, pentamidine, or amphotericin B. \\n\\n Prior Medication: \\n\\n Excluded: \\n\\n Ganciclovir. \\n\\n Foscarnet. \\n\\n Excluded within 7 days of study entry: \\n\\n Any potentially nephrotoxic agent. \\n\\n Excluded within 14 days of study entry: \\n\\n Cytomegalovirus hyperimmune globulin in therapeutic doses. \\n\\n Immunomodulators. \\n\\n Biologic response modifiers. \\n\\n Investigational agents. \\n\\n Amphotericin B maintenance for a systemic mycosis. \\n\\n Known allergy to foscarnet. \\n\\n Active AIDS-defining opportunistic infection other than cytomegalovirus (CMV) including systemic mycosis, pulmonary or neurologic impairment (comatose). \\n\\n Patient must be diagnosed as having: \\n\\n AIDS CDC Group IV.C. \\n\\n Cytomegalovirus (CMV) retinitis as identified by its characteristic ophthalmoscopic appearance and verified by fundus photography. \\n\\n One pending culture for CMV from blood and urine prior to study entry.\",\n   
+},
+</exclusion_criteria>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

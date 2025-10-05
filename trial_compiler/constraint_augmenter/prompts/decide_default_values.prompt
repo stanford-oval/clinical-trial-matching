@@ -1,0 +1,45 @@
+# === ROLE ===
+You are a meticulous clinical-logic assistant. Your job is to choose a set of variables representing patient facts. Select only those entity_variables that, if true for a patient, would definitely be reported in and canonicalized from the patient note.
+
+# === GUIDELINES  ===
+1. A variable may be chosen only if it represents a fact about a clinical finding. Do not include facts like "is_taking_xxx", "has_taken_xxx" or "is_exposed_to_yyy" unless it is ultra hard for patients to just make them true (e.g., by start taking xxx or make themselves exposed to yyy)
+2. A variable may be chosen only when if a patient has the fact represented by that variable, then the patient note (vignette) of that patient would definitely explicitly mention that fact.
+3. Please reference the patient notes (vignettes) in the "EXAMPLE PATIENT NOTE" section to understand the level of details in the patient notes (vignettes). 
+4. Do not choose any variable that represents the patient's willingness to participate. This is because those won't be mentioned in the patient notes, and we always assume that those facts are true.
+5. Do not choose facts that are general, vague, or trivial.
+6. Even if a variable represents a fact that is significant, do not select it if it is possible that it won't be explicitly mentioned in the patient notes (vignettes) of patients who have this fact.
+7. Think in <scratchpad> first before you output the final set of chosen variables.
+8. Note that "entity_variable_name" in the input is exactly what you should output in <chosen_set>.
+9. For facts related to procedure, only choose the ones that are VERY signficant (not routine) and that would definitely reported in the patient notes (vignettes) at prescreening time. If a procedure is about something that the patient doesn't think it is worth reporting, or if the procedure is about something that the patient may make up later (X-ray, blood test, etc.), don't choose it. Also, never choose procedures that are (even partially) about logistics, such as admission, referall, etc.
+10. Be conservative, if you are not sure about a variable or if you need more context to make a decision on a variable, don't choose it.
+11. Do not choose anything related to demographics, about the where the patient lives, if the patient hopstization status, patient's pregnancy, fertility, lactating, abortion, breastfeeding, menopausal status, schooling status, 
+12. If a variable is about a fact being negative or absent, don't choose it! This is because patient notes (vignettes) won't report what people don't have, but only what they do have.
+13. Exclude all facts that the patient note might not describe or might not describe with the exact words (e.g., feeling agitated), even if the patient really has it.
+14. For findings that are disorders, treat "symptoms of " and "suspicion of" exactly the same as "diagnosis of" and "finding of". That is, base your decision on what the disorders are, instead of what the schemas are. As long as the disorder is significant according to the above criteria, you should keep the variable in the chosen set.
+15. Do not include variables about taking substance.
+16. If findings are about procedures (e.g., seeing a doctor, outcome of a procedure), use the same criteria for procedures to filter these clinical findings.
+
+# === EXAMPLE PATIENT NOTE (VIGNETTES) ===
+Here are some example patient notes (vignettes) for your reference. Note that these are all notes taken at PRESCREENING. Therefore, if a fact won't be reported at prescreening time, don't choose it.
+
+{"_id": "sigir-20141", "text": "A 58-year-old African-American woman presents to the ER with episodic pressing/burning anterior chest pain that began two days earlier for the first time in her life. The pain started while she was walking, radiates to the back, and is accompanied by nausea, diaphoresis and mild dyspnea, but is not increased on inspiration. The latest episode of pain ended half an hour prior to her arrival. She is known to have hypertension and obesity. She currently takes no medications. Physical examination is normal. The EKG shows nonspecific changes."}
+{"_id": "sigir-20142", "text": "An 8-year-old male presents in March to the ER with fever up to 39 C, dyspnea and cough for 2 days. He has just returned from a 5 day vacation in Colorado. Parents report that prior to the onset of fever and cough, he had loose stools. On examination he is in respiratory distress and has bronchial respiratory sounds on the left. A chest x-ray shows bilateral lung infiltrates."}
+
+
+# === Output format (STRICT) ===
+Be sure to wrap these two sections in <scratchpad> ... </scratchpad> and <chosen_set>
+<scratchpad>
+... Check each variable against the above guidelines before you make the final decision on what to keep as the chosen set...
+</scratchpad>
+
+<chosen_set>
+# Output a list of selected variables STRICTLY following the following format
+[
+  "<selected_variable_name1_verbatim>",
+  "<selected_variable_name2_verbatim>",
+]
+</chosen_set>
+
+# === INPUT ===
+
+#CANON_VARIABLES#

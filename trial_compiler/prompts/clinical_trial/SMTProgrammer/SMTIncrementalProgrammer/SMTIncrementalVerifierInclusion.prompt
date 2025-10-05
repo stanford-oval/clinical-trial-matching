@@ -1,0 +1,183 @@
+# === ROLE ===
+You are an expert formal‑methods auditor.
+
+# === TASK ====
+We are translating natural language criteria in clinical‑trial eligibility
+criteria incrementally. You are given:
+    - the criterion text (<requirement_to_translate>)
+    - the candidate SMT snippet (<candidate_smt_snippet>)
+    - the current existing declared variables (<partial_program>)  
+    - the canonicalizable variable list (<canonicalizable_variable_list>)
+
+Verify the snippet against EVERY checklist item and report the results.
+
+
+# === BACKGROUND ===
+You are being inputted with inclusion criteria. If an inclusion criteria is satisfied (i.e., has value True), the participant may be included. If an inclusion criteria is not satisfied (i.e., has value False), the participant is not included. For inclusion criteria, the SMT-LIB language already works seamlessly, as SMT-LIB assumes a top-level AND.
+
+
+# === INPUT DESCRIPTION ===
+1. <requirement_to_translate> is the current requirement to translate into SMT snippet to be appended to the existing declared variables (<partial_program>).
+2. <candidate_smt_snippet> is the candidate SMT snippet we translated from <requirement_to_translate>: if it passes the checks it will be appeneded to <partial_program>.
+3. <canonicalizable_variable_list> is the list of canonical variables the SMT translation can choose from. The SMT snippet does not necessarily have to use all variables in this list, but should use variables in the list whenever it can (i.e,. has to use the meaning of these variables).
+4. <partial_program> is the existing declared variables for all previous requirements in the eligibility criteria section of the clinical trial.
+
+
+# === INPUTS ===
+<requirement_to_translate>
+#REQUIREMENT#
+</requirement_to_translate>
+
+<candidate_smt_snippet>
+#CANDIDATE_SMT#
+</candidate_smt_snippet>
+
+<canonicalizable_variable_list>
+#CANONICALIZABLE_VARIABLE_LIST#
+</canonicalizable_variable_list>
+
+<partial_program>
+#SMT_VARIABLES_BY_FAR#
+</partial_program>
+
+
+=== NAMING SYSTEM / NAMING TEMPLATES ===
+Stems (lowercase snake_case; strip punctuation; numerals normalized). The timeframe token MUST appear exactly once inside the stem and match the "timeframe" field.
+
+<stems_templates>
+
+  Finding:
+    <stems_templates::findings>
+      patient_has_diagnosis_of_{entity_canonical_form}_{timeframe} |
+      patient_has_finding_of_{entity_canonical_form}_{timeframe} |
+      patient_has_symptoms_of_{entity_canonical_form}_{timeframe} |
+      patient_has_clinical_signs_of_{entity_canonical_form}_{timeframe} |
+      patient_has_suspicion_of_{entity_canonical_form}_{timeframe} 
+    </stems_templates::findings>
+    
+  Procedure:
+    <stems_templates::procedures>
+      patient_has_undergone_{entity_canonical_form}_{timeframe} |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_positive |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_negative |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_normal |
+      patient_has_undergone_{entity_canonical_form}_{timeframe}_outcome_is_abnormal |
+      patient_is_undergoing_{entity_canonical_form}_{timeframe} |
+      patient_will_undergo_{entity_canonical_form}_{timeframe} |
+      patient_can_undergo_{entity_canonical_form}_{timeframe} |
+    </stems_templates::procedures>
+
+  Observable Entities (numeric):
+    <stems_templates::observable_entities_numeric>
+      patient_{entity_canonical_form}_value_recorded_{timeframe}_withunit_{unit}
+    </stems_templates::observable_entities_numeric>
+
+  Product:
+    <stems_templates::product>
+      patient_is_taking_{entity_canonical_form}_{timeframe} |
+      patient_has_taken_{entity_canonical_form}_{timeframe} |
+      patient_has_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+      patient_has_intolerance_to_{entity_canonical_form}_{timeframe} |      
+      patient_has_allergy_to_{entity_canonical_form}_{timeframe} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+    </stems_templates::product>
+
+  Substance: 
+    <stems_templates::substance>
+      patient_is_exposed_to_{entity_canonical_form}_{timeframe} |
+      patient_has_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+      patient_has_intolerance_to_{entity_canonical_form}_{timeframe} |      
+      patient_has_allergy_to_{entity_canonical_form}_{timeframe} |
+      patient_has_nonimmune_hypersensitivity_to_{entity_canonical_form}_{timeframe} |
+    </stems_templates::substance>
+
+</stems_templates>
+
+<timeframe>
+  Timeframe : now | inthehistory | inthefuture | inthepast{n}{units} | inthefuture{n}{units} | foradurationof{n}{units}
+  Time Units: minutes | hours | days | weeks | months | years
+</timeframe>
+
+<qualifiers>
+  Attach with: {stem}@@{qualifier_snake_case}
+  Qualifiers must NOT repeat timeframe/value/unit; they encode leftover semantics (e.g., temporal anchors other than “today”, context like “at baseline”, or dependencies like “after percutaneous coronary intervention”). Use qualifiers sparingly and ONLY when needed for later assertions.
+</qualifiers>
+
+
+# === CHECKLIST ===
+1. MEANING_FAITHFULNESS. The SMT fragment <candidate_smt_snippet> faithfully encodes the natural‑language requirement <requirement_to_translate>. Note that you should allow for some imperfections in the code as long as the meaning is kept equivalent.
+    1.a., for example, it is perfectly viable to define two separate variables for one value for cases such as the upper bound and lower bound are defined in different units.
+2. ENTITY_AND_QUALIFIER_COMPLETENESSS: No meaningful entity or qualifier is missing.  
+3. NO_VARIABLE_DUPLICATION: The snippet introduces no symbol with meaning that duplicates one already present in the partial program.  
+4. POLARITY_CORRECTNESS. If the snippet (<candidate_smt_snippet>) evaluates to SAT, then the patient MAY BE INCLUDED. If the snippet (<candidate_smt_snippet>) evaluates to UNSAT, the patient IS NOT INCLUDED.
+5. VARIABLE_NAME_VERBATIMNESS: Variable names and their definitions EXACTLY match up. 
+6. USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE: The SMT assertion used variables defined in <canonicalizable_variable_list> as much as possible. That is, whenever we want to express meanings that are able to be covered by variables in <canonicalizable_variable_list>, we always use variables in <canonicalizable_variable_list>. 
+    6.a., !!!!! Note that it is FINE for the SMT program to use variables that are NOT in the list. 
+    6.b., !!!!! Also note that the only source of truth for this is <canonicalizable_variable_list>. 
+7. QUALIFIER_ENTITY_RELATIONSHIPS_CAPTURED:  Note this applies to ALL variables in the SMT implemetation. Make sure that qualifiers of entities are not defined independently without specifying what entity it refers to (i.e., without using the {stem}@@{qualifier} template). Anything that narrows or qualifies the entity counts as a qualifier span. Qualifier span can cover etiology, disease course, anatomical site, morphology, stage, severity, and so on.
+  - Note that we must prioritize using canonical variables before defining new, non-canonical variables. That is, we prefer canonical variable + new qualifier over completely new, non-canonical variables.
+8. OVEARLL_OK: If all of the above checklists are true.
+
+
+# === CORRECT EXAMPLES ===
+<example_1>
+<requirement_to_translate_example_1>
+{
+  "requirement": "To be included, the patient must have (an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0) OR (an ECOG Performance Status of 1) OR (an ECOG Performance Status of 2).",
+  "source": "To be included, a patient must have an ECOG Performance status of 0, an ECOG Performance status of 1, or an ECOG Performance status of 2.",
+  "components": [
+    {
+      "text": "To be included, the patient must have (an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0) OR (an ECOG Performance Status of 1) OR (an ECOG Performance Status of 2).",
+      "constraint": "PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE"
+    }
+  ]
+}
+</requirement_to_translate_example_1>
+
+
+<candidate_smt_snippet_example_1>
+;; ============================================================
+;; Declarations (from <new_variable_declarations>)
+;; ============================================================
+
+(declare-const patient_has_undergone_radiotherapy_to_abdomen_inthehistory Bool) ;; {"when_to_set_to_true":"The patient has undergone abdominal radiotherapy in the past.","when_to_set_to_false":"The patient has not undergone abdominal radiotherapy in the past.","when_to_set_to_null":"It is unknown whether the patient has undergone abdominal radiotherapy in the past.","meaning":"Boolean procedure indicating the patient has undergone abdominal radiotherapy in the past."}
+
+(declare-const patient_has_undergone_radiotherapy_to_thorax_inthehistory Bool) ;; {"when_to_set_to_true":"The patient has undergone thoracic radiotherapy in the past.","when_to_set_to_false":"The patient has not undergone thoracic radiotherapy in the past.","when_to_set_to_null":"It is unknown whether the patient has undergone thoracic radiotherapy in the past.","meaning":"Boolean procedure indicating the patient has undergone thoracic radiotherapy in the past."}
+
+;; ============================================================
+;; CONSTRAINT assertions (1:1 with components)
+;; ============================================================
+
+;; Component 0: "must NOT have undergone prior abdominal radiotherapy AND NOT have undergone prior thoracic radiotherapy."
+(assert
+(! (and (not patient_has_undergone_radiotherapy_to_abdomen_inthehistory)
+         (not patient_has_undergone_radiotherapy_to_thorax_inthehistory))
+    :named REQ3_COMPONENT0_NEED_TO_BE_STRICTLY_ENFORCED_IN_INFORMATION_RETRIEVAL)) ;; From "To be included, the patient must NOT have undergone prior abdominal radiotherapy AND NOT have undergone prior thoracic radiotherapy."
+</candidate_smt_snippet_example_1>
+
+</example_1>
+
+
+# === OUTPUT FORMAT ===
+Reply only with a JSON object:
+{
+    "MEANING_FAITHFULNESS": true|false,
+    "ENTITY_AND_QUALIFIER_COMPLETENESSS": true|false,
+    "NO_VARIABLE_DUPLICATION": true|false,
+    "POLARITY_CORRECTNESS": true|false,
+    "VARIABLE_NAME_VERBATIMNESS": true|false,
+    "variables_in_canonicalizble_variable_list": "...reiterate all the variables present in the <canonicalizable_variable_list>...",
+    "all_variables_used_in_the_smt_snippet": "...reiterate all variables used, used to help decide USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE...",
+    "USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE": true|false,
+    "QUALIFIER_ENTITY_RELATIONSHIPS_CAPTURED": true|false,
+    "OVEARLL_OK": true|false,
+    "explanations": {
+        "MEANING_FAITHFULNESS": "...brief rationale...",
+        "ENTITY_AND_QUALIFIER_COMPLETENESSS": "...brief rationale...",
+        "NO_VARIABLE_DUPLICATION": "...brief rationale...",
+        "POLARITY_CORRECTNESS": "...brief rationale...",
+        "VARIABLE_NAME_VERBATIMNESS": "...brief rationale...",
+        "USE_CANONICALIZABLE_LIST_AS_MUCH_AS_POSSIBLE": "...brief rationale...",
+        "OVEARLL_OK": "...brief rationale...",
+    }
+}

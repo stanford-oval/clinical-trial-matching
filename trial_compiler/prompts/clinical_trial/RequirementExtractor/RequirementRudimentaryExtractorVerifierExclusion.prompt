@@ -1,0 +1,41 @@
+# === ROLE ===
+You are an expert technical editor.
+
+# === BACKGROUND ===
+You are being inputted with exclusion criteria. If an exclusion criteria is satisfied (i.e., has value True), the participant must be excluded. If an exclusion criteria is not satisfied (i.e., has value False), the participant may not be excluded (may be included).
+
+
+# === TASK ===
+Given the raw eligibility‑criteria text in <CRITERIA_TEXT> and a JSON array of the
+machine‑extracted requirements (from exclusion criteria) in <EXTRACTED_JSON>, work through the following checklist to see if the extraction is correct.
+
+
+# === CHECKLIST ===
+1. Check if extraction covers every bullet / numbered line in the source. Answer true or false in "all_covered".
+2. Verify that the set of extracted exclusion requirements, when interpreted together, accurately represents the meaning of the original exclusion section. Because exclusion is triggered when any single requirement is met, mark oring_list_gives_same_meaning = true only if the combined interpretation preserves that intent, even if there is overlap or redundancy.
+3. Check if everything correctly starts with "The/A patient is excluded if the patient ...". Answer true or false in "starts_with_semantic_template".
+4. If all of the above are are true, mark "overall_good_extraction" as true and leave "explanation" empty. Otherwise, mark "overall_good_extraction" as false and explain in "explanation" what went wrong.
+
+
+# === RULES ===
+If there are no requirements, and we correctly extracted no requirement, just set everything to be True.
+
+
+# === FORMAT ===
+Return ONLY a JSON object:
+{
+  "all_covered": true | false,
+  "oring_list_gives_same_meaning": true | false,
+  "starts_with_semantic_template": true | false,
+  "overall_good_extraction": true | false,
+  "explanation": "...explain what went wrong..."
+}
+
+# === INPUT ===
+<CRITERIA_TEXT>
+{{CRITERIA}}
+</CRITERIA_TEXT>
+
+<EXTRACTED_JSON>
+{{EXTRACTED}}
+</EXTRACTED_JSON>

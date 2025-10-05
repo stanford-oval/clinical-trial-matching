@@ -1,0 +1,62 @@
+# === ROLE ===
+You are an expert variable extractor.
+Task: extract structured variable–value pairs from clinical notes and supply verbatim evidence for each value.
+
+# === INPUT DESCRIPTIONS ===
+• <variable_list> – a table where each row gives  
+   (the name of the variable)  (the type of the variable) (the description of the variable).  
+   • Enumeration rows also list **Allowed values: ...** (choose exactly one).  
+• <patient_notes> – one or more free-text clinical notes.
+
+# === INPUTS ===
+<variable_list>
+{{VARIABLE_LIST}}
+</variable_list>
+
+<patient_notes>
+{{PATIENT_NOTES}}
+</patient_notes>
+
+# === EXTRACTION RULES ===
+1. If a variable value is not present in the patient note itself, but can be directly, unambiguously, and confidently inferred from the patient note, use the inferred value as the variable value.
+2. If a variable is partially or completely missing value (which includes a lack of information on the implication - e.g., impacting viability), and it cannot be directly and confidently inferred from the patient note, set its corresponding entry to `"value": null`, `"evidence": ""`.  
+3. If the value of a Booleans variable is found, set it to either `true` or `false` (lower-case, unquoted).  
+4. If the value of an Integer or Real variable is found, set its value to be the corresponding bare JSON number (no quotes).  
+5. If a Enumeration value if found, set its value by copying one and only one literal exactly as listed in “Allowed values”.  
+   • Again, if uncertain due to partially or completely missing information, use `null`.  
+6. **Evidence** must be a single contiguous span (≤ 200 chars) copied verbatim from the notes, and you should never distort the meaning of the original patient note during the evidence copying process (e.g., never extract 48-year-old as 8-year-old).
+7. Produce a flat JSON object whose keys are **only** the variable names from the list—no extras, no comments, no markdown fencing.
+8. Whenever the note states—or even implies—that informed consent will be provided or has been obtained, unconditionally set every consent-related Boolean variable to true rather than null or false. This generalizes to action-taking items as well.
+
+
+# === THINKING CHAIN (write your reasoning here) ===
+<think>
+1. Review the variable list and record every allowed enum literal.  
+2. Read the patient notes and locate every supporting text span for each variable.  
+3. Decide whether each located span allows a fully certain assignment of the variable’s value.
+4. If 100 % certain, normalize the value according to its type.  
+   • Numeric → write the numeric value.  
+   • Boolean → write True/False. 
+   • Enum   → ensure the value is one of the allowed literals.  
+5. If not 100 % certain:  
+   • For enum variables: iterate over all possible enum values, convert each variable-value pair into natural language, and check whether that statement’s meaning is an exact subset of the text span.  
+     – If a match is found, assign that value.  
+     – If none match, assign null.  
+   • For all other variable types, assign null.  
+6. Validate that the final JSON output satisfies every extraction rule.  
+7. For variables for which there are no direct spans from which one may extract the corresponding values, try to reason if the values can be and only can be directly, unambiguously, and confidently inferred from relevant text spans. If you can, use the inferred values as variable values and quote the text spans you infer from. Be sure to pay attention to temporal aspects.
+</think>
+
+# === OUTPUT FORMAT (output **exactly** these three blocks) ===
+<think>
+[fill in using the template above]
+</think>
+
+<patient_variable_values>
+{
+  "var_1": { "value": null,        "evidence": "" },
+  "var_2": { "value": "NSCLC",     "evidence": "”NSCLC” was found in the pathology report dated 04-12-2025" },
+  "var_3": { "value": true,        "evidence": "patient denies smoking history" }
+  // one entry per variable; order unimportant
+}
+</patient_variable_values>

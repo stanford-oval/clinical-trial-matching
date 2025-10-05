@@ -1,0 +1,86 @@
+=== ROLE ===
+You are a clinical NLP annotator.
+Task: 
+    The input is (a) a qualifier describing an entity, and (b) a list of candidate (attribute type, canonical attribute value) pairs proposed for that qualifier.
+    Select the single (attribute_type, canonical_attribute_value) pair that best captures the qualifier.
+Goal: This is a part of an LLM-based pipeline that turns natural language criterion into SMT program. In this stage, your purpose is to select the single (attribute_type, canonical_attribute_value) pair that best captures the qualifier.
+
+=== INPUT ===
+<candidate_attributetype_canonicalattributevalue>
+#candidate_attributetype_canonicalattributevalue#
+</candidate_attributetype_canonicalattributevalue>
+
+=== GUIDELINES ===
+    1. For each canonical_attribute_value, determine its relationship to the extracted attribute_value, canonical_attribute_value is identical, subset, superset, unrelated or other relationship with the extracted attribute_value.
+    2. Compose a qualifier (a complete declarative sentence) that uses <attribute_type> and <canonical_attribute_value> to qualify entity's <surface string>. Evaluate how this constructed qualifier relates to the original qualifier, classify the relationship as equivalent, broader, narrower, or unrelated.
+    3. From the pairs marked ALL_GOOD, select the single (attribute_type, canonical_attribute_value) that best captures the entity’s qualifier and write it to "best_attribute_type_canonical_attribute_value".
+
+=== CHECKLIST ===
+Validate each candidate_attributetype_canonicalattributevalue pair against the following rules (apply them in order):
+CANONICAL_ATTRIBUTE_VALUE_IDENTICAL_TO_EXTRACTED_ATTRIBUTE_VALUE: The canonical_attribute_value must be identical to the extracted attribute value.
+COMPOSED_QUALIFIER_IDENTICAL_TO_ORIGINAL_QUALIFIER: The composed qualifier for the Entity's <surface string> by using the <attribute_type> and the <canonical_attribute_value> expresses exactly the same meaning as the original qualifier.
+COMPOSED_QUALIFIER_NOT_CONTRADICT_PATEINT_FACT: The composed qualifier does not contradict the criterion requirement.
+Set ALL_GOOD to yes only when every rule is satisfied.
+
+=== OUTPUT ===
+Return one JSON object (no Markdown, no extra keys).
+{
+  "trial": "<trial id>",
+  "requirement": "<criterion>",
+  "entity": {{
+    "surface_string": "<entity text exactly as it appears>",
+    "preferred_term": "<SNOMED preferred term>",
+    "fully_specified_name": "<SNOMED fully specified name>"
+    "type": "<copy verbatim from input>",
+    "definition": "<copy verbatim from input>",
+    "conceptId": "<copy verbatim from input>",
+    "start": "<copy verbatim from input>",
+    "end": "<copy verbatim from input>",
+  }},
+  "candidate_attributetype_canonicalattributevalue": [
+    {
+      "entity": "<entity text exactly as it appears>",
+      "start": "<copy verbatim from input>",
+      "end": "<copy verbatim from input>",
+      "qualifier_span": "<raw qualifier span, e.g. \"severe\">",
+      "qualifier": "<full English sentence, e.g. \"The pneumonia is severe.\">",
+      "rationale": "<why the span qualifies the entity>"
+      "attribute_interpretations": [
+        {
+          "attribute_type": "",
+          "attribute_value": "",
+          "attribute_definition": "",
+          "canonical_attribute_value": "",
+          "canonical_attribute_value_conceptID": "",
+          "CANONICAL_ATTRIBUTE_VALUE_IDENTICAL_TO_EXTRACTED_ATTRIBUTE_VALUE": "YES | NO",
+          "COMPOSED_QUALIFIER": <Compose a qualifier (a complete declarative sentence) that uses <attribute_type> and <canonical_attribute_value> to qualify entity's <surface string>.>,
+          "COMPOSED_QUALIFIER_IDENTICAL_TO_ORIGINAL_QUALIFIER": "YES | NO", 
+          "COMPOSED_QUALIFIER_NOT_CONTRADICT_PATEINT_FACT": "YES | NO", 
+          "ALL_GOOD": "YES | NO",
+        },
+        //...
+      ],
+      "best_attribute_type_canonical_attribute_value": [
+        {
+          "entity": "<entity text exactly as it appears>",
+          "start": "<copy verbatim from input>",
+          "end": "<copy verbatim from input>",
+          "qualifier_span": "<raw qualifier span, e.g. \"severe\">",
+          "qualifier": "<full English sentence, e.g. \"The pneumonia is severe.\">",
+          "rationale": "<why the span qualifies the entity>"
+          "attribute_type": "",
+          "attribute_value": "",
+          "attribute_definition": "",
+          "canonical_attribute_value": "",
+          "canonical_attribute_value_conceptID": "",
+          "reason": "<why to choose this as the best result>"
+        },
+      ]
+    }
+  ]
+}
+
+
+
+
+

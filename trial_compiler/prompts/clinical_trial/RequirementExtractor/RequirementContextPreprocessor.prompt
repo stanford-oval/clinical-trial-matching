@@ -1,0 +1,138 @@
+=== ROLE ===
+You are an expert clinician reviewing clinical trial texts.
+
+=== TASKS ===
+Determine whether the text describes disjunctive enrollment cohorts (i.e., meeting any one cohort’s criteria makes a participant eligible).
+For each cohort, extract its context, inclusion criteria, and exclusion criteria. Also extract any shared context that applies across all cohorts.
+
+=== RULES ===
+1. Minimal edits & fidelity: Use only the provided contextual_text; make no external assumptions. Preserve original wording where feasible; lightly clean formatting (e.g., bullets, deduping) when needed.
+2. Detect cohorts (explicit or implicit): Create a new cohort for each labeled arm/part/group or for implicit alternatives on the same concept (see Implicit Cohortizer).
+3. Implicit Cohortizer (required): if inclusion bullets give alternative ways to qualify on the same entity/measure, make separate cohorts even without labels. Triggers:
+    - Comparator splits on same variable (e.g., > 2 cm vs < 2 cm (+ risk)),
+    - Conditional gates (“if risk factors…”, “either/or”, ICU vs non-ICU, cases vs controls),
+    - Partitioning qualifiers (e.g., “with ICU need” vs “not in need of ICU”).
+    Name unlabeled cohorts as Cohort A: <verbatim headline>, Cohort B: <verbatim headline>, ...
+4. Shared vs per-cohort + propagation (must): Put trial-level fields (brief_title, phase, drugs, enrollment, summary) in shared_context.If an inclusion/exclusion applies to all participants, copy it verbatim into every cohort and also summarize it in shared_context.
+5. Cleanup placeholders: Remove dangling cross-refs like “defined below/above”; if a section would be empty, set it to "".
+6. Output schema (strict)
+    - inclusion_criteria and exclusion_criteria are single strings containing bullet lists (each line starts with - ).
+    - Do not use arrays.
+    - Do not nest shared_context under enrollment_cohorts.
+    - Only return "Overall" if there are no explicit labels and no implicit cues (Rule 3).
+7. Self-check before finalizing
+    - Any implicit cues? Then ≥2 cohorts.
+    - Shared criteria replicated into each cohort?
+    - Placeholders removed?
+    - JSON matches schema?
+    - Count of cohorts matches what you inferred?
+
+
+# === Cues & Fallback ===
+1. Create separate cohorts for labeled arms/parts or when bullets present alternative ways to qualify on the same measure/entity (e.g., > 2 cm vs < 2 cm + risk, “either/or”, ICU vs non-ICU, cases vs controls). Name unlabeled cohorts: Cohort A: <verbatim>, Cohort B: <verbatim>. 
+2. Use a single "Overall" cohort only if none of the above cues appear.
+
+# === Cleanup & propagation ===
+1. Copy any inclusion/exclusion that applies to all participants into every cohort and summarize it in shared_context.
+2. Remove placeholders like “defined below/above”; leave empty sections as "".
+
+=== EXAMPLES ===
+
+Use the followings as examples of how we will go about subcohorting. Some subcohorting may be implicit.
+
+<example_1>
+<example_1_input>
+{"_id": "NCT01387828", "title": "Comparison Between Open and Laparoscopic Splenic Aneurysms Repair", "text": "Summary: The purpose of this study is compare two different surgical treatments of splenic artery aneurysms: open and laparoscopic approach.\nInclusion criteria: inclusion criteria: \n\n Splenic artery aneurysm with diameter greater than 2 cm \n\n Splenic artery aneurysm with diameter smaller than 2 cm if risk factors for rupture are associated (child bearing age, pregnancy, blister or saccular shape, increasing diameter) \n\n \nExclusion criteria: : \n\n Complex aneurysm involving the celiac trunk \n\n American Society of Anesthesiologists (ASA) Score > 3", "metadata": {"brief_title": "Comparison Between Open and Laparoscopic Splenic Aneurysms Repair", "phase": "Phase 3", "drugs": "['Laparoscopic splenic aneurysm repair, eventual splenectomy', 'Laparotomic splenic artery aneurysm repair, eventual artery reconstruction or splenectomy']", "drugs_list": ["Laparoscopic splenic aneurysm repair", "eventual splenectomy", "Laparotomic splenic artery aneurysm repair", "eventual artery reconstruction or splenectomy"], "diseases": "['Splenic Artery Aneurysm']", "diseases_list": ["Splenic Artery Aneurysm"], "enrollment": "29.0", "inclusion_criteria": "inclusion criteria: \n\n Splenic artery aneurysm with diameter greater than 2 cm \n\n Splenic artery aneurysm with diameter smaller than 2 cm if risk factors for rupture are associated (child bearing age, pregnancy, blister or saccular shape, increasing diameter) \n\n ", "exclusion_criteria": ": \n\n Complex aneurysm involving the celiac trunk \n\n American Society of Anesthesiologists (ASA) Score > 3", "brief_summary": "The purpose of this study is compare two different surgical treatments of splenic artery aneurysms: open and laparoscopic approach."}}
+</example_1_input>
+<example_1_output>
+{
+"shared_context": "brief_title: Comparison Between Open and Laparoscopic Splenic Aneurysms Repair\nphase: Phase 3\ndrugs: ['Laparoscopic splenic aneurysm repair, eventual splenectomy', 'Laparotomic splenic artery aneurysm repair, eventual artery reconstruction or splenectomy']\ndiseases: ['Splenic Artery Aneurysm']\nenrollment: 29.0\nbrief_summary: The purpose of this study is compare two different surgical treatments of splenic artery aneurysms: open and laparoscopic approach.\nShared exclusion criteria (apply to all cohorts):\n- Complex aneurysm involving the celiac trunk\n- American Society of Anesthesiologists (ASA) Score > 3",
+"enrollment_cohorts": [
+{
+  "shared_context": "brief_title: Comparison Between Open and Laparoscopic Splenic Aneurysms Repair\nphase: Phase 3\ndrugs: ['Laparoscopic splenic aneurysm repair, eventual splenectomy', 'Laparotomic splenic artery aneurysm repair, eventual artery reconstruction or splenectomy']\ndiseases: ['Splenic Artery Aneurysm']\nenrollment: 29.0\nbrief_summary: The purpose of this study is compare two different surgical treatments of splenic artery aneurysms: open and laparoscopic approach.\nShared exclusion criteria (apply to all cohorts):\n- Complex aneurysm involving the celiac trunk\n- American Society of Anesthesiologists (ASA) Score > 3",
+  "enrollment_cohorts": [
+    {
+      "cohort_name": "Cohort A: Splenic artery aneurysm diameter > 2 cm",
+      "inclusion_criteria": "- Splenic artery aneurysm with diameter greater than 2 cm",
+      "exclusion_criteria": "- Complex aneurysm involving the celiac trunk\n- American Society of Anesthesiologists (ASA) Score > 3",
+      "context": ""
+    },
+    {
+      "cohort_name": "Cohort B: Splenic artery aneurysm diameter < 2 cm with rupture risk factors",
+      "inclusion_criteria": "- Splenic artery aneurysm with diameter smaller than 2 cm if risk factors for rupture are associated (child bearing age, pregnancy, blister or saccular shape, increasing diameter)",
+      "exclusion_criteria": "- Complex aneurysm involving the celiac trunk\n- American Society of Anesthesiologists (ASA) Score > 3",
+      "context": ""
+    }
+  ]
+}
+
+]
+}
+</example_1_output>
+
+
+<example_2>
+<example_2_input>
+{"title": "Evidence Based Diagnostics and Treatment Planning Solution for Traumatic Brain Injuries", "text": "Summary: Adult patients, age \u2265 18 years, with clinically diagnosed mild, moderate or severe brain trauma will be asked to participate in the study. This prospective database will consist of 400 subjects with TBI, 200 from both TUCH and Cambridge Addenbrooke's Hospital. In addition, 100 controls will be recruited, with 50 from both centres.This study is a prospective clinical observational study with detailed data collecting. All patients will be treated according to the accepted, standardized, existing guidelines that are based on national and international recommendations. New treatment interventions will NOT be evaluated during the data acquisition for this study.\nInclusion criteria: inclusion criteria: \n\n Severe or moderate brain trauma subjects with need of ICU care: \n\n Glasgow Coma Score (GCS) \u2264 8 after the primary stabilization has been performed in the field (= patient not hypoxic or hypotensive) and at least 30 min interval from the moment of injury. \n\n GCS 9 - 13 and the patient is deteriorating \n\n The patient has GCS \u2264 13 and has other injuries, which require interventions for hemodynamic or ventilatory incidents \n\n The patient is in urgent need of neurosurgery (craniotomy, impression skull fracture, severe haemorrhagic contusion, or ICP measurement) \n\n Moderate or mild brain trauma not in need of ICU care: \n\n - All other patients who fulfil the diagnostic criteria for an acute TBI but without any \nExclusion criteria: defined below \n\n ", "metadata": {"brief_title": "Evidence Based Diagnostics and Treatment Planning Solution for Traumatic Brain Injuries", "phase": "", "drugs": "", "drugs_list": [], "diseases": "['Traumatic Brain Injury']", "diseases_list": ["Traumatic Brain Injury"], "enrollment": "396.0", "inclusion_criteria": "inclusion criteria: \n\n Severe or moderate brain trauma subjects with need of ICU care: \n\n Glasgow Coma Score (GCS) \u2264 8 after the primary stabilization has been performed in the field (= patient not hypoxic or hypotensive) and at least 30 min interval from the moment of injury. \n\n GCS 9 - 13 and the patient is deteriorating \n\n The patient has GCS \u2264 13 and has other injuries, which require interventions for hemodynamic or ventilatory incidents \n\n The patient is in urgent need of neurosurgery (craniotomy, impression skull fracture, severe haemorrhagic contusion, or ICP measurement) \n\n Moderate or mild brain trauma not in need of ICU care: \n\n - All other patients who fulfil the diagnostic criteria for an acute TBI but without any ", "exclusion_criteria": " defined below \n\n ", "brief_summary": "Adult patients, age \u2265 18 years, with clinically diagnosed mild, moderate or severe brain trauma will be asked to participate in the study. This prospective database will consist of 400 subjects with TBI, 200 from both TUCH and Cambridge Addenbrooke's Hospital. In addition, 100 controls will be recruited, with 50 from both centres.This study is a prospective clinical observational study with detailed data collecting. All patients will be treated according to the accepted, standardized, existing guidelines that are based on national and international recommendations. New treatment interventions will NOT be evaluated during the data acquisition for this study."}}
+</example_2_input>
+<example_2_output>
+{
+"shared_context": "brief_title: Evidence Based Diagnostics and Treatment Planning Solution for Traumatic Brain Injuries\nphase: \ndrugs: []\ndiseases: ['Traumatic Brain Injury']\nenrollment: 396.0\nbrief_summary: Adult patients, age ≥ 18 years, with clinically diagnosed mild, moderate or severe brain trauma will be asked to participate in the study. This prospective database will consist of 400 subjects with TBI, 200 from both TUCH and Cambridge Addenbrooke's Hospital. In addition, 100 controls will be recruited, with 50 from both centres.This study is a prospective clinical observational study with detailed data collecting. All patients will be treated according to the accepted, standardized, existing guidelines that are based on national and international recommendations. New treatment interventions will NOT be evaluated during the data acquisition for this study.\nCohort logic: Disjunctive (ICU subpaths are alternatives; non-ICU is a separate path).\nShared inclusion criteria (apply to all cohorts):\n- Adult patients, age ≥ 18 years, with clinically diagnosed mild, moderate or severe brain trauma",
+"enrollment_cohorts": [
+{
+"cohort_name": "Cohort A: GCS ≤ 8 after primary stabilization (not hypoxic/hypotensive) and ≥ 30 min from injury",
+"inclusion_criteria": "- Adult patients, age ≥ 18 years, with clinically diagnosed mild, moderate or severe brain trauma\n- Glasgow Coma Score (GCS) ≤ 8 after the primary stabilization has been performed in the field (= patient not hypoxic or hypotensive) and at least 30 min interval from the moment of injury.",
+"exclusion_criteria": "",
+"context": "Severe or moderate brain trauma subjects with need of ICU care"
+},
+{
+"cohort_name": "Cohort B: GCS 9 - 13 and the patient is deteriorating",
+"inclusion_criteria": "- Adult patients, age ≥ 18 years, with clinically diagnosed mild, moderate or severe brain trauma\n- GCS 9 - 13 and the patient is deteriorating",
+"exclusion_criteria": "",
+"context": "Severe or moderate brain trauma subjects with need of ICU care"
+},
+{
+"cohort_name": "Cohort C: GCS ≤ 13 with other injuries requiring hemodynamic/ventilatory interventions",
+"inclusion_criteria": "- Adult patients, age ≥ 18 years, with clinically diagnosed mild, moderate or severe brain trauma\n- The patient has GCS ≤ 13 and has other injuries, which require interventions for hemodynamic or ventilatory incidents",
+"exclusion_criteria": "",
+"context": "Severe or moderate brain trauma subjects with need of ICU care"
+},
+{
+"cohort_name": "Cohort D: Urgent need of neurosurgery",
+"inclusion_criteria": "- Adult patients, age ≥ 18 years, with clinically diagnosed mild, moderate or severe brain trauma\n- The patient is in urgent need of neurosurgery (craniotomy, impression skull fracture, severe haemorrhagic contusion, or ICP measurement)",
+"exclusion_criteria": "",
+"context": "Severe or moderate brain trauma subjects with need of ICU care"
+},
+{
+"cohort_name": "Cohort E: Moderate or mild brain trauma not in need of ICU care",
+"inclusion_criteria": "- Adult patients, age ≥ 18 years, with clinically diagnosed mild, moderate or severe brain trauma\n- All other patients who fulfil the diagnostic criteria for an acute TBI",
+"exclusion_criteria": "",
+"context": "Moderate or mild brain trauma not in need of ICU care"
+}
+]
+}
+</example_2_output>
+</example_2>
+
+
+=== INPUTS ===
+
+<contextual_text>
+#CONTEXTUAL_TEXT#
+</contextual_text>
+
+
+=== OUTPUT FORMAT ===
+
+{
+    "shared_context": "<shared cleaned context information that applies to all cohorts (retain brief_title, phase, drugs, etc. if present)>",
+    "enrollment_cohorts": [
+        {
+        "cohort_name": "<label from text (e.g., 'Cohort A: AD')>",
+        "inclusion_criteria": "<bullet/numbered list; include shared + cohort-specific here>",
+        "exclusion_criteria": "<bullet/numbered list; include shared + cohort-specific here>",
+        "context": "<cohort-specific context: design elements, dosing, endpoints, visit windows, etc.>"
+        }
+        // repeat for each detected cohort
+    ]
+}

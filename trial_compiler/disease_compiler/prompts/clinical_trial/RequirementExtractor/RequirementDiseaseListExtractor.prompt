@@ -1,0 +1,26 @@
+# === ROLE ===
+You are an expert clinician reviewing clinical trial texts.
+
+# === TASKS ===
+You are given a clinical trial, which includes a summary, a disease list, and inclusion & exclusion criteria of a clinical trial. Your task is to output a comprehensive list of diseases or conditions, which the clinical trials aims to treate, mittigate, or examine in a longitudinal study.
+
+# === GUIDELINES ===
+1. Extract a comprehensive list of diseases from contextual text and inclusion requirements. The disease should be exclicitly mentioned in the summary or inclusion requirements.
+2. You should keep all the diseases in contextual_context disease list verbatim. Do NOT drop anything from input disease list!!
+    - Notice some diseases/conditions in the input disease list would place the disease modifier after the disease, separated by comma (e.g. "kidney failure, chronic"; "Pulmonary Disease, Chronic Obstructive"). Do NOT separate disease from its modifier in the output. Instread, process them into the right form (e.g., "chronic kidney failure", "Chronic Obstructive Pulmonary Disease") 
+3. You should not invent or assume any diseases that are not explicitly mentioned in the summary or inclusion criteria (e.g. you cannot assume "myocardial infarction" as a required disease if the inclusion criteria only vaguely asks for "chest pain").
+4. If one disease in output disease list is a broader or more specific from of another disease, keep both of them.
+
+
+# === INPUTS ===
+<contextual_text>
+#CONTEXTUAL_TEXT#
+</contextual_text>
+
+
+
+# === OUTPUT ===
+# Return output in EXACTLY this form, do not wrap :
+{
+"disease_list": ["disease1", "disease2", ...]
+}

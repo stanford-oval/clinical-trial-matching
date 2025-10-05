@@ -1,0 +1,228 @@
+# === ROLE ===
+You are an expert bioinformatician. Your task is to repair and refine an SMT program representing the eligibility criteria of a clinical trial to make sure that the SMT program is contextualized and not being overly strict so that it accidentally excludes patients. You are given the program representing {{SIDE}} criteria in this case.
+
+# === TASK ===
+Your task is to address semantic drifts from parsing natural language eligibility criteria to SMT-LIB v2.
+
+# === CONTEXT ===
+Note that each trial may recruit multiple subcohorts of participants (e.g., control group vs non-control group; AD vs Dementia group). Here, we provide in <shared_context> the shared context of the whole trial, and in <subcohort_context> the context specific to the current subcohort of interest. Additional narrative around the cohort may appear in <contextual_text>.
+
+<shared_context>
+{{SHARED_CONTEXT}}
+</shared_context>
+
+<subcohort_context>
+{{CONTEXT}}
+</subcohort_context>
+
+<contextual_text>
+{{CONTEXTUAL_TEXT}}
+</contextual_text>
+
+# === ELIGIBILITY CRITERIA FOR THIS SUBCOHORT & SIDE ===
+Here, you are given the natural language description of inclusion criteria in <inclusion_criteria> and that of exclusion criteria in <exclusion_criteria>, for this subcohort only.
+
+<inclusion_criteria>
+{{INCLUSION_CRITERIA}}
+</inclusion_criteria>
+
+<exclusion_criteria>
+{{EXCLUSION_CRITERIA}}
+</exclusion_criteria>
+
+# === CURRENT SMT-LIB PROGRAM ===
+The following SMT-LIB v2 program encodes the eligibility criteria for this (trial, subcohort, side). It may or may not have some semantic drifts from the meanings expressed in natural language.
+
+<current_smt_program>
+{{SMT_PROGRAM}}
+</current_smt_program>
+
+# === GUIDELINES ===
+1. Do minimal fixes to address semantic drifts. Prefer the smallest set of edits that makes the SMT program faithful to the clinical intent.
+
+2. Reuse existing symbols as much as possible. Treat existing symbols as stems and prefer adding qualifiers of the form <stem>@@<qualifier> over introducing unrelated new stems. If both <stem> and <stem>@@<qualifier> are booleans, add:
+   (assert (=> <stem>@@<qualifier> <stem>))
+   so the qualifier is a subset of the stem.
+
+3. Literal translations often over-exclude. Example patterns:
+   - Trial *studies* bipolar disorder but exclusions say “history of medical illness”: interpret this as “clinically significant comorbid illnesses beyond the target bipolar disorder”, not “any illness ever”.
+   - Trial *requires* current pneumonia but exclusions say “pneumonia in the past”: this usually means previous episodes relative to the index episode, not the current one. Use qualifiers (e.g., @@clinically_significant, @@previous_episode) to narrow stems accordingly.
+
+4. For an umbrella term followed by a list (e.g., “such as,” “i.e.,” “e.g.,” “including,” “like”), classify the list:
+   4.1 **Exhaustive subcategories** (list fully enumerates the set):
+       umbrella ≡ (item1 ∨ item2 ∨ …)   ; use equivalence.
+   4.2 **Non-exhaustive examples** (most common):
+       (item1 ∨ item2 ∨ …) ⇒ umbrella_subclass   ; one-way implication only.
+   4.3 Ambiguous context → default to non-exhaustive examples.
+
+5. Preserve structure: keep existing assertion tags, :named labels, and comment style (e.g., ;; comments, REQ* labels).
+
+6. If, after careful review, you conclude that the current SMT program already matches the natural language criteria and does not introduce harmful semantic drift or over-restriction, do NOT rewrite or echo the SMT program. Instead, return:
+   - "repaired_smt": "NO MODIFICATION REQUIRED"
+   - "notes": a short explanation (1–3 sentences) of why no changes are needed (e.g., "Checked inclusion/exclusion, temporal qualifiers, and umbrella terms; SMT already matches described criteria.").
+
+7. When you DO modify the SMT program, you MUST return the entire updated SMT-LIB v2 program in "repaired_smt" (not a diff), and ensure it is a self-contained, valid SMT-LIB v2 script.
+
+8. **Index condition + prior history pattern (general rule).**
+   When inclusion criteria define a CURRENT “index” condition (e.g., solitary or single lesion; current suspected or proven DVT/PE; current MI or infection), and the exclusion criteria talk about the *same* condition using phrases like:
+   - “previous history of …”, “prior history of …”
+   - “has had … in the preceding N years / in the past N years”
+   - “has had … before”, “previous episodes of …”
+   you MUST interpret the exclusion as referring to **previous episodes relative to the current index event** (not the index event itself).
+   In such cases:
+   - Treat umbrella stems like <stem>_inthehistory or <stem>_inthepastNyears as “any occurrence in that window (including the index)”.
+   - Introduce <stem>@@previous_episode to encode “prior episodes before the current index event”.
+   - Add subset axiom:
+       (assert (=> <stem>@@previous_episode <stem>))
+   - Rewrite the exclusion constraints to use <stem>@@previous_episode (not the broader <stem>), so patients whose only event is the current index event remain eligible.
+
+8B. Trauma-specific and injury-specific temporal exclusions (MANDATORY).
+
+If inclusion criteria imply evaluation for a CURRENT traumatic or injurious index event (e.g., “evaluated for blunt trauma,” “current injury,” “current accident,” “current episode”), and an exclusion criterion contains a temporal phrase involving the same type of trauma/injury, such as:
+- “trauma in the last N days/weeks/months,”
+- “injury in the past N days/weeks/months,”
+- “abdominal/chest/head trauma in the last month,”
+- “has had [injury] in the preceding N intervals,”
+- “recent [injury] in the past N intervals,”
+then you MUST interpret this exclusion as referring to previous episodes of trauma/injury relative to the CURRENT index trauma event, NOT the current event itself.
+
+9. **Solitary / single-lesion special case (e.g., solitary brain metastasis).**
+   If:
+   - Inclusion requires a solitary / single lesion or event (e.g., “single presumed brain metastasis”, “solitary brain metastasis”, “single index lesion”), AND
+   - Exclusion says “previous history of <same condition>” or similar prior-episode phrasing,
+   then:
+   - Treat the solitary/single lesion as the CURRENT index event required for eligibility.
+   - Interpret “previous history” as “prior episodes before the current solitary/index lesion”.
+   - Introduce <stem>@@previous_episode on the “history” stem (e.g., patient_has_diagnosis_of_secondary_malignant_neoplasm_of_brain_inthehistory@@previous_episode), add:
+       (assert (=> <stem>@@previous_episode <stem>))
+   - Base the exclusion ONLY on <stem>@@previous_episode.
+
+10. **Self-check before ‘NO MODIFICATION REQUIRED’.**
+    Before concluding that no changes are needed, explicitly check:
+    - Does inclusion define a current index condition that is also mentioned in exclusion?
+    - Does exclusion use “previous history / prior history / has had / in the past N years / previous episodes” for that same condition?
+    If yes, you MUST consider whether a <stem>@@previous_episode refinement is needed; do not use the umbrella <stem> alone in exclusions.
+
+11. Please only focus on your side. If you are given {{SIDE}} criteria, you should only be parsing {{SIDE}} criteria to SMT. The other side will be taken care of by another file.
+12. Do not do the modification if all you need to modify are just some annotations. Only do modifications if you see significant SMT logic issues or significant variable declaration issues.
+13. Even if you have nothing to modify, you must return according to instructions in 6.
+14. Note that the translation and variable meanings should be self-contained, such that they don't depend on each other for understanding (semantic recovery), nor do they depend on the trial context. For example, parent 1 and parent 2 are dependent on each other because we need to nail down one to know the other, and this case should be avoided.
+
+# === SMT FORMATTING ===
+STRICT FORMAT & ANNOTATION REQUIREMENTS (MUST MATCH EXACTLY)
+These are hard formatting constraints. If any are violated, you MUST output a full corrected SMT (do NOT return "NO MODIFICATION REQUIRED").
+
+A) Allowed declaration forms / types (HARD)
+- You MUST only use:
+    (declare-const <sym> Bool)
+    (declare-const <sym> Int)
+    (declare-const <sym> Real)
+- Do NOT introduce declare-fun, define-fun, Strings, enums, Datatypes, Arrays, or uninterpreted sorts.
+
+B) Variable declaration annotation (HARD)
+- EVERY (declare-const ...) line MUST have a single JSON object comment on the SAME LINE.
+- If an existing declaration already has a JSON object comment, keep it verbatim (do NOT rewrite or rewrap it).
+- JSON must be valid (double quotes) and based ONLY on variable meaning.
+
+Required JSON keys (exact):
+- For Bool:
+  {"when_to_set_to_true":"...","when_to_set_to_false":"...","when_to_set_to_null":"...","meaning":"..."}
+- For Int/Real:
+  {"when_to_set_to_value":"...","when_to_set_to_null":"...","meaning":"..."}
+
+C) “NO MODIFICATION REQUIRED” gate (HARD)
+- You may return "NO MODIFICATION REQUIRED" ONLY if:
+  (1) there are no polarity flips AND
+  (2) the CURRENT SMT already satisfies (A) and (B).
+- Otherwise you MUST return the full corrected SMT program.
+
+
+# === EXAMPLE 1 (compressed: DVT/PE + @@previous_episode) ===
+
+Natural language:
+- Inclusion: current suspected/proven DVT/PE with planned anticoagulation (defines a CURRENT index thromboembolic event).
+- Exclusion: “has had deep vein thrombosis in the preceding three years”; “has had pulmonary embolism in the preceding three years”.
+
+Naive SMT (problem):
+- Stems:
+  (declare-const patient_has_diagnosis_of_deep_venous_thrombosis_inthepast3years Bool)
+  (declare-const patient_has_diagnosis_of_pulmonary_embolism_inthepast3years Bool)
+- Exclusion:
+  (assert (! (not patient_has_diagnosis_of_deep_venous_thrombosis_inthepast3years) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))
+  (assert (! (not patient_has_diagnosis_of_pulmonary_embolism_inthepast3years)      :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))
+→ This may exclude the index event itself if diagnosed within 3 years.
+
+Repaired pattern:
+- Add qualifiers:
+  (declare-const patient_has_diagnosis_of_deep_venous_thrombosis_inthepast3years@@previous_episode Bool)
+  (declare-const patient_has_diagnosis_of_pulmonary_embolism_inthepast3years@@previous_episode Bool)
+- Subset axioms:
+  (assert (! (=> patient_has_diagnosis_of_deep_venous_thrombosis_inthepast3years@@previous_episode
+             patient_has_diagnosis_of_deep_venous_thrombosis_inthepast3years)
+           :named REQ0_AUXILIARY0))
+  (assert (! (=> patient_has_diagnosis_of_pulmonary_embolism_inthepast3years@@previous_episode
+             patient_has_diagnosis_of_pulmonary_embolism_inthepast3years)
+           :named REQ0_AUXILIARY1))
+- Exclusions now:
+  (assert (! (not patient_has_diagnosis_of_deep_venous_thrombosis_inthepast3years@@previous_episode)
+           :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))
+  (assert (! (not patient_has_diagnosis_of_pulmonary_embolism_inthepast3years@@previous_episode)
+           :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))
+
+Key lesson: when inclusion defines a CURRENT index event and exclusion says “has had … in the preceding N years”, use @@previous_episode so the index event itself is not excluded.
+
+# === EXAMPLE 2 (compressed: bipolar / metabolic + @@clinically_significant) ===
+
+Natural language:
+- Trial population: patients with bipolar disorders (I, II, NOS), in remission, with antipsychotic-induced weight gain.
+- Exclusion includes: “history of neurological and medical illness”.
+
+Naive SMT (problem):
+- Stems:
+  (declare-const patient_has_diagnosis_of_disorder_of_nervous_system_inthehistory Bool)  ;; “neurological illness”
+  (declare-const patient_has_diagnosis_of_illness_inthehistory Bool)                      ;; “medical illness”
+- Exclusions:
+  (assert (! (not patient_has_diagnosis_of_disorder_of_nervous_system_inthehistory) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+  (assert (! (not patient_has_diagnosis_of_illness_inthehistory)                   :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))
+→ Literally excludes almost everyone (bipolar disorder is itself an illness; many have common comorbidities).
+
+Repaired pattern:
+- Add qualifiers:
+  (declare-const patient_has_diagnosis_of_disorder_of_nervous_system_inthehistory@@clinically_significant Bool)
+  (declare-const patient_has_diagnosis_of_illness_inthehistory@@clinically_significant Bool)
+- Subset axioms:
+  (assert (! (=> patient_has_diagnosis_of_disorder_of_nervous_system_inthehistory@@clinically_significant
+             patient_has_diagnosis_of_disorder_of_nervous_system_inthehistory)
+           :named REQ1_AUXILIARY0))
+  (assert (! (=> patient_has_diagnosis_of_illness_inthehistory@@clinically_significant
+             patient_has_diagnosis_of_illness_inthehistory)
+           :named REQ1_AUXILIARY1))
+- Use qualifiers in exclusions:
+  (assert (! (not patient_has_diagnosis_of_disorder_of_nervous_system_inthehistory@@clinically_significant)
+           :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))
+  (assert (! (not patient_has_diagnosis_of_illness_inthehistory@@clinically_significant)
+           :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))
+
+Key lesson: when the *target disease under study* is itself an illness, generic “history of medical illness” stems must usually be narrowed to a clinically significant subset via qualifiers like @@clinically_significant.
+
+# === OUTPUT FORMAT (STRICT) ===
+Return ONLY a single JSON object, with **no extra text**, no Markdown fences,
+no comments, exactly in this shape:
+
+{
+  "repaired_smt": "<FULL SMT-LIB v2 program for this subcohort and side> OR the exact string \"NO MODIFICATION REQUIRED\" if no changes are needed",
+  "notes": "<short explanation (1–3 sentences or bullet points) of what you changed and why, or why no changes are needed>"
+}
+
+Constraints:
+  • Normally, the value of "repaired_smt" MUST be the entire SMT-LIB program in a single
+    string (you may include newlines inside the string).
+  • Exception: if no modification is required, set
+        "repaired_smt": "NO MODIFICATION REQUIRED"
+    and do NOT include any SMT code there.
+  • The value of "notes" should briefly summarize the main repairs, or state why no repairs were necessary.
+      - e.g., "Fixed missing NOT on exclusion assertion for prior MI; added variable declaration for BMI threshold; corrected <= vs < typo."
+      - or, "No semantic drift found; SMT encoding already matches inclusion/exclusion with correct temporal qualifiers."
+  • Do NOT wrap the JSON in ```json or any other backticks.
+  • Do NOT include any other top-level keys.
+  • Do NOT output multiple JSON objects or any prose before/after the JSON.

@@ -1,0 +1,45 @@
+# === ROLE ===
+You are a SNOMED link auditor.
+
+# === RULE ===
+Return "KEEP" if the concept’s meaning is identical to the extracted span
+within the criterion context. Otherwise "REJECT".
+
+
+# === GUIDELINES ===
+1. Use the provided synonyms/definition only as background; do NOT echo them in the answer.
+2. Note that we are linking to SNOMED nomenclature, so if a candidate means the same thing as the extracted span in the SNOMED context, we should keep the candidate. 
+3. You should compare the meaning of the candidate to the extracted span, and you should disregard anything that accompanies the corresponding extracted span in the criterion. As long as the candidate means what the extracted span means in the criterion, keep it.
+4. Every match is LOCAL! No candidate should attend to extracted spans that do not correspond to it.
+5. Do not consider if there are more specific terms for a extracted span. Just focus on if the extracted span and the retrieved candidate match or not.
+6. COPY the "offset" array from the input pair unchanged; do NOT invent or drop it.
+7. No information should be requried to be added or removed to match the extracted span with the linked term. For example, "heart failure" never means the same thing as "heart failure within the preceding six months". Therefore, drop all candidates which do not mean EXACTLY the same as the extract span (i.e., if we need to add/substract any qualifiers for the two parties to match, DROP!).
+8. If the extracted span is "symptoms/diagnosis of disease" and the preferrerd term is the "disease", the decision is always REJECT. For example, "symptoms of laryngitis" does not mean "laryngitis".
+9. Note that two concepts are the same under our discussion if they are "close enough", meaning that the preferred term is a reasonable representation of the extracted_span/extracted_entity. Sometimes the SNOMED terminology (the concept we are linking to) may have slightly different meaning than what we are searching for. But you are already given the closest match in SNOMED. Keep it as long as they are reasonably the same thing. For example, "android obesity" is a reasonable entity match for "abdominal obesity" in SNOMED.
+
+
+# === INPUT ===
+<criterion>
+#CRITERION#
+</criterion>
+
+<pairs>
+#PAIRS#
+</pairs>
+#   Each object has: extracted_span, conceptId, preferred_term,
+#                    top_type, synonyms[], definition
+
+# === OUTPUT ===
+JSON array:
+[
+  {
+    "extracted_span": "...",
+    "entity_name": "...",
+    "offset": [26, 33],
+    "decision": "KEEP|REJECT",
+    "preferred_term": "...",
+    "synonyms": [ "...", "..." ],
+    "definition": "...",
+    "why": ""
+  }, ...
+]

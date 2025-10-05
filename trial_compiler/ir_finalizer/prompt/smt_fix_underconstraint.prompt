@@ -1,0 +1,176 @@
+# === ROLE ===
+You are an expert clinician + bioinformatician + formal-methods debugger.
+
+# === PRIMARY GOAL ===
+Fix UNDERCONSTRAINTS in an SMT-LIB v2 eligibility program: cases where the SMT is TOO LAX and incorrectly marks patients eligible (false positives),
+because it (a) omitted requirements present in natural language, (b) weakened them, (c) used stems that are too narrow / undercontextualized, or
+(d) failed to model “strong clinical support” exclusions that a prescreen clinician would apply.
+
+You are given the program representing {{SIDE}} criteria in this case.
+
+# === SECONDARY GOAL ===
+Do not introduce restrictions that are NOT supported by the natural-language criteria for THIS SIDE.
+We want faithfulness to NL, not extra rules.
+
+# === CONTEXT ===
+Note that each trial may recruit multiple subcohorts of participants (e.g., control group vs non-control group; AD vs Dementia group).
+We provide <shared_context> for the whole trial and <subcohort_context> for the current subcohort. Additional narrative may appear in <contextual_text>.
+
+<shared_context>
+{{SHARED_CONTEXT}}
+</shared_context>
+
+<subcohort_context>
+{{CONTEXT}}
+</subcohort_context>
+
+<contextual_text>
+{{CONTEXTUAL_TEXT}}
+</contextual_text>
+
+# === ELIGIBILITY CRITERIA FOR THIS SUBCOHORT & SIDE ===
+Here, you are given the natural language description of inclusion criteria in <inclusion_criteria> and that of exclusion criteria in <exclusion_criteria>,
+for this subcohort only. You MUST focus ONLY on {{SIDE}} criteria. The other side will be handled elsewhere.
+
+<inclusion_criteria>
+{{INCLUSION_CRITERIA}}
+</inclusion_criteria>
+
+<exclusion_criteria>
+{{EXCLUSION_CRITERIA}}
+</exclusion_criteria>
+
+# === CURRENT SMT-LIB PROGRAM ===
+The following SMT-LIB v2 program encodes the eligibility criteria for this (trial, subcohort, side). It may be underconstrained relative to NL.
+
+<current_smt_program>
+{{SMT_PROGRAM}}
+</current_smt_program>
+
+# === UNDERCONSTRAINT AUDIT (MANDATORY) ===
+Before editing, you MUST audit for these underconstraint failure modes and fix any that apply:
+
+(U1) Missing gates:
+- A requirement exists in the NL for THIS SIDE but is missing in SMT (no variable, no assertion, or assertion is vacuous).
+
+(U2) Weakened logic / wrong structure:
+- NL implies AND but SMT encoded OR or dropped conjuncts.
+- NL implies a threshold, comparator, or window but SMT omits it or flips comparator (<= vs <, etc).
+
+(U3) Too-narrow medical meaning vs NL umbrella:
+- NL uses broad umbrella terms (e.g., “other respiratory disease”, “clinical condition requiring hospitalization”),
+  but SMT encodes a narrower stem (e.g., “chronic respiratory disease”) that fails to cover intended acute or non-chronic conditions.
+- Fix by broadening to match NL (see U5 below), and ensure the actual constraints reference the broadened concept.
+
+(U4) Evidence strength at prescreen (allowed only when NL + prescreen practice support it):
+- For EXCLUSION: If NL excludes a condition and the patient note provides strong clinical support / clinician-documented suspicion at prescreen,
+  the SMT should be capable of triggering exclusion via a qualifier like @@suspected or @@strong_clinical_support,
+  unless NL explicitly requires confirmed diagnosis / a specific modality.
+- For INCLUSION: Do NOT “invent” missing inclusion facts; but do not require post-screen tests unless NL says so.
+
+(U5) Undercontextualized or mis-scoped variable meanings (KEY UNDERCONSTRAINT SOURCE):
+Sometimes SMT is underconstrained because the *variables themselves* are defined too narrowly or with the wrong scope/timeframe,
+so mining never sets them to true (or always leaves them null), and constraints don’t fire.
+
+You MUST audit variable meanings for undercontextualization in these ways:
+
+(U5.1) Scope too narrow vs NL:
+- NL umbrella (“other respiratory disease”, “new therapeutic intervention”, “symptoms suggesting acute bronchitis”)
+  is encoded as a narrower concept (“chronic respiratory disease”, “new COPD therapy only”, etc).
+- Fix by introducing an umbrella symbol and bridging it from narrower ones:
+    (assert (=> <narrow> <umbrella>))
+  and then use the umbrella symbol in the actual criterion.
+  Prefer adding symbols + bridge axioms over renaming symbols.
+
+(U5.2) Evidence channel mismatch:
+- NL allows clinician suspicion/strong support at prescreen, but the SMT variable meaning implies “diagnosed/confirmed”.
+- Fix by introducing a qualifier variant:
+    <stem>@@suspected   or   <stem>@@strong_clinical_support
+  and add subset axiom (qualifier ⇒ stem) if Bool.
+  Use the qualifier in constraints only if NL/prescreen policy supports suspicion-level triggering.
+
+(U5.3) Timeframe mismatch:
+- NL says “history free of …” / “in past 72 hours” / “current symptoms” but SMT uses the wrong window (“now” vs “inthehistory” vs “inthepastNdays”).
+- Fix by adding the correct-window symbol (reuse stem + @@window if possible) and rewrite constraints to reference the correct window.
+
+IMPORTANT:
+- Undercontextualization fixes are permitted only when they restore faithfulness to an NL phrase for THIS SIDE and plausibly explain a false positive.
+- You are fixing representation/coverage, not inventing new criteria.
+
+# === EDITING PRINCIPLES ===
+1) Minimal-but-sufficient tightening:
+   Make the smallest set of edits that eliminates the underconstraint and restores faithfulness to NL for THIS SIDE.
+   Underconstraint fixes often require ADDING constraints, not relaxing them.
+
+2) Reuse existing symbols as much as possible:
+   Treat existing symbols as stems and prefer adding qualifiers of the form <stem>@@<qualifier> over introducing unrelated new stems.
+   If both <stem> and <stem>@@<qualifier> are Bool, add:
+     (assert (=> <stem>@@<qualifier> <stem>))
+   so the qualifier is a subset of the stem.
+
+3) Umbrella + list handling (match NL intent):
+   For an umbrella term followed by a list (e.g., “such as,” “i.e.,” “e.g.,” “including,” “like”):
+   3.1 Exhaustive subcategories (rare): umbrella ≡ (item1 ∨ item2 ∨ …)
+   3.2 Non-exhaustive examples (default): (item1 ∨ item2 ∨ …) ⇒ umbrella
+   3.3 Ambiguous → default to non-exhaustive examples.
+
+4) Preserve structure:
+   Keep existing assertion tags, :named labels, and comment style (e.g., ;; comments, REQ* labels).
+   If you add new assertions, use REQ*_AUXILIARY* labels that do NOT collide with existing labels.
+
+5) Side isolation (HARD):
+   Only modify THIS SIDE’s SMT program. Do not assume the other side will compensate.
+
+6) Meaning edits allowed ONLY to fix underconstraints:
+   If a variable’s meaning is clearly undercontextualized relative to NL, you MAY introduce an umbrella stem and bridge it,
+   or introduce qualifiers (e.g., @@suspected). Prefer adding/bridging over renaming.
+
+7) If, after careful review, you conclude that the current SMT program already matches the NL for THIS SIDE (no missing/weakened gates,
+   no too-narrow meanings, no timeframe mismatches) and does not allow harmful false positives, do NOT rewrite or echo the SMT program.
+   Instead, return:
+     - "repaired_smt": "NO MODIFICATION REQUIRED"
+     - "notes": 1–3 sentences explaining why.
+
+
+# === SMT FORMATTING ===
+STRICT FORMAT & ANNOTATION REQUIREMENTS (MUST MATCH EXACTLY)
+These are hard formatting constraints. If any are violated, you MUST output a full corrected SMT (do NOT return "NO MODIFICATION REQUIRED").
+
+A) Allowed declaration forms / types (HARD)
+- You MUST only use:
+    (declare-const <sym> Bool)
+    (declare-const <sym> Int)
+    (declare-const <sym> Real)
+- Do NOT introduce declare-fun, define-fun, Strings, enums, Datatypes, Arrays, or uninterpreted sorts.
+
+B) Variable declaration annotation (HARD)
+- EVERY (declare-const ...) line MUST have a single JSON object comment on the SAME LINE.
+- If an existing declaration already has a JSON object comment, keep it verbatim (do NOT rewrite or rewrap it).
+- JSON must be valid (double quotes) and based ONLY on variable meaning.
+
+Required JSON keys (exact):
+- For Bool:
+  {"when_to_set_to_true":"...","when_to_set_to_false":"...","when_to_set_to_null":"...","meaning":"..."}
+- For Int/Real:
+  {"when_to_set_to_value":"...","when_to_set_to_null":"...","meaning":"..."}
+
+C) “NO MODIFICATION REQUIRED” gate (HARD)
+- You may return "NO MODIFICATION REQUIRED" ONLY if:
+  (1) the current SMT already satisfies (A) and (B), AND
+  (2) it encodes ALL NL requirements for THIS SIDE (no missing/weakened constraints), AND
+  (3) it is not too narrow vs NL umbrella terms (no undercontextualized meanings), AND
+  (4) there are no polarity flips needed.
+
+# === OUTPUT FORMAT (STRICT) ===
+Return ONLY a single JSON object, with **no extra text**, no Markdown fences,
+exactly in this shape:
+
+{
+  "repaired_smt": "<FULL SMT-LIB v2 program for this subcohort and side> OR the exact string \"NO MODIFICATION REQUIRED\" if no changes are needed",
+  "notes": "<1–5 bullet points (as a single string) describing what you changed and which NL phrase each change restores, or why no changes are needed>"
+}
+
+Constraints:
+  • Normally, the value of "repaired_smt" MUST be the entire SMT-LIB program in a single string (may include newlines).
+  • Exception: if no modification is required, set "repaired_smt": "NO MODIFICATION REQUIRED" and do NOT include any SMT code there.
+  • Do NOT output multiple JSON objects or any prose before/after the JSON.

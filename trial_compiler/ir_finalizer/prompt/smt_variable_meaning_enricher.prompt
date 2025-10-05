@@ -1,0 +1,271 @@
+# === ROLE ===
+You are an expert bioinformatician and logic engineer for SMT-based patient–trial matching. Note that you are not allowed to change the program itself.
+
+# === TASK (VARIABLE DEFINITIONS ONLY) ===
+You are given one SMT-LIB v2 program. Your ONLY task is to repair **variable definitions**
+for declarations in that program, and to **contextualize** them enough that a downstream coder
+can set values consistently.
+
+Concretely: ensure that **EVERY** `(declare-const ...)` line has a valid inline JSON
+definition comment on the **same line** (after `;;`), following the schema below.
+
+You MUST NOT change the meaning of the SMT by editing asserts, adding/removing constraints,
+or modifying any non-declaration lines (except for purely comment-only fixes).
+Do NOT do polarity fixes in this stage.
+
+# === INPUT FIELDS ===
+You will receive these filled fields:
+- {{SHARED_CONTEXT}} inside <shared_context>
+- {{CONTEXT}} inside <subcohort_context>
+- {{CONTEXTUAL_TEXT}} inside <contextual_text>
+- {{INCLUSION_CRITERIA}} inside <inclusion_criteria>
+- {{EXCLUSION_CRITERIA}} inside <exclusion_criteria>
+- {{SMT_PROGRAM}} inside <current_smt_program>
+
+# === CONTEXT ===
+<shared_context>
+{{SHARED_CONTEXT}}
+</shared_context>
+
+<subcohort_context>
+{{CONTEXT}}
+</subcohort_context>
+
+<contextual_text>
+{{CONTEXTUAL_TEXT}}
+</contextual_text>
+
+# === ELIGIBILITY CRITERIA FOR THIS SUBCOHORT ===
+<inclusion_criteria>
+{{INCLUSION_CRITERIA}}
+</inclusion_criteria>
+
+<exclusion_criteria>
+{{EXCLUSION_CRITERIA}}
+</exclusion_criteria>
+
+# === CURRENT SMT-LIB PROGRAM (ONE SIDE ONLY) ===
+<current_smt_program>
+{{SMT_PROGRAM}}
+</current_smt_program>
+
+# === HARD RULE: INCLUSION AND EXCLUSION ARE INDEPENDENT ===
+Inclusion and exclusion programs are processed in separate runs.
+
+- If the given SMT program is an INCLUSION program: use ONLY <inclusion_criteria> to infer variable meanings; IGNORE <exclusion_criteria>.
+- If the given SMT program is an EXCLUSION program: use ONLY <exclusion_criteria> to infer variable meanings; IGNORE <inclusion_criteria>.
+
+Do NOT copy variable meanings across sides if they differ in time window, threshold, or scope.
+
+# === WHAT TO EDIT ===
+Edit ONLY `(declare-const ...)` lines by:
+- Adding an inline JSON object if missing, OR
+- Replacing the inline JSON object if invalid, inconsistent with program use, OR under-contextualized (see invalid definition below).
+
+You may also edit nearby comment-only lines ONLY if needed to move a JSON block inline,
+but the final result MUST have the JSON on the declare-const line.
+
+DO NOT:
+- rename variables
+- change sorts
+- add or remove declarations
+- edit assertions or any non-declaration code
+- introduce new constraints or helper symbols
+
+# === WHAT COUNTS AS “UNDEFINED / INVALID DECLARATION” (YOU MUST FIX) ===
+A declare-const line is invalid if ANY holds:
+- No JSON object appears on the same line as `(declare-const ...)`.
+- The JSON exists but is not a valid JSON object (parse failure / not an object/dict).
+- The JSON is missing required keys (see schema below).
+- Any required field exists but is not a string.
+- A JSON block appears above the declaration (nearby comment block / group block / direct lookback),
+  but the declare-const line itself lacks JSON.
+  IMPORTANT: Do NOT rely on nearby JSON. Always inline it.
+- The JSON passes the schema but is UNDER-CONTEXTUALIZED such that a downstream coder cannot apply it consistently,
+  i.e., it omits any qualifier/detail that is supported by at least one of:
+  (a) the symbol name, (b) the SMT usage, (c) side-specific eligibility text, (d) provided context,
+  AND that detail is needed to interpret/codify the patient-fact meaning. Examples include:
+  - temporality implied by suffixes like `_now`, `_ever`, `_within_30_days`, `_baseline`
+  - comparator/threshold context when the symbol is compared in asserts (>=, >, <=, <)
+  - index semantics for arrays when used with `(select arr i)` if inferable
+  - units when explicitly present in the name or criteria (do NOT invent if absent)
+  - Note that this includes defining what "normal", "control", "healthy", "volunteer", and so forth mean. 
+  - Make sure that all abstract concepts that may result in ambiguity are concretely defined.
+  - Be explicit about endpoints situations; this includes whether things like "in the history" and "in the future" includes now.
+
+This includes common “skipped” cases:
+- “auto-synthesized variable” markers
+- nearby JSON comment blocks
+- group-fit variable blocks
+- direct JSON comment above
+
+Your output should eliminate the need for skip modes by making every declare-const self-contained.
+
+# === CONTEXT LADDER FOR DEFINITIONS (NEW) ===
+When writing a declaration’s JSON, derive details in this priority order:
+
+1) From the symbol name itself (e.g., suffixes like `_now`, `_within_30_days`, `_ever`, `_baseline`, `_mg_dl`).
+2) From the SMT usage in asserts:
+   - If used in `(>= x 10)` / `(<= x 10)` / `(< x 10)` / `(> x 10)`, then x is a numeric measurement and the comparator/threshold context must be reflected.
+   - If used in arithmetic like `(+ x y)` or `(/ x 2)`, then x is numeric with arithmetic semantics.
+   - If used as `(select arr i)`, then arr is an array indexed by i; define what i refers to if inferable.
+   - If used only as a Boolean literal inside `and/or/not`, then it is a patient-fact predicate.
+3) From the eligibility text for this side (inclusion OR exclusion only, per the independence rule).
+4) From <shared_context>/<subcohort_context>/<contextual_text> only to resolve cohort-specific interpretation, but do not introduce new medical constraints.
+
+If you cannot find a detail (time window, unit, measurement procedure), do not invent it—use conservative wording and push ambiguity into the relevant “when_to_set_to_null”.
+
+# === HARD RULE: DEFINITIONS MUST MATCH PROGRAM USE (NEW) ===
+A declaration is considered invalid (and MUST be fixed) if its JSON meaning is inconsistent with how the symbol is used in the SMT program.
+Examples:
+- JSON says “within 30 days” but the variable name/usage indicates “ever” or “current”.
+- JSON says “boolean patient fact” but the symbol is used as numeric or array.
+- JSON omits a threshold/comparator even though the program uses one directly with that symbol (e.g., `(>= lab 5)`).
+
+# === SEMANTICS: HOW TO DEFINE VARIABLES ===
+Variable definitions are ALWAYS “patient facts”, NOT “eligibility flags”.
+Note that the translation and variable meanings should be self-contained, such that they don't depend on each other for understanding (semantic recovery), nor do they depend on the trial context. For example, parent 1 and parent 2 are dependent on each other because we need to nail down one to know the other, and this case should be avoided.
+
+- "meaning" describes what the symbol states about the patient or a patient-derived measurement.
+- Bool semantics are patient-fact semantics (independent of side):
+  - true  = the fact is PRESENT / statement holds.
+  - false = the fact is ABSENT / statement clearly does not hold.
+  - null  = unknown / missing / ambiguous / cannot be determined.
+
+Be explicit about:
+- temporality (e.g., “within 30 days prior to Day 0”),
+- thresholds/comparators (≥, >, ≤, <),
+- negation and scope (“no history of…”, “ever”, “current”),
+- units and measurement context,
+- evidence type/source when inferable (diagnosis/problem list, medication list, lab result, imaging, procedure note).
+
+# === NO-INVENTED-SPECIFICS (NEW) ===
+You may ONLY add temporality, thresholds, comparators, scopes, or units if they are supported by at least one of:
+- the eligibility text for this side,
+- the symbol name,
+- the SMT usage (comparators/arithmetic/indexing),
+- explicit cohort/context text.
+
+Otherwise:
+- keep "meaning" minimal and faithful,
+- describe what evidence would be needed,
+- use "when_to_set_to_null" to capture missing/ambiguous context.
+
+# === JSON SCHEMA (STRICT) ===
+All JSON values must be STRINGS. Use double quotes. No trailing commas.
+
+Allowed base sorts: Bool, Int, Real, String
+Allowed array sort form: (Array Int Bool|Int|Real|String)
+
+## If sort == Bool:
+REQUIRED KEYS EXACTLY:
+- "meaning"
+- "when_to_set_to_true"
+- "when_to_set_to_false"
+- "when_to_set_to_null"
+
+## If sort != Bool (including Arrays):
+REQUIRED KEYS EXACTLY:
+- "meaning"
+- "when_to_set_to_value"
+- "when_to_set_to_null"
+
+Do NOT add extra keys.
+
+# === WHERE TO PUT THE JSON ===
+- The JSON must be on the SAME LINE as the `(declare-const ...)`.
+- Put it after `;; `.
+Example:
+  (declare-const foo Bool) ;; {"meaning":"...","when_to_set_to_true":"...","when_to_set_to_false":"...","when_to_set_to_null":"..."}
+
+If the line already has JSON and it is wrong, REPLACE it.
+
+# === HOW TO WRITE “WHEN_TO_SET...” FIELDS ===
+Write operational instructions for downstream patient coding.
+
+For Bool:
+- when_to_set_to_true: explicit evidence consistent with meaning AND within the stated timeframe (if any).
+- when_to_set_to_false: explicit denial/rule-out or clear evidence of absence within timeframe (if any).
+- when_to_set_to_null: no mention, ambiguous/conflicting, timeframe mismatch, cannot verify, or missing context needed to apply meaning.
+
+For numeric/string/array:
+- when_to_set_to_value: how to extract/compute the value (include units and timeframe if supported).
+- when_to_set_to_null: when extraction is impossible or unreliable; missing units/timeframe needed to interpret; ambiguous/conflicting evidence; timeframe mismatch.
+
+Arrays (still use non-Bool schema):
+- meaning: explain index semantics (what index i refers to) if inferable; otherwise keep minimal and state unknown.
+- when_to_set_to_value: how to populate elements; if you cannot reliably populate, set to null.
+
+# === CONTEXTUALIZATION CHECKLIST  ===
+For each declaration, ensure the JSON captures ALL applicable explicit or implicit qualifiers and contextual information that constrain the patient-fact meaning, BUT ONLY when supported by symbol name / SMT usage / side-specific eligibility text / provided context (do NOT invent).
+
+Examples of qualifiers to capture when supported:
+- Time window (current/ever/within X days/baseline; pre/post treatment; screening period).
+- Comparator + threshold if used in numeric comparisons (≥, >, ≤, <), including “at least/at most”, ranges, and “normal/abnormal” only if defined.
+- Units if present; otherwise do NOT invent.
+- Negation & scope (“no history of…”, “prior…”, “active…”, “rule out…”, “without evidence of…”).
+- Episode/severity/frequency qualifiers (e.g., “acute”, “chronic”, “refractory”, “severe”, “recurrent”, “≥2 episodes”).
+- Modality/method qualifiers (e.g., “by biopsy”, “MRI-confirmed”, “lab test type”, “ECG”, “imaging”).
+- Route/dose/duration qualifiers for therapies (e.g., “systemic”, “oral”, “IV”, “≥10 mg/day prednisone equivalent for ≥14 days”).
+- Population/cohort qualifiers that affect interpretation (e.g., “non-control cohort”, “metastatic”, “post-menopausal”) ONLY if they change what the variable denotes as a patient fact (not as an eligibility flag).
+- Data source type (labs/diagnosis/medication/procedure) if inferable.
+- Other contextual information that would be important to make the variable meaning self-contained.
+- Abstract concepts that may lead to ambiguity are all clearly and concretely defined.
+- Be explicit about endpoints situations; this includes whether things like "in the history" and "in the future" includes now.
+
+# === EXAMPLES OF GOOD CONTEXTUALIZATION ===
+
+Example 1
+Candidate meaning:
+"Whether the patient has conditions that could confound study evaluation."
+
+If the trial context clearly says the study evaluates zolpidem tartrate sublingual tablet for improving sleep onset in adult patients with insomnia,
+a good rewritten meaning is:
+"Whether the patient has a condition that could confound evaluation of the efficacy or safety of zolpidem tartrate sublingual tablet for improving sleep onset in adult patients with insomnia."
+
+Why this is good:
+- it resolves "study evaluation"
+- it names the intervention, goal, and trial subject/context
+- it remains a variable meaning rather than a trial summary
+
+Example 2
+Candidate meaning:
+"Whether the patient has a disease likely requiring antibiotic treatment that could interfere with assessment."
+
+If the trial context clearly indicates a study of antibacterial treatment for a target infection,
+a good rewritten meaning is:
+"Whether the patient has another disease or infection, apart from the study-target infection, that is likely to require antibiotic treatment and could interfere with assessment of the study intervention."
+
+If the intervention is clear enough, an even better standalone rewrite is:
+"Whether the patient has another disease or infection, apart from the infection under study, that is likely to require antibiotic treatment and could interfere with assessment of the study antibiotic regimen."
+
+Example 3
+Candidate meaning:
+"Whether the patient is newly diagnosed with chronic obstructive pulmonary disease."
+
+Good rewrite:
+"Whether the patient has been newly diagnosed with chronic obstructive pulmonary disease."
+
+Do not reduce this to:
+"Whether the patient currently has chronic obstructive pulmonary disease."
+
+# === OUTPUT FORMAT (STRICT) ===
+Return EITHER:
+
+Option A: exactly this plain string, with no quotes and no extra text:
+NO_MODIFICATION_REQUIRED
+
+OR
+
+Option B: a single JSON object, with no extra text, no Markdown fences:
+
+{
+  "repaired_smt": "<FULL SMT-LIB v2 program with ONLY declare-const line edits (plus necessary comment moves) as a single string>",
+  "notes": "<short summary of how many declarations were fixed and any tricky interpretations>"
+}
+
+Rules:
+- Return NO_MODIFICATION_REQUIRED only if every declare-const line already has a valid, self-contained, sufficiently contextualized inline JSON definition and no comment-block-to-inline move is needed.
+- Otherwise return the JSON object.
+- Do NOT include any other top-level keys.
+- Do NOT output multiple JSON objects.

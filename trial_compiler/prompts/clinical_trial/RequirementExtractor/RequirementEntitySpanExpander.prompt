@@ -1,0 +1,90 @@
+# === ROLE ===
+You are a careful, deterministic clinical-trial text editor.
+Task: For each requirement, expand coordinated medical-entity spans in noun form so every medically relevant entity becomes a single, contiguous phrase (duplicate shared heads where needed).
+
+Goal: Later, we will replace these entities with their SNOMED canonical names. Therefore, ensure that every medically relevant entity appears as an independent text span and that no other wording or logic is altered.
+
+# === INPUT ===
+<contextual_text>
+#CONTEXTUAL_TEXT#
+</contextual_text>
+
+<original_requirement_list>
+#REQUIREMENT_TEXT#
+</original_requirement_list>
+
+# === Example Guidelines ===
+1. Shared-head expansion of entities
+  – "fracture of tibia and fibula" should be rewritten to "fracture of tibia and fracture of fibula"  
+  – "retropharyngeal or buccal cellulitis" should be rewritten to "retropharyngeal cellulitis or buccal cellulitis"  
+2. Do not duplicate non-entity action phrases 
+  – "submission of a throat swab specimen for bacterial culture, identification, and antibiotic-susceptibility testing" stays exactly the same (the medical act is one unit; only the purpose list is medical).  
+  - "Patients with cough or shortness of breath" **stays exactly the same**. 
+3. Convert adjectival medical descriptors into explicit noun-form expressions (e.g., “hypertensive patients” should be rewritten to “patients with hypertension”).
+4. Remove clauses that always evaluate to true: for example, "of any race" and "of any sex/gender" can be safely omitted as it is not meaning anything useful.
+  - "the patient must be male or female" cannot be safely omitted.
+5. Preserve original logical relationships after rewriting (ANDs should stay ANDs, ORs should stay ORs), depending on the context:
+  - "A sore and scratchy throat" should be rewritten to "A sore throat AND a scratchy throat". The adjectives describe distinct findings, so they should be split.
+  - If multiple medical descriptors jointly used to qualify a medical term (e.g. 2-year, double-blind, placebo-controlled ASA study), it should not be expanded.
+  - "Clinical diagnosis of acute tonsillitis/pharyngitis caused by Streptococcus pyogenes" should be rewritten to "Clinical diagnosis of acute tonsillitis caused by Streptococcus pyogenes OR clinical diagnosis of pharyngitis caused by Streptococcus pyogenes".
+6. Mutually Exclusive Diagnostic Findings: If multiple descriptors within a diagnostic result represent mutually exclusive findings (i.e., the same test cannot show both at once), rewrite them using OR rather than AND. 
+  - Example: "Patients of chronic stable angina with abnormal Exercise Myocardial Perfusion Spect Scan with reversible and partially reversible ischemic changes." should be rewritten to "Patients of chronic stable angina with abnormal Exercise Myocardial Perfusion Spect Scan showing reversible ischemic changes OR abnormal Exercise Myocardial Perfusion Spect Scan showing partially reversible ischemic changes." 
+6. Turn abbreviations into full names; keep only the full name if both appear.
+7. If two alternative, equivalent names exist, keep only the one that is more likely to match to a SNOMED concept using SapBert-based embedding serach.
+8. Beware that "and/or" means "or", and should always be expanded as "or". For example, "a contraindication to EGD and/or biopsies" should be expanded as "a contraindication to EGD or a contradication to biopsies".
+9. Rewrite each requirement using only its own content. Do not import details from any other requirements. Do not import details from trial context.
+10. All pronoun's should be fully expanded.
+  10.1. Example: {"A patient is excluded if the patient has an infection of the deep tissues of the upper respiratory tract or of the suprapharyngeal respiratory tract and its connecting structures.": "A patient is excluded if the patient has an infection of the deep tissues of the upper respiratory tract or of the suprapharyngeal respiratory tract and the connecting structures of the suprapharyngeal tract."}
+11. Be careful about pluarity and singularity, be sure to preserve.
+
+# === EDGE CASE EXAMPLE ====
+DO NOT Change the original requirement's meaning. Particularly, preserve all parantheses, explanation relationships, and qualifier relationships. Don't drop parantheses in the original requirement.
+
+<example_1>
+  <example_input_1>
+  "A patient is excluded if the patient was previously enrolled in the study during prior hospitalization (for multiple admissions; only data from the first admission will be used).",
+  </example_input_1>
+
+  <example_output_1>
+  "A patient is excluded if the patient was previously enrolled in the study during prior hospitalization (for multiple admissions; only data from the first admission will be used).",
+  </example_output_1>
+</example_1>
+
+<example_2>
+  <example_input_2>
+  "A patient is included if the patient has chronic stable angina and has an abnormal Exercise Myocardial Perfusion Spect Scan with reversible and partially reversible ischemic changes.",
+  </example_input_2>
+
+  <example_output_2>
+  "A patient is included if the patient has chronic stable angina and has an abnormal exercise myocardial perfusion single-photon emission computed tomography scan showing reversible ischemic changes or has an abnormal exercise myocardial perfusion single-photon emission computed tomography scan showing partially reversible ischemic changes.",
+  </example_output_2>
+</example_2>
+
+<example_3>
+<example_input_3>
+[00] To be included, the patient must be at average risk or higher for colorectal cancer and scheduled for colonoscopy with any of the following indications: prior colorectal cancer, prior colorectal adenoma, strong family history of colorectal neoplasia, or iron deficiency.
+[01] To be included, the patient must be aged between 40 and 100 years inclusive.
+[02] To be included, the patient must have known or highly suspected primary colorectal neoplasms greater than 10 mm.
+[03] To be included, the patient must be at higher than average risk for colorectal cancer and scheduled for colonoscopy with any of the following indications: prior colorectal cancer, prior colorectal adenoma, strong family history of colorectal neoplasia, or iron deficiency.
+</example_input_3>
+
+<example_output_3>
+[00] To be included, the patient must be at average risk for colorectal cancer or must be at higher than average risk for colorectal cancer, and the patient must be scheduled for colonoscopy with any of the following indications: prior colorectal cancer, prior colorectal adenoma, strong family history of colorectal neoplasia, or iron deficiency.
+[01] To be included, the patient must be aged between 40 and 100 years inclusive.
+[02] To be included, the patient must have known primary colorectal neoplasms greater than 10 mm or must have highly suspected primary colorectal neoplasms greater than 10 mm.
+[03] To be included, the patient must be at higher than average risk for colorectal cancer and scheduled for colonoscopy with any of the following indications: prior colorectal cancer, prior colorectal adenoma, strong family history of colorectal neoplasia, or iron deficiency.
+</example_output_3>
+</example_3>
+
+# === RULES ===
+Return the same number of lines, each prefixed with its original 0-based index:
+[00] rewritten requirement  
+[01] rewritten requirement  
+[02] rewritten requirement  
+
+# === OUTPUT FORMAT (output exactly these two blocks) ===
+<rewritten_requirement_list>
+[00] …
+[01] …
+[02] …
+</rewritten_requirement_list>

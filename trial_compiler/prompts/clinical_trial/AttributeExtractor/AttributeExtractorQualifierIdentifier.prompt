@@ -1,0 +1,162 @@
+=== ROLE ===
+You are a clinical NLP annotator.
+Task:
+    The input is
+        A <requirement_entity_list> including a trial eligibility criterion requirement and a pre-identified list of medical entities (subject) in the criterion.
+    The output is
+        a single JSON object. For each entity in the requirement, include only those qualifiers that are necessary, mutually exclusive, and self-contained, and that directly and unambiguously narrow that entity’s scope as specified by the requirement.
+
+Goal:
+  This step is part of an LLM-based pipeline that encodes requirement text into SMT assertions using logical propositions and SNOMED nomenclature (for entities and qualifiers). At this stage, extract only those qualifiers that are necessary to precisely constrain the referenced entity so its representation captures the full, context-specific meaning. Include a qualifier only if it directly and unambiguously narrows the entity’s scope—i.e., it filters which instances of the entity are admissible.
+
+=== INPUT ===
+<requirement_entity_list>
+{requirement_entities}
+</requirement_entity_list>
+
+=== GUIDELINES ===
+1. Extract only those qualifiers that directly and unambiguously narrow the scope of the referenced entity.
+    1.1 The referenced entity can be located using entity's "start" and "end" offsets from each entity's json object. Extract qualifiers only for that specific occurrence. Don't extract qualifiers for any other occurrence of the same wording at different offsets at this stage.
+    1.2 For each referenced entity, extract qualifiers across seven perspectives: Time, Space, Cause, Scale, Source, Definition and Other (use sparingly). 
+        1.2.1 Each qualifier should have self-contained meaning.
+              If the qualifier has multiple internally dependent parts, keep it together as one qualifier.
+              If the qualifier consists of multiple parts that are independent of each other, separate them into multiple qualifiers.
+        1.2.2 If a modifier is already embedded within the entity’s extracted_span, do not extract it again as a qualifier; only capture modifiers that occur outside the entity’s extracted_span.
+    1.3 For every qualifier, output: a standalone sentence in the form "<Entity> has constraints that … ", 
+                                 a qualifier_span: copy the evidence verbatim from the source text. Spans need not be contiguous; if multiple fragments are indeed required, list them in order of appearance, separated by semicolons (;).;
+                                 a rationale that explains how the span narrows the entity’s scope.
+
+2. Seven Perspectives for Entity-Scoped Qualifier Extraction
+2.1 Time (entity-bound temporality)
+Definition: Specifies when the entity itself occurs/exists (time point or window). If the time window depends on an anchor event, the anchor must be included in the qualifier to make the qualifier self-contained. 
+<Example>
+requirement: “The patient is excluded if the patient has (ischemic heart disease within 6 months after percutaneous coronary intervention).”
+entity: “ischemic heart disease”
+qualifier: “Ischemic heart disease has constraints that it occurred within 6 months after percutaneous coronary intervention.”
+qualifier_span: “within 6 months after percutaneous coronary intervention”
+</Example>
+
+2.2 Space (anatomy / laterality / site)
+Definition: Constrains where the entity is located (anatomic site, extent, or laterality).
+<Example>
+requirement: “pulmonary infiltrate in the left lower lobe”
+entity: “pulmonary infiltrate”
+qualifier: “Pulmonary infiltrate has constraints that it is located in the left lower lobe.”
+qualifier_span: “in the left lower lobe”
+</Example>
+
+2.3 Cause (etiology)
+Definition: Constrains the cause or etiology of the entity.
+<Example>
+requirement: “The patient is excluded if the patient has fever due to non-infectious diseases (such as rheumatic autoimmune disease).”
+entity: “fever”
+qualifier: “Fever has constraints that it is caused by non-infectious diseases.”
+qualifier_span: “due to non-infectious diseases”
+</Example>
+
+2.4 Scale (severity / grade / stage / course / status)
+Definition: Constrains the entity’s intensity, grade, stage, clinical course, or status (e.g., severe, Grade ≥2, cT2–4a, acute, recurrent, stable, suspected).
+<Example>
+requirement: “The patient is excluded if the patient has ischemic heart disease and is stable but is going to implement percutaneous coronary intervention.”
+entity: “ischemic heart disease”
+qualifier: “Ischemic heart disease has constraints that it is stable.”
+qualifier_span: “is stable”
+</Example>
+
+2.5 Source (finding method / measurement method / definition system)
+Definition: Constrains how the entity is confirmed or measured, and/or the definition/grading system used.
+
+2.6 Definition
+Clauses that defines, confirms or diagnose an entity, such as measurement, test result (e.g., lab/vital/sign/score thresholds, “defined as/diagnosed if/meeting criteria …”).
+
+2.7 Other (strictly limited)
+Definition: Any other qualifier that truly reduces the entity’s scope but does not fit the five categories above. Be conservative: include only clearly restrictive modifiers of the entity.
+<Example>
+requirement: “The patient is excluded if the patient has (specific systemic diseases) OR (other medical conditions) that would interfere with the evaluation of the therapeutic response or safety of the study drug.”
+entity: “systemic diseases”
+Not a qualifier_span: “specific” (content-empty here; does not constrain which systemic diseases).
+Valid qualifier_span: “that would interfere with the evaluation of the therapeutic response or safety of the study drug” — this restrictive clause filters which systemic diseases are relevant.
+qualifier: “Systemic diseases have constraints that they would interfere with the evaluation of the therapeutic response or safety of the study drug.”
+qualifier_span: “that would interfere with the evaluation of the therapeutic response or safety of the study drug”
+</Example>
+
+3. You are not required to find a qualifier for every category. Extract a qualifier only when it truly narrows the entity. If a category has no qualifier, output an empty array for that category (e.g., "Time": []).
+4. If a candidate qualifier could belong to multiple categories, assign it to the single best-fitting category only. Do not duplicate the same qualifier across categories.
+
+=== WHAT YOU SHOULD NOT TREAT AS QUALIFIER ===
+1. Do not capture any phrase that is already inside the entity’s own extracted_span as qualifier_span. If a modifying word is embedded in the entity surface (e.g., “reversible” in “reversible ischemic changes”), treat it as part of the entity, not a qualifier.
+
+=== OUTPUT ===
+Return one JSON array (no Markdown, no extra keys). 
+If a category has no qualifier, output an empty array for that category (e.g., "Time": []).
+Follow exactly this schema (key names and order):
+{
+  "requirement_id": <copy verbatim from input>,
+  "requirement": <copy verbatim from input>,
+  "entities": [
+    {
+      "entity_id": <copy verbatim from input>,
+      "extracted_span": <copy verbatim from input>,
+      "start": <copy verbatim from input>,
+      "end": <copy verbatim from input>,
+      "type": <copy verbatim from input>,
+      "Time": [
+        {
+          "qualifier":"<Entity> has constraints that … ",
+          "qualifier_span": <copy the evidence verbatim from the source text. Spans need not be contiguous; if multiple fragments are required, list them in order of appearance, separated by semicolons (;).>,
+          "rationale": <how the span narrows the entity’s scope>,
+        },
+        //...repeat for more than one qualifier under this category
+      ],
+      "Space": [
+        {
+          "qualifier":"<Entity> has constraints that … ",
+          "qualifier_span":
+          "rationale": <how the span narrows the entity’s scope>,
+        },
+        //...
+      ],
+      "Scale": [
+        {
+          "qualifier":"<Entity> has constraints that … ",
+          "qualifier_span":
+          "rationale": <how the span narrows the entity’s scope>,
+        },
+        //...
+      ],
+      "Source": [
+        {
+          "qualifier":"<Entity> has constraints that … ",
+          "qualifier_span":
+          "rationale": <how the span narrows the entity’s scope>,
+        },
+        //...
+      ],
+      "Cause": [
+        {
+          "qualifier":"<Entity> has constraints that … ",
+          "qualifier_span":
+          "rationale": <how the span narrows the entity’s scope>,
+        },
+        //...
+      ],
+      "Definition": [
+        {
+          "qualifier":"<Entity> has constraints that … ",
+          "qualifier_span":
+          "rationale": <how the span narrows the entity’s scope>,
+        },
+        //...
+      ],
+      "Other": [
+        {
+          "qualifier":"<Entity> has constraints that … ",
+          "qualifier_span":
+          "rationale": <how the span narrows the entity’s scope>,
+        },
+        //...
+      ],
+    },
+    //...repeat for other entities in the requirement
+  ]
+},

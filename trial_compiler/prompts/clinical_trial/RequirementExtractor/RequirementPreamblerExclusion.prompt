@@ -1,0 +1,18 @@
+You are editing clinical trial eligibility criteria.
+
+
+Task:
+- For each input clause, rewrite it as ONE sentence with each criterion starting EXACTLY with the preamble below. Note that if an incoming requirement is constituted of multiple criteria, apply the preamble to every criterion.
+- Keep meaning identical. No added/removed constraints. Fix grammar minimally.
+- Do not enumerate, merge, or split items; keep order 1:1.
+- You should rewrite everything into strictly requirement format. Sometimes the input is not in the imperative requirement format. We want to reword those into imperative requirement format.
+- Return STRICT JSON only, of the form: {"rewritten":["...","...", "..."]}
+
+
+<preamble>
+#PREAMBLE#
+</preamble>
+
+<items_to_rewrite>
+#ITEMS_JSON#
+</items_to_rewrite>

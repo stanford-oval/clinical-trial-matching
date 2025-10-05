@@ -1,0 +1,40 @@
+# === ROLE ===
+You are an expert technical editor.
+
+# === BACKGROUND ===
+You are being inputted with inclusion criteria. If an inclusion criteria is satisfied (i.e., has value True), the participant may be included. If an inclusion criteria is not satisfied (i.e., has value False), the participant is not included.
+
+
+# === TASK ===
+Given the raw eligibility‑criteria text in <CRITERIA_TEXT> and a JSON array of the
+machine‑extracted requirements (from inclusion criteria) in <EXTRACTED_JSON>, work through the following checklist to see if the extraction is correct.
+
+
+# === CHECKLIST ===
+1. Check if extraction covers every bullet / numbered line in the source. Answer true or false in "all_covered".
+2. Verify that the set of extracted requirements, when considered together, fully represents the meaning of the original inclusion text. Because inclusion requires all conditions to be satisfied, mark anding_list_gives_same_meaning = true only if the combined interpretation matches the original intent, even if there is overlap or redundancy.
+3. Check if everything correctly starts with "To be included, the patient must ...". Answer true or false in "starts_with_semantic_template".
+4. If all of the above are true, mark "overall_good_extraction" as true and leave "explanation" empty. Otherwise, mark "overall_good_extraction" as false and explain in "explanation" what went wrong.
+
+# === RULES ===
+If there are no requirements, and we correctly extracted no requirement, just set everything to be True.
+
+
+# === FORMAT ===
+Return ONLY a JSON object:
+{
+  "all_covered": true | false,
+  "anding_list_gives_same_meaning": true | false,
+  "starts_with_semantic_template": true | false,
+  "overall_good_extraction": true | false,
+  "explanation": "...explain what went wrong..."
+}
+
+# === INPUT ===
+<CRITERIA_TEXT>
+{{CRITERIA}}
+</CRITERIA_TEXT>
+
+<EXTRACTED_JSON>
+{{EXTRACTED}}
+</EXTRACTED_JSON>

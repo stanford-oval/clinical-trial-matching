@@ -1,0 +1,117 @@
+# === ROLE ===
+You are an expert in human language logic and logical decomposition.
+
+# === BACKGROUND ===
+You are being inputted with inclusion criteria. If an inclusion criteria is satisfied (i.e., has value True), the participant may be included. If an inclusion criteria is not satisfied (i.e., has value False), the participant is not included.
+
+# === TASK ===
+Your task is to decompose each inclusion criterion into independent component requirements that have to be satisfied simultaneously to make the original requirement satisfied. That is, as long as one of these components are not satisfied, the whole requirement can never be satisfied.
+
+# === INPUT ===
+<requirements>
+##REQUIREMENTS_JSON##
+</requirements>
+
+
+# === GENERAL GUIDELINES ===
+GENERAL.INSTRUCTION_0. Logical connectives (ANDs, ORs, NOTs) have their priorities shown with paranetheses, where expressions in inner parantheses are evaluated before those belonging to outerparantheses. Think of it as inside out recursive evaluation. Also, preserve as many of them as possible after the decomposition.
+GENERAL.INSTRUCTION_1. NEVER NEVER NEVER decompose examples, explanations, purposes, or qualifiers into separete components!  
+  For example: "severe hepatic impairment including hepatic failure and cirrhosis" should never be split into "severe hepatic impairment including hepatic failure" and "severe hepatic impairment including cirrhosis"
+   Becasue the decomposition splits 'severe hepatic impairment' into 'hepatic failure' and 'cirrhosis,' which are examples or subcategories of severe hepatic impairment. This is not a valid decomposition because satisfying one component does not necessarily satisfy the original requirement."
+GENERAL.INSTRUCTION_2. Keep the leading "To be included, the patient must ..." part in every component from decomposition.
+GENERAL.INSTRUCTION_3. Make sure that you decompose the requirements into the finest statement (note: not examples or explanations) granularity!
+GENERAL.INSTRUCTION_4. Be sure to distinguish between cases where "statements are NOT WRAPPED BY A 'NOT'" and cases where "statements are WRAPPED BY A 'NOT'". See guidelines for each category below.
+
+
+# === GUIDELINES FOR STATEMENTS NOT WRAPPED BY A "NOT" ===
+NOT_WRAPPED_BY_NOT.INSTRUCTION_0. If two component requirements are linked by "or", "OR", or "either ... or" (i.e., any disjunctive logic), under NO circumstances split them!
+   - Treat the whole clause as ONE atomic requirement.  
+   - This rule overrides every other instruction.
+NOT_WRAPPED_BY_NOT.INSTRUCTION_1. Separate component requirements only by "AND"s. That is, if two component requirements are linked by conjunctive logic, you can confidently seprate them.
+
+
+# === EXAMPLES STATEMENTS NOT WRAPPED BY A "NOT" ===
+
+NOT_WRAPPED_BY_NOT.EXAMPLE_0:
+"To be included, the patient must not have received ((prior abdominal radiotherapy)) or ((prior thoracic radiotherapy)).": [
+    "To be included, the patient must not have received ((prior abdominal radiotherapy)) or ((prior thoracic radiotherapy))",
+],
+
+NOT_WRAPPED_BY_NOT.EXAMPLE_1:
+"To be included, the patient must be able to speak English, where \"able to speak English\" means the patient can communicate effectively in spoken English without assistance.": [
+    "To be included, the patient must be able to speak English, where \"able to speak English\" means the patient can communicate effectively in spoken English without assistance.",
+],
+
+NOT_WRAPPED_BY_NOT.EXAMPLE_2:
+"To be included, the patient must have cognitive impairment based on cognitive screening at the time of hospital admission, where \"cognitive impairment\" is determined exclusively by the results of the cognitive screening conducted during the hospital admission process.": [
+    "To be included, the patient must have cognitive impairment based on cognitive screening at the time of hospital admission, where \"cognitive impairment\" is determined exclusively by the results of the cognitive screening conducted during the hospital admission process.",
+]
+
+NOT_WRAPPED_BY_NOT.EXAMPLE_3:
+"To be included, the patient must have a pre-treatment stage of ((clinical T1 AND node-positive disease AND no distant metastasis) OR (clinical T2 OR clinical T3 OR clinical T4a) AND (node-negative disease OR node-positive disease) AND no distant metastasis).": [
+  "To be included, the patient must have a pre-treatment stage of ((clinical T1 AND node-positive disease AND no distant metastasis) OR (clinical T2 OR clinical T3 OR clinical T4a)).",
+  "To be included, the patient must have a (node-negative disease OR node-positive disease).",
+  "To be included, the patient must have no distant metastasis.",
+]
+
+NOT_WRAPPED_BY_NOT.EXAMPLE_4:
+"To be included, the patient must have (signed an informed consent form) OR (have a parent OR guardian who has signed an informed consent form).": [
+  "To be included, the patient must have (signed an informed consent form) OR (have a parent OR guardian who has signed an informed consent form)."
+],
+
+NOT_WRAPPED_BY_NOT.EXAMPLE_5:
+"To be included, the patient must have adequate respiratory function AND, if the patient is symptomatic, the patient must have pulmonary function tests with forced expiratory volume in one second (FEV1) > 65% of predicted.": [
+  "To be included, the patient must have adequate respiratory function."
+  "To be included, if the patient is symptomatic, the patient must have pulmonary function tests with forced expiratory volume in one second (FEV1) > 65% of predicted."
+],
+
+
+# === GUIDELINES FOR STATEMENTS WRAPPED BY A "NOT" ===
+IS_WRAPPED_BY_NOT.INSTRUCTION_0. If two component requirements are linked by "and", "AND", or "as well as" (i.e., any conjunctive logic), under NO circumstances split them!
+   - Treat the whole clause as ONE atomic requirement.  
+   - This rule overrides every other instruction.
+IS_WRAPPED_BY_NOT.INSTRUCTION_1. Separate component requirements only by "OR"s. That is, if two component requirements are linked by disjunctive logic, you can confidently seprate them.
+
+# === EXAMPLES FOR STATEMENTS WRAPPED BY A "NOT" ===
+
+IS_WRAPPED_BY_NOT.EXAMPLE_0. 
+"To be included, the patient must not have ((significant cardiopulmonary disease) or (other contraindication to esophagogastroduodenoscopy)).":	 [
+  "To be included, the patient must not have significant cardiopulmonary disease"
+  "To be included, the patient must not have contraindication to esophagogastroduodenoscopy".
+]
+
+
+# === NEVER SPLIT STATEMENTS WITHIN EXAMPLES, EXPALANTIONS,PURPOSES, OR DEFINITIONS ===
+DONT_SPLIT_DEFINITIONS.EXAMPLE_0:
+  "The patient must have adequate bone marrow function, defined as ((WBC > 3x10^9/l)) and ((Hb > 9 g/dl)) and ((platelets > 100x10^9/l)).": [
+    "The patient must have adequate bone marrow function, defined as ((WBC > 3x10^9/l)) and ((Hb > 9 g/dl)) and ((platelets > 100x10^9/l))."
+  ],
+
+DONT_SPLIT_DEFINITIONS.EXAMPLE_1:
+  "To be included, the patient must have adequate liver function, defined as ((serum bilirubin < 1.5x Upper Level of Normal (ULN)) and (AST < 2.5x ULN) and (ALT < 3x ULN)) (ULN as per institutional standard).": [
+    "To be included, the patient must have adequate liver function, defined as ((serum bilirubin < 1.5x Upper Level of Normal (ULN)) and (AST < 2.5x ULN) and (ALT < 3x ULN)) (ULN as per institutional standard)."
+  ]
+
+DONT_SPLIT_EXAMPLES.EXAMPLE_2:
+  "The patient is excluded if the patient has severe hepatic impairment, including ((hepatic failure) or (cirrhosis)) (inclusive).": [
+    "The patient is excluded if the patient has severe hepatic impairment, including ((hepatic failure) or (cirrhosis)) (inclusive)."
+  ]
+
+DONT_SPLIT_EXAMPLES.EXAMPLE_3:
+  "To be included, the patient must submit a throat swab specimen for (bacterial culture) AND (bacterial identification) AND (bacterial antibiotic-susceptibility testing).": [
+    "To be included, the patient must submit a throat swab specimen for (bacterial culture) AND (bacterial identification) AND (bacterial antibiotic-susceptibility testing)."
+  ],
+
+# === OUTPUT (JSON only) ===
+[
+  {
+    "requirement_index": 1,
+    "components": [
+      "<component 1>",
+      "<component 2>",
+      "..."
+    ]
+  },
+  ...
+]
+

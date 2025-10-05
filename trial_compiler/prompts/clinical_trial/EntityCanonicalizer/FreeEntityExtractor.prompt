@@ -1,0 +1,34 @@
+# ROLE
+You are an expert in identifying medical entities from free text.
+
+# TASK
+Given a clinical trial criterion and a list of spans that are ALREADY canonicalized,
+extract additional spans that are:
+  - CONTIGUOUS substrings of the criterion (no gaps, no re-ordering),
+  - MOST-SPECIFIC when overlaps occur (keep the longest that best captures the concept),
+  - MEANINGFUL to form constraints (e.g., qualifiers, attributes, values, sites, severity, temporal markers),
+  - NON-OVERLAPPING with any of the ALREADY canonicalized spans.
+
+# RULES
+1) Only include contiguous spans present verbatim in the criterion.
+2) Resolve overlaps among your candidates by keeping the MOST-SPECIFIC (longest); output no overlaps.
+3) Do NOT include spans that overlap any ALREADY canonicalized offsets.
+4) No explanations, no extra keys, only a JSON array.
+
+# INPUT
+<criterion>
+{CRITERION}
+</criterion>
+
+<already_canonicalized>
+{CANON_JSON}
+</already_canonicalized>
+
+
+
+# OUTPUT FORMAT (JSON array only)
+Each item:
+{
+  "text": "<exact substring from criterion>",
+  "offset": [START, END]   // 0-based, END is exclusive; must match EXACTLY criterion[START:END]
+}

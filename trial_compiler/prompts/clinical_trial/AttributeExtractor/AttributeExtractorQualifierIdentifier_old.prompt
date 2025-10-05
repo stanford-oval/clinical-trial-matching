@@ -1,0 +1,181 @@
+=== ROLE ===
+You are a clinical NLP annotator.
+Task:
+    The input is
+        A <criterion_entity_list> including criterion-entity pairs. In one pair, there is a trial eligibility criterion in natural language and a pre-identified medical entity (subject) in the criterion.
+    The output is
+        Return one JSON object that, for every criterion-entity pair in the <criterion_entity_list>, lists necessary mutually exclusive, self-contained qualifiers that narrows, constrains, or qualifies the entity with concrete constraints that increase its specificity in the criterion. 
+
+Goal:
+    This is a part of an LLM-based pipeline that code requirement text with logical propositions and SNOMED nomenclature (for entities and attributes).
+    In this stage, extract only those qualifiers that are necessary to concretely constrain the referenced entity so its representation captures the full, context-specific meaning. Include a qualifier only if it directly and unambiguously narrows the entity’s scope thereby filtering the admissible instances of the entity.
+
+=== INPUT ===
+<criterion_entity_list>
+{criterion_entities}
+</criterion_entity_list>
+
+=== GUIDELINES ===
+    1. Locate every qualifier span in the requirement that directly qualifies the given entity surface_string.
+        Treat as a qualifier span any text that narrows, constrains, or qualifies the entity with concrete constraints that increase its specificity.
+        Qualifier span can cover etiology, disease course, anatomical site, morphology, stage, severity, and so on.
+    2. For each qualifier span, rewrite the constraint information as one standalone English sentence with the format "<entity> has constraints that ...", preserving the original wording as closely as possible and fill in the "qualifier". Make sure the "qualifier" is a semantically complete sentence. 
+    For example, 
+        "requirement": "Severe acute bacterial pneumonia diagnosed within the last 48 hours.",
+        "entity": "pneumonia",
+        "all_qualifying_information_related_to_the_entity": [
+          {{
+            "entity": "pneumonia",
+            "qualifier_span": "bacterial",
+            "qualifier": "Pneumonia has constraints that it is bacterial.",
+            "rationale": "The adjective “bacterial” specifies the infection’s cause as bacterial rather than viral or fungal."
+          }},
+          {{
+            "entity": "pneumonia",
+            "qualifier_span": "severe",
+            "qualifier": "Pneumonia has constraints that it is severe.",
+            "rationale": "The word “severe” indicates the high intensity of the pneumonia."
+          }},
+          {{
+            "entity": "pneumonia",
+            "qualifier_span": "acute",
+            "qualifier": "Pneumonia has constraints that it is acute.",
+            "rationale": "The adjective “acute” conveys that the pneumonia has a sudden onset and short course."
+          }},
+          {{
+            "entity": "pneumonia",
+            "qualifier_span": "diagnosed within the last 48 hours",
+            "qualifier": "Pneumonia has constraints that it was diagnosed within the last 48 hours.",
+            "rationale": "The phrase specifies that the pneumonia was confirmed very recently, constraining eligibility to patients diagnosed no more than 48 hours ago."
+          }}
+        ]
+    3. Each qualifier should have standalone meaning. That means no qualifer should ever need to be combined with other qualifier(s) to make sense. In other words, if one standalone qualifer constitutes of two parts that have dependencies, don't break them up - only use the contiguous, single qualifer! For example, "within 6 months after surgery A" should never be broken up into "within 6 months" and "after surgery A", because surgery A's timestamp anchors the meaning of "within 6 months". Note that this is just an example - you should examine all types of interdependencies.    
+
+=== WHAT YOU SHOULD TREAT AS QUALIFIER SPAN ===
+    0. The qualifier span must be a restrictive modifier of the entity itself, narrowing its scope (site, laterality, stage, severity, entity-tied timing, subtype, dose/formulation). It must not describe the patient’s state, a generic relationship/container, or another entity.
+    
+    1. A valid qualifier span must reduce the entity’s scope so it matches the requirement’s specificity (via site, laterality, stage, severity, timing, subtype, dose/formulation). If the span only states a general property, rationale, or effect—and does not make the entity more specific—do not treat it as a qualifier_span.
+    Keep the qualifier span if: Removing the span would make the entity too broad/ambiguous for this requirement.
+    Drop the span if: The span is a generic statement (e.g., study-evaluation impact) that applies broadly and doesn’t filter which instances of the entity qualify.
+
+    Example 1.1: Requirement: “The patient is excluded if the patient requires treatment with at least one of the following during the study that might interfere with the evaluation of the study drug: (nelfinavir), (digoxin), (ergot alkaloids), (terfenadine), (cyclosporine), (hexobarbital), OR (enzyme-inducing phenytoin).”
+    Entity: phenytoin
+    Valid qualifier_span: “enzyme-inducing” (it narrows phenytoin to a specific subtype).
+    Not a qualifier_span: “might interfere with the evaluation of the study drug” (study-level rationale; a general property about the entity phenytoin; does not narrow the drug).
+    Not a qualifier_span: “during the study” (time of a patient-level treatment requirement event, not a property of the drug).
+
+    Example 1.2： Requirement: “The patient is excluded if the patient has (specific systemic diseases) OR (other medical conditions) that would interfere with the evaluation of the therapeutic response or safety of the study drug.”
+    Entity: systemic diseases
+    Not a qualifier_span: “specific” (content-empty adjective here; does not constrain which systemic diseases).
+    Valid qualifier_span: “that would interfere with the evaluation of the therapeutic response or safety of the study drug” — here it functions as a restrictive clause that filters which systemic diseases are relevant (only those that would interfere), thus narrowing the entity’s scope.
+
+    2. Never capture generic relationship/container phrases that link the patient to the medical entity as a qualifier_span for the entity itself. These do not describe a scope-narrowing property of the entity.
+    Exclude phrases like: "clinical diagnosis of", "symptoms of", "evidence of", "history of", "signs of", "absence of clinical signs of", "absence of clinical symptoms"
+    "contraindication to", "the ability to undergo", "allergy to", “use of”, “requirement for”, “treatment with”, "patients present with".
+    Example 2.1
+    Requirement: “The patient is excluded if the patient has (a contraindication to esophagogastroduodenoscopy (e.g., Boerhaave’s syndrome)).”
+    Entity: esophagogastroduodenoscopy (EGD)
+    Not a qualifier_span: “a contraindication to esophagogastroduodenoscopy” — a patient-level container (“has a contraindication to …”); it does not narrow the procedure entity itself.
+
+    3. Do not capture any phrase that are merely introduced examples for a entity as a qualifier_span. Triggers include: including, such as, like, for example, for instances. These examples do not express an intrinsic property of the entity.
+    “A, including B, C, and D”. Do not capture "B", "C", and "D” as a qualifier span for A.
+    Also, do not capture "B" or "C" or "D" as qualifier span for A.
+
+    4. Do NOT treat definitional / diagnostic / confirmation clauses as qualifier spans. Spans that DEFINE or OPERATIONALIZE an entity (e.g., diagnostic rules, lab cutoffs, imaging evidence, “confirmed by …”, “defined as …”) are not qualifiers of that entity. They will be later modeled as separate entities.
+
+    Heuristic: If the span itself contains a standalone SNOMED-style entity (Clinical finding, Procedure, Observable entity, Medical product, Substance, etc.) and does not explicitly modify the referenced entity by one of the attributes above, it is not a qualifier.
+
+    Example 4.1
+        Requirement: "The patient is excluded if the patient has severe renal impairment (defined as serum creatinine greater than 3.0 mg/dl)."
+        Entity: renal impairment
+        Valid qualifier_span: "severe" (severity of the SAME disorder)
+        Not a qualifier_span: "defined as serum creatinine greater than 3.0 mg/dl"
+            — this is a definitional measurement (Observable entity + threshold);
+
+    Example 4.2
+        Requirement: "To be included, the patient must have a clinical diagnosis of obesity with body mass index > 25."
+        Entity: obesity
+        Not a qualifier_span: "body mass index > 25"
+            — measurement-based definition.
+
+    Example 4.3
+        Requirement: "a clinical diagnosis of electrocardiogram abnormality with left ventricular hypertrophy".
+        Entity: electrocardiogram abnormality
+        Not a qualifier_span: "left ventricular hypertrophy"
+            — LVH is a standalone clinical finding. LVH characterizes/evidences the ECG abnormality but does not scope-narrow it
+
+    Example 4.4
+        Requirement: "The patient is excluded if the patient has fever due to non-infectious diseases (such as rheumatic autoimmune disease).
+        Entity: fever
+        Valid qualifier_span: "due to non-infectious diseases"
+          -although the span contains a SNOMED-style entity non-infectious diseases, it is qualifying the etiology of the entity.
+        Not a qualifier_span: "rheumatic autoimmune disease"
+
+
+=== WHAT YOU SHOULD NOT TREAT AS QUALIFIER SPAN ===
+    1. For each qualifier span X, apply the entity-is-X test. If pass the test, keep the qualifier span. Otherwise drop it.
+      If the span can be rephrased as “<entity> is/was/has <X>” and still reads as a property of the entity (not of the patient or a procedure or other subjects), then treat it as a qualifier span. Otherwise, don't include it in the output.
+      Example 1.1: "requirement": "The patient is excluded if the patient has ischemic heart disease and is stable but is going to implement percutaneous coronary intervention.",
+                  "entity": "ischemic heart disease",
+                  For the span "going to implement percutaneous coronary intervention.", it can't be rephrased as "ischemic heart disease" is "going to implement percutaneous coronary intervention". Therefore, "going to implement percutaneous coronary intervention" is not a qualifier span.
+                  For the span "is stable", it can be rephrased as "ischemic heart disease" "is stable". Therefore, "is stable" is a qualfiier span.
+
+    2. Do not treat planned/scheduled/intended procedures as qualifiers of a disease. Phrases with triggers like "is going to/plan to/scheduled for (PCI/CABG/biopsy/therapy)" usually describe the patient’s planned care, not the disease’s qualifiers.
+      Example 2.1: "requirement": "The patient is excluded if the patient has ischemic heart disease and is stable but is going to implement percutaneous coronary intervention." 
+          The entity "ischemic heart disease" has a qualifier span "is stable" while "is going to implement percutaneous coronary intervention." is not a qualifier span.
+
+    3. When a phrase expresses a temporal relation using triggers like within / after / before / since / in the last / during the first etc., attach the qualifier to the primary clinical finding (the entity being restricted) and include the anchor event inside the qualifier span.
+    Never flip the subject to the anchor event (e.g., a procedure) just because it appears in the temporal phrase.
+      Example 3.1: "requirement": "The patient is excluded if the patient has (ischemic heart disease within 6 months after percutaneous coronary intervention)",
+      "within 6 months after percutaneous coronary intervention" is a qualifier span for "ischemic heart disease".
+      "percutaneous coronary intervention" has no qualifier span. Do not attach “within 6 months after” as its qualifier; "percutaneous coronary intervention" is the anchor event, not the subject being qualified.
+ 
+
+    4. You should never capture phrases already inside the entity’s own surface_string. A qualifier_span must appear outside the exact span of the entity’s surface_string. Only modifiers that sit before or after the entity span, or that clearly apply to it from elsewhere in the sentence, may be extracted.
+            If a descriptive word (e.g. “reversible”) is embedded in the entity surface_string itself (“reversible ischemic changes”), treat it as part of the entity not a separate qualifier_span.
+
+    5. You should never capture a phrase that restricts the patient population, such as age, sex, race, pregnancy status, or general health status must never be captured as a qualifier_span.
+    
+
+
+
+=== OUTPUT ===
+Return one JSON array (no Markdown, no extra keys).
+Each JSON object represents a single entity subject and must follow *exactly* this schema (key names and order):
+
+[
+  {{
+    "trial": "<trial_id>",
+    "requirement": "<criterion>",
+
+    "entity": {{
+      "surface_string": "<entity text exactly as it appears>",
+      "preferred_term": "<SNOMED preferred term>",
+      "fully_specified_name": "<SNOMED fully specified name>"
+      "type": "<copy verbatim from input>",
+      "definition": "<copy verbatim from input>",
+      "conceptId": "<copy verbatim from input>",
+      "start": "<copy verbatim from input>",
+      "end": "<copy verbatim from input>",
+    }},
+
+    "all_qualifying_information_related_to_the_entity": [
+      {{
+        "entity": "<entity text exactly as it appears>",
+        "start": "<copy verbatim from input>",
+        "end": "<copy verbatim from input>",
+        "qualifier_span": "<raw qualifier span>",
+        "qualifier": "<entity> has constraints that ...",
+        "rationale": "<how the span qualifies the entity with concrete constraints that increase its specificity.>"
+      }},
+      // …repeat object for each additional qualifier
+    ],
+
+  }},
+  // …repeat for every entity found in every criterion
+]
+
+
+
+
+
