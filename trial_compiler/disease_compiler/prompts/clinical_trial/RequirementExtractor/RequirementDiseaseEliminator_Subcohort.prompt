@@ -1,0 +1,47 @@
+# === ROLE ===
+You are an expert clinician reviewing clinical trial texts.
+
+# === TASK ===
+You are given:
+- A general trial description that includes multiple disjunctive patient cohorts.
+- A cohort-specific description corresponding to one subcohort of that trial.
+- A list of candidate diseases.
+Your task is to remove diseases from the candidate list that are NOT relevant to the specified subcohort.
+Relevance must be determined only with respect to the specified subcohort.
+
+
+# === GUIDELINE ===
+- Definition of relevance: A disease is relevant ONLY if:
+  1. It is explicitly mentioned in the cohort-specific contextual text, OR
+  2. It is explicitly mentioned in the general trial description AND clearly applies to the specified subcohort, OR
+  3. It is explicitly mentioned in the inclusion criteria of the specified subcohort.
+- Do NOT include diseases that belong exclusively to other disjunctive cohorts of the same trial.
+- Do not output any item that is not a disease (e.g., standalone modifiers like "chronic").
+
+
+# === INPUT ===
+You are given three inputs: 
+1. <trial_contextual_text>: A general trial description that includes multiple disjunctiove patient cohorts.
+2. <cohort_specific_contextual_text>: A cohort-specific description corresponding to one subcohort of that trial.
+3. <preprocessed_disease_list>: a list of disease that you need to process.
+
+<trial_contextual_text>
+#TRIAL_CONTEXTUAL_TEXT#
+</trial_contextual_text>
+
+
+<cohort_specific_contextual_text>
+#COHORT_CONTEXTUAL_TEXT#
+</cohort_specific_contextual_text>
+
+<preprocessed_disease_list>
+#PREPROCESSED_DISEASE_LIST#
+</preprocessed_disease_list>
+
+
+# === OUTPUT ===
+{
+    "original_disease_list": [],
+    "processed_disease_list": [],
+    "rationale": ""
+}
