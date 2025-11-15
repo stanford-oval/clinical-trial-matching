@@ -1,0 +1,41 @@
+{
+  "batch_index": 11,
+  "raw_response": "[\n  {\n    \"concept_id\": \"11399002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"697896007\",\n    \"stop_at_label\": \"Precapillary pulmonary hypertension\",\n    \"rationale\": \"Broader than primary PAH yet mechanism-specific; excludes post-capillary PH. Avoids generic disorder/finding categories. Timeframe tight; parent_count high but parent preserves clinical program.\"\n  },\n  {\n    \"concept_id\": \"95547004\",\n    \"hops\": 2,\n    \"stop_at_concept_id\": \"74400008\",\n    \"stop_at_label\": \"Appendicitis\",\n    \"rationale\": \"Captures organ-specific condition across severities (suppurative/perforated) while avoiding overly specific rupture and generic intestinal disorder categories. Clinically coherent for trials.\"\n  },\n  {\n    \"concept_id\": \"772992009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"448216007\",\n    \"stop_at_label\": \"Carcinoma of thyroid\",\n    \"rationale\": \"Preserves thyroid malignancy focus while generalizing from subtype; avoids broad neck neoplasm/mass categories. Parent maintains organ and program intent.\"\n  },\n  {\n    \"concept_id\": \"24443003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"13619001\",\n    \"stop_at_label\": \"Thyroidectomy\",\n    \"rationale\": \"Generalizes from complete excision to organ-specific surgery, maintaining procedural intent while avoiding generic excision or broad neck/gland procedures.\"\n  },\n  {\n    \"concept_id\": \"73187006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"18220004\",\n    \"stop_at_label\": \"Thyroid hormone\",\n    \"rationale\": \"Groups specific thyroid hormone agents while remaining therapeutically specific; avoids overly broad hormone/drug classes and deny-listed 'substance'.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "11399002",
+      "hops": 1,
+      "rationale": "Broader than primary PAH yet mechanism-specific; excludes post-capillary PH. Avoids generic disorder/finding categories. Timeframe tight; parent_count high but ",
+      "stop_at_concept_id": "697896007",
+      "stop_at_label": "Precapillary pulmonary hypertension"
+    },
+    {
+      "concept_id": "95547004",
+      "hops": 2,
+      "rationale": "Captures organ-specific condition across severities (suppurative/perforated) while avoiding overly specific rupture and generic intestinal disorder categories. ",
+      "stop_at_concept_id": "74400008",
+      "stop_at_label": "Appendicitis"
+    },
+    {
+      "concept_id": "772992009",
+      "hops": 1,
+      "rationale": "Preserves thyroid malignancy focus while generalizing from subtype; avoids broad neck neoplasm/mass categories. Parent maintains organ and program intent.",
+      "stop_at_concept_id": "448216007",
+      "stop_at_label": "Carcinoma of thyroid"
+    },
+    {
+      "concept_id": "24443003",
+      "hops": 1,
+      "rationale": "Generalizes from complete excision to organ-specific surgery, maintaining procedural intent while avoiding generic excision or broad neck/gland procedures.",
+      "stop_at_concept_id": "13619001",
+      "stop_at_label": "Thyroidectomy"
+    },
+    {
+      "concept_id": "73187006",
+      "hops": 1,
+      "rationale": "Groups specific thyroid hormone agents while remaining therapeutically specific; avoids overly broad hormone/drug classes and deny-listed 'substance'.",
+      "stop_at_concept_id": "18220004",
+      "stop_at_label": "Thyroid hormone"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "batch_index": 58,
+  "raw_response": "[\n  {\n    \"concept_id\": \"240477008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"312131008\",\n    \"stop_at_label\": \"Viral infection of the digestive tract\",\n    \"rationale\": \"Preserves mechanism and GI site; avoids generic “disorder” and overbroad GI infection. Tight timeframe and simple clauses favor hop-1.\"\n  },\n  {\n    \"concept_id\": \"302912005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"89927005\",\n    \"stop_at_label\": \"Paralysis of larynx\",\n    \"rationale\": \"Keeps organ-system and deficit specific; avoids generic “disorder” parent. Exclusions exceed inclusions, so conservative hop-1.\"\n  },\n  {\n    \"concept_id\": \"409609008\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"409609008\",\n    \"stop_at_label\": \"Pulmonary infiltrate\",\n    \"rationale\": \"Parents are either generic or lose lung-specific radiologic context; higher hops are deny-listed. Stay specific to preserve intent.\"\n  },\n  {\n    \"concept_id\": \"392233007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"32005000\",\n    \"stop_at_label\": \"Drainage of peritonsillar tissues\",\n    \"rationale\": \"Maintains site and technique; avoids broader head/neck drainage and generic procedure categories.\"\n  },\n  {\n    \"concept_id\": \"173422009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"173422009\",\n    \"stop_at_label\": \"Tonsillectomy\",\n    \"rationale\": \"Exclusions > inclusions and many generic/misaligned parents; keeping tonsillar excision best preserves trial intent.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "240477008",
+      "hops": 1,
+      "rationale": "Preserves mechanism and GI site; avoids generic “disorder” and overbroad GI infection. Tight timeframe and simple clauses favor hop-1.",
+      "stop_at_concept_id": "312131008",
+      "stop_at_label": "Viral infection of the digestive tract"
+    },
+    {
+      "concept_id": "302912005",
+      "hops": 1,
+      "rationale": "Keeps organ-system and deficit specific; avoids generic “disorder” parent. Exclusions exceed inclusions, so conservative hop-1.",
+      "stop_at_concept_id": "89927005",
+      "stop_at_label": "Paralysis of larynx"
+    },
+    {
+      "concept_id": "409609008",
+      "hops": 0,
+      "rationale": "Parents are either generic or lose lung-specific radiologic context; higher hops are deny-listed. Stay specific to preserve intent.",
+      "stop_at_concept_id": "409609008",
+      "stop_at_label": "Pulmonary infiltrate"
+    },
+    {
+      "concept_id": "392233007",
+      "hops": 1,
+      "rationale": "Maintains site and technique; avoids broader head/neck drainage and generic procedure categories.",
+      "stop_at_concept_id": "32005000",
+      "stop_at_label": "Drainage of peritonsillar tissues"
+    },
+    {
+      "concept_id": "173422009",
+      "hops": 0,
+      "rationale": "Exclusions > inclusions and many generic/misaligned parents; keeping tonsillar excision best preserves trial intent.",
+      "stop_at_concept_id": "173422009",
+      "stop_at_label": "Tonsillectomy"
+    }
+  ]
+}

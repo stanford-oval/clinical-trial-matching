@@ -1,0 +1,74 @@
+[
+  {
+    "concept_id": "10503001",
+    "alt_concept_id": "289186000",
+    "hop": 1,
+    "alt_label": "Voice production finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:48:28"
+  },
+  {
+    "concept_id": "10503001",
+    "alt_concept_id": "286832009",
+    "hop": 2,
+    "alt_label": "Speech and language finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:48:28"
+  },
+  {
+    "concept_id": "10503001",
+    "alt_concept_id": "118250006",
+    "hop": 2,
+    "alt_label": "Voice finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:48:28"
+  },
+  {
+    "concept_id": "230270009",
+    "alt_concept_id": "230273006",
+    "hop": 1,
+    "alt_label": "Frontotemporal degeneration",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:48:28"
+  },
+  {
+    "concept_id": "33252009",
+    "alt_concept_id": "85417000",
+    "hop": 1,
+    "alt_label": "Autonomic agent",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:48:28"
+  },
+  {
+    "concept_id": "33252009",
+    "alt_concept_id": "766779001",
+    "hop": 1,
+    "alt_label": "Medicinal product categorized by disposition",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:48:28"
+  },
+  {
+    "concept_id": "393563007",
+    "alt_concept_id": "393564001",
+    "hop": 1,
+    "alt_label": "Glioma",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:48:28"
+  },
+  {
+    "concept_id": "393563007",
+    "alt_concept_id": "372087000",
+    "hop": 1,
+    "alt_label": "Primary malignant neoplasm",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:48:28"
+  },
+  {
+    "concept_id": "417357006",
+    "alt_concept_id": "416417002",
+    "hop": 1,
+    "alt_label": "Hereditary hemoglobin S",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:48:28"
+  }
+]

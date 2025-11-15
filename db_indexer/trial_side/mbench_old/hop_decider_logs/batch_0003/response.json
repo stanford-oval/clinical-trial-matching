@@ -1,0 +1,41 @@
+{
+  "batch_index": 3,
+  "raw_response": "[\n  {\n    \"concept_id\": \"305351004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"305349003\",\n    \"stop_at_label\": \"Admission to department\",\n    \"rationale\": \"Parent preserves admission intent; grandparents are too generic (establishment/administrative procedure/procedure). Tight timeframe and small clause size support modest generalization.\"\n  },\n  {\n    \"concept_id\": \"102512003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"102499006\",\n    \"stop_at_label\": \"Fit and well\",\n    \"rationale\": \"Parent keeps well-being intent; higher ancestors are generic findings. Tight timeframe and single-member clauses favor H=1.\"\n  },\n  {\n    \"concept_id\": \"20484008\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"20484008\",\n    \"stop_at_label\": \"Subacute sclerosing panencephalitis\",\n    \"rationale\": \"Ancestors mostly contain banned generic terms (disorder/disease) or non-specific findings. Exclusions exceed inclusions and polyhierarchy present; remain at original specificity.\"\n  },\n  {\n    \"concept_id\": \"134407002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"161891005\",\n    \"stop_at_label\": \"Backache\",\n    \"rationale\": \"Parent retains site-specific pain intent; higher ancestors are generic findings. Tight timeframe and small clause size support H=1.\"\n  },\n  {\n    \"concept_id\": \"708931003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"302497006\",\n    \"stop_at_label\": \"Hemodialysis\",\n    \"rationale\": \"Parent preserves intervention intent; higher ancestors include generic dialysis/procedure categories. Tight timeframe and single-member clauses support H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "305351004",
+      "hops": 1,
+      "rationale": "Parent preserves admission intent; grandparents are too generic (establishment/administrative procedure/procedure). Tight timeframe and small clause size suppor",
+      "stop_at_concept_id": "305349003",
+      "stop_at_label": "Admission to department"
+    },
+    {
+      "concept_id": "102512003",
+      "hops": 1,
+      "rationale": "Parent keeps well-being intent; higher ancestors are generic findings. Tight timeframe and single-member clauses favor H=1.",
+      "stop_at_concept_id": "102499006",
+      "stop_at_label": "Fit and well"
+    },
+    {
+      "concept_id": "20484008",
+      "hops": 0,
+      "rationale": "Ancestors mostly contain banned generic terms (disorder/disease) or non-specific findings. Exclusions exceed inclusions and polyhierarchy present; remain at ori",
+      "stop_at_concept_id": "20484008",
+      "stop_at_label": "Subacute sclerosing panencephalitis"
+    },
+    {
+      "concept_id": "134407002",
+      "hops": 1,
+      "rationale": "Parent retains site-specific pain intent; higher ancestors are generic findings. Tight timeframe and small clause size support H=1.",
+      "stop_at_concept_id": "161891005",
+      "stop_at_label": "Backache"
+    },
+    {
+      "concept_id": "708931003",
+      "hops": 1,
+      "rationale": "Parent preserves intervention intent; higher ancestors include generic dialysis/procedure categories. Tight timeframe and single-member clauses support H=1.",
+      "stop_at_concept_id": "302497006",
+      "stop_at_label": "Hemodialysis"
+    }
+  ]
+}

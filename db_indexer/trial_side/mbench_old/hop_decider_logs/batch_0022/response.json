@@ -1,0 +1,41 @@
+{
+  "batch_index": 22,
+  "raw_response": "[\n  {\n    \"concept_id\": \"40739000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"40739000\",\n    \"stop_at_label\": \"Dysphagia\",\n    \"rationale\": \"Ancestors are generic ('disorder'/'finding'). Tight timeframe and clause size favor keeping specificity. H=0 preserves intent.\"\n  },\n  {\n    \"concept_id\": \"449153001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"276803003\",\n    \"stop_at_label\": \"Adenocarcinoma of esophagus\",\n    \"rationale\": \"Parent preserves organ and malignancy histology, is not generic, and timeframe is tight with small clauses. H=1 fits MGSR.\"\n  },\n  {\n    \"concept_id\": \"721628002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"722533007\",\n    \"stop_at_label\": \"Primary malignant neoplasm of esophagogastric junction\",\n    \"rationale\": \"Generalizes histology while preserving site and primary status. Specific enough; timeframe tight; MGSR at H=1.\"\n  },\n  {\n    \"concept_id\": \"28111002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"70076002\",\n    \"stop_at_label\": \"Rhinitis\",\n    \"rationale\": \"Rhinitis retains upper respiratory inflammatory mechanism. Other parents are generic or morphological. Timeframe supports H=1.\"\n  },\n  {\n    \"concept_id\": \"84114007\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"84114007\",\n    \"stop_at_label\": \"Heart failure\",\n    \"rationale\": \"Ancestors are generic ('disorder'/'disease'/'finding'); exclusions outweigh inclusions. Keep specificity with H=0.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "40739000",
+      "hops": 0,
+      "rationale": "Ancestors are generic ('disorder'/'finding'). Tight timeframe and clause size favor keeping specificity. H=0 preserves intent.",
+      "stop_at_concept_id": "40739000",
+      "stop_at_label": "Dysphagia"
+    },
+    {
+      "concept_id": "449153001",
+      "hops": 1,
+      "rationale": "Parent preserves organ and malignancy histology, is not generic, and timeframe is tight with small clauses. H=1 fits MGSR.",
+      "stop_at_concept_id": "276803003",
+      "stop_at_label": "Adenocarcinoma of esophagus"
+    },
+    {
+      "concept_id": "721628002",
+      "hops": 1,
+      "rationale": "Generalizes histology while preserving site and primary status. Specific enough; timeframe tight; MGSR at H=1.",
+      "stop_at_concept_id": "722533007",
+      "stop_at_label": "Primary malignant neoplasm of esophagogastric junction"
+    },
+    {
+      "concept_id": "28111002",
+      "hops": 1,
+      "rationale": "Rhinitis retains upper respiratory inflammatory mechanism. Other parents are generic or morphological. Timeframe supports H=1.",
+      "stop_at_concept_id": "70076002",
+      "stop_at_label": "Rhinitis"
+    },
+    {
+      "concept_id": "84114007",
+      "hops": 0,
+      "rationale": "Ancestors are generic ('disorder'/'disease'/'finding'); exclusions outweigh inclusions. Keep specificity with H=0.",
+      "stop_at_concept_id": "84114007",
+      "stop_at_label": "Heart failure"
+    }
+  ]
+}

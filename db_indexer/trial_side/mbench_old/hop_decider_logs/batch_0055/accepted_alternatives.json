@@ -1,0 +1,90 @@
+[
+  {
+    "concept_id": "102506008",
+    "alt_concept_id": "102499006",
+    "hop": 1,
+    "alt_label": "Fit and well",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:23:44"
+  },
+  {
+    "concept_id": "102588006",
+    "alt_concept_id": "29857009",
+    "hop": 1,
+    "alt_label": "Chest pain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:23:44"
+  },
+  {
+    "concept_id": "233604007",
+    "alt_concept_id": "233604007",
+    "hop": 0,
+    "alt_label": "Pneumonia",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:23:44"
+  },
+  {
+    "concept_id": "38907003",
+    "alt_concept_id": "721265008",
+    "hop": 1,
+    "alt_label": "Infection of skin and/or mucous membrane caused by Herpes virus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:23:44"
+  },
+  {
+    "concept_id": "38907003",
+    "alt_concept_id": "309465005",
+    "hop": 1,
+    "alt_label": "Varicella-zoster virus infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:23:44"
+  },
+  {
+    "concept_id": "38907003",
+    "alt_concept_id": "11263005",
+    "hop": 1,
+    "alt_label": "Vascular disease of the skin",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:23:44"
+  },
+  {
+    "concept_id": "38907003",
+    "alt_concept_id": "79893008",
+    "hop": 1,
+    "alt_label": "Vesicular eruption",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:23:44"
+  },
+  {
+    "concept_id": "38907003",
+    "alt_concept_id": "312135004",
+    "hop": 1,
+    "alt_label": "Viral cardiovascular infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:23:44"
+  },
+  {
+    "concept_id": "38907003",
+    "alt_concept_id": "49882001",
+    "hop": 1,
+    "alt_label": "Viral exanthem",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:23:44"
+  },
+  {
+    "concept_id": "425464007",
+    "alt_concept_id": "408678008",
+    "hop": 1,
+    "alt_label": "Healthcare associated infectious disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:23:44"
+  },
+  {
+    "concept_id": "425464007",
+    "alt_concept_id": "312342009",
+    "hop": 1,
+    "alt_label": "Infective pneumonia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:23:44"
+  }
+]

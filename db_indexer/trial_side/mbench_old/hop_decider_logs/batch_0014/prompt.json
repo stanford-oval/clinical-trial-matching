@@ -1,0 +1,298 @@
+{
+  "batch_index": 14,
+  "offset": 65,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "118599009",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "118600007",
+            "label": "Malignant lymphoma (clinical)"
+          },
+          {
+            "concept_id": "118600007",
+            "label": "Malignant lymphoma (clinical)"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "277466009",
+            "label": "Lymphoproliferative disorder"
+          },
+          {
+            "concept_id": "363346000",
+            "label": "Malignant neoplastic disease"
+          },
+          {
+            "concept_id": "414825006",
+            "label": "Neoplasm of hematopoietic cell type"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "414026006",
+            "label": "Disorder of hematopoietic morphology"
+          },
+          {
+            "concept_id": "55342001",
+            "label": "Neoplastic disease"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "399981008",
+            "label": "Neoplasm and/or hamartoma"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "277606000",
+            "label": "Lymphoreticular tumor"
+          },
+          {
+            "concept_id": "269475001",
+            "label": "Malignant tumor of lymphoid hemopoietic and related tissue"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "5880005",
+      "features": {
+        "depth_from_root": 3,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "315306007",
+            "label": "Examination by method"
+          },
+          {
+            "concept_id": "315306007",
+            "label": "Examination by method"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "386053000",
+            "label": "Evaluation procedure"
+          },
+          {
+            "concept_id": "108217004",
+            "label": "Interview, history AND/OR physical examination"
+          },
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "12658000",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "609638001",
+            "label": "Operation on pelvic region of trunk"
+          },
+          {
+            "concept_id": "609638001",
+            "label": "Operation on pelvic region of trunk"
+          },
+          {
+            "concept_id": "118675001",
+            "label": "Procedure on female genital system"
+          },
+          {
+            "concept_id": "118675001",
+            "label": "Procedure on female genital system"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          },
+          {
+            "concept_id": "771329004",
+            "label": "Procedure on body region"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "74943008",
+            "label": "Operation on trunk"
+          },
+          {
+            "concept_id": "118674002",
+            "label": "Procedure on genitourinary system"
+          },
+          {
+            "concept_id": "609637006",
+            "label": "Procedure on pelvic region of trunk"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118664000",
+            "label": "Procedure on body system"
+          },
+          {
+            "concept_id": "118694006",
+            "label": "Procedure on trunk"
+          },
+          {
+            "concept_id": "387713003",
+            "label": "Surgical procedure"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "387713003",
+      "features": {
+        "depth_from_root": 3,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 0.333,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 5,
+        "exclusion_trials": 6
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "307496006",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "128139000",
+            "label": "Inflammatory disorder"
+          },
+          {
+            "concept_id": "128139000",
+            "label": "Inflammatory disorder"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 15716,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"118599009\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"118600007\",\n          \"label\": \"Malignant lymphoma (clinical)\"\n        },\n        {\n          \"concept_id\": \"118600007\",\n          \"label\": \"Malignant lymphoma (clinical)\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"277466009\",\n          \"label\": \"Lymphoproliferative disorder\"\n        },\n        {\n          \"concept_id\": \"363346000\",\n          \"label\": \"Malignant neoplastic disease\"\n        },\n        {\n          \"concept_id\": \"414825006\",\n          \"label\": \"Neoplasm of hematopoietic cell type\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"414026006\",\n          \"label\": \"Disorder of hematopoietic morphology\"\n        },\n        {\n          \"concept_id\": \"55342001\",\n          \"label\": \"Neoplastic disease\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"399981008\",\n          \"label\": \"Neoplasm and/or hamartoma\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"277606000\",\n          \"label\": \"Lymphoreticular tumor\"\n        },\n        {\n          \"concept_id\": \"269475001\",\n          \"label\": \"Malignant tumor of lymphoid hemopoietic and related tissue\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"5880005\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"315306007\",\n          \"label\": \"Examination by method\"\n        },\n        {\n          \"concept_id\": \"315306007\",\n          \"label\": \"Examination by method\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"386053000\",\n          \"label\": \"Evaluation procedure\"\n        },\n        {\n          \"concept_id\": \"108217004\",\n          \"label\": \"Interview, history AND/OR physical examination\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"12658000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"609638001\",\n          \"label\": \"Operation on pelvic region of trunk\"\n        },\n        {\n          \"concept_id\": \"609638001\",\n          \"label\": \"Operation on pelvic region of trunk\"\n        },\n        {\n          \"concept_id\": \"118675001\",\n          \"label\": \"Procedure on female genital system\"\n        },\n        {\n          \"concept_id\": \"118675001\",\n          \"label\": \"Procedure on female genital system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"74943008\",\n          \"label\": \"Operation on trunk\"\n        },\n        {\n          \"concept_id\": \"118674002\",\n          \"label\": \"Procedure on genitourinary system\"\n        },\n        {\n          \"concept_id\": \"609637006\",\n          \"label\": \"Procedure on pelvic region of trunk\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"387713003\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.333,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 5,\n      \"exclusion_trials\": 6\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"307496006\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"118599009\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"118600007\",\n          \"label\": \"Malignant lymphoma (clinical)\"\n        },\n        {\n          \"concept_id\": \"118600007\",\n          \"label\": \"Malignant lymphoma (clinical)\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"277466009\",\n          \"label\": \"Lymphoproliferative disorder\"\n        },\n        {\n          \"concept_id\": \"363346000\",\n          \"label\": \"Malignant neoplastic disease\"\n        },\n        {\n          \"concept_id\": \"414825006\",\n          \"label\": \"Neoplasm of hematopoietic cell type\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"414026006\",\n          \"label\": \"Disorder of hematopoietic morphology\"\n        },\n        {\n          \"concept_id\": \"55342001\",\n          \"label\": \"Neoplastic disease\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"399981008\",\n          \"label\": \"Neoplasm and/or hamartoma\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"277606000\",\n          \"label\": \"Lymphoreticular tumor\"\n        },\n        {\n          \"concept_id\": \"269475001\",\n          \"label\": \"Malignant tumor of lymphoid hemopoietic and related tissue\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"5880005\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"315306007\",\n          \"label\": \"Examination by method\"\n        },\n        {\n          \"concept_id\": \"315306007\",\n          \"label\": \"Examination by method\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"386053000\",\n          \"label\": \"Evaluation procedure\"\n        },\n        {\n          \"concept_id\": \"108217004\",\n          \"label\": \"Interview, history AND/OR physical examination\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"12658000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"609638001\",\n          \"label\": \"Operation on pelvic region of trunk\"\n        },\n        {\n          \"concept_id\": \"609638001\",\n          \"label\": \"Operation on pelvic region of trunk\"\n        },\n        {\n          \"concept_id\": \"118675001\",\n          \"label\": \"Procedure on female genital system\"\n        },\n        {\n          \"concept_id\": \"118675001\",\n          \"label\": \"Procedure on female genital system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"74943008\",\n          \"label\": \"Operation on trunk\"\n        },\n        {\n          \"concept_id\": \"118674002\",\n          \"label\": \"Procedure on genitourinary system\"\n        },\n        {\n          \"concept_id\": \"609637006\",\n          \"label\": \"Procedure on pelvic region of trunk\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"387713003\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.333,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 5,\n      \"exclusion_trials\": 6\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"307496006\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ]\n    }\n  }\n]\n"
+}

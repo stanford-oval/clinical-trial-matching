@@ -1,0 +1,558 @@
+{
+  "batch_index": 9,
+  "offset": 40,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "394659003",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 0.8,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 9,
+        "exclusion_trials": 4
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "413439005",
+            "label": "Acute ischemic heart disease"
+          },
+          {
+            "concept_id": "413439005",
+            "label": "Acute ischemic heart disease"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "609622007",
+            "label": "Disorder of thoracic segment of trunk"
+          },
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "128487001",
+            "label": "Acute disease of cardiovascular system"
+          },
+          {
+            "concept_id": "56265001",
+            "label": "Heart disease"
+          },
+          {
+            "concept_id": "128599005",
+            "label": "Structural disorder of heart"
+          },
+          {
+            "concept_id": "609411003",
+            "label": "Traumatic and/or non-traumatic injury of anatomical site"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "2704003",
+            "label": "Acute disease"
+          },
+          {
+            "concept_id": "301095005",
+            "label": "Cardiac finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "399902003",
+            "label": "Disorder of body cavity"
+          },
+          {
+            "concept_id": "49601007",
+            "label": "Disorder of cardiovascular system"
+          },
+          {
+            "concept_id": "49483002",
+            "label": "Disorder of mediastinum"
+          },
+          {
+            "concept_id": "417163006",
+            "label": "Traumatic AND/OR non-traumatic injury"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "127337006",
+            "label": "Acute heart disease"
+          },
+          {
+            "concept_id": "414545008",
+            "label": "Ischemic heart disease"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "106063007",
+            "label": "Cardiovascular finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118946009",
+            "label": "Disorder of thorax"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "301296002",
+            "label": "Mediastinal finding"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "233947005",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 5,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "233946001",
+            "label": "Large vessel pulmonary hypertension"
+          },
+          {
+            "concept_id": "233946001",
+            "label": "Large vessel pulmonary hypertension"
+          },
+          {
+            "concept_id": "697896007",
+            "label": "Precapillary pulmonary hypertension"
+          },
+          {
+            "concept_id": "697896007",
+            "label": "Precapillary pulmonary hypertension"
+          },
+          {
+            "concept_id": "69357003",
+            "label": "Pulmonary thrombosis"
+          },
+          {
+            "concept_id": "69357003",
+            "label": "Pulmonary thrombosis"
+          },
+          {
+            "concept_id": "88223008",
+            "label": "Secondary pulmonary hypertension"
+          },
+          {
+            "concept_id": "88223008",
+            "label": "Secondary pulmonary hypertension"
+          },
+          {
+            "concept_id": "371039008",
+            "label": "Thromboembolic disorder"
+          },
+          {
+            "concept_id": "371039008",
+            "label": "Thromboembolic disorder"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "609623002",
+            "label": "Finding of upper trunk"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "106063007",
+            "label": "Cardiovascular finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "609622007",
+            "label": "Disorder of thoracic segment of trunk"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "248402002",
+            "label": "General finding of soft tissue"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "39785005",
+            "label": "Disorder of pulmonary circulation"
+          },
+          {
+            "concept_id": "414086009",
+            "label": "Embolism"
+          },
+          {
+            "concept_id": "70995007",
+            "label": "Pulmonary hypertension"
+          },
+          {
+            "concept_id": "233941006",
+            "label": "Solitary pulmonary hypertension"
+          },
+          {
+            "concept_id": "439129009",
+            "label": "Thrombosis of blood vessel"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "373434004",
+            "label": "Disorder of blood vessels of thorax"
+          },
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "239953001",
+            "label": "Soft tissue lesion"
+          },
+          {
+            "concept_id": "439127006",
+            "label": "Thrombosis"
+          },
+          {
+            "concept_id": "27550009",
+            "label": "Vascular disorder"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "21829004",
+            "label": "Blood vessel finding"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "49601007",
+            "label": "Disorder of cardiovascular system"
+          },
+          {
+            "concept_id": "19660004",
+            "label": "Disorder of soft tissue"
+          },
+          {
+            "concept_id": "118946009",
+            "label": "Disorder of thorax"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "102587001",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "29857009",
+            "label": "Chest pain"
+          },
+          {
+            "concept_id": "29857009",
+            "label": "Chest pain"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "699697007",
+            "label": "Finding of sensation by site"
+          },
+          {
+            "concept_id": "22253000",
+            "label": "Pain"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "609623002",
+            "label": "Finding of upper trunk"
+          },
+          {
+            "concept_id": "279001004",
+            "label": "Pain finding at anatomical site"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "102957003",
+            "label": "Neurological finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "301366005",
+            "label": "Pain of truncal structure"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "276435006",
+            "label": "Pain / sensation finding"
+          },
+          {
+            "concept_id": "106147001",
+            "label": "Sensory nervous system finding"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "78275009",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 4,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "111489007",
+            "label": "Breathing-related sleep disorder"
+          },
+          {
+            "concept_id": "111489007",
+            "label": "Breathing-related sleep disorder"
+          },
+          {
+            "concept_id": "79688008",
+            "label": "Respiratory obstruction"
+          },
+          {
+            "concept_id": "79688008",
+            "label": "Respiratory obstruction"
+          },
+          {
+            "concept_id": "73430006",
+            "label": "Sleep apnea"
+          },
+          {
+            "concept_id": "73430006",
+            "label": "Sleep apnea"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "301282008",
+            "label": "Finding of respiration"
+          },
+          {
+            "concept_id": "118222006",
+            "label": "General finding of observation of patient"
+          },
+          {
+            "concept_id": "118227000",
+            "label": "Vital signs finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "106168000",
+            "label": "Finding related to sleep"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          },
+          {
+            "concept_id": "106049001",
+            "label": "Respiratory rate AND/OR rhythm finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          },
+          {
+            "concept_id": "82832008",
+            "label": "General body state finding"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "1023001",
+            "label": "Apnea"
+          },
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "39898005",
+            "label": "Sleep disorder"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "167030002",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "442096005",
+            "label": "Measurement finding outside reference range"
+          },
+          {
+            "concept_id": "442096005",
+            "label": "Measurement finding outside reference range"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "441742003",
+            "label": "Evaluation finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "118245000",
+            "label": "Measurement finding"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 28762,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"394659003\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.8,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 9,\n      \"exclusion_trials\": 4\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"413439005\",\n          \"label\": \"Acute ischemic heart disease\"\n        },\n        {\n          \"concept_id\": \"413439005\",\n          \"label\": \"Acute ischemic heart disease\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"128487001\",\n          \"label\": \"Acute disease of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"56265001\",\n          \"label\": \"Heart disease\"\n        },\n        {\n          \"concept_id\": \"128599005\",\n          \"label\": \"Structural disorder of heart\"\n        },\n        {\n          \"concept_id\": \"609411003\",\n          \"label\": \"Traumatic and/or non-traumatic injury of anatomical site\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"2704003\",\n          \"label\": \"Acute disease\"\n        },\n        {\n          \"concept_id\": \"301095005\",\n          \"label\": \"Cardiac finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"399902003\",\n          \"label\": \"Disorder of body cavity\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"49483002\",\n          \"label\": \"Disorder of mediastinum\"\n        },\n        {\n          \"concept_id\": \"417163006\",\n          \"label\": \"Traumatic AND/OR non-traumatic injury\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"127337006\",\n          \"label\": \"Acute heart disease\"\n        },\n        {\n          \"concept_id\": \"414545008\",\n          \"label\": \"Ischemic heart disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301296002\",\n          \"label\": \"Mediastinal finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"233947005\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 5,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"233946001\",\n          \"label\": \"Large vessel pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"233946001\",\n          \"label\": \"Large vessel pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"697896007\",\n          \"label\": \"Precapillary pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"697896007\",\n          \"label\": \"Precapillary pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"69357003\",\n          \"label\": \"Pulmonary thrombosis\"\n        },\n        {\n          \"concept_id\": \"69357003\",\n          \"label\": \"Pulmonary thrombosis\"\n        },\n        {\n          \"concept_id\": \"88223008\",\n          \"label\": \"Secondary pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"88223008\",\n          \"label\": \"Secondary pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"371039008\",\n          \"label\": \"Thromboembolic disorder\"\n        },\n        {\n          \"concept_id\": \"371039008\",\n          \"label\": \"Thromboembolic disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"39785005\",\n          \"label\": \"Disorder of pulmonary circulation\"\n        },\n        {\n          \"concept_id\": \"414086009\",\n          \"label\": \"Embolism\"\n        },\n        {\n          \"concept_id\": \"70995007\",\n          \"label\": \"Pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"233941006\",\n          \"label\": \"Solitary pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"439129009\",\n          \"label\": \"Thrombosis of blood vessel\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"373434004\",\n          \"label\": \"Disorder of blood vessels of thorax\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"239953001\",\n          \"label\": \"Soft tissue lesion\"\n        },\n        {\n          \"concept_id\": \"439127006\",\n          \"label\": \"Thrombosis\"\n        },\n        {\n          \"concept_id\": \"27550009\",\n          \"label\": \"Vascular disorder\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"21829004\",\n          \"label\": \"Blood vessel finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"102587001\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"29857009\",\n          \"label\": \"Chest pain\"\n        },\n        {\n          \"concept_id\": \"29857009\",\n          \"label\": \"Chest pain\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"78275009\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 4,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"111489007\",\n          \"label\": \"Breathing-related sleep disorder\"\n        },\n        {\n          \"concept_id\": \"111489007\",\n          \"label\": \"Breathing-related sleep disorder\"\n        },\n        {\n          \"concept_id\": \"79688008\",\n          \"label\": \"Respiratory obstruction\"\n        },\n        {\n          \"concept_id\": \"79688008\",\n          \"label\": \"Respiratory obstruction\"\n        },\n        {\n          \"concept_id\": \"73430006\",\n          \"label\": \"Sleep apnea\"\n        },\n        {\n          \"concept_id\": \"73430006\",\n          \"label\": \"Sleep apnea\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301282008\",\n          \"label\": \"Finding of respiration\"\n        },\n        {\n          \"concept_id\": \"118222006\",\n          \"label\": \"General finding of observation of patient\"\n        },\n        {\n          \"concept_id\": \"118227000\",\n          \"label\": \"Vital signs finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"106168000\",\n          \"label\": \"Finding related to sleep\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        },\n        {\n          \"concept_id\": \"106049001\",\n          \"label\": \"Respiratory rate AND/OR rhythm finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"82832008\",\n          \"label\": \"General body state finding\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"1023001\",\n          \"label\": \"Apnea\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"39898005\",\n          \"label\": \"Sleep disorder\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"167030002\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"442096005\",\n          \"label\": \"Measurement finding outside reference range\"\n        },\n        {\n          \"concept_id\": \"442096005\",\n          \"label\": \"Measurement finding outside reference range\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"441742003\",\n          \"label\": \"Evaluation finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118245000\",\n          \"label\": \"Measurement finding\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"394659003\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.8,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 9,\n      \"exclusion_trials\": 4\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"413439005\",\n          \"label\": \"Acute ischemic heart disease\"\n        },\n        {\n          \"concept_id\": \"413439005\",\n          \"label\": \"Acute ischemic heart disease\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"128487001\",\n          \"label\": \"Acute disease of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"56265001\",\n          \"label\": \"Heart disease\"\n        },\n        {\n          \"concept_id\": \"128599005\",\n          \"label\": \"Structural disorder of heart\"\n        },\n        {\n          \"concept_id\": \"609411003\",\n          \"label\": \"Traumatic and/or non-traumatic injury of anatomical site\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"2704003\",\n          \"label\": \"Acute disease\"\n        },\n        {\n          \"concept_id\": \"301095005\",\n          \"label\": \"Cardiac finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"399902003\",\n          \"label\": \"Disorder of body cavity\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"49483002\",\n          \"label\": \"Disorder of mediastinum\"\n        },\n        {\n          \"concept_id\": \"417163006\",\n          \"label\": \"Traumatic AND/OR non-traumatic injury\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"127337006\",\n          \"label\": \"Acute heart disease\"\n        },\n        {\n          \"concept_id\": \"414545008\",\n          \"label\": \"Ischemic heart disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301296002\",\n          \"label\": \"Mediastinal finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"233947005\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 5,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"233946001\",\n          \"label\": \"Large vessel pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"233946001\",\n          \"label\": \"Large vessel pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"697896007\",\n          \"label\": \"Precapillary pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"697896007\",\n          \"label\": \"Precapillary pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"69357003\",\n          \"label\": \"Pulmonary thrombosis\"\n        },\n        {\n          \"concept_id\": \"69357003\",\n          \"label\": \"Pulmonary thrombosis\"\n        },\n        {\n          \"concept_id\": \"88223008\",\n          \"label\": \"Secondary pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"88223008\",\n          \"label\": \"Secondary pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"371039008\",\n          \"label\": \"Thromboembolic disorder\"\n        },\n        {\n          \"concept_id\": \"371039008\",\n          \"label\": \"Thromboembolic disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"39785005\",\n          \"label\": \"Disorder of pulmonary circulation\"\n        },\n        {\n          \"concept_id\": \"414086009\",\n          \"label\": \"Embolism\"\n        },\n        {\n          \"concept_id\": \"70995007\",\n          \"label\": \"Pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"233941006\",\n          \"label\": \"Solitary pulmonary hypertension\"\n        },\n        {\n          \"concept_id\": \"439129009\",\n          \"label\": \"Thrombosis of blood vessel\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"373434004\",\n          \"label\": \"Disorder of blood vessels of thorax\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"239953001\",\n          \"label\": \"Soft tissue lesion\"\n        },\n        {\n          \"concept_id\": \"439127006\",\n          \"label\": \"Thrombosis\"\n        },\n        {\n          \"concept_id\": \"27550009\",\n          \"label\": \"Vascular disorder\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"21829004\",\n          \"label\": \"Blood vessel finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"102587001\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"29857009\",\n          \"label\": \"Chest pain\"\n        },\n        {\n          \"concept_id\": \"29857009\",\n          \"label\": \"Chest pain\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"78275009\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 4,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"111489007\",\n          \"label\": \"Breathing-related sleep disorder\"\n        },\n        {\n          \"concept_id\": \"111489007\",\n          \"label\": \"Breathing-related sleep disorder\"\n        },\n        {\n          \"concept_id\": \"79688008\",\n          \"label\": \"Respiratory obstruction\"\n        },\n        {\n          \"concept_id\": \"79688008\",\n          \"label\": \"Respiratory obstruction\"\n        },\n        {\n          \"concept_id\": \"73430006\",\n          \"label\": \"Sleep apnea\"\n        },\n        {\n          \"concept_id\": \"73430006\",\n          \"label\": \"Sleep apnea\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301282008\",\n          \"label\": \"Finding of respiration\"\n        },\n        {\n          \"concept_id\": \"118222006\",\n          \"label\": \"General finding of observation of patient\"\n        },\n        {\n          \"concept_id\": \"118227000\",\n          \"label\": \"Vital signs finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"106168000\",\n          \"label\": \"Finding related to sleep\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        },\n        {\n          \"concept_id\": \"106049001\",\n          \"label\": \"Respiratory rate AND/OR rhythm finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"82832008\",\n          \"label\": \"General body state finding\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"1023001\",\n          \"label\": \"Apnea\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"39898005\",\n          \"label\": \"Sleep disorder\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"167030002\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"442096005\",\n          \"label\": \"Measurement finding outside reference range\"\n        },\n        {\n          \"concept_id\": \"442096005\",\n          \"label\": \"Measurement finding outside reference range\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"441742003\",\n          \"label\": \"Evaluation finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118245000\",\n          \"label\": \"Measurement finding\"\n        }\n      ]\n    }\n  }\n]\n"
+}

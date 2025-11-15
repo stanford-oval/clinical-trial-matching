@@ -1,0 +1,66 @@
+[
+  {
+    "concept_id": "162038003",
+    "alt_concept_id": "21522001",
+    "hop": 1,
+    "alt_label": "Abdominal pain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:20:17"
+  },
+  {
+    "concept_id": "169070004",
+    "alt_concept_id": "418891003",
+    "hop": 1,
+    "alt_label": "CT of chest and abdomen",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:20:17"
+  },
+  {
+    "concept_id": "169070004",
+    "alt_concept_id": "60654006",
+    "hop": 1,
+    "alt_label": "Diagnostic radiography of abdomen",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:20:17"
+  },
+  {
+    "concept_id": "197125005",
+    "alt_concept_id": "128333008",
+    "hop": 1,
+    "alt_label": "Diarrheal disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:20:17"
+  },
+  {
+    "concept_id": "197125005",
+    "alt_concept_id": "10743008",
+    "hop": 1,
+    "alt_label": "Irritable bowel syndrome",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:20:17"
+  },
+  {
+    "concept_id": "22253000",
+    "alt_concept_id": "22253000",
+    "hop": 0,
+    "alt_label": "Pain",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:20:17"
+  },
+  {
+    "concept_id": "286967008",
+    "alt_concept_id": "85189001",
+    "hop": 1,
+    "alt_label": "Acute appendicitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:20:17"
+  },
+  {
+    "concept_id": "286967008",
+    "alt_concept_id": "303078007",
+    "hop": 1,
+    "alt_label": "Perforation of large intestine",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:20:17"
+  }
+]

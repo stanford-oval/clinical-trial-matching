@@ -1,0 +1,1 @@
+datasette ${SATIR_DATA_ROOT}/build/trial.db -o

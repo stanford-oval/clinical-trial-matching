@@ -1,0 +1,41 @@
+{
+  "batch_index": 23,
+  "raw_response": "[\n  {\n    \"concept_id\": \"263019000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"263017003\",\n    \"stop_at_label\": \"Dislocation of joint of upper limb\",\n    \"rationale\": \"Generalizes to upper-limb joint dislocation, preserving mechanism and body region. Avoids generic 'disorder' ancestors. Tight timeframe and small clause favor H=1.\"\n  },\n  {\n    \"concept_id\": \"63697000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"63697000\",\n    \"stop_at_label\": \"Specific cardiovascular device surgery\",\n    \"rationale\": \"All ancestors are generic and include banned 'procedure' labels. Depth is shallow; to preserve specificity and intent, stay at the requirement concept.\"\n  },\n  {\n    \"concept_id\": \"372733002\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"372733002\",\n    \"stop_at_label\": \"Angiotensin-converting enzyme inhibitor\",\n    \"rationale\": \"Parents (enzyme inhibitor, hypotensive agent) are too broad and dilute mechanism/class. Keeping ACE inhibitors preserves pharmacologic intent and cardiovascular relevance.\"\n  },\n  {\n    \"concept_id\": \"76009000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"118155006\",\n    \"stop_at_label\": \"Gastrointestinal tract endoscopy\",\n    \"rationale\": \"Selecting gastrointestinal tract endoscopy preserves modality and organ system, avoiding generic 'procedure' ancestors. Balanced inclusion/exclusion suggests conservative generalization.\"\n  },\n  {\n    \"concept_id\": \"372817009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"372540003\",\n    \"stop_at_label\": \"Anthracycline\",\n    \"rationale\": \"Anthracycline preserves antineoplastic class and mechanism; broader categories (antineoplastic agent, chemical) are too generic. Single parent and specific class favor H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "263019000",
+      "hops": 1,
+      "rationale": "Generalizes to upper-limb joint dislocation, preserving mechanism and body region. Avoids generic 'disorder' ancestors. Tight timeframe and small clause favor H",
+      "stop_at_concept_id": "263017003",
+      "stop_at_label": "Dislocation of joint of upper limb"
+    },
+    {
+      "concept_id": "63697000",
+      "hops": 0,
+      "rationale": "All ancestors are generic and include banned 'procedure' labels. Depth is shallow; to preserve specificity and intent, stay at the requirement concept.",
+      "stop_at_concept_id": "63697000",
+      "stop_at_label": "Specific cardiovascular device surgery"
+    },
+    {
+      "concept_id": "372733002",
+      "hops": 0,
+      "rationale": "Parents (enzyme inhibitor, hypotensive agent) are too broad and dilute mechanism/class. Keeping ACE inhibitors preserves pharmacologic intent and cardiovascular",
+      "stop_at_concept_id": "372733002",
+      "stop_at_label": "Angiotensin-converting enzyme inhibitor"
+    },
+    {
+      "concept_id": "76009000",
+      "hops": 1,
+      "rationale": "Selecting gastrointestinal tract endoscopy preserves modality and organ system, avoiding generic 'procedure' ancestors. Balanced inclusion/exclusion suggests co",
+      "stop_at_concept_id": "118155006",
+      "stop_at_label": "Gastrointestinal tract endoscopy"
+    },
+    {
+      "concept_id": "372817009",
+      "hops": 1,
+      "rationale": "Anthracycline preserves antineoplastic class and mechanism; broader categories (antineoplastic agent, chemical) are too generic. Single parent and specific clas",
+      "stop_at_concept_id": "372540003",
+      "stop_at_label": "Anthracycline"
+    }
+  ]
+}

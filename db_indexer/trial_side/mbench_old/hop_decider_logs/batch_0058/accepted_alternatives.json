@@ -1,0 +1,82 @@
+[
+  {
+    "concept_id": "173422009",
+    "alt_concept_id": "173422009",
+    "hop": 0,
+    "alt_label": "Tonsillectomy",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:31:01"
+  },
+  {
+    "concept_id": "240477008",
+    "alt_concept_id": "37657006",
+    "hop": 1,
+    "alt_label": "Disorder of esophagus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:01"
+  },
+  {
+    "concept_id": "240477008",
+    "alt_concept_id": "715852004",
+    "hop": 1,
+    "alt_label": "Gastrointestinal infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:01"
+  },
+  {
+    "concept_id": "240477008",
+    "alt_concept_id": "88594005",
+    "hop": 1,
+    "alt_label": "Herpes simplex",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:01"
+  },
+  {
+    "concept_id": "240477008",
+    "alt_concept_id": "312131008",
+    "hop": 1,
+    "alt_label": "Viral infection of the digestive tract",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:01"
+  },
+  {
+    "concept_id": "302912005",
+    "alt_concept_id": "57781000",
+    "hop": 1,
+    "alt_label": "Disorder of vocal cord",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:01"
+  },
+  {
+    "concept_id": "302912005",
+    "alt_concept_id": "89927005",
+    "hop": 1,
+    "alt_label": "Paralysis of larynx",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:01"
+  },
+  {
+    "concept_id": "392233007",
+    "alt_concept_id": "446401003",
+    "hop": 1,
+    "alt_label": "Drainage of abscess of head",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:01"
+  },
+  {
+    "concept_id": "392233007",
+    "alt_concept_id": "32005000",
+    "hop": 1,
+    "alt_label": "Drainage of peritonsillar tissues",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:01"
+  },
+  {
+    "concept_id": "409609008",
+    "alt_concept_id": "409609008",
+    "hop": 0,
+    "alt_label": "Radiologic infiltrate of lung",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:31:01"
+  }
+]

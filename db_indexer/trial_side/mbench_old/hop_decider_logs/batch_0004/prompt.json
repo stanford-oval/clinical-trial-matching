@@ -1,0 +1,412 @@
+{
+  "batch_index": 4,
+  "offset": 15,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "38341003",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 5,
+        "exclusion_trials": 5
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "366157005",
+            "label": "Cardiovascular measurement - finding"
+          },
+          {
+            "concept_id": "366157005",
+            "label": "Cardiovascular measurement - finding"
+          },
+          {
+            "concept_id": "49601007",
+            "label": "Disorder of cardiovascular system"
+          },
+          {
+            "concept_id": "49601007",
+            "label": "Disorder of cardiovascular system"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "106063007",
+            "label": "Cardiovascular finding"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "308116003",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "432102000",
+            "label": "Administration of substance"
+          },
+          {
+            "concept_id": "432102000",
+            "label": "Administration of substance"
+          },
+          {
+            "concept_id": "309513005",
+            "label": "Cardiovascular therapy"
+          },
+          {
+            "concept_id": "309513005",
+            "label": "Cardiovascular therapy"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "362961001",
+            "label": "Procedure by intent"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "277132007",
+            "label": "Therapeutic procedure"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "107733003",
+            "label": "Introduction procedure"
+          },
+          {
+            "concept_id": "243121000",
+            "label": "Medical therapy"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "80943009",
+      "features": {
+        "depth_from_root": 3,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 2
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "363788007",
+            "label": "Clinical history/examination observable"
+          },
+          {
+            "concept_id": "363788007",
+            "label": "Clinical history/examination observable"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "363787002",
+            "label": "Observable entity"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "230738008",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "62914000",
+            "label": "Cerebrovascular disease"
+          },
+          {
+            "concept_id": "62914000",
+            "label": "Cerebrovascular disease"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "106063007",
+            "label": "Cardiovascular finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "248402002",
+            "label": "General finding of soft tissue"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "21829004",
+            "label": "Blood vessel finding"
+          },
+          {
+            "concept_id": "246556002",
+            "label": "Central nervous system finding"
+          },
+          {
+            "concept_id": "49601007",
+            "label": "Disorder of cardiovascular system"
+          },
+          {
+            "concept_id": "118940003",
+            "label": "Disorder of nervous system"
+          },
+          {
+            "concept_id": "19660004",
+            "label": "Disorder of soft tissue"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "23853001",
+            "label": "Disorder of the central nervous system"
+          },
+          {
+            "concept_id": "27550009",
+            "label": "Vascular disorder"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "308546005",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 0.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "47040006",
+            "label": "Disorder of aorta"
+          },
+          {
+            "concept_id": "47040006",
+            "label": "Disorder of aorta"
+          },
+          {
+            "concept_id": "710864009",
+            "label": "Dissection of artery"
+          },
+          {
+            "concept_id": "710864009",
+            "label": "Dissection of artery"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "234003006",
+            "label": "Arterial hemorrhage"
+          },
+          {
+            "concept_id": "473449006",
+            "label": "Disease of non-coronary systemic artery"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "473451005",
+            "label": "Finding of aorta"
+          },
+          {
+            "concept_id": "239953001",
+            "label": "Soft tissue lesion"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "359557001",
+            "label": "Disorder of artery"
+          },
+          {
+            "concept_id": "19660004",
+            "label": "Disorder of soft tissue"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "405539004",
+            "label": "Hemorrhage of blood vessel"
+          },
+          {
+            "concept_id": "400047006",
+            "label": "Peripheral vascular disease"
+          },
+          {
+            "concept_id": "301139003",
+            "label": "Systemic arterial finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "21829004",
+            "label": "Blood vessel finding"
+          },
+          {
+            "concept_id": "106063007",
+            "label": "Cardiovascular finding"
+          },
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "248718009",
+            "label": "Arterial finding"
+          },
+          {
+            "concept_id": "131148009",
+            "label": "Bleeding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "49601007",
+            "label": "Disorder of cardiovascular system"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "248402002",
+            "label": "General finding of soft tissue"
+          },
+          {
+            "concept_id": "27550009",
+            "label": "Vascular disorder"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 21210,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"38341003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 5,\n      \"exclusion_trials\": 5\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"366157005\",\n          \"label\": \"Cardiovascular measurement - finding\"\n        },\n        {\n          \"concept_id\": \"366157005\",\n          \"label\": \"Cardiovascular measurement - finding\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"308116003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"432102000\",\n          \"label\": \"Administration of substance\"\n        },\n        {\n          \"concept_id\": \"432102000\",\n          \"label\": \"Administration of substance\"\n        },\n        {\n          \"concept_id\": \"309513005\",\n          \"label\": \"Cardiovascular therapy\"\n        },\n        {\n          \"concept_id\": \"309513005\",\n          \"label\": \"Cardiovascular therapy\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"362961001\",\n          \"label\": \"Procedure by intent\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"277132007\",\n          \"label\": \"Therapeutic procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"243121000\",\n          \"label\": \"Medical therapy\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"80943009\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"363788007\",\n          \"label\": \"Clinical history/examination observable\"\n        },\n        {\n          \"concept_id\": \"363788007\",\n          \"label\": \"Clinical history/examination observable\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363787002\",\n          \"label\": \"Observable entity\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"230738008\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"62914000\",\n          \"label\": \"Cerebrovascular disease\"\n        },\n        {\n          \"concept_id\": \"62914000\",\n          \"label\": \"Cerebrovascular disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"21829004\",\n          \"label\": \"Blood vessel finding\"\n        },\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"27550009\",\n          \"label\": \"Vascular disorder\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"308546005\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"47040006\",\n          \"label\": \"Disorder of aorta\"\n        },\n        {\n          \"concept_id\": \"47040006\",\n          \"label\": \"Disorder of aorta\"\n        },\n        {\n          \"concept_id\": \"710864009\",\n          \"label\": \"Dissection of artery\"\n        },\n        {\n          \"concept_id\": \"710864009\",\n          \"label\": \"Dissection of artery\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"234003006\",\n          \"label\": \"Arterial hemorrhage\"\n        },\n        {\n          \"concept_id\": \"473449006\",\n          \"label\": \"Disease of non-coronary systemic artery\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"473451005\",\n          \"label\": \"Finding of aorta\"\n        },\n        {\n          \"concept_id\": \"239953001\",\n          \"label\": \"Soft tissue lesion\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"359557001\",\n          \"label\": \"Disorder of artery\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"405539004\",\n          \"label\": \"Hemorrhage of blood vessel\"\n        },\n        {\n          \"concept_id\": \"400047006\",\n          \"label\": \"Peripheral vascular disease\"\n        },\n        {\n          \"concept_id\": \"301139003\",\n          \"label\": \"Systemic arterial finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"21829004\",\n          \"label\": \"Blood vessel finding\"\n        },\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"248718009\",\n          \"label\": \"Arterial finding\"\n        },\n        {\n          \"concept_id\": \"131148009\",\n          \"label\": \"Bleeding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        },\n        {\n          \"concept_id\": \"27550009\",\n          \"label\": \"Vascular disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"38341003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 5,\n      \"exclusion_trials\": 5\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"366157005\",\n          \"label\": \"Cardiovascular measurement - finding\"\n        },\n        {\n          \"concept_id\": \"366157005\",\n          \"label\": \"Cardiovascular measurement - finding\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"308116003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"432102000\",\n          \"label\": \"Administration of substance\"\n        },\n        {\n          \"concept_id\": \"432102000\",\n          \"label\": \"Administration of substance\"\n        },\n        {\n          \"concept_id\": \"309513005\",\n          \"label\": \"Cardiovascular therapy\"\n        },\n        {\n          \"concept_id\": \"309513005\",\n          \"label\": \"Cardiovascular therapy\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"362961001\",\n          \"label\": \"Procedure by intent\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"277132007\",\n          \"label\": \"Therapeutic procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"243121000\",\n          \"label\": \"Medical therapy\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"80943009\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"363788007\",\n          \"label\": \"Clinical history/examination observable\"\n        },\n        {\n          \"concept_id\": \"363788007\",\n          \"label\": \"Clinical history/examination observable\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363787002\",\n          \"label\": \"Observable entity\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"230738008\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"62914000\",\n          \"label\": \"Cerebrovascular disease\"\n        },\n        {\n          \"concept_id\": \"62914000\",\n          \"label\": \"Cerebrovascular disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"21829004\",\n          \"label\": \"Blood vessel finding\"\n        },\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"27550009\",\n          \"label\": \"Vascular disorder\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"308546005\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"47040006\",\n          \"label\": \"Disorder of aorta\"\n        },\n        {\n          \"concept_id\": \"47040006\",\n          \"label\": \"Disorder of aorta\"\n        },\n        {\n          \"concept_id\": \"710864009\",\n          \"label\": \"Dissection of artery\"\n        },\n        {\n          \"concept_id\": \"710864009\",\n          \"label\": \"Dissection of artery\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"234003006\",\n          \"label\": \"Arterial hemorrhage\"\n        },\n        {\n          \"concept_id\": \"473449006\",\n          \"label\": \"Disease of non-coronary systemic artery\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"473451005\",\n          \"label\": \"Finding of aorta\"\n        },\n        {\n          \"concept_id\": \"239953001\",\n          \"label\": \"Soft tissue lesion\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"359557001\",\n          \"label\": \"Disorder of artery\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"405539004\",\n          \"label\": \"Hemorrhage of blood vessel\"\n        },\n        {\n          \"concept_id\": \"400047006\",\n          \"label\": \"Peripheral vascular disease\"\n        },\n        {\n          \"concept_id\": \"301139003\",\n          \"label\": \"Systemic arterial finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"21829004\",\n          \"label\": \"Blood vessel finding\"\n        },\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"248718009\",\n          \"label\": \"Arterial finding\"\n        },\n        {\n          \"concept_id\": \"131148009\",\n          \"label\": \"Bleeding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        },\n        {\n          \"concept_id\": \"27550009\",\n          \"label\": \"Vascular disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  }\n]\n"
+}

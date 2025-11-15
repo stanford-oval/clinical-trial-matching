@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "19943007",
+    "alt_concept_id": "328383001",
+    "hop": 1,
+    "alt_label": "Chronic liver disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:09:13"
+  },
+  {
+    "concept_id": "19943007",
+    "alt_concept_id": "62484002",
+    "hop": 1,
+    "alt_label": "Hepatic fibrosis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:09:13"
+  },
+  {
+    "concept_id": "19943007",
+    "alt_concept_id": "65860006",
+    "hop": 1,
+    "alt_label": "Liver regeneration",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:09:13"
+  },
+  {
+    "concept_id": "302497006",
+    "alt_concept_id": "302497006",
+    "hop": 0,
+    "alt_label": "Hemodialysis",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:09:13"
+  },
+  {
+    "concept_id": "443430002",
+    "alt_concept_id": "118233009",
+    "hop": 1,
+    "alt_label": "Finding of activity of daily living",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:09:13"
+  },
+  {
+    "concept_id": "45007003",
+    "alt_concept_id": "45007003",
+    "hop": 0,
+    "alt_label": "Low blood pressure",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:09:13"
+  },
+  {
+    "concept_id": "702956004",
+    "alt_concept_id": "386806002",
+    "hop": 1,
+    "alt_label": "Impaired cognition",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:09:13"
+  }
+]

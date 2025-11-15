@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "230738008",
+    "alt_concept_id": "230738008",
+    "hop": 0,
+    "alt_label": "Asymptomatic cerebrovascular disease",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 18:56:20"
+  },
+  {
+    "concept_id": "308116003",
+    "alt_concept_id": "432102000",
+    "hop": 1,
+    "alt_label": "Administration of substance",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:56:19"
+  },
+  {
+    "concept_id": "308116003",
+    "alt_concept_id": "309513005",
+    "hop": 1,
+    "alt_label": "Cardiovascular therapy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:56:19"
+  },
+  {
+    "concept_id": "308546005",
+    "alt_concept_id": "47040006",
+    "hop": 1,
+    "alt_label": "Disorder of aorta",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:56:20"
+  },
+  {
+    "concept_id": "308546005",
+    "alt_concept_id": "710864009",
+    "hop": 1,
+    "alt_label": "Dissection of artery",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:56:20"
+  },
+  {
+    "concept_id": "38341003",
+    "alt_concept_id": "38341003",
+    "hop": 0,
+    "alt_label": "Hypertensive disorder",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 18:56:19"
+  },
+  {
+    "concept_id": "80943009",
+    "alt_concept_id": "80943009",
+    "hop": 0,
+    "alt_label": "Risk factor",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 18:56:19"
+  }
+]

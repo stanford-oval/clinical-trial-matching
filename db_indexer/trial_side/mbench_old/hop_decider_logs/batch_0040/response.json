@@ -1,0 +1,41 @@
+{
+  "batch_index": 40,
+  "raw_response": "[\n  {\n    \"concept_id\": \"413838009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"413838009\",\n    \"stop_at_label\": \"(original concept)\",\n    \"rationale\": \"Parents/grandparents are generic disease/disorder categories on the deny-list. To preserve specificity and program intent with tight timeframe, remain at the original concept.\"\n  },\n  {\n    \"concept_id\": \"733312003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"312428002\",\n    \"stop_at_label\": \"Corneal infection\",\n    \"rationale\": \"Corneal infection preserves organ and infectious mechanism, remaining clinically specific. Alternatives either include noninfectious keratitis or become too broad. Tight timeframe and single-member clauses favor a one-hop generalization.\"\n  },\n  {\n    \"concept_id\": \"57434002\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"57434002\",\n    \"stop_at_label\": \"(original concept)\",\n    \"rationale\": \"Generalizing to ‘Radical excision’ loses anatomical site and becomes too broad; higher ancestors are generic procedure categories. Stay specific to maintain intervention coherence.\"\n  },\n  {\n    \"concept_id\": \"302285008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"300331000\",\n    \"stop_at_label\": \"Lesion of liver\",\n    \"rationale\": \"Lesion of liver keeps organ specificity and abnormality class without drifting into generic findings. Tight timeframe and singleton clauses support a one-hop generalization.\"\n  },\n  {\n    \"concept_id\": \"230470007\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"230470007\",\n    \"stop_at_label\": \"(original concept)\",\n    \"rationale\": \"Parents are generic ‘disorder’ categories (deny-list), and higher hops are broad findings or pain categories. To retain clinical specificity (e.g., subtype of headache), stay at the original concept.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "413838009",
+      "hops": 0,
+      "rationale": "Parents/grandparents are generic disease/disorder categories on the deny-list. To preserve specificity and program intent with tight timeframe, remain at the or",
+      "stop_at_concept_id": "413838009",
+      "stop_at_label": "(original concept)"
+    },
+    {
+      "concept_id": "733312003",
+      "hops": 1,
+      "rationale": "Corneal infection preserves organ and infectious mechanism, remaining clinically specific. Alternatives either include noninfectious keratitis or become too bro",
+      "stop_at_concept_id": "312428002",
+      "stop_at_label": "Corneal infection"
+    },
+    {
+      "concept_id": "57434002",
+      "hops": 0,
+      "rationale": "Generalizing to ‘Radical excision’ loses anatomical site and becomes too broad; higher ancestors are generic procedure categories. Stay specific to maintain int",
+      "stop_at_concept_id": "57434002",
+      "stop_at_label": "(original concept)"
+    },
+    {
+      "concept_id": "302285008",
+      "hops": 1,
+      "rationale": "Lesion of liver keeps organ specificity and abnormality class without drifting into generic findings. Tight timeframe and singleton clauses support a one-hop ge",
+      "stop_at_concept_id": "300331000",
+      "stop_at_label": "Lesion of liver"
+    },
+    {
+      "concept_id": "230470007",
+      "hops": 0,
+      "rationale": "Parents are generic ‘disorder’ categories (deny-list), and higher hops are broad findings or pain categories. To retain clinical specificity (e.g., subtype of h",
+      "stop_at_concept_id": "230470007",
+      "stop_at_label": "(original concept)"
+    }
+  ]
+}

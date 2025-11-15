@@ -1,0 +1,450 @@
+{
+  "batch_index": 48,
+  "offset": 235,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "234253006",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "58347006",
+            "label": "Excision of lymph node"
+          },
+          {
+            "concept_id": "58347006",
+            "label": "Excision of lymph node"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "234244004",
+            "label": "Lymphatic, spleen and bone marrow procedures"
+          },
+          {
+            "concept_id": "118685000",
+            "label": "Procedure on hematopoietic system"
+          },
+          {
+            "concept_id": "118686004",
+            "label": "Procedure on immune system"
+          },
+          {
+            "concept_id": "118688003",
+            "label": "Procedure on lymphatic system"
+          },
+          {
+            "concept_id": "129253000",
+            "label": "Procedure on lymphoid organ"
+          },
+          {
+            "concept_id": "387713003",
+            "label": "Surgical procedure"
+          },
+          {
+            "concept_id": "128303001",
+            "label": "Surgical removal"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "65801008",
+            "label": "Excision"
+          },
+          {
+            "concept_id": "363152007",
+            "label": "Immune system surgical procedure"
+          },
+          {
+            "concept_id": "49509003",
+            "label": "Operation on lymphatic structure"
+          },
+          {
+            "concept_id": "107994000",
+            "label": "Operative procedure on hematopoietic system"
+          },
+          {
+            "concept_id": "118890000",
+            "label": "Procedure on lymph node"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "363146006",
+            "label": "Immune system excision"
+          },
+          {
+            "concept_id": "107996003",
+            "label": "Lymphatic system excision"
+          },
+          {
+            "concept_id": "79480008",
+            "label": "Operation on lymph node"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "118664000",
+            "label": "Procedure on body system"
+          },
+          {
+            "concept_id": "118687008",
+            "label": "Procedure on lymphoid system"
+          },
+          {
+            "concept_id": "118717007",
+            "label": "Procedure on organ"
+          },
+          {
+            "concept_id": "118292001",
+            "label": "Removal"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "450743008",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "363820009",
+            "label": "Neurological observable"
+          },
+          {
+            "concept_id": "363820009",
+            "label": "Neurological observable"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "363788007",
+            "label": "Clinical history/examination observable"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "363787002",
+            "label": "Observable entity"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "414396006",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "128545000",
+            "label": "Hernia of abdominal wall"
+          },
+          {
+            "concept_id": "128545000",
+            "label": "Hernia of abdominal wall"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "609627001",
+            "label": "Finding of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "609618002",
+            "label": "Disorder of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "609624008",
+            "label": "Finding of abdomen"
+          },
+          {
+            "concept_id": "248402002",
+            "label": "General finding of soft tissue"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "249561001",
+            "label": "Abdominal organ finding"
+          },
+          {
+            "concept_id": "118948005",
+            "label": "Disorder of abdomen"
+          },
+          {
+            "concept_id": "399986003",
+            "label": "Disorder of body wall"
+          },
+          {
+            "concept_id": "19660004",
+            "label": "Disorder of soft tissue"
+          },
+          {
+            "concept_id": "280133005",
+            "label": "Disorder of soft tissue of trunk"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "118928003",
+            "label": "Disorder of abdominal wall"
+          },
+          {
+            "concept_id": "52515009",
+            "label": "Hernia of abdominal cavity"
+          },
+          {
+            "concept_id": "239953001",
+            "label": "Soft tissue lesion"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "86481000",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "108188006",
+            "label": "Abdomen incision"
+          },
+          {
+            "concept_id": "108188006",
+            "label": "Abdomen incision"
+          },
+          {
+            "concept_id": "386671008",
+            "label": "Abdominal cavity operation"
+          },
+          {
+            "concept_id": "386671008",
+            "label": "Abdominal cavity operation"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "771329004",
+            "label": "Procedure on body region"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "118694006",
+            "label": "Procedure on trunk"
+          },
+          {
+            "concept_id": "387713003",
+            "label": "Surgical procedure"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "21371007",
+            "label": "Operation on abdominal region"
+          },
+          {
+            "concept_id": "119580007",
+            "label": "Trunk incision"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "34896006",
+            "label": "Incision"
+          },
+          {
+            "concept_id": "74943008",
+            "label": "Operation on trunk"
+          },
+          {
+            "concept_id": "118698009",
+            "label": "Procedure on abdomen"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "279084009",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 0.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "247347003",
+            "label": "Discomfort"
+          },
+          {
+            "concept_id": "247347003",
+            "label": "Discomfort"
+          },
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "699697007",
+            "label": "Finding of sensation by site"
+          },
+          {
+            "concept_id": "699697007",
+            "label": "Finding of sensation by site"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "130979001",
+            "label": "Comfort alteration"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "609623002",
+            "label": "Finding of upper trunk"
+          },
+          {
+            "concept_id": "106147001",
+            "label": "Sensory nervous system finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "102957003",
+            "label": "Neurological finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 23140,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"234253006\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"58347006\",\n          \"label\": \"Excision of lymph node\"\n        },\n        {\n          \"concept_id\": \"58347006\",\n          \"label\": \"Excision of lymph node\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"234244004\",\n          \"label\": \"Lymphatic, spleen and bone marrow procedures\"\n        },\n        {\n          \"concept_id\": \"118685000\",\n          \"label\": \"Procedure on hematopoietic system\"\n        },\n        {\n          \"concept_id\": \"118686004\",\n          \"label\": \"Procedure on immune system\"\n        },\n        {\n          \"concept_id\": \"118688003\",\n          \"label\": \"Procedure on lymphatic system\"\n        },\n        {\n          \"concept_id\": \"129253000\",\n          \"label\": \"Procedure on lymphoid organ\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        },\n        {\n          \"concept_id\": \"128303001\",\n          \"label\": \"Surgical removal\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"65801008\",\n          \"label\": \"Excision\"\n        },\n        {\n          \"concept_id\": \"363152007\",\n          \"label\": \"Immune system surgical procedure\"\n        },\n        {\n          \"concept_id\": \"49509003\",\n          \"label\": \"Operation on lymphatic structure\"\n        },\n        {\n          \"concept_id\": \"107994000\",\n          \"label\": \"Operative procedure on hematopoietic system\"\n        },\n        {\n          \"concept_id\": \"118890000\",\n          \"label\": \"Procedure on lymph node\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363146006\",\n          \"label\": \"Immune system excision\"\n        },\n        {\n          \"concept_id\": \"107996003\",\n          \"label\": \"Lymphatic system excision\"\n        },\n        {\n          \"concept_id\": \"79480008\",\n          \"label\": \"Operation on lymph node\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118687008\",\n          \"label\": \"Procedure on lymphoid system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"450743008\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"363820009\",\n          \"label\": \"Neurological observable\"\n        },\n        {\n          \"concept_id\": \"363820009\",\n          \"label\": \"Neurological observable\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363788007\",\n          \"label\": \"Clinical history/examination observable\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"363787002\",\n          \"label\": \"Observable entity\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"414396006\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128545000\",\n          \"label\": \"Hernia of abdominal wall\"\n        },\n        {\n          \"concept_id\": \"128545000\",\n          \"label\": \"Hernia of abdominal wall\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"249561001\",\n          \"label\": \"Abdominal organ finding\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"399986003\",\n          \"label\": \"Disorder of body wall\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"280133005\",\n          \"label\": \"Disorder of soft tissue of trunk\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118928003\",\n          \"label\": \"Disorder of abdominal wall\"\n        },\n        {\n          \"concept_id\": \"52515009\",\n          \"label\": \"Hernia of abdominal cavity\"\n        },\n        {\n          \"concept_id\": \"239953001\",\n          \"label\": \"Soft tissue lesion\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"86481000\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"108188006\",\n          \"label\": \"Abdomen incision\"\n        },\n        {\n          \"concept_id\": \"108188006\",\n          \"label\": \"Abdomen incision\"\n        },\n        {\n          \"concept_id\": \"386671008\",\n          \"label\": \"Abdominal cavity operation\"\n        },\n        {\n          \"concept_id\": \"386671008\",\n          \"label\": \"Abdominal cavity operation\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"21371007\",\n          \"label\": \"Operation on abdominal region\"\n        },\n        {\n          \"concept_id\": \"119580007\",\n          \"label\": \"Trunk incision\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"34896006\",\n          \"label\": \"Incision\"\n        },\n        {\n          \"concept_id\": \"74943008\",\n          \"label\": \"Operation on trunk\"\n        },\n        {\n          \"concept_id\": \"118698009\",\n          \"label\": \"Procedure on abdomen\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"279084009\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"247347003\",\n          \"label\": \"Discomfort\"\n        },\n        {\n          \"concept_id\": \"247347003\",\n          \"label\": \"Discomfort\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"130979001\",\n          \"label\": \"Comfort alteration\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"234253006\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"58347006\",\n          \"label\": \"Excision of lymph node\"\n        },\n        {\n          \"concept_id\": \"58347006\",\n          \"label\": \"Excision of lymph node\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"234244004\",\n          \"label\": \"Lymphatic, spleen and bone marrow procedures\"\n        },\n        {\n          \"concept_id\": \"118685000\",\n          \"label\": \"Procedure on hematopoietic system\"\n        },\n        {\n          \"concept_id\": \"118686004\",\n          \"label\": \"Procedure on immune system\"\n        },\n        {\n          \"concept_id\": \"118688003\",\n          \"label\": \"Procedure on lymphatic system\"\n        },\n        {\n          \"concept_id\": \"129253000\",\n          \"label\": \"Procedure on lymphoid organ\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        },\n        {\n          \"concept_id\": \"128303001\",\n          \"label\": \"Surgical removal\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"65801008\",\n          \"label\": \"Excision\"\n        },\n        {\n          \"concept_id\": \"363152007\",\n          \"label\": \"Immune system surgical procedure\"\n        },\n        {\n          \"concept_id\": \"49509003\",\n          \"label\": \"Operation on lymphatic structure\"\n        },\n        {\n          \"concept_id\": \"107994000\",\n          \"label\": \"Operative procedure on hematopoietic system\"\n        },\n        {\n          \"concept_id\": \"118890000\",\n          \"label\": \"Procedure on lymph node\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363146006\",\n          \"label\": \"Immune system excision\"\n        },\n        {\n          \"concept_id\": \"107996003\",\n          \"label\": \"Lymphatic system excision\"\n        },\n        {\n          \"concept_id\": \"79480008\",\n          \"label\": \"Operation on lymph node\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118687008\",\n          \"label\": \"Procedure on lymphoid system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"450743008\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"363820009\",\n          \"label\": \"Neurological observable\"\n        },\n        {\n          \"concept_id\": \"363820009\",\n          \"label\": \"Neurological observable\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363788007\",\n          \"label\": \"Clinical history/examination observable\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"363787002\",\n          \"label\": \"Observable entity\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"414396006\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128545000\",\n          \"label\": \"Hernia of abdominal wall\"\n        },\n        {\n          \"concept_id\": \"128545000\",\n          \"label\": \"Hernia of abdominal wall\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"249561001\",\n          \"label\": \"Abdominal organ finding\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"399986003\",\n          \"label\": \"Disorder of body wall\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"280133005\",\n          \"label\": \"Disorder of soft tissue of trunk\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118928003\",\n          \"label\": \"Disorder of abdominal wall\"\n        },\n        {\n          \"concept_id\": \"52515009\",\n          \"label\": \"Hernia of abdominal cavity\"\n        },\n        {\n          \"concept_id\": \"239953001\",\n          \"label\": \"Soft tissue lesion\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"86481000\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"108188006\",\n          \"label\": \"Abdomen incision\"\n        },\n        {\n          \"concept_id\": \"108188006\",\n          \"label\": \"Abdomen incision\"\n        },\n        {\n          \"concept_id\": \"386671008\",\n          \"label\": \"Abdominal cavity operation\"\n        },\n        {\n          \"concept_id\": \"386671008\",\n          \"label\": \"Abdominal cavity operation\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"21371007\",\n          \"label\": \"Operation on abdominal region\"\n        },\n        {\n          \"concept_id\": \"119580007\",\n          \"label\": \"Trunk incision\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"34896006\",\n          \"label\": \"Incision\"\n        },\n        {\n          \"concept_id\": \"74943008\",\n          \"label\": \"Operation on trunk\"\n        },\n        {\n          \"concept_id\": \"118698009\",\n          \"label\": \"Procedure on abdomen\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"279084009\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"247347003\",\n          \"label\": \"Discomfort\"\n        },\n        {\n          \"concept_id\": \"247347003\",\n          \"label\": \"Discomfort\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"130979001\",\n          \"label\": \"Comfort alteration\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  }\n]\n"
+}

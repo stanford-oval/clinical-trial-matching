@@ -1,0 +1,98 @@
+[
+  {
+    "concept_id": "102947004",
+    "alt_concept_id": "473013003",
+    "hop": 1,
+    "alt_label": "Finding relating to sexual behavior or practice",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:25:10"
+  },
+  {
+    "concept_id": "102947004",
+    "alt_concept_id": "365949003",
+    "hop": 1,
+    "alt_label": "Health-related behavior finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:25:10"
+  },
+  {
+    "concept_id": "367431005",
+    "alt_concept_id": "37657006",
+    "hop": 1,
+    "alt_label": "Disorder of esophagus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:25:10"
+  },
+  {
+    "concept_id": "367431005",
+    "alt_concept_id": "76712006",
+    "hop": 2,
+    "alt_label": "Disorder of digestive organ",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:25:10"
+  },
+  {
+    "concept_id": "367431005",
+    "alt_concept_id": "119291004",
+    "hop": 2,
+    "alt_label": "Disorder of upper gastrointestinal tract",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:25:10"
+  },
+  {
+    "concept_id": "367431005",
+    "alt_concept_id": "300284004",
+    "hop": 2,
+    "alt_label": "Finding of esophagus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:25:10"
+  },
+  {
+    "concept_id": "52559000",
+    "alt_concept_id": "298325004",
+    "hop": 1,
+    "alt_label": "Finding of movement",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:25:10"
+  },
+  {
+    "concept_id": "52559000",
+    "alt_concept_id": "106145009",
+    "hop": 1,
+    "alt_label": "Motor nervous system finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:25:10"
+  },
+  {
+    "concept_id": "90584004",
+    "alt_concept_id": "128126004",
+    "hop": 1,
+    "alt_label": "Injury of central nervous system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:25:10"
+  },
+  {
+    "concept_id": "90584004",
+    "alt_concept_id": "48522003",
+    "hop": 1,
+    "alt_label": "Spinal cord disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:25:10"
+  },
+  {
+    "concept_id": "90584004",
+    "alt_concept_id": "262521009",
+    "hop": 1,
+    "alt_label": "Spinal injury",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:25:10"
+  },
+  {
+    "concept_id": "91388009",
+    "alt_concept_id": "91388009",
+    "hop": 0,
+    "alt_label": "Psychoactive substance abuse",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:25:10"
+  }
+]

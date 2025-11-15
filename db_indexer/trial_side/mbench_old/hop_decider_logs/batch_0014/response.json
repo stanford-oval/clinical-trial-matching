@@ -1,0 +1,41 @@
+{
+  "batch_index": 14,
+  "raw_response": "[\n  {\n    \"concept_id\": \"118599009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"118600007\",\n    \"stop_at_label\": \"Malignant lymphoma (clinical)\",\n    \"rationale\": \"Parent captures lymphoma broadly while preserving hematologic cancer intent; deeper options become generic (neoplasm/disease/disorder). Tight timeframe and small clauses favor modest generalization.\"\n  },\n  {\n    \"concept_id\": \"5880005\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"5880005\",\n    \"stop_at_label\": \"same as requirement\",\n    \"rationale\": \"Parents are overly generic (Examination by method; Procedure by site—‘procedure’ denied). Grandparents also generic. Keep the specific examination to preserve clinical relevance.\"\n  },\n  {\n    \"concept_id\": \"12658000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"12658000\",\n    \"stop_at_label\": \"same as requirement\",\n    \"rationale\": \"Ancestors are broad ‘procedure’ categories (denied) or region-level operations that lose organ/system specificity. Maintain the original procedural concept for relevance.\"\n  },\n  {\n    \"concept_id\": \"387713003\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"387713003\",\n    \"stop_at_label\": \"Surgical procedure\",\n    \"rationale\": \"Already broad with higher exclusions; ancestors are generic ‘procedure’ or SNOMED CT Concept. Do not generalize further.\"\n  },\n  {\n    \"concept_id\": \"307496006\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"307496006\",\n    \"stop_at_label\": \"same as requirement\",\n    \"rationale\": \"Ancestors are ‘Inflammatory disorder’, ‘Disease’, and ‘Clinical finding’—deny-list generics. Retain the specific condition.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "118599009",
+      "hops": 1,
+      "rationale": "Parent captures lymphoma broadly while preserving hematologic cancer intent; deeper options become generic (neoplasm/disease/disorder). Tight timeframe and smal",
+      "stop_at_concept_id": "118600007",
+      "stop_at_label": "Malignant lymphoma (clinical)"
+    },
+    {
+      "concept_id": "5880005",
+      "hops": 0,
+      "rationale": "Parents are overly generic (Examination by method; Procedure by site—‘procedure’ denied). Grandparents also generic. Keep the specific examination to preserve c",
+      "stop_at_concept_id": "5880005",
+      "stop_at_label": "same as requirement"
+    },
+    {
+      "concept_id": "12658000",
+      "hops": 0,
+      "rationale": "Ancestors are broad ‘procedure’ categories (denied) or region-level operations that lose organ/system specificity. Maintain the original procedural concept for ",
+      "stop_at_concept_id": "12658000",
+      "stop_at_label": "same as requirement"
+    },
+    {
+      "concept_id": "387713003",
+      "hops": 0,
+      "rationale": "Already broad with higher exclusions; ancestors are generic ‘procedure’ or SNOMED CT Concept. Do not generalize further.",
+      "stop_at_concept_id": "387713003",
+      "stop_at_label": "Surgical procedure"
+    },
+    {
+      "concept_id": "307496006",
+      "hops": 0,
+      "rationale": "Ancestors are ‘Inflammatory disorder’, ‘Disease’, and ‘Clinical finding’—deny-list generics. Retain the specific condition.",
+      "stop_at_concept_id": "307496006",
+      "stop_at_label": "same as requirement"
+    }
+  ]
+}

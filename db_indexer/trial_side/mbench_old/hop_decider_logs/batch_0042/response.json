@@ -1,0 +1,41 @@
+{
+  "batch_index": 42,
+  "raw_response": "[\n  {\n    \"concept_id\": \"27916005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"735425008\",\n    \"stop_at_label\": \"Abscess of digestive system\",\n    \"rationale\": \"Preserves organ system and abscess mechanism. Avoids generic ancestors like 'abscess', 'disease', or site-only findings while broadening beyond a single organ.\"\n  },\n  {\n    \"concept_id\": \"113091000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"363679005\",\n    \"stop_at_label\": \"Imaging\",\n    \"rationale\": \"Keeps the evaluation/imaging program intact; higher ancestors are generic 'procedure' categories. Tight timeframe and simple clauses favor a one-hop generalization.\"\n  },\n  {\n    \"concept_id\": \"394679006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"221360009\",\n    \"stop_at_label\": \"Spasticity\",\n    \"rationale\": \"Maintains mechanism (increased muscle tone) and clinical intent; broader ancestors become generic findings or site-based groupings.\"\n  },\n  {\n    \"concept_id\": \"55705006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"19578002\",\n    \"stop_at_label\": \"Arthrodesis\",\n    \"rationale\": \"Preserves procedural mechanism (fusion). Alternative parent 'operative procedure on spinal structure' is too broad and dilutes intervention specificity.\"\n  },\n  {\n    \"concept_id\": \"112798008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"119732007\",\n    \"stop_at_label\": \"Trachea implantation\",\n    \"rationale\": \"Conservatively retains tracheal device placement intent; 'Intubation of respiratory tract' is broader. Exclusions exceed inclusions and parent_count is high.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "27916005",
+      "hops": 1,
+      "rationale": "Preserves organ system and abscess mechanism. Avoids generic ancestors like 'abscess', 'disease', or site-only findings while broadening beyond a single organ.",
+      "stop_at_concept_id": "735425008",
+      "stop_at_label": "Abscess of digestive system"
+    },
+    {
+      "concept_id": "113091000",
+      "hops": 1,
+      "rationale": "Keeps the evaluation/imaging program intact; higher ancestors are generic 'procedure' categories. Tight timeframe and simple clauses favor a one-hop generalizat",
+      "stop_at_concept_id": "363679005",
+      "stop_at_label": "Imaging"
+    },
+    {
+      "concept_id": "394679006",
+      "hops": 1,
+      "rationale": "Maintains mechanism (increased muscle tone) and clinical intent; broader ancestors become generic findings or site-based groupings.",
+      "stop_at_concept_id": "221360009",
+      "stop_at_label": "Spasticity"
+    },
+    {
+      "concept_id": "55705006",
+      "hops": 1,
+      "rationale": "Preserves procedural mechanism (fusion). Alternative parent 'operative procedure on spinal structure' is too broad and dilutes intervention specificity.",
+      "stop_at_concept_id": "19578002",
+      "stop_at_label": "Arthrodesis"
+    },
+    {
+      "concept_id": "112798008",
+      "hops": 1,
+      "rationale": "Conservatively retains tracheal device placement intent; 'Intubation of respiratory tract' is broader. Exclusions exceed inclusions and parent_count is high.",
+      "stop_at_concept_id": "119732007",
+      "stop_at_label": "Trachea implantation"
+    }
+  ]
+}

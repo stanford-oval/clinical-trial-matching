@@ -1,0 +1,41 @@
+{
+  "batch_index": 7,
+  "raw_response": "[\n  {\n    \"concept_id\": \"254837009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"126926005\",\n    \"stop_at_label\": \"Neoplasm of breast\",\n    \"rationale\": \"Parent retains breast organ-site neoplasm, avoiding overly broad thoracic malignancy; timeframe tight and clauses small favor H=1; denies generic ancestors.\"\n  },\n  {\n    \"concept_id\": \"372138000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"363402007\",\n    \"stop_at_label\": \"Malignant tumor of esophagus\",\n    \"rationale\": \"Parent 'Malignant tumor of esophagus' preserves organ and malignancy; other parent is too generic. Tight timeframe and small clause size favor H=1.\"\n  },\n  {\n    \"concept_id\": \"53741008\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"53741008\",\n    \"stop_at_label\": \"Coronary arteriosclerosis\",\n    \"rationale\": \"All ancestors contain banned generic terms (disease/disorder/finding). To remain specific and compliant, keep at the original concept.\"\n  },\n  {\n    \"concept_id\": \"10301003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"420079008\",\n    \"stop_at_label\": \"Relapsing fever\",\n    \"rationale\": \"Parent 'Relapsing fever' maintains mechanism (Borrelia spirochete) and condition specificity; higher ancestors become generic infections or fever states. H=1 favored by tight timeframe.\"\n  },\n  {\n    \"concept_id\": \"23238000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"699346009\",\n    \"stop_at_label\": \"Hereditary cancer-predisposing syndrome\",\n    \"rationale\": \"Parent 'Hereditary cancer-predisposing syndrome' preserves program intent (hereditary oncologic risk) while remaining specific; alternative parent is too narrow to generalize. Timeframe loose; H=1 appropriate.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "254837009",
+      "hops": 1,
+      "rationale": "Parent retains breast organ-site neoplasm, avoiding overly broad thoracic malignancy; timeframe tight and clauses small favor H=1; denies generic ancestors.",
+      "stop_at_concept_id": "126926005",
+      "stop_at_label": "Neoplasm of breast"
+    },
+    {
+      "concept_id": "372138000",
+      "hops": 1,
+      "rationale": "Parent 'Malignant tumor of esophagus' preserves organ and malignancy; other parent is too generic. Tight timeframe and small clause size favor H=1.",
+      "stop_at_concept_id": "363402007",
+      "stop_at_label": "Malignant tumor of esophagus"
+    },
+    {
+      "concept_id": "53741008",
+      "hops": 0,
+      "rationale": "All ancestors contain banned generic terms (disease/disorder/finding). To remain specific and compliant, keep at the original concept.",
+      "stop_at_concept_id": "53741008",
+      "stop_at_label": "Coronary arteriosclerosis"
+    },
+    {
+      "concept_id": "10301003",
+      "hops": 1,
+      "rationale": "Parent 'Relapsing fever' maintains mechanism (Borrelia spirochete) and condition specificity; higher ancestors become generic infections or fever states. H=1 fa",
+      "stop_at_concept_id": "420079008",
+      "stop_at_label": "Relapsing fever"
+    },
+    {
+      "concept_id": "23238000",
+      "hops": 1,
+      "rationale": "Parent 'Hereditary cancer-predisposing syndrome' preserves program intent (hereditary oncologic risk) while remaining specific; alternative parent is too narrow",
+      "stop_at_concept_id": "699346009",
+      "stop_at_label": "Hereditary cancer-predisposing syndrome"
+    }
+  ]
+}

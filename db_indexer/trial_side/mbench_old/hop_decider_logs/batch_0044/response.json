@@ -1,0 +1,41 @@
+{
+  "batch_index": 44,
+  "raw_response": "[\n  {\n    \"concept_id\": \"238356005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"19154003\",\n    \"stop_at_label\": \"Removal of tube from pleural cavity\",\n    \"rationale\": \"Broaden to site-specific pleural tube removal, preserving thoracic procedure intent. Avoids overly generic 'Removal of drain' and retains respiratory/pleural focus.\"\n  },\n  {\n    \"concept_id\": \"65275009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"76581006\",\n    \"stop_at_label\": \"Cholecystitis\",\n    \"rationale\": \"Generalize from acute form to cholecystitis, preserving organ and inflammatory condition while avoiding very broad categories like 'acute disease' or biliary/disorder classes.\"\n  },\n  {\n    \"concept_id\": \"85057007\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"85057007\",\n    \"stop_at_label\": \"Liver cyst\",\n    \"rationale\": \"Parents are either off-target (abdominal cyst) or too broad (liver mass/disease). Keep specific hepatic cyst to maintain trial relevance.\"\n  },\n  {\n    \"concept_id\": \"62201009\",\n    \"hops\": 2,\n    \"stop_at_concept_id\": \"238028008\",\n    \"stop_at_label\": \"Sphingolipidosis\",\n    \"rationale\": \"Direct parents are denied (contain 'disease'/'disorder'). Sphingolipidosis preserves mechanistic class for Gaucher variants without overgeneralizing to unrelated metabolic or nervous disorders.\"\n  },\n  {\n    \"concept_id\": \"187734007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"187732006\",\n    \"stop_at_label\": \"Malignant tumor of cardia\",\n    \"rationale\": \"Parent preserves malignancy at esophagogastric junction region. Broader ancestors (esophagus or GI tract neoplasms) risk including inapplicable sites.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "238356005",
+      "hops": 1,
+      "rationale": "Broaden to site-specific pleural tube removal, preserving thoracic procedure intent. Avoids overly generic 'Removal of drain' and retains respiratory/pleural fo",
+      "stop_at_concept_id": "19154003",
+      "stop_at_label": "Removal of tube from pleural cavity"
+    },
+    {
+      "concept_id": "65275009",
+      "hops": 1,
+      "rationale": "Generalize from acute form to cholecystitis, preserving organ and inflammatory condition while avoiding very broad categories like 'acute disease' or biliary/di",
+      "stop_at_concept_id": "76581006",
+      "stop_at_label": "Cholecystitis"
+    },
+    {
+      "concept_id": "85057007",
+      "hops": 0,
+      "rationale": "Parents are either off-target (abdominal cyst) or too broad (liver mass/disease). Keep specific hepatic cyst to maintain trial relevance.",
+      "stop_at_concept_id": "85057007",
+      "stop_at_label": "Liver cyst"
+    },
+    {
+      "concept_id": "62201009",
+      "hops": 2,
+      "rationale": "Direct parents are denied (contain 'disease'/'disorder'). Sphingolipidosis preserves mechanistic class for Gaucher variants without overgeneralizing to unrelate",
+      "stop_at_concept_id": "238028008",
+      "stop_at_label": "Sphingolipidosis"
+    },
+    {
+      "concept_id": "187734007",
+      "hops": 1,
+      "rationale": "Parent preserves malignancy at esophagogastric junction region. Broader ancestors (esophagus or GI tract neoplasms) risk including inapplicable sites.",
+      "stop_at_concept_id": "187732006",
+      "stop_at_label": "Malignant tumor of cardia"
+    }
+  ]
+}

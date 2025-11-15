@@ -1,0 +1,66 @@
+[
+  {
+    "concept_id": "276803003",
+    "alt_concept_id": "372138000",
+    "hop": 1,
+    "alt_label": "Carcinoma of esophagus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:30:29"
+  },
+  {
+    "concept_id": "276803003",
+    "alt_concept_id": "443961001",
+    "hop": 1,
+    "alt_label": "Malignant adenomatous neoplasm",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:30:29"
+  },
+  {
+    "concept_id": "365981007",
+    "alt_concept_id": "365980008",
+    "hop": 1,
+    "alt_label": "Tobacco use and exposure - finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:30:29"
+  },
+  {
+    "concept_id": "45595009",
+    "alt_concept_id": "38102005",
+    "hop": 1,
+    "alt_label": "Cholecystectomy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:30:29"
+  },
+  {
+    "concept_id": "45595009",
+    "alt_concept_id": "264274002",
+    "hop": 1,
+    "alt_label": "Endoscopic operation",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:30:29"
+  },
+  {
+    "concept_id": "45595009",
+    "alt_concept_id": "51316009",
+    "hop": 1,
+    "alt_label": "Laparoscopic procedure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:30:29"
+  },
+  {
+    "concept_id": "50697003",
+    "alt_concept_id": "399097000",
+    "hop": 1,
+    "alt_label": "Administration of anesthesia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:30:29"
+  },
+  {
+    "concept_id": "57066004",
+    "alt_concept_id": "768621002",
+    "hop": 1,
+    "alt_label": "Platinum and platinum compound-containing product",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:30:29"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "281789004",
+    "alt_concept_id": "47943005",
+    "hop": 1,
+    "alt_label": "Administration of anti-infective agent",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:35:35"
+  },
+  {
+    "concept_id": "281789004",
+    "alt_concept_id": "416608005",
+    "hop": 1,
+    "alt_label": "Drug therapy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:35:35"
+  },
+  {
+    "concept_id": "415070008",
+    "alt_concept_id": "415070008",
+    "hop": 0,
+    "alt_label": "Percutaneous coronary intervention",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:35:35"
+  },
+  {
+    "concept_id": "65547006",
+    "alt_concept_id": "57054005",
+    "hop": 1,
+    "alt_label": "Acute myocardial infarction",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:35:35"
+  },
+  {
+    "concept_id": "65547006",
+    "alt_concept_id": "253535002",
+    "hop": 1,
+    "alt_label": "Left ventricular abnormality",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:35:35"
+  },
+  {
+    "concept_id": "76388001",
+    "alt_concept_id": "55930002",
+    "hop": 1,
+    "alt_label": "EKG ST segment changes",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:35:35"
+  },
+  {
+    "concept_id": "77343006",
+    "alt_concept_id": "77343006",
+    "hop": 0,
+    "alt_label": "Angiography",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:35:35"
+  }
+]

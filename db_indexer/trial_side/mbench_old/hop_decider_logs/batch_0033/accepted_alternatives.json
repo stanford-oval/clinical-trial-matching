@@ -1,0 +1,66 @@
+[
+  {
+    "concept_id": "229065009",
+    "alt_concept_id": "229064008",
+    "hop": 1,
+    "alt_label": "Movement therapy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:37"
+  },
+  {
+    "concept_id": "229065009",
+    "alt_concept_id": "51998003",
+    "hop": 1,
+    "alt_label": "Therapeutic exercise",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:37"
+  },
+  {
+    "concept_id": "26929004",
+    "alt_concept_id": "279982005",
+    "hop": 1,
+    "alt_label": "Cerebral degeneration presenting primarily with dementia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:37"
+  },
+  {
+    "concept_id": "26929004",
+    "alt_concept_id": "52448006",
+    "hop": 1,
+    "alt_label": "Dementia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:37"
+  },
+  {
+    "concept_id": "308117007",
+    "alt_concept_id": "309513005",
+    "hop": 1,
+    "alt_label": "Cardiovascular therapy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:37"
+  },
+  {
+    "concept_id": "404909007",
+    "alt_concept_id": "281706009",
+    "hop": 1,
+    "alt_label": "Injection of substance",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:37"
+  },
+  {
+    "concept_id": "442076002",
+    "alt_concept_id": "116336009",
+    "hop": 1,
+    "alt_label": "Eating / feeding / drinking finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:37"
+  },
+  {
+    "concept_id": "442076002",
+    "alt_concept_id": "118228005",
+    "hop": 1,
+    "alt_label": "Functional finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:37"
+  }
+]

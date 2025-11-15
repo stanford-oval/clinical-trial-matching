@@ -1,0 +1,41 @@
+{
+  "batch_index": 59,
+  "raw_response": "[\n  {\n    \"concept_id\": \"31879006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"365481000\",\n    \"stop_at_label\": \"Household composition - finding\",\n    \"rationale\": \"Parent preserves household composition intent; higher ancestors are overly generic. Tight timeframe and small clause size support hop-1 generalization.\"\n  },\n  {\n    \"concept_id\": \"774099003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"364048003\",\n    \"stop_at_label\": \"Respiratory observable\",\n    \"rationale\": \"Parent keeps respiratory measurement context; higher ancestors become generic observable entity. Tight timeframe and small clause size favor hop-1.\"\n  },\n  {\n    \"concept_id\": \"88039007\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"88039007\",\n    \"stop_at_label\": \"Lung transplantation\",\n    \"rationale\": \"Exclusions exceed inclusions; parents are broad operation/transplantation categories. Staying at lung transplantation preserves intervention intent and relevance.\"\n  },\n  {\n    \"concept_id\": \"28913000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"28913000\",\n    \"stop_at_label\": \"Tonsillectomy and adenoidectomy\",\n    \"rationale\": \"Parents are single-organ excisions; generalizing loses combined procedure intent. Higher ancestors are generic procedure categories. Stay specific.\"\n  },\n  {\n    \"concept_id\": \"700250006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"700249006\",\n    \"stop_at_label\": \"Idiopathic interstitial pneumonia\",\n    \"rationale\": \"Parent preserves idiopathic interstitial mechanism and lung focus; going higher reaches generic disorder categories. Tight timeframe and small clause size favor hop-1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "31879006",
+      "hops": 1,
+      "rationale": "Parent preserves household composition intent; higher ancestors are overly generic. Tight timeframe and small clause size support hop-1 generalization.",
+      "stop_at_concept_id": "365481000",
+      "stop_at_label": "Household composition - finding"
+    },
+    {
+      "concept_id": "774099003",
+      "hops": 1,
+      "rationale": "Parent keeps respiratory measurement context; higher ancestors become generic observable entity. Tight timeframe and small clause size favor hop-1.",
+      "stop_at_concept_id": "364048003",
+      "stop_at_label": "Respiratory observable"
+    },
+    {
+      "concept_id": "88039007",
+      "hops": 0,
+      "rationale": "Exclusions exceed inclusions; parents are broad operation/transplantation categories. Staying at lung transplantation preserves intervention intent and relevanc",
+      "stop_at_concept_id": "88039007",
+      "stop_at_label": "Lung transplantation"
+    },
+    {
+      "concept_id": "28913000",
+      "hops": 0,
+      "rationale": "Parents are single-organ excisions; generalizing loses combined procedure intent. Higher ancestors are generic procedure categories. Stay specific.",
+      "stop_at_concept_id": "28913000",
+      "stop_at_label": "Tonsillectomy and adenoidectomy"
+    },
+    {
+      "concept_id": "700250006",
+      "hops": 1,
+      "rationale": "Parent preserves idiopathic interstitial mechanism and lung focus; going higher reaches generic disorder categories. Tight timeframe and small clause size favor",
+      "stop_at_concept_id": "700249006",
+      "stop_at_label": "Idiopathic interstitial pneumonia"
+    }
+  ]
+}

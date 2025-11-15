@@ -1,0 +1,41 @@
+{
+  "batch_index": 8,
+  "raw_response": "[\n  {\n    \"concept_id\": \"71922006\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"71922006\",\n    \"stop_at_label\": \"Original concept\",\n    \"rationale\": \"Ancestors are broad categories (immune finding, systemic findings, clinical history). Exclusions outweigh inclusions; be conservative and avoid broadening. Stay at requirement.\"\n  },\n  {\n    \"concept_id\": \"279039007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"161891005\",\n    \"stop_at_label\": \"Backache\",\n    \"rationale\": \"Parent ‘Backache’ preserves site and pain mechanism. Other parents are broader site findings. Tight timeframe and small clause size favor H=1.\"\n  },\n  {\n    \"concept_id\": \"64572001\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"64572001\",\n    \"stop_at_label\": \"Disease (disorder)\",\n    \"rationale\": \"Only ancestors are ‘Clinical finding’ and ‘SNOMED CT Concept’ (forbidden/generic). Exclusion-heavy; no safe generalization upward. Keep original.\"\n  },\n  {\n    \"concept_id\": \"304058009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"116634000\",\n    \"stop_at_label\": \"Bacterial antigen\",\n    \"rationale\": \"Preserves immunologic analyte/mechanism and program intent. Higher ancestors (antigen, substance/analyte) are too generic. Inclusion-focused with tight timeframe supports H=1.\"\n  },\n  {\n    \"concept_id\": \"162397003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"301365009\",\n    \"stop_at_label\": \"Pain of head and neck region\",\n    \"rationale\": \"Parent remains clinically specific (pain localized to head/neck). Higher levels become generic (finding by site/pain). Inclusion-only and tight timeframe support H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "71922006",
+      "hops": 0,
+      "rationale": "Ancestors are broad categories (immune finding, systemic findings, clinical history). Exclusions outweigh inclusions; be conservative and avoid broadening. Stay",
+      "stop_at_concept_id": "71922006",
+      "stop_at_label": "Original concept"
+    },
+    {
+      "concept_id": "279039007",
+      "hops": 1,
+      "rationale": "Parent ‘Backache’ preserves site and pain mechanism. Other parents are broader site findings. Tight timeframe and small clause size favor H=1.",
+      "stop_at_concept_id": "161891005",
+      "stop_at_label": "Backache"
+    },
+    {
+      "concept_id": "64572001",
+      "hops": 0,
+      "rationale": "Only ancestors are ‘Clinical finding’ and ‘SNOMED CT Concept’ (forbidden/generic). Exclusion-heavy; no safe generalization upward. Keep original.",
+      "stop_at_concept_id": "64572001",
+      "stop_at_label": "Disease (disorder)"
+    },
+    {
+      "concept_id": "304058009",
+      "hops": 1,
+      "rationale": "Preserves immunologic analyte/mechanism and program intent. Higher ancestors (antigen, substance/analyte) are too generic. Inclusion-focused with tight timefram",
+      "stop_at_concept_id": "116634000",
+      "stop_at_label": "Bacterial antigen"
+    },
+    {
+      "concept_id": "162397003",
+      "hops": 1,
+      "rationale": "Parent remains clinically specific (pain localized to head/neck). Higher levels become generic (finding by site/pain). Inclusion-only and tight timeframe suppor",
+      "stop_at_concept_id": "301365009",
+      "stop_at_label": "Pain of head and neck region"
+    }
+  ]
+}

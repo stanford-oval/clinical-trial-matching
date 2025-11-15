@@ -1,0 +1,41 @@
+{
+  "batch_index": 32,
+  "raw_response": "[\n  {\n    \"concept_id\": \"414916001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"414915002\",\n    \"stop_at_label\": \"Obese\",\n    \"rationale\": \"Parent ‘Obese’ is specific and preserves obesity intent; other parent ‘Disease’ is deny-listed. Exclusion>inclusion and depth 3 favor conservative H=1.\"\n  },\n  {\n    \"concept_id\": \"230690007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"127294003\",\n    \"stop_at_label\": \"Traumatic AND/OR non-traumatic brain injury\",\n    \"rationale\": \"‘Cerebrovascular disease’ is deny-listed; choosing the other parent preserves brain organ injury focus. Exclusion>inclusion and tight timeframe support conservative H=1.\"\n  },\n  {\n    \"concept_id\": \"71457002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"40739000\",\n    \"stop_at_label\": \"Dysphagia\",\n    \"rationale\": \"Parent ‘Dysphagia’ preserves swallowing dysfunction intent; other parent ‘Disorder of oropharynx’ is deny-listed. Tight timeframe and small clause favor H=1.\"\n  },\n  {\n    \"concept_id\": \"190905008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"233661002\",\n    \"stop_at_label\": \"Inherited mucociliary clearance defect\",\n    \"rationale\": \"Parent maintains respiratory mechanism specificity; higher ancestors are generic/deny-listed. Exclusion>inclusion suggests conservative H=1.\"\n  },\n  {\n    \"concept_id\": \"162068007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"60728008\",\n    \"stop_at_label\": \"Swollen abdomen\",\n    \"rationale\": \"Parent ‘Swollen abdomen’ is organ-specific; other parent and higher ancestors are generic or deny-listed. Tight timeframe and small clause favor H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "414916001",
+      "hops": 1,
+      "rationale": "Parent ‘Obese’ is specific and preserves obesity intent; other parent ‘Disease’ is deny-listed. Exclusion>inclusion and depth 3 favor conservative H=1.",
+      "stop_at_concept_id": "414915002",
+      "stop_at_label": "Obese"
+    },
+    {
+      "concept_id": "230690007",
+      "hops": 1,
+      "rationale": "‘Cerebrovascular disease’ is deny-listed; choosing the other parent preserves brain organ injury focus. Exclusion>inclusion and tight timeframe support conserva",
+      "stop_at_concept_id": "127294003",
+      "stop_at_label": "Traumatic AND/OR non-traumatic brain injury"
+    },
+    {
+      "concept_id": "71457002",
+      "hops": 1,
+      "rationale": "Parent ‘Dysphagia’ preserves swallowing dysfunction intent; other parent ‘Disorder of oropharynx’ is deny-listed. Tight timeframe and small clause favor H=1.",
+      "stop_at_concept_id": "40739000",
+      "stop_at_label": "Dysphagia"
+    },
+    {
+      "concept_id": "190905008",
+      "hops": 1,
+      "rationale": "Parent maintains respiratory mechanism specificity; higher ancestors are generic/deny-listed. Exclusion>inclusion suggests conservative H=1.",
+      "stop_at_concept_id": "233661002",
+      "stop_at_label": "Inherited mucociliary clearance defect"
+    },
+    {
+      "concept_id": "162068007",
+      "hops": 1,
+      "rationale": "Parent ‘Swollen abdomen’ is organ-specific; other parent and higher ancestors are generic or deny-listed. Tight timeframe and small clause favor H=1.",
+      "stop_at_concept_id": "60728008",
+      "stop_at_label": "Swollen abdomen"
+    }
+  ]
+}

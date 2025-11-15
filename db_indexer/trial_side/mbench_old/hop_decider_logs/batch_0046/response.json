@@ -1,0 +1,39 @@
+{
+  "batch_index": 46,
+  "raw_response": "[\n  {\n    \"concept_id\": \"302497006\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"302497006\",\n    \"stop_at_label\": null,\n    \"rationale\": \"Parents include banned ‘procedure’; higher ancestors are too generic (perfusions/injections). Keep original specificity.\"\n  },\n  {\n    \"concept_id\": \"45007003\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"45007003\",\n    \"stop_at_label\": null,\n    \"rationale\": \"Parent is banned ‘disorder’; grandparent ‘cardiovascular finding’ is too broad. Exclusions exceed inclusions; stay specific.\"\n  },\n  {\n    \"concept_id\": \"443430002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"118233009\",\n    \"stop_at_label\": \"Finding of activity of daily living\",\n    \"rationale\": \"Preserves ADL functional domain and assessment intent; higher levels are generic findings.\"\n  },\n  {\n    \"concept_id\": \"702956004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"386806002\",\n    \"stop_at_label\": \"Impaired cognition\",\n    \"rationale\": \"Specific to cognitive deficits; grandparents are broad functional findings. Minimal generalization due to higher exclusions.\"\n  },\n  {\n    \"concept_id\": \"19943007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"62484002\",\n    \"stop_at_label\": \"Hepatic fibrosis\",\n    \"rationale\": \"Avoids banned ‘disease’; retains liver pathology intent. Other ancestors are banned or too generic; parent_count is high so minimal hop.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "302497006",
+      "hops": 0,
+      "rationale": "Parents include banned ‘procedure’; higher ancestors are too generic (perfusions/injections). Keep original specificity.",
+      "stop_at_concept_id": "302497006"
+    },
+    {
+      "concept_id": "45007003",
+      "hops": 0,
+      "rationale": "Parent is banned ‘disorder’; grandparent ‘cardiovascular finding’ is too broad. Exclusions exceed inclusions; stay specific.",
+      "stop_at_concept_id": "45007003"
+    },
+    {
+      "concept_id": "443430002",
+      "hops": 1,
+      "rationale": "Preserves ADL functional domain and assessment intent; higher levels are generic findings.",
+      "stop_at_concept_id": "118233009",
+      "stop_at_label": "Finding of activity of daily living"
+    },
+    {
+      "concept_id": "702956004",
+      "hops": 1,
+      "rationale": "Specific to cognitive deficits; grandparents are broad functional findings. Minimal generalization due to higher exclusions.",
+      "stop_at_concept_id": "386806002",
+      "stop_at_label": "Impaired cognition"
+    },
+    {
+      "concept_id": "19943007",
+      "hops": 1,
+      "rationale": "Avoids banned ‘disease’; retains liver pathology intent. Other ancestors are banned or too generic; parent_count is high so minimal hop.",
+      "stop_at_concept_id": "62484002",
+      "stop_at_label": "Hepatic fibrosis"
+    }
+  ]
+}

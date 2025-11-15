@@ -1,0 +1,50 @@
+[
+  {
+    "concept_id": "238131007",
+    "alt_concept_id": "238131007",
+    "hop": 0,
+    "alt_label": "Overweight",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:32:15"
+  },
+  {
+    "concept_id": "278862001",
+    "alt_concept_id": "279039007",
+    "hop": 1,
+    "alt_label": "Low back pain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:32:15"
+  },
+  {
+    "concept_id": "408647009",
+    "alt_concept_id": "443961001",
+    "hop": 1,
+    "alt_label": "Malignant adenomatous neoplasm",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:32:15"
+  },
+  {
+    "concept_id": "408647009",
+    "alt_concept_id": "363349007",
+    "hop": 1,
+    "alt_label": "Malignant tumor of stomach",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:32:15"
+  },
+  {
+    "concept_id": "414915002",
+    "alt_concept_id": "238131007",
+    "hop": 1,
+    "alt_label": "Overweight",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:32:15"
+  },
+  {
+    "concept_id": "45326000",
+    "alt_concept_id": "45326000",
+    "hop": 0,
+    "alt_label": "Shoulder pain",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:32:15"
+  }
+]

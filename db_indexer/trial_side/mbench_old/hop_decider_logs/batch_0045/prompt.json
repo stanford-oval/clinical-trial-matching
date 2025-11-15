@@ -1,0 +1,430 @@
+{
+  "batch_index": 45,
+  "offset": 220,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "40617009",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 0.5,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 5,
+        "exclusion_trials": 3
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "266700009",
+            "label": "Assisted breathing"
+          },
+          {
+            "concept_id": "266700009",
+            "label": "Assisted breathing"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118669005",
+            "label": "Procedure on respiratory system"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "118664000",
+            "label": "Procedure on body system"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "53950000",
+            "label": "Respiratory therapy"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "52765003",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "68972003",
+            "label": "Insertion of therapeutic device"
+          },
+          {
+            "concept_id": "68972003",
+            "label": "Insertion of therapeutic device"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "71861002",
+            "label": "Implantation"
+          },
+          {
+            "concept_id": "363691001",
+            "label": "Procedure categorized by device involved"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "107733003",
+            "label": "Introduction procedure"
+          },
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "443961001",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "722688002",
+            "label": "Malignant epithelial neoplasm"
+          },
+          {
+            "concept_id": "722688002",
+            "label": "Malignant epithelial neoplasm"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "399981008",
+            "label": "Neoplasm and/or hamartoma"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "363346000",
+            "label": "Malignant neoplastic disease"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "55342001",
+            "label": "Neoplastic disease"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "53442002",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 0.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "108189003",
+            "label": "Abdomen excision"
+          },
+          {
+            "concept_id": "108189003",
+            "label": "Abdomen excision"
+          },
+          {
+            "concept_id": "118150001",
+            "label": "Gastrointestinal tract excision"
+          },
+          {
+            "concept_id": "118150001",
+            "label": "Gastrointestinal tract excision"
+          },
+          {
+            "concept_id": "16453004",
+            "label": "Operation on stomach"
+          },
+          {
+            "concept_id": "16453004",
+            "label": "Operation on stomach"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          },
+          {
+            "concept_id": "771329004",
+            "label": "Procedure on body region"
+          },
+          {
+            "concept_id": "118664000",
+            "label": "Procedure on body system"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "118673008",
+            "label": "Procedure on digestive system"
+          },
+          {
+            "concept_id": "118826000",
+            "label": "Procedure on digestive tract"
+          },
+          {
+            "concept_id": "118717007",
+            "label": "Procedure on organ"
+          },
+          {
+            "concept_id": "118694006",
+            "label": "Procedure on trunk"
+          },
+          {
+            "concept_id": "118292001",
+            "label": "Removal"
+          },
+          {
+            "concept_id": "387713003",
+            "label": "Surgical procedure"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "65801008",
+            "label": "Excision"
+          },
+          {
+            "concept_id": "21371007",
+            "label": "Operation on abdominal region"
+          },
+          {
+            "concept_id": "386621005",
+            "label": "Operation on gastrointestinal tract"
+          },
+          {
+            "concept_id": "107957009",
+            "label": "Operative procedure on digestive organ"
+          },
+          {
+            "concept_id": "118830002",
+            "label": "Procedure on stomach"
+          },
+          {
+            "concept_id": "119583009",
+            "label": "Trunk excision"
+          },
+          {
+            "concept_id": "359722002",
+            "label": "Upper gastrointestinal operation"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "37661000",
+            "label": "Operation on digestive tract"
+          },
+          {
+            "concept_id": "74943008",
+            "label": "Operation on trunk"
+          },
+          {
+            "concept_id": "107907001",
+            "label": "Operative procedure on digestive system"
+          },
+          {
+            "concept_id": "118698009",
+            "label": "Procedure on abdomen"
+          },
+          {
+            "concept_id": "118821005",
+            "label": "Procedure on digestive organ"
+          },
+          {
+            "concept_id": "384719006",
+            "label": "Procedure on gastrointestinal tract"
+          },
+          {
+            "concept_id": "128303001",
+            "label": "Surgical removal"
+          },
+          {
+            "concept_id": "359718007",
+            "label": "Upper digestive tract operation"
+          },
+          {
+            "concept_id": "359715005",
+            "label": "Upper gastrointestinal procedure"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "46177005",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 2
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "42399005",
+            "label": "Renal failure syndrome"
+          },
+          {
+            "concept_id": "42399005",
+            "label": "Renal failure syndrome"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "443820000",
+            "label": "Disorder of kidney and/or ureter"
+          },
+          {
+            "concept_id": "734045002",
+            "label": "Disorder of retroperitoneum"
+          },
+          {
+            "concept_id": "441742003",
+            "label": "Evaluation finding"
+          },
+          {
+            "concept_id": "249578005",
+            "label": "Kidney finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "609618002",
+            "label": "Disorder of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "42030000",
+            "label": "Disorder of the genitourinary system"
+          },
+          {
+            "concept_id": "609624008",
+            "label": "Finding of abdomen"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          },
+          {
+            "concept_id": "118238000",
+            "label": "Urogenital finding"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "249561001",
+            "label": "Abdominal organ finding"
+          },
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "118948005",
+            "label": "Disorder of abdomen"
+          },
+          {
+            "concept_id": "128606002",
+            "label": "Disorder of the urinary system"
+          },
+          {
+            "concept_id": "106098005",
+            "label": "Urinary system finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "236423003",
+            "label": "Renal impairment"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "90708001",
+            "label": "Kidney disease"
+          },
+          {
+            "concept_id": "118245000",
+            "label": "Measurement finding"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 22036,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"40617009\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.5,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 5,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"266700009\",\n          \"label\": \"Assisted breathing\"\n        },\n        {\n          \"concept_id\": \"266700009\",\n          \"label\": \"Assisted breathing\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118669005\",\n          \"label\": \"Procedure on respiratory system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"53950000\",\n          \"label\": \"Respiratory therapy\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"52765003\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"68972003\",\n          \"label\": \"Insertion of therapeutic device\"\n        },\n        {\n          \"concept_id\": \"68972003\",\n          \"label\": \"Insertion of therapeutic device\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"71861002\",\n          \"label\": \"Implantation\"\n        },\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"443961001\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"722688002\",\n          \"label\": \"Malignant epithelial neoplasm\"\n        },\n        {\n          \"concept_id\": \"722688002\",\n          \"label\": \"Malignant epithelial neoplasm\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"399981008\",\n          \"label\": \"Neoplasm and/or hamartoma\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363346000\",\n          \"label\": \"Malignant neoplastic disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"55342001\",\n          \"label\": \"Neoplastic disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"53442002\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"108189003\",\n          \"label\": \"Abdomen excision\"\n        },\n        {\n          \"concept_id\": \"108189003\",\n          \"label\": \"Abdomen excision\"\n        },\n        {\n          \"concept_id\": \"118150001\",\n          \"label\": \"Gastrointestinal tract excision\"\n        },\n        {\n          \"concept_id\": \"118150001\",\n          \"label\": \"Gastrointestinal tract excision\"\n        },\n        {\n          \"concept_id\": \"16453004\",\n          \"label\": \"Operation on stomach\"\n        },\n        {\n          \"concept_id\": \"16453004\",\n          \"label\": \"Operation on stomach\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118673008\",\n          \"label\": \"Procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118826000\",\n          \"label\": \"Procedure on digestive tract\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"65801008\",\n          \"label\": \"Excision\"\n        },\n        {\n          \"concept_id\": \"21371007\",\n          \"label\": \"Operation on abdominal region\"\n        },\n        {\n          \"concept_id\": \"386621005\",\n          \"label\": \"Operation on gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"107957009\",\n          \"label\": \"Operative procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"118830002\",\n          \"label\": \"Procedure on stomach\"\n        },\n        {\n          \"concept_id\": \"119583009\",\n          \"label\": \"Trunk excision\"\n        },\n        {\n          \"concept_id\": \"359722002\",\n          \"label\": \"Upper gastrointestinal operation\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"37661000\",\n          \"label\": \"Operation on digestive tract\"\n        },\n        {\n          \"concept_id\": \"74943008\",\n          \"label\": \"Operation on trunk\"\n        },\n        {\n          \"concept_id\": \"107907001\",\n          \"label\": \"Operative procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118698009\",\n          \"label\": \"Procedure on abdomen\"\n        },\n        {\n          \"concept_id\": \"118821005\",\n          \"label\": \"Procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"384719006\",\n          \"label\": \"Procedure on gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"128303001\",\n          \"label\": \"Surgical removal\"\n        },\n        {\n          \"concept_id\": \"359718007\",\n          \"label\": \"Upper digestive tract operation\"\n        },\n        {\n          \"concept_id\": \"359715005\",\n          \"label\": \"Upper gastrointestinal procedure\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"46177005\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"42399005\",\n          \"label\": \"Renal failure syndrome\"\n        },\n        {\n          \"concept_id\": \"42399005\",\n          \"label\": \"Renal failure syndrome\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"443820000\",\n          \"label\": \"Disorder of kidney and/or ureter\"\n        },\n        {\n          \"concept_id\": \"734045002\",\n          \"label\": \"Disorder of retroperitoneum\"\n        },\n        {\n          \"concept_id\": \"441742003\",\n          \"label\": \"Evaluation finding\"\n        },\n        {\n          \"concept_id\": \"249578005\",\n          \"label\": \"Kidney finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"42030000\",\n          \"label\": \"Disorder of the genitourinary system\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        },\n        {\n          \"concept_id\": \"118238000\",\n          \"label\": \"Urogenital finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"249561001\",\n          \"label\": \"Abdominal organ finding\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"128606002\",\n          \"label\": \"Disorder of the urinary system\"\n        },\n        {\n          \"concept_id\": \"106098005\",\n          \"label\": \"Urinary system finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"236423003\",\n          \"label\": \"Renal impairment\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"90708001\",\n          \"label\": \"Kidney disease\"\n        },\n        {\n          \"concept_id\": \"118245000\",\n          \"label\": \"Measurement finding\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"40617009\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.5,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 5,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"266700009\",\n          \"label\": \"Assisted breathing\"\n        },\n        {\n          \"concept_id\": \"266700009\",\n          \"label\": \"Assisted breathing\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118669005\",\n          \"label\": \"Procedure on respiratory system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"53950000\",\n          \"label\": \"Respiratory therapy\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"52765003\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"68972003\",\n          \"label\": \"Insertion of therapeutic device\"\n        },\n        {\n          \"concept_id\": \"68972003\",\n          \"label\": \"Insertion of therapeutic device\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"71861002\",\n          \"label\": \"Implantation\"\n        },\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"443961001\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"722688002\",\n          \"label\": \"Malignant epithelial neoplasm\"\n        },\n        {\n          \"concept_id\": \"722688002\",\n          \"label\": \"Malignant epithelial neoplasm\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"399981008\",\n          \"label\": \"Neoplasm and/or hamartoma\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363346000\",\n          \"label\": \"Malignant neoplastic disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"55342001\",\n          \"label\": \"Neoplastic disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"53442002\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"108189003\",\n          \"label\": \"Abdomen excision\"\n        },\n        {\n          \"concept_id\": \"108189003\",\n          \"label\": \"Abdomen excision\"\n        },\n        {\n          \"concept_id\": \"118150001\",\n          \"label\": \"Gastrointestinal tract excision\"\n        },\n        {\n          \"concept_id\": \"118150001\",\n          \"label\": \"Gastrointestinal tract excision\"\n        },\n        {\n          \"concept_id\": \"16453004\",\n          \"label\": \"Operation on stomach\"\n        },\n        {\n          \"concept_id\": \"16453004\",\n          \"label\": \"Operation on stomach\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118673008\",\n          \"label\": \"Procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118826000\",\n          \"label\": \"Procedure on digestive tract\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"65801008\",\n          \"label\": \"Excision\"\n        },\n        {\n          \"concept_id\": \"21371007\",\n          \"label\": \"Operation on abdominal region\"\n        },\n        {\n          \"concept_id\": \"386621005\",\n          \"label\": \"Operation on gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"107957009\",\n          \"label\": \"Operative procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"118830002\",\n          \"label\": \"Procedure on stomach\"\n        },\n        {\n          \"concept_id\": \"119583009\",\n          \"label\": \"Trunk excision\"\n        },\n        {\n          \"concept_id\": \"359722002\",\n          \"label\": \"Upper gastrointestinal operation\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"37661000\",\n          \"label\": \"Operation on digestive tract\"\n        },\n        {\n          \"concept_id\": \"74943008\",\n          \"label\": \"Operation on trunk\"\n        },\n        {\n          \"concept_id\": \"107907001\",\n          \"label\": \"Operative procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118698009\",\n          \"label\": \"Procedure on abdomen\"\n        },\n        {\n          \"concept_id\": \"118821005\",\n          \"label\": \"Procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"384719006\",\n          \"label\": \"Procedure on gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"128303001\",\n          \"label\": \"Surgical removal\"\n        },\n        {\n          \"concept_id\": \"359718007\",\n          \"label\": \"Upper digestive tract operation\"\n        },\n        {\n          \"concept_id\": \"359715005\",\n          \"label\": \"Upper gastrointestinal procedure\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"46177005\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"42399005\",\n          \"label\": \"Renal failure syndrome\"\n        },\n        {\n          \"concept_id\": \"42399005\",\n          \"label\": \"Renal failure syndrome\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"443820000\",\n          \"label\": \"Disorder of kidney and/or ureter\"\n        },\n        {\n          \"concept_id\": \"734045002\",\n          \"label\": \"Disorder of retroperitoneum\"\n        },\n        {\n          \"concept_id\": \"441742003\",\n          \"label\": \"Evaluation finding\"\n        },\n        {\n          \"concept_id\": \"249578005\",\n          \"label\": \"Kidney finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"42030000\",\n          \"label\": \"Disorder of the genitourinary system\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        },\n        {\n          \"concept_id\": \"118238000\",\n          \"label\": \"Urogenital finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"249561001\",\n          \"label\": \"Abdominal organ finding\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"128606002\",\n          \"label\": \"Disorder of the urinary system\"\n        },\n        {\n          \"concept_id\": \"106098005\",\n          \"label\": \"Urinary system finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"236423003\",\n          \"label\": \"Renal impairment\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"90708001\",\n          \"label\": \"Kidney disease\"\n        },\n        {\n          \"concept_id\": \"118245000\",\n          \"label\": \"Measurement finding\"\n        }\n      ]\n    }\n  }\n]\n"
+}

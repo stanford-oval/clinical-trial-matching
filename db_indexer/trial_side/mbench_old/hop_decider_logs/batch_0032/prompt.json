@@ -1,0 +1,520 @@
+{
+  "batch_index": 32,
+  "offset": 155,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "414916001",
+      "features": {
+        "depth_from_root": 3,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 2
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "414915002",
+            "label": "Obese"
+          },
+          {
+            "concept_id": "414915002",
+            "label": "Obese"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "238131007",
+            "label": "Overweight"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "365605003",
+            "label": "Body measurement finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          },
+          {
+            "concept_id": "107647005",
+            "label": "Weight finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "118222006",
+            "label": "General finding of observation of patient"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "230690007",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 0.75,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 7,
+        "exclusion_trials": 14
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "62914000",
+            "label": "Cerebrovascular disease"
+          },
+          {
+            "concept_id": "62914000",
+            "label": "Cerebrovascular disease"
+          },
+          {
+            "concept_id": "127294003",
+            "label": "Traumatic AND/OR non-traumatic brain injury"
+          },
+          {
+            "concept_id": "127294003",
+            "label": "Traumatic AND/OR non-traumatic brain injury"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "81308009",
+            "label": "Disorder of brain"
+          },
+          {
+            "concept_id": "23853001",
+            "label": "Disorder of the central nervous system"
+          },
+          {
+            "concept_id": "301766008",
+            "label": "Lesion of brain"
+          },
+          {
+            "concept_id": "609411003",
+            "label": "Traumatic and/or non-traumatic injury of anatomical site"
+          },
+          {
+            "concept_id": "27550009",
+            "label": "Vascular disorder"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "21829004",
+            "label": "Blood vessel finding"
+          },
+          {
+            "concept_id": "246556002",
+            "label": "Central nervous system finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "49601007",
+            "label": "Disorder of cardiovascular system"
+          },
+          {
+            "concept_id": "118934005",
+            "label": "Disorder of head"
+          },
+          {
+            "concept_id": "118940003",
+            "label": "Disorder of nervous system"
+          },
+          {
+            "concept_id": "19660004",
+            "label": "Disorder of soft tissue"
+          },
+          {
+            "concept_id": "299718000",
+            "label": "Finding of brain"
+          },
+          {
+            "concept_id": "299735001",
+            "label": "Neurological lesion"
+          },
+          {
+            "concept_id": "417163006",
+            "label": "Traumatic AND/OR non-traumatic injury"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "106063007",
+            "label": "Cardiovascular finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "248402002",
+            "label": "General finding of soft tissue"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "71457002",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "126661001",
+            "label": "Disorder of oropharynx"
+          },
+          {
+            "concept_id": "126661001",
+            "label": "Disorder of oropharynx"
+          },
+          {
+            "concept_id": "40739000",
+            "label": "Dysphagia"
+          },
+          {
+            "concept_id": "40739000",
+            "label": "Dysphagia"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "84410009",
+            "label": "Disorder of digestive tract"
+          },
+          {
+            "concept_id": "201060008",
+            "label": "Disorder of upper respiratory system"
+          },
+          {
+            "concept_id": "118228005",
+            "label": "Functional finding"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          },
+          {
+            "concept_id": "116338005",
+            "label": "Pharyngeal finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "297268004",
+            "label": "Ear, nose and throat finding"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "232208008",
+            "label": "Ear, nose and throat disorder"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "249376008",
+            "label": "Mouth and/or pharynx finding"
+          },
+          {
+            "concept_id": "301186004",
+            "label": "Upper respiratory tract finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "118934005",
+            "label": "Disorder of head"
+          },
+          {
+            "concept_id": "75860007",
+            "label": "Disorder of pharynx"
+          },
+          {
+            "concept_id": "50410009",
+            "label": "Disorder of upper digestive tract"
+          },
+          {
+            "concept_id": "258149004",
+            "label": "Swallowing finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "190905008",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 8
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "233661002",
+            "label": "Inherited mucociliary clearance defect"
+          },
+          {
+            "concept_id": "233661002",
+            "label": "Inherited mucociliary clearance defect"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "233660001",
+            "label": "Mucociliary clearance defect"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "162068007",
+      "features": {
+        "depth_from_root": 3,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "418799008",
+            "label": "Finding reported by subject or history provider"
+          },
+          {
+            "concept_id": "418799008",
+            "label": "Finding reported by subject or history provider"
+          },
+          {
+            "concept_id": "60728008",
+            "label": "Swollen abdomen"
+          },
+          {
+            "concept_id": "60728008",
+            "label": "Swollen abdomen"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "609627001",
+            "label": "Finding of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "300872008",
+            "label": "Swelling of body structure"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "609624008",
+            "label": "Finding of abdomen"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          },
+          {
+            "concept_id": "300888008",
+            "label": "Swelling of body region"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "271676006",
+            "label": "Finding of appearance of abdomen"
+          },
+          {
+            "concept_id": "449329002",
+            "label": "Swelling of trunk"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "65124004",
+            "label": "Swelling"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 26652,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"414916001\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"414915002\",\n          \"label\": \"Obese\"\n        },\n        {\n          \"concept_id\": \"414915002\",\n          \"label\": \"Obese\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"238131007\",\n          \"label\": \"Overweight\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"365605003\",\n          \"label\": \"Body measurement finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        },\n        {\n          \"concept_id\": \"107647005\",\n          \"label\": \"Weight finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118222006\",\n          \"label\": \"General finding of observation of patient\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"230690007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.75,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 7,\n      \"exclusion_trials\": 14\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"62914000\",\n          \"label\": \"Cerebrovascular disease\"\n        },\n        {\n          \"concept_id\": \"62914000\",\n          \"label\": \"Cerebrovascular disease\"\n        },\n        {\n          \"concept_id\": \"127294003\",\n          \"label\": \"Traumatic AND/OR non-traumatic brain injury\"\n        },\n        {\n          \"concept_id\": \"127294003\",\n          \"label\": \"Traumatic AND/OR non-traumatic brain injury\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"81308009\",\n          \"label\": \"Disorder of brain\"\n        },\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"301766008\",\n          \"label\": \"Lesion of brain\"\n        },\n        {\n          \"concept_id\": \"609411003\",\n          \"label\": \"Traumatic and/or non-traumatic injury of anatomical site\"\n        },\n        {\n          \"concept_id\": \"27550009\",\n          \"label\": \"Vascular disorder\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"21829004\",\n          \"label\": \"Blood vessel finding\"\n        },\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"299718000\",\n          \"label\": \"Finding of brain\"\n        },\n        {\n          \"concept_id\": \"299735001\",\n          \"label\": \"Neurological lesion\"\n        },\n        {\n          \"concept_id\": \"417163006\",\n          \"label\": \"Traumatic AND/OR non-traumatic injury\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"71457002\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"126661001\",\n          \"label\": \"Disorder of oropharynx\"\n        },\n        {\n          \"concept_id\": \"126661001\",\n          \"label\": \"Disorder of oropharynx\"\n        },\n        {\n          \"concept_id\": \"40739000\",\n          \"label\": \"Dysphagia\"\n        },\n        {\n          \"concept_id\": \"40739000\",\n          \"label\": \"Dysphagia\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"116338005\",\n          \"label\": \"Pharyngeal finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"258149004\",\n          \"label\": \"Swallowing finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"190905008\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 8\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"233661002\",\n          \"label\": \"Inherited mucociliary clearance defect\"\n        },\n        {\n          \"concept_id\": \"233661002\",\n          \"label\": \"Inherited mucociliary clearance defect\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"233660001\",\n          \"label\": \"Mucociliary clearance defect\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"162068007\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"418799008\",\n          \"label\": \"Finding reported by subject or history provider\"\n        },\n        {\n          \"concept_id\": \"418799008\",\n          \"label\": \"Finding reported by subject or history provider\"\n        },\n        {\n          \"concept_id\": \"60728008\",\n          \"label\": \"Swollen abdomen\"\n        },\n        {\n          \"concept_id\": \"60728008\",\n          \"label\": \"Swollen abdomen\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"300872008\",\n          \"label\": \"Swelling of body structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        },\n        {\n          \"concept_id\": \"300888008\",\n          \"label\": \"Swelling of body region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"271676006\",\n          \"label\": \"Finding of appearance of abdomen\"\n        },\n        {\n          \"concept_id\": \"449329002\",\n          \"label\": \"Swelling of trunk\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"65124004\",\n          \"label\": \"Swelling\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"414916001\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"414915002\",\n          \"label\": \"Obese\"\n        },\n        {\n          \"concept_id\": \"414915002\",\n          \"label\": \"Obese\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"238131007\",\n          \"label\": \"Overweight\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"365605003\",\n          \"label\": \"Body measurement finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        },\n        {\n          \"concept_id\": \"107647005\",\n          \"label\": \"Weight finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118222006\",\n          \"label\": \"General finding of observation of patient\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"230690007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.75,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 7,\n      \"exclusion_trials\": 14\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"62914000\",\n          \"label\": \"Cerebrovascular disease\"\n        },\n        {\n          \"concept_id\": \"62914000\",\n          \"label\": \"Cerebrovascular disease\"\n        },\n        {\n          \"concept_id\": \"127294003\",\n          \"label\": \"Traumatic AND/OR non-traumatic brain injury\"\n        },\n        {\n          \"concept_id\": \"127294003\",\n          \"label\": \"Traumatic AND/OR non-traumatic brain injury\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"81308009\",\n          \"label\": \"Disorder of brain\"\n        },\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"301766008\",\n          \"label\": \"Lesion of brain\"\n        },\n        {\n          \"concept_id\": \"609411003\",\n          \"label\": \"Traumatic and/or non-traumatic injury of anatomical site\"\n        },\n        {\n          \"concept_id\": \"27550009\",\n          \"label\": \"Vascular disorder\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"21829004\",\n          \"label\": \"Blood vessel finding\"\n        },\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"299718000\",\n          \"label\": \"Finding of brain\"\n        },\n        {\n          \"concept_id\": \"299735001\",\n          \"label\": \"Neurological lesion\"\n        },\n        {\n          \"concept_id\": \"417163006\",\n          \"label\": \"Traumatic AND/OR non-traumatic injury\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"71457002\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"126661001\",\n          \"label\": \"Disorder of oropharynx\"\n        },\n        {\n          \"concept_id\": \"126661001\",\n          \"label\": \"Disorder of oropharynx\"\n        },\n        {\n          \"concept_id\": \"40739000\",\n          \"label\": \"Dysphagia\"\n        },\n        {\n          \"concept_id\": \"40739000\",\n          \"label\": \"Dysphagia\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"116338005\",\n          \"label\": \"Pharyngeal finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"258149004\",\n          \"label\": \"Swallowing finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"190905008\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 8\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"233661002\",\n          \"label\": \"Inherited mucociliary clearance defect\"\n        },\n        {\n          \"concept_id\": \"233661002\",\n          \"label\": \"Inherited mucociliary clearance defect\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"233660001\",\n          \"label\": \"Mucociliary clearance defect\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"162068007\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"418799008\",\n          \"label\": \"Finding reported by subject or history provider\"\n        },\n        {\n          \"concept_id\": \"418799008\",\n          \"label\": \"Finding reported by subject or history provider\"\n        },\n        {\n          \"concept_id\": \"60728008\",\n          \"label\": \"Swollen abdomen\"\n        },\n        {\n          \"concept_id\": \"60728008\",\n          \"label\": \"Swollen abdomen\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"300872008\",\n          \"label\": \"Swelling of body structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        },\n        {\n          \"concept_id\": \"300888008\",\n          \"label\": \"Swelling of body region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"271676006\",\n          \"label\": \"Finding of appearance of abdomen\"\n        },\n        {\n          \"concept_id\": \"449329002\",\n          \"label\": \"Swelling of trunk\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"65124004\",\n          \"label\": \"Swelling\"\n        }\n      ]\n    }\n  }\n]\n"
+}

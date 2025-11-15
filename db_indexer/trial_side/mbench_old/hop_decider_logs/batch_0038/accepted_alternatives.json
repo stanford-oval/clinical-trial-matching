@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "160685001",
+    "alt_concept_id": "8510008",
+    "hop": 1,
+    "alt_label": "Reduced mobility",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:54:30"
+  },
+  {
+    "concept_id": "19063003",
+    "alt_concept_id": "19063003",
+    "hop": 0,
+    "alt_label": "Arthroplasty of knee",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:54:30"
+  },
+  {
+    "concept_id": "19585003",
+    "alt_concept_id": "128926000",
+    "hop": 1,
+    "alt_label": "Postprocedural state finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:54:30"
+  },
+  {
+    "concept_id": "241149003",
+    "alt_concept_id": "86543007",
+    "hop": 1,
+    "alt_label": "Esophageal motility study",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:54:30"
+  },
+  {
+    "concept_id": "241149003",
+    "alt_concept_id": "371576000",
+    "hop": 1,
+    "alt_label": "Video imaging",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:54:30"
+  },
+  {
+    "concept_id": "609588000",
+    "alt_concept_id": "19063003",
+    "hop": 1,
+    "alt_label": "Arthroplasty of knee",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:54:30"
+  },
+  {
+    "concept_id": "609588000",
+    "alt_concept_id": "392238003",
+    "hop": 1,
+    "alt_label": "Implantation of joint prosthesis into knee joint",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:54:30"
+  }
+]

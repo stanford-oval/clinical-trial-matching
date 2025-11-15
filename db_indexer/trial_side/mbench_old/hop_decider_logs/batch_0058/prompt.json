@@ -1,0 +1,802 @@
+{
+  "batch_index": 58,
+  "offset": 285,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "240477008",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 4,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "37657006",
+            "label": "Disorder of esophagus"
+          },
+          {
+            "concept_id": "37657006",
+            "label": "Disorder of esophagus"
+          },
+          {
+            "concept_id": "715852004",
+            "label": "Gastrointestinal infection"
+          },
+          {
+            "concept_id": "715852004",
+            "label": "Gastrointestinal infection"
+          },
+          {
+            "concept_id": "88594005",
+            "label": "Herpes simplex"
+          },
+          {
+            "concept_id": "88594005",
+            "label": "Herpes simplex"
+          },
+          {
+            "concept_id": "312131008",
+            "label": "Viral infection of the digestive tract"
+          },
+          {
+            "concept_id": "312131008",
+            "label": "Viral infection of the digestive tract"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "84410009",
+            "label": "Disorder of digestive tract"
+          },
+          {
+            "concept_id": "50410009",
+            "label": "Disorder of upper digestive tract"
+          },
+          {
+            "concept_id": "386618008",
+            "label": "Gastrointestinal tract finding"
+          },
+          {
+            "concept_id": "23513009",
+            "label": "Herpesvirus infection"
+          },
+          {
+            "concept_id": "301810000",
+            "label": "Infection by site"
+          },
+          {
+            "concept_id": "312158001",
+            "label": "Infection of digestive system"
+          },
+          {
+            "concept_id": "34014006",
+            "label": "Viral disease"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "40733004",
+            "label": "Disorder due to infection"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "73787001",
+            "label": "Disease due to Alphaherpesvirinae"
+          },
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "119292006",
+            "label": "Disorder of gastrointestinal tract"
+          },
+          {
+            "concept_id": "119291004",
+            "label": "Disorder of upper gastrointestinal tract"
+          },
+          {
+            "concept_id": "300284004",
+            "label": "Finding of esophagus"
+          },
+          {
+            "concept_id": "128398001",
+            "label": "Infectious disease of digestive tract"
+          },
+          {
+            "concept_id": "312130009",
+            "label": "Viral infection by site"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "302912005",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 2
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "57781000",
+            "label": "Disorder of vocal cord"
+          },
+          {
+            "concept_id": "57781000",
+            "label": "Disorder of vocal cord"
+          },
+          {
+            "concept_id": "89927005",
+            "label": "Paralysis of larynx"
+          },
+          {
+            "concept_id": "89927005",
+            "label": "Paralysis of larynx"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118939000",
+            "label": "Disorder of neck"
+          },
+          {
+            "concept_id": "201060008",
+            "label": "Disorder of upper respiratory system"
+          },
+          {
+            "concept_id": "298378000",
+            "label": "Finding of neck region"
+          },
+          {
+            "concept_id": "364729007",
+            "label": "Gross movement of body and limbs - finding"
+          },
+          {
+            "concept_id": "52559000",
+            "label": "Motor dysfunction"
+          },
+          {
+            "concept_id": "301186004",
+            "label": "Upper respiratory tract finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "102957003",
+            "label": "Neurological finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "232208008",
+            "label": "Ear, nose and throat disorder"
+          },
+          {
+            "concept_id": "297268004",
+            "label": "Ear, nose and throat finding"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "298325004",
+            "label": "Finding of movement"
+          },
+          {
+            "concept_id": "106145009",
+            "label": "Motor nervous system finding"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "60600009",
+            "label": "Disorder of the larynx"
+          },
+          {
+            "concept_id": "271748007",
+            "label": "Larynx finding"
+          },
+          {
+            "concept_id": "44695005",
+            "label": "Paralysis"
+          },
+          {
+            "concept_id": "249438001",
+            "label": "Vocal cord finding"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "409609008",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "19829001",
+            "label": "Disorder of lung"
+          },
+          {
+            "concept_id": "19829001",
+            "label": "Disorder of lung"
+          },
+          {
+            "concept_id": "301232003",
+            "label": "Lesion of lung"
+          },
+          {
+            "concept_id": "301232003",
+            "label": "Lesion of lung"
+          },
+          {
+            "concept_id": "128309002",
+            "label": "Radiologic infiltrate"
+          },
+          {
+            "concept_id": "128309002",
+            "label": "Radiologic infiltrate"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "441742003",
+            "label": "Evaluation finding"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "609623002",
+            "label": "Finding of upper trunk"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          },
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "609622007",
+            "label": "Disorder of thoracic segment of trunk"
+          },
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "365853002",
+            "label": "Imaging finding"
+          },
+          {
+            "concept_id": "301226008",
+            "label": "Lower respiratory tract finding"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "128272009",
+            "label": "Disorder of lower respiratory system"
+          },
+          {
+            "concept_id": "118946009",
+            "label": "Disorder of thorax"
+          },
+          {
+            "concept_id": "300577008",
+            "label": "Finding of lesion"
+          },
+          {
+            "concept_id": "301230006",
+            "label": "Lung finding"
+          },
+          {
+            "concept_id": "118247008",
+            "label": "Radiologic finding"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "392233007",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 0.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "446401003",
+            "label": "Drainage of abscess of head"
+          },
+          {
+            "concept_id": "446401003",
+            "label": "Drainage of abscess of head"
+          },
+          {
+            "concept_id": "32005000",
+            "label": "Drainage of peritonsillar tissues"
+          },
+          {
+            "concept_id": "32005000",
+            "label": "Drainage of peritonsillar tissues"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "771329004",
+            "label": "Procedure on body region"
+          },
+          {
+            "concept_id": "118821005",
+            "label": "Procedure on digestive organ"
+          },
+          {
+            "concept_id": "118826000",
+            "label": "Procedure on digestive tract"
+          },
+          {
+            "concept_id": "118670006",
+            "label": "Procedure on upper respiratory tract"
+          },
+          {
+            "concept_id": "118292001",
+            "label": "Removal"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          },
+          {
+            "concept_id": "118673008",
+            "label": "Procedure on digestive system"
+          },
+          {
+            "concept_id": "118717007",
+            "label": "Procedure on organ"
+          },
+          {
+            "concept_id": "387662008",
+            "label": "Respiratory tract procedure"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "275087005",
+            "label": "Drainage of abscess of head or neck"
+          },
+          {
+            "concept_id": "122462000",
+            "label": "Drainage procedure"
+          },
+          {
+            "concept_id": "118690002",
+            "label": "Procedure on head"
+          },
+          {
+            "concept_id": "118786008",
+            "label": "Procedure on oropharynx"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118442004",
+            "label": "Drainage of abscess"
+          },
+          {
+            "concept_id": "122461007",
+            "label": "Evacuation procedure"
+          },
+          {
+            "concept_id": "118950002",
+            "label": "Procedure on head AND/OR neck"
+          },
+          {
+            "concept_id": "118784006",
+            "label": "Procedure on pharynx"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "118664000",
+            "label": "Procedure on body system"
+          },
+          {
+            "concept_id": "118669005",
+            "label": "Procedure on respiratory system"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "173422009",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 5,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 3
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "128993003",
+            "label": "Excision of head structure"
+          },
+          {
+            "concept_id": "128993003",
+            "label": "Excision of head structure"
+          },
+          {
+            "concept_id": "363146006",
+            "label": "Immune system excision"
+          },
+          {
+            "concept_id": "363146006",
+            "label": "Immune system excision"
+          },
+          {
+            "concept_id": "107996003",
+            "label": "Lymphatic system excision"
+          },
+          {
+            "concept_id": "107996003",
+            "label": "Lymphatic system excision"
+          },
+          {
+            "concept_id": "385450002",
+            "label": "Operation on tonsils"
+          },
+          {
+            "concept_id": "385450002",
+            "label": "Operation on tonsils"
+          },
+          {
+            "concept_id": "30226002",
+            "label": "Partial pharyngectomy"
+          },
+          {
+            "concept_id": "30226002",
+            "label": "Partial pharyngectomy"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "37661000",
+            "label": "Operation on digestive tract"
+          },
+          {
+            "concept_id": "387661001",
+            "label": "Operation on respiratory tract"
+          },
+          {
+            "concept_id": "107907001",
+            "label": "Operative procedure on digestive system"
+          },
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          },
+          {
+            "concept_id": "771329004",
+            "label": "Procedure on body region"
+          },
+          {
+            "concept_id": "118821005",
+            "label": "Procedure on digestive organ"
+          },
+          {
+            "concept_id": "118826000",
+            "label": "Procedure on digestive tract"
+          },
+          {
+            "concept_id": "118685000",
+            "label": "Procedure on hematopoietic system"
+          },
+          {
+            "concept_id": "118670006",
+            "label": "Procedure on upper respiratory tract"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "23136006",
+            "label": "Operation on pharynx"
+          },
+          {
+            "concept_id": "108003002",
+            "label": "Operative procedure on tonsils AND/OR adenoids"
+          },
+          {
+            "concept_id": "118690002",
+            "label": "Procedure on head"
+          },
+          {
+            "concept_id": "118686004",
+            "label": "Procedure on immune system"
+          },
+          {
+            "concept_id": "118688003",
+            "label": "Procedure on lymphatic system"
+          },
+          {
+            "concept_id": "129253000",
+            "label": "Procedure on lymphoid organ"
+          },
+          {
+            "concept_id": "118786008",
+            "label": "Procedure on oropharynx"
+          },
+          {
+            "concept_id": "387713003",
+            "label": "Surgical procedure"
+          },
+          {
+            "concept_id": "128303001",
+            "label": "Surgical removal"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "118673008",
+            "label": "Procedure on digestive system"
+          },
+          {
+            "concept_id": "387662008",
+            "label": "Respiratory tract procedure"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "65801008",
+            "label": "Excision"
+          },
+          {
+            "concept_id": "363152007",
+            "label": "Immune system surgical procedure"
+          },
+          {
+            "concept_id": "49509003",
+            "label": "Operation on lymphatic structure"
+          },
+          {
+            "concept_id": "5282006",
+            "label": "Operation on oropharynx"
+          },
+          {
+            "concept_id": "232522007",
+            "label": "Operations on tonsil and adenoid"
+          },
+          {
+            "concept_id": "89901005",
+            "label": "Operative procedure on head"
+          },
+          {
+            "concept_id": "51265002",
+            "label": "Pharyngectomy"
+          },
+          {
+            "concept_id": "385449002",
+            "label": "Procedure on tonsils"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "14354006",
+            "label": "Operation on upper respiratory tract"
+          },
+          {
+            "concept_id": "107957009",
+            "label": "Operative procedure on digestive organ"
+          },
+          {
+            "concept_id": "107994000",
+            "label": "Operative procedure on hematopoietic system"
+          },
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "118664000",
+            "label": "Procedure on body system"
+          },
+          {
+            "concept_id": "118950002",
+            "label": "Procedure on head AND/OR neck"
+          },
+          {
+            "concept_id": "118687008",
+            "label": "Procedure on lymphoid system"
+          },
+          {
+            "concept_id": "118717007",
+            "label": "Procedure on organ"
+          },
+          {
+            "concept_id": "118784006",
+            "label": "Procedure on pharynx"
+          },
+          {
+            "concept_id": "118292001",
+            "label": "Removal"
+          },
+          {
+            "concept_id": "359718007",
+            "label": "Upper digestive tract operation"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 41328,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"240477008\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 4,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"37657006\",\n          \"label\": \"Disorder of esophagus\"\n        },\n        {\n          \"concept_id\": \"37657006\",\n          \"label\": \"Disorder of esophagus\"\n        },\n        {\n          \"concept_id\": \"715852004\",\n          \"label\": \"Gastrointestinal infection\"\n        },\n        {\n          \"concept_id\": \"715852004\",\n          \"label\": \"Gastrointestinal infection\"\n        },\n        {\n          \"concept_id\": \"88594005\",\n          \"label\": \"Herpes simplex\"\n        },\n        {\n          \"concept_id\": \"88594005\",\n          \"label\": \"Herpes simplex\"\n        },\n        {\n          \"concept_id\": \"312131008\",\n          \"label\": \"Viral infection of the digestive tract\"\n        },\n        {\n          \"concept_id\": \"312131008\",\n          \"label\": \"Viral infection of the digestive tract\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"386618008\",\n          \"label\": \"Gastrointestinal tract finding\"\n        },\n        {\n          \"concept_id\": \"23513009\",\n          \"label\": \"Herpesvirus infection\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"312158001\",\n          \"label\": \"Infection of digestive system\"\n        },\n        {\n          \"concept_id\": \"34014006\",\n          \"label\": \"Viral disease\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"73787001\",\n          \"label\": \"Disease due to Alphaherpesvirinae\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"119292006\",\n          \"label\": \"Disorder of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"119291004\",\n          \"label\": \"Disorder of upper gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"300284004\",\n          \"label\": \"Finding of esophagus\"\n        },\n        {\n          \"concept_id\": \"128398001\",\n          \"label\": \"Infectious disease of digestive tract\"\n        },\n        {\n          \"concept_id\": \"312130009\",\n          \"label\": \"Viral infection by site\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"302912005\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"57781000\",\n          \"label\": \"Disorder of vocal cord\"\n        },\n        {\n          \"concept_id\": \"57781000\",\n          \"label\": \"Disorder of vocal cord\"\n        },\n        {\n          \"concept_id\": \"89927005\",\n          \"label\": \"Paralysis of larynx\"\n        },\n        {\n          \"concept_id\": \"89927005\",\n          \"label\": \"Paralysis of larynx\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118939000\",\n          \"label\": \"Disorder of neck\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"298378000\",\n          \"label\": \"Finding of neck region\"\n        },\n        {\n          \"concept_id\": \"364729007\",\n          \"label\": \"Gross movement of body and limbs - finding\"\n        },\n        {\n          \"concept_id\": \"52559000\",\n          \"label\": \"Motor dysfunction\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"298325004\",\n          \"label\": \"Finding of movement\"\n        },\n        {\n          \"concept_id\": \"106145009\",\n          \"label\": \"Motor nervous system finding\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"60600009\",\n          \"label\": \"Disorder of the larynx\"\n        },\n        {\n          \"concept_id\": \"271748007\",\n          \"label\": \"Larynx finding\"\n        },\n        {\n          \"concept_id\": \"44695005\",\n          \"label\": \"Paralysis\"\n        },\n        {\n          \"concept_id\": \"249438001\",\n          \"label\": \"Vocal cord finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"409609008\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"19829001\",\n          \"label\": \"Disorder of lung\"\n        },\n        {\n          \"concept_id\": \"19829001\",\n          \"label\": \"Disorder of lung\"\n        },\n        {\n          \"concept_id\": \"301232003\",\n          \"label\": \"Lesion of lung\"\n        },\n        {\n          \"concept_id\": \"301232003\",\n          \"label\": \"Lesion of lung\"\n        },\n        {\n          \"concept_id\": \"128309002\",\n          \"label\": \"Radiologic infiltrate\"\n        },\n        {\n          \"concept_id\": \"128309002\",\n          \"label\": \"Radiologic infiltrate\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"441742003\",\n          \"label\": \"Evaluation finding\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"365853002\",\n          \"label\": \"Imaging finding\"\n        },\n        {\n          \"concept_id\": \"301226008\",\n          \"label\": \"Lower respiratory tract finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"128272009\",\n          \"label\": \"Disorder of lower respiratory system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"300577008\",\n          \"label\": \"Finding of lesion\"\n        },\n        {\n          \"concept_id\": \"301230006\",\n          \"label\": \"Lung finding\"\n        },\n        {\n          \"concept_id\": \"118247008\",\n          \"label\": \"Radiologic finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"392233007\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"446401003\",\n          \"label\": \"Drainage of abscess of head\"\n        },\n        {\n          \"concept_id\": \"446401003\",\n          \"label\": \"Drainage of abscess of head\"\n        },\n        {\n          \"concept_id\": \"32005000\",\n          \"label\": \"Drainage of peritonsillar tissues\"\n        },\n        {\n          \"concept_id\": \"32005000\",\n          \"label\": \"Drainage of peritonsillar tissues\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"118821005\",\n          \"label\": \"Procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"118826000\",\n          \"label\": \"Procedure on digestive tract\"\n        },\n        {\n          \"concept_id\": \"118670006\",\n          \"label\": \"Procedure on upper respiratory tract\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"118673008\",\n          \"label\": \"Procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"387662008\",\n          \"label\": \"Respiratory tract procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"275087005\",\n          \"label\": \"Drainage of abscess of head or neck\"\n        },\n        {\n          \"concept_id\": \"122462000\",\n          \"label\": \"Drainage procedure\"\n        },\n        {\n          \"concept_id\": \"118690002\",\n          \"label\": \"Procedure on head\"\n        },\n        {\n          \"concept_id\": \"118786008\",\n          \"label\": \"Procedure on oropharynx\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118442004\",\n          \"label\": \"Drainage of abscess\"\n        },\n        {\n          \"concept_id\": \"122461007\",\n          \"label\": \"Evacuation procedure\"\n        },\n        {\n          \"concept_id\": \"118950002\",\n          \"label\": \"Procedure on head AND/OR neck\"\n        },\n        {\n          \"concept_id\": \"118784006\",\n          \"label\": \"Procedure on pharynx\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118669005\",\n          \"label\": \"Procedure on respiratory system\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"173422009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 5,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128993003\",\n          \"label\": \"Excision of head structure\"\n        },\n        {\n          \"concept_id\": \"128993003\",\n          \"label\": \"Excision of head structure\"\n        },\n        {\n          \"concept_id\": \"363146006\",\n          \"label\": \"Immune system excision\"\n        },\n        {\n          \"concept_id\": \"363146006\",\n          \"label\": \"Immune system excision\"\n        },\n        {\n          \"concept_id\": \"107996003\",\n          \"label\": \"Lymphatic system excision\"\n        },\n        {\n          \"concept_id\": \"107996003\",\n          \"label\": \"Lymphatic system excision\"\n        },\n        {\n          \"concept_id\": \"385450002\",\n          \"label\": \"Operation on tonsils\"\n        },\n        {\n          \"concept_id\": \"385450002\",\n          \"label\": \"Operation on tonsils\"\n        },\n        {\n          \"concept_id\": \"30226002\",\n          \"label\": \"Partial pharyngectomy\"\n        },\n        {\n          \"concept_id\": \"30226002\",\n          \"label\": \"Partial pharyngectomy\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"37661000\",\n          \"label\": \"Operation on digestive tract\"\n        },\n        {\n          \"concept_id\": \"387661001\",\n          \"label\": \"Operation on respiratory tract\"\n        },\n        {\n          \"concept_id\": \"107907001\",\n          \"label\": \"Operative procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"118821005\",\n          \"label\": \"Procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"118826000\",\n          \"label\": \"Procedure on digestive tract\"\n        },\n        {\n          \"concept_id\": \"118685000\",\n          \"label\": \"Procedure on hematopoietic system\"\n        },\n        {\n          \"concept_id\": \"118670006\",\n          \"label\": \"Procedure on upper respiratory tract\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"23136006\",\n          \"label\": \"Operation on pharynx\"\n        },\n        {\n          \"concept_id\": \"108003002\",\n          \"label\": \"Operative procedure on tonsils AND/OR adenoids\"\n        },\n        {\n          \"concept_id\": \"118690002\",\n          \"label\": \"Procedure on head\"\n        },\n        {\n          \"concept_id\": \"118686004\",\n          \"label\": \"Procedure on immune system\"\n        },\n        {\n          \"concept_id\": \"118688003\",\n          \"label\": \"Procedure on lymphatic system\"\n        },\n        {\n          \"concept_id\": \"129253000\",\n          \"label\": \"Procedure on lymphoid organ\"\n        },\n        {\n          \"concept_id\": \"118786008\",\n          \"label\": \"Procedure on oropharynx\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        },\n        {\n          \"concept_id\": \"128303001\",\n          \"label\": \"Surgical removal\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118673008\",\n          \"label\": \"Procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"387662008\",\n          \"label\": \"Respiratory tract procedure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"65801008\",\n          \"label\": \"Excision\"\n        },\n        {\n          \"concept_id\": \"363152007\",\n          \"label\": \"Immune system surgical procedure\"\n        },\n        {\n          \"concept_id\": \"49509003\",\n          \"label\": \"Operation on lymphatic structure\"\n        },\n        {\n          \"concept_id\": \"5282006\",\n          \"label\": \"Operation on oropharynx\"\n        },\n        {\n          \"concept_id\": \"232522007\",\n          \"label\": \"Operations on tonsil and adenoid\"\n        },\n        {\n          \"concept_id\": \"89901005\",\n          \"label\": \"Operative procedure on head\"\n        },\n        {\n          \"concept_id\": \"51265002\",\n          \"label\": \"Pharyngectomy\"\n        },\n        {\n          \"concept_id\": \"385449002\",\n          \"label\": \"Procedure on tonsils\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"14354006\",\n          \"label\": \"Operation on upper respiratory tract\"\n        },\n        {\n          \"concept_id\": \"107957009\",\n          \"label\": \"Operative procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"107994000\",\n          \"label\": \"Operative procedure on hematopoietic system\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118950002\",\n          \"label\": \"Procedure on head AND/OR neck\"\n        },\n        {\n          \"concept_id\": \"118687008\",\n          \"label\": \"Procedure on lymphoid system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"118784006\",\n          \"label\": \"Procedure on pharynx\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        },\n        {\n          \"concept_id\": \"359718007\",\n          \"label\": \"Upper digestive tract operation\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"240477008\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 4,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"37657006\",\n          \"label\": \"Disorder of esophagus\"\n        },\n        {\n          \"concept_id\": \"37657006\",\n          \"label\": \"Disorder of esophagus\"\n        },\n        {\n          \"concept_id\": \"715852004\",\n          \"label\": \"Gastrointestinal infection\"\n        },\n        {\n          \"concept_id\": \"715852004\",\n          \"label\": \"Gastrointestinal infection\"\n        },\n        {\n          \"concept_id\": \"88594005\",\n          \"label\": \"Herpes simplex\"\n        },\n        {\n          \"concept_id\": \"88594005\",\n          \"label\": \"Herpes simplex\"\n        },\n        {\n          \"concept_id\": \"312131008\",\n          \"label\": \"Viral infection of the digestive tract\"\n        },\n        {\n          \"concept_id\": \"312131008\",\n          \"label\": \"Viral infection of the digestive tract\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"386618008\",\n          \"label\": \"Gastrointestinal tract finding\"\n        },\n        {\n          \"concept_id\": \"23513009\",\n          \"label\": \"Herpesvirus infection\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"312158001\",\n          \"label\": \"Infection of digestive system\"\n        },\n        {\n          \"concept_id\": \"34014006\",\n          \"label\": \"Viral disease\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"73787001\",\n          \"label\": \"Disease due to Alphaherpesvirinae\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"119292006\",\n          \"label\": \"Disorder of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"119291004\",\n          \"label\": \"Disorder of upper gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"300284004\",\n          \"label\": \"Finding of esophagus\"\n        },\n        {\n          \"concept_id\": \"128398001\",\n          \"label\": \"Infectious disease of digestive tract\"\n        },\n        {\n          \"concept_id\": \"312130009\",\n          \"label\": \"Viral infection by site\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"302912005\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"57781000\",\n          \"label\": \"Disorder of vocal cord\"\n        },\n        {\n          \"concept_id\": \"57781000\",\n          \"label\": \"Disorder of vocal cord\"\n        },\n        {\n          \"concept_id\": \"89927005\",\n          \"label\": \"Paralysis of larynx\"\n        },\n        {\n          \"concept_id\": \"89927005\",\n          \"label\": \"Paralysis of larynx\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118939000\",\n          \"label\": \"Disorder of neck\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"298378000\",\n          \"label\": \"Finding of neck region\"\n        },\n        {\n          \"concept_id\": \"364729007\",\n          \"label\": \"Gross movement of body and limbs - finding\"\n        },\n        {\n          \"concept_id\": \"52559000\",\n          \"label\": \"Motor dysfunction\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"298325004\",\n          \"label\": \"Finding of movement\"\n        },\n        {\n          \"concept_id\": \"106145009\",\n          \"label\": \"Motor nervous system finding\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"60600009\",\n          \"label\": \"Disorder of the larynx\"\n        },\n        {\n          \"concept_id\": \"271748007\",\n          \"label\": \"Larynx finding\"\n        },\n        {\n          \"concept_id\": \"44695005\",\n          \"label\": \"Paralysis\"\n        },\n        {\n          \"concept_id\": \"249438001\",\n          \"label\": \"Vocal cord finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"409609008\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"19829001\",\n          \"label\": \"Disorder of lung\"\n        },\n        {\n          \"concept_id\": \"19829001\",\n          \"label\": \"Disorder of lung\"\n        },\n        {\n          \"concept_id\": \"301232003\",\n          \"label\": \"Lesion of lung\"\n        },\n        {\n          \"concept_id\": \"301232003\",\n          \"label\": \"Lesion of lung\"\n        },\n        {\n          \"concept_id\": \"128309002\",\n          \"label\": \"Radiologic infiltrate\"\n        },\n        {\n          \"concept_id\": \"128309002\",\n          \"label\": \"Radiologic infiltrate\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"441742003\",\n          \"label\": \"Evaluation finding\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"365853002\",\n          \"label\": \"Imaging finding\"\n        },\n        {\n          \"concept_id\": \"301226008\",\n          \"label\": \"Lower respiratory tract finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"128272009\",\n          \"label\": \"Disorder of lower respiratory system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"300577008\",\n          \"label\": \"Finding of lesion\"\n        },\n        {\n          \"concept_id\": \"301230006\",\n          \"label\": \"Lung finding\"\n        },\n        {\n          \"concept_id\": \"118247008\",\n          \"label\": \"Radiologic finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"392233007\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"446401003\",\n          \"label\": \"Drainage of abscess of head\"\n        },\n        {\n          \"concept_id\": \"446401003\",\n          \"label\": \"Drainage of abscess of head\"\n        },\n        {\n          \"concept_id\": \"32005000\",\n          \"label\": \"Drainage of peritonsillar tissues\"\n        },\n        {\n          \"concept_id\": \"32005000\",\n          \"label\": \"Drainage of peritonsillar tissues\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"118821005\",\n          \"label\": \"Procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"118826000\",\n          \"label\": \"Procedure on digestive tract\"\n        },\n        {\n          \"concept_id\": \"118670006\",\n          \"label\": \"Procedure on upper respiratory tract\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"118673008\",\n          \"label\": \"Procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"387662008\",\n          \"label\": \"Respiratory tract procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"275087005\",\n          \"label\": \"Drainage of abscess of head or neck\"\n        },\n        {\n          \"concept_id\": \"122462000\",\n          \"label\": \"Drainage procedure\"\n        },\n        {\n          \"concept_id\": \"118690002\",\n          \"label\": \"Procedure on head\"\n        },\n        {\n          \"concept_id\": \"118786008\",\n          \"label\": \"Procedure on oropharynx\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118442004\",\n          \"label\": \"Drainage of abscess\"\n        },\n        {\n          \"concept_id\": \"122461007\",\n          \"label\": \"Evacuation procedure\"\n        },\n        {\n          \"concept_id\": \"118950002\",\n          \"label\": \"Procedure on head AND/OR neck\"\n        },\n        {\n          \"concept_id\": \"118784006\",\n          \"label\": \"Procedure on pharynx\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118669005\",\n          \"label\": \"Procedure on respiratory system\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"173422009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 5,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128993003\",\n          \"label\": \"Excision of head structure\"\n        },\n        {\n          \"concept_id\": \"128993003\",\n          \"label\": \"Excision of head structure\"\n        },\n        {\n          \"concept_id\": \"363146006\",\n          \"label\": \"Immune system excision\"\n        },\n        {\n          \"concept_id\": \"363146006\",\n          \"label\": \"Immune system excision\"\n        },\n        {\n          \"concept_id\": \"107996003\",\n          \"label\": \"Lymphatic system excision\"\n        },\n        {\n          \"concept_id\": \"107996003\",\n          \"label\": \"Lymphatic system excision\"\n        },\n        {\n          \"concept_id\": \"385450002\",\n          \"label\": \"Operation on tonsils\"\n        },\n        {\n          \"concept_id\": \"385450002\",\n          \"label\": \"Operation on tonsils\"\n        },\n        {\n          \"concept_id\": \"30226002\",\n          \"label\": \"Partial pharyngectomy\"\n        },\n        {\n          \"concept_id\": \"30226002\",\n          \"label\": \"Partial pharyngectomy\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"37661000\",\n          \"label\": \"Operation on digestive tract\"\n        },\n        {\n          \"concept_id\": \"387661001\",\n          \"label\": \"Operation on respiratory tract\"\n        },\n        {\n          \"concept_id\": \"107907001\",\n          \"label\": \"Operative procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"118821005\",\n          \"label\": \"Procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"118826000\",\n          \"label\": \"Procedure on digestive tract\"\n        },\n        {\n          \"concept_id\": \"118685000\",\n          \"label\": \"Procedure on hematopoietic system\"\n        },\n        {\n          \"concept_id\": \"118670006\",\n          \"label\": \"Procedure on upper respiratory tract\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"23136006\",\n          \"label\": \"Operation on pharynx\"\n        },\n        {\n          \"concept_id\": \"108003002\",\n          \"label\": \"Operative procedure on tonsils AND/OR adenoids\"\n        },\n        {\n          \"concept_id\": \"118690002\",\n          \"label\": \"Procedure on head\"\n        },\n        {\n          \"concept_id\": \"118686004\",\n          \"label\": \"Procedure on immune system\"\n        },\n        {\n          \"concept_id\": \"118688003\",\n          \"label\": \"Procedure on lymphatic system\"\n        },\n        {\n          \"concept_id\": \"129253000\",\n          \"label\": \"Procedure on lymphoid organ\"\n        },\n        {\n          \"concept_id\": \"118786008\",\n          \"label\": \"Procedure on oropharynx\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        },\n        {\n          \"concept_id\": \"128303001\",\n          \"label\": \"Surgical removal\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118673008\",\n          \"label\": \"Procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"387662008\",\n          \"label\": \"Respiratory tract procedure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"65801008\",\n          \"label\": \"Excision\"\n        },\n        {\n          \"concept_id\": \"363152007\",\n          \"label\": \"Immune system surgical procedure\"\n        },\n        {\n          \"concept_id\": \"49509003\",\n          \"label\": \"Operation on lymphatic structure\"\n        },\n        {\n          \"concept_id\": \"5282006\",\n          \"label\": \"Operation on oropharynx\"\n        },\n        {\n          \"concept_id\": \"232522007\",\n          \"label\": \"Operations on tonsil and adenoid\"\n        },\n        {\n          \"concept_id\": \"89901005\",\n          \"label\": \"Operative procedure on head\"\n        },\n        {\n          \"concept_id\": \"51265002\",\n          \"label\": \"Pharyngectomy\"\n        },\n        {\n          \"concept_id\": \"385449002\",\n          \"label\": \"Procedure on tonsils\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"14354006\",\n          \"label\": \"Operation on upper respiratory tract\"\n        },\n        {\n          \"concept_id\": \"107957009\",\n          \"label\": \"Operative procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"107994000\",\n          \"label\": \"Operative procedure on hematopoietic system\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118950002\",\n          \"label\": \"Procedure on head AND/OR neck\"\n        },\n        {\n          \"concept_id\": \"118687008\",\n          \"label\": \"Procedure on lymphoid system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"118784006\",\n          \"label\": \"Procedure on pharynx\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        },\n        {\n          \"concept_id\": \"359718007\",\n          \"label\": \"Upper digestive tract operation\"\n        }\n      ]\n    }\n  }\n]\n"
+}

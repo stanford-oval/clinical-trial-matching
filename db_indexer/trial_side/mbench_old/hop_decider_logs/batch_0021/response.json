@@ -1,0 +1,41 @@
+{
+  "batch_index": 21,
+  "raw_response": "[\n  {\n    \"concept_id\": \"221360009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"56731001\",\n    \"stop_at_label\": \"Increased muscle tone\",\n    \"rationale\": \"Select parent 'Increased muscle tone'—mechanism preserved, timeframe tight and clauses small favor H=1. Other parents are generic findings; hop-2/3 include 'finding by site' or 'clinical finding' deny-list. Parent_count high → conservative generalization.\"\n  },\n  {\n    \"concept_id\": \"449888003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"373930000\",\n    \"stop_at_label\": \"Cognitive function finding\",\n    \"rationale\": \"Parent 'Cognitive function finding' keeps cognitive domain and program intent; timeframe tight and clause size small favor H=1. Hop-2 ancestors are broader functional/psychosocial findings; avoid over-generalization.\"\n  },\n  {\n    \"concept_id\": \"238136002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"414916001\",\n    \"stop_at_label\": \"Obesity\",\n    \"rationale\": \"Choose parent 'Obesity' to remain specific to weight-related condition; inclusion vs exclusion balanced → conservative H=1. Higher ancestors include 'Disease'/'Clinical finding' categories, which are too generic.\"\n  },\n  {\n    \"concept_id\": \"425500002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"24700007\",\n    \"stop_at_label\": \"Multiple sclerosis\",\n    \"rationale\": \"Parent 'Multiple sclerosis' preserves disease program and CNS focus; timeframe tight and small clause size support H=1. Higher ancestors (degenerative/CNS disorder, disease) are overly generic.\"\n  },\n  {\n    \"concept_id\": \"371984007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"363402007\",\n    \"stop_at_label\": \"Malignant tumor of esophagus\",\n    \"rationale\": \"Select parent 'Malignant tumor of esophagus' to keep organ-specific malignancy. The alternative parent spans entire GI tract and is too broad. Higher hops include generic neoplasm/disorder categories.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "221360009",
+      "hops": 1,
+      "rationale": "Select parent 'Increased muscle tone'—mechanism preserved, timeframe tight and clauses small favor H=1. Other parents are generic findings; hop-2/3 include 'fin",
+      "stop_at_concept_id": "56731001",
+      "stop_at_label": "Increased muscle tone"
+    },
+    {
+      "concept_id": "449888003",
+      "hops": 1,
+      "rationale": "Parent 'Cognitive function finding' keeps cognitive domain and program intent; timeframe tight and clause size small favor H=1. Hop-2 ancestors are broader func",
+      "stop_at_concept_id": "373930000",
+      "stop_at_label": "Cognitive function finding"
+    },
+    {
+      "concept_id": "238136002",
+      "hops": 1,
+      "rationale": "Choose parent 'Obesity' to remain specific to weight-related condition; inclusion vs exclusion balanced → conservative H=1. Higher ancestors include 'Disease'/'",
+      "stop_at_concept_id": "414916001",
+      "stop_at_label": "Obesity"
+    },
+    {
+      "concept_id": "425500002",
+      "hops": 1,
+      "rationale": "Parent 'Multiple sclerosis' preserves disease program and CNS focus; timeframe tight and small clause size support H=1. Higher ancestors (degenerative/CNS disor",
+      "stop_at_concept_id": "24700007",
+      "stop_at_label": "Multiple sclerosis"
+    },
+    {
+      "concept_id": "371984007",
+      "hops": 1,
+      "rationale": "Select parent 'Malignant tumor of esophagus' to keep organ-specific malignancy. The alternative parent spans entire GI tract and is too broad. Higher hops inclu",
+      "stop_at_concept_id": "363402007",
+      "stop_at_label": "Malignant tumor of esophagus"
+    }
+  ]
+}

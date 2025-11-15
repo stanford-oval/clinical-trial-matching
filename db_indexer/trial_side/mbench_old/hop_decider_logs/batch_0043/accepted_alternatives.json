@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "1240000",
+    "alt_concept_id": "102538003",
+    "hop": 1,
+    "alt_label": "Recumbent body position",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:04:42"
+  },
+  {
+    "concept_id": "32485007",
+    "alt_concept_id": "32485007",
+    "hop": 0,
+    "alt_label": "Hospital admission",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:04:42"
+  },
+  {
+    "concept_id": "405045001",
+    "alt_concept_id": "247888008",
+    "hop": 1,
+    "alt_label": "Awareness of self",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:04:42"
+  },
+  {
+    "concept_id": "49436004",
+    "alt_concept_id": "17366009",
+    "hop": 1,
+    "alt_label": "Atrial arrhythmia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:04:42"
+  },
+  {
+    "concept_id": "49436004",
+    "alt_concept_id": "40593004",
+    "hop": 1,
+    "alt_label": "Fibrillation",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:04:42"
+  },
+  {
+    "concept_id": "72366004",
+    "alt_concept_id": "231520001",
+    "hop": 1,
+    "alt_label": "Behavioral syndrome associated with physiological disturbance and physical factors",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:04:42"
+  },
+  {
+    "concept_id": "72366004",
+    "alt_concept_id": "111476001",
+    "hop": 1,
+    "alt_label": "Mental disorder usually first evident in infancy, childhood AND/OR adolescence",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:04:42"
+  }
+]

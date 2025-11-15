@@ -1,0 +1,41 @@
+{
+  "batch_index": 2,
+  "raw_response": "[\n  {\n    \"concept_id\": \"10503001\",\n    \"hops\": 2,\n    \"stop_at_concept_id\": \"118250006\",\n    \"stop_at_label\": \"Voice finding\",\n    \"rationale\": \"Voice finding preserves voice domain; parent voice production may be too narrow, and higher ancestors are too broad or generic. Avoids 'clinical finding' and maintains program intent.\"\n  },\n  {\n    \"concept_id\": \"230270009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"230273006\",\n    \"stop_at_label\": \"Frontotemporal degeneration\",\n    \"rationale\": \"Frontotemporal degeneration preserves FTD-specific intent; grandparent 'Cerebral degeneration' is too broad across many dementias.\"\n  },\n  {\n    \"concept_id\": \"33252009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"85417000\",\n    \"stop_at_label\": \"Autonomic agent\",\n    \"rationale\": \"Autonomic agent maintains pharmacologic mechanism while avoiding overly generic 'medicinal product categorized by disposition'; still relevant to autonomic drugs. Conservative vs higher levels.\"\n  },\n  {\n    \"concept_id\": \"393563007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"393564001\",\n    \"stop_at_label\": \"Glioma\",\n    \"rationale\": \"Glioma retains brain tumor specificity; sibling parent 'Primary malignant neoplasm' is too broad, and higher ancestors are generic.\"\n  },\n  {\n    \"concept_id\": \"417357006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"416417002\",\n    \"stop_at_label\": \"Hereditary hemoglobin S\",\n    \"rationale\": \"Hereditary hemoglobin S preserves HbS-specific program; broader hemoglobinopathy ancestors include non-HbS conditions, diluting intent.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "10503001",
+      "hops": 2,
+      "rationale": "Voice finding preserves voice domain; parent voice production may be too narrow, and higher ancestors are too broad or generic. Avoids 'clinical finding' and ma",
+      "stop_at_concept_id": "118250006",
+      "stop_at_label": "Voice finding"
+    },
+    {
+      "concept_id": "230270009",
+      "hops": 1,
+      "rationale": "Frontotemporal degeneration preserves FTD-specific intent; grandparent 'Cerebral degeneration' is too broad across many dementias.",
+      "stop_at_concept_id": "230273006",
+      "stop_at_label": "Frontotemporal degeneration"
+    },
+    {
+      "concept_id": "33252009",
+      "hops": 1,
+      "rationale": "Autonomic agent maintains pharmacologic mechanism while avoiding overly generic 'medicinal product categorized by disposition'; still relevant to autonomic drug",
+      "stop_at_concept_id": "85417000",
+      "stop_at_label": "Autonomic agent"
+    },
+    {
+      "concept_id": "393563007",
+      "hops": 1,
+      "rationale": "Glioma retains brain tumor specificity; sibling parent 'Primary malignant neoplasm' is too broad, and higher ancestors are generic.",
+      "stop_at_concept_id": "393564001",
+      "stop_at_label": "Glioma"
+    },
+    {
+      "concept_id": "417357006",
+      "hops": 1,
+      "rationale": "Hereditary hemoglobin S preserves HbS-specific program; broader hemoglobinopathy ancestors include non-HbS conditions, diluting intent.",
+      "stop_at_concept_id": "416417002",
+      "stop_at_label": "Hereditary hemoglobin S"
+    }
+  ]
+}

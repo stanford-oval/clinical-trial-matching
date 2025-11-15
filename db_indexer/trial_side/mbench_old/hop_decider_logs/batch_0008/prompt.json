@@ -1,0 +1,348 @@
+{
+  "batch_index": 8,
+  "offset": 35,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "71922006",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 4
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "106182000",
+            "label": "Immune system finding"
+          },
+          {
+            "concept_id": "106182000",
+            "label": "Immune system finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "299691001",
+            "label": "Finding of blood, lymphatics and immune system"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "279039007",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 3,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "161891005",
+            "label": "Backache"
+          },
+          {
+            "concept_id": "161891005",
+            "label": "Backache"
+          },
+          {
+            "concept_id": "609627001",
+            "label": "Finding of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "609627001",
+            "label": "Finding of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "301366005",
+            "label": "Pain of truncal structure"
+          },
+          {
+            "concept_id": "301366005",
+            "label": "Pain of truncal structure"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "699697007",
+            "label": "Finding of sensation by site"
+          },
+          {
+            "concept_id": "22253000",
+            "label": "Pain"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "414252009",
+            "label": "Finding of back"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "279001004",
+            "label": "Pain finding at anatomical site"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "102957003",
+            "label": "Neurological finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "276435006",
+            "label": "Pain / sensation finding"
+          },
+          {
+            "concept_id": "106147001",
+            "label": "Sensory nervous system finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "64572001",
+      "features": {
+        "depth_from_root": 2,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 6
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "304058009",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "116634000",
+            "label": "Bacterial antigen"
+          },
+          {
+            "concept_id": "116634000",
+            "label": "Bacterial antigen"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "406468005",
+            "label": "Microorganism allergen"
+          },
+          {
+            "concept_id": "277770000",
+            "label": "Specific antigen"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "406455002",
+            "label": "Allergen class"
+          },
+          {
+            "concept_id": "7120007",
+            "label": "Antigen"
+          },
+          {
+            "concept_id": "259777007",
+            "label": "Immunochemistry analyte"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "272524002",
+            "label": "Analyte"
+          },
+          {
+            "concept_id": "115668003",
+            "label": "Biological substance"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "106181007",
+            "label": "Immunologic substance"
+          },
+          {
+            "concept_id": "259776003",
+            "label": "Immunology analyte"
+          },
+          {
+            "concept_id": "105590001",
+            "label": "Substance"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "116633006",
+            "label": "Microbial antigen"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "162397003",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 4,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "301365009",
+            "label": "Pain of head and neck region"
+          },
+          {
+            "concept_id": "301365009",
+            "label": "Pain of head and neck region"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "699697007",
+            "label": "Finding of sensation by site"
+          },
+          {
+            "concept_id": "22253000",
+            "label": "Pain"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          },
+          {
+            "concept_id": "81680005",
+            "label": "Neck pain"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "102957003",
+            "label": "Neurological finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "298378000",
+            "label": "Finding of neck region"
+          },
+          {
+            "concept_id": "279001004",
+            "label": "Pain finding at anatomical site"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "276435006",
+            "label": "Pain / sensation finding"
+          },
+          {
+            "concept_id": "106147001",
+            "label": "Sensory nervous system finding"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 17826,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"71922006\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 4\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"106182000\",\n          \"label\": \"Immune system finding\"\n        },\n        {\n          \"concept_id\": \"106182000\",\n          \"label\": \"Immune system finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"299691001\",\n          \"label\": \"Finding of blood, lymphatics and immune system\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"279039007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"161891005\",\n          \"label\": \"Backache\"\n        },\n        {\n          \"concept_id\": \"161891005\",\n          \"label\": \"Backache\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"414252009\",\n          \"label\": \"Finding of back\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"64572001\",\n    \"features\": {\n      \"depth_from_root\": 2,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 6\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"304058009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"116634000\",\n          \"label\": \"Bacterial antigen\"\n        },\n        {\n          \"concept_id\": \"116634000\",\n          \"label\": \"Bacterial antigen\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"406468005\",\n          \"label\": \"Microorganism allergen\"\n        },\n        {\n          \"concept_id\": \"277770000\",\n          \"label\": \"Specific antigen\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"406455002\",\n          \"label\": \"Allergen class\"\n        },\n        {\n          \"concept_id\": \"7120007\",\n          \"label\": \"Antigen\"\n        },\n        {\n          \"concept_id\": \"259777007\",\n          \"label\": \"Immunochemistry analyte\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"272524002\",\n          \"label\": \"Analyte\"\n        },\n        {\n          \"concept_id\": \"115668003\",\n          \"label\": \"Biological substance\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"106181007\",\n          \"label\": \"Immunologic substance\"\n        },\n        {\n          \"concept_id\": \"259776003\",\n          \"label\": \"Immunology analyte\"\n        },\n        {\n          \"concept_id\": \"105590001\",\n          \"label\": \"Substance\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"116633006\",\n          \"label\": \"Microbial antigen\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"162397003\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 4,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"301365009\",\n          \"label\": \"Pain of head and neck region\"\n        },\n        {\n          \"concept_id\": \"301365009\",\n          \"label\": \"Pain of head and neck region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"81680005\",\n          \"label\": \"Neck pain\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"298378000\",\n          \"label\": \"Finding of neck region\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"71922006\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 4\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"106182000\",\n          \"label\": \"Immune system finding\"\n        },\n        {\n          \"concept_id\": \"106182000\",\n          \"label\": \"Immune system finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"299691001\",\n          \"label\": \"Finding of blood, lymphatics and immune system\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"279039007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"161891005\",\n          \"label\": \"Backache\"\n        },\n        {\n          \"concept_id\": \"161891005\",\n          \"label\": \"Backache\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"414252009\",\n          \"label\": \"Finding of back\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"64572001\",\n    \"features\": {\n      \"depth_from_root\": 2,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 6\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"304058009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"116634000\",\n          \"label\": \"Bacterial antigen\"\n        },\n        {\n          \"concept_id\": \"116634000\",\n          \"label\": \"Bacterial antigen\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"406468005\",\n          \"label\": \"Microorganism allergen\"\n        },\n        {\n          \"concept_id\": \"277770000\",\n          \"label\": \"Specific antigen\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"406455002\",\n          \"label\": \"Allergen class\"\n        },\n        {\n          \"concept_id\": \"7120007\",\n          \"label\": \"Antigen\"\n        },\n        {\n          \"concept_id\": \"259777007\",\n          \"label\": \"Immunochemistry analyte\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"272524002\",\n          \"label\": \"Analyte\"\n        },\n        {\n          \"concept_id\": \"115668003\",\n          \"label\": \"Biological substance\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"106181007\",\n          \"label\": \"Immunologic substance\"\n        },\n        {\n          \"concept_id\": \"259776003\",\n          \"label\": \"Immunology analyte\"\n        },\n        {\n          \"concept_id\": \"105590001\",\n          \"label\": \"Substance\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"116633006\",\n          \"label\": \"Microbial antigen\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"162397003\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 4,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"301365009\",\n          \"label\": \"Pain of head and neck region\"\n        },\n        {\n          \"concept_id\": \"301365009\",\n          \"label\": \"Pain of head and neck region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"81680005\",\n          \"label\": \"Neck pain\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"298378000\",\n          \"label\": \"Finding of neck region\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ]\n    }\n  }\n]\n"
+}

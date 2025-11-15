@@ -1,0 +1,446 @@
+{
+  "batch_index": 35,
+  "offset": 170,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "110368006",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "106176003",
+            "label": "Endocrine finding"
+          },
+          {
+            "concept_id": "106176003",
+            "label": "Endocrine finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "441742003",
+            "label": "Evaluation finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "386805003",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 3,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "443265004",
+            "label": "Cognitive disorder"
+          },
+          {
+            "concept_id": "443265004",
+            "label": "Cognitive disorder"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "246556002",
+            "label": "Central nervous system finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "118940003",
+            "label": "Disorder of nervous system"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118934005",
+            "label": "Disorder of head"
+          },
+          {
+            "concept_id": "23853001",
+            "label": "Disorder of the central nervous system"
+          },
+          {
+            "concept_id": "299718000",
+            "label": "Finding of brain"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "81308009",
+            "label": "Disorder of brain"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "202487003",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "418492000",
+            "label": "Finding of sacroiliac joint"
+          },
+          {
+            "concept_id": "418492000",
+            "label": "Finding of sacroiliac joint"
+          },
+          {
+            "concept_id": "713413001",
+            "label": "Joint pain of pelvic region"
+          },
+          {
+            "concept_id": "713413001",
+            "label": "Joint pain of pelvic region"
+          },
+          {
+            "concept_id": "61486003",
+            "label": "Sacral back pain"
+          },
+          {
+            "concept_id": "61486003",
+            "label": "Sacral back pain"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "609627001",
+            "label": "Finding of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "414252009",
+            "label": "Finding of back"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "302293008",
+            "label": "Finding of limb structure"
+          },
+          {
+            "concept_id": "609625009",
+            "label": "Finding of pelvic region of trunk"
+          },
+          {
+            "concept_id": "713314006",
+            "label": "Finding of sensation of lower limb"
+          },
+          {
+            "concept_id": "298379008",
+            "label": "Finding of spinal region"
+          },
+          {
+            "concept_id": "57676002",
+            "label": "Joint pain"
+          },
+          {
+            "concept_id": "106028002",
+            "label": "Musculoskeletal finding"
+          },
+          {
+            "concept_id": "279001004",
+            "label": "Pain finding at anatomical site"
+          },
+          {
+            "concept_id": "90834002",
+            "label": "Pain in limb"
+          },
+          {
+            "concept_id": "301366005",
+            "label": "Pain of truncal structure"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "699697007",
+            "label": "Finding of sensation by site"
+          },
+          {
+            "concept_id": "298249004",
+            "label": "Finding of sensation of joint"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "279069000",
+            "label": "Musculoskeletal pain"
+          },
+          {
+            "concept_id": "22253000",
+            "label": "Pain"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "267952008",
+            "label": "Arthralgia of the pelvic region and thigh"
+          },
+          {
+            "concept_id": "161891005",
+            "label": "Backache"
+          },
+          {
+            "concept_id": "116312005",
+            "label": "Finding of lower limb"
+          },
+          {
+            "concept_id": "609626005",
+            "label": "Finding of pelvis"
+          },
+          {
+            "concept_id": "609631007",
+            "label": "Finding of sacral region"
+          },
+          {
+            "concept_id": "118952005",
+            "label": "Joint finding"
+          },
+          {
+            "concept_id": "10601006",
+            "label": "Pain in lower limb"
+          },
+          {
+            "concept_id": "30473006",
+            "label": "Pain in pelvis"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "276435006",
+            "label": "Pain / sensation finding"
+          },
+          {
+            "concept_id": "106147001",
+            "label": "Sensory nervous system finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "102957003",
+            "label": "Neurological finding"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "77075001",
+      "features": {
+        "depth_from_root": 8,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "84494001",
+            "label": "Open-angle glaucoma"
+          },
+          {
+            "concept_id": "84494001",
+            "label": "Open-angle glaucoma"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "118934005",
+            "label": "Disorder of head"
+          },
+          {
+            "concept_id": "118235002",
+            "label": "Eye / vision finding"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          },
+          {
+            "concept_id": "128127008",
+            "label": "Visual system disorder"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "371409005",
+            "label": "Disorder of eye region"
+          },
+          {
+            "concept_id": "246915008",
+            "label": "Globe finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "371405004",
+            "label": "Disorder of eye"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "23986001",
+            "label": "Glaucoma"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "370961005",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "12184005",
+            "label": "Visual field defect"
+          },
+          {
+            "concept_id": "12184005",
+            "label": "Visual field defect"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "301980006",
+            "label": "Finding of visual field"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "301978000",
+            "label": "Finding of vision of eye"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "118235002",
+            "label": "Eye / vision finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 22564,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"110368006\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"106176003\",\n          \"label\": \"Endocrine finding\"\n        },\n        {\n          \"concept_id\": \"106176003\",\n          \"label\": \"Endocrine finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"441742003\",\n          \"label\": \"Evaluation finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"386805003\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"443265004\",\n          \"label\": \"Cognitive disorder\"\n        },\n        {\n          \"concept_id\": \"443265004\",\n          \"label\": \"Cognitive disorder\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"299718000\",\n          \"label\": \"Finding of brain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"81308009\",\n          \"label\": \"Disorder of brain\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"202487003\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"418492000\",\n          \"label\": \"Finding of sacroiliac joint\"\n        },\n        {\n          \"concept_id\": \"418492000\",\n          \"label\": \"Finding of sacroiliac joint\"\n        },\n        {\n          \"concept_id\": \"713413001\",\n          \"label\": \"Joint pain of pelvic region\"\n        },\n        {\n          \"concept_id\": \"713413001\",\n          \"label\": \"Joint pain of pelvic region\"\n        },\n        {\n          \"concept_id\": \"61486003\",\n          \"label\": \"Sacral back pain\"\n        },\n        {\n          \"concept_id\": \"61486003\",\n          \"label\": \"Sacral back pain\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"414252009\",\n          \"label\": \"Finding of back\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"302293008\",\n          \"label\": \"Finding of limb structure\"\n        },\n        {\n          \"concept_id\": \"609625009\",\n          \"label\": \"Finding of pelvic region of trunk\"\n        },\n        {\n          \"concept_id\": \"713314006\",\n          \"label\": \"Finding of sensation of lower limb\"\n        },\n        {\n          \"concept_id\": \"298379008\",\n          \"label\": \"Finding of spinal region\"\n        },\n        {\n          \"concept_id\": \"57676002\",\n          \"label\": \"Joint pain\"\n        },\n        {\n          \"concept_id\": \"106028002\",\n          \"label\": \"Musculoskeletal finding\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        },\n        {\n          \"concept_id\": \"90834002\",\n          \"label\": \"Pain in limb\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"298249004\",\n          \"label\": \"Finding of sensation of joint\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"279069000\",\n          \"label\": \"Musculoskeletal pain\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"267952008\",\n          \"label\": \"Arthralgia of the pelvic region and thigh\"\n        },\n        {\n          \"concept_id\": \"161891005\",\n          \"label\": \"Backache\"\n        },\n        {\n          \"concept_id\": \"116312005\",\n          \"label\": \"Finding of lower limb\"\n        },\n        {\n          \"concept_id\": \"609626005\",\n          \"label\": \"Finding of pelvis\"\n        },\n        {\n          \"concept_id\": \"609631007\",\n          \"label\": \"Finding of sacral region\"\n        },\n        {\n          \"concept_id\": \"118952005\",\n          \"label\": \"Joint finding\"\n        },\n        {\n          \"concept_id\": \"10601006\",\n          \"label\": \"Pain in lower limb\"\n        },\n        {\n          \"concept_id\": \"30473006\",\n          \"label\": \"Pain in pelvis\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"77075001\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"84494001\",\n          \"label\": \"Open-angle glaucoma\"\n        },\n        {\n          \"concept_id\": \"84494001\",\n          \"label\": \"Open-angle glaucoma\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"118235002\",\n          \"label\": \"Eye / vision finding\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"128127008\",\n          \"label\": \"Visual system disorder\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"371409005\",\n          \"label\": \"Disorder of eye region\"\n        },\n        {\n          \"concept_id\": \"246915008\",\n          \"label\": \"Globe finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"371405004\",\n          \"label\": \"Disorder of eye\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"23986001\",\n          \"label\": \"Glaucoma\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"370961005\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"12184005\",\n          \"label\": \"Visual field defect\"\n        },\n        {\n          \"concept_id\": \"12184005\",\n          \"label\": \"Visual field defect\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"301980006\",\n          \"label\": \"Finding of visual field\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"301978000\",\n          \"label\": \"Finding of vision of eye\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118235002\",\n          \"label\": \"Eye / vision finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"110368006\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"106176003\",\n          \"label\": \"Endocrine finding\"\n        },\n        {\n          \"concept_id\": \"106176003\",\n          \"label\": \"Endocrine finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"441742003\",\n          \"label\": \"Evaluation finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"386805003\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"443265004\",\n          \"label\": \"Cognitive disorder\"\n        },\n        {\n          \"concept_id\": \"443265004\",\n          \"label\": \"Cognitive disorder\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"299718000\",\n          \"label\": \"Finding of brain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"81308009\",\n          \"label\": \"Disorder of brain\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"202487003\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"418492000\",\n          \"label\": \"Finding of sacroiliac joint\"\n        },\n        {\n          \"concept_id\": \"418492000\",\n          \"label\": \"Finding of sacroiliac joint\"\n        },\n        {\n          \"concept_id\": \"713413001\",\n          \"label\": \"Joint pain of pelvic region\"\n        },\n        {\n          \"concept_id\": \"713413001\",\n          \"label\": \"Joint pain of pelvic region\"\n        },\n        {\n          \"concept_id\": \"61486003\",\n          \"label\": \"Sacral back pain\"\n        },\n        {\n          \"concept_id\": \"61486003\",\n          \"label\": \"Sacral back pain\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"414252009\",\n          \"label\": \"Finding of back\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"302293008\",\n          \"label\": \"Finding of limb structure\"\n        },\n        {\n          \"concept_id\": \"609625009\",\n          \"label\": \"Finding of pelvic region of trunk\"\n        },\n        {\n          \"concept_id\": \"713314006\",\n          \"label\": \"Finding of sensation of lower limb\"\n        },\n        {\n          \"concept_id\": \"298379008\",\n          \"label\": \"Finding of spinal region\"\n        },\n        {\n          \"concept_id\": \"57676002\",\n          \"label\": \"Joint pain\"\n        },\n        {\n          \"concept_id\": \"106028002\",\n          \"label\": \"Musculoskeletal finding\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        },\n        {\n          \"concept_id\": \"90834002\",\n          \"label\": \"Pain in limb\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"298249004\",\n          \"label\": \"Finding of sensation of joint\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"279069000\",\n          \"label\": \"Musculoskeletal pain\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"267952008\",\n          \"label\": \"Arthralgia of the pelvic region and thigh\"\n        },\n        {\n          \"concept_id\": \"161891005\",\n          \"label\": \"Backache\"\n        },\n        {\n          \"concept_id\": \"116312005\",\n          \"label\": \"Finding of lower limb\"\n        },\n        {\n          \"concept_id\": \"609626005\",\n          \"label\": \"Finding of pelvis\"\n        },\n        {\n          \"concept_id\": \"609631007\",\n          \"label\": \"Finding of sacral region\"\n        },\n        {\n          \"concept_id\": \"118952005\",\n          \"label\": \"Joint finding\"\n        },\n        {\n          \"concept_id\": \"10601006\",\n          \"label\": \"Pain in lower limb\"\n        },\n        {\n          \"concept_id\": \"30473006\",\n          \"label\": \"Pain in pelvis\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"77075001\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"84494001\",\n          \"label\": \"Open-angle glaucoma\"\n        },\n        {\n          \"concept_id\": \"84494001\",\n          \"label\": \"Open-angle glaucoma\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"118235002\",\n          \"label\": \"Eye / vision finding\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"128127008\",\n          \"label\": \"Visual system disorder\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"371409005\",\n          \"label\": \"Disorder of eye region\"\n        },\n        {\n          \"concept_id\": \"246915008\",\n          \"label\": \"Globe finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"371405004\",\n          \"label\": \"Disorder of eye\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"23986001\",\n          \"label\": \"Glaucoma\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"370961005\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"12184005\",\n          \"label\": \"Visual field defect\"\n        },\n        {\n          \"concept_id\": \"12184005\",\n          \"label\": \"Visual field defect\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"301980006\",\n          \"label\": \"Finding of visual field\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"301978000\",\n          \"label\": \"Finding of vision of eye\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118235002\",\n          \"label\": \"Eye / vision finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ]\n    }\n  }\n]\n"
+}

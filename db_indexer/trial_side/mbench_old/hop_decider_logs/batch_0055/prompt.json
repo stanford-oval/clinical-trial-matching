@@ -1,0 +1,688 @@
+{
+  "batch_index": 55,
+  "offset": 270,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "102588006",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "29857009",
+            "label": "Chest pain"
+          },
+          {
+            "concept_id": "29857009",
+            "label": "Chest pain"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "699697007",
+            "label": "Finding of sensation by site"
+          },
+          {
+            "concept_id": "22253000",
+            "label": "Pain"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "609623002",
+            "label": "Finding of upper trunk"
+          },
+          {
+            "concept_id": "279001004",
+            "label": "Pain finding at anatomical site"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "102957003",
+            "label": "Neurological finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "301366005",
+            "label": "Pain of truncal structure"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "276435006",
+            "label": "Pain / sensation finding"
+          },
+          {
+            "concept_id": "106147001",
+            "label": "Sensory nervous system finding"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "233604007",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 5,
+        "exclusion_trials": 10
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "95436008",
+            "label": "Lung consolidation"
+          },
+          {
+            "concept_id": "95436008",
+            "label": "Lung consolidation"
+          },
+          {
+            "concept_id": "205237003",
+            "label": "Pneumonitis"
+          },
+          {
+            "concept_id": "205237003",
+            "label": "Pneumonitis"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "609623002",
+            "label": "Finding of upper trunk"
+          },
+          {
+            "concept_id": "363171009",
+            "label": "Inflammation of specific body systems"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "609622007",
+            "label": "Disorder of thoracic segment of trunk"
+          },
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "128139000",
+            "label": "Inflammatory disorder"
+          },
+          {
+            "concept_id": "373405005",
+            "label": "Inflammatory disorder of the respiratory system"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "128272009",
+            "label": "Disorder of lower respiratory system"
+          },
+          {
+            "concept_id": "118946009",
+            "label": "Disorder of thorax"
+          },
+          {
+            "concept_id": "363170005",
+            "label": "Inflammation of specific body structures or tissue"
+          },
+          {
+            "concept_id": "363180009",
+            "label": "Inflammatory disorder of the respiratory tract"
+          },
+          {
+            "concept_id": "301226008",
+            "label": "Lower respiratory tract finding"
+          },
+          {
+            "concept_id": "301230006",
+            "label": "Lung finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "19829001",
+            "label": "Disorder of lung"
+          },
+          {
+            "concept_id": "363169009",
+            "label": "Inflammation of specific body organs"
+          },
+          {
+            "concept_id": "128997002",
+            "label": "Inflammatory disorder of lower respiratory tract"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "38907003",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 6,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "721265008",
+            "label": "Infection of skin and/or mucous membrane caused by Herpes virus"
+          },
+          {
+            "concept_id": "721265008",
+            "label": "Infection of skin and/or mucous membrane caused by Herpes virus"
+          },
+          {
+            "concept_id": "309465005",
+            "label": "Varicella-zoster virus infection"
+          },
+          {
+            "concept_id": "309465005",
+            "label": "Varicella-zoster virus infection"
+          },
+          {
+            "concept_id": "11263005",
+            "label": "Vascular disease of the skin"
+          },
+          {
+            "concept_id": "11263005",
+            "label": "Vascular disease of the skin"
+          },
+          {
+            "concept_id": "79893008",
+            "label": "Vesicular eruption"
+          },
+          {
+            "concept_id": "79893008",
+            "label": "Vesicular eruption"
+          },
+          {
+            "concept_id": "312135004",
+            "label": "Viral cardiovascular infection"
+          },
+          {
+            "concept_id": "312135004",
+            "label": "Viral cardiovascular infection"
+          },
+          {
+            "concept_id": "49882001",
+            "label": "Viral exanthem"
+          },
+          {
+            "concept_id": "49882001",
+            "label": "Viral exanthem"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "106063007",
+            "label": "Cardiovascular finding"
+          },
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "40733004",
+            "label": "Disorder due to infection"
+          },
+          {
+            "concept_id": "128598002",
+            "label": "Disorder of integument"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "248402002",
+            "label": "General finding of soft tissue"
+          },
+          {
+            "concept_id": "19824006",
+            "label": "Infection of skin and/or subcutaneous tissue"
+          },
+          {
+            "concept_id": "106077005",
+            "label": "Integumentary system finding"
+          },
+          {
+            "concept_id": "714974000",
+            "label": "Lesion of skin and/or skin-associated mucous membrane"
+          },
+          {
+            "concept_id": "239953001",
+            "label": "Soft tissue lesion"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "73787001",
+            "label": "Disease due to Alphaherpesvirinae"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "95320005",
+            "label": "Disorder of skin"
+          },
+          {
+            "concept_id": "271807003",
+            "label": "Eruption"
+          },
+          {
+            "concept_id": "43591003",
+            "label": "Exanthematous infectious disease"
+          },
+          {
+            "concept_id": "23513009",
+            "label": "Herpesvirus infection"
+          },
+          {
+            "concept_id": "128402005",
+            "label": "Infectious disease of cardiovascular system"
+          },
+          {
+            "concept_id": "400047006",
+            "label": "Peripheral vascular disease"
+          },
+          {
+            "concept_id": "415531008",
+            "label": "Skin AND/OR mucosa finding"
+          },
+          {
+            "concept_id": "27550009",
+            "label": "Vascular disorder"
+          },
+          {
+            "concept_id": "312130009",
+            "label": "Viral infection by site"
+          },
+          {
+            "concept_id": "128937004",
+            "label": "Viral infection of skin"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "21829004",
+            "label": "Blood vessel finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "49601007",
+            "label": "Disorder of cardiovascular system"
+          },
+          {
+            "concept_id": "80659006",
+            "label": "Disorder of skin and/or subcutaneous tissue"
+          },
+          {
+            "concept_id": "19660004",
+            "label": "Disorder of soft tissue"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "301810000",
+            "label": "Infection by site"
+          },
+          {
+            "concept_id": "108365000",
+            "label": "Infection of skin"
+          },
+          {
+            "concept_id": "106076001",
+            "label": "Skin finding"
+          },
+          {
+            "concept_id": "95324001",
+            "label": "Skin lesion"
+          },
+          {
+            "concept_id": "34014006",
+            "label": "Viral disease"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "247440002",
+            "label": "Skin or mucosa lesion"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          },
+          {
+            "concept_id": "95880003",
+            "label": "Soft tissue infection"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "102506008",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 3,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "102499006",
+            "label": "Fit and well"
+          },
+          {
+            "concept_id": "102499006",
+            "label": "Fit and well"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "82832008",
+            "label": "General body state finding"
+          },
+          {
+            "concept_id": "365275006",
+            "label": "General well-being finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118222006",
+            "label": "General finding of observation of patient"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "425464007",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 4
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "408678008",
+            "label": "Healthcare associated infectious disease"
+          },
+          {
+            "concept_id": "408678008",
+            "label": "Healthcare associated infectious disease"
+          },
+          {
+            "concept_id": "312342009",
+            "label": "Infective pneumonia"
+          },
+          {
+            "concept_id": "312342009",
+            "label": "Infective pneumonia"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "706912001",
+            "label": "Complication of health care"
+          },
+          {
+            "concept_id": "40733004",
+            "label": "Disorder due to infection"
+          },
+          {
+            "concept_id": "128601007",
+            "label": "Infectious disease of lung"
+          },
+          {
+            "concept_id": "233604007",
+            "label": "Pneumonia"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "609623002",
+            "label": "Finding of upper trunk"
+          },
+          {
+            "concept_id": "128139000",
+            "label": "Inflammatory disorder"
+          },
+          {
+            "concept_id": "373405005",
+            "label": "Inflammatory disorder of the respiratory system"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "609622007",
+            "label": "Disorder of thoracic segment of trunk"
+          },
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "301810000",
+            "label": "Infection by site"
+          },
+          {
+            "concept_id": "363170005",
+            "label": "Inflammation of specific body structures or tissue"
+          },
+          {
+            "concept_id": "363180009",
+            "label": "Inflammatory disorder of the respiratory tract"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "128272009",
+            "label": "Disorder of lower respiratory system"
+          },
+          {
+            "concept_id": "118946009",
+            "label": "Disorder of thorax"
+          },
+          {
+            "concept_id": "363169009",
+            "label": "Inflammation of specific body organs"
+          },
+          {
+            "concept_id": "128997002",
+            "label": "Inflammatory disorder of lower respiratory tract"
+          },
+          {
+            "concept_id": "301226008",
+            "label": "Lower respiratory tract finding"
+          },
+          {
+            "concept_id": "301230006",
+            "label": "Lung finding"
+          },
+          {
+            "concept_id": "275498002",
+            "label": "Respiratory tract infection"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "116223007",
+            "label": "Complication"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "19829001",
+            "label": "Disorder of lung"
+          },
+          {
+            "concept_id": "50417007",
+            "label": "Lower respiratory tract infection"
+          },
+          {
+            "concept_id": "95436008",
+            "label": "Lung consolidation"
+          },
+          {
+            "concept_id": "205237003",
+            "label": "Pneumonitis"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 35794,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"102588006\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"29857009\",\n          \"label\": \"Chest pain\"\n        },\n        {\n          \"concept_id\": \"29857009\",\n          \"label\": \"Chest pain\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"233604007\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 5,\n      \"exclusion_trials\": 10\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"95436008\",\n          \"label\": \"Lung consolidation\"\n        },\n        {\n          \"concept_id\": \"95436008\",\n          \"label\": \"Lung consolidation\"\n        },\n        {\n          \"concept_id\": \"205237003\",\n          \"label\": \"Pneumonitis\"\n        },\n        {\n          \"concept_id\": \"205237003\",\n          \"label\": \"Pneumonitis\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"363171009\",\n          \"label\": \"Inflammation of specific body systems\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"373405005\",\n          \"label\": \"Inflammatory disorder of the respiratory system\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"128272009\",\n          \"label\": \"Disorder of lower respiratory system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        },\n        {\n          \"concept_id\": \"363180009\",\n          \"label\": \"Inflammatory disorder of the respiratory tract\"\n        },\n        {\n          \"concept_id\": \"301226008\",\n          \"label\": \"Lower respiratory tract finding\"\n        },\n        {\n          \"concept_id\": \"301230006\",\n          \"label\": \"Lung finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"19829001\",\n          \"label\": \"Disorder of lung\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"128997002\",\n          \"label\": \"Inflammatory disorder of lower respiratory tract\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"38907003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 6,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"721265008\",\n          \"label\": \"Infection of skin and/or mucous membrane caused by Herpes virus\"\n        },\n        {\n          \"concept_id\": \"721265008\",\n          \"label\": \"Infection of skin and/or mucous membrane caused by Herpes virus\"\n        },\n        {\n          \"concept_id\": \"309465005\",\n          \"label\": \"Varicella-zoster virus infection\"\n        },\n        {\n          \"concept_id\": \"309465005\",\n          \"label\": \"Varicella-zoster virus infection\"\n        },\n        {\n          \"concept_id\": \"11263005\",\n          \"label\": \"Vascular disease of the skin\"\n        },\n        {\n          \"concept_id\": \"11263005\",\n          \"label\": \"Vascular disease of the skin\"\n        },\n        {\n          \"concept_id\": \"79893008\",\n          \"label\": \"Vesicular eruption\"\n        },\n        {\n          \"concept_id\": \"79893008\",\n          \"label\": \"Vesicular eruption\"\n        },\n        {\n          \"concept_id\": \"312135004\",\n          \"label\": \"Viral cardiovascular infection\"\n        },\n        {\n          \"concept_id\": \"312135004\",\n          \"label\": \"Viral cardiovascular infection\"\n        },\n        {\n          \"concept_id\": \"49882001\",\n          \"label\": \"Viral exanthem\"\n        },\n        {\n          \"concept_id\": \"49882001\",\n          \"label\": \"Viral exanthem\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"128598002\",\n          \"label\": \"Disorder of integument\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        },\n        {\n          \"concept_id\": \"19824006\",\n          \"label\": \"Infection of skin and/or subcutaneous tissue\"\n        },\n        {\n          \"concept_id\": \"106077005\",\n          \"label\": \"Integumentary system finding\"\n        },\n        {\n          \"concept_id\": \"714974000\",\n          \"label\": \"Lesion of skin and/or skin-associated mucous membrane\"\n        },\n        {\n          \"concept_id\": \"239953001\",\n          \"label\": \"Soft tissue lesion\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"73787001\",\n          \"label\": \"Disease due to Alphaherpesvirinae\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"95320005\",\n          \"label\": \"Disorder of skin\"\n        },\n        {\n          \"concept_id\": \"271807003\",\n          \"label\": \"Eruption\"\n        },\n        {\n          \"concept_id\": \"43591003\",\n          \"label\": \"Exanthematous infectious disease\"\n        },\n        {\n          \"concept_id\": \"23513009\",\n          \"label\": \"Herpesvirus infection\"\n        },\n        {\n          \"concept_id\": \"128402005\",\n          \"label\": \"Infectious disease of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"400047006\",\n          \"label\": \"Peripheral vascular disease\"\n        },\n        {\n          \"concept_id\": \"415531008\",\n          \"label\": \"Skin AND/OR mucosa finding\"\n        },\n        {\n          \"concept_id\": \"27550009\",\n          \"label\": \"Vascular disorder\"\n        },\n        {\n          \"concept_id\": \"312130009\",\n          \"label\": \"Viral infection by site\"\n        },\n        {\n          \"concept_id\": \"128937004\",\n          \"label\": \"Viral infection of skin\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"21829004\",\n          \"label\": \"Blood vessel finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"80659006\",\n          \"label\": \"Disorder of skin and/or subcutaneous tissue\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"108365000\",\n          \"label\": \"Infection of skin\"\n        },\n        {\n          \"concept_id\": \"106076001\",\n          \"label\": \"Skin finding\"\n        },\n        {\n          \"concept_id\": \"95324001\",\n          \"label\": \"Skin lesion\"\n        },\n        {\n          \"concept_id\": \"34014006\",\n          \"label\": \"Viral disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"247440002\",\n          \"label\": \"Skin or mucosa lesion\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        },\n        {\n          \"concept_id\": \"95880003\",\n          \"label\": \"Soft tissue infection\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"102506008\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"102499006\",\n          \"label\": \"Fit and well\"\n        },\n        {\n          \"concept_id\": \"102499006\",\n          \"label\": \"Fit and well\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"82832008\",\n          \"label\": \"General body state finding\"\n        },\n        {\n          \"concept_id\": \"365275006\",\n          \"label\": \"General well-being finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118222006\",\n          \"label\": \"General finding of observation of patient\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"425464007\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 4\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"408678008\",\n          \"label\": \"Healthcare associated infectious disease\"\n        },\n        {\n          \"concept_id\": \"408678008\",\n          \"label\": \"Healthcare associated infectious disease\"\n        },\n        {\n          \"concept_id\": \"312342009\",\n          \"label\": \"Infective pneumonia\"\n        },\n        {\n          \"concept_id\": \"312342009\",\n          \"label\": \"Infective pneumonia\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"706912001\",\n          \"label\": \"Complication of health care\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"128601007\",\n          \"label\": \"Infectious disease of lung\"\n        },\n        {\n          \"concept_id\": \"233604007\",\n          \"label\": \"Pneumonia\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"373405005\",\n          \"label\": \"Inflammatory disorder of the respiratory system\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        },\n        {\n          \"concept_id\": \"363180009\",\n          \"label\": \"Inflammatory disorder of the respiratory tract\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"128272009\",\n          \"label\": \"Disorder of lower respiratory system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"128997002\",\n          \"label\": \"Inflammatory disorder of lower respiratory tract\"\n        },\n        {\n          \"concept_id\": \"301226008\",\n          \"label\": \"Lower respiratory tract finding\"\n        },\n        {\n          \"concept_id\": \"301230006\",\n          \"label\": \"Lung finding\"\n        },\n        {\n          \"concept_id\": \"275498002\",\n          \"label\": \"Respiratory tract infection\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"116223007\",\n          \"label\": \"Complication\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"19829001\",\n          \"label\": \"Disorder of lung\"\n        },\n        {\n          \"concept_id\": \"50417007\",\n          \"label\": \"Lower respiratory tract infection\"\n        },\n        {\n          \"concept_id\": \"95436008\",\n          \"label\": \"Lung consolidation\"\n        },\n        {\n          \"concept_id\": \"205237003\",\n          \"label\": \"Pneumonitis\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"102588006\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"29857009\",\n          \"label\": \"Chest pain\"\n        },\n        {\n          \"concept_id\": \"29857009\",\n          \"label\": \"Chest pain\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"233604007\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 5,\n      \"exclusion_trials\": 10\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"95436008\",\n          \"label\": \"Lung consolidation\"\n        },\n        {\n          \"concept_id\": \"95436008\",\n          \"label\": \"Lung consolidation\"\n        },\n        {\n          \"concept_id\": \"205237003\",\n          \"label\": \"Pneumonitis\"\n        },\n        {\n          \"concept_id\": \"205237003\",\n          \"label\": \"Pneumonitis\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"363171009\",\n          \"label\": \"Inflammation of specific body systems\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"373405005\",\n          \"label\": \"Inflammatory disorder of the respiratory system\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"128272009\",\n          \"label\": \"Disorder of lower respiratory system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        },\n        {\n          \"concept_id\": \"363180009\",\n          \"label\": \"Inflammatory disorder of the respiratory tract\"\n        },\n        {\n          \"concept_id\": \"301226008\",\n          \"label\": \"Lower respiratory tract finding\"\n        },\n        {\n          \"concept_id\": \"301230006\",\n          \"label\": \"Lung finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"19829001\",\n          \"label\": \"Disorder of lung\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"128997002\",\n          \"label\": \"Inflammatory disorder of lower respiratory tract\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"38907003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 6,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"721265008\",\n          \"label\": \"Infection of skin and/or mucous membrane caused by Herpes virus\"\n        },\n        {\n          \"concept_id\": \"721265008\",\n          \"label\": \"Infection of skin and/or mucous membrane caused by Herpes virus\"\n        },\n        {\n          \"concept_id\": \"309465005\",\n          \"label\": \"Varicella-zoster virus infection\"\n        },\n        {\n          \"concept_id\": \"309465005\",\n          \"label\": \"Varicella-zoster virus infection\"\n        },\n        {\n          \"concept_id\": \"11263005\",\n          \"label\": \"Vascular disease of the skin\"\n        },\n        {\n          \"concept_id\": \"11263005\",\n          \"label\": \"Vascular disease of the skin\"\n        },\n        {\n          \"concept_id\": \"79893008\",\n          \"label\": \"Vesicular eruption\"\n        },\n        {\n          \"concept_id\": \"79893008\",\n          \"label\": \"Vesicular eruption\"\n        },\n        {\n          \"concept_id\": \"312135004\",\n          \"label\": \"Viral cardiovascular infection\"\n        },\n        {\n          \"concept_id\": \"312135004\",\n          \"label\": \"Viral cardiovascular infection\"\n        },\n        {\n          \"concept_id\": \"49882001\",\n          \"label\": \"Viral exanthem\"\n        },\n        {\n          \"concept_id\": \"49882001\",\n          \"label\": \"Viral exanthem\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"128598002\",\n          \"label\": \"Disorder of integument\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        },\n        {\n          \"concept_id\": \"19824006\",\n          \"label\": \"Infection of skin and/or subcutaneous tissue\"\n        },\n        {\n          \"concept_id\": \"106077005\",\n          \"label\": \"Integumentary system finding\"\n        },\n        {\n          \"concept_id\": \"714974000\",\n          \"label\": \"Lesion of skin and/or skin-associated mucous membrane\"\n        },\n        {\n          \"concept_id\": \"239953001\",\n          \"label\": \"Soft tissue lesion\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"73787001\",\n          \"label\": \"Disease due to Alphaherpesvirinae\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"95320005\",\n          \"label\": \"Disorder of skin\"\n        },\n        {\n          \"concept_id\": \"271807003\",\n          \"label\": \"Eruption\"\n        },\n        {\n          \"concept_id\": \"43591003\",\n          \"label\": \"Exanthematous infectious disease\"\n        },\n        {\n          \"concept_id\": \"23513009\",\n          \"label\": \"Herpesvirus infection\"\n        },\n        {\n          \"concept_id\": \"128402005\",\n          \"label\": \"Infectious disease of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"400047006\",\n          \"label\": \"Peripheral vascular disease\"\n        },\n        {\n          \"concept_id\": \"415531008\",\n          \"label\": \"Skin AND/OR mucosa finding\"\n        },\n        {\n          \"concept_id\": \"27550009\",\n          \"label\": \"Vascular disorder\"\n        },\n        {\n          \"concept_id\": \"312130009\",\n          \"label\": \"Viral infection by site\"\n        },\n        {\n          \"concept_id\": \"128937004\",\n          \"label\": \"Viral infection of skin\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"21829004\",\n          \"label\": \"Blood vessel finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"80659006\",\n          \"label\": \"Disorder of skin and/or subcutaneous tissue\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"108365000\",\n          \"label\": \"Infection of skin\"\n        },\n        {\n          \"concept_id\": \"106076001\",\n          \"label\": \"Skin finding\"\n        },\n        {\n          \"concept_id\": \"95324001\",\n          \"label\": \"Skin lesion\"\n        },\n        {\n          \"concept_id\": \"34014006\",\n          \"label\": \"Viral disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"247440002\",\n          \"label\": \"Skin or mucosa lesion\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        },\n        {\n          \"concept_id\": \"95880003\",\n          \"label\": \"Soft tissue infection\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"102506008\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"102499006\",\n          \"label\": \"Fit and well\"\n        },\n        {\n          \"concept_id\": \"102499006\",\n          \"label\": \"Fit and well\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"82832008\",\n          \"label\": \"General body state finding\"\n        },\n        {\n          \"concept_id\": \"365275006\",\n          \"label\": \"General well-being finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118222006\",\n          \"label\": \"General finding of observation of patient\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"425464007\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 4\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"408678008\",\n          \"label\": \"Healthcare associated infectious disease\"\n        },\n        {\n          \"concept_id\": \"408678008\",\n          \"label\": \"Healthcare associated infectious disease\"\n        },\n        {\n          \"concept_id\": \"312342009\",\n          \"label\": \"Infective pneumonia\"\n        },\n        {\n          \"concept_id\": \"312342009\",\n          \"label\": \"Infective pneumonia\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"706912001\",\n          \"label\": \"Complication of health care\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"128601007\",\n          \"label\": \"Infectious disease of lung\"\n        },\n        {\n          \"concept_id\": \"233604007\",\n          \"label\": \"Pneumonia\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"373405005\",\n          \"label\": \"Inflammatory disorder of the respiratory system\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        },\n        {\n          \"concept_id\": \"363180009\",\n          \"label\": \"Inflammatory disorder of the respiratory tract\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"128272009\",\n          \"label\": \"Disorder of lower respiratory system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"128997002\",\n          \"label\": \"Inflammatory disorder of lower respiratory tract\"\n        },\n        {\n          \"concept_id\": \"301226008\",\n          \"label\": \"Lower respiratory tract finding\"\n        },\n        {\n          \"concept_id\": \"301230006\",\n          \"label\": \"Lung finding\"\n        },\n        {\n          \"concept_id\": \"275498002\",\n          \"label\": \"Respiratory tract infection\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"116223007\",\n          \"label\": \"Complication\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"19829001\",\n          \"label\": \"Disorder of lung\"\n        },\n        {\n          \"concept_id\": \"50417007\",\n          \"label\": \"Lower respiratory tract infection\"\n        },\n        {\n          \"concept_id\": \"95436008\",\n          \"label\": \"Lung consolidation\"\n        },\n        {\n          \"concept_id\": \"205237003\",\n          \"label\": \"Pneumonitis\"\n        }\n      ]\n    }\n  }\n]\n"
+}

@@ -1,0 +1,418 @@
+{
+  "batch_index": 20,
+  "offset": 95,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "367431005",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "37657006",
+            "label": "Disorder of esophagus"
+          },
+          {
+            "concept_id": "37657006",
+            "label": "Disorder of esophagus"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "119292006",
+            "label": "Disorder of gastrointestinal tract"
+          },
+          {
+            "concept_id": "50410009",
+            "label": "Disorder of upper digestive tract"
+          },
+          {
+            "concept_id": "386618008",
+            "label": "Gastrointestinal tract finding"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "84410009",
+            "label": "Disorder of digestive tract"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "119291004",
+            "label": "Disorder of upper gastrointestinal tract"
+          },
+          {
+            "concept_id": "300284004",
+            "label": "Finding of esophagus"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "91388009",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 7
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "87858002",
+            "label": "Drug-related disorder"
+          },
+          {
+            "concept_id": "87858002",
+            "label": "Drug-related disorder"
+          },
+          {
+            "concept_id": "66214007",
+            "label": "Substance abuse"
+          },
+          {
+            "concept_id": "66214007",
+            "label": "Substance abuse"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "102947004",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "473013003",
+            "label": "Finding relating to sexual behavior or practice"
+          },
+          {
+            "concept_id": "473013003",
+            "label": "Finding relating to sexual behavior or practice"
+          },
+          {
+            "concept_id": "365949003",
+            "label": "Health-related behavior finding"
+          },
+          {
+            "concept_id": "365949003",
+            "label": "Health-related behavior finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118228005",
+            "label": "Functional finding"
+          },
+          {
+            "concept_id": "384821006",
+            "label": "Mental state, behavior and/or psychosocial function finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "844005",
+            "label": "Behavior finding"
+          },
+          {
+            "concept_id": "118199002",
+            "label": "Finding relating to sexuality and sexual activity"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "90584004",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 3,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "128126004",
+            "label": "Injury of central nervous system"
+          },
+          {
+            "concept_id": "128126004",
+            "label": "Injury of central nervous system"
+          },
+          {
+            "concept_id": "48522003",
+            "label": "Spinal cord disease"
+          },
+          {
+            "concept_id": "48522003",
+            "label": "Spinal cord disease"
+          },
+          {
+            "concept_id": "262521009",
+            "label": "Spinal injury"
+          },
+          {
+            "concept_id": "262521009",
+            "label": "Spinal injury"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "410730009",
+            "label": "Disorder of spinal region"
+          },
+          {
+            "concept_id": "23853001",
+            "label": "Disorder of the central nervous system"
+          },
+          {
+            "concept_id": "299733008",
+            "label": "Finding of spinal cord"
+          },
+          {
+            "concept_id": "128239009",
+            "label": "Injury of nervous system"
+          },
+          {
+            "concept_id": "737566006",
+            "label": "Traumatic injury of vertebral region of back"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "246556002",
+            "label": "Central nervous system finding"
+          },
+          {
+            "concept_id": "33308003",
+            "label": "Disorder of back"
+          },
+          {
+            "concept_id": "118940003",
+            "label": "Disorder of nervous system"
+          },
+          {
+            "concept_id": "298379008",
+            "label": "Finding of spinal region"
+          },
+          {
+            "concept_id": "299735001",
+            "label": "Neurological lesion"
+          },
+          {
+            "concept_id": "712893003",
+            "label": "Traumatic and/or non-traumatic injury of back"
+          },
+          {
+            "concept_id": "609336008",
+            "label": "Traumatic injury by site"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "414252009",
+            "label": "Finding of back"
+          },
+          {
+            "concept_id": "609411003",
+            "label": "Traumatic and/or non-traumatic injury of anatomical site"
+          },
+          {
+            "concept_id": "417746004",
+            "label": "Traumatic injury"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "417163006",
+            "label": "Traumatic AND/OR non-traumatic injury"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "52559000",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "298325004",
+            "label": "Finding of movement"
+          },
+          {
+            "concept_id": "298325004",
+            "label": "Finding of movement"
+          },
+          {
+            "concept_id": "106145009",
+            "label": "Motor nervous system finding"
+          },
+          {
+            "concept_id": "106145009",
+            "label": "Motor nervous system finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          },
+          {
+            "concept_id": "102957003",
+            "label": "Neurological finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 21888,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"367431005\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"37657006\",\n          \"label\": \"Disorder of esophagus\"\n        },\n        {\n          \"concept_id\": \"37657006\",\n          \"label\": \"Disorder of esophagus\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"119292006\",\n          \"label\": \"Disorder of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"386618008\",\n          \"label\": \"Gastrointestinal tract finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"119291004\",\n          \"label\": \"Disorder of upper gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"300284004\",\n          \"label\": \"Finding of esophagus\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"91388009\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 7\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"87858002\",\n          \"label\": \"Drug-related disorder\"\n        },\n        {\n          \"concept_id\": \"87858002\",\n          \"label\": \"Drug-related disorder\"\n        },\n        {\n          \"concept_id\": \"66214007\",\n          \"label\": \"Substance abuse\"\n        },\n        {\n          \"concept_id\": \"66214007\",\n          \"label\": \"Substance abuse\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"102947004\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"473013003\",\n          \"label\": \"Finding relating to sexual behavior or practice\"\n        },\n        {\n          \"concept_id\": \"473013003\",\n          \"label\": \"Finding relating to sexual behavior or practice\"\n        },\n        {\n          \"concept_id\": \"365949003\",\n          \"label\": \"Health-related behavior finding\"\n        },\n        {\n          \"concept_id\": \"365949003\",\n          \"label\": \"Health-related behavior finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        },\n        {\n          \"concept_id\": \"384821006\",\n          \"label\": \"Mental state, behavior and/or psychosocial function finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"844005\",\n          \"label\": \"Behavior finding\"\n        },\n        {\n          \"concept_id\": \"118199002\",\n          \"label\": \"Finding relating to sexuality and sexual activity\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"90584004\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128126004\",\n          \"label\": \"Injury of central nervous system\"\n        },\n        {\n          \"concept_id\": \"128126004\",\n          \"label\": \"Injury of central nervous system\"\n        },\n        {\n          \"concept_id\": \"48522003\",\n          \"label\": \"Spinal cord disease\"\n        },\n        {\n          \"concept_id\": \"48522003\",\n          \"label\": \"Spinal cord disease\"\n        },\n        {\n          \"concept_id\": \"262521009\",\n          \"label\": \"Spinal injury\"\n        },\n        {\n          \"concept_id\": \"262521009\",\n          \"label\": \"Spinal injury\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"410730009\",\n          \"label\": \"Disorder of spinal region\"\n        },\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"299733008\",\n          \"label\": \"Finding of spinal cord\"\n        },\n        {\n          \"concept_id\": \"128239009\",\n          \"label\": \"Injury of nervous system\"\n        },\n        {\n          \"concept_id\": \"737566006\",\n          \"label\": \"Traumatic injury of vertebral region of back\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"33308003\",\n          \"label\": \"Disorder of back\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"298379008\",\n          \"label\": \"Finding of spinal region\"\n        },\n        {\n          \"concept_id\": \"299735001\",\n          \"label\": \"Neurological lesion\"\n        },\n        {\n          \"concept_id\": \"712893003\",\n          \"label\": \"Traumatic and/or non-traumatic injury of back\"\n        },\n        {\n          \"concept_id\": \"609336008\",\n          \"label\": \"Traumatic injury by site\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"414252009\",\n          \"label\": \"Finding of back\"\n        },\n        {\n          \"concept_id\": \"609411003\",\n          \"label\": \"Traumatic and/or non-traumatic injury of anatomical site\"\n        },\n        {\n          \"concept_id\": \"417746004\",\n          \"label\": \"Traumatic injury\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"417163006\",\n          \"label\": \"Traumatic AND/OR non-traumatic injury\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"52559000\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"298325004\",\n          \"label\": \"Finding of movement\"\n        },\n        {\n          \"concept_id\": \"298325004\",\n          \"label\": \"Finding of movement\"\n        },\n        {\n          \"concept_id\": \"106145009\",\n          \"label\": \"Motor nervous system finding\"\n        },\n        {\n          \"concept_id\": \"106145009\",\n          \"label\": \"Motor nervous system finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"367431005\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"37657006\",\n          \"label\": \"Disorder of esophagus\"\n        },\n        {\n          \"concept_id\": \"37657006\",\n          \"label\": \"Disorder of esophagus\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"119292006\",\n          \"label\": \"Disorder of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"386618008\",\n          \"label\": \"Gastrointestinal tract finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"119291004\",\n          \"label\": \"Disorder of upper gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"300284004\",\n          \"label\": \"Finding of esophagus\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"91388009\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 7\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"87858002\",\n          \"label\": \"Drug-related disorder\"\n        },\n        {\n          \"concept_id\": \"87858002\",\n          \"label\": \"Drug-related disorder\"\n        },\n        {\n          \"concept_id\": \"66214007\",\n          \"label\": \"Substance abuse\"\n        },\n        {\n          \"concept_id\": \"66214007\",\n          \"label\": \"Substance abuse\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"102947004\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"473013003\",\n          \"label\": \"Finding relating to sexual behavior or practice\"\n        },\n        {\n          \"concept_id\": \"473013003\",\n          \"label\": \"Finding relating to sexual behavior or practice\"\n        },\n        {\n          \"concept_id\": \"365949003\",\n          \"label\": \"Health-related behavior finding\"\n        },\n        {\n          \"concept_id\": \"365949003\",\n          \"label\": \"Health-related behavior finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        },\n        {\n          \"concept_id\": \"384821006\",\n          \"label\": \"Mental state, behavior and/or psychosocial function finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"844005\",\n          \"label\": \"Behavior finding\"\n        },\n        {\n          \"concept_id\": \"118199002\",\n          \"label\": \"Finding relating to sexuality and sexual activity\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"90584004\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128126004\",\n          \"label\": \"Injury of central nervous system\"\n        },\n        {\n          \"concept_id\": \"128126004\",\n          \"label\": \"Injury of central nervous system\"\n        },\n        {\n          \"concept_id\": \"48522003\",\n          \"label\": \"Spinal cord disease\"\n        },\n        {\n          \"concept_id\": \"48522003\",\n          \"label\": \"Spinal cord disease\"\n        },\n        {\n          \"concept_id\": \"262521009\",\n          \"label\": \"Spinal injury\"\n        },\n        {\n          \"concept_id\": \"262521009\",\n          \"label\": \"Spinal injury\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"410730009\",\n          \"label\": \"Disorder of spinal region\"\n        },\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"299733008\",\n          \"label\": \"Finding of spinal cord\"\n        },\n        {\n          \"concept_id\": \"128239009\",\n          \"label\": \"Injury of nervous system\"\n        },\n        {\n          \"concept_id\": \"737566006\",\n          \"label\": \"Traumatic injury of vertebral region of back\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"33308003\",\n          \"label\": \"Disorder of back\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"298379008\",\n          \"label\": \"Finding of spinal region\"\n        },\n        {\n          \"concept_id\": \"299735001\",\n          \"label\": \"Neurological lesion\"\n        },\n        {\n          \"concept_id\": \"712893003\",\n          \"label\": \"Traumatic and/or non-traumatic injury of back\"\n        },\n        {\n          \"concept_id\": \"609336008\",\n          \"label\": \"Traumatic injury by site\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"414252009\",\n          \"label\": \"Finding of back\"\n        },\n        {\n          \"concept_id\": \"609411003\",\n          \"label\": \"Traumatic and/or non-traumatic injury of anatomical site\"\n        },\n        {\n          \"concept_id\": \"417746004\",\n          \"label\": \"Traumatic injury\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"417163006\",\n          \"label\": \"Traumatic AND/OR non-traumatic injury\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"52559000\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"298325004\",\n          \"label\": \"Finding of movement\"\n        },\n        {\n          \"concept_id\": \"298325004\",\n          \"label\": \"Finding of movement\"\n        },\n        {\n          \"concept_id\": \"106145009\",\n          \"label\": \"Motor nervous system finding\"\n        },\n        {\n          \"concept_id\": \"106145009\",\n          \"label\": \"Motor nervous system finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  }\n]\n"
+}

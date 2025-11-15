@@ -1,0 +1,41 @@
+{
+  "batch_index": 20,
+  "raw_response": "[\n  {\n    \"concept_id\": \"367431005\",\n    \"hops\": 2,\n    \"stop_at_concept_id\": \"300284004\",\n    \"stop_at_label\": \"Finding of esophagus\",\n    \"rationale\": \"Parents are banned ('disorder'). Grandparent retains esophageal site without becoming overly generic. Tight timeframe and single-member clauses favor minimal generalization.\"\n  },\n  {\n    \"concept_id\": \"91388009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"91388009\",\n    \"stop_at_label\": \"Drug abuse\",\n    \"rationale\": \"Ancestors are deny-listed ('disorder','substance','clinical finding','disease'). With more exclusions than inclusions, remain at the specific requirement to avoid overgeneralization.\"\n  },\n  {\n    \"concept_id\": \"102947004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"473013003\",\n    \"stop_at_label\": \"Finding relating to sexual behavior or practice\",\n    \"rationale\": \"Parent preserves sexual-behavior intent; alternatives are broader behavior findings. Tight timeframe and small clauses suggest minimal generalization.\"\n  },\n  {\n    \"concept_id\": \"90584004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"262521009\",\n    \"stop_at_label\": \"Spinal injury\",\n    \"rationale\": \"Preserves mechanism and spinal site; other parents include banned 'disease' or broaden to CNS injuries. Tight timeframe and multiple inclusion trials support H=1.\"\n  },\n  {\n    \"concept_id\": \"52559000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"106145009\",\n    \"stop_at_label\": \"Motor nervous system finding\",\n    \"rationale\": \"Keeps motor/neurologic focus; 'Finding of movement' is broader and grandparents are generic. Depth moderate and tight timeframe favor limited generalization.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "367431005",
+      "hops": 2,
+      "rationale": "Parents are banned ('disorder'). Grandparent retains esophageal site without becoming overly generic. Tight timeframe and single-member clauses favor minimal ge",
+      "stop_at_concept_id": "300284004",
+      "stop_at_label": "Finding of esophagus"
+    },
+    {
+      "concept_id": "91388009",
+      "hops": 0,
+      "rationale": "Ancestors are deny-listed ('disorder','substance','clinical finding','disease'). With more exclusions than inclusions, remain at the specific requirement to avo",
+      "stop_at_concept_id": "91388009",
+      "stop_at_label": "Drug abuse"
+    },
+    {
+      "concept_id": "102947004",
+      "hops": 1,
+      "rationale": "Parent preserves sexual-behavior intent; alternatives are broader behavior findings. Tight timeframe and small clauses suggest minimal generalization.",
+      "stop_at_concept_id": "473013003",
+      "stop_at_label": "Finding relating to sexual behavior or practice"
+    },
+    {
+      "concept_id": "90584004",
+      "hops": 1,
+      "rationale": "Preserves mechanism and spinal site; other parents include banned 'disease' or broaden to CNS injuries. Tight timeframe and multiple inclusion trials support H=",
+      "stop_at_concept_id": "262521009",
+      "stop_at_label": "Spinal injury"
+    },
+    {
+      "concept_id": "52559000",
+      "hops": 1,
+      "rationale": "Keeps motor/neurologic focus; 'Finding of movement' is broader and grandparents are generic. Depth moderate and tight timeframe favor limited generalization.",
+      "stop_at_concept_id": "106145009",
+      "stop_at_label": "Motor nervous system finding"
+    }
+  ]
+}

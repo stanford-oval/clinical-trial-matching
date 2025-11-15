@@ -1,0 +1,350 @@
+{
+  "batch_index": 33,
+  "offset": 160,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "442076002",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "116336009",
+            "label": "Eating / feeding / drinking finding"
+          },
+          {
+            "concept_id": "116336009",
+            "label": "Eating / feeding / drinking finding"
+          },
+          {
+            "concept_id": "118228005",
+            "label": "Functional finding"
+          },
+          {
+            "concept_id": "118228005",
+            "label": "Functional finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "308117007",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 0.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "309513005",
+            "label": "Cardiovascular therapy"
+          },
+          {
+            "concept_id": "309513005",
+            "label": "Cardiovascular therapy"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "362961001",
+            "label": "Procedure by intent"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "277132007",
+            "label": "Therapeutic procedure"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "243121000",
+            "label": "Medical therapy"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "404909007",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "281706009",
+            "label": "Injection of substance"
+          },
+          {
+            "concept_id": "281706009",
+            "label": "Injection of substance"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "432102000",
+            "label": "Administration of substance"
+          },
+          {
+            "concept_id": "59108006",
+            "label": "Injection"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "107733003",
+            "label": "Introduction procedure"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "229065009",
+      "features": {
+        "depth_from_root": 8,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 0.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "229064008",
+            "label": "Movement therapy"
+          },
+          {
+            "concept_id": "229064008",
+            "label": "Movement therapy"
+          },
+          {
+            "concept_id": "51998003",
+            "label": "Therapeutic exercise"
+          },
+          {
+            "concept_id": "51998003",
+            "label": "Therapeutic exercise"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "409023009",
+            "label": "Professional / ancillary services care"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "243120004",
+            "label": "Regimes and therapies"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "225365006",
+            "label": "Care regime"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "225351009",
+            "label": "Care provision regime"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "91251008",
+            "label": "Physical therapy procedure"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "26929004",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 8,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "279982005",
+            "label": "Cerebral degeneration presenting primarily with dementia"
+          },
+          {
+            "concept_id": "279982005",
+            "label": "Cerebral degeneration presenting primarily with dementia"
+          },
+          {
+            "concept_id": "52448006",
+            "label": "Dementia"
+          },
+          {
+            "concept_id": "52448006",
+            "label": "Dementia"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "418143002",
+            "label": "Cerebral degeneration"
+          },
+          {
+            "concept_id": "111479008",
+            "label": "Organic mental disorder"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "246556002",
+            "label": "Central nervous system finding"
+          },
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "362975008",
+            "label": "Degenerative disorder"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "118940003",
+            "label": "Disorder of nervous system"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "80690008",
+            "label": "Degenerative disease of the central nervous system"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "118934005",
+            "label": "Disorder of head"
+          },
+          {
+            "concept_id": "23853001",
+            "label": "Disorder of the central nervous system"
+          },
+          {
+            "concept_id": "299718000",
+            "label": "Finding of brain"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "52522001",
+            "label": "Degenerative brain disorder"
+          },
+          {
+            "concept_id": "81308009",
+            "label": "Disorder of brain"
+          },
+          {
+            "concept_id": "74732009",
+            "label": "Mental disorder"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 17910,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"442076002\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"116336009\",\n          \"label\": \"Eating / feeding / drinking finding\"\n        },\n        {\n          \"concept_id\": \"116336009\",\n          \"label\": \"Eating / feeding / drinking finding\"\n        },\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        },\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"308117007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"309513005\",\n          \"label\": \"Cardiovascular therapy\"\n        },\n        {\n          \"concept_id\": \"309513005\",\n          \"label\": \"Cardiovascular therapy\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362961001\",\n          \"label\": \"Procedure by intent\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"277132007\",\n          \"label\": \"Therapeutic procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"243121000\",\n          \"label\": \"Medical therapy\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"404909007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"281706009\",\n          \"label\": \"Injection of substance\"\n        },\n        {\n          \"concept_id\": \"281706009\",\n          \"label\": \"Injection of substance\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"432102000\",\n          \"label\": \"Administration of substance\"\n        },\n        {\n          \"concept_id\": \"59108006\",\n          \"label\": \"Injection\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"229065009\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"229064008\",\n          \"label\": \"Movement therapy\"\n        },\n        {\n          \"concept_id\": \"229064008\",\n          \"label\": \"Movement therapy\"\n        },\n        {\n          \"concept_id\": \"51998003\",\n          \"label\": \"Therapeutic exercise\"\n        },\n        {\n          \"concept_id\": \"51998003\",\n          \"label\": \"Therapeutic exercise\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"409023009\",\n          \"label\": \"Professional / ancillary services care\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"243120004\",\n          \"label\": \"Regimes and therapies\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"225365006\",\n          \"label\": \"Care regime\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"225351009\",\n          \"label\": \"Care provision regime\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"91251008\",\n          \"label\": \"Physical therapy procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"26929004\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 8,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"279982005\",\n          \"label\": \"Cerebral degeneration presenting primarily with dementia\"\n        },\n        {\n          \"concept_id\": \"279982005\",\n          \"label\": \"Cerebral degeneration presenting primarily with dementia\"\n        },\n        {\n          \"concept_id\": \"52448006\",\n          \"label\": \"Dementia\"\n        },\n        {\n          \"concept_id\": \"52448006\",\n          \"label\": \"Dementia\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"418143002\",\n          \"label\": \"Cerebral degeneration\"\n        },\n        {\n          \"concept_id\": \"111479008\",\n          \"label\": \"Organic mental disorder\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"362975008\",\n          \"label\": \"Degenerative disorder\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"80690008\",\n          \"label\": \"Degenerative disease of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"299718000\",\n          \"label\": \"Finding of brain\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"52522001\",\n          \"label\": \"Degenerative brain disorder\"\n        },\n        {\n          \"concept_id\": \"81308009\",\n          \"label\": \"Disorder of brain\"\n        },\n        {\n          \"concept_id\": \"74732009\",\n          \"label\": \"Mental disorder\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"442076002\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"116336009\",\n          \"label\": \"Eating / feeding / drinking finding\"\n        },\n        {\n          \"concept_id\": \"116336009\",\n          \"label\": \"Eating / feeding / drinking finding\"\n        },\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        },\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"308117007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"309513005\",\n          \"label\": \"Cardiovascular therapy\"\n        },\n        {\n          \"concept_id\": \"309513005\",\n          \"label\": \"Cardiovascular therapy\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362961001\",\n          \"label\": \"Procedure by intent\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"277132007\",\n          \"label\": \"Therapeutic procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"243121000\",\n          \"label\": \"Medical therapy\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"404909007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"281706009\",\n          \"label\": \"Injection of substance\"\n        },\n        {\n          \"concept_id\": \"281706009\",\n          \"label\": \"Injection of substance\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"432102000\",\n          \"label\": \"Administration of substance\"\n        },\n        {\n          \"concept_id\": \"59108006\",\n          \"label\": \"Injection\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"229065009\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"229064008\",\n          \"label\": \"Movement therapy\"\n        },\n        {\n          \"concept_id\": \"229064008\",\n          \"label\": \"Movement therapy\"\n        },\n        {\n          \"concept_id\": \"51998003\",\n          \"label\": \"Therapeutic exercise\"\n        },\n        {\n          \"concept_id\": \"51998003\",\n          \"label\": \"Therapeutic exercise\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"409023009\",\n          \"label\": \"Professional / ancillary services care\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"243120004\",\n          \"label\": \"Regimes and therapies\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"225365006\",\n          \"label\": \"Care regime\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"225351009\",\n          \"label\": \"Care provision regime\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"91251008\",\n          \"label\": \"Physical therapy procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"26929004\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 8,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"279982005\",\n          \"label\": \"Cerebral degeneration presenting primarily with dementia\"\n        },\n        {\n          \"concept_id\": \"279982005\",\n          \"label\": \"Cerebral degeneration presenting primarily with dementia\"\n        },\n        {\n          \"concept_id\": \"52448006\",\n          \"label\": \"Dementia\"\n        },\n        {\n          \"concept_id\": \"52448006\",\n          \"label\": \"Dementia\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"418143002\",\n          \"label\": \"Cerebral degeneration\"\n        },\n        {\n          \"concept_id\": \"111479008\",\n          \"label\": \"Organic mental disorder\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"362975008\",\n          \"label\": \"Degenerative disorder\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"80690008\",\n          \"label\": \"Degenerative disease of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"299718000\",\n          \"label\": \"Finding of brain\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"52522001\",\n          \"label\": \"Degenerative brain disorder\"\n        },\n        {\n          \"concept_id\": \"81308009\",\n          \"label\": \"Disorder of brain\"\n        },\n        {\n          \"concept_id\": \"74732009\",\n          \"label\": \"Mental disorder\"\n        }\n      ]\n    }\n  }\n]\n"
+}

@@ -1,0 +1,16 @@
+{
+  "db": "${SATIR_DATA_ROOT}/build/trial.db",
+  "openai_endpoint": "https://YOUR-RESOURCE.openai.azure.com/openai/deployments/gpt-5",
+  "snowstorm": {
+    "base": "http://localhost:8080",
+    "branch": "MAIN",
+    "form": "inferred",
+    "timeout_s": 6.0
+  },
+  "batch_size": 5,
+  "only_missing": true,
+  "dry_run": false,
+  "prompt_source": "built-in",
+  "prompt_template_chars": 2922,
+  "model_name": "gpt-5"
+}

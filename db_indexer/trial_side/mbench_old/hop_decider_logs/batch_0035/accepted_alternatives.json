@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "110368006",
+    "alt_concept_id": "110368006",
+    "hop": 0,
+    "alt_label": "Decreased estrogen level",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:48:03"
+  },
+  {
+    "concept_id": "202487003",
+    "alt_concept_id": "418492000",
+    "hop": 1,
+    "alt_label": "Finding of sacroiliac joint",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:48:03"
+  },
+  {
+    "concept_id": "202487003",
+    "alt_concept_id": "713413001",
+    "hop": 1,
+    "alt_label": "Joint pain of pelvic region",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:48:03"
+  },
+  {
+    "concept_id": "202487003",
+    "alt_concept_id": "61486003",
+    "hop": 1,
+    "alt_label": "Sacral back pain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:48:03"
+  },
+  {
+    "concept_id": "370961005",
+    "alt_concept_id": "12184005",
+    "hop": 1,
+    "alt_label": "Visual field defect",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:48:03"
+  },
+  {
+    "concept_id": "386805003",
+    "alt_concept_id": "386805003",
+    "hop": 0,
+    "alt_label": "Mild cognitive disorder",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:48:03"
+  },
+  {
+    "concept_id": "77075001",
+    "alt_concept_id": "84494001",
+    "hop": 1,
+    "alt_label": "Open-angle glaucoma",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:48:03"
+  }
+]

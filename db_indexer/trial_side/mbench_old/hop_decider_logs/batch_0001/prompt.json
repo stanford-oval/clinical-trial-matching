@@ -1,0 +1,372 @@
+{
+  "batch_index": 1,
+  "offset": 0,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "230253001",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "5262007",
+            "label": "Spinal muscular atrophy"
+          },
+          {
+            "concept_id": "5262007",
+            "label": "Spinal muscular atrophy"
+          },
+          {
+            "concept_id": "128430005",
+            "label": "X-linked hereditary disease"
+          },
+          {
+            "concept_id": "128430005",
+            "label": "X-linked hereditary disease"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "32895009",
+            "label": "Hereditary disease"
+          },
+          {
+            "concept_id": "363235000",
+            "label": "Hereditary disorder of nervous system"
+          },
+          {
+            "concept_id": "37340000",
+            "label": "Motor neuron disease"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "118940003",
+            "label": "Disorder of nervous system"
+          },
+          {
+            "concept_id": "363137000",
+            "label": "Hereditary disorder by system"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "49793008",
+            "label": "Hereditary motor neuron disease"
+          },
+          {
+            "concept_id": "84590007",
+            "label": "Lower motor neuron disease"
+          },
+          {
+            "concept_id": "82852009",
+            "label": "Sex-linked hereditary disorder"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "5262007",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "49793008",
+            "label": "Hereditary motor neuron disease"
+          },
+          {
+            "concept_id": "49793008",
+            "label": "Hereditary motor neuron disease"
+          },
+          {
+            "concept_id": "84590007",
+            "label": "Lower motor neuron disease"
+          },
+          {
+            "concept_id": "84590007",
+            "label": "Lower motor neuron disease"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "363235000",
+            "label": "Hereditary disorder of nervous system"
+          },
+          {
+            "concept_id": "37340000",
+            "label": "Motor neuron disease"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118940003",
+            "label": "Disorder of nervous system"
+          },
+          {
+            "concept_id": "363137000",
+            "label": "Hereditary disorder by system"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "32895009",
+            "label": "Hereditary disease"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "234532001",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 0.5,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 7
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "414029004",
+            "label": "Disorder of immune function"
+          },
+          {
+            "concept_id": "414029004",
+            "label": "Disorder of immune function"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "36980009",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "31323000",
+            "label": "Severe combined immunodeficiency disease"
+          },
+          {
+            "concept_id": "31323000",
+            "label": "Severe combined immunodeficiency disease"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "442459007",
+            "label": "Combined immunodeficiency disease"
+          },
+          {
+            "concept_id": "36138009",
+            "label": "Congenital immunodeficiency disease"
+          },
+          {
+            "concept_id": "363138005",
+            "label": "Hereditary disorder of immune system"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "66091009",
+            "label": "Congenital disease"
+          },
+          {
+            "concept_id": "414029004",
+            "label": "Disorder of immune function"
+          },
+          {
+            "concept_id": "363137000",
+            "label": "Hereditary disorder by system"
+          },
+          {
+            "concept_id": "234532001",
+            "label": "Immunodeficiency disorder"
+          },
+          {
+            "concept_id": "58606001",
+            "label": "Primary immune deficiency disorder"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "32895009",
+            "label": "Hereditary disease"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "162339002",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "118230007",
+            "label": "Hearing finding"
+          },
+          {
+            "concept_id": "118230007",
+            "label": "Hearing finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "118236001",
+            "label": "Ear and auditory finding"
+          },
+          {
+            "concept_id": "118228005",
+            "label": "Functional finding"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 19212,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"230253001\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"5262007\",\n          \"label\": \"Spinal muscular atrophy\"\n        },\n        {\n          \"concept_id\": \"5262007\",\n          \"label\": \"Spinal muscular atrophy\"\n        },\n        {\n          \"concept_id\": \"128430005\",\n          \"label\": \"X-linked hereditary disease\"\n        },\n        {\n          \"concept_id\": \"128430005\",\n          \"label\": \"X-linked hereditary disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        },\n        {\n          \"concept_id\": \"363235000\",\n          \"label\": \"Hereditary disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"37340000\",\n          \"label\": \"Motor neuron disease\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"49793008\",\n          \"label\": \"Hereditary motor neuron disease\"\n        },\n        {\n          \"concept_id\": \"84590007\",\n          \"label\": \"Lower motor neuron disease\"\n        },\n        {\n          \"concept_id\": \"82852009\",\n          \"label\": \"Sex-linked hereditary disorder\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"5262007\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"49793008\",\n          \"label\": \"Hereditary motor neuron disease\"\n        },\n        {\n          \"concept_id\": \"49793008\",\n          \"label\": \"Hereditary motor neuron disease\"\n        },\n        {\n          \"concept_id\": \"84590007\",\n          \"label\": \"Lower motor neuron disease\"\n        },\n        {\n          \"concept_id\": \"84590007\",\n          \"label\": \"Lower motor neuron disease\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363235000\",\n          \"label\": \"Hereditary disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"37340000\",\n          \"label\": \"Motor neuron disease\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"234532001\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.5,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 7\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"414029004\",\n          \"label\": \"Disorder of immune function\"\n        },\n        {\n          \"concept_id\": \"414029004\",\n          \"label\": \"Disorder of immune function\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"36980009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"31323000\",\n          \"label\": \"Severe combined immunodeficiency disease\"\n        },\n        {\n          \"concept_id\": \"31323000\",\n          \"label\": \"Severe combined immunodeficiency disease\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"442459007\",\n          \"label\": \"Combined immunodeficiency disease\"\n        },\n        {\n          \"concept_id\": \"36138009\",\n          \"label\": \"Congenital immunodeficiency disease\"\n        },\n        {\n          \"concept_id\": \"363138005\",\n          \"label\": \"Hereditary disorder of immune system\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"66091009\",\n          \"label\": \"Congenital disease\"\n        },\n        {\n          \"concept_id\": \"414029004\",\n          \"label\": \"Disorder of immune function\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        },\n        {\n          \"concept_id\": \"234532001\",\n          \"label\": \"Immunodeficiency disorder\"\n        },\n        {\n          \"concept_id\": \"58606001\",\n          \"label\": \"Primary immune deficiency disorder\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"162339002\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"118230007\",\n          \"label\": \"Hearing finding\"\n        },\n        {\n          \"concept_id\": \"118230007\",\n          \"label\": \"Hearing finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118236001\",\n          \"label\": \"Ear and auditory finding\"\n        },\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"230253001\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"5262007\",\n          \"label\": \"Spinal muscular atrophy\"\n        },\n        {\n          \"concept_id\": \"5262007\",\n          \"label\": \"Spinal muscular atrophy\"\n        },\n        {\n          \"concept_id\": \"128430005\",\n          \"label\": \"X-linked hereditary disease\"\n        },\n        {\n          \"concept_id\": \"128430005\",\n          \"label\": \"X-linked hereditary disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        },\n        {\n          \"concept_id\": \"363235000\",\n          \"label\": \"Hereditary disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"37340000\",\n          \"label\": \"Motor neuron disease\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"49793008\",\n          \"label\": \"Hereditary motor neuron disease\"\n        },\n        {\n          \"concept_id\": \"84590007\",\n          \"label\": \"Lower motor neuron disease\"\n        },\n        {\n          \"concept_id\": \"82852009\",\n          \"label\": \"Sex-linked hereditary disorder\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"5262007\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"49793008\",\n          \"label\": \"Hereditary motor neuron disease\"\n        },\n        {\n          \"concept_id\": \"49793008\",\n          \"label\": \"Hereditary motor neuron disease\"\n        },\n        {\n          \"concept_id\": \"84590007\",\n          \"label\": \"Lower motor neuron disease\"\n        },\n        {\n          \"concept_id\": \"84590007\",\n          \"label\": \"Lower motor neuron disease\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363235000\",\n          \"label\": \"Hereditary disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"37340000\",\n          \"label\": \"Motor neuron disease\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"234532001\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.5,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 7\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"414029004\",\n          \"label\": \"Disorder of immune function\"\n        },\n        {\n          \"concept_id\": \"414029004\",\n          \"label\": \"Disorder of immune function\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"36980009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"31323000\",\n          \"label\": \"Severe combined immunodeficiency disease\"\n        },\n        {\n          \"concept_id\": \"31323000\",\n          \"label\": \"Severe combined immunodeficiency disease\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"442459007\",\n          \"label\": \"Combined immunodeficiency disease\"\n        },\n        {\n          \"concept_id\": \"36138009\",\n          \"label\": \"Congenital immunodeficiency disease\"\n        },\n        {\n          \"concept_id\": \"363138005\",\n          \"label\": \"Hereditary disorder of immune system\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"66091009\",\n          \"label\": \"Congenital disease\"\n        },\n        {\n          \"concept_id\": \"414029004\",\n          \"label\": \"Disorder of immune function\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        },\n        {\n          \"concept_id\": \"234532001\",\n          \"label\": \"Immunodeficiency disorder\"\n        },\n        {\n          \"concept_id\": \"58606001\",\n          \"label\": \"Primary immune deficiency disorder\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"162339002\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"118230007\",\n          \"label\": \"Hearing finding\"\n        },\n        {\n          \"concept_id\": \"118230007\",\n          \"label\": \"Hearing finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118236001\",\n          \"label\": \"Ear and auditory finding\"\n        },\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        }\n      ]\n    }\n  }\n]\n"
+}

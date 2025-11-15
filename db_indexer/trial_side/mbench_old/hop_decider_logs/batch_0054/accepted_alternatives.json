@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "21134002",
+    "alt_concept_id": "21134002",
+    "hop": 0,
+    "alt_label": "Disability",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:21:56"
+  },
+  {
+    "concept_id": "36923009",
+    "alt_concept_id": "36923009",
+    "hop": 0,
+    "alt_label": "Major depression, single episode",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:21:56"
+  },
+  {
+    "concept_id": "372146004",
+    "alt_concept_id": "372146004",
+    "hop": 0,
+    "alt_label": "Acute chest syndrome",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:21:56"
+  },
+  {
+    "concept_id": "50417007",
+    "alt_concept_id": "128272009",
+    "hop": 1,
+    "alt_label": "Disorder of lower respiratory system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:21:56"
+  },
+  {
+    "concept_id": "50417007",
+    "alt_concept_id": "301226008",
+    "hop": 1,
+    "alt_label": "Lower respiratory tract finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:21:56"
+  },
+  {
+    "concept_id": "50417007",
+    "alt_concept_id": "275498002",
+    "hop": 1,
+    "alt_label": "Respiratory tract infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:21:56"
+  },
+  {
+    "concept_id": "52448006",
+    "alt_concept_id": "52448006",
+    "hop": 0,
+    "alt_label": "Dementia",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:21:56"
+  }
+]

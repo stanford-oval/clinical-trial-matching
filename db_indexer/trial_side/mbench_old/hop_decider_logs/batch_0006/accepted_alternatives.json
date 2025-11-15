@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "109979007",
+    "alt_concept_id": "118601006",
+    "hop": 1,
+    "alt_label": "Non-Hodgkin's lymphoma (clinical)",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:00:22"
+  },
+  {
+    "concept_id": "128188000",
+    "alt_concept_id": "81308009",
+    "hop": 1,
+    "alt_label": "Disorder of brain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:00:22"
+  },
+  {
+    "concept_id": "128188000",
+    "alt_concept_id": "29426003",
+    "hop": 1,
+    "alt_label": "Paralytic syndrome",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:00:22"
+  },
+  {
+    "concept_id": "169413002",
+    "alt_concept_id": "65541007",
+    "hop": 1,
+    "alt_label": "Administration of hormone",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:00:22"
+  },
+  {
+    "concept_id": "169413002",
+    "alt_concept_id": "416608005",
+    "hop": 1,
+    "alt_label": "Drug therapy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:00:22"
+  },
+  {
+    "concept_id": "29857009",
+    "alt_concept_id": "29857009",
+    "hop": 0,
+    "alt_label": "Chest pain",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:00:22"
+  },
+  {
+    "concept_id": "62718007",
+    "alt_concept_id": "300267005",
+    "hop": 1,
+    "alt_label": "Salivation finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:00:22"
+  }
+]

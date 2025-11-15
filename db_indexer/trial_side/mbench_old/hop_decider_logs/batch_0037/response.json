@@ -1,0 +1,41 @@
+{
+  "batch_index": 37,
+  "raw_response": "[\n  {\n    \"concept_id\": \"363349007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"428905002\",\n    \"stop_at_label\": \"Malignant neoplasm of gastrointestinal tract\",\n    \"rationale\": \"Preserves malignancy and GI tract focus; avoids overly broad intraabdominal organ or non-malignant stomach categories. Tight timeframe and narrow clauses favor parent-level generalization.\"\n  },\n  {\n    \"concept_id\": \"62141006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"65801008\",\n    \"stop_at_label\": \"Excision\",\n    \"rationale\": \"Parent retains intervention mechanism coherently; more general ancestors include banned categories. Tight timeframe and small clause size support H=1.\"\n  },\n  {\n    \"concept_id\": \"77176002\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"77176002\",\n    \"stop_at_label\": \"Smoker\",\n    \"rationale\": \"Exclusions dominate; parent options are either banned ('finding') or too broad ('tobacco user'). Keep specific smoking status to remain clinically relevant.\"\n  },\n  {\n    \"concept_id\": \"49601007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"106063007\",\n    \"stop_at_label\": \"Cardiovascular finding\",\n    \"rationale\": \"Parent preserves cardiovascular system specificity and avoids generic disorder/disease categories. Exclusions exceed inclusions, so conservative H=1 generalization is appropriate.\"\n  },\n  {\n    \"concept_id\": \"396275006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"399269003\",\n    \"stop_at_label\": \"Arthropathy\",\n    \"rationale\": \"Keeps joint-focused intent; alternative parent is broader degenerative musculoskeletal disorders. Tight timeframe and small clause size favor parent-level generalization.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "363349007",
+      "hops": 1,
+      "rationale": "Preserves malignancy and GI tract focus; avoids overly broad intraabdominal organ or non-malignant stomach categories. Tight timeframe and narrow clauses favor ",
+      "stop_at_concept_id": "428905002",
+      "stop_at_label": "Malignant neoplasm of gastrointestinal tract"
+    },
+    {
+      "concept_id": "62141006",
+      "hops": 1,
+      "rationale": "Parent retains intervention mechanism coherently; more general ancestors include banned categories. Tight timeframe and small clause size support H=1.",
+      "stop_at_concept_id": "65801008",
+      "stop_at_label": "Excision"
+    },
+    {
+      "concept_id": "77176002",
+      "hops": 0,
+      "rationale": "Exclusions dominate; parent options are either banned ('finding') or too broad ('tobacco user'). Keep specific smoking status to remain clinically relevant.",
+      "stop_at_concept_id": "77176002",
+      "stop_at_label": "Smoker"
+    },
+    {
+      "concept_id": "49601007",
+      "hops": 1,
+      "rationale": "Parent preserves cardiovascular system specificity and avoids generic disorder/disease categories. Exclusions exceed inclusions, so conservative H=1 generalizat",
+      "stop_at_concept_id": "106063007",
+      "stop_at_label": "Cardiovascular finding"
+    },
+    {
+      "concept_id": "396275006",
+      "hops": 1,
+      "rationale": "Keeps joint-focused intent; alternative parent is broader degenerative musculoskeletal disorders. Tight timeframe and small clause size favor parent-level gener",
+      "stop_at_concept_id": "399269003",
+      "stop_at_label": "Arthropathy"
+    }
+  ]
+}

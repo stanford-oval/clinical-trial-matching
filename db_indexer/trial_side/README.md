@@ -1,0 +1,1 @@
+Do runall_trialside.py, this will call all scripts under /scripts.

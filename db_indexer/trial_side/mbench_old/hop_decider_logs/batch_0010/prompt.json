@@ -1,0 +1,666 @@
+{
+  "batch_index": 10,
+  "offset": 45,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "60554003",
+      "features": {
+        "depth_from_root": 3,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "363691001",
+            "label": "Procedure categorized by device involved"
+          },
+          {
+            "concept_id": "363691001",
+            "label": "Procedure categorized by device involved"
+          },
+          {
+            "concept_id": "252566002",
+            "label": "Sleep-related breathing test"
+          },
+          {
+            "concept_id": "252566002",
+            "label": "Sleep-related breathing test"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "386053000",
+            "label": "Evaluation procedure"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "108243003",
+            "label": "Sleep disorder test AND/OR procedure"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "405737000",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 4,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 3
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "75860007",
+            "label": "Disorder of pharynx"
+          },
+          {
+            "concept_id": "75860007",
+            "label": "Disorder of pharynx"
+          },
+          {
+            "concept_id": "363169009",
+            "label": "Inflammation of specific body organs"
+          },
+          {
+            "concept_id": "363169009",
+            "label": "Inflammation of specific body organs"
+          },
+          {
+            "concept_id": "128999004",
+            "label": "Inflammatory disorder of digestive tract"
+          },
+          {
+            "concept_id": "128999004",
+            "label": "Inflammatory disorder of digestive tract"
+          },
+          {
+            "concept_id": "129134004",
+            "label": "Inflammatory disorder of upper respiratory tract"
+          },
+          {
+            "concept_id": "129134004",
+            "label": "Inflammatory disorder of upper respiratory tract"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "297268004",
+            "label": "Ear, nose and throat finding"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "84410009",
+            "label": "Disorder of digestive tract"
+          },
+          {
+            "concept_id": "50410009",
+            "label": "Disorder of upper digestive tract"
+          },
+          {
+            "concept_id": "201060008",
+            "label": "Disorder of upper respiratory system"
+          },
+          {
+            "concept_id": "363170005",
+            "label": "Inflammation of specific body structures or tissue"
+          },
+          {
+            "concept_id": "373407002",
+            "label": "Inflammatory disorder of digestive system"
+          },
+          {
+            "concept_id": "363180009",
+            "label": "Inflammatory disorder of the respiratory tract"
+          },
+          {
+            "concept_id": "116338005",
+            "label": "Pharyngeal finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "232208008",
+            "label": "Ear, nose and throat disorder"
+          },
+          {
+            "concept_id": "363171009",
+            "label": "Inflammation of specific body systems"
+          },
+          {
+            "concept_id": "128139000",
+            "label": "Inflammatory disorder"
+          },
+          {
+            "concept_id": "373405005",
+            "label": "Inflammatory disorder of the respiratory system"
+          },
+          {
+            "concept_id": "249376008",
+            "label": "Mouth and/or pharynx finding"
+          },
+          {
+            "concept_id": "301186004",
+            "label": "Upper respiratory tract finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "90176007",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 5,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "23023009",
+            "label": "Disorder of tonsil (palatine tonsil)"
+          },
+          {
+            "concept_id": "23023009",
+            "label": "Disorder of tonsil (palatine tonsil)"
+          },
+          {
+            "concept_id": "281795003",
+            "label": "Inflamed tonsils"
+          },
+          {
+            "concept_id": "281795003",
+            "label": "Inflamed tonsils"
+          },
+          {
+            "concept_id": "363176004",
+            "label": "Inflammatory disorder of head"
+          },
+          {
+            "concept_id": "363176004",
+            "label": "Inflammatory disorder of head"
+          },
+          {
+            "concept_id": "363177008",
+            "label": "Inflammatory disorder of immune system"
+          },
+          {
+            "concept_id": "363177008",
+            "label": "Inflammatory disorder of immune system"
+          },
+          {
+            "concept_id": "405737000",
+            "label": "Pharyngitis"
+          },
+          {
+            "concept_id": "405737000",
+            "label": "Pharyngitis"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "399986003",
+            "label": "Disorder of body wall"
+          },
+          {
+            "concept_id": "118934005",
+            "label": "Disorder of head"
+          },
+          {
+            "concept_id": "414030009",
+            "label": "Disorder of immune structure"
+          },
+          {
+            "concept_id": "126661001",
+            "label": "Disorder of oropharynx"
+          },
+          {
+            "concept_id": "75860007",
+            "label": "Disorder of pharynx"
+          },
+          {
+            "concept_id": "51499002",
+            "label": "Disorder of tonsil AND/OR adenoid"
+          },
+          {
+            "concept_id": "363169009",
+            "label": "Inflammation of specific body organs"
+          },
+          {
+            "concept_id": "363170005",
+            "label": "Inflammation of specific body structures or tissue"
+          },
+          {
+            "concept_id": "363171009",
+            "label": "Inflammation of specific body systems"
+          },
+          {
+            "concept_id": "128999004",
+            "label": "Inflammatory disorder of digestive tract"
+          },
+          {
+            "concept_id": "129134004",
+            "label": "Inflammatory disorder of upper respiratory tract"
+          },
+          {
+            "concept_id": "249392003",
+            "label": "Tonsil finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "414027002",
+            "label": "Disorder of hematopoietic structure"
+          },
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "232208008",
+            "label": "Ear, nose and throat disorder"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "373405005",
+            "label": "Inflammatory disorder of the respiratory system"
+          },
+          {
+            "concept_id": "249376008",
+            "label": "Mouth and/or pharynx finding"
+          },
+          {
+            "concept_id": "301186004",
+            "label": "Upper respiratory tract finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "84410009",
+            "label": "Disorder of digestive tract"
+          },
+          {
+            "concept_id": "362971004",
+            "label": "Disorder of lymphatic system"
+          },
+          {
+            "concept_id": "111590001",
+            "label": "Disorder of lymphoid system"
+          },
+          {
+            "concept_id": "50410009",
+            "label": "Disorder of upper digestive tract"
+          },
+          {
+            "concept_id": "201060008",
+            "label": "Disorder of upper respiratory system"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          },
+          {
+            "concept_id": "128139000",
+            "label": "Inflammatory disorder"
+          },
+          {
+            "concept_id": "373407002",
+            "label": "Inflammatory disorder of digestive system"
+          },
+          {
+            "concept_id": "363180009",
+            "label": "Inflammatory disorder of the respiratory tract"
+          },
+          {
+            "concept_id": "116338005",
+            "label": "Pharyngeal finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "297268004",
+            "label": "Ear, nose and throat finding"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "6456007",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "72654001",
+            "label": "Supraventricular arrhythmia"
+          },
+          {
+            "concept_id": "72654001",
+            "label": "Supraventricular arrhythmia"
+          },
+          {
+            "concept_id": "6285003",
+            "label": "Tachyarrhythmia"
+          },
+          {
+            "concept_id": "6285003",
+            "label": "Tachyarrhythmia"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "698247007",
+            "label": "Cardiac arrhythmia"
+          },
+          {
+            "concept_id": "366157005",
+            "label": "Cardiovascular measurement - finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "609622007",
+            "label": "Disorder of thoracic segment of trunk"
+          },
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118946009",
+            "label": "Disorder of thorax"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "301296002",
+            "label": "Mediastinal finding"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "301095005",
+            "label": "Cardiac finding"
+          },
+          {
+            "concept_id": "399902003",
+            "label": "Disorder of body cavity"
+          },
+          {
+            "concept_id": "49601007",
+            "label": "Disorder of cardiovascular system"
+          },
+          {
+            "concept_id": "49483002",
+            "label": "Disorder of mediastinum"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "106063007",
+            "label": "Cardiovascular finding"
+          },
+          {
+            "concept_id": "56265001",
+            "label": "Heart disease"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "80423007",
+      "features": {
+        "depth_from_root": 8,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "36118008",
+            "label": "Pneumothorax"
+          },
+          {
+            "concept_id": "36118008",
+            "label": "Pneumothorax"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "609623002",
+            "label": "Finding of upper trunk"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "609622007",
+            "label": "Disorder of thoracic segment of trunk"
+          },
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "233635001",
+            "label": "Disorder of pleura and pleural cavity"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "128272009",
+            "label": "Disorder of lower respiratory system"
+          },
+          {
+            "concept_id": "118946009",
+            "label": "Disorder of thorax"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 35176,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"60554003\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"252566002\",\n          \"label\": \"Sleep-related breathing test\"\n        },\n        {\n          \"concept_id\": \"252566002\",\n          \"label\": \"Sleep-related breathing test\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"386053000\",\n          \"label\": \"Evaluation procedure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"108243003\",\n          \"label\": \"Sleep disorder test AND/OR procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"405737000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 4,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"128999004\",\n          \"label\": \"Inflammatory disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"128999004\",\n          \"label\": \"Inflammatory disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"129134004\",\n          \"label\": \"Inflammatory disorder of upper respiratory tract\"\n        },\n        {\n          \"concept_id\": \"129134004\",\n          \"label\": \"Inflammatory disorder of upper respiratory tract\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        },\n        {\n          \"concept_id\": \"373407002\",\n          \"label\": \"Inflammatory disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"363180009\",\n          \"label\": \"Inflammatory disorder of the respiratory tract\"\n        },\n        {\n          \"concept_id\": \"116338005\",\n          \"label\": \"Pharyngeal finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"363171009\",\n          \"label\": \"Inflammation of specific body systems\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"373405005\",\n          \"label\": \"Inflammatory disorder of the respiratory system\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"90176007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 5,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"23023009\",\n          \"label\": \"Disorder of tonsil (palatine tonsil)\"\n        },\n        {\n          \"concept_id\": \"23023009\",\n          \"label\": \"Disorder of tonsil (palatine tonsil)\"\n        },\n        {\n          \"concept_id\": \"281795003\",\n          \"label\": \"Inflamed tonsils\"\n        },\n        {\n          \"concept_id\": \"281795003\",\n          \"label\": \"Inflamed tonsils\"\n        },\n        {\n          \"concept_id\": \"363176004\",\n          \"label\": \"Inflammatory disorder of head\"\n        },\n        {\n          \"concept_id\": \"363176004\",\n          \"label\": \"Inflammatory disorder of head\"\n        },\n        {\n          \"concept_id\": \"363177008\",\n          \"label\": \"Inflammatory disorder of immune system\"\n        },\n        {\n          \"concept_id\": \"363177008\",\n          \"label\": \"Inflammatory disorder of immune system\"\n        },\n        {\n          \"concept_id\": \"405737000\",\n          \"label\": \"Pharyngitis\"\n        },\n        {\n          \"concept_id\": \"405737000\",\n          \"label\": \"Pharyngitis\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"399986003\",\n          \"label\": \"Disorder of body wall\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"414030009\",\n          \"label\": \"Disorder of immune structure\"\n        },\n        {\n          \"concept_id\": \"126661001\",\n          \"label\": \"Disorder of oropharynx\"\n        },\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"51499002\",\n          \"label\": \"Disorder of tonsil AND/OR adenoid\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        },\n        {\n          \"concept_id\": \"363171009\",\n          \"label\": \"Inflammation of specific body systems\"\n        },\n        {\n          \"concept_id\": \"128999004\",\n          \"label\": \"Inflammatory disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"129134004\",\n          \"label\": \"Inflammatory disorder of upper respiratory tract\"\n        },\n        {\n          \"concept_id\": \"249392003\",\n          \"label\": \"Tonsil finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"414027002\",\n          \"label\": \"Disorder of hematopoietic structure\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"373405005\",\n          \"label\": \"Inflammatory disorder of the respiratory system\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"362971004\",\n          \"label\": \"Disorder of lymphatic system\"\n        },\n        {\n          \"concept_id\": \"111590001\",\n          \"label\": \"Disorder of lymphoid system\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"373407002\",\n          \"label\": \"Inflammatory disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"363180009\",\n          \"label\": \"Inflammatory disorder of the respiratory tract\"\n        },\n        {\n          \"concept_id\": \"116338005\",\n          \"label\": \"Pharyngeal finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"6456007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"72654001\",\n          \"label\": \"Supraventricular arrhythmia\"\n        },\n        {\n          \"concept_id\": \"72654001\",\n          \"label\": \"Supraventricular arrhythmia\"\n        },\n        {\n          \"concept_id\": \"6285003\",\n          \"label\": \"Tachyarrhythmia\"\n        },\n        {\n          \"concept_id\": \"6285003\",\n          \"label\": \"Tachyarrhythmia\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"698247007\",\n          \"label\": \"Cardiac arrhythmia\"\n        },\n        {\n          \"concept_id\": \"366157005\",\n          \"label\": \"Cardiovascular measurement - finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"301296002\",\n          \"label\": \"Mediastinal finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301095005\",\n          \"label\": \"Cardiac finding\"\n        },\n        {\n          \"concept_id\": \"399902003\",\n          \"label\": \"Disorder of body cavity\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"49483002\",\n          \"label\": \"Disorder of mediastinum\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"56265001\",\n          \"label\": \"Heart disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"80423007\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"36118008\",\n          \"label\": \"Pneumothorax\"\n        },\n        {\n          \"concept_id\": \"36118008\",\n          \"label\": \"Pneumothorax\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"233635001\",\n          \"label\": \"Disorder of pleura and pleural cavity\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"128272009\",\n          \"label\": \"Disorder of lower respiratory system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"60554003\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"252566002\",\n          \"label\": \"Sleep-related breathing test\"\n        },\n        {\n          \"concept_id\": \"252566002\",\n          \"label\": \"Sleep-related breathing test\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"386053000\",\n          \"label\": \"Evaluation procedure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"108243003\",\n          \"label\": \"Sleep disorder test AND/OR procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"405737000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 4,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"128999004\",\n          \"label\": \"Inflammatory disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"128999004\",\n          \"label\": \"Inflammatory disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"129134004\",\n          \"label\": \"Inflammatory disorder of upper respiratory tract\"\n        },\n        {\n          \"concept_id\": \"129134004\",\n          \"label\": \"Inflammatory disorder of upper respiratory tract\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        },\n        {\n          \"concept_id\": \"373407002\",\n          \"label\": \"Inflammatory disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"363180009\",\n          \"label\": \"Inflammatory disorder of the respiratory tract\"\n        },\n        {\n          \"concept_id\": \"116338005\",\n          \"label\": \"Pharyngeal finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"363171009\",\n          \"label\": \"Inflammation of specific body systems\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"373405005\",\n          \"label\": \"Inflammatory disorder of the respiratory system\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"90176007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 5,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"23023009\",\n          \"label\": \"Disorder of tonsil (palatine tonsil)\"\n        },\n        {\n          \"concept_id\": \"23023009\",\n          \"label\": \"Disorder of tonsil (palatine tonsil)\"\n        },\n        {\n          \"concept_id\": \"281795003\",\n          \"label\": \"Inflamed tonsils\"\n        },\n        {\n          \"concept_id\": \"281795003\",\n          \"label\": \"Inflamed tonsils\"\n        },\n        {\n          \"concept_id\": \"363176004\",\n          \"label\": \"Inflammatory disorder of head\"\n        },\n        {\n          \"concept_id\": \"363176004\",\n          \"label\": \"Inflammatory disorder of head\"\n        },\n        {\n          \"concept_id\": \"363177008\",\n          \"label\": \"Inflammatory disorder of immune system\"\n        },\n        {\n          \"concept_id\": \"363177008\",\n          \"label\": \"Inflammatory disorder of immune system\"\n        },\n        {\n          \"concept_id\": \"405737000\",\n          \"label\": \"Pharyngitis\"\n        },\n        {\n          \"concept_id\": \"405737000\",\n          \"label\": \"Pharyngitis\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"399986003\",\n          \"label\": \"Disorder of body wall\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"414030009\",\n          \"label\": \"Disorder of immune structure\"\n        },\n        {\n          \"concept_id\": \"126661001\",\n          \"label\": \"Disorder of oropharynx\"\n        },\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"51499002\",\n          \"label\": \"Disorder of tonsil AND/OR adenoid\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        },\n        {\n          \"concept_id\": \"363171009\",\n          \"label\": \"Inflammation of specific body systems\"\n        },\n        {\n          \"concept_id\": \"128999004\",\n          \"label\": \"Inflammatory disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"129134004\",\n          \"label\": \"Inflammatory disorder of upper respiratory tract\"\n        },\n        {\n          \"concept_id\": \"249392003\",\n          \"label\": \"Tonsil finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"414027002\",\n          \"label\": \"Disorder of hematopoietic structure\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"373405005\",\n          \"label\": \"Inflammatory disorder of the respiratory system\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"362971004\",\n          \"label\": \"Disorder of lymphatic system\"\n        },\n        {\n          \"concept_id\": \"111590001\",\n          \"label\": \"Disorder of lymphoid system\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"373407002\",\n          \"label\": \"Inflammatory disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"363180009\",\n          \"label\": \"Inflammatory disorder of the respiratory tract\"\n        },\n        {\n          \"concept_id\": \"116338005\",\n          \"label\": \"Pharyngeal finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"6456007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"72654001\",\n          \"label\": \"Supraventricular arrhythmia\"\n        },\n        {\n          \"concept_id\": \"72654001\",\n          \"label\": \"Supraventricular arrhythmia\"\n        },\n        {\n          \"concept_id\": \"6285003\",\n          \"label\": \"Tachyarrhythmia\"\n        },\n        {\n          \"concept_id\": \"6285003\",\n          \"label\": \"Tachyarrhythmia\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"698247007\",\n          \"label\": \"Cardiac arrhythmia\"\n        },\n        {\n          \"concept_id\": \"366157005\",\n          \"label\": \"Cardiovascular measurement - finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"301296002\",\n          \"label\": \"Mediastinal finding\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301095005\",\n          \"label\": \"Cardiac finding\"\n        },\n        {\n          \"concept_id\": \"399902003\",\n          \"label\": \"Disorder of body cavity\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"49483002\",\n          \"label\": \"Disorder of mediastinum\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"56265001\",\n          \"label\": \"Heart disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"80423007\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"36118008\",\n          \"label\": \"Pneumothorax\"\n        },\n        {\n          \"concept_id\": \"36118008\",\n          \"label\": \"Pneumothorax\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"233635001\",\n          \"label\": \"Disorder of pleura and pleural cavity\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"128272009\",\n          \"label\": \"Disorder of lower respiratory system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        }\n      ]\n    }\n  }\n]\n"
+}

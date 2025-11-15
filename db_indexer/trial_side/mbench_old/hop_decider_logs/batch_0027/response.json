@@ -1,0 +1,41 @@
+{
+  "batch_index": 27,
+  "raw_response": "[\n  {\n    \"concept_id\": \"275498002\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"275498002\",\n    \"stop_at_label\": \"Respiratory tract infection\",\n    \"rationale\": \"Parents and higher ancestors are generic ‘disorder’/‘infection by site’. Staying at the specific respiratory tract infection preserves organ-system and intent.\"\n  },\n  {\n    \"concept_id\": \"15805002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"36971009\",\n    \"stop_at_label\": \"Sinusitis\",\n    \"rationale\": \"Generalizing to Sinusitis preserves upper respiratory specificity and mechanism, avoids generic ‘disease’ parents. Tight timeframe and small clause favor hop-1.\"\n  },\n  {\n    \"concept_id\": \"40055000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"36971009\",\n    \"stop_at_label\": \"Sinusitis\",\n    \"rationale\": \"Sinusitis retains nasal sinus focus; other parents are generic ‘disease’/‘disorder’. Exclusions exceed inclusions, so conservative hop-1.\"\n  },\n  {\n    \"concept_id\": \"10509002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"32398004\",\n    \"stop_at_label\": \"Bronchitis\",\n    \"rationale\": \"Bronchitis preserves lower respiratory tract specificity and clinical program while avoiding generic disease/disorder ancestors. Tight timeframe supports hop-1.\"\n  },\n  {\n    \"concept_id\": \"425748003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"63480004\",\n    \"stop_at_label\": \"Chronic bronchitis\",\n    \"rationale\": \"Chronic bronchitis is specific and relevant; the other parent ‘Acute respiratory disease’ is generic. Hop-1 maintains bronchial condition context.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "275498002",
+      "hops": 0,
+      "rationale": "Parents and higher ancestors are generic ‘disorder’/‘infection by site’. Staying at the specific respiratory tract infection preserves organ-system and intent.",
+      "stop_at_concept_id": "275498002",
+      "stop_at_label": "Respiratory tract infection"
+    },
+    {
+      "concept_id": "15805002",
+      "hops": 1,
+      "rationale": "Generalizing to Sinusitis preserves upper respiratory specificity and mechanism, avoids generic ‘disease’ parents. Tight timeframe and small clause favor hop-1.",
+      "stop_at_concept_id": "36971009",
+      "stop_at_label": "Sinusitis"
+    },
+    {
+      "concept_id": "40055000",
+      "hops": 1,
+      "rationale": "Sinusitis retains nasal sinus focus; other parents are generic ‘disease’/‘disorder’. Exclusions exceed inclusions, so conservative hop-1.",
+      "stop_at_concept_id": "36971009",
+      "stop_at_label": "Sinusitis"
+    },
+    {
+      "concept_id": "10509002",
+      "hops": 1,
+      "rationale": "Bronchitis preserves lower respiratory tract specificity and clinical program while avoiding generic disease/disorder ancestors. Tight timeframe supports hop-1.",
+      "stop_at_concept_id": "32398004",
+      "stop_at_label": "Bronchitis"
+    },
+    {
+      "concept_id": "425748003",
+      "hops": 1,
+      "rationale": "Chronic bronchitis is specific and relevant; the other parent ‘Acute respiratory disease’ is generic. Hop-1 maintains bronchial condition context.",
+      "stop_at_concept_id": "63480004",
+      "stop_at_label": "Chronic bronchitis"
+    }
+  ]
+}

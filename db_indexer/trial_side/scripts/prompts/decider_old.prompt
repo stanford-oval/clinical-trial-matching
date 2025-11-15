@@ -1,0 +1,48 @@
+# === TASK === 
+You are a part of a formal ontology based patient-trial matching system. You will choose, for each requirement concept, the set of ancestor concepts that should be accepted for inclusion matching.
+
+# === Goal ===
+Return a concise allow-list of clinically relevant ancestors per concept.
+
+# === Inputs ===
+For each case below, you are given ONLY the ancestor labels grouped by hop,
+each ancestor being identified by an index like "1.a", "2.c", etc.
+
+Each case:
+{
+  "case_id": "c<batch>_<index>",            // opaque id you MUST echo back
+  "root_label": "<preferred term of the requirement>",  // provided for context, echo it back
+  "ancestors_by_hop": {
+    "1": [{"idx":"1.a","label":"..."}, {"idx":"1.b","label":"..."}],
+    "2": [{"idx":"2.a","label":"..."}],
+    "3": [...],
+    ...
+  }
+}
+
+# === Deny-list (case-insensitive substring) ===
+["clinical finding","disorder","disease","finding by site","symptom","procedure","event","abnormal morphology","physical object","situation","observable entity","body structure","organism","substance"]
+
+# === Guidance ===
+- Think: if the patient only reports information at this ancestor (i.e., the level of specificity at the ancestor is the most specific the patient information gets), could they actually have the fact in "root_label"? That is, the patient may have their facts underspecified (lower specificity), we want to also accept the root concept's ancestors to make sure we are not missing out on the trial. The patient can specify what they really have later at a better specificity but we shouldn't have them miss out on the opportunities now.
+- Include family umbrellas when commonly reported (e.g., a patient with "frontotemporal dementia" might report "dementia"; keep "dementia"). Similarly, a patient with carcinoma of esophagus may be looking for trials on adenocarcinoma of the gastrosophageal junction (for such cases be lenient, it is fine to climb up some ontology for body parts).
+- Mostly you will help to avoid ancestors so generic they make almost anyone eligible. But for boundary conditions, be lenient.
+- **Important:** Decisions must reference the provided indices (e.g., "1.a"). Do not invent indices. Labels are for context only.
+
+# === Output (JSON array only; no prose) ===
+Return one element per input case (order does not matter). Each element:
+{
+  "case_id": "c<batch>_<index>",            // echo exactly
+  "root_label": "<echo the root label verbatim>",       // for human readability
+  "keep": [
+    {
+      "alt_idx":"<one of the provided indices>",        // required (we key by this)
+      "alt_label":"<echo the chosen ancestor label>",   // for readability only
+      "reason":"<=25 words"
+    },
+    ...
+  ]
+}
+
+# === CASES ===
+{cases}

@@ -1,0 +1,41 @@
+{
+  "batch_index": 48,
+  "raw_response": "[\n  {\n    \"concept_id\": \"234253006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"58347006\",\n    \"stop_at_label\": \"Excision of lymph node\",\n    \"rationale\": \"Parent retains lymph node excision specificity and surgical intent; tight timeframe and simple clause support minimal generalization.\"\n  },\n  {\n    \"concept_id\": \"450743008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"363820009\",\n    \"stop_at_label\": \"Neurological observable\",\n    \"rationale\": \"Parent preserves neurological domain; higher ancestors are generic. Tight timeframe and simple clause favor H=1.\"\n  },\n  {\n    \"concept_id\": \"414396006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"128545000\",\n    \"stop_at_label\": \"Hernia of abdominal wall\",\n    \"rationale\": \"Parent keeps hernia type and wall site; higher levels include generic categories. Tight timeframe favors H=1.\"\n  },\n  {\n    \"concept_id\": \"86481000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"108188006\",\n    \"stop_at_label\": \"Abdomen incision\",\n    \"rationale\": \"Abdomen incision preserves method and site; alternative parent is broader. Tight timeframe and small clause support H=1.\"\n  },\n  {\n    \"concept_id\": \"279084009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"279084009\",\n    \"stop_at_label\": \"Chest discomfort\",\n    \"rationale\": \"Parents are too generic (discomfort, thorax region, sensation-by-site); multi-parent and shallow depth suggest staying specific.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "234253006",
+      "hops": 1,
+      "rationale": "Parent retains lymph node excision specificity and surgical intent; tight timeframe and simple clause support minimal generalization.",
+      "stop_at_concept_id": "58347006",
+      "stop_at_label": "Excision of lymph node"
+    },
+    {
+      "concept_id": "450743008",
+      "hops": 1,
+      "rationale": "Parent preserves neurological domain; higher ancestors are generic. Tight timeframe and simple clause favor H=1.",
+      "stop_at_concept_id": "363820009",
+      "stop_at_label": "Neurological observable"
+    },
+    {
+      "concept_id": "414396006",
+      "hops": 1,
+      "rationale": "Parent keeps hernia type and wall site; higher levels include generic categories. Tight timeframe favors H=1.",
+      "stop_at_concept_id": "128545000",
+      "stop_at_label": "Hernia of abdominal wall"
+    },
+    {
+      "concept_id": "86481000",
+      "hops": 1,
+      "rationale": "Abdomen incision preserves method and site; alternative parent is broader. Tight timeframe and small clause support H=1.",
+      "stop_at_concept_id": "108188006",
+      "stop_at_label": "Abdomen incision"
+    },
+    {
+      "concept_id": "279084009",
+      "hops": 0,
+      "rationale": "Parents are too generic (discomfort, thorax region, sensation-by-site); multi-parent and shallow depth suggest staying specific.",
+      "stop_at_concept_id": "279084009",
+      "stop_at_label": "Chest discomfort"
+    }
+  ]
+}

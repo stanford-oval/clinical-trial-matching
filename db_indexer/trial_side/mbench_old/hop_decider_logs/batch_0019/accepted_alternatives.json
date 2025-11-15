@@ -1,0 +1,90 @@
+[
+  {
+    "concept_id": "13645005",
+    "alt_concept_id": "13645005",
+    "hop": 0,
+    "alt_label": "Chronic obstructive lung disease",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:24:23"
+  },
+  {
+    "concept_id": "184091000",
+    "alt_concept_id": "184087005",
+    "hop": 1,
+    "alt_label": "Patient temporarily left",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:24:23"
+  },
+  {
+    "concept_id": "23968004",
+    "alt_concept_id": "82874003",
+    "hop": 1,
+    "alt_label": "Operation on colon",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:24:23"
+  },
+  {
+    "concept_id": "23968004",
+    "alt_concept_id": "27010001",
+    "hop": 1,
+    "alt_label": "Partial excision of large intestine",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:24:23"
+  },
+  {
+    "concept_id": "363402007",
+    "alt_concept_id": "363402007",
+    "hop": 0,
+    "alt_label": "Malignant tumor of esophagus",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:24:23"
+  },
+  {
+    "concept_id": "77097004",
+    "alt_concept_id": "240075007",
+    "hop": 1,
+    "alt_label": "Autosomal dominant muscular dystrophy not predominantly limb girdle",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:24:23"
+  },
+  {
+    "concept_id": "77097004",
+    "alt_concept_id": "54873004",
+    "hop": 1,
+    "alt_label": "Congenital anomaly of orbit",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:24:23"
+  },
+  {
+    "concept_id": "77097004",
+    "alt_concept_id": "11223009",
+    "hop": 1,
+    "alt_label": "Congenital anomaly of pharynx",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:24:23"
+  },
+  {
+    "concept_id": "77097004",
+    "alt_concept_id": "363080007",
+    "hop": 1,
+    "alt_label": "Digestive system hereditary disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:24:23"
+  },
+  {
+    "concept_id": "77097004",
+    "alt_concept_id": "363343008",
+    "hop": 1,
+    "alt_label": "Hereditary disorder of the visual system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:24:23"
+  },
+  {
+    "concept_id": "77097004",
+    "alt_concept_id": "57130002",
+    "hop": 1,
+    "alt_label": "Myopathy of extraocular muscles",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:24:23"
+  }
+]

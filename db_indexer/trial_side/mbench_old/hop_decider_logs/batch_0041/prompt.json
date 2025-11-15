@@ -1,0 +1,464 @@
+{
+  "batch_index": 41,
+  "offset": 200,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "398057008",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 0.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "230461009",
+            "label": "Headache disorder"
+          },
+          {
+            "concept_id": "230461009",
+            "label": "Headache disorder"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "699697007",
+            "label": "Finding of sensation by site"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          },
+          {
+            "concept_id": "22253000",
+            "label": "Pain"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "276435006",
+            "label": "Pain / sensation finding"
+          },
+          {
+            "concept_id": "106147001",
+            "label": "Sensory nervous system finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "373673007",
+            "label": "Disorder characterized by pain"
+          },
+          {
+            "concept_id": "118934005",
+            "label": "Disorder of head"
+          },
+          {
+            "concept_id": "279001004",
+            "label": "Pain finding at anatomical site"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "102957003",
+            "label": "Neurological finding"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "278860009",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "279039007",
+            "label": "Low back pain"
+          },
+          {
+            "concept_id": "279039007",
+            "label": "Low back pain"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "699697007",
+            "label": "Finding of sensation by site"
+          },
+          {
+            "concept_id": "22253000",
+            "label": "Pain"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "161891005",
+            "label": "Backache"
+          },
+          {
+            "concept_id": "609627001",
+            "label": "Finding of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "301366005",
+            "label": "Pain of truncal structure"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "414252009",
+            "label": "Finding of back"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "279001004",
+            "label": "Pain finding at anatomical site"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "102957003",
+            "label": "Neurological finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "276435006",
+            "label": "Pain / sensation finding"
+          },
+          {
+            "concept_id": "106147001",
+            "label": "Sensory nervous system finding"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "129103003",
+      "features": {
+        "depth_from_root": 3,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "16226000",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 0.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "60890002",
+            "label": "Female sterilization"
+          },
+          {
+            "concept_id": "60890002",
+            "label": "Female sterilization"
+          },
+          {
+            "concept_id": "51316009",
+            "label": "Laparoscopic procedure"
+          },
+          {
+            "concept_id": "51316009",
+            "label": "Laparoscopic procedure"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          },
+          {
+            "concept_id": "771329004",
+            "label": "Procedure on body region"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "363687006",
+            "label": "Endoscopic procedure"
+          },
+          {
+            "concept_id": "118675001",
+            "label": "Procedure on female genital system"
+          },
+          {
+            "concept_id": "703145006",
+            "label": "Sterilization procedure"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "363691001",
+            "label": "Procedure categorized by device involved"
+          },
+          {
+            "concept_id": "118674002",
+            "label": "Procedure on genitourinary system"
+          },
+          {
+            "concept_id": "609637006",
+            "label": "Procedure on pelvic region of trunk"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "118664000",
+            "label": "Procedure on body system"
+          },
+          {
+            "concept_id": "118694006",
+            "label": "Procedure on trunk"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "387759001",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 6,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "413834006",
+            "label": "Chronic disease of immune function"
+          },
+          {
+            "concept_id": "413834006",
+            "label": "Chronic disease of immune function"
+          },
+          {
+            "concept_id": "36138009",
+            "label": "Congenital immunodeficiency disease"
+          },
+          {
+            "concept_id": "36138009",
+            "label": "Congenital immunodeficiency disease"
+          },
+          {
+            "concept_id": "234585008",
+            "label": "Defective phagocytic cell killing"
+          },
+          {
+            "concept_id": "234585008",
+            "label": "Defective phagocytic cell killing"
+          },
+          {
+            "concept_id": "105600002",
+            "label": "Disorder of neutrophils"
+          },
+          {
+            "concept_id": "105600002",
+            "label": "Disorder of neutrophils"
+          },
+          {
+            "concept_id": "414395005",
+            "label": "Hereditary white blood cell disorder"
+          },
+          {
+            "concept_id": "414395005",
+            "label": "Hereditary white blood cell disorder"
+          },
+          {
+            "concept_id": "128139000",
+            "label": "Inflammatory disorder"
+          },
+          {
+            "concept_id": "128139000",
+            "label": "Inflammatory disorder"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "27624003",
+            "label": "Chronic disease"
+          },
+          {
+            "concept_id": "66091009",
+            "label": "Congenital disease"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "414029004",
+            "label": "Disorder of immune function"
+          },
+          {
+            "concept_id": "414393003",
+            "label": "Hereditary disorder of cellular element of blood"
+          },
+          {
+            "concept_id": "363138005",
+            "label": "Hereditary disorder of immune system"
+          },
+          {
+            "concept_id": "234532001",
+            "label": "Immunodeficiency disorder"
+          },
+          {
+            "concept_id": "302874002",
+            "label": "Phagocytic cell dysfunction"
+          },
+          {
+            "concept_id": "54097007",
+            "label": "White blood cell disorder"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "414022008",
+            "label": "Disorder of cellular component of blood"
+          },
+          {
+            "concept_id": "363137000",
+            "label": "Hereditary disorder by system"
+          },
+          {
+            "concept_id": "234573000",
+            "label": "Phagocytic cell defect"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "32895009",
+            "label": "Hereditary disease"
+          },
+          {
+            "concept_id": "58606001",
+            "label": "Primary immune deficiency disorder"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 24026,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"398057008\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"230461009\",\n          \"label\": \"Headache disorder\"\n        },\n        {\n          \"concept_id\": \"230461009\",\n          \"label\": \"Headache disorder\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"373673007\",\n          \"label\": \"Disorder characterized by pain\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"278860009\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"279039007\",\n          \"label\": \"Low back pain\"\n        },\n        {\n          \"concept_id\": \"279039007\",\n          \"label\": \"Low back pain\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"161891005\",\n          \"label\": \"Backache\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"414252009\",\n          \"label\": \"Finding of back\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"129103003\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"16226000\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"60890002\",\n          \"label\": \"Female sterilization\"\n        },\n        {\n          \"concept_id\": \"60890002\",\n          \"label\": \"Female sterilization\"\n        },\n        {\n          \"concept_id\": \"51316009\",\n          \"label\": \"Laparoscopic procedure\"\n        },\n        {\n          \"concept_id\": \"51316009\",\n          \"label\": \"Laparoscopic procedure\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363687006\",\n          \"label\": \"Endoscopic procedure\"\n        },\n        {\n          \"concept_id\": \"118675001\",\n          \"label\": \"Procedure on female genital system\"\n        },\n        {\n          \"concept_id\": \"703145006\",\n          \"label\": \"Sterilization procedure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"118674002\",\n          \"label\": \"Procedure on genitourinary system\"\n        },\n        {\n          \"concept_id\": \"609637006\",\n          \"label\": \"Procedure on pelvic region of trunk\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"387759001\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 6,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"413834006\",\n          \"label\": \"Chronic disease of immune function\"\n        },\n        {\n          \"concept_id\": \"413834006\",\n          \"label\": \"Chronic disease of immune function\"\n        },\n        {\n          \"concept_id\": \"36138009\",\n          \"label\": \"Congenital immunodeficiency disease\"\n        },\n        {\n          \"concept_id\": \"36138009\",\n          \"label\": \"Congenital immunodeficiency disease\"\n        },\n        {\n          \"concept_id\": \"234585008\",\n          \"label\": \"Defective phagocytic cell killing\"\n        },\n        {\n          \"concept_id\": \"234585008\",\n          \"label\": \"Defective phagocytic cell killing\"\n        },\n        {\n          \"concept_id\": \"105600002\",\n          \"label\": \"Disorder of neutrophils\"\n        },\n        {\n          \"concept_id\": \"105600002\",\n          \"label\": \"Disorder of neutrophils\"\n        },\n        {\n          \"concept_id\": \"414395005\",\n          \"label\": \"Hereditary white blood cell disorder\"\n        },\n        {\n          \"concept_id\": \"414395005\",\n          \"label\": \"Hereditary white blood cell disorder\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"27624003\",\n          \"label\": \"Chronic disease\"\n        },\n        {\n          \"concept_id\": \"66091009\",\n          \"label\": \"Congenital disease\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"414029004\",\n          \"label\": \"Disorder of immune function\"\n        },\n        {\n          \"concept_id\": \"414393003\",\n          \"label\": \"Hereditary disorder of cellular element of blood\"\n        },\n        {\n          \"concept_id\": \"363138005\",\n          \"label\": \"Hereditary disorder of immune system\"\n        },\n        {\n          \"concept_id\": \"234532001\",\n          \"label\": \"Immunodeficiency disorder\"\n        },\n        {\n          \"concept_id\": \"302874002\",\n          \"label\": \"Phagocytic cell dysfunction\"\n        },\n        {\n          \"concept_id\": \"54097007\",\n          \"label\": \"White blood cell disorder\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"414022008\",\n          \"label\": \"Disorder of cellular component of blood\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        },\n        {\n          \"concept_id\": \"234573000\",\n          \"label\": \"Phagocytic cell defect\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        },\n        {\n          \"concept_id\": \"58606001\",\n          \"label\": \"Primary immune deficiency disorder\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"398057008\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"230461009\",\n          \"label\": \"Headache disorder\"\n        },\n        {\n          \"concept_id\": \"230461009\",\n          \"label\": \"Headache disorder\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"373673007\",\n          \"label\": \"Disorder characterized by pain\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"278860009\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"279039007\",\n          \"label\": \"Low back pain\"\n        },\n        {\n          \"concept_id\": \"279039007\",\n          \"label\": \"Low back pain\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"161891005\",\n          \"label\": \"Backache\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"414252009\",\n          \"label\": \"Finding of back\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"129103003\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"16226000\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"60890002\",\n          \"label\": \"Female sterilization\"\n        },\n        {\n          \"concept_id\": \"60890002\",\n          \"label\": \"Female sterilization\"\n        },\n        {\n          \"concept_id\": \"51316009\",\n          \"label\": \"Laparoscopic procedure\"\n        },\n        {\n          \"concept_id\": \"51316009\",\n          \"label\": \"Laparoscopic procedure\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363687006\",\n          \"label\": \"Endoscopic procedure\"\n        },\n        {\n          \"concept_id\": \"118675001\",\n          \"label\": \"Procedure on female genital system\"\n        },\n        {\n          \"concept_id\": \"703145006\",\n          \"label\": \"Sterilization procedure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"118674002\",\n          \"label\": \"Procedure on genitourinary system\"\n        },\n        {\n          \"concept_id\": \"609637006\",\n          \"label\": \"Procedure on pelvic region of trunk\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"387759001\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 6,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"413834006\",\n          \"label\": \"Chronic disease of immune function\"\n        },\n        {\n          \"concept_id\": \"413834006\",\n          \"label\": \"Chronic disease of immune function\"\n        },\n        {\n          \"concept_id\": \"36138009\",\n          \"label\": \"Congenital immunodeficiency disease\"\n        },\n        {\n          \"concept_id\": \"36138009\",\n          \"label\": \"Congenital immunodeficiency disease\"\n        },\n        {\n          \"concept_id\": \"234585008\",\n          \"label\": \"Defective phagocytic cell killing\"\n        },\n        {\n          \"concept_id\": \"234585008\",\n          \"label\": \"Defective phagocytic cell killing\"\n        },\n        {\n          \"concept_id\": \"105600002\",\n          \"label\": \"Disorder of neutrophils\"\n        },\n        {\n          \"concept_id\": \"105600002\",\n          \"label\": \"Disorder of neutrophils\"\n        },\n        {\n          \"concept_id\": \"414395005\",\n          \"label\": \"Hereditary white blood cell disorder\"\n        },\n        {\n          \"concept_id\": \"414395005\",\n          \"label\": \"Hereditary white blood cell disorder\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"27624003\",\n          \"label\": \"Chronic disease\"\n        },\n        {\n          \"concept_id\": \"66091009\",\n          \"label\": \"Congenital disease\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"414029004\",\n          \"label\": \"Disorder of immune function\"\n        },\n        {\n          \"concept_id\": \"414393003\",\n          \"label\": \"Hereditary disorder of cellular element of blood\"\n        },\n        {\n          \"concept_id\": \"363138005\",\n          \"label\": \"Hereditary disorder of immune system\"\n        },\n        {\n          \"concept_id\": \"234532001\",\n          \"label\": \"Immunodeficiency disorder\"\n        },\n        {\n          \"concept_id\": \"302874002\",\n          \"label\": \"Phagocytic cell dysfunction\"\n        },\n        {\n          \"concept_id\": \"54097007\",\n          \"label\": \"White blood cell disorder\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"414022008\",\n          \"label\": \"Disorder of cellular component of blood\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        },\n        {\n          \"concept_id\": \"234573000\",\n          \"label\": \"Phagocytic cell defect\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        },\n        {\n          \"concept_id\": \"58606001\",\n          \"label\": \"Primary immune deficiency disorder\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ]\n    }\n  }\n]\n"
+}

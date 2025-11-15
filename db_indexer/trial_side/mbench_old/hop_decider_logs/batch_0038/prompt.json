@@ -1,0 +1,588 @@
+{
+  "batch_index": 38,
+  "offset": 185,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "609588000",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "19063003",
+            "label": "Arthroplasty of knee"
+          },
+          {
+            "concept_id": "19063003",
+            "label": "Arthroplasty of knee"
+          },
+          {
+            "concept_id": "392238003",
+            "label": "Implantation of joint prosthesis into knee joint"
+          },
+          {
+            "concept_id": "392238003",
+            "label": "Implantation of joint prosthesis into knee joint"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "771329004",
+            "label": "Procedure on body region"
+          },
+          {
+            "concept_id": "122945004",
+            "label": "Procedure on skeletal system"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "442095009",
+            "label": "Arthroplasty"
+          },
+          {
+            "concept_id": "61557004",
+            "label": "Implantation of joint prosthesis"
+          },
+          {
+            "concept_id": "179342005",
+            "label": "Knee joint operation"
+          },
+          {
+            "concept_id": "188383006",
+            "label": "Surgical repair of lower extremity"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "107733003",
+            "label": "Introduction procedure"
+          },
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "363691001",
+            "label": "Procedure categorized by device involved"
+          },
+          {
+            "concept_id": "118668002",
+            "label": "Procedure on articular system"
+          },
+          {
+            "concept_id": "118664000",
+            "label": "Procedure on body system"
+          },
+          {
+            "concept_id": "118949002",
+            "label": "Procedure on extremity"
+          },
+          {
+            "concept_id": "118717007",
+            "label": "Procedure on organ"
+          },
+          {
+            "concept_id": "387713003",
+            "label": "Surgical procedure"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118663006",
+            "label": "Implantation of prosthetic device"
+          },
+          {
+            "concept_id": "119570008",
+            "label": "Musculoskeletal system implantation"
+          },
+          {
+            "concept_id": "119574004",
+            "label": "Musculoskeletal system repair"
+          },
+          {
+            "concept_id": "112698002",
+            "label": "Operation on joint"
+          },
+          {
+            "concept_id": "6240004",
+            "label": "Operative procedure on knee"
+          },
+          {
+            "concept_id": "118750007",
+            "label": "Procedure on knee joint"
+          },
+          {
+            "concept_id": "107784002",
+            "label": "Surgical procedure on lower extremity"
+          },
+          {
+            "concept_id": "363320004",
+            "label": "Surgical repair procedure by body site"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "71861002",
+            "label": "Implantation"
+          },
+          {
+            "concept_id": "68972003",
+            "label": "Insertion of therapeutic device"
+          },
+          {
+            "concept_id": "363187007",
+            "label": "Limb operation"
+          },
+          {
+            "concept_id": "112697007",
+            "label": "Operation on musculoskeletal system"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          },
+          {
+            "concept_id": "118745001",
+            "label": "Procedure on joint"
+          },
+          {
+            "concept_id": "129182005",
+            "label": "Procedure on joint of lower extremity"
+          },
+          {
+            "concept_id": "118713006",
+            "label": "Procedure on knee"
+          },
+          {
+            "concept_id": "118710009",
+            "label": "Procedure on lower extremity"
+          },
+          {
+            "concept_id": "118666003",
+            "label": "Procedure on musculoskeletal system"
+          },
+          {
+            "concept_id": "88937006",
+            "label": "Prosthetic procedure"
+          },
+          {
+            "concept_id": "4365001",
+            "label": "Surgical repair"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "19063003",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 0.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "442095009",
+            "label": "Arthroplasty"
+          },
+          {
+            "concept_id": "442095009",
+            "label": "Arthroplasty"
+          },
+          {
+            "concept_id": "179342005",
+            "label": "Knee joint operation"
+          },
+          {
+            "concept_id": "179342005",
+            "label": "Knee joint operation"
+          },
+          {
+            "concept_id": "188383006",
+            "label": "Surgical repair of lower extremity"
+          },
+          {
+            "concept_id": "188383006",
+            "label": "Surgical repair of lower extremity"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "771329004",
+            "label": "Procedure on body region"
+          },
+          {
+            "concept_id": "118664000",
+            "label": "Procedure on body system"
+          },
+          {
+            "concept_id": "122945004",
+            "label": "Procedure on skeletal system"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "118668002",
+            "label": "Procedure on articular system"
+          },
+          {
+            "concept_id": "118949002",
+            "label": "Procedure on extremity"
+          },
+          {
+            "concept_id": "118666003",
+            "label": "Procedure on musculoskeletal system"
+          },
+          {
+            "concept_id": "118717007",
+            "label": "Procedure on organ"
+          },
+          {
+            "concept_id": "387713003",
+            "label": "Surgical procedure"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "119574004",
+            "label": "Musculoskeletal system repair"
+          },
+          {
+            "concept_id": "112698002",
+            "label": "Operation on joint"
+          },
+          {
+            "concept_id": "6240004",
+            "label": "Operative procedure on knee"
+          },
+          {
+            "concept_id": "118750007",
+            "label": "Procedure on knee joint"
+          },
+          {
+            "concept_id": "107784002",
+            "label": "Surgical procedure on lower extremity"
+          },
+          {
+            "concept_id": "363320004",
+            "label": "Surgical repair procedure by body site"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "363187007",
+            "label": "Limb operation"
+          },
+          {
+            "concept_id": "112697007",
+            "label": "Operation on musculoskeletal system"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          },
+          {
+            "concept_id": "118745001",
+            "label": "Procedure on joint"
+          },
+          {
+            "concept_id": "129182005",
+            "label": "Procedure on joint of lower extremity"
+          },
+          {
+            "concept_id": "118713006",
+            "label": "Procedure on knee"
+          },
+          {
+            "concept_id": "118710009",
+            "label": "Procedure on lower extremity"
+          },
+          {
+            "concept_id": "4365001",
+            "label": "Surgical repair"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "160685001",
+      "features": {
+        "depth_from_root": 9,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "8510008",
+            "label": "Reduced mobility"
+          },
+          {
+            "concept_id": "8510008",
+            "label": "Reduced mobility"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "365092005",
+            "label": "Finding related to ability to mobilize"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "364833005",
+            "label": "Finding related to ability to move"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "364832000",
+            "label": "Finding related to ability to perform gross motor function"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "248536006",
+            "label": "Finding of functional performance and activity"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "118228005",
+            "label": "Functional finding"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "19585003",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "128926000",
+            "label": "Postprocedural state finding"
+          },
+          {
+            "concept_id": "128926000",
+            "label": "Postprocedural state finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "365860008",
+            "label": "General clinical state finding"
+          },
+          {
+            "concept_id": "118222006",
+            "label": "General finding of observation of patient"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "241149003",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 0.75,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 3,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "86543007",
+            "label": "Esophageal motility study"
+          },
+          {
+            "concept_id": "86543007",
+            "label": "Esophageal motility study"
+          },
+          {
+            "concept_id": "371576000",
+            "label": "Video imaging"
+          },
+          {
+            "concept_id": "371576000",
+            "label": "Video imaging"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "27483000",
+            "label": "Diagnostic radiography with contrast media"
+          },
+          {
+            "concept_id": "303748006",
+            "label": "Digestive system contrast procedure"
+          },
+          {
+            "concept_id": "443466001",
+            "label": "Evaluation of gastrointestinal tract"
+          },
+          {
+            "concept_id": "371571005",
+            "label": "Imaging by body site"
+          },
+          {
+            "concept_id": "118673008",
+            "label": "Procedure on digestive system"
+          },
+          {
+            "concept_id": "118826000",
+            "label": "Procedure on digestive tract"
+          },
+          {
+            "concept_id": "118717007",
+            "label": "Procedure on organ"
+          },
+          {
+            "concept_id": "363680008",
+            "label": "Radiographic imaging procedure"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "363046009",
+            "label": "Contrast radiology study by site"
+          },
+          {
+            "concept_id": "241139001",
+            "label": "Gastrointestinal tract contrast procedure"
+          },
+          {
+            "concept_id": "442280004",
+            "label": "Imaging of gastrointestinal tract"
+          },
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "118821005",
+            "label": "Procedure on digestive organ"
+          },
+          {
+            "concept_id": "384719006",
+            "label": "Procedure on gastrointestinal tract"
+          },
+          {
+            "concept_id": "108273007",
+            "label": "Radiographic imaging procedure by site"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "386053000",
+            "label": "Evaluation procedure"
+          },
+          {
+            "concept_id": "34885003",
+            "label": "Radiography of esophagus"
+          },
+          {
+            "concept_id": "303757000",
+            "label": "Upper gastrointestinal tract contrast procedure"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "285754008",
+            "label": "Contrast radiography of esophagus"
+          },
+          {
+            "concept_id": "363679005",
+            "label": "Imaging"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "315293005",
+            "label": "Contrast meal"
+          },
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "118829007",
+            "label": "Procedure on esophagus"
+          },
+          {
+            "concept_id": "75679007",
+            "label": "Radiography of gastrointestinal tract"
+          },
+          {
+            "concept_id": "359715005",
+            "label": "Upper gastrointestinal procedure"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 30980,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"609588000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"19063003\",\n          \"label\": \"Arthroplasty of knee\"\n        },\n        {\n          \"concept_id\": \"19063003\",\n          \"label\": \"Arthroplasty of knee\"\n        },\n        {\n          \"concept_id\": \"392238003\",\n          \"label\": \"Implantation of joint prosthesis into knee joint\"\n        },\n        {\n          \"concept_id\": \"392238003\",\n          \"label\": \"Implantation of joint prosthesis into knee joint\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"122945004\",\n          \"label\": \"Procedure on skeletal system\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"442095009\",\n          \"label\": \"Arthroplasty\"\n        },\n        {\n          \"concept_id\": \"61557004\",\n          \"label\": \"Implantation of joint prosthesis\"\n        },\n        {\n          \"concept_id\": \"179342005\",\n          \"label\": \"Knee joint operation\"\n        },\n        {\n          \"concept_id\": \"188383006\",\n          \"label\": \"Surgical repair of lower extremity\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"118668002\",\n          \"label\": \"Procedure on articular system\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118949002\",\n          \"label\": \"Procedure on extremity\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118663006\",\n          \"label\": \"Implantation of prosthetic device\"\n        },\n        {\n          \"concept_id\": \"119570008\",\n          \"label\": \"Musculoskeletal system implantation\"\n        },\n        {\n          \"concept_id\": \"119574004\",\n          \"label\": \"Musculoskeletal system repair\"\n        },\n        {\n          \"concept_id\": \"112698002\",\n          \"label\": \"Operation on joint\"\n        },\n        {\n          \"concept_id\": \"6240004\",\n          \"label\": \"Operative procedure on knee\"\n        },\n        {\n          \"concept_id\": \"118750007\",\n          \"label\": \"Procedure on knee joint\"\n        },\n        {\n          \"concept_id\": \"107784002\",\n          \"label\": \"Surgical procedure on lower extremity\"\n        },\n        {\n          \"concept_id\": \"363320004\",\n          \"label\": \"Surgical repair procedure by body site\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"71861002\",\n          \"label\": \"Implantation\"\n        },\n        {\n          \"concept_id\": \"68972003\",\n          \"label\": \"Insertion of therapeutic device\"\n        },\n        {\n          \"concept_id\": \"363187007\",\n          \"label\": \"Limb operation\"\n        },\n        {\n          \"concept_id\": \"112697007\",\n          \"label\": \"Operation on musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"118745001\",\n          \"label\": \"Procedure on joint\"\n        },\n        {\n          \"concept_id\": \"129182005\",\n          \"label\": \"Procedure on joint of lower extremity\"\n        },\n        {\n          \"concept_id\": \"118713006\",\n          \"label\": \"Procedure on knee\"\n        },\n        {\n          \"concept_id\": \"118710009\",\n          \"label\": \"Procedure on lower extremity\"\n        },\n        {\n          \"concept_id\": \"118666003\",\n          \"label\": \"Procedure on musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"88937006\",\n          \"label\": \"Prosthetic procedure\"\n        },\n        {\n          \"concept_id\": \"4365001\",\n          \"label\": \"Surgical repair\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"19063003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"442095009\",\n          \"label\": \"Arthroplasty\"\n        },\n        {\n          \"concept_id\": \"442095009\",\n          \"label\": \"Arthroplasty\"\n        },\n        {\n          \"concept_id\": \"179342005\",\n          \"label\": \"Knee joint operation\"\n        },\n        {\n          \"concept_id\": \"179342005\",\n          \"label\": \"Knee joint operation\"\n        },\n        {\n          \"concept_id\": \"188383006\",\n          \"label\": \"Surgical repair of lower extremity\"\n        },\n        {\n          \"concept_id\": \"188383006\",\n          \"label\": \"Surgical repair of lower extremity\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"122945004\",\n          \"label\": \"Procedure on skeletal system\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"118668002\",\n          \"label\": \"Procedure on articular system\"\n        },\n        {\n          \"concept_id\": \"118949002\",\n          \"label\": \"Procedure on extremity\"\n        },\n        {\n          \"concept_id\": \"118666003\",\n          \"label\": \"Procedure on musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"119574004\",\n          \"label\": \"Musculoskeletal system repair\"\n        },\n        {\n          \"concept_id\": \"112698002\",\n          \"label\": \"Operation on joint\"\n        },\n        {\n          \"concept_id\": \"6240004\",\n          \"label\": \"Operative procedure on knee\"\n        },\n        {\n          \"concept_id\": \"118750007\",\n          \"label\": \"Procedure on knee joint\"\n        },\n        {\n          \"concept_id\": \"107784002\",\n          \"label\": \"Surgical procedure on lower extremity\"\n        },\n        {\n          \"concept_id\": \"363320004\",\n          \"label\": \"Surgical repair procedure by body site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"363187007\",\n          \"label\": \"Limb operation\"\n        },\n        {\n          \"concept_id\": \"112697007\",\n          \"label\": \"Operation on musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"118745001\",\n          \"label\": \"Procedure on joint\"\n        },\n        {\n          \"concept_id\": \"129182005\",\n          \"label\": \"Procedure on joint of lower extremity\"\n        },\n        {\n          \"concept_id\": \"118713006\",\n          \"label\": \"Procedure on knee\"\n        },\n        {\n          \"concept_id\": \"118710009\",\n          \"label\": \"Procedure on lower extremity\"\n        },\n        {\n          \"concept_id\": \"4365001\",\n          \"label\": \"Surgical repair\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"160685001\",\n    \"features\": {\n      \"depth_from_root\": 9,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"8510008\",\n          \"label\": \"Reduced mobility\"\n        },\n        {\n          \"concept_id\": \"8510008\",\n          \"label\": \"Reduced mobility\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"365092005\",\n          \"label\": \"Finding related to ability to mobilize\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"364833005\",\n          \"label\": \"Finding related to ability to move\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"364832000\",\n          \"label\": \"Finding related to ability to perform gross motor function\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"248536006\",\n          \"label\": \"Finding of functional performance and activity\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"19585003\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128926000\",\n          \"label\": \"Postprocedural state finding\"\n        },\n        {\n          \"concept_id\": \"128926000\",\n          \"label\": \"Postprocedural state finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"365860008\",\n          \"label\": \"General clinical state finding\"\n        },\n        {\n          \"concept_id\": \"118222006\",\n          \"label\": \"General finding of observation of patient\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"241149003\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.75,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"86543007\",\n          \"label\": \"Esophageal motility study\"\n        },\n        {\n          \"concept_id\": \"86543007\",\n          \"label\": \"Esophageal motility study\"\n        },\n        {\n          \"concept_id\": \"371576000\",\n          \"label\": \"Video imaging\"\n        },\n        {\n          \"concept_id\": \"371576000\",\n          \"label\": \"Video imaging\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"27483000\",\n          \"label\": \"Diagnostic radiography with contrast media\"\n        },\n        {\n          \"concept_id\": \"303748006\",\n          \"label\": \"Digestive system contrast procedure\"\n        },\n        {\n          \"concept_id\": \"443466001\",\n          \"label\": \"Evaluation of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"371571005\",\n          \"label\": \"Imaging by body site\"\n        },\n        {\n          \"concept_id\": \"118673008\",\n          \"label\": \"Procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118826000\",\n          \"label\": \"Procedure on digestive tract\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"363680008\",\n          \"label\": \"Radiographic imaging procedure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"363046009\",\n          \"label\": \"Contrast radiology study by site\"\n        },\n        {\n          \"concept_id\": \"241139001\",\n          \"label\": \"Gastrointestinal tract contrast procedure\"\n        },\n        {\n          \"concept_id\": \"442280004\",\n          \"label\": \"Imaging of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"118821005\",\n          \"label\": \"Procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"384719006\",\n          \"label\": \"Procedure on gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"108273007\",\n          \"label\": \"Radiographic imaging procedure by site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"386053000\",\n          \"label\": \"Evaluation procedure\"\n        },\n        {\n          \"concept_id\": \"34885003\",\n          \"label\": \"Radiography of esophagus\"\n        },\n        {\n          \"concept_id\": \"303757000\",\n          \"label\": \"Upper gastrointestinal tract contrast procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"285754008\",\n          \"label\": \"Contrast radiography of esophagus\"\n        },\n        {\n          \"concept_id\": \"363679005\",\n          \"label\": \"Imaging\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"315293005\",\n          \"label\": \"Contrast meal\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"118829007\",\n          \"label\": \"Procedure on esophagus\"\n        },\n        {\n          \"concept_id\": \"75679007\",\n          \"label\": \"Radiography of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"359715005\",\n          \"label\": \"Upper gastrointestinal procedure\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"609588000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"19063003\",\n          \"label\": \"Arthroplasty of knee\"\n        },\n        {\n          \"concept_id\": \"19063003\",\n          \"label\": \"Arthroplasty of knee\"\n        },\n        {\n          \"concept_id\": \"392238003\",\n          \"label\": \"Implantation of joint prosthesis into knee joint\"\n        },\n        {\n          \"concept_id\": \"392238003\",\n          \"label\": \"Implantation of joint prosthesis into knee joint\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"122945004\",\n          \"label\": \"Procedure on skeletal system\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"442095009\",\n          \"label\": \"Arthroplasty\"\n        },\n        {\n          \"concept_id\": \"61557004\",\n          \"label\": \"Implantation of joint prosthesis\"\n        },\n        {\n          \"concept_id\": \"179342005\",\n          \"label\": \"Knee joint operation\"\n        },\n        {\n          \"concept_id\": \"188383006\",\n          \"label\": \"Surgical repair of lower extremity\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"118668002\",\n          \"label\": \"Procedure on articular system\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"118949002\",\n          \"label\": \"Procedure on extremity\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118663006\",\n          \"label\": \"Implantation of prosthetic device\"\n        },\n        {\n          \"concept_id\": \"119570008\",\n          \"label\": \"Musculoskeletal system implantation\"\n        },\n        {\n          \"concept_id\": \"119574004\",\n          \"label\": \"Musculoskeletal system repair\"\n        },\n        {\n          \"concept_id\": \"112698002\",\n          \"label\": \"Operation on joint\"\n        },\n        {\n          \"concept_id\": \"6240004\",\n          \"label\": \"Operative procedure on knee\"\n        },\n        {\n          \"concept_id\": \"118750007\",\n          \"label\": \"Procedure on knee joint\"\n        },\n        {\n          \"concept_id\": \"107784002\",\n          \"label\": \"Surgical procedure on lower extremity\"\n        },\n        {\n          \"concept_id\": \"363320004\",\n          \"label\": \"Surgical repair procedure by body site\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"71861002\",\n          \"label\": \"Implantation\"\n        },\n        {\n          \"concept_id\": \"68972003\",\n          \"label\": \"Insertion of therapeutic device\"\n        },\n        {\n          \"concept_id\": \"363187007\",\n          \"label\": \"Limb operation\"\n        },\n        {\n          \"concept_id\": \"112697007\",\n          \"label\": \"Operation on musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"118745001\",\n          \"label\": \"Procedure on joint\"\n        },\n        {\n          \"concept_id\": \"129182005\",\n          \"label\": \"Procedure on joint of lower extremity\"\n        },\n        {\n          \"concept_id\": \"118713006\",\n          \"label\": \"Procedure on knee\"\n        },\n        {\n          \"concept_id\": \"118710009\",\n          \"label\": \"Procedure on lower extremity\"\n        },\n        {\n          \"concept_id\": \"118666003\",\n          \"label\": \"Procedure on musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"88937006\",\n          \"label\": \"Prosthetic procedure\"\n        },\n        {\n          \"concept_id\": \"4365001\",\n          \"label\": \"Surgical repair\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"19063003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"442095009\",\n          \"label\": \"Arthroplasty\"\n        },\n        {\n          \"concept_id\": \"442095009\",\n          \"label\": \"Arthroplasty\"\n        },\n        {\n          \"concept_id\": \"179342005\",\n          \"label\": \"Knee joint operation\"\n        },\n        {\n          \"concept_id\": \"179342005\",\n          \"label\": \"Knee joint operation\"\n        },\n        {\n          \"concept_id\": \"188383006\",\n          \"label\": \"Surgical repair of lower extremity\"\n        },\n        {\n          \"concept_id\": \"188383006\",\n          \"label\": \"Surgical repair of lower extremity\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        },\n        {\n          \"concept_id\": \"122945004\",\n          \"label\": \"Procedure on skeletal system\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"118668002\",\n          \"label\": \"Procedure on articular system\"\n        },\n        {\n          \"concept_id\": \"118949002\",\n          \"label\": \"Procedure on extremity\"\n        },\n        {\n          \"concept_id\": \"118666003\",\n          \"label\": \"Procedure on musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"119574004\",\n          \"label\": \"Musculoskeletal system repair\"\n        },\n        {\n          \"concept_id\": \"112698002\",\n          \"label\": \"Operation on joint\"\n        },\n        {\n          \"concept_id\": \"6240004\",\n          \"label\": \"Operative procedure on knee\"\n        },\n        {\n          \"concept_id\": \"118750007\",\n          \"label\": \"Procedure on knee joint\"\n        },\n        {\n          \"concept_id\": \"107784002\",\n          \"label\": \"Surgical procedure on lower extremity\"\n        },\n        {\n          \"concept_id\": \"363320004\",\n          \"label\": \"Surgical repair procedure by body site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"363187007\",\n          \"label\": \"Limb operation\"\n        },\n        {\n          \"concept_id\": \"112697007\",\n          \"label\": \"Operation on musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"118745001\",\n          \"label\": \"Procedure on joint\"\n        },\n        {\n          \"concept_id\": \"129182005\",\n          \"label\": \"Procedure on joint of lower extremity\"\n        },\n        {\n          \"concept_id\": \"118713006\",\n          \"label\": \"Procedure on knee\"\n        },\n        {\n          \"concept_id\": \"118710009\",\n          \"label\": \"Procedure on lower extremity\"\n        },\n        {\n          \"concept_id\": \"4365001\",\n          \"label\": \"Surgical repair\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"160685001\",\n    \"features\": {\n      \"depth_from_root\": 9,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"8510008\",\n          \"label\": \"Reduced mobility\"\n        },\n        {\n          \"concept_id\": \"8510008\",\n          \"label\": \"Reduced mobility\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"365092005\",\n          \"label\": \"Finding related to ability to mobilize\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"364833005\",\n          \"label\": \"Finding related to ability to move\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"364832000\",\n          \"label\": \"Finding related to ability to perform gross motor function\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"248536006\",\n          \"label\": \"Finding of functional performance and activity\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"19585003\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"128926000\",\n          \"label\": \"Postprocedural state finding\"\n        },\n        {\n          \"concept_id\": \"128926000\",\n          \"label\": \"Postprocedural state finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"365860008\",\n          \"label\": \"General clinical state finding\"\n        },\n        {\n          \"concept_id\": \"118222006\",\n          \"label\": \"General finding of observation of patient\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"241149003\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.75,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"86543007\",\n          \"label\": \"Esophageal motility study\"\n        },\n        {\n          \"concept_id\": \"86543007\",\n          \"label\": \"Esophageal motility study\"\n        },\n        {\n          \"concept_id\": \"371576000\",\n          \"label\": \"Video imaging\"\n        },\n        {\n          \"concept_id\": \"371576000\",\n          \"label\": \"Video imaging\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"27483000\",\n          \"label\": \"Diagnostic radiography with contrast media\"\n        },\n        {\n          \"concept_id\": \"303748006\",\n          \"label\": \"Digestive system contrast procedure\"\n        },\n        {\n          \"concept_id\": \"443466001\",\n          \"label\": \"Evaluation of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"371571005\",\n          \"label\": \"Imaging by body site\"\n        },\n        {\n          \"concept_id\": \"118673008\",\n          \"label\": \"Procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118826000\",\n          \"label\": \"Procedure on digestive tract\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"363680008\",\n          \"label\": \"Radiographic imaging procedure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"363046009\",\n          \"label\": \"Contrast radiology study by site\"\n        },\n        {\n          \"concept_id\": \"241139001\",\n          \"label\": \"Gastrointestinal tract contrast procedure\"\n        },\n        {\n          \"concept_id\": \"442280004\",\n          \"label\": \"Imaging of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"118821005\",\n          \"label\": \"Procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"384719006\",\n          \"label\": \"Procedure on gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"108273007\",\n          \"label\": \"Radiographic imaging procedure by site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"386053000\",\n          \"label\": \"Evaluation procedure\"\n        },\n        {\n          \"concept_id\": \"34885003\",\n          \"label\": \"Radiography of esophagus\"\n        },\n        {\n          \"concept_id\": \"303757000\",\n          \"label\": \"Upper gastrointestinal tract contrast procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"285754008\",\n          \"label\": \"Contrast radiography of esophagus\"\n        },\n        {\n          \"concept_id\": \"363679005\",\n          \"label\": \"Imaging\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"315293005\",\n          \"label\": \"Contrast meal\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"118829007\",\n          \"label\": \"Procedure on esophagus\"\n        },\n        {\n          \"concept_id\": \"75679007\",\n          \"label\": \"Radiography of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"359715005\",\n          \"label\": \"Upper gastrointestinal procedure\"\n        }\n      ]\n    }\n  }\n]\n"
+}

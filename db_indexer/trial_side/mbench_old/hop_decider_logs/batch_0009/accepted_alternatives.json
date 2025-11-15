@@ -1,0 +1,90 @@
+[
+  {
+    "concept_id": "102587001",
+    "alt_concept_id": "29857009",
+    "hop": 1,
+    "alt_label": "Chest pain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:08:45"
+  },
+  {
+    "concept_id": "167030002",
+    "alt_concept_id": "167030002",
+    "hop": 0,
+    "alt_label": "Arterial carbon dioxide abnormal",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:08:45"
+  },
+  {
+    "concept_id": "233947005",
+    "alt_concept_id": "233946001",
+    "hop": 1,
+    "alt_label": "Large vessel pulmonary hypertension",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:08:45"
+  },
+  {
+    "concept_id": "233947005",
+    "alt_concept_id": "697896007",
+    "hop": 1,
+    "alt_label": "Precapillary pulmonary hypertension",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:08:45"
+  },
+  {
+    "concept_id": "233947005",
+    "alt_concept_id": "69357003",
+    "hop": 1,
+    "alt_label": "Pulmonary thrombosis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:08:45"
+  },
+  {
+    "concept_id": "233947005",
+    "alt_concept_id": "88223008",
+    "hop": 1,
+    "alt_label": "Secondary pulmonary hypertension",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:08:45"
+  },
+  {
+    "concept_id": "233947005",
+    "alt_concept_id": "371039008",
+    "hop": 1,
+    "alt_label": "Thromboembolic disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:08:45"
+  },
+  {
+    "concept_id": "394659003",
+    "alt_concept_id": "394659003",
+    "hop": 0,
+    "alt_label": "Acute coronary syndrome",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:08:45"
+  },
+  {
+    "concept_id": "78275009",
+    "alt_concept_id": "111489007",
+    "hop": 1,
+    "alt_label": "Breathing-related sleep disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:08:45"
+  },
+  {
+    "concept_id": "78275009",
+    "alt_concept_id": "79688008",
+    "hop": 1,
+    "alt_label": "Respiratory obstruction",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:08:45"
+  },
+  {
+    "concept_id": "78275009",
+    "alt_concept_id": "73430006",
+    "hop": 1,
+    "alt_label": "Sleep apnea",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:08:45"
+  }
+]

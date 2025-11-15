@@ -1,0 +1,411 @@
+{
+  "rules": [
+    {
+      "id": "suspicion_implies_finding_same_time",
+      "match_template": "patient_has_suspicion_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_finding_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "suspicion_implies_diagnosis_same_time",
+      "match_template": "patient_has_suspicion_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_diagnosis_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "suspicion_implies_symptoms_same_time",
+      "match_template": "patient_has_suspicion_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_symptoms_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "diagnosis_implies_finding_same_time",
+      "match_template": "patient_has_diagnosis_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_finding_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "finding_implies_diagnosis_same_time",
+      "match_template": "patient_has_finding_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_diagnosis_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "finding_implies_symptoms_same_time",
+      "match_template": "patient_has_finding_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_symptoms_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "finding_implies_clinical_signs_same_time",
+      "match_template": "patient_has_finding_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_clinical_signs_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "is_undergoing_implies_has_undergone",
+      "match_template": "patient_is_undergoing_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_undergone_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "status_positive_implies_not_negative_same_time",
+      "match_template": "patients_{e}_is_positive_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patients_{e}_is_negative_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "status_negative_implies_not_positive_same_time",
+      "match_template": "patients_{e}_is_negative_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patients_{e}_is_positive_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "status_abnormal_implies_not_normal_same_time",
+      "match_template": "patients_{e}_is_abnormal_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patients_{e}_is_normal_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "status_normal_implies_not_abnormal_same_time",
+      "match_template": "patients_{e}_is_normal_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patients_{e}_is_abnormal_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "allergy_implies_hypersensitivity_same_time",
+      "match_template": "patient_has_allergy_to_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_hypersensitivity_to_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "nonimmune_hypersensitivity_implies_hypersensitivity_same_time",
+      "match_template": "patient_has_nonimmune_hypersensitivity_to_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_hypersensitivity_to_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "diagnosis_implies_suspicion_same_time",
+      "match_template": "patient_has_diagnosis_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_suspicion_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "finding_implies_suspicion_same_time",
+      "match_template": "patient_has_finding_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_suspicion_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "symptoms_implies_suspicion_same_time",
+      "match_template": "patient_has_symptoms_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_suspicion_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "clinical_signs_implies_suspicion_same_time",
+      "match_template": "patient_has_clinical_signs_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_suspicion_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "is_undergoing_implies_can_undergo_same_time",
+      "match_template": "patient_is_undergoing_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_can_undergo_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "will_undergo_implies_can_undergo_same_time",
+      "match_template": "patient_will_undergo_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_can_undergo_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "procedure_positive_outcome_implies_has_undergone_same_time",
+      "match_template": "patient_has_undergone_{e}_{t}_outcome_is_positive",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_undergone_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "procedure_negative_outcome_implies_has_undergone_same_time",
+      "match_template": "patient_has_undergone_{e}_{t}_outcome_is_negative",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_undergone_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "procedure_abnormal_outcome_implies_has_undergone_same_time",
+      "match_template": "patient_has_undergone_{e}_{t}_outcome_is_abnormal",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_undergone_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "procedure_normal_outcome_implies_has_undergone_same_time",
+      "match_template": "patient_has_undergone_{e}_{t}_outcome_is_normal",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_undergone_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "symptoms_implies_finding_same_time",
+      "match_template": "patient_has_symptoms_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_finding_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "clinical_signs_implies_finding_same_time",
+      "match_template": "patient_has_clinical_signs_of_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_finding_of_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "diagnosis_false_implies_finding_false_same_time",
+      "match_template": "patient_has_diagnosis_of_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_has_finding_of_{e}_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "finding_false_implies_diagnosis_false_same_time",
+      "match_template": "patient_has_finding_of_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_has_diagnosis_of_{e}_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "symptoms_false_implies_finding_false_same_time",
+      "match_template": "patient_has_symptoms_of_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_has_finding_of_{e}_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "clinical_signs_false_implies_finding_false_same_time",
+      "match_template": "patient_has_clinical_signs_of_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_has_finding_of_{e}_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "not_has_undergone_implies_not_undergoing_same_time",
+      "match_template": "patient_has_undergone_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_is_undergoing_{e}_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "positive_false_implies_negative_true_same_time",
+      "match_template": "patients_{e}_is_positive_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patients_{e}_is_negative_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "negative_false_implies_positive_true_same_time",
+      "match_template": "patients_{e}_is_negative_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patients_{e}_is_positive_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "abnormal_false_implies_normal_true_same_time",
+      "match_template": "patients_{e}_is_abnormal_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patients_{e}_is_normal_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "normal_false_implies_abnormal_true_same_time",
+      "match_template": "patients_{e}_is_normal_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patients_{e}_is_abnormal_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+
+
+    {
+      "id": "no_hypersensitivity_implies_no_allergy_same_time",
+      "match_template": "patient_has_hypersensitivity_to_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_has_allergy_to_{e}_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "no_hypersensitivity_implies_no_nonimmune_hypersensitivity_same_time",
+      "match_template": "patient_has_hypersensitivity_to_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_has_nonimmune_hypersensitivity_to_{e}_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "cannot_undergo_implies_not_undergoing_same_time",
+      "match_template": "patient_can_undergo_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_is_undergoing_{e}_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "cannot_undergo_implies_not_will_undergo_same_time",
+      "match_template": "patient_can_undergo_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_will_undergo_{e}_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "not_has_undergone_implies_no_positive_outcome_same_time",
+      "match_template": "patient_has_undergone_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_has_undergone_{e}_{t}_outcome_is_positive", "type": "Bool", "value": false, "preserve_qualifiers": true },
+        { "template": "patient_has_undergone_{e}_{t}_outcome_is_negative", "type": "Bool", "value": false, "preserve_qualifiers": true },
+        { "template": "patient_has_undergone_{e}_{t}_outcome_is_abnormal", "type": "Bool", "value": false, "preserve_qualifiers": true },
+        { "template": "patient_has_undergone_{e}_{t}_outcome_is_normal",   "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "finding_false_implies_symptoms_false_same_time",
+      "match_template": "patient_has_finding_of_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_has_symptoms_of_{e}_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "finding_false_implies_clinical_signs_false_same_time",
+      "match_template": "patient_has_finding_of_{e}_{t}",
+      "require_bool": false,
+      "produce": [
+        { "template": "patient_has_clinical_signs_of_{e}_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+
+    {
+      "id": "sex_female_implies_not_male",
+      "match_template": "patient_sex_is_female_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_sex_is_male_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true },
+        { "template": "patient_has_finding_of_female_sex_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "sex_male_implies_not_female",
+      "match_template": "patient_sex_is_male_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_sex_is_female_{t}", "type": "Bool", "value": false, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "need_to_undergo_implies_is_undergoing",
+      "match_template": "patient_needs_to_undergo_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_is_undergoing_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "need_to_undergo_implies_will_undergo",
+      "match_template": "patient_needs_to_undergo_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_will_undergo_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "need_to_undergo_implies_can_undergo",
+      "match_template": "patient_needs_to_undergo_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_can_undergo_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    },
+    {
+      "id": "need_to_undergo_implies_has_undergone",
+      "match_template": "patient_needs_to_undergo_{e}_{t}",
+      "require_bool": true,
+      "produce": [
+        { "template": "patient_has_undergone_{e}_{t}", "type": "Bool", "value": true, "preserve_qualifiers": true }
+      ]
+    }
+  ],
+  "timeframe_implication": {
+    "collapse_timeframes": false
+  }
+}

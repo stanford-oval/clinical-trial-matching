@@ -1,0 +1,41 @@
+{
+  "batch_index": 15,
+  "raw_response": "[\n  {\n    \"concept_id\": \"56905009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"51875005\",\n    \"stop_at_label\": \"Gastrointestinal perforation\",\n    \"rationale\": \"Generalizes to GI perforation, preserving mechanism and organ system; other parent is banned (“Disorder”). Tight timeframe and narrow clause size support H=1.\"\n  },\n  {\n    \"concept_id\": \"48661000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"48661000\",\n    \"stop_at_label\": \"Peritonitis\",\n    \"rationale\": \"Parents are banned (“Disorder of peritoneum”) or too generic (“Inflammation of specific body organs”). Staying specific preserves clinical intent.\"\n  },\n  {\n    \"concept_id\": \"75119003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"27916005\",\n    \"stop_at_label\": \"Abscess of liver\",\n    \"rationale\": \"Preserves organ and abscess mechanism while avoiding etiologic over-specificity; alternative parent includes banned “disorder”. Parent_count=3 suggests cautious H=1.\"\n  },\n  {\n    \"concept_id\": \"76978006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"414468001\",\n    \"stop_at_label\": \"Immunosorbent method\",\n    \"rationale\": \"Generalizes ELISA while preserving methodology; broader “Immunoassay method” risks overgeneralization. Tight timeframe and small clause size favor H=1.\"\n  },\n  {\n    \"concept_id\": \"14671001\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"14671001\",\n    \"stop_at_label\": \"Thoracoscopy\",\n    \"rationale\": \"Parents are too broad (Endoscopy) or banned (“Procedure on thorax”, “Examination of body site”). Depth and parent_count argue for conservative H=0.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "56905009",
+      "hops": 1,
+      "rationale": "Generalizes to GI perforation, preserving mechanism and organ system; other parent is banned (“Disorder”). Tight timeframe and narrow clause size support H=1.",
+      "stop_at_concept_id": "51875005",
+      "stop_at_label": "Gastrointestinal perforation"
+    },
+    {
+      "concept_id": "48661000",
+      "hops": 0,
+      "rationale": "Parents are banned (“Disorder of peritoneum”) or too generic (“Inflammation of specific body organs”). Staying specific preserves clinical intent.",
+      "stop_at_concept_id": "48661000",
+      "stop_at_label": "Peritonitis"
+    },
+    {
+      "concept_id": "75119003",
+      "hops": 1,
+      "rationale": "Preserves organ and abscess mechanism while avoiding etiologic over-specificity; alternative parent includes banned “disorder”. Parent_count=3 suggests cautious",
+      "stop_at_concept_id": "27916005",
+      "stop_at_label": "Abscess of liver"
+    },
+    {
+      "concept_id": "76978006",
+      "hops": 1,
+      "rationale": "Generalizes ELISA while preserving methodology; broader “Immunoassay method” risks overgeneralization. Tight timeframe and small clause size favor H=1.",
+      "stop_at_concept_id": "414468001",
+      "stop_at_label": "Immunosorbent method"
+    },
+    {
+      "concept_id": "14671001",
+      "hops": 0,
+      "rationale": "Parents are too broad (Endoscopy) or banned (“Procedure on thorax”, “Examination of body site”). Depth and parent_count argue for conservative H=0.",
+      "stop_at_concept_id": "14671001",
+      "stop_at_label": "Thoracoscopy"
+    }
+  ]
+}

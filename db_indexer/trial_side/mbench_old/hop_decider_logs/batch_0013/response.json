@@ -1,0 +1,41 @@
+{
+  "batch_index": 13,
+  "raw_response": "[\n  {\n    \"concept_id\": \"396540005\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"396540005\",\n    \"stop_at_label\": \"same as concept\",\n    \"rationale\": \"Parents are generic procedure categories or too broad (“Removal”). Depth 3 with multiple parents; keep original to preserve vein/device specificity.\"\n  },\n  {\n    \"concept_id\": \"53827007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"78948009\",\n    \"stop_at_label\": \"Disturbance of salivary secretion\",\n    \"rationale\": \"Preserves salivary secretion mechanism/site, avoids generic ‘disorder/disease’. Timeframe adequate; clinically coherent generalization.\"\n  },\n  {\n    \"concept_id\": \"363265005\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"363265005\",\n    \"stop_at_label\": \"same as concept\",\n    \"rationale\": \"All ancestors are generic (‘disorder’, ‘disease’, ‘clinical finding’). To avoid overbroad categories, retain the specific immunoglobulin concept.\"\n  },\n  {\n    \"concept_id\": \"195662009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"1532007\",\n    \"stop_at_label\": \"Viral pharyngitis\",\n    \"rationale\": \"Maintains mechanism (viral) and site (pharynx) while modestly generalizing; avoids broader URI categories. Conservative given polyhierarchy and equal inclusion/exclusion.\"\n  },\n  {\n    \"concept_id\": \"65568007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"77176002\",\n    \"stop_at_label\": \"Smoker\",\n    \"rationale\": \"Broaden to smoking behavior while preserving program intent; avoids more generic upstream behavior-finding categories. Tight timeframe supports H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "396540005",
+      "hops": 0,
+      "rationale": "Parents are generic procedure categories or too broad (“Removal”). Depth 3 with multiple parents; keep original to preserve vein/device specificity.",
+      "stop_at_concept_id": "396540005",
+      "stop_at_label": "same as concept"
+    },
+    {
+      "concept_id": "53827007",
+      "hops": 1,
+      "rationale": "Preserves salivary secretion mechanism/site, avoids generic ‘disorder/disease’. Timeframe adequate; clinically coherent generalization.",
+      "stop_at_concept_id": "78948009",
+      "stop_at_label": "Disturbance of salivary secretion"
+    },
+    {
+      "concept_id": "363265005",
+      "hops": 0,
+      "rationale": "All ancestors are generic (‘disorder’, ‘disease’, ‘clinical finding’). To avoid overbroad categories, retain the specific immunoglobulin concept.",
+      "stop_at_concept_id": "363265005",
+      "stop_at_label": "same as concept"
+    },
+    {
+      "concept_id": "195662009",
+      "hops": 1,
+      "rationale": "Maintains mechanism (viral) and site (pharynx) while modestly generalizing; avoids broader URI categories. Conservative given polyhierarchy and equal inclusion/",
+      "stop_at_concept_id": "1532007",
+      "stop_at_label": "Viral pharyngitis"
+    },
+    {
+      "concept_id": "65568007",
+      "hops": 1,
+      "rationale": "Broaden to smoking behavior while preserving program intent; avoids more generic upstream behavior-finding categories. Tight timeframe supports H=1.",
+      "stop_at_concept_id": "77176002",
+      "stop_at_label": "Smoker"
+    }
+  ]
+}

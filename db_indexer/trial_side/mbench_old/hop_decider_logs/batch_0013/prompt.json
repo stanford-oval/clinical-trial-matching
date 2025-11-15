@@ -1,0 +1,556 @@
+{
+  "batch_index": 13,
+  "offset": 60,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "396540005",
+      "features": {
+        "depth_from_root": 3,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 0.5,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "363691001",
+            "label": "Procedure categorized by device involved"
+          },
+          {
+            "concept_id": "363691001",
+            "label": "Procedure categorized by device involved"
+          },
+          {
+            "concept_id": "386609006",
+            "label": "Procedure on vein"
+          },
+          {
+            "concept_id": "386609006",
+            "label": "Procedure on vein"
+          },
+          {
+            "concept_id": "118292001",
+            "label": "Removal"
+          },
+          {
+            "concept_id": "118292001",
+            "label": "Removal"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          },
+          {
+            "concept_id": "118664000",
+            "label": "Procedure on body system"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118672003",
+            "label": "Procedure on cardiovascular system"
+          },
+          {
+            "concept_id": "118717007",
+            "label": "Procedure on organ"
+          },
+          {
+            "concept_id": "118738001",
+            "label": "Procedure on soft tissue"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "118804001",
+            "label": "Procedure on blood vessel"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "53827007",
+      "features": {
+        "depth_from_root": 9,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 0.5,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "78948009",
+            "label": "Disturbance of salivary secretion"
+          },
+          {
+            "concept_id": "78948009",
+            "label": "Disturbance of salivary secretion"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "118934005",
+            "label": "Disorder of head"
+          },
+          {
+            "concept_id": "50410009",
+            "label": "Disorder of upper digestive tract"
+          },
+          {
+            "concept_id": "423066003",
+            "label": "Finding of mouth region"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "84410009",
+            "label": "Disorder of digestive tract"
+          },
+          {
+            "concept_id": "298364001",
+            "label": "Finding of head region"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          },
+          {
+            "concept_id": "249376008",
+            "label": "Mouth and/or pharynx finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "283015002",
+            "label": "Disorder of salivary structure"
+          },
+          {
+            "concept_id": "271612000",
+            "label": "Salivary gland finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "118938008",
+            "label": "Disease of mouth"
+          },
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "249424008",
+            "label": "Finding of salivary apparatus"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "10890000",
+            "label": "Disorder of salivary gland"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "363265005",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "124950009",
+            "label": "Disorder of immunoglobulin"
+          },
+          {
+            "concept_id": "124950009",
+            "label": "Disorder of immunoglobulin"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "414029004",
+            "label": "Disorder of immune function"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "195662009",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 5,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "363746003",
+            "label": "Acute pharyngitis"
+          },
+          {
+            "concept_id": "363746003",
+            "label": "Acute pharyngitis"
+          },
+          {
+            "concept_id": "195647007",
+            "label": "Acute respiratory infections"
+          },
+          {
+            "concept_id": "195647007",
+            "label": "Acute respiratory infections"
+          },
+          {
+            "concept_id": "54398005",
+            "label": "Acute upper respiratory infection"
+          },
+          {
+            "concept_id": "54398005",
+            "label": "Acute upper respiratory infection"
+          },
+          {
+            "concept_id": "409631000",
+            "label": "Acute viral disease"
+          },
+          {
+            "concept_id": "409631000",
+            "label": "Acute viral disease"
+          },
+          {
+            "concept_id": "1532007",
+            "label": "Viral pharyngitis"
+          },
+          {
+            "concept_id": "1532007",
+            "label": "Viral pharyngitis"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "127321000",
+            "label": "Acute digestive system disorder"
+          },
+          {
+            "concept_id": "63171007",
+            "label": "Acute infectious disease"
+          },
+          {
+            "concept_id": "128482007",
+            "label": "Acute inflammatory disease"
+          },
+          {
+            "concept_id": "111273006",
+            "label": "Acute respiratory disease"
+          },
+          {
+            "concept_id": "201060008",
+            "label": "Disorder of upper respiratory system"
+          },
+          {
+            "concept_id": "312422001",
+            "label": "Infective pharyngitis"
+          },
+          {
+            "concept_id": "405737000",
+            "label": "Pharyngitis"
+          },
+          {
+            "concept_id": "275498002",
+            "label": "Respiratory tract infection"
+          },
+          {
+            "concept_id": "34014006",
+            "label": "Viral disease"
+          },
+          {
+            "concept_id": "312131008",
+            "label": "Viral infection of the digestive tract"
+          },
+          {
+            "concept_id": "281794004",
+            "label": "Viral upper respiratory tract infection"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "363171009",
+            "label": "Inflammation of specific body systems"
+          },
+          {
+            "concept_id": "373405005",
+            "label": "Inflammatory disorder of the respiratory system"
+          },
+          {
+            "concept_id": "249376008",
+            "label": "Mouth and/or pharynx finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "84410009",
+            "label": "Disorder of digestive tract"
+          },
+          {
+            "concept_id": "50410009",
+            "label": "Disorder of upper digestive tract"
+          },
+          {
+            "concept_id": "297268004",
+            "label": "Ear, nose and throat finding"
+          },
+          {
+            "concept_id": "312158001",
+            "label": "Infection of digestive system"
+          },
+          {
+            "concept_id": "363170005",
+            "label": "Inflammation of specific body structures or tissue"
+          },
+          {
+            "concept_id": "373407002",
+            "label": "Inflammatory disorder of digestive system"
+          },
+          {
+            "concept_id": "363180009",
+            "label": "Inflammatory disorder of the respiratory tract"
+          },
+          {
+            "concept_id": "116338005",
+            "label": "Pharyngeal finding"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "2704003",
+            "label": "Acute disease"
+          },
+          {
+            "concept_id": "40733004",
+            "label": "Disorder due to infection"
+          },
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "75860007",
+            "label": "Disorder of pharynx"
+          },
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "232208008",
+            "label": "Ear, nose and throat disorder"
+          },
+          {
+            "concept_id": "301810000",
+            "label": "Infection by site"
+          },
+          {
+            "concept_id": "128398001",
+            "label": "Infectious disease of digestive tract"
+          },
+          {
+            "concept_id": "363169009",
+            "label": "Inflammation of specific body organs"
+          },
+          {
+            "concept_id": "128139000",
+            "label": "Inflammatory disorder"
+          },
+          {
+            "concept_id": "128999004",
+            "label": "Inflammatory disorder of digestive tract"
+          },
+          {
+            "concept_id": "129134004",
+            "label": "Inflammatory disorder of upper respiratory tract"
+          },
+          {
+            "concept_id": "54150009",
+            "label": "Upper respiratory infection"
+          },
+          {
+            "concept_id": "301186004",
+            "label": "Upper respiratory tract finding"
+          },
+          {
+            "concept_id": "312130009",
+            "label": "Viral infection by site"
+          },
+          {
+            "concept_id": "312133006",
+            "label": "Viral respiratory infection"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "65568007",
+      "features": {
+        "depth_from_root": 9,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "77176002",
+            "label": "Smoker"
+          },
+          {
+            "concept_id": "77176002",
+            "label": "Smoker"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "384821006",
+            "label": "Mental state, behavior and/or psychosocial function finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "365981007",
+            "label": "Tobacco smoking behavior - finding"
+          },
+          {
+            "concept_id": "110483000",
+            "label": "Tobacco user"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "365980008",
+            "label": "Tobacco use and exposure - finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "365949003",
+            "label": "Health-related behavior finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "844005",
+            "label": "Behavior finding"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 29088,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"396540005\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 0.5,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"386609006\",\n          \"label\": \"Procedure on vein\"\n        },\n        {\n          \"concept_id\": \"386609006\",\n          \"label\": \"Procedure on vein\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118672003\",\n          \"label\": \"Procedure on cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"118738001\",\n          \"label\": \"Procedure on soft tissue\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"118804001\",\n          \"label\": \"Procedure on blood vessel\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"53827007\",\n    \"features\": {\n      \"depth_from_root\": 9,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.5,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"78948009\",\n          \"label\": \"Disturbance of salivary secretion\"\n        },\n        {\n          \"concept_id\": \"78948009\",\n          \"label\": \"Disturbance of salivary secretion\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"423066003\",\n          \"label\": \"Finding of mouth region\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"298364001\",\n          \"label\": \"Finding of head region\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"283015002\",\n          \"label\": \"Disorder of salivary structure\"\n        },\n        {\n          \"concept_id\": \"271612000\",\n          \"label\": \"Salivary gland finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118938008\",\n          \"label\": \"Disease of mouth\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"249424008\",\n          \"label\": \"Finding of salivary apparatus\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"10890000\",\n          \"label\": \"Disorder of salivary gland\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"363265005\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"124950009\",\n          \"label\": \"Disorder of immunoglobulin\"\n        },\n        {\n          \"concept_id\": \"124950009\",\n          \"label\": \"Disorder of immunoglobulin\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"414029004\",\n          \"label\": \"Disorder of immune function\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"195662009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 5,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"363746003\",\n          \"label\": \"Acute pharyngitis\"\n        },\n        {\n          \"concept_id\": \"363746003\",\n          \"label\": \"Acute pharyngitis\"\n        },\n        {\n          \"concept_id\": \"195647007\",\n          \"label\": \"Acute respiratory infections\"\n        },\n        {\n          \"concept_id\": \"195647007\",\n          \"label\": \"Acute respiratory infections\"\n        },\n        {\n          \"concept_id\": \"54398005\",\n          \"label\": \"Acute upper respiratory infection\"\n        },\n        {\n          \"concept_id\": \"54398005\",\n          \"label\": \"Acute upper respiratory infection\"\n        },\n        {\n          \"concept_id\": \"409631000\",\n          \"label\": \"Acute viral disease\"\n        },\n        {\n          \"concept_id\": \"409631000\",\n          \"label\": \"Acute viral disease\"\n        },\n        {\n          \"concept_id\": \"1532007\",\n          \"label\": \"Viral pharyngitis\"\n        },\n        {\n          \"concept_id\": \"1532007\",\n          \"label\": \"Viral pharyngitis\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"127321000\",\n          \"label\": \"Acute digestive system disorder\"\n        },\n        {\n          \"concept_id\": \"63171007\",\n          \"label\": \"Acute infectious disease\"\n        },\n        {\n          \"concept_id\": \"128482007\",\n          \"label\": \"Acute inflammatory disease\"\n        },\n        {\n          \"concept_id\": \"111273006\",\n          \"label\": \"Acute respiratory disease\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"312422001\",\n          \"label\": \"Infective pharyngitis\"\n        },\n        {\n          \"concept_id\": \"405737000\",\n          \"label\": \"Pharyngitis\"\n        },\n        {\n          \"concept_id\": \"275498002\",\n          \"label\": \"Respiratory tract infection\"\n        },\n        {\n          \"concept_id\": \"34014006\",\n          \"label\": \"Viral disease\"\n        },\n        {\n          \"concept_id\": \"312131008\",\n          \"label\": \"Viral infection of the digestive tract\"\n        },\n        {\n          \"concept_id\": \"281794004\",\n          \"label\": \"Viral upper respiratory tract infection\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"363171009\",\n          \"label\": \"Inflammation of specific body systems\"\n        },\n        {\n          \"concept_id\": \"373405005\",\n          \"label\": \"Inflammatory disorder of the respiratory system\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"312158001\",\n          \"label\": \"Infection of digestive system\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        },\n        {\n          \"concept_id\": \"373407002\",\n          \"label\": \"Inflammatory disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"363180009\",\n          \"label\": \"Inflammatory disorder of the respiratory tract\"\n        },\n        {\n          \"concept_id\": \"116338005\",\n          \"label\": \"Pharyngeal finding\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"2704003\",\n          \"label\": \"Acute disease\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"128398001\",\n          \"label\": \"Infectious disease of digestive tract\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"128999004\",\n          \"label\": \"Inflammatory disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"129134004\",\n          \"label\": \"Inflammatory disorder of upper respiratory tract\"\n        },\n        {\n          \"concept_id\": \"54150009\",\n          \"label\": \"Upper respiratory infection\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        },\n        {\n          \"concept_id\": \"312130009\",\n          \"label\": \"Viral infection by site\"\n        },\n        {\n          \"concept_id\": \"312133006\",\n          \"label\": \"Viral respiratory infection\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"65568007\",\n    \"features\": {\n      \"depth_from_root\": 9,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"77176002\",\n          \"label\": \"Smoker\"\n        },\n        {\n          \"concept_id\": \"77176002\",\n          \"label\": \"Smoker\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"384821006\",\n          \"label\": \"Mental state, behavior and/or psychosocial function finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"365981007\",\n          \"label\": \"Tobacco smoking behavior - finding\"\n        },\n        {\n          \"concept_id\": \"110483000\",\n          \"label\": \"Tobacco user\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"365980008\",\n          \"label\": \"Tobacco use and exposure - finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"365949003\",\n          \"label\": \"Health-related behavior finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"844005\",\n          \"label\": \"Behavior finding\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"396540005\",\n    \"features\": {\n      \"depth_from_root\": 3,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 0.5,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"386609006\",\n          \"label\": \"Procedure on vein\"\n        },\n        {\n          \"concept_id\": \"386609006\",\n          \"label\": \"Procedure on vein\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118672003\",\n          \"label\": \"Procedure on cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"118738001\",\n          \"label\": \"Procedure on soft tissue\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"118804001\",\n          \"label\": \"Procedure on blood vessel\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"53827007\",\n    \"features\": {\n      \"depth_from_root\": 9,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.5,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"78948009\",\n          \"label\": \"Disturbance of salivary secretion\"\n        },\n        {\n          \"concept_id\": \"78948009\",\n          \"label\": \"Disturbance of salivary secretion\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"423066003\",\n          \"label\": \"Finding of mouth region\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"298364001\",\n          \"label\": \"Finding of head region\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"283015002\",\n          \"label\": \"Disorder of salivary structure\"\n        },\n        {\n          \"concept_id\": \"271612000\",\n          \"label\": \"Salivary gland finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118938008\",\n          \"label\": \"Disease of mouth\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"249424008\",\n          \"label\": \"Finding of salivary apparatus\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"10890000\",\n          \"label\": \"Disorder of salivary gland\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"363265005\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"124950009\",\n          \"label\": \"Disorder of immunoglobulin\"\n        },\n        {\n          \"concept_id\": \"124950009\",\n          \"label\": \"Disorder of immunoglobulin\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"414029004\",\n          \"label\": \"Disorder of immune function\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"195662009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 5,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"363746003\",\n          \"label\": \"Acute pharyngitis\"\n        },\n        {\n          \"concept_id\": \"363746003\",\n          \"label\": \"Acute pharyngitis\"\n        },\n        {\n          \"concept_id\": \"195647007\",\n          \"label\": \"Acute respiratory infections\"\n        },\n        {\n          \"concept_id\": \"195647007\",\n          \"label\": \"Acute respiratory infections\"\n        },\n        {\n          \"concept_id\": \"54398005\",\n          \"label\": \"Acute upper respiratory infection\"\n        },\n        {\n          \"concept_id\": \"54398005\",\n          \"label\": \"Acute upper respiratory infection\"\n        },\n        {\n          \"concept_id\": \"409631000\",\n          \"label\": \"Acute viral disease\"\n        },\n        {\n          \"concept_id\": \"409631000\",\n          \"label\": \"Acute viral disease\"\n        },\n        {\n          \"concept_id\": \"1532007\",\n          \"label\": \"Viral pharyngitis\"\n        },\n        {\n          \"concept_id\": \"1532007\",\n          \"label\": \"Viral pharyngitis\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"127321000\",\n          \"label\": \"Acute digestive system disorder\"\n        },\n        {\n          \"concept_id\": \"63171007\",\n          \"label\": \"Acute infectious disease\"\n        },\n        {\n          \"concept_id\": \"128482007\",\n          \"label\": \"Acute inflammatory disease\"\n        },\n        {\n          \"concept_id\": \"111273006\",\n          \"label\": \"Acute respiratory disease\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"312422001\",\n          \"label\": \"Infective pharyngitis\"\n        },\n        {\n          \"concept_id\": \"405737000\",\n          \"label\": \"Pharyngitis\"\n        },\n        {\n          \"concept_id\": \"275498002\",\n          \"label\": \"Respiratory tract infection\"\n        },\n        {\n          \"concept_id\": \"34014006\",\n          \"label\": \"Viral disease\"\n        },\n        {\n          \"concept_id\": \"312131008\",\n          \"label\": \"Viral infection of the digestive tract\"\n        },\n        {\n          \"concept_id\": \"281794004\",\n          \"label\": \"Viral upper respiratory tract infection\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"363171009\",\n          \"label\": \"Inflammation of specific body systems\"\n        },\n        {\n          \"concept_id\": \"373405005\",\n          \"label\": \"Inflammatory disorder of the respiratory system\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"312158001\",\n          \"label\": \"Infection of digestive system\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        },\n        {\n          \"concept_id\": \"373407002\",\n          \"label\": \"Inflammatory disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"363180009\",\n          \"label\": \"Inflammatory disorder of the respiratory tract\"\n        },\n        {\n          \"concept_id\": \"116338005\",\n          \"label\": \"Pharyngeal finding\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"2704003\",\n          \"label\": \"Acute disease\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"128398001\",\n          \"label\": \"Infectious disease of digestive tract\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"128999004\",\n          \"label\": \"Inflammatory disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"129134004\",\n          \"label\": \"Inflammatory disorder of upper respiratory tract\"\n        },\n        {\n          \"concept_id\": \"54150009\",\n          \"label\": \"Upper respiratory infection\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        },\n        {\n          \"concept_id\": \"312130009\",\n          \"label\": \"Viral infection by site\"\n        },\n        {\n          \"concept_id\": \"312133006\",\n          \"label\": \"Viral respiratory infection\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"65568007\",\n    \"features\": {\n      \"depth_from_root\": 9,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"77176002\",\n          \"label\": \"Smoker\"\n        },\n        {\n          \"concept_id\": \"77176002\",\n          \"label\": \"Smoker\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"384821006\",\n          \"label\": \"Mental state, behavior and/or psychosocial function finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"365981007\",\n          \"label\": \"Tobacco smoking behavior - finding\"\n        },\n        {\n          \"concept_id\": \"110483000\",\n          \"label\": \"Tobacco user\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"365980008\",\n          \"label\": \"Tobacco use and exposure - finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"365949003\",\n          \"label\": \"Health-related behavior finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"844005\",\n          \"label\": \"Behavior finding\"\n        }\n      ]\n    }\n  }\n]\n"
+}

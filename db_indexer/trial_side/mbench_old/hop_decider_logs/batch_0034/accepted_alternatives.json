@@ -1,0 +1,130 @@
+[
+  {
+    "concept_id": "225566008",
+    "alt_concept_id": "29857009",
+    "hop": 1,
+    "alt_label": "Chest pain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "267102003",
+    "alt_concept_id": "300275004",
+    "hop": 1,
+    "alt_label": "Finding of sensation of pharynx",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "267102003",
+    "alt_concept_id": "418799008",
+    "hop": 1,
+    "alt_label": "Finding reported by subject or history provider",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "267102003",
+    "alt_concept_id": "162397003",
+    "hop": 1,
+    "alt_label": "Pain in throat",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "267102003",
+    "alt_concept_id": "301362007",
+    "hop": 1,
+    "alt_label": "Pain of digestive structure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "267102003",
+    "alt_concept_id": "301355003",
+    "hop": 1,
+    "alt_label": "Pain of respiratory structure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "414581006",
+    "alt_concept_id": "414581006",
+    "hop": 0,
+    "alt_label": "Laryngopharyngeal reflux",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "52441000",
+    "alt_concept_id": "413201000",
+    "hop": 1,
+    "alt_label": "Atrophic mucosa",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "52441000",
+    "alt_concept_id": "297147009",
+    "hop": 1,
+    "alt_label": "Atrophy of vagina",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "52441000",
+    "alt_concept_id": "106002000",
+    "hop": 1,
+    "alt_label": "Disorder associated with menstruation AND/OR menopause",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "52441000",
+    "alt_concept_id": "95351003",
+    "hop": 1,
+    "alt_label": "Disorder of mucous membrane",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "52441000",
+    "alt_concept_id": "609620004",
+    "hop": 1,
+    "alt_label": "Disorder of pelvis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "52441000",
+    "alt_concept_id": "280133005",
+    "hop": 1,
+    "alt_label": "Disorder of soft tissue of trunk",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "52441000",
+    "alt_concept_id": "30800001",
+    "hop": 1,
+    "alt_label": "Vaginitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "63467002",
+    "alt_concept_id": "6374002",
+    "hop": 1,
+    "alt_label": "Bundle branch block",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  },
+  {
+    "concept_id": "63467002",
+    "alt_concept_id": "415991003",
+    "hop": 1,
+    "alt_label": "Disorder of cardiac ventricle",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:45:55"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "batch_index": 5,
+  "raw_response": "[\n  {\n    \"concept_id\": \"59621000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"59621000\",\n    \"stop_at_label\": \"Essential hypertension\",\n    \"rationale\": \"Parent is banned ('Hypertensive disorder'); higher ancestors are generic or banned. Staying specific preserves cardiovascular intent with tight timeframe and relevance.\"\n  },\n  {\n    \"concept_id\": \"233819005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"194828000\",\n    \"stop_at_label\": \"Angina pectoris\",\n    \"rationale\": \"Parent preserves ischemic cardiac focus and is not generic. Grandparents like chest pain are too broad or contain banned terms.\"\n  },\n  {\n    \"concept_id\": \"102499006\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"102499006\",\n    \"stop_at_label\": \"Feeling well\",\n    \"rationale\": \"Parents are near-universal ('General well-being finding'/'General body state finding'). Staying specific avoids overly broad inclusion.\"\n  },\n  {\n    \"concept_id\": \"102589003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"29857009\",\n    \"stop_at_label\": \"Chest pain\",\n    \"rationale\": \"Chest pain remains clinically specific and avoids banned categories. Other ancestors are generic site/pain groupings.\"\n  },\n  {\n    \"concept_id\": \"359953009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"33879002\",\n    \"stop_at_label\": \"Active immunization\",\n    \"rationale\": \"Active immunization retains program intent while avoiding overly generic administration/procedure categories. Grandparents are broader.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "59621000",
+      "hops": 0,
+      "rationale": "Parent is banned ('Hypertensive disorder'); higher ancestors are generic or banned. Staying specific preserves cardiovascular intent with tight timeframe and re",
+      "stop_at_concept_id": "59621000",
+      "stop_at_label": "Essential hypertension"
+    },
+    {
+      "concept_id": "233819005",
+      "hops": 1,
+      "rationale": "Parent preserves ischemic cardiac focus and is not generic. Grandparents like chest pain are too broad or contain banned terms.",
+      "stop_at_concept_id": "194828000",
+      "stop_at_label": "Angina pectoris"
+    },
+    {
+      "concept_id": "102499006",
+      "hops": 0,
+      "rationale": "Parents are near-universal ('General well-being finding'/'General body state finding'). Staying specific avoids overly broad inclusion.",
+      "stop_at_concept_id": "102499006",
+      "stop_at_label": "Feeling well"
+    },
+    {
+      "concept_id": "102589003",
+      "hops": 1,
+      "rationale": "Chest pain remains clinically specific and avoids banned categories. Other ancestors are generic site/pain groupings.",
+      "stop_at_concept_id": "29857009",
+      "stop_at_label": "Chest pain"
+    },
+    {
+      "concept_id": "359953009",
+      "hops": 1,
+      "rationale": "Active immunization retains program intent while avoiding overly generic administration/procedure categories. Grandparents are broader.",
+      "stop_at_concept_id": "33879002",
+      "stop_at_label": "Active immunization"
+    }
+  ]
+}

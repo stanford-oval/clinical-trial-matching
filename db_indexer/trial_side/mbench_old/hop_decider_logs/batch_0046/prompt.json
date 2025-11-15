@@ -1,0 +1,376 @@
+{
+  "batch_index": 46,
+  "offset": 225,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "302497006",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 2
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "182744004",
+            "label": "Extracorporeal circulation procedure"
+          },
+          {
+            "concept_id": "182744004",
+            "label": "Extracorporeal circulation procedure"
+          },
+          {
+            "concept_id": "265764009",
+            "label": "Renal dialysis"
+          },
+          {
+            "concept_id": "265764009",
+            "label": "Renal dialysis"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "59108006",
+            "label": "Injection"
+          },
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "108241001",
+            "label": "Dialysis procedure"
+          },
+          {
+            "concept_id": "88058003",
+            "label": "Perfusion"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "107733003",
+            "label": "Introduction procedure"
+          },
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "45007003",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 3
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "49601007",
+            "label": "Disorder of cardiovascular system"
+          },
+          {
+            "concept_id": "49601007",
+            "label": "Disorder of cardiovascular system"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "106063007",
+            "label": "Cardiovascular finding"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "443430002",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "118233009",
+            "label": "Finding of activity of daily living"
+          },
+          {
+            "concept_id": "118233009",
+            "label": "Finding of activity of daily living"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "118228005",
+            "label": "Functional finding"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "702956004",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 3
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "386806002",
+            "label": "Impaired cognition"
+          },
+          {
+            "concept_id": "386806002",
+            "label": "Impaired cognition"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118228005",
+            "label": "Functional finding"
+          },
+          {
+            "concept_id": "384821006",
+            "label": "Mental state, behavior and/or psychosocial function finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "373930000",
+            "label": "Cognitive function finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "19943007",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 5
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "328383001",
+            "label": "Chronic liver disease"
+          },
+          {
+            "concept_id": "328383001",
+            "label": "Chronic liver disease"
+          },
+          {
+            "concept_id": "62484002",
+            "label": "Hepatic fibrosis"
+          },
+          {
+            "concept_id": "62484002",
+            "label": "Hepatic fibrosis"
+          },
+          {
+            "concept_id": "65860006",
+            "label": "Liver regeneration"
+          },
+          {
+            "concept_id": "65860006",
+            "label": "Liver regeneration"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "609627001",
+            "label": "Finding of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "249561001",
+            "label": "Abdominal organ finding"
+          },
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "609618002",
+            "label": "Disorder of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "609624008",
+            "label": "Finding of abdomen"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "128284006",
+            "label": "Chronic digestive system disorder"
+          },
+          {
+            "concept_id": "235856003",
+            "label": "Disease of liver"
+          },
+          {
+            "concept_id": "300331000",
+            "label": "Lesion of liver"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "27624003",
+            "label": "Chronic disease"
+          },
+          {
+            "concept_id": "118948005",
+            "label": "Disorder of abdomen"
+          },
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "249565005",
+            "label": "Liver finding"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 19258,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"302497006\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"182744004\",\n          \"label\": \"Extracorporeal circulation procedure\"\n        },\n        {\n          \"concept_id\": \"182744004\",\n          \"label\": \"Extracorporeal circulation procedure\"\n        },\n        {\n          \"concept_id\": \"265764009\",\n          \"label\": \"Renal dialysis\"\n        },\n        {\n          \"concept_id\": \"265764009\",\n          \"label\": \"Renal dialysis\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"59108006\",\n          \"label\": \"Injection\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"108241001\",\n          \"label\": \"Dialysis procedure\"\n        },\n        {\n          \"concept_id\": \"88058003\",\n          \"label\": \"Perfusion\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"45007003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"443430002\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"118233009\",\n          \"label\": \"Finding of activity of daily living\"\n        },\n        {\n          \"concept_id\": \"118233009\",\n          \"label\": \"Finding of activity of daily living\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"702956004\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"386806002\",\n          \"label\": \"Impaired cognition\"\n        },\n        {\n          \"concept_id\": \"386806002\",\n          \"label\": \"Impaired cognition\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        },\n        {\n          \"concept_id\": \"384821006\",\n          \"label\": \"Mental state, behavior and/or psychosocial function finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"373930000\",\n          \"label\": \"Cognitive function finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"19943007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 5\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"328383001\",\n          \"label\": \"Chronic liver disease\"\n        },\n        {\n          \"concept_id\": \"328383001\",\n          \"label\": \"Chronic liver disease\"\n        },\n        {\n          \"concept_id\": \"62484002\",\n          \"label\": \"Hepatic fibrosis\"\n        },\n        {\n          \"concept_id\": \"62484002\",\n          \"label\": \"Hepatic fibrosis\"\n        },\n        {\n          \"concept_id\": \"65860006\",\n          \"label\": \"Liver regeneration\"\n        },\n        {\n          \"concept_id\": \"65860006\",\n          \"label\": \"Liver regeneration\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"249561001\",\n          \"label\": \"Abdominal organ finding\"\n        },\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"128284006\",\n          \"label\": \"Chronic digestive system disorder\"\n        },\n        {\n          \"concept_id\": \"235856003\",\n          \"label\": \"Disease of liver\"\n        },\n        {\n          \"concept_id\": \"300331000\",\n          \"label\": \"Lesion of liver\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"27624003\",\n          \"label\": \"Chronic disease\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"249565005\",\n          \"label\": \"Liver finding\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"302497006\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"182744004\",\n          \"label\": \"Extracorporeal circulation procedure\"\n        },\n        {\n          \"concept_id\": \"182744004\",\n          \"label\": \"Extracorporeal circulation procedure\"\n        },\n        {\n          \"concept_id\": \"265764009\",\n          \"label\": \"Renal dialysis\"\n        },\n        {\n          \"concept_id\": \"265764009\",\n          \"label\": \"Renal dialysis\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"59108006\",\n          \"label\": \"Injection\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"108241001\",\n          \"label\": \"Dialysis procedure\"\n        },\n        {\n          \"concept_id\": \"88058003\",\n          \"label\": \"Perfusion\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"45007003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        },\n        {\n          \"concept_id\": \"49601007\",\n          \"label\": \"Disorder of cardiovascular system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"106063007\",\n          \"label\": \"Cardiovascular finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"443430002\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"118233009\",\n          \"label\": \"Finding of activity of daily living\"\n        },\n        {\n          \"concept_id\": \"118233009\",\n          \"label\": \"Finding of activity of daily living\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"702956004\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"386806002\",\n          \"label\": \"Impaired cognition\"\n        },\n        {\n          \"concept_id\": \"386806002\",\n          \"label\": \"Impaired cognition\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118228005\",\n          \"label\": \"Functional finding\"\n        },\n        {\n          \"concept_id\": \"384821006\",\n          \"label\": \"Mental state, behavior and/or psychosocial function finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"373930000\",\n          \"label\": \"Cognitive function finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"19943007\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 5\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"328383001\",\n          \"label\": \"Chronic liver disease\"\n        },\n        {\n          \"concept_id\": \"328383001\",\n          \"label\": \"Chronic liver disease\"\n        },\n        {\n          \"concept_id\": \"62484002\",\n          \"label\": \"Hepatic fibrosis\"\n        },\n        {\n          \"concept_id\": \"62484002\",\n          \"label\": \"Hepatic fibrosis\"\n        },\n        {\n          \"concept_id\": \"65860006\",\n          \"label\": \"Liver regeneration\"\n        },\n        {\n          \"concept_id\": \"65860006\",\n          \"label\": \"Liver regeneration\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"249561001\",\n          \"label\": \"Abdominal organ finding\"\n        },\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"128284006\",\n          \"label\": \"Chronic digestive system disorder\"\n        },\n        {\n          \"concept_id\": \"235856003\",\n          \"label\": \"Disease of liver\"\n        },\n        {\n          \"concept_id\": \"300331000\",\n          \"label\": \"Lesion of liver\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"27624003\",\n          \"label\": \"Chronic disease\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"249565005\",\n          \"label\": \"Liver finding\"\n        }\n      ]\n    }\n  }\n]\n"
+}

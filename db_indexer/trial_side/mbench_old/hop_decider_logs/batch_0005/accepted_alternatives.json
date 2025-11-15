@@ -1,0 +1,42 @@
+[
+  {
+    "concept_id": "102499006",
+    "alt_concept_id": "102499006",
+    "hop": 0,
+    "alt_label": "Fit and well",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 18:58:31"
+  },
+  {
+    "concept_id": "102589003",
+    "alt_concept_id": "29857009",
+    "hop": 1,
+    "alt_label": "Chest pain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:58:31"
+  },
+  {
+    "concept_id": "233819005",
+    "alt_concept_id": "194828000",
+    "hop": 1,
+    "alt_label": "Angina pectoris",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:58:31"
+  },
+  {
+    "concept_id": "359953009",
+    "alt_concept_id": "33879002",
+    "hop": 1,
+    "alt_label": "Active immunization",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:58:31"
+  },
+  {
+    "concept_id": "59621000",
+    "alt_concept_id": "59621000",
+    "hop": 0,
+    "alt_label": "Essential hypertension",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 18:58:31"
+  }
+]

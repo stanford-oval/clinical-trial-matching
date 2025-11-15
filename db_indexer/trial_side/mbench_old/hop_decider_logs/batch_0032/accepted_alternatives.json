@@ -1,0 +1,74 @@
+[
+  {
+    "concept_id": "162068007",
+    "alt_concept_id": "418799008",
+    "hop": 1,
+    "alt_label": "Finding reported by subject or history provider",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:06"
+  },
+  {
+    "concept_id": "162068007",
+    "alt_concept_id": "60728008",
+    "hop": 1,
+    "alt_label": "Swollen abdomen",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:06"
+  },
+  {
+    "concept_id": "190905008",
+    "alt_concept_id": "233661002",
+    "hop": 1,
+    "alt_label": "Inherited mucociliary clearance defect",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:06"
+  },
+  {
+    "concept_id": "230690007",
+    "alt_concept_id": "62914000",
+    "hop": 1,
+    "alt_label": "Cerebrovascular disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:06"
+  },
+  {
+    "concept_id": "230690007",
+    "alt_concept_id": "127294003",
+    "hop": 1,
+    "alt_label": "Traumatic AND/OR non-traumatic brain injury",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:06"
+  },
+  {
+    "concept_id": "414916001",
+    "alt_concept_id": "64572001",
+    "hop": 1,
+    "alt_label": "Disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:06"
+  },
+  {
+    "concept_id": "414916001",
+    "alt_concept_id": "414915002",
+    "hop": 1,
+    "alt_label": "Obese",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:06"
+  },
+  {
+    "concept_id": "71457002",
+    "alt_concept_id": "126661001",
+    "hop": 1,
+    "alt_label": "Disorder of oropharynx",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:06"
+  },
+  {
+    "concept_id": "71457002",
+    "alt_concept_id": "40739000",
+    "hop": 1,
+    "alt_label": "Dysphagia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:42:06"
+  }
+]

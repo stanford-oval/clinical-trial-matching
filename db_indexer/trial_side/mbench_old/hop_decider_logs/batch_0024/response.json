@@ -1,0 +1,41 @@
+{
+  "batch_index": 24,
+  "raw_response": "[\n  {\n    \"concept_id\": \"276803003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"372138000\",\n    \"stop_at_label\": \"Carcinoma of esophagus\",\n    \"rationale\": \"Parent preserves esophageal malignancy while relaxing histology; maintains organ and treatment intent. Timeframe tight and inclusion-only support modest generalization.\"\n  },\n  {\n    \"concept_id\": \"57066004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"768621002\",\n    \"stop_at_label\": \"Platinum and platinum compound-containing product\",\n    \"rationale\": \"Generalize from a specific platinum agent to the platinum-class product; maintains therapeutic mechanism and trial intent without becoming generic.\"\n  },\n  {\n    \"concept_id\": \"50697003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"399097000\",\n    \"stop_at_label\": \"Administration of anesthesia\",\n    \"rationale\": \"Broaden to administration of anesthesia, preserving anesthetic context while avoiding generic procedural categories. Inclusion outweighs exclusion.\"\n  },\n  {\n    \"concept_id\": \"45595009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"38102005\",\n    \"stop_at_label\": \"Cholecystectomy\",\n    \"rationale\": \"Generalize to cholecystectomy, preserving target organ and operation while avoiding overly generic laparoscopic/endoscopic categories.\"\n  },\n  {\n    \"concept_id\": \"365981007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"365980008\",\n    \"stop_at_label\": \"Tobacco use and exposure - finding\",\n    \"rationale\": \"Generalize to tobacco use and exposure to maintain topic relevance while avoiding broader behavior or clinical history categories; exclusions exceed inclusions so keep modest.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "276803003",
+      "hops": 1,
+      "rationale": "Parent preserves esophageal malignancy while relaxing histology; maintains organ and treatment intent. Timeframe tight and inclusion-only support modest general",
+      "stop_at_concept_id": "372138000",
+      "stop_at_label": "Carcinoma of esophagus"
+    },
+    {
+      "concept_id": "57066004",
+      "hops": 1,
+      "rationale": "Generalize from a specific platinum agent to the platinum-class product; maintains therapeutic mechanism and trial intent without becoming generic.",
+      "stop_at_concept_id": "768621002",
+      "stop_at_label": "Platinum and platinum compound-containing product"
+    },
+    {
+      "concept_id": "50697003",
+      "hops": 1,
+      "rationale": "Broaden to administration of anesthesia, preserving anesthetic context while avoiding generic procedural categories. Inclusion outweighs exclusion.",
+      "stop_at_concept_id": "399097000",
+      "stop_at_label": "Administration of anesthesia"
+    },
+    {
+      "concept_id": "45595009",
+      "hops": 1,
+      "rationale": "Generalize to cholecystectomy, preserving target organ and operation while avoiding overly generic laparoscopic/endoscopic categories.",
+      "stop_at_concept_id": "38102005",
+      "stop_at_label": "Cholecystectomy"
+    },
+    {
+      "concept_id": "365981007",
+      "hops": 1,
+      "rationale": "Generalize to tobacco use and exposure to maintain topic relevance while avoiding broader behavior or clinical history categories; exclusions exceed inclusions ",
+      "stop_at_concept_id": "365980008",
+      "stop_at_label": "Tobacco use and exposure - finding"
+    }
+  ]
+}

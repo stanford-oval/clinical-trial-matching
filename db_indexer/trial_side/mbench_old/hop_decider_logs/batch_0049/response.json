@@ -1,0 +1,39 @@
+{
+  "batch_index": 49,
+  "raw_response": "[\n  {\n    \"concept_id\": \"231268008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"231264005\",\n    \"stop_at_label\": \"Sympathetic nerve block\",\n    \"rationale\": \"Keeps sympathetic nerve target and block mechanism. Avoids overbroad ‘nerve block anesthesia’ and generic injection categories. Tight timeframe and small clauses favor a one-hop generalization.\"\n  },\n  {\n    \"concept_id\": \"274075007\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"274075007\",\n    \"stop_at_label\": \"\",\n    \"rationale\": \"Ancestor nodes are generic intent-based operation categories; higher hops include deny-list ‘procedure’ terms. Staying specific avoids making almost any surgery eligible.\"\n  },\n  {\n    \"concept_id\": \"370143000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"370143000\",\n    \"stop_at_label\": \"\",\n    \"rationale\": \"All ancestors (Depressive disorder, Mood disorder, Mental disorder, Disease, Clinical finding) hit deny‑list terms. Generalizing would be too generic; retain the specific depressive concept.\"\n  },\n  {\n    \"concept_id\": \"363510005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"363508008\",\n    \"stop_at_label\": \"Malignant tumor of intestine\",\n    \"rationale\": \"Preserves malignancy and intestinal site, avoiding broader GI/intraabdominal malignancy or benign-inclusive neoplasm categories at higher levels. Suitable one-hop generalization with tight timeframe.\"\n  },\n  {\n    \"concept_id\": \"363443007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"428322007\",\n    \"stop_at_label\": \"Malignant neoplasm of uterine adnexa\",\n    \"rationale\": \"Maintains malignancy and adnexal gynecologic site. Avoids overly broad female genital or intraabdominal malignancy and avoids benign ‘neoplasm of ovary’. Clinically specific and relevant.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "231268008",
+      "hops": 1,
+      "rationale": "Keeps sympathetic nerve target and block mechanism. Avoids overbroad ‘nerve block anesthesia’ and generic injection categories. Tight timeframe and small clause",
+      "stop_at_concept_id": "231264005",
+      "stop_at_label": "Sympathetic nerve block"
+    },
+    {
+      "concept_id": "274075007",
+      "hops": 0,
+      "rationale": "Ancestor nodes are generic intent-based operation categories; higher hops include deny-list ‘procedure’ terms. Staying specific avoids making almost any surgery",
+      "stop_at_concept_id": "274075007"
+    },
+    {
+      "concept_id": "370143000",
+      "hops": 0,
+      "rationale": "All ancestors (Depressive disorder, Mood disorder, Mental disorder, Disease, Clinical finding) hit deny‑list terms. Generalizing would be too generic; retain th",
+      "stop_at_concept_id": "370143000"
+    },
+    {
+      "concept_id": "363510005",
+      "hops": 1,
+      "rationale": "Preserves malignancy and intestinal site, avoiding broader GI/intraabdominal malignancy or benign-inclusive neoplasm categories at higher levels. Suitable one-h",
+      "stop_at_concept_id": "363508008",
+      "stop_at_label": "Malignant tumor of intestine"
+    },
+    {
+      "concept_id": "363443007",
+      "hops": 1,
+      "rationale": "Maintains malignancy and adnexal gynecologic site. Avoids overly broad female genital or intraabdominal malignancy and avoids benign ‘neoplasm of ovary’. Clinic",
+      "stop_at_concept_id": "428322007",
+      "stop_at_label": "Malignant neoplasm of uterine adnexa"
+    }
+  ]
+}

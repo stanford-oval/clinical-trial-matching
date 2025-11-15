@@ -1,0 +1,50 @@
+[
+  {
+    "concept_id": "28913000",
+    "alt_concept_id": "28913000",
+    "hop": 0,
+    "alt_label": "Tonsillectomy and adenoidectomy",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:31:54"
+  },
+  {
+    "concept_id": "31879006",
+    "alt_concept_id": "365481000",
+    "hop": 1,
+    "alt_label": "Household composition - finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:54"
+  },
+  {
+    "concept_id": "700250006",
+    "alt_concept_id": "51615001",
+    "hop": 1,
+    "alt_label": "Fibrosis of lung",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:54"
+  },
+  {
+    "concept_id": "700250006",
+    "alt_concept_id": "700249006",
+    "hop": 1,
+    "alt_label": "Idiopathic interstitial pneumonia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:54"
+  },
+  {
+    "concept_id": "774099003",
+    "alt_concept_id": "364048003",
+    "hop": 1,
+    "alt_label": "Respiratory observable",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:31:54"
+  },
+  {
+    "concept_id": "88039007",
+    "alt_concept_id": "88039007",
+    "hop": 0,
+    "alt_label": "Transplant of lung",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:31:54"
+  }
+]

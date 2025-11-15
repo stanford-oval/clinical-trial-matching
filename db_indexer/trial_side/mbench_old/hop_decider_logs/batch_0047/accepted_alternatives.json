@@ -1,0 +1,74 @@
+[
+  {
+    "concept_id": "108691000119102",
+    "alt_concept_id": "75047002",
+    "hop": 1,
+    "alt_label": "Disorder of skeletal muscle",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:11:01"
+  },
+  {
+    "concept_id": "108691000119102",
+    "alt_concept_id": "1131000119105",
+    "hop": 1,
+    "alt_label": "Sequela of cerebrovascular accident",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:11:01"
+  },
+  {
+    "concept_id": "108691000119102",
+    "alt_concept_id": "363296001",
+    "hop": 1,
+    "alt_label": "Sequelae of disorders classified by disorder-system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:11:01"
+  },
+  {
+    "concept_id": "108691000119102",
+    "alt_concept_id": "221360009",
+    "hop": 1,
+    "alt_label": "Spasticity",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:11:01"
+  },
+  {
+    "concept_id": "128462008",
+    "alt_concept_id": "128462008",
+    "hop": 0,
+    "alt_label": "Secondary malignant neoplastic disease",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:11:01"
+  },
+  {
+    "concept_id": "16294009",
+    "alt_concept_id": "714254003",
+    "hop": 1,
+    "alt_label": "Abdominal organomegaly",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:11:01"
+  },
+  {
+    "concept_id": "16294009",
+    "alt_concept_id": "51244008",
+    "hop": 1,
+    "alt_label": "Disorder of spleen",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:11:01"
+  },
+  {
+    "concept_id": "417746004",
+    "alt_concept_id": "417746004",
+    "hop": 0,
+    "alt_label": "Traumatic injury",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:11:01"
+  },
+  {
+    "concept_id": "58381000",
+    "alt_concept_id": "58381000",
+    "hop": 0,
+    "alt_label": "Hypersplenism",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:11:01"
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "batch_index": 56,
+  "raw_response": "[\n  {\n    \"concept_id\": \"71186008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"85915003\",\n    \"stop_at_label\": \"Laryngotracheobronchitis\",\n    \"rationale\": \"Drop acuity while preserving the specific croup entity; avoids broad URTI/LRTI categories. Tight timeframe and single-concept clauses favor H=1.\"\n  },\n  {\n    \"concept_id\": \"15033003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"59707005\",\n    \"stop_at_label\": \"Abscess of pharynx\",\n    \"rationale\": \"Generalizes to pharyngeal abscess, retaining site and suppurative mechanism; avoids generic ‘disorder’ and broad ‘lesion’ parents. Balanced inclusion/exclusion; H=1 fits.\"\n  },\n  {\n    \"concept_id\": \"178591005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"178590006\",\n    \"stop_at_label\": \"Revision decompression of cervical spine\",\n    \"rationale\": \"Parent captures the same procedure intent without expanding to all cervical or spinal procedures; avoids generic ‘procedure’ ancestors. Tight timeframe supports H=1.\"\n  },\n  {\n    \"concept_id\": \"78164000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"289156007\",\n    \"stop_at_label\": \"Feeding finding\",\n    \"rationale\": \"Modestly generalizes while keeping the feeding assessment domain; avoids very broad ‘clinical finding’ or observation categories. Tight timeframe and singleton clauses support H=1.\"\n  },\n  {\n    \"concept_id\": \"371632003\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"371632003\",\n    \"stop_at_label\": \"\",\n    \"rationale\": \"All available ancestors are generic (‘disorder’, ‘disease’, ‘finding by site’). To preserve specificity and relevance, do not generalize.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "71186008",
+      "hops": 1,
+      "rationale": "Drop acuity while preserving the specific croup entity; avoids broad URTI/LRTI categories. Tight timeframe and single-concept clauses favor H=1.",
+      "stop_at_concept_id": "85915003",
+      "stop_at_label": "Laryngotracheobronchitis"
+    },
+    {
+      "concept_id": "15033003",
+      "hops": 1,
+      "rationale": "Generalizes to pharyngeal abscess, retaining site and suppurative mechanism; avoids generic ‘disorder’ and broad ‘lesion’ parents. Balanced inclusion/exclusion;",
+      "stop_at_concept_id": "59707005",
+      "stop_at_label": "Abscess of pharynx"
+    },
+    {
+      "concept_id": "178591005",
+      "hops": 1,
+      "rationale": "Parent captures the same procedure intent without expanding to all cervical or spinal procedures; avoids generic ‘procedure’ ancestors. Tight timeframe supports",
+      "stop_at_concept_id": "178590006",
+      "stop_at_label": "Revision decompression of cervical spine"
+    },
+    {
+      "concept_id": "78164000",
+      "hops": 1,
+      "rationale": "Modestly generalizes while keeping the feeding assessment domain; avoids very broad ‘clinical finding’ or observation categories. Tight timeframe and singleton ",
+      "stop_at_concept_id": "289156007",
+      "stop_at_label": "Feeding finding"
+    },
+    {
+      "concept_id": "371632003",
+      "hops": 0,
+      "rationale": "All available ancestors are generic (‘disorder’, ‘disease’, ‘finding by site’). To preserve specificity and relevance, do not generalize.",
+      "stop_at_concept_id": "371632003"
+    }
+  ]
+}

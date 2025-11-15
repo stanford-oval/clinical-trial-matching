@@ -1,0 +1,41 @@
+{
+  "batch_index": 30,
+  "raw_response": "[\n  {\n    \"concept_id\": \"70536003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"119980000\",\n    \"stop_at_label\": \"Kidney implantation\",\n    \"rationale\": \"Exclusions exceed inclusions; choose a transplant-specific parent. Kidney implantation preserves renal transplant intent while avoiding overly broad parents like solid organ transplant, renal replacement, or generic introduction procedures.\"\n  },\n  {\n    \"concept_id\": \"49727002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"301233008\",\n    \"stop_at_label\": \"Functional finding of respiratory tract\",\n    \"rationale\": \"Tight timeframe and small clause size favor H=1. This preserves respiratory functional context while avoiding broader categories like respiratory finding, finding by site, or clinical finding.\"\n  },\n  {\n    \"concept_id\": \"408645001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"363510005\",\n    \"stop_at_label\": \"Malignant tumor of large intestine\",\n    \"rationale\": \"Generalize histology to site. This preserves colorectal malignancy intent and avoids cross-site malignant adenomatous neoplasm or overly broad malignant disease categories.\"\n  },\n  {\n    \"concept_id\": \"255121007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"94627008\",\n    \"stop_at_label\": \"Secondary malignant neoplasm of peritoneum\",\n    \"rationale\": \"Select the clinically specific peritoneal metastasis parent. Other parents are generic disorders, masses, or broad histology classes; conservative due to multiple parent paths.\"\n  },\n  {\n    \"concept_id\": \"94455000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"363443007\",\n    \"stop_at_label\": \"Malignant tumor of ovary\",\n    \"rationale\": \"Maintain ovarian cancer focus while generalizing histology. Avoid broader intra-abdominal or secondary neoplasm categories that dilute site-specific trial intent.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "70536003",
+      "hops": 1,
+      "rationale": "Exclusions exceed inclusions; choose a transplant-specific parent. Kidney implantation preserves renal transplant intent while avoiding overly broad parents lik",
+      "stop_at_concept_id": "119980000",
+      "stop_at_label": "Kidney implantation"
+    },
+    {
+      "concept_id": "49727002",
+      "hops": 1,
+      "rationale": "Tight timeframe and small clause size favor H=1. This preserves respiratory functional context while avoiding broader categories like respiratory finding, findi",
+      "stop_at_concept_id": "301233008",
+      "stop_at_label": "Functional finding of respiratory tract"
+    },
+    {
+      "concept_id": "408645001",
+      "hops": 1,
+      "rationale": "Generalize histology to site. This preserves colorectal malignancy intent and avoids cross-site malignant adenomatous neoplasm or overly broad malignant disease",
+      "stop_at_concept_id": "363510005",
+      "stop_at_label": "Malignant tumor of large intestine"
+    },
+    {
+      "concept_id": "255121007",
+      "hops": 1,
+      "rationale": "Select the clinically specific peritoneal metastasis parent. Other parents are generic disorders, masses, or broad histology classes; conservative due to multip",
+      "stop_at_concept_id": "94627008",
+      "stop_at_label": "Secondary malignant neoplasm of peritoneum"
+    },
+    {
+      "concept_id": "94455000",
+      "hops": 1,
+      "rationale": "Maintain ovarian cancer focus while generalizing histology. Avoid broader intra-abdominal or secondary neoplasm categories that dilute site-specific trial inten",
+      "stop_at_concept_id": "363443007",
+      "stop_at_label": "Malignant tumor of ovary"
+    }
+  ]
+}

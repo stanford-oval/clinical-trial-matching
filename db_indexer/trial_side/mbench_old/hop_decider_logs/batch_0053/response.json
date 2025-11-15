@@ -1,0 +1,41 @@
+{
+  "batch_index": 53,
+  "raw_response": "[\n  {\n    \"concept_id\": \"363859000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"363858008\",\n    \"stop_at_label\": \"Neuroelectrophysiology observable\",\n    \"rationale\": \"Parent is neuroelectrophysiology observable preserving neuroelectric mechanism; avoids generic 'observable entity'; tight timeframe and small clause favor H=1.\"\n  },\n  {\n    \"concept_id\": \"386806002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"373930000\",\n    \"stop_at_label\": \"Cognitive function finding\",\n    \"rationale\": \"Exclusions exceed inclusions, so be conservative. Parent 'Cognitive function finding' preserves cognitive domain while avoiding banned 'clinical finding' ancestors; timeframe tight.\"\n  },\n  {\n    \"concept_id\": \"195967001\",\n    \"hops\": 2,\n    \"stop_at_concept_id\": \"106048009\",\n    \"stop_at_label\": \"Respiratory finding\",\n    \"rationale\": \"Parent is banned ('disorder'); grandparent 'Respiratory finding' preserves organ system and avoids generic banned labels; conservatively limit to H=2 given many exclusions.\"\n  },\n  {\n    \"concept_id\": \"53399006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"4804005\",\n    \"stop_at_label\": \"Microbial identification test\",\n    \"rationale\": \"Parent 'Microbial identification test' keeps microbiology testing intent; avoids overly broad 'laboratory test' and banned 'procedure' ancestors; tight timeframe supports H=1.\"\n  },\n  {\n    \"concept_id\": \"56265001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"301095005\",\n    \"stop_at_label\": \"Cardiac finding\",\n    \"rationale\": \"High parent_count and many exclusions warrant conservatism. Choose parent 'Cardiac finding' to preserve organ system; avoid multiple 'disorder' parents and generic region findings.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "363859000",
+      "hops": 1,
+      "rationale": "Parent is neuroelectrophysiology observable preserving neuroelectric mechanism; avoids generic 'observable entity'; tight timeframe and small clause favor H=1.",
+      "stop_at_concept_id": "363858008",
+      "stop_at_label": "Neuroelectrophysiology observable"
+    },
+    {
+      "concept_id": "386806002",
+      "hops": 1,
+      "rationale": "Exclusions exceed inclusions, so be conservative. Parent 'Cognitive function finding' preserves cognitive domain while avoiding banned 'clinical finding' ancest",
+      "stop_at_concept_id": "373930000",
+      "stop_at_label": "Cognitive function finding"
+    },
+    {
+      "concept_id": "195967001",
+      "hops": 2,
+      "rationale": "Parent is banned ('disorder'); grandparent 'Respiratory finding' preserves organ system and avoids generic banned labels; conservatively limit to H=2 given many",
+      "stop_at_concept_id": "106048009",
+      "stop_at_label": "Respiratory finding"
+    },
+    {
+      "concept_id": "53399006",
+      "hops": 1,
+      "rationale": "Parent 'Microbial identification test' keeps microbiology testing intent; avoids overly broad 'laboratory test' and banned 'procedure' ancestors; tight timefram",
+      "stop_at_concept_id": "4804005",
+      "stop_at_label": "Microbial identification test"
+    },
+    {
+      "concept_id": "56265001",
+      "hops": 1,
+      "rationale": "High parent_count and many exclusions warrant conservatism. Choose parent 'Cardiac finding' to preserve organ system; avoid multiple 'disorder' parents and gene",
+      "stop_at_concept_id": "301095005",
+      "stop_at_label": "Cardiac finding"
+    }
+  ]
+}

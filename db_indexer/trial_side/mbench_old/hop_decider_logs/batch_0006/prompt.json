@@ -1,0 +1,412 @@
+{
+  "batch_index": 6,
+  "offset": 25,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "29857009",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 5,
+        "exclusion_trials": 2
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "301366005",
+            "label": "Pain of truncal structure"
+          },
+          {
+            "concept_id": "301366005",
+            "label": "Pain of truncal structure"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "699697007",
+            "label": "Finding of sensation by site"
+          },
+          {
+            "concept_id": "22253000",
+            "label": "Pain"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "609623002",
+            "label": "Finding of upper trunk"
+          },
+          {
+            "concept_id": "279001004",
+            "label": "Pain finding at anatomical site"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "102957003",
+            "label": "Neurological finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "276435006",
+            "label": "Pain / sensation finding"
+          },
+          {
+            "concept_id": "106147001",
+            "label": "Sensory nervous system finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "109979007",
+      "features": {
+        "depth_from_root": 8,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "118601006",
+            "label": "Non-Hodgkin's lymphoma (clinical)"
+          },
+          {
+            "concept_id": "118601006",
+            "label": "Non-Hodgkin's lymphoma (clinical)"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "277466009",
+            "label": "Lymphoproliferative disorder"
+          },
+          {
+            "concept_id": "414825006",
+            "label": "Neoplasm of hematopoietic cell type"
+          },
+          {
+            "concept_id": "55342001",
+            "label": "Neoplastic disease"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "414026006",
+            "label": "Disorder of hematopoietic morphology"
+          },
+          {
+            "concept_id": "399981008",
+            "label": "Neoplasm and/or hamartoma"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "118600007",
+            "label": "Malignant lymphoma (clinical)"
+          },
+          {
+            "concept_id": "372087000",
+            "label": "Primary malignant neoplasm"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "277606000",
+            "label": "Lymphoreticular tumor"
+          },
+          {
+            "concept_id": "363346000",
+            "label": "Malignant neoplastic disease"
+          },
+          {
+            "concept_id": "269475001",
+            "label": "Malignant tumor of lymphoid hemopoietic and related tissue"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "128188000",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "81308009",
+            "label": "Disorder of brain"
+          },
+          {
+            "concept_id": "81308009",
+            "label": "Disorder of brain"
+          },
+          {
+            "concept_id": "29426003",
+            "label": "Paralytic syndrome"
+          },
+          {
+            "concept_id": "29426003",
+            "label": "Paralytic syndrome"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "246556002",
+            "label": "Central nervous system finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "118934005",
+            "label": "Disorder of head"
+          },
+          {
+            "concept_id": "118940003",
+            "label": "Disorder of nervous system"
+          },
+          {
+            "concept_id": "23853001",
+            "label": "Disorder of the central nervous system"
+          },
+          {
+            "concept_id": "299718000",
+            "label": "Finding of brain"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "62718007",
+      "features": {
+        "depth_from_root": 8,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "300267005",
+            "label": "Salivation finding"
+          },
+          {
+            "concept_id": "300267005",
+            "label": "Salivation finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "423066003",
+            "label": "Finding of mouth region"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "298364001",
+            "label": "Finding of head region"
+          },
+          {
+            "concept_id": "249376008",
+            "label": "Mouth and/or pharynx finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "249424008",
+            "label": "Finding of salivary apparatus"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "169413002",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "65541007",
+            "label": "Administration of hormone"
+          },
+          {
+            "concept_id": "65541007",
+            "label": "Administration of hormone"
+          },
+          {
+            "concept_id": "416608005",
+            "label": "Drug therapy"
+          },
+          {
+            "concept_id": "416608005",
+            "label": "Drug therapy"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "432102000",
+            "label": "Administration of substance"
+          },
+          {
+            "concept_id": "362961001",
+            "label": "Procedure by intent"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "18629005",
+            "label": "Administration of medication"
+          },
+          {
+            "concept_id": "277132007",
+            "label": "Therapeutic procedure"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "107733003",
+            "label": "Introduction procedure"
+          },
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 21078,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"29857009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 5,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"109979007\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"118601006\",\n          \"label\": \"Non-Hodgkin's lymphoma (clinical)\"\n        },\n        {\n          \"concept_id\": \"118601006\",\n          \"label\": \"Non-Hodgkin's lymphoma (clinical)\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"277466009\",\n          \"label\": \"Lymphoproliferative disorder\"\n        },\n        {\n          \"concept_id\": \"414825006\",\n          \"label\": \"Neoplasm of hematopoietic cell type\"\n        },\n        {\n          \"concept_id\": \"55342001\",\n          \"label\": \"Neoplastic disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"414026006\",\n          \"label\": \"Disorder of hematopoietic morphology\"\n        },\n        {\n          \"concept_id\": \"399981008\",\n          \"label\": \"Neoplasm and/or hamartoma\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118600007\",\n          \"label\": \"Malignant lymphoma (clinical)\"\n        },\n        {\n          \"concept_id\": \"372087000\",\n          \"label\": \"Primary malignant neoplasm\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"277606000\",\n          \"label\": \"Lymphoreticular tumor\"\n        },\n        {\n          \"concept_id\": \"363346000\",\n          \"label\": \"Malignant neoplastic disease\"\n        },\n        {\n          \"concept_id\": \"269475001\",\n          \"label\": \"Malignant tumor of lymphoid hemopoietic and related tissue\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"128188000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"81308009\",\n          \"label\": \"Disorder of brain\"\n        },\n        {\n          \"concept_id\": \"81308009\",\n          \"label\": \"Disorder of brain\"\n        },\n        {\n          \"concept_id\": \"29426003\",\n          \"label\": \"Paralytic syndrome\"\n        },\n        {\n          \"concept_id\": \"29426003\",\n          \"label\": \"Paralytic syndrome\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"299718000\",\n          \"label\": \"Finding of brain\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"62718007\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"300267005\",\n          \"label\": \"Salivation finding\"\n        },\n        {\n          \"concept_id\": \"300267005\",\n          \"label\": \"Salivation finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"423066003\",\n          \"label\": \"Finding of mouth region\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"298364001\",\n          \"label\": \"Finding of head region\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"249424008\",\n          \"label\": \"Finding of salivary apparatus\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"169413002\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"65541007\",\n          \"label\": \"Administration of hormone\"\n        },\n        {\n          \"concept_id\": \"65541007\",\n          \"label\": \"Administration of hormone\"\n        },\n        {\n          \"concept_id\": \"416608005\",\n          \"label\": \"Drug therapy\"\n        },\n        {\n          \"concept_id\": \"416608005\",\n          \"label\": \"Drug therapy\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"432102000\",\n          \"label\": \"Administration of substance\"\n        },\n        {\n          \"concept_id\": \"362961001\",\n          \"label\": \"Procedure by intent\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"18629005\",\n          \"label\": \"Administration of medication\"\n        },\n        {\n          \"concept_id\": \"277132007\",\n          \"label\": \"Therapeutic procedure\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"29857009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 5,\n      \"exclusion_trials\": 2\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        },\n        {\n          \"concept_id\": \"301366005\",\n          \"label\": \"Pain of truncal structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"699697007\",\n          \"label\": \"Finding of sensation by site\"\n        },\n        {\n          \"concept_id\": \"22253000\",\n          \"label\": \"Pain\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"279001004\",\n          \"label\": \"Pain finding at anatomical site\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"102957003\",\n          \"label\": \"Neurological finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"276435006\",\n          \"label\": \"Pain / sensation finding\"\n        },\n        {\n          \"concept_id\": \"106147001\",\n          \"label\": \"Sensory nervous system finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"109979007\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"118601006\",\n          \"label\": \"Non-Hodgkin's lymphoma (clinical)\"\n        },\n        {\n          \"concept_id\": \"118601006\",\n          \"label\": \"Non-Hodgkin's lymphoma (clinical)\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"277466009\",\n          \"label\": \"Lymphoproliferative disorder\"\n        },\n        {\n          \"concept_id\": \"414825006\",\n          \"label\": \"Neoplasm of hematopoietic cell type\"\n        },\n        {\n          \"concept_id\": \"55342001\",\n          \"label\": \"Neoplastic disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"414026006\",\n          \"label\": \"Disorder of hematopoietic morphology\"\n        },\n        {\n          \"concept_id\": \"399981008\",\n          \"label\": \"Neoplasm and/or hamartoma\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118600007\",\n          \"label\": \"Malignant lymphoma (clinical)\"\n        },\n        {\n          \"concept_id\": \"372087000\",\n          \"label\": \"Primary malignant neoplasm\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"277606000\",\n          \"label\": \"Lymphoreticular tumor\"\n        },\n        {\n          \"concept_id\": \"363346000\",\n          \"label\": \"Malignant neoplastic disease\"\n        },\n        {\n          \"concept_id\": \"269475001\",\n          \"label\": \"Malignant tumor of lymphoid hemopoietic and related tissue\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"128188000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"81308009\",\n          \"label\": \"Disorder of brain\"\n        },\n        {\n          \"concept_id\": \"81308009\",\n          \"label\": \"Disorder of brain\"\n        },\n        {\n          \"concept_id\": \"29426003\",\n          \"label\": \"Paralytic syndrome\"\n        },\n        {\n          \"concept_id\": \"29426003\",\n          \"label\": \"Paralytic syndrome\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"246556002\",\n          \"label\": \"Central nervous system finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"118940003\",\n          \"label\": \"Disorder of nervous system\"\n        },\n        {\n          \"concept_id\": \"23853001\",\n          \"label\": \"Disorder of the central nervous system\"\n        },\n        {\n          \"concept_id\": \"299718000\",\n          \"label\": \"Finding of brain\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"62718007\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"300267005\",\n          \"label\": \"Salivation finding\"\n        },\n        {\n          \"concept_id\": \"300267005\",\n          \"label\": \"Salivation finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"423066003\",\n          \"label\": \"Finding of mouth region\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"298364001\",\n          \"label\": \"Finding of head region\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"249424008\",\n          \"label\": \"Finding of salivary apparatus\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"169413002\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"65541007\",\n          \"label\": \"Administration of hormone\"\n        },\n        {\n          \"concept_id\": \"65541007\",\n          \"label\": \"Administration of hormone\"\n        },\n        {\n          \"concept_id\": \"416608005\",\n          \"label\": \"Drug therapy\"\n        },\n        {\n          \"concept_id\": \"416608005\",\n          \"label\": \"Drug therapy\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"432102000\",\n          \"label\": \"Administration of substance\"\n        },\n        {\n          \"concept_id\": \"362961001\",\n          \"label\": \"Procedure by intent\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"18629005\",\n          \"label\": \"Administration of medication\"\n        },\n        {\n          \"concept_id\": \"277132007\",\n          \"label\": \"Therapeutic procedure\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  }\n]\n"
+}

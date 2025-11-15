@@ -1,0 +1,41 @@
+{
+  "batch_index": 38,
+  "raw_response": "[\n  {\n    \"concept_id\": \"609588000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"19063003\",\n    \"stop_at_label\": \"Arthroplasty of knee\",\n    \"rationale\": \"Tight timeframe and single-item clause. Parent ‘Arthroplasty of knee’ preserves knee prosthesis intent and site specificity while avoiding overly broad procedure categories.\"\n  },\n  {\n    \"concept_id\": \"19063003\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"19063003\",\n    \"stop_at_label\": \"Arthroplasty of knee\",\n    \"rationale\": \"Parents either lose site specificity (Arthroplasty) or become too broad (Knee joint operation, Surgical repair). Grandparents are generic or ‘procedure’ labeled. Staying at the requirement keeps clinically coherent knee arthroplasty intent.\"\n  },\n  {\n    \"concept_id\": \"160685001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"8510008\",\n    \"stop_at_label\": \"Reduced mobility\",\n    \"rationale\": \"Tight timeframe and specific clause. Parent ‘Reduced mobility’ preserves functional impairment domain and patient relevance; higher ancestors become generic functional findings.\"\n  },\n  {\n    \"concept_id\": \"19585003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"128926000\",\n    \"stop_at_label\": \"Postprocedural state finding\",\n    \"rationale\": \"Timeframe tight and clause simple. Parent ‘Postprocedural state finding’ retains postprocedural context while avoiding more generic ‘clinical finding’ ancestors; still meaningfully specific to recent procedures.\"\n  },\n  {\n    \"concept_id\": \"241149003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"86543007\",\n    \"stop_at_label\": \"Esophageal motility study\",\n    \"rationale\": \"Moderately tight timeframe. Parent ‘Esophageal motility study’ preserves organ and test intent; avoids generic ‘Video imaging’ and broader gastrointestinal contrast categories.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "609588000",
+      "hops": 1,
+      "rationale": "Tight timeframe and single-item clause. Parent ‘Arthroplasty of knee’ preserves knee prosthesis intent and site specificity while avoiding overly broad procedur",
+      "stop_at_concept_id": "19063003",
+      "stop_at_label": "Arthroplasty of knee"
+    },
+    {
+      "concept_id": "19063003",
+      "hops": 0,
+      "rationale": "Parents either lose site specificity (Arthroplasty) or become too broad (Knee joint operation, Surgical repair). Grandparents are generic or ‘procedure’ labeled",
+      "stop_at_concept_id": "19063003",
+      "stop_at_label": "Arthroplasty of knee"
+    },
+    {
+      "concept_id": "160685001",
+      "hops": 1,
+      "rationale": "Tight timeframe and specific clause. Parent ‘Reduced mobility’ preserves functional impairment domain and patient relevance; higher ancestors become generic fun",
+      "stop_at_concept_id": "8510008",
+      "stop_at_label": "Reduced mobility"
+    },
+    {
+      "concept_id": "19585003",
+      "hops": 1,
+      "rationale": "Timeframe tight and clause simple. Parent ‘Postprocedural state finding’ retains postprocedural context while avoiding more generic ‘clinical finding’ ancestors",
+      "stop_at_concept_id": "128926000",
+      "stop_at_label": "Postprocedural state finding"
+    },
+    {
+      "concept_id": "241149003",
+      "hops": 1,
+      "rationale": "Moderately tight timeframe. Parent ‘Esophageal motility study’ preserves organ and test intent; avoids generic ‘Video imaging’ and broader gastrointestinal cont",
+      "stop_at_concept_id": "86543007",
+      "stop_at_label": "Esophageal motility study"
+    }
+  ]
+}

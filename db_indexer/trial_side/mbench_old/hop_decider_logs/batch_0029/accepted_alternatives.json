@@ -1,0 +1,50 @@
+[
+  {
+    "concept_id": "254626006",
+    "alt_concept_id": "448993007",
+    "hop": 1,
+    "alt_label": "Carcinoma of lung",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:37:33"
+  },
+  {
+    "concept_id": "254626006",
+    "alt_concept_id": "443961001",
+    "hop": 1,
+    "alt_label": "Malignant adenomatous neoplasm",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:37:33"
+  },
+  {
+    "concept_id": "262286000",
+    "alt_concept_id": "8943002",
+    "hop": 1,
+    "alt_label": "Weight gain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:37:33"
+  },
+  {
+    "concept_id": "314207007",
+    "alt_concept_id": "22298006",
+    "hop": 1,
+    "alt_label": "Myocardial infarction",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:37:33"
+  },
+  {
+    "concept_id": "413575009",
+    "alt_concept_id": "413575009",
+    "hop": 0,
+    "alt_label": "Aromatase inhibitor",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:37:33"
+  },
+  {
+    "concept_id": "4557003",
+    "alt_concept_id": "194828000",
+    "hop": 1,
+    "alt_label": "Angina pectoris",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:37:33"
+  }
+]

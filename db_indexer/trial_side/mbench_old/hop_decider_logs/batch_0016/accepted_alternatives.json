@@ -1,0 +1,66 @@
+[
+  {
+    "concept_id": "255056009",
+    "alt_concept_id": "363346000",
+    "hop": 1,
+    "alt_label": "Malignant neoplastic disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:19:46"
+  },
+  {
+    "concept_id": "255056009",
+    "alt_concept_id": "255055008",
+    "hop": 1,
+    "alt_label": "Neoplasm of head and neck",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:19:46"
+  },
+  {
+    "concept_id": "402815007",
+    "alt_concept_id": "402815007",
+    "hop": 0,
+    "alt_label": "Squamous cell carcinoma",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:19:46"
+  },
+  {
+    "concept_id": "43478001",
+    "alt_concept_id": "21522001",
+    "hop": 1,
+    "alt_label": "Abdominal pain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:19:46"
+  },
+  {
+    "concept_id": "43478001",
+    "alt_concept_id": "301402008",
+    "hop": 1,
+    "alt_label": "Tenderness of truncal structure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:19:46"
+  },
+  {
+    "concept_id": "54731003",
+    "alt_concept_id": "414071003",
+    "hop": 1,
+    "alt_label": "Eating, drinking and/or feeding activity",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:19:46"
+  },
+  {
+    "concept_id": "54731003",
+    "alt_concept_id": "106081005",
+    "hop": 1,
+    "alt_label": "Oral cavity AND/OR esophageal function",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:19:46"
+  },
+  {
+    "concept_id": "76948002",
+    "alt_concept_id": "76948002",
+    "hop": 0,
+    "alt_label": "Severe pain",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:19:46"
+  }
+]

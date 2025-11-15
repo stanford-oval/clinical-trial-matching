@@ -1,0 +1,50 @@
+[
+  {
+    "concept_id": "108241001",
+    "alt_concept_id": "108241001",
+    "hop": 0,
+    "alt_label": "Dialysis procedure",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:34:57"
+  },
+  {
+    "concept_id": "35919005",
+    "alt_concept_id": "35919005",
+    "hop": 0,
+    "alt_label": "Autism spectrum disorder",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:34:57"
+  },
+  {
+    "concept_id": "408680002",
+    "alt_concept_id": "53084003",
+    "hop": 1,
+    "alt_label": "Bacterial pneumonia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:34:57"
+  },
+  {
+    "concept_id": "408680002",
+    "alt_concept_id": "425464007",
+    "hop": 1,
+    "alt_label": "Hospital acquired pneumonia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:34:57"
+  },
+  {
+    "concept_id": "414804006",
+    "alt_concept_id": "413481004",
+    "hop": 1,
+    "alt_label": "Alpha-4 integrin receptor antagonist-containing product",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:34:57"
+  },
+  {
+    "concept_id": "414804006",
+    "alt_concept_id": "108807002",
+    "hop": 1,
+    "alt_label": "Monoclonal antibody-containing product",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:34:57"
+  }
+]

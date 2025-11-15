@@ -1,0 +1,41 @@
+{
+  "batch_index": 61,
+  "raw_response": "[\n  {\n    \"concept_id\": \"224959009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"105726004\",\n    \"stop_at_label\": \"Age AND/OR growth finding\",\n    \"rationale\": \"Parent preserves age/growth context; higher ancestors are generic or banned ('clinical finding'). Choose H=1 to broaden slightly without losing developmental relevance.\"\n  },\n  {\n    \"concept_id\": \"31928004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"128477000\",\n    \"stop_at_label\": \"Abscess\",\n    \"rationale\": \"Parent 'Abscess' preserves mechanism and site relevance; other parents are generic/banned. Tight timeframe and small clause size favor H=1.\"\n  },\n  {\n    \"concept_id\": \"56783008\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"56783008\",\n    \"stop_at_label\": \"Incision and drainage\",\n    \"rationale\": \"Ancestors mostly include banned 'procedure' labels or are too generic; to keep intervention specificity, remain at 'Incision and drainage'.\"\n  },\n  {\n    \"concept_id\": \"169826009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"281050002\",\n    \"stop_at_label\": \"Livebirth\",\n    \"rationale\": \"Choosing 'Livebirth' keeps pregnancy outcome specificity; grandparent 'Birth' is too broad and other ancestors are generic findings. H=1 aligns with tight timeframe.\"\n  },\n  {\n    \"concept_id\": \"233602006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"5505005\",\n    \"stop_at_label\": \"Acute bronchiolitis\",\n    \"rationale\": \"Parent 'Acute bronchiolitis' retains lower respiratory organ/acuity intent; other ancestors are broader or banned. Tight timeframe and clause size support H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "224959009",
+      "hops": 1,
+      "rationale": "Parent preserves age/growth context; higher ancestors are generic or banned ('clinical finding'). Choose H=1 to broaden slightly without losing developmental re",
+      "stop_at_concept_id": "105726004",
+      "stop_at_label": "Age AND/OR growth finding"
+    },
+    {
+      "concept_id": "31928004",
+      "hops": 1,
+      "rationale": "Parent 'Abscess' preserves mechanism and site relevance; other parents are generic/banned. Tight timeframe and small clause size favor H=1.",
+      "stop_at_concept_id": "128477000",
+      "stop_at_label": "Abscess"
+    },
+    {
+      "concept_id": "56783008",
+      "hops": 0,
+      "rationale": "Ancestors mostly include banned 'procedure' labels or are too generic; to keep intervention specificity, remain at 'Incision and drainage'.",
+      "stop_at_concept_id": "56783008",
+      "stop_at_label": "Incision and drainage"
+    },
+    {
+      "concept_id": "169826009",
+      "hops": 1,
+      "rationale": "Choosing 'Livebirth' keeps pregnancy outcome specificity; grandparent 'Birth' is too broad and other ancestors are generic findings. H=1 aligns with tight timef",
+      "stop_at_concept_id": "281050002",
+      "stop_at_label": "Livebirth"
+    },
+    {
+      "concept_id": "233602006",
+      "hops": 1,
+      "rationale": "Parent 'Acute bronchiolitis' retains lower respiratory organ/acuity intent; other ancestors are broader or banned. Tight timeframe and clause size support H=1.",
+      "stop_at_concept_id": "5505005",
+      "stop_at_label": "Acute bronchiolitis"
+    }
+  ]
+}

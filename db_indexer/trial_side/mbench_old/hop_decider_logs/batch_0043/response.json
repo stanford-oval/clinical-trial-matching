@@ -1,0 +1,41 @@
+{
+  "batch_index": 43,
+  "raw_response": "[\n  {\n    \"concept_id\": \"1240000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"102538003\",\n    \"stop_at_label\": \"Recumbent body position\",\n    \"rationale\": \"Parent preserves posture context and clinical intent; timeframe tight and clause small favor H=1; avoids generic ancestors like 'clinical finding'.\"\n  },\n  {\n    \"concept_id\": \"49436004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"17366009\",\n    \"stop_at_label\": \"Atrial arrhythmia\",\n    \"rationale\": \"Retains atrial/supraventricular mechanism. Alternatives like 'Fibrillation' or 'Cardiac arrhythmia' are broader. Exclusions exceed inclusions, so conservative H=1.\"\n  },\n  {\n    \"concept_id\": \"32485007\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"32485007\",\n    \"stop_at_label\": \"Hospital admission\",\n    \"rationale\": \"Hospital setting is central to intent; generalizing to 'admission to establishment' risks non-hospital admissions. Keep specific requirement.\"\n  },\n  {\n    \"concept_id\": \"405045001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"247888008\",\n    \"stop_at_label\": \"Awareness of self\",\n    \"rationale\": \"Parent remains a specific mental-state observation and avoids overly generic 'observable entity' ancestors; tight timeframe supports H=1.\"\n  },\n  {\n    \"concept_id\": \"72366004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"231520001\",\n    \"stop_at_label\": \"Behavioral syndrome associated with physiological disturbance and physical factors\",\n    \"rationale\": \"Select non-'disorder' parent to avoid banned generic labels; it preserves behavioral/physiological disturbance focus. Exclusions > inclusions favor conservative H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "1240000",
+      "hops": 1,
+      "rationale": "Parent preserves posture context and clinical intent; timeframe tight and clause small favor H=1; avoids generic ancestors like 'clinical finding'.",
+      "stop_at_concept_id": "102538003",
+      "stop_at_label": "Recumbent body position"
+    },
+    {
+      "concept_id": "49436004",
+      "hops": 1,
+      "rationale": "Retains atrial/supraventricular mechanism. Alternatives like 'Fibrillation' or 'Cardiac arrhythmia' are broader. Exclusions exceed inclusions, so conservative H",
+      "stop_at_concept_id": "17366009",
+      "stop_at_label": "Atrial arrhythmia"
+    },
+    {
+      "concept_id": "32485007",
+      "hops": 0,
+      "rationale": "Hospital setting is central to intent; generalizing to 'admission to establishment' risks non-hospital admissions. Keep specific requirement.",
+      "stop_at_concept_id": "32485007",
+      "stop_at_label": "Hospital admission"
+    },
+    {
+      "concept_id": "405045001",
+      "hops": 1,
+      "rationale": "Parent remains a specific mental-state observation and avoids overly generic 'observable entity' ancestors; tight timeframe supports H=1.",
+      "stop_at_concept_id": "247888008",
+      "stop_at_label": "Awareness of self"
+    },
+    {
+      "concept_id": "72366004",
+      "hops": 1,
+      "rationale": "Select non-'disorder' parent to avoid banned generic labels; it preserves behavioral/physiological disturbance focus. Exclusions > inclusions favor conservative",
+      "stop_at_concept_id": "231520001",
+      "stop_at_label": "Behavioral syndrome associated with physiological disturbance and physical factors"
+    }
+  ]
+}

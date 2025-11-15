@@ -1,0 +1,41 @@
+{
+  "batch_index": 47,
+  "raw_response": "[\n  {\n    \"concept_id\": \"58381000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"58381000\",\n    \"stop_at_label\": \"original concept\",\n    \"rationale\": \"All ancestors at hops 1–3 are generic (disorder/finding/disease). Keeping the original spleen diagnosis retains specificity and clinical intent.\"\n  },\n  {\n    \"concept_id\": \"16294009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"714254003\",\n    \"stop_at_label\": \"Abdominal organomegaly\",\n    \"rationale\": \"Generalizes splenomegaly to abdominal organ enlargement, preserving mechanism/location while avoiding generic 'disorder' parent; timeframe tight and clause size small favor H=1.\"\n  },\n  {\n    \"concept_id\": \"108691000119102\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"221360009\",\n    \"stop_at_label\": \"Spasticity\",\n    \"rationale\": \"Spasticity preserves mechanism (increased muscle tone) and therapy intent; avoids broad 'sequela' and generic 'disorder' parents; timeframe tight supports H=1.\"\n  },\n  {\n    \"concept_id\": \"417746004\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"417746004\",\n    \"stop_at_label\": \"original concept\",\n    \"rationale\": \"Parent 'Traumatic AND/OR non-traumatic injury' is overly broad; depth is already shallow; keep original injury concept to maintain relevance.\"\n  },\n  {\n    \"concept_id\": \"128462008\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"128462008\",\n    \"stop_at_label\": \"original concept\",\n    \"rationale\": \"Ancestors are generic disease/neoplasm categories; exclusions exceed inclusions, so be conservative and keep the specific malignant condition.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "58381000",
+      "hops": 0,
+      "rationale": "All ancestors at hops 1–3 are generic (disorder/finding/disease). Keeping the original spleen diagnosis retains specificity and clinical intent.",
+      "stop_at_concept_id": "58381000",
+      "stop_at_label": "original concept"
+    },
+    {
+      "concept_id": "16294009",
+      "hops": 1,
+      "rationale": "Generalizes splenomegaly to abdominal organ enlargement, preserving mechanism/location while avoiding generic 'disorder' parent; timeframe tight and clause size",
+      "stop_at_concept_id": "714254003",
+      "stop_at_label": "Abdominal organomegaly"
+    },
+    {
+      "concept_id": "108691000119102",
+      "hops": 1,
+      "rationale": "Spasticity preserves mechanism (increased muscle tone) and therapy intent; avoids broad 'sequela' and generic 'disorder' parents; timeframe tight supports H=1.",
+      "stop_at_concept_id": "221360009",
+      "stop_at_label": "Spasticity"
+    },
+    {
+      "concept_id": "417746004",
+      "hops": 0,
+      "rationale": "Parent 'Traumatic AND/OR non-traumatic injury' is overly broad; depth is already shallow; keep original injury concept to maintain relevance.",
+      "stop_at_concept_id": "417746004",
+      "stop_at_label": "original concept"
+    },
+    {
+      "concept_id": "128462008",
+      "hops": 0,
+      "rationale": "Ancestors are generic disease/neoplasm categories; exclusions exceed inclusions, so be conservative and keep the specific malignant condition.",
+      "stop_at_concept_id": "128462008",
+      "stop_at_label": "original concept"
+    }
+  ]
+}

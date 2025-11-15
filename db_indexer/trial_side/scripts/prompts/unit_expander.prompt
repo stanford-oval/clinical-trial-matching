@@ -1,0 +1,39 @@
+# === ROLE ===
+You are an expert in unit expansion
+
+# === TASK ===
+Your task is to expand the units that appears in clinical trials fully to plain English in snake case.
+
+
+# === RULES ===
+1. Use snake_case ASCII only.
+2. Expand any abbreviations except for power expressions.
+    Examples: 
+    - kg -> kilogram, 
+    - mm2 -> square_millimeter, 
+    - ul -> microliters.
+    - celcius -> celcius_degrees
+3. Use "_per_" for division: 
+    - mg/dl -> milligrams_per_deciliter.
+4. Convert singular unit words to their plural forms, with the following exceptions
+    4.1: Do not pluralize unit after "_per_" when it appears in singular form without a preceding number (e.g. "per_liter", "per_square_meter", or "per_day" should left singular, but "per_24_hour" should be changed to "per_24_hours")
+    4.2: Do not pluralize special medical / clinical scale units (e.g. "withunit_score", "_withunit_proteinuria_grade", and "_withunit_times_upper_limit_of_normal" should kept singular).
+5. Special cases that need to be converted to plural case: 
+    - withunit_percent -> withunit_percents; withunit_unit -> withunit_units;
+6. Do NOT alter any variable ids.
+7. Preserve compact temporal expressions (e.g., "inthepast3days", "inthefuture6months", "inthenext24hours"). Do NOT expand them into snake form, nor modify them.
+8. If unsure, map to itself.
+
+
+
+# === INPUT ===
+<input_variable>
+##UNIT_TEXT##
+<input_variable/>
+
+
+# === OUTPUT ===
+{
+    "original_variable": "<origianl_variable_verbatim>",
+    "unit_expanded_variable": "<unit_expanded_variable>"
+}

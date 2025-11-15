@@ -1,0 +1,41 @@
+{
+  "batch_index": 50,
+  "raw_response": "[\n  {\n    \"concept_id\": \"109378008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"254824006\",\n    \"stop_at_label\": \"Malignant tumor of mesothelial tissue\",\n    \"rationale\": \"Parent retains mesothelial malignant specificity; timeframe tight; avoids overly broad primary malignant neoplasm.\"\n  },\n  {\n    \"concept_id\": \"93679002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"363411007\",\n    \"stop_at_label\": \"Malignant tumor of appendix\",\n    \"rationale\": \"Parent keeps appendix-specific malignancy; broader large intestine options dilute intent; inclusion equals exclusion, so conservative H=1.\"\n  },\n  {\n    \"concept_id\": \"81266008\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"81266008\",\n    \"stop_at_label\": \"same as requirement\",\n    \"rationale\": \"Ancestors contain 'procedure' (deny-list) or are too broad; exclusion exceeds inclusion, so keep exact concept.\"\n  },\n  {\n    \"concept_id\": \"399317006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"43994002\",\n    \"stop_at_label\": \"Behavior showing reduced motor activity\",\n    \"rationale\": \"Parent preserves motor-behavior context and specificity; timeframe tight; avoids generic higher-level behavior findings.\"\n  },\n  {\n    \"concept_id\": \"32895009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"32895009\",\n    \"stop_at_label\": \"same as requirement\",\n    \"rationale\": \"Depth 3 is very general; parent 'Disease' is deny-listed; no acceptable ancestor, so stay at requirement.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "109378008",
+      "hops": 1,
+      "rationale": "Parent retains mesothelial malignant specificity; timeframe tight; avoids overly broad primary malignant neoplasm.",
+      "stop_at_concept_id": "254824006",
+      "stop_at_label": "Malignant tumor of mesothelial tissue"
+    },
+    {
+      "concept_id": "93679002",
+      "hops": 1,
+      "rationale": "Parent keeps appendix-specific malignancy; broader large intestine options dilute intent; inclusion equals exclusion, so conservative H=1.",
+      "stop_at_concept_id": "363411007",
+      "stop_at_label": "Malignant tumor of appendix"
+    },
+    {
+      "concept_id": "81266008",
+      "hops": 0,
+      "rationale": "Ancestors contain 'procedure' (deny-list) or are too broad; exclusion exceeds inclusion, so keep exact concept.",
+      "stop_at_concept_id": "81266008",
+      "stop_at_label": "same as requirement"
+    },
+    {
+      "concept_id": "399317006",
+      "hops": 1,
+      "rationale": "Parent preserves motor-behavior context and specificity; timeframe tight; avoids generic higher-level behavior findings.",
+      "stop_at_concept_id": "43994002",
+      "stop_at_label": "Behavior showing reduced motor activity"
+    },
+    {
+      "concept_id": "32895009",
+      "hops": 0,
+      "rationale": "Depth 3 is very general; parent 'Disease' is deny-listed; no acceptable ancestor, so stay at requirement.",
+      "stop_at_concept_id": "32895009",
+      "stop_at_label": "same as requirement"
+    }
+  ]
+}

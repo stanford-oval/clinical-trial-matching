@@ -1,0 +1,41 @@
+{
+  "batch_index": 33,
+  "raw_response": "[\n  {\n    \"concept_id\": \"442076002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"116336009\",\n    \"stop_at_label\": \"Eating / feeding / drinking finding\",\n    \"rationale\": \"Parent preserves eating/feeding/drinking functional domain. Grandparents are generic. Tight timeframe and small clause favor H=1.\"\n  },\n  {\n    \"concept_id\": \"308117007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"309513005\",\n    \"stop_at_label\": \"Cardiovascular therapy\",\n    \"rationale\": \"Parent maintains cardiovascular treatment intent; grandparents include 'procedure' and are too generic. Clause size 1 favors H=1.\"\n  },\n  {\n    \"concept_id\": \"404909007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"281706009\",\n    \"stop_at_label\": \"Injection of substance\",\n    \"rationale\": \"Parent retains specific administration method (injection of substance). Hop-2 options are broader. Tight timeframe supports H=1.\"\n  },\n  {\n    \"concept_id\": \"229065009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"229064008\",\n    \"stop_at_label\": \"Movement therapy\",\n    \"rationale\": \"Parent preserves physical therapy intent and specificity. Grandparent includes 'procedure' (deny-list). H=1 avoids overgeneralization.\"\n  },\n  {\n    \"concept_id\": \"26929004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"279982005\",\n    \"stop_at_label\": \"Cerebral degeneration presenting primarily with dementia\",\n    \"rationale\": \"Parent retains degenerative CNS mechanism and dementia phenotype. 'Dementia' alone is broader. Tight timeframe and high inclusion favor H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "442076002",
+      "hops": 1,
+      "rationale": "Parent preserves eating/feeding/drinking functional domain. Grandparents are generic. Tight timeframe and small clause favor H=1.",
+      "stop_at_concept_id": "116336009",
+      "stop_at_label": "Eating / feeding / drinking finding"
+    },
+    {
+      "concept_id": "308117007",
+      "hops": 1,
+      "rationale": "Parent maintains cardiovascular treatment intent; grandparents include 'procedure' and are too generic. Clause size 1 favors H=1.",
+      "stop_at_concept_id": "309513005",
+      "stop_at_label": "Cardiovascular therapy"
+    },
+    {
+      "concept_id": "404909007",
+      "hops": 1,
+      "rationale": "Parent retains specific administration method (injection of substance). Hop-2 options are broader. Tight timeframe supports H=1.",
+      "stop_at_concept_id": "281706009",
+      "stop_at_label": "Injection of substance"
+    },
+    {
+      "concept_id": "229065009",
+      "hops": 1,
+      "rationale": "Parent preserves physical therapy intent and specificity. Grandparent includes 'procedure' (deny-list). H=1 avoids overgeneralization.",
+      "stop_at_concept_id": "229064008",
+      "stop_at_label": "Movement therapy"
+    },
+    {
+      "concept_id": "26929004",
+      "hops": 1,
+      "rationale": "Parent retains degenerative CNS mechanism and dementia phenotype. 'Dementia' alone is broader. Tight timeframe and high inclusion favor H=1.",
+      "stop_at_concept_id": "279982005",
+      "stop_at_label": "Cerebral degeneration presenting primarily with dementia"
+    }
+  ]
+}

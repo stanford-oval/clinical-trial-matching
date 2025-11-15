@@ -1,0 +1,90 @@
+[
+  {
+    "concept_id": "10509002",
+    "alt_concept_id": "35301006",
+    "hop": 1,
+    "alt_label": "Acute tracheobronchitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:43"
+  },
+  {
+    "concept_id": "10509002",
+    "alt_concept_id": "32398004",
+    "hop": 1,
+    "alt_label": "Bronchitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:43"
+  },
+  {
+    "concept_id": "15805002",
+    "alt_concept_id": "128482007",
+    "hop": 1,
+    "alt_label": "Acute inflammatory disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:43"
+  },
+  {
+    "concept_id": "15805002",
+    "alt_concept_id": "111273006",
+    "hop": 1,
+    "alt_label": "Acute respiratory disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:43"
+  },
+  {
+    "concept_id": "15805002",
+    "alt_concept_id": "36971009",
+    "hop": 1,
+    "alt_label": "Sinusitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:43"
+  },
+  {
+    "concept_id": "275498002",
+    "alt_concept_id": "275498002",
+    "hop": 0,
+    "alt_label": "Respiratory tract infection",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:33:43"
+  },
+  {
+    "concept_id": "40055000",
+    "alt_concept_id": "17097001",
+    "hop": 1,
+    "alt_label": "Chronic disease of respiratory system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:43"
+  },
+  {
+    "concept_id": "40055000",
+    "alt_concept_id": "128294001",
+    "hop": 1,
+    "alt_label": "Chronic inflammatory disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:43"
+  },
+  {
+    "concept_id": "40055000",
+    "alt_concept_id": "36971009",
+    "hop": 1,
+    "alt_label": "Sinusitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:43"
+  },
+  {
+    "concept_id": "425748003",
+    "alt_concept_id": "111273006",
+    "hop": 1,
+    "alt_label": "Acute respiratory disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:43"
+  },
+  {
+    "concept_id": "425748003",
+    "alt_concept_id": "63480004",
+    "hop": 1,
+    "alt_label": "Chronic bronchitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:43"
+  }
+]

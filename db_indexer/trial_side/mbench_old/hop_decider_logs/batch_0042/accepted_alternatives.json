@@ -1,0 +1,90 @@
+[
+  {
+    "concept_id": "112798008",
+    "alt_concept_id": "710955000",
+    "hop": 1,
+    "alt_label": "Biomedical equipment procedure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:03:52"
+  },
+  {
+    "concept_id": "112798008",
+    "alt_concept_id": "447996002",
+    "hop": 1,
+    "alt_label": "Intubation of respiratory tract",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:03:52"
+  },
+  {
+    "concept_id": "112798008",
+    "alt_concept_id": "119732007",
+    "hop": 1,
+    "alt_label": "Trachea implantation",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:03:52"
+  },
+  {
+    "concept_id": "113091000",
+    "alt_concept_id": "363679005",
+    "hop": 1,
+    "alt_label": "Imaging",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:03:52"
+  },
+  {
+    "concept_id": "27916005",
+    "alt_concept_id": "47493003",
+    "hop": 1,
+    "alt_label": "Abdominal visceral abscess",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:03:52"
+  },
+  {
+    "concept_id": "27916005",
+    "alt_concept_id": "735425008",
+    "hop": 1,
+    "alt_label": "Abscess of digestive system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:03:52"
+  },
+  {
+    "concept_id": "27916005",
+    "alt_concept_id": "235856003",
+    "hop": 1,
+    "alt_label": "Disease of liver",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:03:52"
+  },
+  {
+    "concept_id": "27916005",
+    "alt_concept_id": "300331000",
+    "hop": 1,
+    "alt_label": "Lesion of liver",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:03:52"
+  },
+  {
+    "concept_id": "394679006",
+    "alt_concept_id": "221360009",
+    "hop": 1,
+    "alt_label": "Spasticity",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:03:52"
+  },
+  {
+    "concept_id": "55705006",
+    "alt_concept_id": "19578002",
+    "hop": 1,
+    "alt_label": "Arthrodesis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:03:52"
+  },
+  {
+    "concept_id": "55705006",
+    "alt_concept_id": "392236004",
+    "hop": 1,
+    "alt_label": "Operative procedure on spinal structure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:03:52"
+  }
+]

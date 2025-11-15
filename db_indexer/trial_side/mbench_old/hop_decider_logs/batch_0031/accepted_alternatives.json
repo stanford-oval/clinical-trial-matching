@@ -1,0 +1,90 @@
+[
+  {
+    "concept_id": "111130009",
+    "alt_concept_id": "61457001",
+    "hop": 1,
+    "alt_label": "Adrenal hormone-containing product",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:40:26"
+  },
+  {
+    "concept_id": "111130009",
+    "alt_concept_id": "764374006",
+    "hop": 1,
+    "alt_label": "Adrenergic receptor agonist-containing product",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:40:26"
+  },
+  {
+    "concept_id": "111130009",
+    "alt_concept_id": "349917000",
+    "hop": 1,
+    "alt_label": "Alpha adrenergic receptor agonist-containing product",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:40:26"
+  },
+  {
+    "concept_id": "111130009",
+    "alt_concept_id": "766970009",
+    "hop": 1,
+    "alt_label": "Catecholamine-containing product",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:40:26"
+  },
+  {
+    "concept_id": "111130009",
+    "alt_concept_id": "22091006",
+    "hop": 1,
+    "alt_label": "Hormone-containing product",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:40:26"
+  },
+  {
+    "concept_id": "11466000",
+    "alt_concept_id": "66201006",
+    "hop": 1,
+    "alt_label": "Extraction of fetus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:40:26"
+  },
+  {
+    "concept_id": "11466000",
+    "alt_concept_id": "42253005",
+    "hop": 1,
+    "alt_label": "Incision of uterus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:40:26"
+  },
+  {
+    "concept_id": "11466000",
+    "alt_concept_id": "236991000",
+    "hop": 1,
+    "alt_label": "Operation to facilitate delivery",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:40:26"
+  },
+  {
+    "concept_id": "3006004",
+    "alt_concept_id": "365931003",
+    "hop": 1,
+    "alt_label": "Level of consciousness - finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:40:26"
+  },
+  {
+    "concept_id": "363688001",
+    "alt_concept_id": "367336001",
+    "hop": 1,
+    "alt_label": "Chemotherapy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:40:26"
+  },
+  {
+    "concept_id": "68154008",
+    "alt_concept_id": "49727002",
+    "hop": 1,
+    "alt_label": "Cough",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:40:26"
+  }
+]

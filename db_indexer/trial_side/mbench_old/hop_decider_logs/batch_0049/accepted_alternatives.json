@@ -1,0 +1,90 @@
+[
+  {
+    "concept_id": "231268008",
+    "alt_concept_id": "22856004",
+    "hop": 1,
+    "alt_label": "Injection of sympathetic nerve",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:13:22"
+  },
+  {
+    "concept_id": "231268008",
+    "alt_concept_id": "26402001",
+    "hop": 1,
+    "alt_label": "Nerve block anesthesia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:13:22"
+  },
+  {
+    "concept_id": "231268008",
+    "alt_concept_id": "231264005",
+    "hop": 1,
+    "alt_label": "Sympathetic nerve block",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:13:22"
+  },
+  {
+    "concept_id": "274075007",
+    "alt_concept_id": "274075007",
+    "hop": 0,
+    "alt_label": "Optional surgery",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:13:22"
+  },
+  {
+    "concept_id": "363443007",
+    "alt_concept_id": "448882009",
+    "hop": 1,
+    "alt_label": "Malignant neoplasm of intraabdominal organ",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:13:22"
+  },
+  {
+    "concept_id": "363443007",
+    "alt_concept_id": "428322007",
+    "hop": 1,
+    "alt_label": "Malignant neoplasm of uterine adnexa",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:13:22"
+  },
+  {
+    "concept_id": "363443007",
+    "alt_concept_id": "363514001",
+    "hop": 1,
+    "alt_label": "Malignant tumor of female genital organ",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:13:22"
+  },
+  {
+    "concept_id": "363443007",
+    "alt_concept_id": "123843001",
+    "hop": 1,
+    "alt_label": "Neoplasm of ovary",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:13:22"
+  },
+  {
+    "concept_id": "363510005",
+    "alt_concept_id": "363508008",
+    "hop": 1,
+    "alt_label": "Malignant tumor of intestine",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:13:22"
+  },
+  {
+    "concept_id": "363510005",
+    "alt_concept_id": "126837005",
+    "hop": 1,
+    "alt_label": "Neoplasm of large intestine",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:13:22"
+  },
+  {
+    "concept_id": "370143000",
+    "alt_concept_id": "370143000",
+    "hop": 0,
+    "alt_label": "Major depressive disorder",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:13:22"
+  }
+]

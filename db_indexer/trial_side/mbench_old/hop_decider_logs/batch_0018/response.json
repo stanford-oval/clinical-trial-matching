@@ -1,0 +1,41 @@
+{
+  "batch_index": 18,
+  "raw_response": "[\n  {\n    \"concept_id\": \"69776003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"25374005\",\n    \"stop_at_label\": \"Gastroenteritis\",\n    \"rationale\": \"Choose parent ‘Gastroenteritis’; other parents are banned generic ‘disorder/disease’. Maintains GI inflammatory mechanism; timeframe tight and clause small support H=1.\"\n  },\n  {\n    \"concept_id\": \"414545008\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"414545008\",\n    \"stop_at_label\": \"Injury of heart\",\n    \"rationale\": \"Ancestors are banned (‘disorder/disease/finding’) or overly generic (‘injury of anatomical site’). Staying at specific cardiac injury keeps program intent.\"\n  },\n  {\n    \"concept_id\": \"256235009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"256235009\",\n    \"stop_at_label\": \"Exercise\",\n    \"rationale\": \"Ancestors ‘Activity’, ‘Process’, ‘Observable entity’ are too generic/banned. Keep the specific activity requirement to preserve relevance.\"\n  },\n  {\n    \"concept_id\": \"44054006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"73211009\",\n    \"stop_at_label\": \"Diabetes mellitus\",\n    \"rationale\": \"Parent preserves endocrine/glucose mechanism without banned terms; broader ancestors are generic (‘disorder/disease’). Tight timeframe and small clauses support H=1.\"\n  },\n  {\n    \"concept_id\": \"86044005\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"86044005\",\n    \"stop_at_label\": \"Amyotrophic lateral sclerosis\",\n    \"rationale\": \"Parent ‘Motor neuron disease’ contains banned ‘disease’. No suitable specific ancestor; remain at ALS to preserve nervous-system program intent.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "69776003",
+      "hops": 1,
+      "rationale": "Choose parent ‘Gastroenteritis’; other parents are banned generic ‘disorder/disease’. Maintains GI inflammatory mechanism; timeframe tight and clause small supp",
+      "stop_at_concept_id": "25374005",
+      "stop_at_label": "Gastroenteritis"
+    },
+    {
+      "concept_id": "414545008",
+      "hops": 0,
+      "rationale": "Ancestors are banned (‘disorder/disease/finding’) or overly generic (‘injury of anatomical site’). Staying at specific cardiac injury keeps program intent.",
+      "stop_at_concept_id": "414545008",
+      "stop_at_label": "Injury of heart"
+    },
+    {
+      "concept_id": "256235009",
+      "hops": 0,
+      "rationale": "Ancestors ‘Activity’, ‘Process’, ‘Observable entity’ are too generic/banned. Keep the specific activity requirement to preserve relevance.",
+      "stop_at_concept_id": "256235009",
+      "stop_at_label": "Exercise"
+    },
+    {
+      "concept_id": "44054006",
+      "hops": 1,
+      "rationale": "Parent preserves endocrine/glucose mechanism without banned terms; broader ancestors are generic (‘disorder/disease’). Tight timeframe and small clauses support",
+      "stop_at_concept_id": "73211009",
+      "stop_at_label": "Diabetes mellitus"
+    },
+    {
+      "concept_id": "86044005",
+      "hops": 0,
+      "rationale": "Parent ‘Motor neuron disease’ contains banned ‘disease’. No suitable specific ancestor; remain at ALS to preserve nervous-system program intent.",
+      "stop_at_concept_id": "86044005",
+      "stop_at_label": "Amyotrophic lateral sclerosis"
+    }
+  ]
+}

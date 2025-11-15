@@ -1,0 +1,32 @@
+{
+  "batch_index": 62,
+  "raw_response": "[\n  {\n    \"concept_id\": \"35919005\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"35919005\",\n    \"stop_at_label\": \"\",\n    \"rationale\": \"All ancestors are generic “disorder/disease” (deny-list). Keep the specific requirement to remain clinically meaningful.\"\n  },\n  {\n    \"concept_id\": \"408680002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"425464007\",\n    \"stop_at_label\": \"Hospital acquired pneumonia\",\n    \"rationale\": \"Hospital acquired pneumonia preserves the clinical program context (HAP) while remaining specific. Broader ancestors like “pneumonia” or generic “disorder” would be too inclusive.\"\n  },\n  {\n    \"concept_id\": \"108241001\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"108241001\",\n    \"stop_at_label\": \"\",\n    \"rationale\": \"Ancestors are “procedure” or overly generic (“SNOMED CT Concept”), both disallowed. Exclusions > inclusions and shallow depth argue for no generalization.\"\n  },\n  {\n    \"concept_id\": \"414804006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"413481004\",\n    \"stop_at_label\": \"Alpha-4 integrin receptor antagonist-containing product\",\n    \"rationale\": \"Alpha-4 integrin receptor antagonist-containing product preserves mechanism-of-action and intent, broader than a single drug yet still specific. More general ancestors (e.g., monoclonal antibody-containing product) are too broad.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "35919005",
+      "hops": 0,
+      "rationale": "All ancestors are generic “disorder/disease” (deny-list). Keep the specific requirement to remain clinically meaningful.",
+      "stop_at_concept_id": "35919005"
+    },
+    {
+      "concept_id": "408680002",
+      "hops": 1,
+      "rationale": "Hospital acquired pneumonia preserves the clinical program context (HAP) while remaining specific. Broader ancestors like “pneumonia” or generic “disorder” woul",
+      "stop_at_concept_id": "425464007",
+      "stop_at_label": "Hospital acquired pneumonia"
+    },
+    {
+      "concept_id": "108241001",
+      "hops": 0,
+      "rationale": "Ancestors are “procedure” or overly generic (“SNOMED CT Concept”), both disallowed. Exclusions > inclusions and shallow depth argue for no generalization.",
+      "stop_at_concept_id": "108241001"
+    },
+    {
+      "concept_id": "414804006",
+      "hops": 1,
+      "rationale": "Alpha-4 integrin receptor antagonist-containing product preserves mechanism-of-action and intent, broader than a single drug yet still specific. More general an",
+      "stop_at_concept_id": "413481004",
+      "stop_at_label": "Alpha-4 integrin receptor antagonist-containing product"
+    }
+  ]
+}

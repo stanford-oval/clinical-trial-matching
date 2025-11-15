@@ -1,0 +1,74 @@
+[
+  {
+    "concept_id": "28111002",
+    "alt_concept_id": "413201000",
+    "hop": 1,
+    "alt_label": "Atrophic mucosa",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:26:50"
+  },
+  {
+    "concept_id": "28111002",
+    "alt_concept_id": "362975008",
+    "hop": 1,
+    "alt_label": "Degenerative disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:26:50"
+  },
+  {
+    "concept_id": "28111002",
+    "alt_concept_id": "70076002",
+    "hop": 1,
+    "alt_label": "Rhinitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:26:50"
+  },
+  {
+    "concept_id": "40739000",
+    "alt_concept_id": "40739000",
+    "hop": 0,
+    "alt_label": "Dysphagia",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:26:50"
+  },
+  {
+    "concept_id": "449153001",
+    "alt_concept_id": "276803003",
+    "hop": 1,
+    "alt_label": "Adenocarcinoma of esophagus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:26:50"
+  },
+  {
+    "concept_id": "721628002",
+    "alt_concept_id": "721630000",
+    "hop": 1,
+    "alt_label": "Primary adenocarcinoma of cardia of stomach",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:26:50"
+  },
+  {
+    "concept_id": "721628002",
+    "alt_concept_id": "128041000119107",
+    "hop": 1,
+    "alt_label": "Primary adenocarcinoma of distal third of esophagus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:26:50"
+  },
+  {
+    "concept_id": "721628002",
+    "alt_concept_id": "722533007",
+    "hop": 1,
+    "alt_label": "Primary malignant neoplasm of esophagogastric junction",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:26:50"
+  },
+  {
+    "concept_id": "84114007",
+    "alt_concept_id": "84114007",
+    "hop": 0,
+    "alt_label": "Heart failure",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:26:50"
+  }
+]

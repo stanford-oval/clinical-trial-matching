@@ -1,0 +1,106 @@
+[
+  {
+    "concept_id": "15033003",
+    "alt_concept_id": "59707005",
+    "hop": 1,
+    "alt_label": "Abscess of pharynx",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "15033003",
+    "alt_concept_id": "399986003",
+    "hop": 1,
+    "alt_label": "Disorder of body wall",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "15033003",
+    "alt_concept_id": "363176004",
+    "hop": 1,
+    "alt_label": "Inflammatory disorder of head",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "15033003",
+    "alt_concept_id": "33431000119109",
+    "hop": 1,
+    "alt_label": "Oropharyngeal lesion",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "178591005",
+    "alt_concept_id": "178590006",
+    "hop": 1,
+    "alt_label": "Revision decompression of cervical spine",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "371632003",
+    "alt_concept_id": "371632003",
+    "hop": 0,
+    "alt_label": "Coma",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "71186008",
+    "alt_concept_id": "195742007",
+    "hop": 1,
+    "alt_label": "Acute lower respiratory tract infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "71186008",
+    "alt_concept_id": "54398005",
+    "hop": 1,
+    "alt_label": "Acute upper respiratory infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "71186008",
+    "alt_concept_id": "233795005",
+    "hop": 1,
+    "alt_label": "Infectious disorder of bronchus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "71186008",
+    "alt_concept_id": "233785003",
+    "hop": 1,
+    "alt_label": "Infectious disorder of trachea",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "71186008",
+    "alt_concept_id": "312423006",
+    "hop": 1,
+    "alt_label": "Infective laryngitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "71186008",
+    "alt_concept_id": "85915003",
+    "hop": 1,
+    "alt_label": "Laryngotracheobronchitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  },
+  {
+    "concept_id": "78164000",
+    "alt_concept_id": "289156007",
+    "hop": 1,
+    "alt_label": "Feeding finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:27:26"
+  }
+]

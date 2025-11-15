@@ -1,0 +1,41 @@
+{
+  "batch_index": 6,
+  "raw_response": "[\n  {\n    \"concept_id\": \"29857009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"29857009\",\n    \"stop_at_label\": \"Chest pain\",\n    \"rationale\": \"Parents either lose pain mechanism or overgeneralize beyond chest; tight timeframe and clause size favor no generalization to keep relevance.\"\n  },\n  {\n    \"concept_id\": \"109979007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"118601006\",\n    \"stop_at_label\": \"Non-Hodgkin's lymphoma (clinical)\",\n    \"rationale\": \"Parent maintains lymphoma type and hematologic lineage, avoiding generic neoplasm categories. Tight timeframe and small clauses support H=1.\"\n  },\n  {\n    \"concept_id\": \"128188000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"29426003\",\n    \"stop_at_label\": \"Paralytic syndrome\",\n    \"rationale\": \"Paralytic syndrome preserves mechanism and neuro focus; alternatives are generic 'disorder' or site findings. Tight timeframe/clauses justify H=1.\"\n  },\n  {\n    \"concept_id\": \"62718007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"300267005\",\n    \"stop_at_label\": \"Salivation finding\",\n    \"rationale\": \"Maintains salivation mechanism; other ancestors are site-level or system-level and too broad. Tight timeframe and small clauses favor H=1.\"\n  },\n  {\n    \"concept_id\": \"169413002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"65541007\",\n    \"stop_at_label\": \"Administration of hormone\",\n    \"rationale\": \"Preserves therapeutic intent; alternatives are broader (drug therapy, administration of medication) or denied (procedure). Tight timeframe/clauses support H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "29857009",
+      "hops": 0,
+      "rationale": "Parents either lose pain mechanism or overgeneralize beyond chest; tight timeframe and clause size favor no generalization to keep relevance.",
+      "stop_at_concept_id": "29857009",
+      "stop_at_label": "Chest pain"
+    },
+    {
+      "concept_id": "109979007",
+      "hops": 1,
+      "rationale": "Parent maintains lymphoma type and hematologic lineage, avoiding generic neoplasm categories. Tight timeframe and small clauses support H=1.",
+      "stop_at_concept_id": "118601006",
+      "stop_at_label": "Non-Hodgkin's lymphoma (clinical)"
+    },
+    {
+      "concept_id": "128188000",
+      "hops": 1,
+      "rationale": "Paralytic syndrome preserves mechanism and neuro focus; alternatives are generic 'disorder' or site findings. Tight timeframe/clauses justify H=1.",
+      "stop_at_concept_id": "29426003",
+      "stop_at_label": "Paralytic syndrome"
+    },
+    {
+      "concept_id": "62718007",
+      "hops": 1,
+      "rationale": "Maintains salivation mechanism; other ancestors are site-level or system-level and too broad. Tight timeframe and small clauses favor H=1.",
+      "stop_at_concept_id": "300267005",
+      "stop_at_label": "Salivation finding"
+    },
+    {
+      "concept_id": "169413002",
+      "hops": 1,
+      "rationale": "Preserves therapeutic intent; alternatives are broader (drug therapy, administration of medication) or denied (procedure). Tight timeframe/clauses support H=1.",
+      "stop_at_concept_id": "65541007",
+      "stop_at_label": "Administration of hormone"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "batch_index": 36,
+  "raw_response": "[\n  {\n    \"concept_id\": \"363478007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"127018007\",\n    \"stop_at_label\": \"Neoplasm of thyroid gland\",\n    \"rationale\": \"Keeps thyroid-organ neoplasm focus while avoiding endocrine-wide or neck-region malignancy categories; parents with 'malignant neck' or endocrine-wide are too broad. Tight timeframe favors minimal generalization.\"\n  },\n  {\n    \"concept_id\": \"68235000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"118237005\",\n    \"stop_at_label\": \"Nose finding\",\n    \"rationale\": \"Preserves nasal/upper airway focus without jumping to broader head/face or generic region findings. Tight timeframe and small clause support a minimal, organ-site generalization.\"\n  },\n  {\n    \"concept_id\": \"54150009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"275498002\",\n    \"stop_at_label\": \"Respiratory tract infection\",\n    \"rationale\": \"Captures infection mechanism and respiratory site while avoiding banned 'disorder' parent. Given higher exclusions, a minimal H=1 generalization is appropriately conservative.\"\n  },\n  {\n    \"concept_id\": \"127040003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"123772008\",\n    \"stop_at_label\": \"Homozygous hemoglobinopathy\",\n    \"rationale\": \"Maintains hemoglobinopathy mechanism and homozygous specificity, avoiding broad anemia categories and banned 'disorder/disease' labels. Suitable minimal generalization for sickle cell anemia.\"\n  },\n  {\n    \"concept_id\": \"35434009\",\n    \"hops\": 3,\n    \"stop_at_concept_id\": \"416417002\",\n    \"stop_at_label\": \"Hereditary hemoglobin S\",\n    \"rationale\": \"Preserves HbS sickling mechanism while avoiding parents with banned 'disorder' labels. H=2 ‘Hemoglobinopathy’ is too broad; H=3 remains clinically specific.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "363478007",
+      "hops": 1,
+      "rationale": "Keeps thyroid-organ neoplasm focus while avoiding endocrine-wide or neck-region malignancy categories; parents with 'malignant neck' or endocrine-wide are too b",
+      "stop_at_concept_id": "127018007",
+      "stop_at_label": "Neoplasm of thyroid gland"
+    },
+    {
+      "concept_id": "68235000",
+      "hops": 1,
+      "rationale": "Preserves nasal/upper airway focus without jumping to broader head/face or generic region findings. Tight timeframe and small clause support a minimal, organ-si",
+      "stop_at_concept_id": "118237005",
+      "stop_at_label": "Nose finding"
+    },
+    {
+      "concept_id": "54150009",
+      "hops": 1,
+      "rationale": "Captures infection mechanism and respiratory site while avoiding banned 'disorder' parent. Given higher exclusions, a minimal H=1 generalization is appropriatel",
+      "stop_at_concept_id": "275498002",
+      "stop_at_label": "Respiratory tract infection"
+    },
+    {
+      "concept_id": "127040003",
+      "hops": 1,
+      "rationale": "Maintains hemoglobinopathy mechanism and homozygous specificity, avoiding broad anemia categories and banned 'disorder/disease' labels. Suitable minimal general",
+      "stop_at_concept_id": "123772008",
+      "stop_at_label": "Homozygous hemoglobinopathy"
+    },
+    {
+      "concept_id": "35434009",
+      "hops": 3,
+      "rationale": "Preserves HbS sickling mechanism while avoiding parents with banned 'disorder' labels. H=2 ‘Hemoglobinopathy’ is too broad; H=3 remains clinically specific.",
+      "stop_at_concept_id": "416417002",
+      "stop_at_label": "Hereditary hemoglobin S"
+    }
+  ]
+}

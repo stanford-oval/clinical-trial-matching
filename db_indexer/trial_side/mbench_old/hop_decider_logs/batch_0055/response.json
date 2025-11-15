@@ -1,0 +1,41 @@
+{
+  "batch_index": 55,
+  "raw_response": "[\n  {\n    \"concept_id\": \"102588006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"29857009\",\n    \"stop_at_label\": \"Chest pain\",\n    \"rationale\": \"Parent preserves thoracic pain symptom and trial intent; avoids generic site/finding categories. Tight timeframe and small clause size support modest generalization.\"\n  },\n  {\n    \"concept_id\": \"233604007\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"233604007\",\n    \"stop_at_label\": \"Pneumonia\",\n    \"rationale\": \"Parents (lung consolidation, pneumonitis) broaden mechanism beyond pneumonia. Exclusions exceed inclusions, so remain specific.\"\n  },\n  {\n    \"concept_id\": \"38907003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"309465005\",\n    \"stop_at_label\": \"Varicella-zoster virus infection\",\n    \"rationale\": \"Keeps pathogen-specific intent (VZV) while avoiding broader herpesvirus skin infections and generic disorder/disease categories. Conservative due to high parent count.\"\n  },\n  {\n    \"concept_id\": \"102506008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"102499006\",\n    \"stop_at_label\": \"Fit and well\",\n    \"rationale\": \"Matches general well-being program intent with tight timeframe and minimal clause size, without falling to generic 'clinical finding' ancestors.\"\n  },\n  {\n    \"concept_id\": \"425464007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"312342009\",\n    \"stop_at_label\": \"Infective pneumonia\",\n    \"rationale\": \"Preserves lung infection mechanism while relaxing healthcare-associated qualifier; avoids overly broad 'healthcare-associated infectious disease'. Exclusions exceed inclusions, so limit generalization to one hop.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "102588006",
+      "hops": 1,
+      "rationale": "Parent preserves thoracic pain symptom and trial intent; avoids generic site/finding categories. Tight timeframe and small clause size support modest generaliza",
+      "stop_at_concept_id": "29857009",
+      "stop_at_label": "Chest pain"
+    },
+    {
+      "concept_id": "233604007",
+      "hops": 0,
+      "rationale": "Parents (lung consolidation, pneumonitis) broaden mechanism beyond pneumonia. Exclusions exceed inclusions, so remain specific.",
+      "stop_at_concept_id": "233604007",
+      "stop_at_label": "Pneumonia"
+    },
+    {
+      "concept_id": "38907003",
+      "hops": 1,
+      "rationale": "Keeps pathogen-specific intent (VZV) while avoiding broader herpesvirus skin infections and generic disorder/disease categories. Conservative due to high parent",
+      "stop_at_concept_id": "309465005",
+      "stop_at_label": "Varicella-zoster virus infection"
+    },
+    {
+      "concept_id": "102506008",
+      "hops": 1,
+      "rationale": "Matches general well-being program intent with tight timeframe and minimal clause size, without falling to generic 'clinical finding' ancestors.",
+      "stop_at_concept_id": "102499006",
+      "stop_at_label": "Fit and well"
+    },
+    {
+      "concept_id": "425464007",
+      "hops": 1,
+      "rationale": "Preserves lung infection mechanism while relaxing healthcare-associated qualifier; avoids overly broad 'healthcare-associated infectious disease'. Exclusions ex",
+      "stop_at_concept_id": "312342009",
+      "stop_at_label": "Infective pneumonia"
+    }
+  ]
+}

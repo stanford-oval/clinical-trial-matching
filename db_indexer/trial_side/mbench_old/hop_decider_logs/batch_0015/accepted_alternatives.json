@@ -1,0 +1,74 @@
+[
+  {
+    "concept_id": "14671001",
+    "alt_concept_id": "14671001",
+    "hop": 0,
+    "alt_label": "Thoracoscopy",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:17:56"
+  },
+  {
+    "concept_id": "48661000",
+    "alt_concept_id": "48661000",
+    "hop": 0,
+    "alt_label": "Peritonitis",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:17:56"
+  },
+  {
+    "concept_id": "56905009",
+    "alt_concept_id": "85919009",
+    "hop": 1,
+    "alt_label": "Disorder of intestine",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:17:56"
+  },
+  {
+    "concept_id": "56905009",
+    "alt_concept_id": "51875005",
+    "hop": 1,
+    "alt_label": "Gastrointestinal perforation",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:17:56"
+  },
+  {
+    "concept_id": "75119003",
+    "alt_concept_id": "721807009",
+    "hop": 1,
+    "alt_label": "Abscess caused by Entamoeba histolytica",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:17:56"
+  },
+  {
+    "concept_id": "75119003",
+    "alt_concept_id": "27916005",
+    "hop": 1,
+    "alt_label": "Abscess of liver",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:17:56"
+  },
+  {
+    "concept_id": "75119003",
+    "alt_concept_id": "235859005",
+    "hop": 1,
+    "alt_label": "Liver disorder due to infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:17:56"
+  },
+  {
+    "concept_id": "76978006",
+    "alt_concept_id": "414464004",
+    "hop": 1,
+    "alt_label": "Immunoassay method",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:17:56"
+  },
+  {
+    "concept_id": "76978006",
+    "alt_concept_id": "414468001",
+    "hop": 1,
+    "alt_label": "Immunosorbent method",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:17:56"
+  }
+]

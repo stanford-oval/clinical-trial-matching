@@ -1,0 +1,138 @@
+[
+  {
+    "concept_id": "195647007",
+    "alt_concept_id": "63171007",
+    "hop": 1,
+    "alt_label": "Acute infectious disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "195647007",
+    "alt_concept_id": "111273006",
+    "hop": 1,
+    "alt_label": "Acute respiratory disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "195647007",
+    "alt_concept_id": "275498002",
+    "hop": 1,
+    "alt_label": "Respiratory tract infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "254637007",
+    "alt_concept_id": "448993007",
+    "hop": 1,
+    "alt_label": "Carcinoma of lung",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "254637007",
+    "alt_concept_id": "93880001",
+    "hop": 1,
+    "alt_label": "Primary malignant neoplasm of lung",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "300936002",
+    "alt_concept_id": "39104002",
+    "hop": 1,
+    "alt_label": "Illness",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "36803009",
+    "alt_concept_id": "19598007",
+    "hop": 1,
+    "alt_label": "Generalized epilepsy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "36803009",
+    "alt_concept_id": "352818000",
+    "hop": 1,
+    "alt_label": "Tonic-clonic epilepsy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "62479008",
+    "alt_concept_id": "363161007",
+    "hop": 1,
+    "alt_label": "Infectious disorder of immune system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "62479008",
+    "alt_concept_id": "33286000",
+    "hop": 1,
+    "alt_label": "Secondary immune deficiency disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "62479008",
+    "alt_concept_id": "81000119104",
+    "hop": 1,
+    "alt_label": "Symptomatic human immunodeficiency virus infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "62479008",
+    "alt_concept_id": "312130009",
+    "hop": 1,
+    "alt_label": "Viral infection by site",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "62479008",
+    "alt_concept_id": "414030009",
+    "hop": 2,
+    "alt_label": "Disorder of immune structure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "62479008",
+    "alt_concept_id": "86406008",
+    "hop": 2,
+    "alt_label": "Human immunodeficiency virus infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "62479008",
+    "alt_concept_id": "234532001",
+    "hop": 2,
+    "alt_label": "Immunodeficiency disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "62479008",
+    "alt_concept_id": "301810000",
+    "hop": 2,
+    "alt_label": "Infection by site",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  },
+  {
+    "concept_id": "62479008",
+    "alt_concept_id": "34014006",
+    "hop": 2,
+    "alt_label": "Viral disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:18:22"
+  }
+]

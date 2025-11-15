@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "109378008",
+    "alt_concept_id": "254824006",
+    "hop": 1,
+    "alt_label": "Malignant tumor of mesothelial tissue",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:14:14"
+  },
+  {
+    "concept_id": "109378008",
+    "alt_concept_id": "372087000",
+    "hop": 1,
+    "alt_label": "Primary malignant neoplasm",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:14:14"
+  },
+  {
+    "concept_id": "32895009",
+    "alt_concept_id": "32895009",
+    "hop": 0,
+    "alt_label": "Hereditary disease",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:14:14"
+  },
+  {
+    "concept_id": "399317006",
+    "alt_concept_id": "43994002",
+    "hop": 1,
+    "alt_label": "Behavior showing reduced motor activity",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:14:14"
+  },
+  {
+    "concept_id": "81266008",
+    "alt_concept_id": "81266008",
+    "hop": 0,
+    "alt_label": "Heart revascularization",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:14:14"
+  },
+  {
+    "concept_id": "93679002",
+    "alt_concept_id": "363411007",
+    "hop": 1,
+    "alt_label": "Malignant tumor of appendix",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:14:14"
+  },
+  {
+    "concept_id": "93679002",
+    "alt_concept_id": "93854002",
+    "hop": 1,
+    "alt_label": "Primary malignant neoplasm of large intestine",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:14:14"
+  }
+]

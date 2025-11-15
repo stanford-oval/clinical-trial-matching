@@ -1,0 +1,41 @@
+{
+  "batch_index": 4,
+  "raw_response": "[\n  {\n    \"concept_id\": \"38341003\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"38341003\",\n    \"stop_at_label\": \"same as requirement\",\n    \"rationale\": \"Parents include generic/deny-list categories; higher ancestors are too broad. Keeping original maintains cardiovascular specificity. Balanced inclusion/exclusion and tight timeframe favor conservative H=0.\"\n  },\n  {\n    \"concept_id\": \"308116003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"309513005\",\n    \"stop_at_label\": \"Cardiovascular therapy\",\n    \"rationale\": \"Choose parent Cardiovascular therapy: preserves cardiovascular therapeutic intent while avoiding generic 'Administration of substance' and broad procedure categories. Tight timeframe and small clause size support H=1.\"\n  },\n  {\n    \"concept_id\": \"80943009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"80943009\",\n    \"stop_at_label\": \"same as requirement\",\n    \"rationale\": \"Ancestors are 'Clinical history/examination observable' and 'Observable entity'—both too generic/deny-list. Exclusions exceed inclusions and depth is shallow; keep requirement specific with H=0.\"\n  },\n  {\n    \"concept_id\": \"230738008\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"230738008\",\n    \"stop_at_label\": \"same as requirement\",\n    \"rationale\": \"Parent and grandparents are denied ('disease','disorder'); great-grandparent options are broad findings. Maintain cerebrovascular specificity by staying at the requirement. Tight timeframe supports conservative H=0.\"\n  },\n  {\n    \"concept_id\": \"308546005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"710864009\",\n    \"stop_at_label\": \"Dissection of artery\",\n    \"rationale\": \"Select parent Dissection of artery: retains mechanism and vascular system, avoiding denied 'Disorder of aorta' and overly generic categories. Clinically coherent generalization; H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "38341003",
+      "hops": 0,
+      "rationale": "Parents include generic/deny-list categories; higher ancestors are too broad. Keeping original maintains cardiovascular specificity. Balanced inclusion/exclusio",
+      "stop_at_concept_id": "38341003",
+      "stop_at_label": "same as requirement"
+    },
+    {
+      "concept_id": "308116003",
+      "hops": 1,
+      "rationale": "Choose parent Cardiovascular therapy: preserves cardiovascular therapeutic intent while avoiding generic 'Administration of substance' and broad procedure categ",
+      "stop_at_concept_id": "309513005",
+      "stop_at_label": "Cardiovascular therapy"
+    },
+    {
+      "concept_id": "80943009",
+      "hops": 0,
+      "rationale": "Ancestors are 'Clinical history/examination observable' and 'Observable entity'—both too generic/deny-list. Exclusions exceed inclusions and depth is shallow; k",
+      "stop_at_concept_id": "80943009",
+      "stop_at_label": "same as requirement"
+    },
+    {
+      "concept_id": "230738008",
+      "hops": 0,
+      "rationale": "Parent and grandparents are denied ('disease','disorder'); great-grandparent options are broad findings. Maintain cerebrovascular specificity by staying at the ",
+      "stop_at_concept_id": "230738008",
+      "stop_at_label": "same as requirement"
+    },
+    {
+      "concept_id": "308546005",
+      "hops": 1,
+      "rationale": "Select parent Dissection of artery: retains mechanism and vascular system, avoiding denied 'Disorder of aorta' and overly generic categories. Clinically coheren",
+      "stop_at_concept_id": "710864009",
+      "stop_at_label": "Dissection of artery"
+    }
+  ]
+}

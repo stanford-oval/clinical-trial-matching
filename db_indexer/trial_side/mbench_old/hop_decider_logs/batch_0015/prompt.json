@@ -1,0 +1,618 @@
+{
+  "batch_index": 15,
+  "offset": 70,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "56905009",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "85919009",
+            "label": "Disorder of intestine"
+          },
+          {
+            "concept_id": "85919009",
+            "label": "Disorder of intestine"
+          },
+          {
+            "concept_id": "51875005",
+            "label": "Gastrointestinal perforation"
+          },
+          {
+            "concept_id": "51875005",
+            "label": "Gastrointestinal perforation"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "609627001",
+            "label": "Finding of abdominal segment of trunk"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "609618002",
+            "label": "Disorder of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "609624008",
+            "label": "Finding of abdomen"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "249561001",
+            "label": "Abdominal organ finding"
+          },
+          {
+            "concept_id": "118948005",
+            "label": "Disorder of abdomen"
+          },
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "84410009",
+            "label": "Disorder of digestive tract"
+          },
+          {
+            "concept_id": "386618008",
+            "label": "Gastrointestinal tract finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "249562008",
+            "label": "Bowel finding"
+          },
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "119292006",
+            "label": "Disorder of gastrointestinal tract"
+          },
+          {
+            "concept_id": "79787007",
+            "label": "Disorder of lower gastrointestinal tract"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "48661000",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "66579008",
+            "label": "Disorder of peritoneum"
+          },
+          {
+            "concept_id": "66579008",
+            "label": "Disorder of peritoneum"
+          },
+          {
+            "concept_id": "363169009",
+            "label": "Inflammation of specific body organs"
+          },
+          {
+            "concept_id": "363169009",
+            "label": "Inflammation of specific body organs"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "609627001",
+            "label": "Finding of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "248402002",
+            "label": "General finding of soft tissue"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "609618002",
+            "label": "Disorder of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "105969002",
+            "label": "Disorder of connective tissue"
+          },
+          {
+            "concept_id": "19660004",
+            "label": "Disorder of soft tissue"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "609624008",
+            "label": "Finding of abdomen"
+          },
+          {
+            "concept_id": "128139000",
+            "label": "Inflammatory disorder"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "363044007",
+            "label": "Connective tissue disorder by body site"
+          },
+          {
+            "concept_id": "118948005",
+            "label": "Disorder of abdomen"
+          },
+          {
+            "concept_id": "280133005",
+            "label": "Disorder of soft tissue of trunk"
+          },
+          {
+            "concept_id": "363170005",
+            "label": "Inflammation of specific body structures or tissue"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "75119003",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "721807009",
+            "label": "Abscess caused by Entamoeba histolytica"
+          },
+          {
+            "concept_id": "721807009",
+            "label": "Abscess caused by Entamoeba histolytica"
+          },
+          {
+            "concept_id": "27916005",
+            "label": "Abscess of liver"
+          },
+          {
+            "concept_id": "27916005",
+            "label": "Abscess of liver"
+          },
+          {
+            "concept_id": "235859005",
+            "label": "Liver disorder due to infection"
+          },
+          {
+            "concept_id": "235859005",
+            "label": "Liver disorder due to infection"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "47493003",
+            "label": "Abdominal visceral abscess"
+          },
+          {
+            "concept_id": "128477000",
+            "label": "Abscess"
+          },
+          {
+            "concept_id": "735425008",
+            "label": "Abscess of digestive system"
+          },
+          {
+            "concept_id": "235856003",
+            "label": "Disease of liver"
+          },
+          {
+            "concept_id": "388759003",
+            "label": "Infection due to Entamoeba histolytica"
+          },
+          {
+            "concept_id": "312158001",
+            "label": "Infection of digestive system"
+          },
+          {
+            "concept_id": "128070006",
+            "label": "Infectious disease of abdomen"
+          },
+          {
+            "concept_id": "300331000",
+            "label": "Lesion of liver"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "111910009",
+            "label": "Amebic infection"
+          },
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "609627001",
+            "label": "Finding of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "363170005",
+            "label": "Inflammation of specific body structures or tissue"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "49298003",
+            "label": "Abscess of trunk"
+          },
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "105637008",
+            "label": "Disease due to Endamoebidae"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "40733004",
+            "label": "Disorder due to infection"
+          },
+          {
+            "concept_id": "609618002",
+            "label": "Disorder of abdominal segment of trunk"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "609624008",
+            "label": "Finding of abdomen"
+          },
+          {
+            "concept_id": "363171009",
+            "label": "Inflammation of specific body systems"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "75100008",
+            "label": "Abdominal abscess"
+          },
+          {
+            "concept_id": "249561001",
+            "label": "Abdominal organ finding"
+          },
+          {
+            "concept_id": "118948005",
+            "label": "Disorder of abdomen"
+          },
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "48252005",
+            "label": "Infection by Entamoeba"
+          },
+          {
+            "concept_id": "301810000",
+            "label": "Infection by site"
+          },
+          {
+            "concept_id": "128139000",
+            "label": "Inflammatory disorder"
+          },
+          {
+            "concept_id": "373407002",
+            "label": "Inflammatory disorder of digestive system"
+          },
+          {
+            "concept_id": "249565005",
+            "label": "Liver finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          },
+          {
+            "concept_id": "95896000",
+            "label": "Protozoan infection"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "76978006",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "414464004",
+            "label": "Immunoassay method"
+          },
+          {
+            "concept_id": "414464004",
+            "label": "Immunoassay method"
+          },
+          {
+            "concept_id": "414468001",
+            "label": "Immunosorbent method"
+          },
+          {
+            "concept_id": "414468001",
+            "label": "Immunosorbent method"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "386053000",
+            "label": "Evaluation procedure"
+          },
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "252318005",
+            "label": "Immunology laboratory test"
+          },
+          {
+            "concept_id": "127789004",
+            "label": "Laboratory procedure categorized by method"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "108252007",
+            "label": "Laboratory procedure"
+          },
+          {
+            "concept_id": "15220000",
+            "label": "Laboratory test"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "14671001",
+      "features": {
+        "depth_from_root": 4,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "423827005",
+            "label": "Endoscopy"
+          },
+          {
+            "concept_id": "423827005",
+            "label": "Endoscopy"
+          },
+          {
+            "concept_id": "284365007",
+            "label": "Examination of body site"
+          },
+          {
+            "concept_id": "284365007",
+            "label": "Examination of body site"
+          },
+          {
+            "concept_id": "118695007",
+            "label": "Procedure on thorax"
+          },
+          {
+            "concept_id": "118695007",
+            "label": "Procedure on thorax"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "315306007",
+            "label": "Examination by method"
+          },
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          },
+          {
+            "concept_id": "771329004",
+            "label": "Procedure on body region"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "386053000",
+            "label": "Evaluation procedure"
+          },
+          {
+            "concept_id": "108217004",
+            "label": "Interview, history AND/OR physical examination"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "32750006",
+            "label": "Inspection"
+          },
+          {
+            "concept_id": "5880005",
+            "label": "Physical examination"
+          },
+          {
+            "concept_id": "363691001",
+            "label": "Procedure categorized by device involved"
+          },
+          {
+            "concept_id": "118694006",
+            "label": "Procedure on trunk"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 31902,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"56905009\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"85919009\",\n          \"label\": \"Disorder of intestine\"\n        },\n        {\n          \"concept_id\": \"85919009\",\n          \"label\": \"Disorder of intestine\"\n        },\n        {\n          \"concept_id\": \"51875005\",\n          \"label\": \"Gastrointestinal perforation\"\n        },\n        {\n          \"concept_id\": \"51875005\",\n          \"label\": \"Gastrointestinal perforation\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"249561001\",\n          \"label\": \"Abdominal organ finding\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"386618008\",\n          \"label\": \"Gastrointestinal tract finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"249562008\",\n          \"label\": \"Bowel finding\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"119292006\",\n          \"label\": \"Disorder of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"79787007\",\n          \"label\": \"Disorder of lower gastrointestinal tract\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"48661000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"66579008\",\n          \"label\": \"Disorder of peritoneum\"\n        },\n        {\n          \"concept_id\": \"66579008\",\n          \"label\": \"Disorder of peritoneum\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"105969002\",\n          \"label\": \"Disorder of connective tissue\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363044007\",\n          \"label\": \"Connective tissue disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"280133005\",\n          \"label\": \"Disorder of soft tissue of trunk\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"75119003\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"721807009\",\n          \"label\": \"Abscess caused by Entamoeba histolytica\"\n        },\n        {\n          \"concept_id\": \"721807009\",\n          \"label\": \"Abscess caused by Entamoeba histolytica\"\n        },\n        {\n          \"concept_id\": \"27916005\",\n          \"label\": \"Abscess of liver\"\n        },\n        {\n          \"concept_id\": \"27916005\",\n          \"label\": \"Abscess of liver\"\n        },\n        {\n          \"concept_id\": \"235859005\",\n          \"label\": \"Liver disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"235859005\",\n          \"label\": \"Liver disorder due to infection\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"47493003\",\n          \"label\": \"Abdominal visceral abscess\"\n        },\n        {\n          \"concept_id\": \"128477000\",\n          \"label\": \"Abscess\"\n        },\n        {\n          \"concept_id\": \"735425008\",\n          \"label\": \"Abscess of digestive system\"\n        },\n        {\n          \"concept_id\": \"235856003\",\n          \"label\": \"Disease of liver\"\n        },\n        {\n          \"concept_id\": \"388759003\",\n          \"label\": \"Infection due to Entamoeba histolytica\"\n        },\n        {\n          \"concept_id\": \"312158001\",\n          \"label\": \"Infection of digestive system\"\n        },\n        {\n          \"concept_id\": \"128070006\",\n          \"label\": \"Infectious disease of abdomen\"\n        },\n        {\n          \"concept_id\": \"300331000\",\n          \"label\": \"Lesion of liver\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"111910009\",\n          \"label\": \"Amebic infection\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"49298003\",\n          \"label\": \"Abscess of trunk\"\n        },\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"105637008\",\n          \"label\": \"Disease due to Endamoebidae\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"363171009\",\n          \"label\": \"Inflammation of specific body systems\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"75100008\",\n          \"label\": \"Abdominal abscess\"\n        },\n        {\n          \"concept_id\": \"249561001\",\n          \"label\": \"Abdominal organ finding\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"48252005\",\n          \"label\": \"Infection by Entamoeba\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"373407002\",\n          \"label\": \"Inflammatory disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"249565005\",\n          \"label\": \"Liver finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"95896000\",\n          \"label\": \"Protozoan infection\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"76978006\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"414464004\",\n          \"label\": \"Immunoassay method\"\n        },\n        {\n          \"concept_id\": \"414464004\",\n          \"label\": \"Immunoassay method\"\n        },\n        {\n          \"concept_id\": \"414468001\",\n          \"label\": \"Immunosorbent method\"\n        },\n        {\n          \"concept_id\": \"414468001\",\n          \"label\": \"Immunosorbent method\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386053000\",\n          \"label\": \"Evaluation procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"252318005\",\n          \"label\": \"Immunology laboratory test\"\n        },\n        {\n          \"concept_id\": \"127789004\",\n          \"label\": \"Laboratory procedure categorized by method\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"108252007\",\n          \"label\": \"Laboratory procedure\"\n        },\n        {\n          \"concept_id\": \"15220000\",\n          \"label\": \"Laboratory test\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"14671001\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"423827005\",\n          \"label\": \"Endoscopy\"\n        },\n        {\n          \"concept_id\": \"423827005\",\n          \"label\": \"Endoscopy\"\n        },\n        {\n          \"concept_id\": \"284365007\",\n          \"label\": \"Examination of body site\"\n        },\n        {\n          \"concept_id\": \"284365007\",\n          \"label\": \"Examination of body site\"\n        },\n        {\n          \"concept_id\": \"118695007\",\n          \"label\": \"Procedure on thorax\"\n        },\n        {\n          \"concept_id\": \"118695007\",\n          \"label\": \"Procedure on thorax\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"315306007\",\n          \"label\": \"Examination by method\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386053000\",\n          \"label\": \"Evaluation procedure\"\n        },\n        {\n          \"concept_id\": \"108217004\",\n          \"label\": \"Interview, history AND/OR physical examination\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"32750006\",\n          \"label\": \"Inspection\"\n        },\n        {\n          \"concept_id\": \"5880005\",\n          \"label\": \"Physical examination\"\n        },\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"56905009\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"85919009\",\n          \"label\": \"Disorder of intestine\"\n        },\n        {\n          \"concept_id\": \"85919009\",\n          \"label\": \"Disorder of intestine\"\n        },\n        {\n          \"concept_id\": \"51875005\",\n          \"label\": \"Gastrointestinal perforation\"\n        },\n        {\n          \"concept_id\": \"51875005\",\n          \"label\": \"Gastrointestinal perforation\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"249561001\",\n          \"label\": \"Abdominal organ finding\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"386618008\",\n          \"label\": \"Gastrointestinal tract finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"249562008\",\n          \"label\": \"Bowel finding\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"119292006\",\n          \"label\": \"Disorder of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"79787007\",\n          \"label\": \"Disorder of lower gastrointestinal tract\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"48661000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"66579008\",\n          \"label\": \"Disorder of peritoneum\"\n        },\n        {\n          \"concept_id\": \"66579008\",\n          \"label\": \"Disorder of peritoneum\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        },\n        {\n          \"concept_id\": \"363169009\",\n          \"label\": \"Inflammation of specific body organs\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"105969002\",\n          \"label\": \"Disorder of connective tissue\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"363044007\",\n          \"label\": \"Connective tissue disorder by body site\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"280133005\",\n          \"label\": \"Disorder of soft tissue of trunk\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"75119003\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"721807009\",\n          \"label\": \"Abscess caused by Entamoeba histolytica\"\n        },\n        {\n          \"concept_id\": \"721807009\",\n          \"label\": \"Abscess caused by Entamoeba histolytica\"\n        },\n        {\n          \"concept_id\": \"27916005\",\n          \"label\": \"Abscess of liver\"\n        },\n        {\n          \"concept_id\": \"27916005\",\n          \"label\": \"Abscess of liver\"\n        },\n        {\n          \"concept_id\": \"235859005\",\n          \"label\": \"Liver disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"235859005\",\n          \"label\": \"Liver disorder due to infection\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"47493003\",\n          \"label\": \"Abdominal visceral abscess\"\n        },\n        {\n          \"concept_id\": \"128477000\",\n          \"label\": \"Abscess\"\n        },\n        {\n          \"concept_id\": \"735425008\",\n          \"label\": \"Abscess of digestive system\"\n        },\n        {\n          \"concept_id\": \"235856003\",\n          \"label\": \"Disease of liver\"\n        },\n        {\n          \"concept_id\": \"388759003\",\n          \"label\": \"Infection due to Entamoeba histolytica\"\n        },\n        {\n          \"concept_id\": \"312158001\",\n          \"label\": \"Infection of digestive system\"\n        },\n        {\n          \"concept_id\": \"128070006\",\n          \"label\": \"Infectious disease of abdomen\"\n        },\n        {\n          \"concept_id\": \"300331000\",\n          \"label\": \"Lesion of liver\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"111910009\",\n          \"label\": \"Amebic infection\"\n        },\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"609627001\",\n          \"label\": \"Finding of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"363170005\",\n          \"label\": \"Inflammation of specific body structures or tissue\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"49298003\",\n          \"label\": \"Abscess of trunk\"\n        },\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"105637008\",\n          \"label\": \"Disease due to Endamoebidae\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"609618002\",\n          \"label\": \"Disorder of abdominal segment of trunk\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"609624008\",\n          \"label\": \"Finding of abdomen\"\n        },\n        {\n          \"concept_id\": \"363171009\",\n          \"label\": \"Inflammation of specific body systems\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"75100008\",\n          \"label\": \"Abdominal abscess\"\n        },\n        {\n          \"concept_id\": \"249561001\",\n          \"label\": \"Abdominal organ finding\"\n        },\n        {\n          \"concept_id\": \"118948005\",\n          \"label\": \"Disorder of abdomen\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"48252005\",\n          \"label\": \"Infection by Entamoeba\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"128139000\",\n          \"label\": \"Inflammatory disorder\"\n        },\n        {\n          \"concept_id\": \"373407002\",\n          \"label\": \"Inflammatory disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"249565005\",\n          \"label\": \"Liver finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        },\n        {\n          \"concept_id\": \"95896000\",\n          \"label\": \"Protozoan infection\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"76978006\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"414464004\",\n          \"label\": \"Immunoassay method\"\n        },\n        {\n          \"concept_id\": \"414464004\",\n          \"label\": \"Immunoassay method\"\n        },\n        {\n          \"concept_id\": \"414468001\",\n          \"label\": \"Immunosorbent method\"\n        },\n        {\n          \"concept_id\": \"414468001\",\n          \"label\": \"Immunosorbent method\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386053000\",\n          \"label\": \"Evaluation procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"252318005\",\n          \"label\": \"Immunology laboratory test\"\n        },\n        {\n          \"concept_id\": \"127789004\",\n          \"label\": \"Laboratory procedure categorized by method\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"108252007\",\n          \"label\": \"Laboratory procedure\"\n        },\n        {\n          \"concept_id\": \"15220000\",\n          \"label\": \"Laboratory test\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"14671001\",\n    \"features\": {\n      \"depth_from_root\": 4,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"423827005\",\n          \"label\": \"Endoscopy\"\n        },\n        {\n          \"concept_id\": \"423827005\",\n          \"label\": \"Endoscopy\"\n        },\n        {\n          \"concept_id\": \"284365007\",\n          \"label\": \"Examination of body site\"\n        },\n        {\n          \"concept_id\": \"284365007\",\n          \"label\": \"Examination of body site\"\n        },\n        {\n          \"concept_id\": \"118695007\",\n          \"label\": \"Procedure on thorax\"\n        },\n        {\n          \"concept_id\": \"118695007\",\n          \"label\": \"Procedure on thorax\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"315306007\",\n          \"label\": \"Examination by method\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386053000\",\n          \"label\": \"Evaluation procedure\"\n        },\n        {\n          \"concept_id\": \"108217004\",\n          \"label\": \"Interview, history AND/OR physical examination\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"32750006\",\n          \"label\": \"Inspection\"\n        },\n        {\n          \"concept_id\": \"5880005\",\n          \"label\": \"Physical examination\"\n        },\n        {\n          \"concept_id\": \"363691001\",\n          \"label\": \"Procedure categorized by device involved\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        }\n      ]\n    }\n  }\n]\n"
+}

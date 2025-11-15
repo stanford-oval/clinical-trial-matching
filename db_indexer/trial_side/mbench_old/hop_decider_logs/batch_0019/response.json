@@ -1,0 +1,41 @@
+{
+  "batch_index": 19,
+  "raw_response": "[\n  {\n    \"concept_id\": \"184091000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"184087005\",\n    \"stop_at_label\": \"Patient temporarily left\",\n    \"rationale\": \"Generalizes a specific temporary-leave status while preserving administrative intent; conservative since exclusions exceed inclusions; avoids very generic registration categories.\"\n  },\n  {\n    \"concept_id\": \"23968004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"27010001\",\n    \"stop_at_label\": \"Partial excision of large intestine\",\n    \"rationale\": \"Retains organ and excisional mechanism; avoids overly broad ‘operation on colon’ and generic ‘procedure’ ancestors; timeframe tight and clause size small supports H=1.\"\n  },\n  {\n    \"concept_id\": \"363402007\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"363402007\",\n    \"stop_at_label\": \"Malignant neoplasm of esophagus\",\n    \"rationale\": \"Parents either broaden site to entire GI tract or drop malignancy. Keeping the exact esophageal cancer preserves trial intent; parent_count is high, so conservative.\"\n  },\n  {\n    \"concept_id\": \"13645005\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"13645005\",\n    \"stop_at_label\": \"Chronic bronchitis\",\n    \"rationale\": \"Parent options are overly broad or generic categories. Exclusions slightly exceed inclusions; staying specific preserves respiratory program intent and chronicity.\"\n  },\n  {\n    \"concept_id\": \"77097004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"240075007\",\n    \"stop_at_label\": \"Autosomal dominant muscular dystrophy not predominantly limb girdle\",\n    \"rationale\": \"Captures mechanism and inheritance, keeping muscular dystrophy subtype relevant while avoiding unrelated anatomic congenital anomaly parents and overly broad categories.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "184091000",
+      "hops": 1,
+      "rationale": "Generalizes a specific temporary-leave status while preserving administrative intent; conservative since exclusions exceed inclusions; avoids very generic regis",
+      "stop_at_concept_id": "184087005",
+      "stop_at_label": "Patient temporarily left"
+    },
+    {
+      "concept_id": "23968004",
+      "hops": 1,
+      "rationale": "Retains organ and excisional mechanism; avoids overly broad ‘operation on colon’ and generic ‘procedure’ ancestors; timeframe tight and clause size small suppor",
+      "stop_at_concept_id": "27010001",
+      "stop_at_label": "Partial excision of large intestine"
+    },
+    {
+      "concept_id": "363402007",
+      "hops": 0,
+      "rationale": "Parents either broaden site to entire GI tract or drop malignancy. Keeping the exact esophageal cancer preserves trial intent; parent_count is high, so conserva",
+      "stop_at_concept_id": "363402007",
+      "stop_at_label": "Malignant neoplasm of esophagus"
+    },
+    {
+      "concept_id": "13645005",
+      "hops": 0,
+      "rationale": "Parent options are overly broad or generic categories. Exclusions slightly exceed inclusions; staying specific preserves respiratory program intent and chronici",
+      "stop_at_concept_id": "13645005",
+      "stop_at_label": "Chronic bronchitis"
+    },
+    {
+      "concept_id": "77097004",
+      "hops": 1,
+      "rationale": "Captures mechanism and inheritance, keeping muscular dystrophy subtype relevant while avoiding unrelated anatomic congenital anomaly parents and overly broad ca",
+      "stop_at_concept_id": "240075007",
+      "stop_at_label": "Autosomal dominant muscular dystrophy not predominantly limb girdle"
+    }
+  ]
+}

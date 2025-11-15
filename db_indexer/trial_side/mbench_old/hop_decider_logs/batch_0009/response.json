@@ -1,0 +1,41 @@
+{
+  "batch_index": 9,
+  "raw_response": "[\n  {\n    \"concept_id\": \"394659003\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"394659003\",\n    \"stop_at_label\": \"original\",\n    \"rationale\": \"Ancestors are disease/disorder or generic findings (deny-list or too broad). Retain the specific acute ischemic heart condition to preserve cardiovascular intent, with tight timeframe and mixed inclusion/exclusion suggesting conservative generalization.\"\n  },\n  {\n    \"concept_id\": \"233947005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"697896007\",\n    \"stop_at_label\": \"Precapillary pulmonary hypertension\",\n    \"rationale\": \"Generalizes thromboembolic subtype while preserving pulmonary hypertension mechanism and organ system; avoids generic thrombosis/disorder categories. Tight timeframe and poly-hierarchy favor conservative hop-1 choice.\"\n  },\n  {\n    \"concept_id\": \"102587001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"29857009\",\n    \"stop_at_label\": \"Chest pain\",\n    \"rationale\": \"Parent maintains thoracic pain intent and clinical relevance; preferable to generic regional findings. Tight timeframe and small clause size support hop-1.\"\n  },\n  {\n    \"concept_id\": \"78275009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"73430006\",\n    \"stop_at_label\": \"Sleep apnea\",\n    \"rationale\": \"Sleep apnea preserves breathing-related sleep disorder intent and is more general than obstructive subtype yet clinically specific; better than broad respiratory obstruction. Poly-hierarchy suggests conservative hop-1.\"\n  },\n  {\n    \"concept_id\": \"167030002\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"167030002\",\n    \"stop_at_label\": \"original\",\n    \"rationale\": \"Ancestors are generic measurement categories, risking near-universal inclusion. Keep the specific measurement abnormality to maintain assessment/intervention coherence.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "394659003",
+      "hops": 0,
+      "rationale": "Ancestors are disease/disorder or generic findings (deny-list or too broad). Retain the specific acute ischemic heart condition to preserve cardiovascular inten",
+      "stop_at_concept_id": "394659003",
+      "stop_at_label": "original"
+    },
+    {
+      "concept_id": "233947005",
+      "hops": 1,
+      "rationale": "Generalizes thromboembolic subtype while preserving pulmonary hypertension mechanism and organ system; avoids generic thrombosis/disorder categories. Tight time",
+      "stop_at_concept_id": "697896007",
+      "stop_at_label": "Precapillary pulmonary hypertension"
+    },
+    {
+      "concept_id": "102587001",
+      "hops": 1,
+      "rationale": "Parent maintains thoracic pain intent and clinical relevance; preferable to generic regional findings. Tight timeframe and small clause size support hop-1.",
+      "stop_at_concept_id": "29857009",
+      "stop_at_label": "Chest pain"
+    },
+    {
+      "concept_id": "78275009",
+      "hops": 1,
+      "rationale": "Sleep apnea preserves breathing-related sleep disorder intent and is more general than obstructive subtype yet clinically specific; better than broad respirator",
+      "stop_at_concept_id": "73430006",
+      "stop_at_label": "Sleep apnea"
+    },
+    {
+      "concept_id": "167030002",
+      "hops": 0,
+      "rationale": "Ancestors are generic measurement categories, risking near-universal inclusion. Keep the specific measurement abnormality to maintain assessment/intervention co",
+      "stop_at_concept_id": "167030002",
+      "stop_at_label": "original"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "batch_index": 25,
+  "raw_response": "[\n  {\n    \"concept_id\": \"408647009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"363349007\",\n    \"stop_at_label\": \"Malignant tumor of stomach\",\n    \"rationale\": \"Generalize from gastric adenocarcinoma to any malignant stomach tumor; preserves organ (stomach) and malignancy, relevant to gastric cancer trials; avoids generic malignant neoplasm/abdomen categories.\"\n  },\n  {\n    \"concept_id\": \"414915002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"238131007\",\n    \"stop_at_label\": \"Overweight\",\n    \"rationale\": \"Parent Overweight captures weight-status intent while remaining specific; avoids broader 'weight finding' or general clinical finding categories. Tight timeframe and simple clauses favor H=1.\"\n  },\n  {\n    \"concept_id\": \"238131007\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"238131007\",\n    \"stop_at_label\": \"Overweight\",\n    \"rationale\": \"Further generalization to 'Weight finding' is too broad and dilutes eligibility; Overweight is the minimally specific weight-status category. Keep at requirement.\"\n  },\n  {\n    \"concept_id\": \"278862001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"279039007\",\n    \"stop_at_label\": \"Low back pain\",\n    \"rationale\": \"Generalize to Low back pain; preserves symptom and anatomical region, relevant across low-back pain subtypes; avoids broader pain-by-site categories.\"\n  },\n  {\n    \"concept_id\": \"45326000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"45326000\",\n    \"stop_at_label\": \"Shoulder pain\",\n    \"rationale\": \"Parents are either too broad (upper limb pain) or nonspecific findings; keeping Shoulder pain preserves site-specific symptom needed for relevance.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "408647009",
+      "hops": 1,
+      "rationale": "Generalize from gastric adenocarcinoma to any malignant stomach tumor; preserves organ (stomach) and malignancy, relevant to gastric cancer trials; avoids gener",
+      "stop_at_concept_id": "363349007",
+      "stop_at_label": "Malignant tumor of stomach"
+    },
+    {
+      "concept_id": "414915002",
+      "hops": 1,
+      "rationale": "Parent Overweight captures weight-status intent while remaining specific; avoids broader 'weight finding' or general clinical finding categories. Tight timefram",
+      "stop_at_concept_id": "238131007",
+      "stop_at_label": "Overweight"
+    },
+    {
+      "concept_id": "238131007",
+      "hops": 0,
+      "rationale": "Further generalization to 'Weight finding' is too broad and dilutes eligibility; Overweight is the minimally specific weight-status category. Keep at requiremen",
+      "stop_at_concept_id": "238131007",
+      "stop_at_label": "Overweight"
+    },
+    {
+      "concept_id": "278862001",
+      "hops": 1,
+      "rationale": "Generalize to Low back pain; preserves symptom and anatomical region, relevant across low-back pain subtypes; avoids broader pain-by-site categories.",
+      "stop_at_concept_id": "279039007",
+      "stop_at_label": "Low back pain"
+    },
+    {
+      "concept_id": "45326000",
+      "hops": 0,
+      "rationale": "Parents are either too broad (upper limb pain) or nonspecific findings; keeping Shoulder pain preserves site-specific symptom needed for relevance.",
+      "stop_at_concept_id": "45326000",
+      "stop_at_label": "Shoulder pain"
+    }
+  ]
+}

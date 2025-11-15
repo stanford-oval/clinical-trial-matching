@@ -1,0 +1,41 @@
+{
+  "batch_index": 45,
+  "raw_response": "[\n  {\n    \"concept_id\": \"40617009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"266700009\",\n    \"stop_at_label\": \"Assisted breathing\",\n    \"rationale\": \"Assisted breathing preserves respiratory support intent; grandparent Respiratory therapy and generic Procedure categories are too broad. Moderate timeframe and single parent favor H=1.\"\n  },\n  {\n    \"concept_id\": \"52765003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"68972003\",\n    \"stop_at_label\": \"Insertion of therapeutic device\",\n    \"rationale\": \"Parent preserves mechanism (therapeutic device insertion) and tight timeframe; grandparent Implantation/Procedure categories are overly generic. Depth moderate, so H=1.\"\n  },\n  {\n    \"concept_id\": \"443961001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"722688002\",\n    \"stop_at_label\": \"Malignant epithelial neoplasm\",\n    \"rationale\": \"Maintains epithelial carcinoma scope; ancestors malignant neoplastic disease/disease are too generic or banned. Tight timeframe, so H=1.\"\n  },\n  {\n    \"concept_id\": \"53442002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"16453004\",\n    \"stop_at_label\": \"Operation on stomach\",\n    \"rationale\": \"Operation on stomach preserves organ specificity and surgical intent; other parents (GI tract/abdomen excision) are broader. Polyhierarchy → conservative H=1.\"\n  },\n  {\n    \"concept_id\": \"46177005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"42399005\",\n    \"stop_at_label\": \"Renal failure syndrome\",\n    \"rationale\": \"Preserves renal failure mechanism; broader ancestors (renal impairment, kidney disease, findings) are generic/banned. Balanced include/exclude and tight timeframe → H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "40617009",
+      "hops": 1,
+      "rationale": "Assisted breathing preserves respiratory support intent; grandparent Respiratory therapy and generic Procedure categories are too broad. Moderate timeframe and ",
+      "stop_at_concept_id": "266700009",
+      "stop_at_label": "Assisted breathing"
+    },
+    {
+      "concept_id": "52765003",
+      "hops": 1,
+      "rationale": "Parent preserves mechanism (therapeutic device insertion) and tight timeframe; grandparent Implantation/Procedure categories are overly generic. Depth moderate,",
+      "stop_at_concept_id": "68972003",
+      "stop_at_label": "Insertion of therapeutic device"
+    },
+    {
+      "concept_id": "443961001",
+      "hops": 1,
+      "rationale": "Maintains epithelial carcinoma scope; ancestors malignant neoplastic disease/disease are too generic or banned. Tight timeframe, so H=1.",
+      "stop_at_concept_id": "722688002",
+      "stop_at_label": "Malignant epithelial neoplasm"
+    },
+    {
+      "concept_id": "53442002",
+      "hops": 1,
+      "rationale": "Operation on stomach preserves organ specificity and surgical intent; other parents (GI tract/abdomen excision) are broader. Polyhierarchy → conservative H=1.",
+      "stop_at_concept_id": "16453004",
+      "stop_at_label": "Operation on stomach"
+    },
+    {
+      "concept_id": "46177005",
+      "hops": 1,
+      "rationale": "Preserves renal failure mechanism; broader ancestors (renal impairment, kidney disease, findings) are generic/banned. Balanced include/exclude and tight timefra",
+      "stop_at_concept_id": "42399005",
+      "stop_at_label": "Renal failure syndrome"
+    }
+  ]
+}

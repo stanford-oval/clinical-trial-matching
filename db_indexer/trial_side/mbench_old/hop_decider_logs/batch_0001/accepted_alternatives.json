@@ -1,0 +1,50 @@
+[
+  {
+    "concept_id": "162339002",
+    "alt_concept_id": "118230007",
+    "hop": 1,
+    "alt_label": "Hearing finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:46:24"
+  },
+  {
+    "concept_id": "230253001",
+    "alt_concept_id": "5262007",
+    "hop": 1,
+    "alt_label": "Spinal muscular atrophy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:46:24"
+  },
+  {
+    "concept_id": "230253001",
+    "alt_concept_id": "128430005",
+    "hop": 1,
+    "alt_label": "X-linked hereditary disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:46:24"
+  },
+  {
+    "concept_id": "234532001",
+    "alt_concept_id": "234532001",
+    "hop": 0,
+    "alt_label": "Immunodeficiency disorder",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 18:46:24"
+  },
+  {
+    "concept_id": "36980009",
+    "alt_concept_id": "36980009",
+    "hop": 0,
+    "alt_label": "SCID due to absent adenosine deaminase",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 18:46:24"
+  },
+  {
+    "concept_id": "5262007",
+    "alt_concept_id": "5262007",
+    "hop": 0,
+    "alt_label": "Spinal muscular atrophy",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 18:46:24"
+  }
+]

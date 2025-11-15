@@ -1,0 +1,82 @@
+[
+  {
+    "concept_id": "363349007",
+    "alt_concept_id": "428905002",
+    "hop": 1,
+    "alt_label": "Malignant neoplasm of gastrointestinal tract",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:53:37"
+  },
+  {
+    "concept_id": "363349007",
+    "alt_concept_id": "448882009",
+    "hop": 1,
+    "alt_label": "Malignant neoplasm of intraabdominal organ",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:53:37"
+  },
+  {
+    "concept_id": "363349007",
+    "alt_concept_id": "255077007",
+    "hop": 1,
+    "alt_label": "Malignant tumor of digestive organ",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:53:37"
+  },
+  {
+    "concept_id": "363349007",
+    "alt_concept_id": "126824007",
+    "hop": 1,
+    "alt_label": "Neoplasm of stomach",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:53:37"
+  },
+  {
+    "concept_id": "396275006",
+    "alt_concept_id": "399269003",
+    "hop": 1,
+    "alt_label": "Arthropathy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:53:37"
+  },
+  {
+    "concept_id": "396275006",
+    "alt_concept_id": "363059001",
+    "hop": 1,
+    "alt_label": "Degenerative disorder of musculoskeletal system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:53:37"
+  },
+  {
+    "concept_id": "49601007",
+    "alt_concept_id": "106063007",
+    "hop": 1,
+    "alt_label": "Cardiovascular finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:53:37"
+  },
+  {
+    "concept_id": "49601007",
+    "alt_concept_id": "362965005",
+    "hop": 1,
+    "alt_label": "Disorder of body system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:53:37"
+  },
+  {
+    "concept_id": "62141006",
+    "alt_concept_id": "65801008",
+    "hop": 1,
+    "alt_label": "Excision",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:53:37"
+  },
+  {
+    "concept_id": "77176002",
+    "alt_concept_id": "77176002",
+    "hop": 0,
+    "alt_label": "Smoker",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:53:37"
+  }
+]

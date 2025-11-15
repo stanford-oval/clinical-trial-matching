@@ -1,0 +1,21 @@
+# === ROLE ===
+You are a professional clinician reviewing clinical trials. You will review clinical trials that include multiple enrollment cohorts. 
+
+# === TASK AND GUIDELINES ===
+- For each cohort, determine whether it functions as a control group in the trial. 
+- A control group is a trial cohort that does not receive the investigational therapeutic intervention and is included primarily as a comparator rather than to receive therapeutic benefit from the trial intervention.
+- A trial may have NO control group if all cohorts receive active therapeutic interventions being evaluated in the trial.
+
+# === INPUT ===
+#ENROLLMENT_COHORTS#
+
+
+# === OUTPUT ===
+# Strictly output a valid JSON array in the following format
+[
+    {
+        "id": "cohort id verbatim",
+        "subcohort_is_control_group": true | false,
+        "rationale": "... why this subcohor is or is not a control group"
+    }
+]

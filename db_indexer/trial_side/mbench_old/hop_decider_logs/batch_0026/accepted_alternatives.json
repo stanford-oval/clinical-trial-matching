@@ -1,0 +1,42 @@
+[
+  {
+    "concept_id": "170578008",
+    "alt_concept_id": "243852002",
+    "hop": 1,
+    "alt_label": "Cardiac disease monitoring status",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:03"
+  },
+  {
+    "concept_id": "235615004",
+    "alt_concept_id": "63305008",
+    "hop": 1,
+    "alt_label": "Stricture of esophagus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:03"
+  },
+  {
+    "concept_id": "38362002",
+    "alt_concept_id": "38362002",
+    "hop": 0,
+    "alt_label": "Dengue",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:33:03"
+  },
+  {
+    "concept_id": "385093006",
+    "alt_concept_id": "233604007",
+    "hop": 1,
+    "alt_label": "Pneumonia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:33:03"
+  },
+  {
+    "concept_id": "399208008",
+    "alt_concept_id": "399208008",
+    "hop": 0,
+    "alt_label": "Plain chest X-ray",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:33:03"
+  }
+]

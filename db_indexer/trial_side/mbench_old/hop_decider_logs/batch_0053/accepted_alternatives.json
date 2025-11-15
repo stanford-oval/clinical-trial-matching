@@ -1,0 +1,82 @@
+[
+  {
+    "concept_id": "195967001",
+    "alt_concept_id": "50043002",
+    "hop": 1,
+    "alt_label": "Disorder of respiratory system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:19:03"
+  },
+  {
+    "concept_id": "195967001",
+    "alt_concept_id": "362965005",
+    "hop": 2,
+    "alt_label": "Disorder of body system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:19:03"
+  },
+  {
+    "concept_id": "195967001",
+    "alt_concept_id": "106048009",
+    "hop": 2,
+    "alt_label": "Respiratory finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:19:03"
+  },
+  {
+    "concept_id": "363859000",
+    "alt_concept_id": "363858008",
+    "hop": 1,
+    "alt_label": "Neuroelectrophysiology observable",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:19:03"
+  },
+  {
+    "concept_id": "386806002",
+    "alt_concept_id": "373930000",
+    "hop": 1,
+    "alt_label": "Cognitive function finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:19:03"
+  },
+  {
+    "concept_id": "53399006",
+    "alt_concept_id": "4804005",
+    "hop": 1,
+    "alt_label": "Microbial identification test",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:19:03"
+  },
+  {
+    "concept_id": "56265001",
+    "alt_concept_id": "301095005",
+    "hop": 1,
+    "alt_label": "Cardiac finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:19:03"
+  },
+  {
+    "concept_id": "56265001",
+    "alt_concept_id": "399902003",
+    "hop": 1,
+    "alt_label": "Disorder of body cavity",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:19:03"
+  },
+  {
+    "concept_id": "56265001",
+    "alt_concept_id": "49601007",
+    "hop": 1,
+    "alt_label": "Disorder of cardiovascular system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:19:03"
+  },
+  {
+    "concept_id": "56265001",
+    "alt_concept_id": "49483002",
+    "hop": 1,
+    "alt_label": "Disorder of mediastinum",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:19:03"
+  }
+]

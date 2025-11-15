@@ -1,0 +1,41 @@
+{
+  "batch_index": 39,
+  "raw_response": "[\n  {\n    \"concept_id\": \"425582007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"6456007\",\n    \"stop_at_label\": \"Supraventricular tachycardia\",\n    \"rationale\": \"Parent preserves supraventricular tachycardia mechanism, broadening subtype while avoiding generic arrhythmia/finding categories. Tight timeframe and single-member clauses favor H=1.\"\n  },\n  {\n    \"concept_id\": \"419835002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"395557000\",\n    \"stop_at_label\": \"Tumor finding\",\n    \"rationale\": \"Tumor finding captures tumor presence without drifting to generic clinical finding or lesion categories; equal inclusion and exclusion encourage a conservative one-hop generalization.\"\n  },\n  {\n    \"concept_id\": \"95570007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"95566004\",\n    \"stop_at_label\": \"Urolithiasis\",\n    \"rationale\": \"Urolithiasis retains urinary stone mechanism across sites, staying clinically specific and avoiding generic disease or finding categories; parent_count and tight timeframe support H=1.\"\n  },\n  {\n    \"concept_id\": \"70272006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"132721000119104\",\n    \"stop_at_label\": \"Hypertensive emergency\",\n    \"rationale\": \"Hypertensive emergency is clinically specific within hypertensive crises; higher exclusions favor conservative H=1 over broader crisis/disorder ancestors.\"\n  },\n  {\n    \"concept_id\": \"177143000\",\n    \"hops\": 2,\n    \"stop_at_concept_id\": \"11466000\",\n    \"stop_at_label\": \"Cesarean section\",\n    \"rationale\": \"Cesarean section generalizes elective/low-cervical variants while remaining highly specific to obstetric surgery and avoiding ancestors labeled as procedure or operation.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "425582007",
+      "hops": 1,
+      "rationale": "Parent preserves supraventricular tachycardia mechanism, broadening subtype while avoiding generic arrhythmia/finding categories. Tight timeframe and single-mem",
+      "stop_at_concept_id": "6456007",
+      "stop_at_label": "Supraventricular tachycardia"
+    },
+    {
+      "concept_id": "419835002",
+      "hops": 1,
+      "rationale": "Tumor finding captures tumor presence without drifting to generic clinical finding or lesion categories; equal inclusion and exclusion encourage a conservative ",
+      "stop_at_concept_id": "395557000",
+      "stop_at_label": "Tumor finding"
+    },
+    {
+      "concept_id": "95570007",
+      "hops": 1,
+      "rationale": "Urolithiasis retains urinary stone mechanism across sites, staying clinically specific and avoiding generic disease or finding categories; parent_count and tigh",
+      "stop_at_concept_id": "95566004",
+      "stop_at_label": "Urolithiasis"
+    },
+    {
+      "concept_id": "70272006",
+      "hops": 1,
+      "rationale": "Hypertensive emergency is clinically specific within hypertensive crises; higher exclusions favor conservative H=1 over broader crisis/disorder ancestors.",
+      "stop_at_concept_id": "132721000119104",
+      "stop_at_label": "Hypertensive emergency"
+    },
+    {
+      "concept_id": "177143000",
+      "hops": 2,
+      "rationale": "Cesarean section generalizes elective/low-cervical variants while remaining highly specific to obstetric surgery and avoiding ancestors labeled as procedure or ",
+      "stop_at_concept_id": "11466000",
+      "stop_at_label": "Cesarean section"
+    }
+  ]
+}

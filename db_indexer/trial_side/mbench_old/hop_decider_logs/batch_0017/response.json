@@ -1,0 +1,41 @@
+{
+  "batch_index": 17,
+  "raw_response": "[\n  {\n    \"concept_id\": \"169070004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"418891003\",\n    \"stop_at_label\": \"CT of chest and abdomen\",\n    \"rationale\": \"Parent preserves CT modality and relevant regions; avoids generic imaging/procedure ancestors. Tight timeframe and small clause size favor H=1.\"\n  },\n  {\n    \"concept_id\": \"162038003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"21522001\",\n    \"stop_at_label\": \"Abdominal pain\",\n    \"rationale\": \"Abdominal pain is site-specific and clinically coherent; avoids generic pain or broader findings. Tight timeframe and small clause size support H=1.\"\n  },\n  {\n    \"concept_id\": \"22253000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"22253000\",\n    \"stop_at_label\": \"Pain\",\n    \"rationale\": \"Ancestors are overly generic (finding/neurological). With equal inclusion/exclusion, remain at requirement to avoid over-broad matching.\"\n  },\n  {\n    \"concept_id\": \"286967008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"85189001\",\n    \"stop_at_label\": \"Acute appendicitis\",\n    \"rationale\": \"Preserves appendix-specific inflammatory diagnosis; avoids non-specific intestinal perforation path. Tight timeframe and specificity favor H=1.\"\n  },\n  {\n    \"concept_id\": \"197125005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"10743008\",\n    \"stop_at_label\": \"Irritable bowel syndrome\",\n    \"rationale\": \"IBS preserves clinical intent; avoids generic ‘diarrheal disorder’ and broader GI findings. Tight timeframe and small clause size favor H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "169070004",
+      "hops": 1,
+      "rationale": "Parent preserves CT modality and relevant regions; avoids generic imaging/procedure ancestors. Tight timeframe and small clause size favor H=1.",
+      "stop_at_concept_id": "418891003",
+      "stop_at_label": "CT of chest and abdomen"
+    },
+    {
+      "concept_id": "162038003",
+      "hops": 1,
+      "rationale": "Abdominal pain is site-specific and clinically coherent; avoids generic pain or broader findings. Tight timeframe and small clause size support H=1.",
+      "stop_at_concept_id": "21522001",
+      "stop_at_label": "Abdominal pain"
+    },
+    {
+      "concept_id": "22253000",
+      "hops": 0,
+      "rationale": "Ancestors are overly generic (finding/neurological). With equal inclusion/exclusion, remain at requirement to avoid over-broad matching.",
+      "stop_at_concept_id": "22253000",
+      "stop_at_label": "Pain"
+    },
+    {
+      "concept_id": "286967008",
+      "hops": 1,
+      "rationale": "Preserves appendix-specific inflammatory diagnosis; avoids non-specific intestinal perforation path. Tight timeframe and specificity favor H=1.",
+      "stop_at_concept_id": "85189001",
+      "stop_at_label": "Acute appendicitis"
+    },
+    {
+      "concept_id": "197125005",
+      "hops": 1,
+      "rationale": "IBS preserves clinical intent; avoids generic ‘diarrheal disorder’ and broader GI findings. Tight timeframe and small clause size favor H=1.",
+      "stop_at_concept_id": "10743008",
+      "stop_at_label": "Irritable bowel syndrome"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "concept_id": "195662009",
+    "alt_concept_id": "363746003",
+    "hop": 1,
+    "alt_label": "Acute pharyngitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:13:56"
+  },
+  {
+    "concept_id": "195662009",
+    "alt_concept_id": "195647007",
+    "hop": 1,
+    "alt_label": "Acute respiratory infections",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:13:56"
+  },
+  {
+    "concept_id": "195662009",
+    "alt_concept_id": "54398005",
+    "hop": 1,
+    "alt_label": "Acute upper respiratory infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:13:56"
+  },
+  {
+    "concept_id": "195662009",
+    "alt_concept_id": "409631000",
+    "hop": 1,
+    "alt_label": "Acute viral disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:13:56"
+  },
+  {
+    "concept_id": "195662009",
+    "alt_concept_id": "1532007",
+    "hop": 1,
+    "alt_label": "Viral pharyngitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:13:56"
+  },
+  {
+    "concept_id": "363265005",
+    "alt_concept_id": "363265005",
+    "hop": 0,
+    "alt_label": "Predominant humoral immune deficiency",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:13:56"
+  },
+  {
+    "concept_id": "396540005",
+    "alt_concept_id": "396540005",
+    "hop": 0,
+    "alt_label": "Phlebotomy",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:13:56"
+  },
+  {
+    "concept_id": "53827007",
+    "alt_concept_id": "78948009",
+    "hop": 1,
+    "alt_label": "Disturbance of salivary secretion",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:13:56"
+  },
+  {
+    "concept_id": "65568007",
+    "alt_concept_id": "77176002",
+    "hop": 1,
+    "alt_label": "Smoker",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:13:56"
+  }
+]

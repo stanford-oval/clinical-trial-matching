@@ -1,0 +1,154 @@
+[
+  {
+    "concept_id": "11399002",
+    "alt_concept_id": "359557001",
+    "hop": 1,
+    "alt_label": "Disorder of artery",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "11399002",
+    "alt_concept_id": "697896007",
+    "hop": 1,
+    "alt_label": "Precapillary pulmonary hypertension",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "11399002",
+    "alt_concept_id": "251039005",
+    "hop": 1,
+    "alt_label": "Pulmonary artery finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "24443003",
+    "alt_concept_id": "79095000",
+    "hop": 1,
+    "alt_label": "Complete excision",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "24443003",
+    "alt_concept_id": "13619001",
+    "hop": 1,
+    "alt_label": "Thyroidectomy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "73187006",
+    "alt_concept_id": "406463001",
+    "hop": 1,
+    "alt_label": "Drug allergen",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "73187006",
+    "alt_concept_id": "87568004",
+    "hop": 1,
+    "alt_label": "Hormone",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "73187006",
+    "alt_concept_id": "18220004",
+    "hop": 1,
+    "alt_label": "Thyroid hormone",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "772992009",
+    "alt_concept_id": "441535001",
+    "hop": 1,
+    "alt_label": "Adenocarcinoma of head and neck",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "772992009",
+    "alt_concept_id": "448216007",
+    "hop": 1,
+    "alt_label": "Carcinoma of thyroid",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "772992009",
+    "alt_concept_id": "94098005",
+    "hop": 1,
+    "alt_label": "Primary malignant neoplasm of thyroid gland",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "95547004",
+    "alt_concept_id": "47693006",
+    "hop": 1,
+    "alt_label": "Rupture of appendix",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "95547004",
+    "alt_concept_id": "42640003",
+    "hop": 1,
+    "alt_label": "Suppurative appendicitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "95547004",
+    "alt_concept_id": "74400008",
+    "hop": 2,
+    "alt_label": "Appendicitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "95547004",
+    "alt_concept_id": "18526009",
+    "hop": 2,
+    "alt_label": "Disorder of appendix",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "95547004",
+    "alt_concept_id": "255320000",
+    "hop": 2,
+    "alt_label": "Infection - suppurative",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "95547004",
+    "alt_concept_id": "737345002",
+    "hop": 2,
+    "alt_label": "Infection of large intestine",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "95547004",
+    "alt_concept_id": "55184003",
+    "hop": 2,
+    "alt_label": "Infectious enteritis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  },
+  {
+    "concept_id": "95547004",
+    "alt_concept_id": "235799001",
+    "hop": 2,
+    "alt_label": "Rupture of intestine",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:10:15"
+  }
+]

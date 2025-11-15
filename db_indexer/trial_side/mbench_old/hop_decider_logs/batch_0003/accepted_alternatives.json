@@ -1,0 +1,42 @@
+[
+  {
+    "concept_id": "102512003",
+    "alt_concept_id": "102499006",
+    "hop": 1,
+    "alt_label": "Fit and well",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:50:39"
+  },
+  {
+    "concept_id": "134407002",
+    "alt_concept_id": "161891005",
+    "hop": 1,
+    "alt_label": "Backache",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:50:39"
+  },
+  {
+    "concept_id": "20484008",
+    "alt_concept_id": "20484008",
+    "hop": 0,
+    "alt_label": "Prion disease",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 18:50:39"
+  },
+  {
+    "concept_id": "305351004",
+    "alt_concept_id": "305349003",
+    "hop": 1,
+    "alt_label": "Admission to department",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:50:39"
+  },
+  {
+    "concept_id": "708931003",
+    "alt_concept_id": "302497006",
+    "hop": 1,
+    "alt_label": "Hemodialysis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 18:50:39"
+  }
+]

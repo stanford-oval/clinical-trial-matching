@@ -1,0 +1,41 @@
+{
+  "batch_index": 54,
+  "raw_response": "[\n  {\n    \"concept_id\": \"36923009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"36923009\",\n    \"stop_at_label\": \"unchanged requirement concept\",\n    \"rationale\": \"All ancestors are 'disorder/disease/clinical finding' per deny-list; generalization becomes too generic. Retain requirement for specificity.\"\n  },\n  {\n    \"concept_id\": \"21134002\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"21134002\",\n    \"stop_at_label\": \"unchanged requirement concept\",\n    \"rationale\": \"Ancestors are generic body state or clinical history findings, failing deny-list specificity. Keep original requirement.\"\n  },\n  {\n    \"concept_id\": \"52448006\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"52448006\",\n    \"stop_at_label\": \"unchanged requirement concept\",\n    \"rationale\": \"Parent is 'Organic mental disorder' (denied); higher ancestors are generic disorders/findings. Exclusions exceed inclusions—be conservative. Retain requirement.\"\n  },\n  {\n    \"concept_id\": \"50417007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"275498002\",\n    \"stop_at_label\": \"Respiratory tract infection\",\n    \"rationale\": \"Parent 'Respiratory tract infection' preserves organ-system/mechanism, avoids deny-list terms, and timeframe is tight. Choose parent.\"\n  },\n  {\n    \"concept_id\": \"372146004\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"372146004\",\n    \"stop_at_label\": \"unchanged requirement concept\",\n    \"rationale\": \"Ancestors are generic 'disorder' or 'finding' categories; exclusions exceed inclusions. Keep requirement for specificity.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "36923009",
+      "hops": 0,
+      "rationale": "All ancestors are 'disorder/disease/clinical finding' per deny-list; generalization becomes too generic. Retain requirement for specificity.",
+      "stop_at_concept_id": "36923009",
+      "stop_at_label": "unchanged requirement concept"
+    },
+    {
+      "concept_id": "21134002",
+      "hops": 0,
+      "rationale": "Ancestors are generic body state or clinical history findings, failing deny-list specificity. Keep original requirement.",
+      "stop_at_concept_id": "21134002",
+      "stop_at_label": "unchanged requirement concept"
+    },
+    {
+      "concept_id": "52448006",
+      "hops": 0,
+      "rationale": "Parent is 'Organic mental disorder' (denied); higher ancestors are generic disorders/findings. Exclusions exceed inclusions—be conservative. Retain requirement.",
+      "stop_at_concept_id": "52448006",
+      "stop_at_label": "unchanged requirement concept"
+    },
+    {
+      "concept_id": "50417007",
+      "hops": 1,
+      "rationale": "Parent 'Respiratory tract infection' preserves organ-system/mechanism, avoids deny-list terms, and timeframe is tight. Choose parent.",
+      "stop_at_concept_id": "275498002",
+      "stop_at_label": "Respiratory tract infection"
+    },
+    {
+      "concept_id": "372146004",
+      "hops": 0,
+      "rationale": "Ancestors are generic 'disorder' or 'finding' categories; exclusions exceed inclusions. Keep requirement for specificity.",
+      "stop_at_concept_id": "372146004",
+      "stop_at_label": "unchanged requirement concept"
+    }
+  ]
+}

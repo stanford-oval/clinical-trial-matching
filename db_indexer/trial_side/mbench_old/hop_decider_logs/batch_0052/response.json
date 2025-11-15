@@ -1,0 +1,41 @@
+{
+  "batch_index": 52,
+  "raw_response": "[\n  {\n    \"concept_id\": \"62479008\",\n    \"hops\": 2,\n    \"stop_at_concept_id\": \"86406008\",\n    \"stop_at_label\": \"Human immunodeficiency virus infection\",\n    \"rationale\": \"Preserves HIV mechanism and program intent; avoids generic “disorder/disease” parents; despite higher exclusions, H=2 remains clinically specific.\"\n  },\n  {\n    \"concept_id\": \"254637007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"448993007\",\n    \"stop_at_label\": \"Carcinoma of lung\",\n    \"rationale\": \"Keeps lung carcinoma histology and organ specificity, avoiding broader neoplasm categories. Tight timeframe and small clauses favor parent-level generalization.\"\n  },\n  {\n    \"concept_id\": \"195647007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"275498002\",\n    \"stop_at_label\": \"Respiratory tract infection\",\n    \"rationale\": \"Retains respiratory organ focus and infectious mechanism; avoids generic “acute disease/disorder” ancestors. Tight timeframe and small clause size favor H=1.\"\n  },\n  {\n    \"concept_id\": \"300936002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"39104002\",\n    \"stop_at_label\": \"Illness\",\n    \"rationale\": \"Minimal generalization using available labeled parent; avoids even more universal ancestors like general observation findings and clinical finding.\"\n  },\n  {\n    \"concept_id\": \"36803009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"19598007\",\n    \"stop_at_label\": \"Generalized epilepsy\",\n    \"rationale\": \"Stays epilepsy-specific and coherent for seizure-focused interventions; avoids generic “disorder” ancestors. Tight timeframe and small clause size support H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "62479008",
+      "hops": 2,
+      "rationale": "Preserves HIV mechanism and program intent; avoids generic “disorder/disease” parents; despite higher exclusions, H=2 remains clinically specific.",
+      "stop_at_concept_id": "86406008",
+      "stop_at_label": "Human immunodeficiency virus infection"
+    },
+    {
+      "concept_id": "254637007",
+      "hops": 1,
+      "rationale": "Keeps lung carcinoma histology and organ specificity, avoiding broader neoplasm categories. Tight timeframe and small clauses favor parent-level generalization.",
+      "stop_at_concept_id": "448993007",
+      "stop_at_label": "Carcinoma of lung"
+    },
+    {
+      "concept_id": "195647007",
+      "hops": 1,
+      "rationale": "Retains respiratory organ focus and infectious mechanism; avoids generic “acute disease/disorder” ancestors. Tight timeframe and small clause size favor H=1.",
+      "stop_at_concept_id": "275498002",
+      "stop_at_label": "Respiratory tract infection"
+    },
+    {
+      "concept_id": "300936002",
+      "hops": 1,
+      "rationale": "Minimal generalization using available labeled parent; avoids even more universal ancestors like general observation findings and clinical finding.",
+      "stop_at_concept_id": "39104002",
+      "stop_at_label": "Illness"
+    },
+    {
+      "concept_id": "36803009",
+      "hops": 1,
+      "rationale": "Stays epilepsy-specific and coherent for seizure-focused interventions; avoids generic “disorder” ancestors. Tight timeframe and small clause size support H=1.",
+      "stop_at_concept_id": "19598007",
+      "stop_at_label": "Generalized epilepsy"
+    }
+  ]
+}

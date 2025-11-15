@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "40617009",
+    "alt_concept_id": "266700009",
+    "hop": 1,
+    "alt_label": "Assisted breathing",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:07:43"
+  },
+  {
+    "concept_id": "443961001",
+    "alt_concept_id": "722688002",
+    "hop": 1,
+    "alt_label": "Malignant epithelial neoplasm",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:07:43"
+  },
+  {
+    "concept_id": "46177005",
+    "alt_concept_id": "42399005",
+    "hop": 1,
+    "alt_label": "Renal failure syndrome",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:07:43"
+  },
+  {
+    "concept_id": "52765003",
+    "alt_concept_id": "68972003",
+    "hop": 1,
+    "alt_label": "Insertion of therapeutic device",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:07:43"
+  },
+  {
+    "concept_id": "53442002",
+    "alt_concept_id": "108189003",
+    "hop": 1,
+    "alt_label": "Abdomen excision",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:07:43"
+  },
+  {
+    "concept_id": "53442002",
+    "alt_concept_id": "118150001",
+    "hop": 1,
+    "alt_label": "Gastrointestinal tract excision",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:07:43"
+  },
+  {
+    "concept_id": "53442002",
+    "alt_concept_id": "16453004",
+    "hop": 1,
+    "alt_label": "Operation on stomach",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:07:43"
+  }
+]

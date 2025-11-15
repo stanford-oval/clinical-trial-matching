@@ -1,0 +1,39 @@
+{
+  "batch_index": 26,
+  "raw_response": "[\n  {\n    \"concept_id\": \"385093006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"233604007\",\n    \"stop_at_label\": \"Pneumonia\",\n    \"rationale\": \"Parent preserves lower respiratory infection intent; timeframe tight and clauses small. More general yet specific, avoiding generic ‘disease/disorder’ ancestors.\"\n  },\n  {\n    \"concept_id\": \"399208008\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"399208008\",\n    \"stop_at_label\": \"\",\n    \"rationale\": \"Parents are either too generic or deny-listed (‘procedure’). To keep procedure specificity and coherence, do not generalize.\"\n  },\n  {\n    \"concept_id\": \"170578008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"243852002\",\n    \"stop_at_label\": \"Cardiac disease monitoring status\",\n    \"rationale\": \"Parent maintains cardiac program intent while avoiding broader ‘chronic/prevention’ statuses. Exclusions exceed inclusions, so minimal generalization.\"\n  },\n  {\n    \"concept_id\": \"38362002\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"38362002\",\n    \"stop_at_label\": \"\",\n    \"rationale\": \"All ancestors contain deny-listed terms (‘disease’/‘disorder’). Remaining at the specific requirement keeps clinical relevance.\"\n  },\n  {\n    \"concept_id\": \"235615004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"63305008\",\n    \"stop_at_label\": \"Stricture of esophagus\",\n    \"rationale\": \"Parent preserves site and mechanism (esophageal stricture); timeframe tight and clauses small. Grandparents are too generic or lose esophageal specificity.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "385093006",
+      "hops": 1,
+      "rationale": "Parent preserves lower respiratory infection intent; timeframe tight and clauses small. More general yet specific, avoiding generic ‘disease/disorder’ ancestors",
+      "stop_at_concept_id": "233604007",
+      "stop_at_label": "Pneumonia"
+    },
+    {
+      "concept_id": "399208008",
+      "hops": 0,
+      "rationale": "Parents are either too generic or deny-listed (‘procedure’). To keep procedure specificity and coherence, do not generalize.",
+      "stop_at_concept_id": "399208008"
+    },
+    {
+      "concept_id": "170578008",
+      "hops": 1,
+      "rationale": "Parent maintains cardiac program intent while avoiding broader ‘chronic/prevention’ statuses. Exclusions exceed inclusions, so minimal generalization.",
+      "stop_at_concept_id": "243852002",
+      "stop_at_label": "Cardiac disease monitoring status"
+    },
+    {
+      "concept_id": "38362002",
+      "hops": 0,
+      "rationale": "All ancestors contain deny-listed terms (‘disease’/‘disorder’). Remaining at the specific requirement keeps clinical relevance.",
+      "stop_at_concept_id": "38362002"
+    },
+    {
+      "concept_id": "235615004",
+      "hops": 1,
+      "rationale": "Parent preserves site and mechanism (esophageal stricture); timeframe tight and clauses small. Grandparents are too generic or lose esophageal specificity.",
+      "stop_at_concept_id": "63305008",
+      "stop_at_label": "Stricture of esophagus"
+    }
+  ]
+}

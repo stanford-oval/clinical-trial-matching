@@ -1,0 +1,50 @@
+[
+  {
+    "concept_id": "230470007",
+    "alt_concept_id": "230470007",
+    "hop": 0,
+    "alt_label": "Episodic tension-type headache",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:57:39"
+  },
+  {
+    "concept_id": "302285008",
+    "alt_concept_id": "300331000",
+    "hop": 1,
+    "alt_label": "Lesion of liver",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:57:39"
+  },
+  {
+    "concept_id": "413838009",
+    "alt_concept_id": "413838009",
+    "hop": 0,
+    "alt_label": "Chronic ischemic heart disease",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:57:39"
+  },
+  {
+    "concept_id": "57434002",
+    "alt_concept_id": "57434002",
+    "hop": 0,
+    "alt_label": "Radical excision with en bloc resection of regional organs and tissues",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:57:39"
+  },
+  {
+    "concept_id": "733312003",
+    "alt_concept_id": "312428002",
+    "hop": 1,
+    "alt_label": "Corneal infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:57:39"
+  },
+  {
+    "concept_id": "733312003",
+    "alt_concept_id": "5888003",
+    "hop": 1,
+    "alt_label": "Keratitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:57:39"
+  }
+]

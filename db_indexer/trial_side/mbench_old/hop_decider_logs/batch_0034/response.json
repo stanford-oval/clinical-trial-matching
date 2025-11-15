@@ -1,0 +1,40 @@
+{
+  "batch_index": 34,
+  "raw_response": "[\n  {\n    \"concept_id\": \"414581006\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"414581006\",\n    \"stop_at_label\": \"\",\n    \"rationale\": \"Parents/grandparents are generic 'disorder' or 'finding' terms per deny-list; staying preserves ENT specificity.\"\n  },\n  {\n    \"concept_id\": \"267102003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"162397003\",\n    \"stop_at_label\": \"Pain in throat\",\n    \"rationale\": \"Parent maintains site-specific symptom, avoids deny-list categories, and remains clinically coherent given tight timeframe.\"\n  },\n  {\n    \"concept_id\": \"225566008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"29857009\",\n    \"stop_at_label\": \"Chest pain\",\n    \"rationale\": \"Parent preserves symptom and anatomic site; higher ancestors are generic 'finding' categories. Tight timeframe favors H=1.\"\n  },\n  {\n    \"concept_id\": \"63467002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"6374002\",\n    \"stop_at_label\": \"Bundle branch block\",\n    \"rationale\": \"Exclusions > inclusions; conservatively generalize to specific conduction disorder, avoiding generic 'disorder' ancestors.\"\n  },\n  {\n    \"concept_id\": \"52441000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"297147009\",\n    \"stop_at_label\": \"Atrophy of vagina\",\n    \"rationale\": \"Retains mechanism and site, avoiding broad 'Vaginitis' and generic 'disorder/finding' categories; clinically specific.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "414581006",
+      "hops": 0,
+      "rationale": "Parents/grandparents are generic 'disorder' or 'finding' terms per deny-list; staying preserves ENT specificity.",
+      "stop_at_concept_id": "414581006"
+    },
+    {
+      "concept_id": "267102003",
+      "hops": 1,
+      "rationale": "Parent maintains site-specific symptom, avoids deny-list categories, and remains clinically coherent given tight timeframe.",
+      "stop_at_concept_id": "162397003",
+      "stop_at_label": "Pain in throat"
+    },
+    {
+      "concept_id": "225566008",
+      "hops": 1,
+      "rationale": "Parent preserves symptom and anatomic site; higher ancestors are generic 'finding' categories. Tight timeframe favors H=1.",
+      "stop_at_concept_id": "29857009",
+      "stop_at_label": "Chest pain"
+    },
+    {
+      "concept_id": "63467002",
+      "hops": 1,
+      "rationale": "Exclusions > inclusions; conservatively generalize to specific conduction disorder, avoiding generic 'disorder' ancestors.",
+      "stop_at_concept_id": "6374002",
+      "stop_at_label": "Bundle branch block"
+    },
+    {
+      "concept_id": "52441000",
+      "hops": 1,
+      "rationale": "Retains mechanism and site, avoiding broad 'Vaginitis' and generic 'disorder/finding' categories; clinically specific.",
+      "stop_at_concept_id": "297147009",
+      "stop_at_label": "Atrophy of vagina"
+    }
+  ]
+}

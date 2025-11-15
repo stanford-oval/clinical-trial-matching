@@ -1,0 +1,66 @@
+[
+  {
+    "concept_id": "256235009",
+    "alt_concept_id": "256235009",
+    "hop": 0,
+    "alt_label": "Exercise",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:22:06"
+  },
+  {
+    "concept_id": "414545008",
+    "alt_concept_id": "414545008",
+    "hop": 0,
+    "alt_label": "Ischemic heart disease",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:22:06"
+  },
+  {
+    "concept_id": "44054006",
+    "alt_concept_id": "73211009",
+    "hop": 1,
+    "alt_label": "Diabetes mellitus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:22:06"
+  },
+  {
+    "concept_id": "69776003",
+    "alt_concept_id": "127321000",
+    "hop": 1,
+    "alt_label": "Acute digestive system disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:22:06"
+  },
+  {
+    "concept_id": "69776003",
+    "alt_concept_id": "25458004",
+    "hop": 1,
+    "alt_label": "Acute gastritis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:22:06"
+  },
+  {
+    "concept_id": "69776003",
+    "alt_concept_id": "128482007",
+    "hop": 1,
+    "alt_label": "Acute inflammatory disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:22:06"
+  },
+  {
+    "concept_id": "69776003",
+    "alt_concept_id": "25374005",
+    "hop": 1,
+    "alt_label": "Gastroenteritis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:22:06"
+  },
+  {
+    "concept_id": "86044005",
+    "alt_concept_id": "86044005",
+    "hop": 0,
+    "alt_label": "Amyotrophic lateral sclerosis",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:22:06"
+  }
+]

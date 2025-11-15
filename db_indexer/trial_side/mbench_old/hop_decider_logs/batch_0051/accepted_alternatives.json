@@ -1,0 +1,90 @@
+[
+  {
+    "concept_id": "237602007",
+    "alt_concept_id": "237602007",
+    "hop": 0,
+    "alt_label": "Metabolic syndrome X",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:16:05"
+  },
+  {
+    "concept_id": "386661006",
+    "alt_concept_id": "386661006",
+    "hop": 0,
+    "alt_label": "Fever",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:16:05"
+  },
+  {
+    "concept_id": "39912006",
+    "alt_concept_id": "192949002",
+    "hop": 1,
+    "alt_label": "Congenital paraplegia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:16:05"
+  },
+  {
+    "concept_id": "39912006",
+    "alt_concept_id": "80690008",
+    "hop": 1,
+    "alt_label": "Degenerative disease of the central nervous system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:16:05"
+  },
+  {
+    "concept_id": "39912006",
+    "alt_concept_id": "363235000",
+    "hop": 1,
+    "alt_label": "Hereditary disorder of nervous system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:16:05"
+  },
+  {
+    "concept_id": "39912006",
+    "alt_concept_id": "192967009",
+    "hop": 1,
+    "alt_label": "Spastic paraplegia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:16:05"
+  },
+  {
+    "concept_id": "39912006",
+    "alt_concept_id": "48522003",
+    "hop": 1,
+    "alt_label": "Spinal cord disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:16:05"
+  },
+  {
+    "concept_id": "425390006",
+    "alt_concept_id": "191519005",
+    "hop": 1,
+    "alt_label": "Dementia associated with another disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:16:05"
+  },
+  {
+    "concept_id": "425390006",
+    "alt_concept_id": "52448006",
+    "hop": 2,
+    "alt_label": "Dementia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:16:05"
+  },
+  {
+    "concept_id": "82127005",
+    "alt_concept_id": "49298003",
+    "hop": 1,
+    "alt_label": "Abscess of trunk",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:16:05"
+  },
+  {
+    "concept_id": "82127005",
+    "alt_concept_id": "397174009",
+    "hop": 1,
+    "alt_label": "Disorder of anal region",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:16:05"
+  }
+]

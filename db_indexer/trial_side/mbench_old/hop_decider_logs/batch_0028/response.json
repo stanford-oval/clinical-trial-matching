@@ -1,0 +1,41 @@
+{
+  "batch_index": 28,
+  "raw_response": "[\n  {\n    \"concept_id\": \"76388001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"55930002\",\n    \"stop_at_label\": \"EKG ST segment changes\",\n    \"rationale\": \"Parent consolidates ST-segment abnormalities on ECG, preserving modality and waveform focus. Higher ancestors are too generic. Tight timeframe and single-parent support modest generalization.\"\n  },\n  {\n    \"concept_id\": \"65547006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"57054005\",\n    \"stop_at_label\": \"Acute myocardial infarction\",\n    \"rationale\": \"Generalize to acute myocardial infarction, retaining ischemic mechanism and acuity. Alternative parent (left ventricular abnormality) is off-target; higher ancestors become generic.\"\n  },\n  {\n    \"concept_id\": \"77343006\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"77343006\",\n    \"stop_at_label\": \"Angiography\",\n    \"rationale\": \"Parents are broad procedural categories; “Procedure” nodes are deny-listed and “Cardiovascular investigation” is too broad. Keep at the specific concept.\"\n  },\n  {\n    \"concept_id\": \"415070008\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"415070008\",\n    \"stop_at_label\": \"Percutaneous coronary intervention\",\n    \"rationale\": \"All ancestors are generic “Procedure …” categories (deny-listed). Exclusions exceed inclusions; remain at the specific concept.\"\n  },\n  {\n    \"concept_id\": \"281789004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"47943005\",\n    \"stop_at_label\": \"Administration of anti-infective agent\",\n    \"rationale\": \"Parent preserves therapeutic intent and drug class. Higher ancestors (administration of medication/therapeutic procedure) are overly broad or deny-listed. Slightly higher exclusions favor limited generalization.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "76388001",
+      "hops": 1,
+      "rationale": "Parent consolidates ST-segment abnormalities on ECG, preserving modality and waveform focus. Higher ancestors are too generic. Tight timeframe and single-parent",
+      "stop_at_concept_id": "55930002",
+      "stop_at_label": "EKG ST segment changes"
+    },
+    {
+      "concept_id": "65547006",
+      "hops": 1,
+      "rationale": "Generalize to acute myocardial infarction, retaining ischemic mechanism and acuity. Alternative parent (left ventricular abnormality) is off-target; higher ance",
+      "stop_at_concept_id": "57054005",
+      "stop_at_label": "Acute myocardial infarction"
+    },
+    {
+      "concept_id": "77343006",
+      "hops": 0,
+      "rationale": "Parents are broad procedural categories; “Procedure” nodes are deny-listed and “Cardiovascular investigation” is too broad. Keep at the specific concept.",
+      "stop_at_concept_id": "77343006",
+      "stop_at_label": "Angiography"
+    },
+    {
+      "concept_id": "415070008",
+      "hops": 0,
+      "rationale": "All ancestors are generic “Procedure …” categories (deny-listed). Exclusions exceed inclusions; remain at the specific concept.",
+      "stop_at_concept_id": "415070008",
+      "stop_at_label": "Percutaneous coronary intervention"
+    },
+    {
+      "concept_id": "281789004",
+      "hops": 1,
+      "rationale": "Parent preserves therapeutic intent and drug class. Higher ancestors (administration of medication/therapeutic procedure) are overly broad or deny-listed. Sligh",
+      "stop_at_concept_id": "47943005",
+      "stop_at_label": "Administration of anti-infective agent"
+    }
+  ]
+}

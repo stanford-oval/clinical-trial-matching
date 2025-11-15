@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "192991000",
+    "alt_concept_id": "313307000",
+    "hop": 1,
+    "alt_label": "Epileptic seizure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:32:30"
+  },
+  {
+    "concept_id": "2237002",
+    "alt_concept_id": "29857009",
+    "hop": 1,
+    "alt_label": "Chest pain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:32:30"
+  },
+  {
+    "concept_id": "2237002",
+    "alt_concept_id": "301355003",
+    "hop": 1,
+    "alt_label": "Pain of respiratory structure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:32:30"
+  },
+  {
+    "concept_id": "2237002",
+    "alt_concept_id": "301256004",
+    "hop": 1,
+    "alt_label": "Pleura finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:32:30"
+  },
+  {
+    "concept_id": "41497008",
+    "alt_concept_id": "91175000",
+    "hop": 1,
+    "alt_label": "Seizure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:32:30"
+  },
+  {
+    "concept_id": "429271009",
+    "alt_concept_id": "233604007",
+    "hop": 1,
+    "alt_label": "Pneumonia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:32:30"
+  },
+  {
+    "concept_id": "91175000",
+    "alt_concept_id": "91175000",
+    "hop": 0,
+    "alt_label": "Seizure",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:32:30"
+  }
+]

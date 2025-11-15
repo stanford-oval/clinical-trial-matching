@@ -1,0 +1,456 @@
+{
+  "batch_index": 31,
+  "offset": 150,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "363688001",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 4
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "367336001",
+            "label": "Chemotherapy"
+          },
+          {
+            "concept_id": "367336001",
+            "label": "Chemotherapy"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "432102000",
+            "label": "Administration of substance"
+          },
+          {
+            "concept_id": "362961001",
+            "label": "Procedure by intent"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "416608005",
+            "label": "Drug therapy"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "18629005",
+            "label": "Administration of medication"
+          },
+          {
+            "concept_id": "277132007",
+            "label": "Therapeutic procedure"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "107733003",
+            "label": "Introduction procedure"
+          },
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "111130009",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 5,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "61457001",
+            "label": "Adrenal hormone-containing product"
+          },
+          {
+            "concept_id": "61457001",
+            "label": "Adrenal hormone-containing product"
+          },
+          {
+            "concept_id": "764374006",
+            "label": "Adrenergic receptor agonist-containing product"
+          },
+          {
+            "concept_id": "764374006",
+            "label": "Adrenergic receptor agonist-containing product"
+          },
+          {
+            "concept_id": "349917000",
+            "label": "Alpha adrenergic receptor agonist-containing product"
+          },
+          {
+            "concept_id": "349917000",
+            "label": "Alpha adrenergic receptor agonist-containing product"
+          },
+          {
+            "concept_id": "766970009",
+            "label": "Catecholamine-containing product"
+          },
+          {
+            "concept_id": "766970009",
+            "label": "Catecholamine-containing product"
+          },
+          {
+            "concept_id": "22091006",
+            "label": "Hormone-containing product"
+          },
+          {
+            "concept_id": "22091006",
+            "label": "Hormone-containing product"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "766779001",
+            "label": "Medicinal product categorized by disposition"
+          },
+          {
+            "concept_id": "768700009",
+            "label": "Nitrogen and nitrogen compound-containing product"
+          },
+          {
+            "concept_id": "86308005",
+            "label": "Sympathomimetic product"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "85417000",
+            "label": "Autonomic agent"
+          },
+          {
+            "concept_id": "763158003",
+            "label": "Medicinal product"
+          },
+          {
+            "concept_id": "763760008",
+            "label": "Medicinal product categorized by structure"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "373873005",
+            "label": "Pharmaceutical / biologic product"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "3006004",
+      "features": {
+        "depth_from_root": 8,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 1
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "365931003",
+            "label": "Level of consciousness - finding"
+          },
+          {
+            "concept_id": "365931003",
+            "label": "Level of consciousness - finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "384821006",
+            "label": "Mental state, behavior and/or psychosocial function finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "365929007",
+            "label": "Consciousness and/or awareness finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "250171008",
+            "label": "Clinical history and observation findings"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "106167005",
+            "label": "Consciousness related finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "36456004",
+            "label": "Mental state finding"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "11466000",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 0.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "66201006",
+            "label": "Extraction of fetus"
+          },
+          {
+            "concept_id": "66201006",
+            "label": "Extraction of fetus"
+          },
+          {
+            "concept_id": "42253005",
+            "label": "Incision of uterus"
+          },
+          {
+            "concept_id": "42253005",
+            "label": "Incision of uterus"
+          },
+          {
+            "concept_id": "236991000",
+            "label": "Operation to facilitate delivery"
+          },
+          {
+            "concept_id": "236991000",
+            "label": "Operation to facilitate delivery"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "771329004",
+            "label": "Procedure on body region"
+          },
+          {
+            "concept_id": "118664000",
+            "label": "Procedure on body system"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "34896006",
+            "label": "Incision"
+          },
+          {
+            "concept_id": "609638001",
+            "label": "Operation on pelvic region of trunk"
+          },
+          {
+            "concept_id": "74943008",
+            "label": "Operation on trunk"
+          },
+          {
+            "concept_id": "71388002",
+            "label": "Procedure"
+          },
+          {
+            "concept_id": "118698009",
+            "label": "Procedure on abdomen"
+          },
+          {
+            "concept_id": "128312004",
+            "label": "Procedure on female genital organ"
+          },
+          {
+            "concept_id": "118675001",
+            "label": "Procedure on female genital system"
+          },
+          {
+            "concept_id": "118699001",
+            "label": "Procedure on pelvis"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "118674002",
+            "label": "Procedure on genitourinary system"
+          },
+          {
+            "concept_id": "118717007",
+            "label": "Procedure on organ"
+          },
+          {
+            "concept_id": "609637006",
+            "label": "Procedure on pelvic region of trunk"
+          },
+          {
+            "concept_id": "118694006",
+            "label": "Procedure on trunk"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "386637004",
+            "label": "Obstetric procedure"
+          },
+          {
+            "concept_id": "21371007",
+            "label": "Operation on abdominal region"
+          },
+          {
+            "concept_id": "12658000",
+            "label": "Operation on female genital organs"
+          },
+          {
+            "concept_id": "12745006",
+            "label": "Operative procedure on pelvis"
+          },
+          {
+            "concept_id": "128927009",
+            "label": "Procedure by method"
+          },
+          {
+            "concept_id": "362958002",
+            "label": "Procedure by site"
+          },
+          {
+            "concept_id": "118864003",
+            "label": "Procedure on uterus"
+          },
+          {
+            "concept_id": "118292001",
+            "label": "Removal"
+          },
+          {
+            "concept_id": "387713003",
+            "label": "Surgical procedure"
+          },
+          {
+            "concept_id": "119580007",
+            "label": "Trunk incision"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "108188006",
+            "label": "Abdomen incision"
+          },
+          {
+            "concept_id": "236973005",
+            "label": "Delivery procedure"
+          },
+          {
+            "concept_id": "62972009",
+            "label": "Extraction"
+          },
+          {
+            "concept_id": "386811000",
+            "label": "Fetal procedure"
+          },
+          {
+            "concept_id": "386638009",
+            "label": "Obstetric operation"
+          },
+          {
+            "concept_id": "79876008",
+            "label": "Operation on uterus"
+          },
+          {
+            "concept_id": "119608007",
+            "label": "Pelvis incision"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "68154008",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 0.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "49727002",
+            "label": "Cough"
+          },
+          {
+            "concept_id": "49727002",
+            "label": "Cough"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "301233008",
+            "label": "Functional finding of respiratory tract"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 23636,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"363688001\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 4\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"367336001\",\n          \"label\": \"Chemotherapy\"\n        },\n        {\n          \"concept_id\": \"367336001\",\n          \"label\": \"Chemotherapy\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"432102000\",\n          \"label\": \"Administration of substance\"\n        },\n        {\n          \"concept_id\": \"362961001\",\n          \"label\": \"Procedure by intent\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"416608005\",\n          \"label\": \"Drug therapy\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"18629005\",\n          \"label\": \"Administration of medication\"\n        },\n        {\n          \"concept_id\": \"277132007\",\n          \"label\": \"Therapeutic procedure\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"111130009\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 5,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"61457001\",\n          \"label\": \"Adrenal hormone-containing product\"\n        },\n        {\n          \"concept_id\": \"61457001\",\n          \"label\": \"Adrenal hormone-containing product\"\n        },\n        {\n          \"concept_id\": \"764374006\",\n          \"label\": \"Adrenergic receptor agonist-containing product\"\n        },\n        {\n          \"concept_id\": \"764374006\",\n          \"label\": \"Adrenergic receptor agonist-containing product\"\n        },\n        {\n          \"concept_id\": \"349917000\",\n          \"label\": \"Alpha adrenergic receptor agonist-containing product\"\n        },\n        {\n          \"concept_id\": \"349917000\",\n          \"label\": \"Alpha adrenergic receptor agonist-containing product\"\n        },\n        {\n          \"concept_id\": \"766970009\",\n          \"label\": \"Catecholamine-containing product\"\n        },\n        {\n          \"concept_id\": \"766970009\",\n          \"label\": \"Catecholamine-containing product\"\n        },\n        {\n          \"concept_id\": \"22091006\",\n          \"label\": \"Hormone-containing product\"\n        },\n        {\n          \"concept_id\": \"22091006\",\n          \"label\": \"Hormone-containing product\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"766779001\",\n          \"label\": \"Medicinal product categorized by disposition\"\n        },\n        {\n          \"concept_id\": \"768700009\",\n          \"label\": \"Nitrogen and nitrogen compound-containing product\"\n        },\n        {\n          \"concept_id\": \"86308005\",\n          \"label\": \"Sympathomimetic product\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"85417000\",\n          \"label\": \"Autonomic agent\"\n        },\n        {\n          \"concept_id\": \"763158003\",\n          \"label\": \"Medicinal product\"\n        },\n        {\n          \"concept_id\": \"763760008\",\n          \"label\": \"Medicinal product categorized by structure\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"373873005\",\n          \"label\": \"Pharmaceutical / biologic product\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"3006004\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"365931003\",\n          \"label\": \"Level of consciousness - finding\"\n        },\n        {\n          \"concept_id\": \"365931003\",\n          \"label\": \"Level of consciousness - finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"384821006\",\n          \"label\": \"Mental state, behavior and/or psychosocial function finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"365929007\",\n          \"label\": \"Consciousness and/or awareness finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"106167005\",\n          \"label\": \"Consciousness related finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"36456004\",\n          \"label\": \"Mental state finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"11466000\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"66201006\",\n          \"label\": \"Extraction of fetus\"\n        },\n        {\n          \"concept_id\": \"66201006\",\n          \"label\": \"Extraction of fetus\"\n        },\n        {\n          \"concept_id\": \"42253005\",\n          \"label\": \"Incision of uterus\"\n        },\n        {\n          \"concept_id\": \"42253005\",\n          \"label\": \"Incision of uterus\"\n        },\n        {\n          \"concept_id\": \"236991000\",\n          \"label\": \"Operation to facilitate delivery\"\n        },\n        {\n          \"concept_id\": \"236991000\",\n          \"label\": \"Operation to facilitate delivery\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"34896006\",\n          \"label\": \"Incision\"\n        },\n        {\n          \"concept_id\": \"609638001\",\n          \"label\": \"Operation on pelvic region of trunk\"\n        },\n        {\n          \"concept_id\": \"74943008\",\n          \"label\": \"Operation on trunk\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"118698009\",\n          \"label\": \"Procedure on abdomen\"\n        },\n        {\n          \"concept_id\": \"128312004\",\n          \"label\": \"Procedure on female genital organ\"\n        },\n        {\n          \"concept_id\": \"118675001\",\n          \"label\": \"Procedure on female genital system\"\n        },\n        {\n          \"concept_id\": \"118699001\",\n          \"label\": \"Procedure on pelvis\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118674002\",\n          \"label\": \"Procedure on genitourinary system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"609637006\",\n          \"label\": \"Procedure on pelvic region of trunk\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"386637004\",\n          \"label\": \"Obstetric procedure\"\n        },\n        {\n          \"concept_id\": \"21371007\",\n          \"label\": \"Operation on abdominal region\"\n        },\n        {\n          \"concept_id\": \"12658000\",\n          \"label\": \"Operation on female genital organs\"\n        },\n        {\n          \"concept_id\": \"12745006\",\n          \"label\": \"Operative procedure on pelvis\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"118864003\",\n          \"label\": \"Procedure on uterus\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        },\n        {\n          \"concept_id\": \"119580007\",\n          \"label\": \"Trunk incision\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"108188006\",\n          \"label\": \"Abdomen incision\"\n        },\n        {\n          \"concept_id\": \"236973005\",\n          \"label\": \"Delivery procedure\"\n        },\n        {\n          \"concept_id\": \"62972009\",\n          \"label\": \"Extraction\"\n        },\n        {\n          \"concept_id\": \"386811000\",\n          \"label\": \"Fetal procedure\"\n        },\n        {\n          \"concept_id\": \"386638009\",\n          \"label\": \"Obstetric operation\"\n        },\n        {\n          \"concept_id\": \"79876008\",\n          \"label\": \"Operation on uterus\"\n        },\n        {\n          \"concept_id\": \"119608007\",\n          \"label\": \"Pelvis incision\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"68154008\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"49727002\",\n          \"label\": \"Cough\"\n        },\n        {\n          \"concept_id\": \"49727002\",\n          \"label\": \"Cough\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"301233008\",\n          \"label\": \"Functional finding of respiratory tract\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"363688001\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 4\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"367336001\",\n          \"label\": \"Chemotherapy\"\n        },\n        {\n          \"concept_id\": \"367336001\",\n          \"label\": \"Chemotherapy\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"432102000\",\n          \"label\": \"Administration of substance\"\n        },\n        {\n          \"concept_id\": \"362961001\",\n          \"label\": \"Procedure by intent\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"416608005\",\n          \"label\": \"Drug therapy\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"18629005\",\n          \"label\": \"Administration of medication\"\n        },\n        {\n          \"concept_id\": \"277132007\",\n          \"label\": \"Therapeutic procedure\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"107733003\",\n          \"label\": \"Introduction procedure\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"111130009\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 5,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"61457001\",\n          \"label\": \"Adrenal hormone-containing product\"\n        },\n        {\n          \"concept_id\": \"61457001\",\n          \"label\": \"Adrenal hormone-containing product\"\n        },\n        {\n          \"concept_id\": \"764374006\",\n          \"label\": \"Adrenergic receptor agonist-containing product\"\n        },\n        {\n          \"concept_id\": \"764374006\",\n          \"label\": \"Adrenergic receptor agonist-containing product\"\n        },\n        {\n          \"concept_id\": \"349917000\",\n          \"label\": \"Alpha adrenergic receptor agonist-containing product\"\n        },\n        {\n          \"concept_id\": \"349917000\",\n          \"label\": \"Alpha adrenergic receptor agonist-containing product\"\n        },\n        {\n          \"concept_id\": \"766970009\",\n          \"label\": \"Catecholamine-containing product\"\n        },\n        {\n          \"concept_id\": \"766970009\",\n          \"label\": \"Catecholamine-containing product\"\n        },\n        {\n          \"concept_id\": \"22091006\",\n          \"label\": \"Hormone-containing product\"\n        },\n        {\n          \"concept_id\": \"22091006\",\n          \"label\": \"Hormone-containing product\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"766779001\",\n          \"label\": \"Medicinal product categorized by disposition\"\n        },\n        {\n          \"concept_id\": \"768700009\",\n          \"label\": \"Nitrogen and nitrogen compound-containing product\"\n        },\n        {\n          \"concept_id\": \"86308005\",\n          \"label\": \"Sympathomimetic product\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"85417000\",\n          \"label\": \"Autonomic agent\"\n        },\n        {\n          \"concept_id\": \"763158003\",\n          \"label\": \"Medicinal product\"\n        },\n        {\n          \"concept_id\": \"763760008\",\n          \"label\": \"Medicinal product categorized by structure\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"373873005\",\n          \"label\": \"Pharmaceutical / biologic product\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"3006004\",\n    \"features\": {\n      \"depth_from_root\": 8,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 1\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"365931003\",\n          \"label\": \"Level of consciousness - finding\"\n        },\n        {\n          \"concept_id\": \"365931003\",\n          \"label\": \"Level of consciousness - finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"384821006\",\n          \"label\": \"Mental state, behavior and/or psychosocial function finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"365929007\",\n          \"label\": \"Consciousness and/or awareness finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"250171008\",\n          \"label\": \"Clinical history and observation findings\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"106167005\",\n          \"label\": \"Consciousness related finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"36456004\",\n          \"label\": \"Mental state finding\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"11466000\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"66201006\",\n          \"label\": \"Extraction of fetus\"\n        },\n        {\n          \"concept_id\": \"66201006\",\n          \"label\": \"Extraction of fetus\"\n        },\n        {\n          \"concept_id\": \"42253005\",\n          \"label\": \"Incision of uterus\"\n        },\n        {\n          \"concept_id\": \"42253005\",\n          \"label\": \"Incision of uterus\"\n        },\n        {\n          \"concept_id\": \"236991000\",\n          \"label\": \"Operation to facilitate delivery\"\n        },\n        {\n          \"concept_id\": \"236991000\",\n          \"label\": \"Operation to facilitate delivery\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"771329004\",\n          \"label\": \"Procedure on body region\"\n        },\n        {\n          \"concept_id\": \"118664000\",\n          \"label\": \"Procedure on body system\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"34896006\",\n          \"label\": \"Incision\"\n        },\n        {\n          \"concept_id\": \"609638001\",\n          \"label\": \"Operation on pelvic region of trunk\"\n        },\n        {\n          \"concept_id\": \"74943008\",\n          \"label\": \"Operation on trunk\"\n        },\n        {\n          \"concept_id\": \"71388002\",\n          \"label\": \"Procedure\"\n        },\n        {\n          \"concept_id\": \"118698009\",\n          \"label\": \"Procedure on abdomen\"\n        },\n        {\n          \"concept_id\": \"128312004\",\n          \"label\": \"Procedure on female genital organ\"\n        },\n        {\n          \"concept_id\": \"118675001\",\n          \"label\": \"Procedure on female genital system\"\n        },\n        {\n          \"concept_id\": \"118699001\",\n          \"label\": \"Procedure on pelvis\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"118674002\",\n          \"label\": \"Procedure on genitourinary system\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"609637006\",\n          \"label\": \"Procedure on pelvic region of trunk\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"386637004\",\n          \"label\": \"Obstetric procedure\"\n        },\n        {\n          \"concept_id\": \"21371007\",\n          \"label\": \"Operation on abdominal region\"\n        },\n        {\n          \"concept_id\": \"12658000\",\n          \"label\": \"Operation on female genital organs\"\n        },\n        {\n          \"concept_id\": \"12745006\",\n          \"label\": \"Operative procedure on pelvis\"\n        },\n        {\n          \"concept_id\": \"128927009\",\n          \"label\": \"Procedure by method\"\n        },\n        {\n          \"concept_id\": \"362958002\",\n          \"label\": \"Procedure by site\"\n        },\n        {\n          \"concept_id\": \"118864003\",\n          \"label\": \"Procedure on uterus\"\n        },\n        {\n          \"concept_id\": \"118292001\",\n          \"label\": \"Removal\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        },\n        {\n          \"concept_id\": \"119580007\",\n          \"label\": \"Trunk incision\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"108188006\",\n          \"label\": \"Abdomen incision\"\n        },\n        {\n          \"concept_id\": \"236973005\",\n          \"label\": \"Delivery procedure\"\n        },\n        {\n          \"concept_id\": \"62972009\",\n          \"label\": \"Extraction\"\n        },\n        {\n          \"concept_id\": \"386811000\",\n          \"label\": \"Fetal procedure\"\n        },\n        {\n          \"concept_id\": \"386638009\",\n          \"label\": \"Obstetric operation\"\n        },\n        {\n          \"concept_id\": \"79876008\",\n          \"label\": \"Operation on uterus\"\n        },\n        {\n          \"concept_id\": \"119608007\",\n          \"label\": \"Pelvis incision\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"68154008\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 0.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"49727002\",\n          \"label\": \"Cough\"\n        },\n        {\n          \"concept_id\": \"49727002\",\n          \"label\": \"Cough\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"301233008\",\n          \"label\": \"Functional finding of respiratory tract\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ]\n    }\n  }\n]\n"
+}

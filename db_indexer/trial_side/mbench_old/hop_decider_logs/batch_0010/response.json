@@ -1,0 +1,41 @@
+{
+  "batch_index": 10,
+  "raw_response": "[\n  {\n    \"concept_id\": \"60554003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"252566002\",\n    \"stop_at_label\": \"Sleep-related breathing test\",\n    \"rationale\": \"Parent preserves sleep-breathing testing intent; avoids generic procedure ancestors; tight timeframe and small clauses favor H=1.\"\n  },\n  {\n    \"concept_id\": \"405737000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"405737000\",\n    \"stop_at_label\": \"Pharyngitis\",\n    \"rationale\": \"Parents are either generic disorder or too broad; exclusions exceed inclusions; stay at specific Pharyngitis.\"\n  },\n  {\n    \"concept_id\": \"90176007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"405737000\",\n    \"stop_at_label\": \"Pharyngitis\",\n    \"rationale\": \"Pharyngitis is broader, still site-specific upper airway inflammation; clinically coherent; avoids generic disorder parents.\"\n  },\n  {\n    \"concept_id\": \"6456007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"72654001\",\n    \"stop_at_label\": \"Supraventricular arrhythmia\",\n    \"rationale\": \"Preserves mechanism/site and is broader than SVT without including ventricular tachyarrhythmias; tight timeframe and small clauses favor H=1.\"\n  },\n  {\n    \"concept_id\": \"80423007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"36118008\",\n    \"stop_at_label\": \"Pneumothorax\",\n    \"rationale\": \"Clinically specific parent preserving respiratory/pleural pathology and intent; broader than subtype but not generic.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "60554003",
+      "hops": 1,
+      "rationale": "Parent preserves sleep-breathing testing intent; avoids generic procedure ancestors; tight timeframe and small clauses favor H=1.",
+      "stop_at_concept_id": "252566002",
+      "stop_at_label": "Sleep-related breathing test"
+    },
+    {
+      "concept_id": "405737000",
+      "hops": 0,
+      "rationale": "Parents are either generic disorder or too broad; exclusions exceed inclusions; stay at specific Pharyngitis.",
+      "stop_at_concept_id": "405737000",
+      "stop_at_label": "Pharyngitis"
+    },
+    {
+      "concept_id": "90176007",
+      "hops": 1,
+      "rationale": "Pharyngitis is broader, still site-specific upper airway inflammation; clinically coherent; avoids generic disorder parents.",
+      "stop_at_concept_id": "405737000",
+      "stop_at_label": "Pharyngitis"
+    },
+    {
+      "concept_id": "6456007",
+      "hops": 1,
+      "rationale": "Preserves mechanism/site and is broader than SVT without including ventricular tachyarrhythmias; tight timeframe and small clauses favor H=1.",
+      "stop_at_concept_id": "72654001",
+      "stop_at_label": "Supraventricular arrhythmia"
+    },
+    {
+      "concept_id": "80423007",
+      "hops": 1,
+      "rationale": "Clinically specific parent preserving respiratory/pleural pathology and intent; broader than subtype but not generic.",
+      "stop_at_concept_id": "36118008",
+      "stop_at_label": "Pneumothorax"
+    }
+  ]
+}

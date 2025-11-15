@@ -1,0 +1,41 @@
+{
+  "batch_index": 60,
+  "raw_response": "[\n  {\n    \"concept_id\": \"429271009\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"233604007\",\n    \"stop_at_label\": \"Pneumonia\",\n    \"rationale\": \"Parent pneumonia preserves respiratory infection intent; timeframe tight and clause small. Grandparents (pneumonitis, lung consolidation) or 'disorder'/'finding' ancestors are broader or generic.\"\n  },\n  {\n    \"concept_id\": \"2237002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"301355003\",\n    \"stop_at_label\": \"Pain of respiratory structure\",\n    \"rationale\": \"Choose respiratory pain to maintain organ-system focus; chest pain risks cardiac/general. Other ancestors are generic findings. Timeframe tight; parent_count high → conservative H=1.\"\n  },\n  {\n    \"concept_id\": \"91175000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"91175000\",\n    \"stop_at_label\": \"Seizure\",\n    \"rationale\": \"Exclusions exceed inclusions; keep specificity. Parents are generic 'finding' categories. H=0 preserves seizure intent.\"\n  },\n  {\n    \"concept_id\": \"41497008\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"91175000\",\n    \"stop_at_label\": \"Seizure\",\n    \"rationale\": \"Generalize to seizure to preserve CNS intent while avoiding overly specific subtypes. Include/exclude balanced; higher ancestors are generic findings.\"\n  },\n  {\n    \"concept_id\": \"192991000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"313307000\",\n    \"stop_at_label\": \"Epileptic seizure\",\n    \"rationale\": \"Parent epileptic seizure preserves mechanism and program intent; timeframe moderate, clause small. Grandparent seizure would admit non-epileptic events.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "429271009",
+      "hops": 1,
+      "rationale": "Parent pneumonia preserves respiratory infection intent; timeframe tight and clause small. Grandparents (pneumonitis, lung consolidation) or 'disorder'/'finding",
+      "stop_at_concept_id": "233604007",
+      "stop_at_label": "Pneumonia"
+    },
+    {
+      "concept_id": "2237002",
+      "hops": 1,
+      "rationale": "Choose respiratory pain to maintain organ-system focus; chest pain risks cardiac/general. Other ancestors are generic findings. Timeframe tight; parent_count hi",
+      "stop_at_concept_id": "301355003",
+      "stop_at_label": "Pain of respiratory structure"
+    },
+    {
+      "concept_id": "91175000",
+      "hops": 0,
+      "rationale": "Exclusions exceed inclusions; keep specificity. Parents are generic 'finding' categories. H=0 preserves seizure intent.",
+      "stop_at_concept_id": "91175000",
+      "stop_at_label": "Seizure"
+    },
+    {
+      "concept_id": "41497008",
+      "hops": 1,
+      "rationale": "Generalize to seizure to preserve CNS intent while avoiding overly specific subtypes. Include/exclude balanced; higher ancestors are generic findings.",
+      "stop_at_concept_id": "91175000",
+      "stop_at_label": "Seizure"
+    },
+    {
+      "concept_id": "192991000",
+      "hops": 1,
+      "rationale": "Parent epileptic seizure preserves mechanism and program intent; timeframe moderate, clause small. Grandparent seizure would admit non-epileptic events.",
+      "stop_at_concept_id": "313307000",
+      "stop_at_label": "Epileptic seizure"
+    }
+  ]
+}

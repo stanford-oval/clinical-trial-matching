@@ -1,0 +1,154 @@
+[
+  {
+    "concept_id": "127040003",
+    "alt_concept_id": "14514008",
+    "hop": 1,
+    "alt_label": "Anemia due to disturbance of hemoglobin synthesis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "127040003",
+    "alt_concept_id": "323666000",
+    "hop": 1,
+    "alt_label": "Anemia due to intrinsic red cell abnormality",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "127040003",
+    "alt_concept_id": "424988008",
+    "hop": 1,
+    "alt_label": "Anemia due to substance",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "127040003",
+    "alt_concept_id": "63565007",
+    "hop": 1,
+    "alt_label": "Congenital anemia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "127040003",
+    "alt_concept_id": "123772008",
+    "hop": 1,
+    "alt_label": "Homozygous hemoglobinopathy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "127040003",
+    "alt_concept_id": "417357006",
+    "hop": 1,
+    "alt_label": "Sickling disorder due to hemoglobin S",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "35434009",
+    "alt_concept_id": "23269001",
+    "hop": 1,
+    "alt_label": "Double heterozygous sickling disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "35434009",
+    "alt_concept_id": "38589006",
+    "hop": 1,
+    "alt_label": "Mixed hemoglobin disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "35434009",
+    "alt_concept_id": "80141007",
+    "hop": 2,
+    "alt_label": "Hemoglobinopathy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "35434009",
+    "alt_concept_id": "417357006",
+    "hop": 2,
+    "alt_label": "Sickling disorder due to hemoglobin S",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "35434009",
+    "alt_concept_id": "416417002",
+    "hop": 3,
+    "alt_label": "Hereditary hemoglobin S",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "35434009",
+    "alt_concept_id": "38292009",
+    "hop": 3,
+    "alt_label": "Red blood cell disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "363478007",
+    "alt_concept_id": "371982006",
+    "hop": 1,
+    "alt_label": "Malignant neoplasm of endocrine gland",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "363478007",
+    "alt_concept_id": "363489000",
+    "hop": 1,
+    "alt_label": "Malignant tumor of neck",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "363478007",
+    "alt_concept_id": "127018007",
+    "hop": 1,
+    "alt_label": "Neoplasm of thyroid gland",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "54150009",
+    "alt_concept_id": "201060008",
+    "hop": 1,
+    "alt_label": "Disorder of upper respiratory system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "54150009",
+    "alt_concept_id": "275498002",
+    "hop": 1,
+    "alt_label": "Respiratory tract infection",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "68235000",
+    "alt_concept_id": "118237005",
+    "hop": 1,
+    "alt_label": "Nose finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  },
+  {
+    "concept_id": "68235000",
+    "alt_concept_id": "301186004",
+    "hop": 1,
+    "alt_label": "Upper respiratory tract finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:51:47"
+  }
+]

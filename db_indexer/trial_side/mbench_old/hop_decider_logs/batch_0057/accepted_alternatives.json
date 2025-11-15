@@ -1,0 +1,138 @@
+[
+  {
+    "concept_id": "11366004",
+    "alt_concept_id": "57781000",
+    "hop": 1,
+    "alt_label": "Disorder of vocal cord",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "11366004",
+    "alt_concept_id": "301218000",
+    "hop": 1,
+    "alt_label": "Lesion of vocal cord",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "11366004",
+    "alt_concept_id": "299703001",
+    "hop": 1,
+    "alt_label": "Mass of neck",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "11366004",
+    "alt_concept_id": "300851005",
+    "hop": 1,
+    "alt_label": "Mass of respiratory structure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "11366004",
+    "alt_concept_id": "60600009",
+    "hop": 2,
+    "alt_label": "Disorder of the larynx",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "11366004",
+    "alt_concept_id": "301210007",
+    "hop": 2,
+    "alt_label": "Lesion of larynx",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "11366004",
+    "alt_concept_id": "298397000",
+    "hop": 2,
+    "alt_label": "Lesion of neck",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "11366004",
+    "alt_concept_id": "274751001",
+    "hop": 2,
+    "alt_label": "Mass in head or neck",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "11366004",
+    "alt_concept_id": "300848003",
+    "hop": 2,
+    "alt_label": "Mass of body structure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "11366004",
+    "alt_concept_id": "106048009",
+    "hop": 2,
+    "alt_label": "Respiratory finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "11366004",
+    "alt_concept_id": "249438001",
+    "hop": 2,
+    "alt_label": "Vocal cord finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "129025006",
+    "alt_concept_id": "364665006",
+    "hop": 1,
+    "alt_label": "Ability to perform function / activity",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "129025006",
+    "alt_concept_id": "257733005",
+    "hop": 1,
+    "alt_label": "Activity",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "267036007",
+    "alt_concept_id": "230145002",
+    "hop": 1,
+    "alt_label": "Difficulty breathing",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "47717004",
+    "alt_concept_id": "129001003",
+    "hop": 1,
+    "alt_label": "Basic activity of daily living",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "47717004",
+    "alt_concept_id": "258149004",
+    "hop": 1,
+    "alt_label": "Swallowing finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  },
+  {
+    "concept_id": "56018004",
+    "alt_concept_id": "301285005",
+    "hop": 1,
+    "alt_label": "Finding of sound of breathing",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:29:11"
+  }
+]

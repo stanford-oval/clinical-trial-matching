@@ -1,0 +1,41 @@
+{
+  "batch_index": 57,
+  "raw_response": "[\n  {\n    \"concept_id\": \"47717004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"258149004\",\n    \"stop_at_label\": \"Swallowing finding\",\n    \"rationale\": \"Swallowing-focused parent remains clinically specific, avoids generic ADL/functional categories. Exclusion > inclusion suggests conservative generalization. Preserves dysphagia-related intent.\"\n  },\n  {\n    \"concept_id\": \"267036007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"230145002\",\n    \"stop_at_label\": \"Difficulty breathing\",\n    \"rationale\": \"Parent term preserves respiratory symptom intent and captures shortness of breath variants. Timeframe tight and small clause size support H=1.\"\n  },\n  {\n    \"concept_id\": \"11366004\",\n    \"hops\": 2,\n    \"stop_at_concept_id\": \"249438001\",\n    \"stop_at_label\": \"Vocal cord finding\",\n    \"rationale\": \"Parents are disorder/lesion/mass (deny-list). Grandparent ‘Vocal cord finding’ keeps laryngeal focus without overgeneralization; polyhierarchy suggests cautious generalization.\"\n  },\n  {\n    \"concept_id\": \"129025006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"364665006\",\n    \"stop_at_label\": \"Ability to perform function / activity\",\n    \"rationale\": \"Parent preserves functional assessment intent while avoiding very generic ‘Function’/‘Process’ and banned ‘Observable entity’. Depth moderate; timeframe tight; clause size small.\"\n  },\n  {\n    \"concept_id\": \"56018004\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"301285005\",\n    \"stop_at_label\": \"Finding of sound of breathing\",\n    \"rationale\": \"Parent retains respiratory sound focus and avoids generic ancestors (‘Respiratory finding’, ‘Finding by site’, ‘Clinical finding’). Timeframe tight and small clause size favor H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "47717004",
+      "hops": 1,
+      "rationale": "Swallowing-focused parent remains clinically specific, avoids generic ADL/functional categories. Exclusion > inclusion suggests conservative generalization. Pre",
+      "stop_at_concept_id": "258149004",
+      "stop_at_label": "Swallowing finding"
+    },
+    {
+      "concept_id": "267036007",
+      "hops": 1,
+      "rationale": "Parent term preserves respiratory symptom intent and captures shortness of breath variants. Timeframe tight and small clause size support H=1.",
+      "stop_at_concept_id": "230145002",
+      "stop_at_label": "Difficulty breathing"
+    },
+    {
+      "concept_id": "11366004",
+      "hops": 2,
+      "rationale": "Parents are disorder/lesion/mass (deny-list). Grandparent ‘Vocal cord finding’ keeps laryngeal focus without overgeneralization; polyhierarchy suggests cautious",
+      "stop_at_concept_id": "249438001",
+      "stop_at_label": "Vocal cord finding"
+    },
+    {
+      "concept_id": "129025006",
+      "hops": 1,
+      "rationale": "Parent preserves functional assessment intent while avoiding very generic ‘Function’/‘Process’ and banned ‘Observable entity’. Depth moderate; timeframe tight; ",
+      "stop_at_concept_id": "364665006",
+      "stop_at_label": "Ability to perform function / activity"
+    },
+    {
+      "concept_id": "56018004",
+      "hops": 1,
+      "rationale": "Parent retains respiratory sound focus and avoids generic ancestors (‘Respiratory finding’, ‘Finding by site’, ‘Clinical finding’). Timeframe tight and small cl",
+      "stop_at_concept_id": "301285005",
+      "stop_at_label": "Finding of sound of breathing"
+    }
+  ]
+}

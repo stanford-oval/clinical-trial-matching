@@ -1,0 +1,40 @@
+{
+  "batch_index": 29,
+  "raw_response": "[\n  {\n    \"concept_id\": \"413575009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"413575009\",\n    \"stop_at_label\": \"\",\n    \"rationale\": \"Ancestors are generic (Effector, Substance) and violate deny-list or clinical relevance; remaining at the specific requirement preserves intent and specificity.\"\n  },\n  {\n    \"concept_id\": \"254626006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"448993007\",\n    \"stop_at_label\": \"Carcinoma of lung\",\n    \"rationale\": \"Parent preserves lung malignancy while loosening histologic specificity. Grandparents include non–site-specific neoplasms or are too broad; H=1 keeps trial intent coherent.\"\n  },\n  {\n    \"concept_id\": \"314207007\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"22298006\",\n    \"stop_at_label\": \"Myocardial infarction\",\n    \"rationale\": \"Parent maintains mechanism and organ specificity (acute myocardial injury). Tight timeframe and small clause size favor minimal generalization.\"\n  },\n  {\n    \"concept_id\": \"4557003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"194828000\",\n    \"stop_at_label\": \"Angina pectoris\",\n    \"rationale\": \"Parent captures ischemic chest pain diagnosis without broad ‘pain’ or system-level categories, providing coherent inclusion while avoiding overgeneralization.\"\n  },\n  {\n    \"concept_id\": \"262286000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"8943002\",\n    \"stop_at_label\": \"Weight gain\",\n    \"rationale\": \"Parent is specific and clinically meaningful; grandparent includes banned ‘finding’. H=1 preserves measurement intent without making criteria overly broad.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "413575009",
+      "hops": 0,
+      "rationale": "Ancestors are generic (Effector, Substance) and violate deny-list or clinical relevance; remaining at the specific requirement preserves intent and specificity.",
+      "stop_at_concept_id": "413575009"
+    },
+    {
+      "concept_id": "254626006",
+      "hops": 1,
+      "rationale": "Parent preserves lung malignancy while loosening histologic specificity. Grandparents include non–site-specific neoplasms or are too broad; H=1 keeps trial inte",
+      "stop_at_concept_id": "448993007",
+      "stop_at_label": "Carcinoma of lung"
+    },
+    {
+      "concept_id": "314207007",
+      "hops": 1,
+      "rationale": "Parent maintains mechanism and organ specificity (acute myocardial injury). Tight timeframe and small clause size favor minimal generalization.",
+      "stop_at_concept_id": "22298006",
+      "stop_at_label": "Myocardial infarction"
+    },
+    {
+      "concept_id": "4557003",
+      "hops": 1,
+      "rationale": "Parent captures ischemic chest pain diagnosis without broad ‘pain’ or system-level categories, providing coherent inclusion while avoiding overgeneralization.",
+      "stop_at_concept_id": "194828000",
+      "stop_at_label": "Angina pectoris"
+    },
+    {
+      "concept_id": "262286000",
+      "hops": 1,
+      "rationale": "Parent is specific and clinically meaningful; grandparent includes banned ‘finding’. H=1 preserves measurement intent without making criteria overly broad.",
+      "stop_at_concept_id": "8943002",
+      "stop_at_label": "Weight gain"
+    }
+  ]
+}

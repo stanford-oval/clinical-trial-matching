@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "263019000",
+    "alt_concept_id": "263017003",
+    "hop": 1,
+    "alt_label": "Dislocation of joint of upper limb",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:28:44"
+  },
+  {
+    "concept_id": "263019000",
+    "alt_concept_id": "699467005",
+    "hop": 1,
+    "alt_label": "Disorder of acromioclavicular joint",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:28:44"
+  },
+  {
+    "concept_id": "372733002",
+    "alt_concept_id": "372733002",
+    "hop": 0,
+    "alt_label": "Angiotensin-converting enzyme inhibitor",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:28:45"
+  },
+  {
+    "concept_id": "372817009",
+    "alt_concept_id": "372540003",
+    "hop": 1,
+    "alt_label": "Anthracycline",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:28:45"
+  },
+  {
+    "concept_id": "63697000",
+    "alt_concept_id": "63697000",
+    "hop": 0,
+    "alt_label": "Cardiopulmonary bypass operation",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:28:45"
+  },
+  {
+    "concept_id": "76009000",
+    "alt_concept_id": "118155006",
+    "hop": 1,
+    "alt_label": "Gastrointestinal tract endoscopy",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:28:45"
+  },
+  {
+    "concept_id": "76009000",
+    "alt_concept_id": "359715005",
+    "hop": 1,
+    "alt_label": "Upper gastrointestinal procedure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:28:45"
+  }
+]

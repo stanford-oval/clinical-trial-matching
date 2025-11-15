@@ -1,0 +1,26 @@
+{
+  "strict_token": "NEED_TO_BE_STRICTLY_ENFORCED_IN_INFORMATION_RETRIEVAL",
+  "kept_strict_assert_count": 2,
+  "kept_aux_assert_count": 3,
+  "kept_decl_count": 12,
+  "used_symbol_count": 12,
+  "used_symbols": [
+    "body_mass_index_value_recorded_now_in_kg_per_m2",
+    "has_finding_of_cerebrovascular_disease_now",
+    "has_finding_of_chronic_heart_failure_now",
+    "has_finding_of_chronic_heart_failure_now@@chronic_heart_failure_nyha_class_ii_iii",
+    "has_finding_of_diabetes_mellitus_now",
+    "has_finding_of_disorder_of_lipid_metabolism_now",
+    "has_finding_of_electrocardiogram_abnormality_now",
+    "has_finding_of_electrocardiogram_abnormality_now@@ecg_abnormality_left_ventricular_hypertrophy",
+    "has_finding_of_hypertensive_disorder_now",
+    "has_finding_of_ischemic_heart_disease_now",
+    "has_finding_of_obesity_now",
+    "has_finding_of_tobacco_smoking_behavior_finding_now"
+  ],
+  "missing_declarations": [],
+  "kept_tags_first_10": [
+    "REQ0_COMPONENT0_NEED_TO_BE_STRICTLY_ENFORCED_IN_INFORMATION_RETRIEVAL",
+    "REQ1_COMPONENT0_NEED_TO_BE_STRICTLY_ENFORCED_IN_INFORMATION_RETRIEVAL"
+  ]
+}

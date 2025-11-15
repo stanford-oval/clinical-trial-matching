@@ -1,0 +1,42 @@
+[
+  {
+    "concept_id": "118599009",
+    "alt_concept_id": "118600007",
+    "hop": 1,
+    "alt_label": "Malignant lymphoma (clinical)",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:16:09"
+  },
+  {
+    "concept_id": "12658000",
+    "alt_concept_id": "12658000",
+    "hop": 0,
+    "alt_label": "Operation on female genital organs",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:16:09"
+  },
+  {
+    "concept_id": "307496006",
+    "alt_concept_id": "307496006",
+    "hop": 0,
+    "alt_label": "Diverticulitis",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:16:09"
+  },
+  {
+    "concept_id": "387713003",
+    "alt_concept_id": "387713003",
+    "hop": 0,
+    "alt_label": "Surgical procedure",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:16:09"
+  },
+  {
+    "concept_id": "5880005",
+    "alt_concept_id": "5880005",
+    "hop": 0,
+    "alt_label": "Physical examination",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:16:09"
+  }
+]

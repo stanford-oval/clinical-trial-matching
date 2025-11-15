@@ -1,0 +1,82 @@
+[
+  {
+    "concept_id": "169826009",
+    "alt_concept_id": "281050002",
+    "hop": 1,
+    "alt_label": "Livebirth",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:33:18"
+  },
+  {
+    "concept_id": "224959009",
+    "alt_concept_id": "105726004",
+    "hop": 1,
+    "alt_label": "Age AND/OR growth finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:33:18"
+  },
+  {
+    "concept_id": "224959009",
+    "alt_concept_id": "271616002",
+    "hop": 1,
+    "alt_label": "Finding of general physiological development",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:33:18"
+  },
+  {
+    "concept_id": "233602006",
+    "alt_concept_id": "5505005",
+    "hop": 1,
+    "alt_label": "Acute bronchiolitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:33:18"
+  },
+  {
+    "concept_id": "233602006",
+    "alt_concept_id": "233601004",
+    "hop": 1,
+    "alt_label": "Acute viral bronchitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:33:18"
+  },
+  {
+    "concept_id": "31928004",
+    "alt_concept_id": "128477000",
+    "hop": 1,
+    "alt_label": "Abscess",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:33:18"
+  },
+  {
+    "concept_id": "31928004",
+    "alt_concept_id": "80659006",
+    "hop": 1,
+    "alt_label": "Disorder of skin and/or subcutaneous tissue",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:33:18"
+  },
+  {
+    "concept_id": "31928004",
+    "alt_concept_id": "363171009",
+    "hop": 1,
+    "alt_label": "Inflammation of specific body systems",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:33:18"
+  },
+  {
+    "concept_id": "31928004",
+    "alt_concept_id": "239953001",
+    "hop": 1,
+    "alt_label": "Soft tissue lesion",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:33:18"
+  },
+  {
+    "concept_id": "56783008",
+    "alt_concept_id": "56783008",
+    "hop": 0,
+    "alt_label": "Incision AND drainage",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:33:18"
+  }
+]

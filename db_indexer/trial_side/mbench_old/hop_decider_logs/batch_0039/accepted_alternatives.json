@@ -1,0 +1,90 @@
+[
+  {
+    "concept_id": "177143000",
+    "alt_concept_id": "177141003",
+    "hop": 1,
+    "alt_label": "Elective cesarean section",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:55:21"
+  },
+  {
+    "concept_id": "177143000",
+    "alt_concept_id": "398307005",
+    "hop": 1,
+    "alt_label": "Low cervical cesarean section",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:55:21"
+  },
+  {
+    "concept_id": "177143000",
+    "alt_concept_id": "11466000",
+    "hop": 2,
+    "alt_label": "Cesarean section",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:55:21"
+  },
+  {
+    "concept_id": "177143000",
+    "alt_concept_id": "410533009",
+    "hop": 2,
+    "alt_label": "Procedure by priority",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:55:21"
+  },
+  {
+    "concept_id": "177143000",
+    "alt_concept_id": "176757001",
+    "hop": 2,
+    "alt_label": "Upper female genital tract operation",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:55:21"
+  },
+  {
+    "concept_id": "419835002",
+    "alt_concept_id": "395557000",
+    "hop": 1,
+    "alt_label": "Tumor finding",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:55:21"
+  },
+  {
+    "concept_id": "425582007",
+    "alt_concept_id": "6456007",
+    "hop": 1,
+    "alt_label": "Supraventricular tachycardia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:55:21"
+  },
+  {
+    "concept_id": "70272006",
+    "alt_concept_id": "132721000119104",
+    "hop": 1,
+    "alt_label": "Hypertensive emergency",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:55:21"
+  },
+  {
+    "concept_id": "95570007",
+    "alt_concept_id": "90708001",
+    "hop": 1,
+    "alt_label": "Kidney disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:55:21"
+  },
+  {
+    "concept_id": "95570007",
+    "alt_concept_id": "79131000119100",
+    "hop": 1,
+    "alt_label": "Kidney lesion",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:55:21"
+  },
+  {
+    "concept_id": "95570007",
+    "alt_concept_id": "95566004",
+    "hop": 1,
+    "alt_label": "Urolithiasis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:55:21"
+  }
+]

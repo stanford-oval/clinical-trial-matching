@@ -1,0 +1,90 @@
+[
+  {
+    "concept_id": "405737000",
+    "alt_concept_id": "405737000",
+    "hop": 0,
+    "alt_label": "Pharyngitis",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:09:25"
+  },
+  {
+    "concept_id": "60554003",
+    "alt_concept_id": "363691001",
+    "hop": 1,
+    "alt_label": "Procedure categorized by device involved",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:09:25"
+  },
+  {
+    "concept_id": "60554003",
+    "alt_concept_id": "252566002",
+    "hop": 1,
+    "alt_label": "Sleep-related breathing test",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:09:25"
+  },
+  {
+    "concept_id": "6456007",
+    "alt_concept_id": "72654001",
+    "hop": 1,
+    "alt_label": "Supraventricular arrhythmia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:09:25"
+  },
+  {
+    "concept_id": "6456007",
+    "alt_concept_id": "6285003",
+    "hop": 1,
+    "alt_label": "Tachyarrhythmia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:09:25"
+  },
+  {
+    "concept_id": "80423007",
+    "alt_concept_id": "36118008",
+    "hop": 1,
+    "alt_label": "Pneumothorax",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:09:25"
+  },
+  {
+    "concept_id": "90176007",
+    "alt_concept_id": "23023009",
+    "hop": 1,
+    "alt_label": "Disorder of tonsil (palatine tonsil)",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:09:25"
+  },
+  {
+    "concept_id": "90176007",
+    "alt_concept_id": "281795003",
+    "hop": 1,
+    "alt_label": "Inflamed tonsils",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:09:25"
+  },
+  {
+    "concept_id": "90176007",
+    "alt_concept_id": "363176004",
+    "hop": 1,
+    "alt_label": "Inflammatory disorder of head",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:09:25"
+  },
+  {
+    "concept_id": "90176007",
+    "alt_concept_id": "363177008",
+    "hop": 1,
+    "alt_label": "Inflammatory disorder of immune system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:09:25"
+  },
+  {
+    "concept_id": "90176007",
+    "alt_concept_id": "405737000",
+    "hop": 1,
+    "alt_label": "Pharyngitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:09:25"
+  }
+]

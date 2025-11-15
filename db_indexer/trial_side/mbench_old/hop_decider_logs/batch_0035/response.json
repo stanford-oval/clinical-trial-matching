@@ -1,0 +1,41 @@
+{
+  "batch_index": 35,
+  "raw_response": "[\n  {\n    \"concept_id\": \"110368006\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"110368006\",\n    \"stop_at_label\": \"original concept\",\n    \"rationale\": \"Parent is overly broad (“Endocrine finding”); higher ancestors are generic or deny-listed. Keep the specific requirement.\"\n  },\n  {\n    \"concept_id\": \"386805003\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"386805003\",\n    \"stop_at_label\": \"original concept\",\n    \"rationale\": \"Parent/grandparents are ‘disorder’ or broad ‘finding’ categories; to avoid overgeneralization and deny-list terms, retain the specific concept.\"\n  },\n  {\n    \"concept_id\": \"202487003\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"61486003\",\n    \"stop_at_label\": \"Sacral back pain\",\n    \"rationale\": \"Sacral back pain preserves pain mechanism and sacral region while being slightly broader than sacroiliac-joint–specific terms. Other parents are too broad or lose mechanism.\"\n  },\n  {\n    \"concept_id\": \"77075001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"84494001\",\n    \"stop_at_label\": \"Open-angle glaucoma\",\n    \"rationale\": \"Generalizing from a subtype to open-angle glaucoma preserves ophthalmic disease mechanism and trial intent without becoming generic.\"\n  },\n  {\n    \"concept_id\": \"370961005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"12184005\",\n    \"stop_at_label\": \"Visual field defect\",\n    \"rationale\": \"Parent remains eye-specific and clinically meaningful; higher ancestors are generic ‘finding’ categories. H=1 fits tight timeframe and small clause size.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "110368006",
+      "hops": 0,
+      "rationale": "Parent is overly broad (“Endocrine finding”); higher ancestors are generic or deny-listed. Keep the specific requirement.",
+      "stop_at_concept_id": "110368006",
+      "stop_at_label": "original concept"
+    },
+    {
+      "concept_id": "386805003",
+      "hops": 0,
+      "rationale": "Parent/grandparents are ‘disorder’ or broad ‘finding’ categories; to avoid overgeneralization and deny-list terms, retain the specific concept.",
+      "stop_at_concept_id": "386805003",
+      "stop_at_label": "original concept"
+    },
+    {
+      "concept_id": "202487003",
+      "hops": 1,
+      "rationale": "Sacral back pain preserves pain mechanism and sacral region while being slightly broader than sacroiliac-joint–specific terms. Other parents are too broad or lo",
+      "stop_at_concept_id": "61486003",
+      "stop_at_label": "Sacral back pain"
+    },
+    {
+      "concept_id": "77075001",
+      "hops": 1,
+      "rationale": "Generalizing from a subtype to open-angle glaucoma preserves ophthalmic disease mechanism and trial intent without becoming generic.",
+      "stop_at_concept_id": "84494001",
+      "stop_at_label": "Open-angle glaucoma"
+    },
+    {
+      "concept_id": "370961005",
+      "hops": 1,
+      "rationale": "Parent remains eye-specific and clinically meaningful; higher ancestors are generic ‘finding’ categories. H=1 fits tight timeframe and small clause size.",
+      "stop_at_concept_id": "12184005",
+      "stop_at_label": "Visual field defect"
+    }
+  ]
+}

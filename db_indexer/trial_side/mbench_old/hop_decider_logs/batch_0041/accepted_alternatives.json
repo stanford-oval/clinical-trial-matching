@@ -1,0 +1,82 @@
+[
+  {
+    "concept_id": "129103003",
+    "alt_concept_id": "129103003",
+    "hop": 0,
+    "alt_label": "Endometriosis (clinical)",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:59:54"
+  },
+  {
+    "concept_id": "16226000",
+    "alt_concept_id": "16226000",
+    "hop": 0,
+    "alt_label": "Laparoscopic sterilization",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:59:54"
+  },
+  {
+    "concept_id": "278860009",
+    "alt_concept_id": "279039007",
+    "hop": 1,
+    "alt_label": "Low back pain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:59:54"
+  },
+  {
+    "concept_id": "387759001",
+    "alt_concept_id": "413834006",
+    "hop": 1,
+    "alt_label": "Chronic disease of immune function",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:59:54"
+  },
+  {
+    "concept_id": "387759001",
+    "alt_concept_id": "36138009",
+    "hop": 1,
+    "alt_label": "Congenital immunodeficiency disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:59:54"
+  },
+  {
+    "concept_id": "387759001",
+    "alt_concept_id": "234585008",
+    "hop": 1,
+    "alt_label": "Defective phagocytic cell killing",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:59:54"
+  },
+  {
+    "concept_id": "387759001",
+    "alt_concept_id": "105600002",
+    "hop": 1,
+    "alt_label": "Disorder of neutrophils",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:59:54"
+  },
+  {
+    "concept_id": "387759001",
+    "alt_concept_id": "414395005",
+    "hop": 1,
+    "alt_label": "Hereditary white blood cell disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:59:54"
+  },
+  {
+    "concept_id": "387759001",
+    "alt_concept_id": "128139000",
+    "hop": 1,
+    "alt_label": "Inflammatory disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:59:54"
+  },
+  {
+    "concept_id": "398057008",
+    "alt_concept_id": "398057008",
+    "hop": 0,
+    "alt_label": "Tension-type headache",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:59:54"
+  }
+]

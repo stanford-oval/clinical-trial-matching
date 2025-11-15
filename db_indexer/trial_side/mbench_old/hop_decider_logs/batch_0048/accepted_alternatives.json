@@ -1,0 +1,50 @@
+[
+  {
+    "concept_id": "234253006",
+    "alt_concept_id": "58347006",
+    "hop": 1,
+    "alt_label": "Excision of lymph node",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:11:43"
+  },
+  {
+    "concept_id": "279084009",
+    "alt_concept_id": "279084009",
+    "hop": 0,
+    "alt_label": "Chest discomfort",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:11:43"
+  },
+  {
+    "concept_id": "414396006",
+    "alt_concept_id": "128545000",
+    "hop": 1,
+    "alt_label": "Hernia of abdominal wall",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:11:43"
+  },
+  {
+    "concept_id": "450743008",
+    "alt_concept_id": "363820009",
+    "hop": 1,
+    "alt_label": "Neurological observable",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:11:43"
+  },
+  {
+    "concept_id": "86481000",
+    "alt_concept_id": "108188006",
+    "hop": 1,
+    "alt_label": "Abdomen incision",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:11:43"
+  },
+  {
+    "concept_id": "86481000",
+    "alt_concept_id": "386671008",
+    "hop": 1,
+    "alt_label": "Abdominal cavity operation",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:11:43"
+  }
+]

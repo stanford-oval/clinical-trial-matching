@@ -1,0 +1,41 @@
+{
+  "batch_index": 1,
+  "raw_response": "[\n  {\n    \"concept_id\": \"230253001\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"5262007\",\n    \"stop_at_label\": \"Spinal muscular atrophy\",\n    \"rationale\": \"Parent 'Spinal muscular atrophy' preserves motor neuron disease intent; other ancestors are generic 'disease/disorder'. Tight timeframe and narrow clause size favor H=1.\"\n  },\n  {\n    \"concept_id\": \"5262007\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"5262007\",\n    \"stop_at_label\": \"Spinal muscular atrophy\",\n    \"rationale\": \"Parents and grandparents are 'disease/disorder' categories; staying at 'Spinal muscular atrophy' preserves mechanism and program specificity.\"\n  },\n  {\n    \"concept_id\": \"234532001\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"234532001\",\n    \"stop_at_label\": \"Immunodeficiency disorder\",\n    \"rationale\": \"Ancestors are generic 'disease/disorder/clinical finding'; exclusion exceeds inclusion, so be conservative and keep at 'Immunodeficiency disorder' requirement.\"\n  },\n  {\n    \"concept_id\": \"36980009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"36980009\",\n    \"stop_at_label\": \"Adenosine deaminase deficiency\",\n    \"rationale\": \"All parents/grandparents/great-grandparents are 'disease/disorder' categories; keep the specific ADA-SCID subtype to preserve intervention relevance.\"\n  },\n  {\n    \"concept_id\": \"162339002\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"118230007\",\n    \"stop_at_label\": \"Hearing finding\",\n    \"rationale\": \"Parent 'Hearing finding' preserves auditory domain while avoiding generic categories; timeframe tight and small clause size support H=1.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "230253001",
+      "hops": 1,
+      "rationale": "Parent 'Spinal muscular atrophy' preserves motor neuron disease intent; other ancestors are generic 'disease/disorder'. Tight timeframe and narrow clause size f",
+      "stop_at_concept_id": "5262007",
+      "stop_at_label": "Spinal muscular atrophy"
+    },
+    {
+      "concept_id": "5262007",
+      "hops": 0,
+      "rationale": "Parents and grandparents are 'disease/disorder' categories; staying at 'Spinal muscular atrophy' preserves mechanism and program specificity.",
+      "stop_at_concept_id": "5262007",
+      "stop_at_label": "Spinal muscular atrophy"
+    },
+    {
+      "concept_id": "234532001",
+      "hops": 0,
+      "rationale": "Ancestors are generic 'disease/disorder/clinical finding'; exclusion exceeds inclusion, so be conservative and keep at 'Immunodeficiency disorder' requirement.",
+      "stop_at_concept_id": "234532001",
+      "stop_at_label": "Immunodeficiency disorder"
+    },
+    {
+      "concept_id": "36980009",
+      "hops": 0,
+      "rationale": "All parents/grandparents/great-grandparents are 'disease/disorder' categories; keep the specific ADA-SCID subtype to preserve intervention relevance.",
+      "stop_at_concept_id": "36980009",
+      "stop_at_label": "Adenosine deaminase deficiency"
+    },
+    {
+      "concept_id": "162339002",
+      "hops": 1,
+      "rationale": "Parent 'Hearing finding' preserves auditory domain while avoiding generic categories; timeframe tight and small clause size support H=1.",
+      "stop_at_concept_id": "118230007",
+      "stop_at_label": "Hearing finding"
+    }
+  ]
+}

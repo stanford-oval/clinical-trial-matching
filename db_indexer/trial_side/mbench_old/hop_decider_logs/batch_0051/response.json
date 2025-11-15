@@ -1,0 +1,41 @@
+{
+  "batch_index": 51,
+  "raw_response": "[\n  {\n    \"concept_id\": \"82127005\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"49298003\",\n    \"stop_at_label\": \"Abscess of trunk\",\n    \"rationale\": \"Parent keeps abscess mechanism and trunk site; avoids disallowed 'disorder' parents and overly broad 'Abscess' grandparent.\"\n  },\n  {\n    \"concept_id\": \"425390006\",\n    \"hops\": 2,\n    \"stop_at_concept_id\": \"52448006\",\n    \"stop_at_label\": \"Dementia\",\n    \"rationale\": \"Grandparent 'Dementia' preserves neurocognitive program intent while avoiding generic 'disorder' categories; timeframe tight and clause small.\"\n  },\n  {\n    \"concept_id\": \"39912006\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"192967009\",\n    \"stop_at_label\": \"Spastic paraplegia\",\n    \"rationale\": \"Parent 'Spastic paraplegia' keeps motor phenotype and relevance; other parents are 'disease/disorder' or too broad. High parent_count favors conservative hop.\"\n  },\n  {\n    \"concept_id\": \"386661006\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"386661006\",\n    \"stop_at_label\": \"Fever\",\n    \"rationale\": \"Equal inclusion and exclusion; parent is broader vital sign category. Keeping 'Fever' preserves clinical specificity.\"\n  },\n  {\n    \"concept_id\": \"237602007\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"237602007\",\n    \"stop_at_label\": \"Inborn error of metabolism\",\n    \"rationale\": \"Parent 'Metabolic disease' is disallowed; depth is already general. Keep requirement-level specificity.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "82127005",
+      "hops": 1,
+      "rationale": "Parent keeps abscess mechanism and trunk site; avoids disallowed 'disorder' parents and overly broad 'Abscess' grandparent.",
+      "stop_at_concept_id": "49298003",
+      "stop_at_label": "Abscess of trunk"
+    },
+    {
+      "concept_id": "425390006",
+      "hops": 2,
+      "rationale": "Grandparent 'Dementia' preserves neurocognitive program intent while avoiding generic 'disorder' categories; timeframe tight and clause small.",
+      "stop_at_concept_id": "52448006",
+      "stop_at_label": "Dementia"
+    },
+    {
+      "concept_id": "39912006",
+      "hops": 1,
+      "rationale": "Parent 'Spastic paraplegia' keeps motor phenotype and relevance; other parents are 'disease/disorder' or too broad. High parent_count favors conservative hop.",
+      "stop_at_concept_id": "192967009",
+      "stop_at_label": "Spastic paraplegia"
+    },
+    {
+      "concept_id": "386661006",
+      "hops": 0,
+      "rationale": "Equal inclusion and exclusion; parent is broader vital sign category. Keeping 'Fever' preserves clinical specificity.",
+      "stop_at_concept_id": "386661006",
+      "stop_at_label": "Fever"
+    },
+    {
+      "concept_id": "237602007",
+      "hops": 0,
+      "rationale": "Parent 'Metabolic disease' is disallowed; depth is already general. Keep requirement-level specificity.",
+      "stop_at_concept_id": "237602007",
+      "stop_at_label": "Inborn error of metabolism"
+    }
+  ]
+}

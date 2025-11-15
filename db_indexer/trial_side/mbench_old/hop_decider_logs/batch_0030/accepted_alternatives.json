@@ -1,0 +1,122 @@
+[
+  {
+    "concept_id": "255121007",
+    "alt_concept_id": "399902003",
+    "hop": 1,
+    "alt_label": "Disorder of body cavity",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "255121007",
+    "alt_concept_id": "722688002",
+    "hop": 1,
+    "alt_label": "Malignant epithelial neoplasm",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "255121007",
+    "alt_concept_id": "448772000",
+    "hop": 1,
+    "alt_label": "Mass of abdominal cavity structure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "255121007",
+    "alt_concept_id": "94627008",
+    "hop": 1,
+    "alt_label": "Secondary malignant neoplasm of peritoneum",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "408645001",
+    "alt_concept_id": "443961001",
+    "hop": 1,
+    "alt_label": "Malignant adenomatous neoplasm",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "408645001",
+    "alt_concept_id": "363510005",
+    "hop": 1,
+    "alt_label": "Malignant tumor of large intestine",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "49727002",
+    "alt_concept_id": "301233008",
+    "hop": 1,
+    "alt_label": "Functional finding of respiratory tract",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "70536003",
+    "alt_concept_id": "363186003",
+    "hop": 1,
+    "alt_label": "Introduction of substance by body site",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "70536003",
+    "alt_concept_id": "119980000",
+    "hop": 1,
+    "alt_label": "Kidney implantation",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "70536003",
+    "alt_concept_id": "175898006",
+    "hop": 1,
+    "alt_label": "Kidney operation",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "70536003",
+    "alt_concept_id": "398887003",
+    "hop": 1,
+    "alt_label": "Renal replacement",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "70536003",
+    "alt_concept_id": "313039003",
+    "hop": 1,
+    "alt_label": "Solid organ transplant",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "94455000",
+    "alt_concept_id": "363443007",
+    "hop": 1,
+    "alt_label": "Malignant tumor of ovary",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "94455000",
+    "alt_concept_id": "94348003",
+    "hop": 1,
+    "alt_label": "Secondary malignant neoplasm of intra-abdominal organs",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  },
+  {
+    "concept_id": "94455000",
+    "alt_concept_id": "94664002",
+    "hop": 1,
+    "alt_label": "Secondary malignant neoplasm of uterine adnexa",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:38:27"
+  }
+]

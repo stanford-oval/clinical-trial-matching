@@ -1,0 +1,41 @@
+{
+  "batch_index": 12,
+  "raw_response": "[\n  {\n    \"concept_id\": \"194828000\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"194828000\",\n    \"stop_at_label\": \"Angina pectoris\",\n    \"rationale\": \"Parents are symptom/disease/pain categories—too generic. Exclusions exceed inclusions. Staying at angina preserves ischemic cardiac mechanism and program intent.\"\n  },\n  {\n    \"concept_id\": \"73211009\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"73211009\",\n    \"stop_at_label\": \"Diabetes mellitus\",\n    \"rationale\": \"All ancestors are generic ‘disorder/disease’ or site findings (deny-list). High exclusions. Keeping diabetes mellitus preserves endocrine/glucose-specific intent.\"\n  },\n  {\n    \"concept_id\": \"281245003\",\n    \"hops\": 0,\n    \"stop_at_concept_id\": \"281245003\",\n    \"stop_at_label\": \"Musculoskeletal chest pain\",\n    \"rationale\": \"Parents (chest pain; musculoskeletal pain) are each too broad, losing mechanism or location. Staying specific preserves coherent assessments and trial relevance.\"\n  },\n  {\n    \"concept_id\": \"49049000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"32798002\",\n    \"stop_at_label\": \"Parkinsonism\",\n    \"rationale\": \"Parent ‘Parkinsonism’ preserves movement-disorder intent and organ system, avoids generic terms, and remains clinically specific. Timeframe tight; clause size small.\"\n  },\n  {\n    \"concept_id\": \"300995000\",\n    \"hops\": 1,\n    \"stop_at_concept_id\": \"194828000\",\n    \"stop_at_label\": \"Angina pectoris\",\n    \"rationale\": \"Parent ‘Angina pectoris’ maintains ischemic cardiac mechanism and program coherence. Not generic; timeframe tight; zero exclusions support modest generalization.\"\n  }\n]",
+  "parsed_decisions": [
+    {
+      "concept_id": "194828000",
+      "hops": 0,
+      "rationale": "Parents are symptom/disease/pain categories—too generic. Exclusions exceed inclusions. Staying at angina preserves ischemic cardiac mechanism and program intent",
+      "stop_at_concept_id": "194828000",
+      "stop_at_label": "Angina pectoris"
+    },
+    {
+      "concept_id": "73211009",
+      "hops": 0,
+      "rationale": "All ancestors are generic ‘disorder/disease’ or site findings (deny-list). High exclusions. Keeping diabetes mellitus preserves endocrine/glucose-specific inten",
+      "stop_at_concept_id": "73211009",
+      "stop_at_label": "Diabetes mellitus"
+    },
+    {
+      "concept_id": "281245003",
+      "hops": 0,
+      "rationale": "Parents (chest pain; musculoskeletal pain) are each too broad, losing mechanism or location. Staying specific preserves coherent assessments and trial relevance",
+      "stop_at_concept_id": "281245003",
+      "stop_at_label": "Musculoskeletal chest pain"
+    },
+    {
+      "concept_id": "49049000",
+      "hops": 1,
+      "rationale": "Parent ‘Parkinsonism’ preserves movement-disorder intent and organ system, avoids generic terms, and remains clinically specific. Timeframe tight; clause size s",
+      "stop_at_concept_id": "32798002",
+      "stop_at_label": "Parkinsonism"
+    },
+    {
+      "concept_id": "300995000",
+      "hops": 1,
+      "rationale": "Parent ‘Angina pectoris’ maintains ischemic cardiac mechanism and program coherence. Not generic; timeframe tight; zero exclusions support modest generalization",
+      "stop_at_concept_id": "194828000",
+      "stop_at_label": "Angina pectoris"
+    }
+  ]
+}

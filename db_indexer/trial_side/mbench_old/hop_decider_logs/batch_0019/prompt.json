@@ -1,0 +1,806 @@
+{
+  "batch_index": 19,
+  "offset": 90,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "184091000",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 1,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 3,
+        "exclusion_trials": 6
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "184087005",
+            "label": "Patient temporarily left"
+          },
+          {
+            "concept_id": "184087005",
+            "label": "Patient temporarily left"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "307827002",
+            "label": "Registration status"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "307824009",
+            "label": "Administrative statuses"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "184061005",
+            "label": "Patient registration status"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "23968004",
+      "features": {
+        "depth_from_root": 9,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "82874003",
+            "label": "Operation on colon"
+          },
+          {
+            "concept_id": "82874003",
+            "label": "Operation on colon"
+          },
+          {
+            "concept_id": "27010001",
+            "label": "Partial excision of large intestine"
+          },
+          {
+            "concept_id": "27010001",
+            "label": "Partial excision of large intestine"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "442285009",
+            "label": "Excision of intestinal structure"
+          },
+          {
+            "concept_id": "34853001",
+            "label": "Operation on intestine"
+          },
+          {
+            "concept_id": "118838009",
+            "label": "Procedure on large intestine"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "118673008",
+            "label": "Procedure on digestive system"
+          },
+          {
+            "concept_id": "118826000",
+            "label": "Procedure on digestive tract"
+          },
+          {
+            "concept_id": "118717007",
+            "label": "Procedure on organ"
+          },
+          {
+            "concept_id": "118694006",
+            "label": "Procedure on trunk"
+          },
+          {
+            "concept_id": "387713003",
+            "label": "Surgical procedure"
+          },
+          {
+            "concept_id": "128303001",
+            "label": "Surgical removal"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "108189003",
+            "label": "Abdomen excision"
+          },
+          {
+            "concept_id": "118150001",
+            "label": "Gastrointestinal tract excision"
+          },
+          {
+            "concept_id": "174035000",
+            "label": "Lower gastrointestinal procedure"
+          },
+          {
+            "concept_id": "21371007",
+            "label": "Operation on abdominal region"
+          },
+          {
+            "concept_id": "386621005",
+            "label": "Operation on gastrointestinal tract"
+          },
+          {
+            "concept_id": "107957009",
+            "label": "Operative procedure on digestive organ"
+          },
+          {
+            "concept_id": "118831003",
+            "label": "Procedure on intestine"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "65801008",
+            "label": "Excision"
+          },
+          {
+            "concept_id": "37661000",
+            "label": "Operation on digestive tract"
+          },
+          {
+            "concept_id": "74943008",
+            "label": "Operation on trunk"
+          },
+          {
+            "concept_id": "107907001",
+            "label": "Operative procedure on digestive system"
+          },
+          {
+            "concept_id": "118698009",
+            "label": "Procedure on abdomen"
+          },
+          {
+            "concept_id": "118821005",
+            "label": "Procedure on digestive organ"
+          },
+          {
+            "concept_id": "384719006",
+            "label": "Procedure on gastrointestinal tract"
+          },
+          {
+            "concept_id": "119583009",
+            "label": "Trunk excision"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "107944001",
+            "label": "Large intestine excision"
+          },
+          {
+            "concept_id": "41141002",
+            "label": "Operative procedure on large intestine"
+          },
+          {
+            "concept_id": "118839001",
+            "label": "Procedure on colon"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "363402007",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 7,
+        "exclusion_trials": 3
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "428905002",
+            "label": "Malignant neoplasm of gastrointestinal tract"
+          },
+          {
+            "concept_id": "428905002",
+            "label": "Malignant neoplasm of gastrointestinal tract"
+          },
+          {
+            "concept_id": "255077007",
+            "label": "Malignant tumor of digestive organ"
+          },
+          {
+            "concept_id": "255077007",
+            "label": "Malignant tumor of digestive organ"
+          },
+          {
+            "concept_id": "126817006",
+            "label": "Neoplasm of esophagus"
+          },
+          {
+            "concept_id": "126817006",
+            "label": "Neoplasm of esophagus"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "37657006",
+            "label": "Disorder of esophagus"
+          },
+          {
+            "concept_id": "300287006",
+            "label": "Esophageal mass"
+          },
+          {
+            "concept_id": "448675008",
+            "label": "Malignant neoplasm of digestive system"
+          },
+          {
+            "concept_id": "254532005",
+            "label": "Neoplasm of digestive organ"
+          },
+          {
+            "concept_id": "126768004",
+            "label": "Neoplasm of gastrointestinal tract"
+          },
+          {
+            "concept_id": "254533000",
+            "label": "Tumor of esophagus, stomach and duodenum"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "84410009",
+            "label": "Disorder of digestive tract"
+          },
+          {
+            "concept_id": "50410009",
+            "label": "Disorder of upper digestive tract"
+          },
+          {
+            "concept_id": "386618008",
+            "label": "Gastrointestinal tract finding"
+          },
+          {
+            "concept_id": "300848003",
+            "label": "Mass of body structure"
+          },
+          {
+            "concept_id": "127331007",
+            "label": "Neoplasm by body site"
+          },
+          {
+            "concept_id": "55342001",
+            "label": "Neoplastic disease"
+          },
+          {
+            "concept_id": "406123005",
+            "label": "Viscus structure finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "399981008",
+            "label": "Neoplasm and/or hamartoma"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "119292006",
+            "label": "Disorder of gastrointestinal tract"
+          },
+          {
+            "concept_id": "119291004",
+            "label": "Disorder of upper gastrointestinal tract"
+          },
+          {
+            "concept_id": "300284004",
+            "label": "Finding of esophagus"
+          },
+          {
+            "concept_id": "300286002",
+            "label": "Lesion of esophagus"
+          },
+          {
+            "concept_id": "363346000",
+            "label": "Malignant neoplastic disease"
+          },
+          {
+            "concept_id": "300855001",
+            "label": "Mass of digestive structure"
+          },
+          {
+            "concept_id": "128348002",
+            "label": "Neoplasm of digestive system"
+          },
+          {
+            "concept_id": "128415001",
+            "label": "Neoplasm of digestive tract"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "13645005",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 0.5,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 4,
+        "exclusion_trials": 5
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "68917000",
+            "label": "Bronchiolar disease"
+          },
+          {
+            "concept_id": "68917000",
+            "label": "Bronchiolar disease"
+          },
+          {
+            "concept_id": "17097001",
+            "label": "Chronic disease of respiratory system"
+          },
+          {
+            "concept_id": "17097001",
+            "label": "Chronic disease of respiratory system"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "128121009",
+            "label": "Disorder of trunk"
+          },
+          {
+            "concept_id": "609623002",
+            "label": "Finding of upper trunk"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "128272009",
+            "label": "Disorder of lower respiratory system"
+          },
+          {
+            "concept_id": "609622007",
+            "label": "Disorder of thoracic segment of trunk"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "298705000",
+            "label": "Finding of region of thorax"
+          },
+          {
+            "concept_id": "301226008",
+            "label": "Lower respiratory tract finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "301229001",
+            "label": "Bronchial finding"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "118946009",
+            "label": "Disorder of thorax"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          },
+          {
+            "concept_id": "233776003",
+            "label": "Tracheobronchial disorder"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "302292003",
+            "label": "Finding of trunk structure"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "27624003",
+            "label": "Chronic disease"
+          },
+          {
+            "concept_id": "41427001",
+            "label": "Disorder of bronchus"
+          },
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "77097004",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 6,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "240075007",
+            "label": "Autosomal dominant muscular dystrophy not predominantly limb girdle"
+          },
+          {
+            "concept_id": "240075007",
+            "label": "Autosomal dominant muscular dystrophy not predominantly limb girdle"
+          },
+          {
+            "concept_id": "54873004",
+            "label": "Congenital anomaly of orbit"
+          },
+          {
+            "concept_id": "54873004",
+            "label": "Congenital anomaly of orbit"
+          },
+          {
+            "concept_id": "11223009",
+            "label": "Congenital anomaly of pharynx"
+          },
+          {
+            "concept_id": "11223009",
+            "label": "Congenital anomaly of pharynx"
+          },
+          {
+            "concept_id": "363080007",
+            "label": "Digestive system hereditary disorder"
+          },
+          {
+            "concept_id": "363080007",
+            "label": "Digestive system hereditary disorder"
+          },
+          {
+            "concept_id": "363343008",
+            "label": "Hereditary disorder of the visual system"
+          },
+          {
+            "concept_id": "363343008",
+            "label": "Hereditary disorder of the visual system"
+          },
+          {
+            "concept_id": "57130002",
+            "label": "Myopathy of extraocular muscles"
+          },
+          {
+            "concept_id": "57130002",
+            "label": "Myopathy of extraocular muscles"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "79191007",
+            "label": "Congenital anomaly of muscle AND/OR tendon"
+          },
+          {
+            "concept_id": "66091009",
+            "label": "Congenital disease"
+          },
+          {
+            "concept_id": "362975008",
+            "label": "Degenerative disorder"
+          },
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "84410009",
+            "label": "Disorder of digestive tract"
+          },
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "232208008",
+            "label": "Ear, nose and throat disorder"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "248402002",
+            "label": "General finding of soft tissue"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          },
+          {
+            "concept_id": "249376008",
+            "label": "Mouth and/or pharynx finding"
+          },
+          {
+            "concept_id": "106030000",
+            "label": "Muscle finding"
+          },
+          {
+            "concept_id": "106028002",
+            "label": "Musculoskeletal finding"
+          },
+          {
+            "concept_id": "301186004",
+            "label": "Upper respiratory tract finding"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "73573004",
+            "label": "Congenital anomaly of musculoskeletal system"
+          },
+          {
+            "concept_id": "297268004",
+            "label": "Ear, nose and throat finding"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "1899006",
+            "label": "Autosomal hereditary disorder"
+          },
+          {
+            "concept_id": "69518005",
+            "label": "Congenital anomaly of digestive system"
+          },
+          {
+            "concept_id": "95470009",
+            "label": "Congenital anomaly of digestive tract"
+          },
+          {
+            "concept_id": "89886004",
+            "label": "Congenital anomaly of skeletal muscle"
+          },
+          {
+            "concept_id": "276654001",
+            "label": "Congenital malformation"
+          },
+          {
+            "concept_id": "275260000",
+            "label": "Congenital malformation of the respiratory system"
+          },
+          {
+            "concept_id": "386617003",
+            "label": "Digestive system finding"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "76712006",
+            "label": "Disorder of digestive organ"
+          },
+          {
+            "concept_id": "371409005",
+            "label": "Disorder of eye region"
+          },
+          {
+            "concept_id": "118934005",
+            "label": "Disorder of head"
+          },
+          {
+            "concept_id": "129565002",
+            "label": "Disorder of muscle"
+          },
+          {
+            "concept_id": "928000",
+            "label": "Disorder of musculoskeletal system"
+          },
+          {
+            "concept_id": "19660004",
+            "label": "Disorder of soft tissue"
+          },
+          {
+            "concept_id": "50410009",
+            "label": "Disorder of upper digestive tract"
+          },
+          {
+            "concept_id": "201060008",
+            "label": "Disorder of upper respiratory system"
+          },
+          {
+            "concept_id": "118235002",
+            "label": "Eye / vision finding"
+          },
+          {
+            "concept_id": "32895009",
+            "label": "Hereditary disease"
+          },
+          {
+            "concept_id": "363212003",
+            "label": "Hereditary disorder of musculoskeletal system"
+          },
+          {
+            "concept_id": "73297009",
+            "label": "Muscular dystrophy"
+          },
+          {
+            "concept_id": "246912006",
+            "label": "Orbit finding"
+          },
+          {
+            "concept_id": "116338005",
+            "label": "Pharyngeal finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "11164009",
+            "label": "Autosomal dominant hereditary disorder"
+          },
+          {
+            "concept_id": "128332003",
+            "label": "Congenital anomaly of digestive organ"
+          },
+          {
+            "concept_id": "87290003",
+            "label": "Congenital anomaly of head"
+          },
+          {
+            "concept_id": "4160001",
+            "label": "Congenital anomaly of upper respiratory system"
+          },
+          {
+            "concept_id": "127329003",
+            "label": "Congenital anomaly of visual system"
+          },
+          {
+            "concept_id": "111501005",
+            "label": "Congenital hereditary muscular dystrophy"
+          },
+          {
+            "concept_id": "275262008",
+            "label": "Congenital malformation of upper alimentary tract"
+          },
+          {
+            "concept_id": "53619000",
+            "label": "Disorder of digestive system"
+          },
+          {
+            "concept_id": "371436007",
+            "label": "Disorder of orbit proper"
+          },
+          {
+            "concept_id": "75860007",
+            "label": "Disorder of pharynx"
+          },
+          {
+            "concept_id": "75047002",
+            "label": "Disorder of skeletal muscle"
+          },
+          {
+            "concept_id": "363137000",
+            "label": "Hereditary disorder by system"
+          },
+          {
+            "concept_id": "240070002",
+            "label": "Muscular dystrophy not predominantly limb girdle in distribution"
+          },
+          {
+            "concept_id": "128127008",
+            "label": "Visual system disorder"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 42594,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"184091000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 6\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"184087005\",\n          \"label\": \"Patient temporarily left\"\n        },\n        {\n          \"concept_id\": \"184087005\",\n          \"label\": \"Patient temporarily left\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"307827002\",\n          \"label\": \"Registration status\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"307824009\",\n          \"label\": \"Administrative statuses\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"184061005\",\n          \"label\": \"Patient registration status\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"23968004\",\n    \"features\": {\n      \"depth_from_root\": 9,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"82874003\",\n          \"label\": \"Operation on colon\"\n        },\n        {\n          \"concept_id\": \"82874003\",\n          \"label\": \"Operation on colon\"\n        },\n        {\n          \"concept_id\": \"27010001\",\n          \"label\": \"Partial excision of large intestine\"\n        },\n        {\n          \"concept_id\": \"27010001\",\n          \"label\": \"Partial excision of large intestine\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"442285009\",\n          \"label\": \"Excision of intestinal structure\"\n        },\n        {\n          \"concept_id\": \"34853001\",\n          \"label\": \"Operation on intestine\"\n        },\n        {\n          \"concept_id\": \"118838009\",\n          \"label\": \"Procedure on large intestine\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118673008\",\n          \"label\": \"Procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118826000\",\n          \"label\": \"Procedure on digestive tract\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        },\n        {\n          \"concept_id\": \"128303001\",\n          \"label\": \"Surgical removal\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"108189003\",\n          \"label\": \"Abdomen excision\"\n        },\n        {\n          \"concept_id\": \"118150001\",\n          \"label\": \"Gastrointestinal tract excision\"\n        },\n        {\n          \"concept_id\": \"174035000\",\n          \"label\": \"Lower gastrointestinal procedure\"\n        },\n        {\n          \"concept_id\": \"21371007\",\n          \"label\": \"Operation on abdominal region\"\n        },\n        {\n          \"concept_id\": \"386621005\",\n          \"label\": \"Operation on gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"107957009\",\n          \"label\": \"Operative procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"118831003\",\n          \"label\": \"Procedure on intestine\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"65801008\",\n          \"label\": \"Excision\"\n        },\n        {\n          \"concept_id\": \"37661000\",\n          \"label\": \"Operation on digestive tract\"\n        },\n        {\n          \"concept_id\": \"74943008\",\n          \"label\": \"Operation on trunk\"\n        },\n        {\n          \"concept_id\": \"107907001\",\n          \"label\": \"Operative procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118698009\",\n          \"label\": \"Procedure on abdomen\"\n        },\n        {\n          \"concept_id\": \"118821005\",\n          \"label\": \"Procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"384719006\",\n          \"label\": \"Procedure on gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"119583009\",\n          \"label\": \"Trunk excision\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"107944001\",\n          \"label\": \"Large intestine excision\"\n        },\n        {\n          \"concept_id\": \"41141002\",\n          \"label\": \"Operative procedure on large intestine\"\n        },\n        {\n          \"concept_id\": \"118839001\",\n          \"label\": \"Procedure on colon\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"363402007\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 7,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"428905002\",\n          \"label\": \"Malignant neoplasm of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"428905002\",\n          \"label\": \"Malignant neoplasm of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"255077007\",\n          \"label\": \"Malignant tumor of digestive organ\"\n        },\n        {\n          \"concept_id\": \"255077007\",\n          \"label\": \"Malignant tumor of digestive organ\"\n        },\n        {\n          \"concept_id\": \"126817006\",\n          \"label\": \"Neoplasm of esophagus\"\n        },\n        {\n          \"concept_id\": \"126817006\",\n          \"label\": \"Neoplasm of esophagus\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"37657006\",\n          \"label\": \"Disorder of esophagus\"\n        },\n        {\n          \"concept_id\": \"300287006\",\n          \"label\": \"Esophageal mass\"\n        },\n        {\n          \"concept_id\": \"448675008\",\n          \"label\": \"Malignant neoplasm of digestive system\"\n        },\n        {\n          \"concept_id\": \"254532005\",\n          \"label\": \"Neoplasm of digestive organ\"\n        },\n        {\n          \"concept_id\": \"126768004\",\n          \"label\": \"Neoplasm of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"254533000\",\n          \"label\": \"Tumor of esophagus, stomach and duodenum\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"386618008\",\n          \"label\": \"Gastrointestinal tract finding\"\n        },\n        {\n          \"concept_id\": \"300848003\",\n          \"label\": \"Mass of body structure\"\n        },\n        {\n          \"concept_id\": \"127331007\",\n          \"label\": \"Neoplasm by body site\"\n        },\n        {\n          \"concept_id\": \"55342001\",\n          \"label\": \"Neoplastic disease\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"399981008\",\n          \"label\": \"Neoplasm and/or hamartoma\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"119292006\",\n          \"label\": \"Disorder of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"119291004\",\n          \"label\": \"Disorder of upper gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"300284004\",\n          \"label\": \"Finding of esophagus\"\n        },\n        {\n          \"concept_id\": \"300286002\",\n          \"label\": \"Lesion of esophagus\"\n        },\n        {\n          \"concept_id\": \"363346000\",\n          \"label\": \"Malignant neoplastic disease\"\n        },\n        {\n          \"concept_id\": \"300855001\",\n          \"label\": \"Mass of digestive structure\"\n        },\n        {\n          \"concept_id\": \"128348002\",\n          \"label\": \"Neoplasm of digestive system\"\n        },\n        {\n          \"concept_id\": \"128415001\",\n          \"label\": \"Neoplasm of digestive tract\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"13645005\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.5,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 4,\n      \"exclusion_trials\": 5\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"68917000\",\n          \"label\": \"Bronchiolar disease\"\n        },\n        {\n          \"concept_id\": \"68917000\",\n          \"label\": \"Bronchiolar disease\"\n        },\n        {\n          \"concept_id\": \"17097001\",\n          \"label\": \"Chronic disease of respiratory system\"\n        },\n        {\n          \"concept_id\": \"17097001\",\n          \"label\": \"Chronic disease of respiratory system\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"128272009\",\n          \"label\": \"Disorder of lower respiratory system\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"301226008\",\n          \"label\": \"Lower respiratory tract finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"301229001\",\n          \"label\": \"Bronchial finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        },\n        {\n          \"concept_id\": \"233776003\",\n          \"label\": \"Tracheobronchial disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"27624003\",\n          \"label\": \"Chronic disease\"\n        },\n        {\n          \"concept_id\": \"41427001\",\n          \"label\": \"Disorder of bronchus\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"77097004\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 6,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"240075007\",\n          \"label\": \"Autosomal dominant muscular dystrophy not predominantly limb girdle\"\n        },\n        {\n          \"concept_id\": \"240075007\",\n          \"label\": \"Autosomal dominant muscular dystrophy not predominantly limb girdle\"\n        },\n        {\n          \"concept_id\": \"54873004\",\n          \"label\": \"Congenital anomaly of orbit\"\n        },\n        {\n          \"concept_id\": \"54873004\",\n          \"label\": \"Congenital anomaly of orbit\"\n        },\n        {\n          \"concept_id\": \"11223009\",\n          \"label\": \"Congenital anomaly of pharynx\"\n        },\n        {\n          \"concept_id\": \"11223009\",\n          \"label\": \"Congenital anomaly of pharynx\"\n        },\n        {\n          \"concept_id\": \"363080007\",\n          \"label\": \"Digestive system hereditary disorder\"\n        },\n        {\n          \"concept_id\": \"363080007\",\n          \"label\": \"Digestive system hereditary disorder\"\n        },\n        {\n          \"concept_id\": \"363343008\",\n          \"label\": \"Hereditary disorder of the visual system\"\n        },\n        {\n          \"concept_id\": \"363343008\",\n          \"label\": \"Hereditary disorder of the visual system\"\n        },\n        {\n          \"concept_id\": \"57130002\",\n          \"label\": \"Myopathy of extraocular muscles\"\n        },\n        {\n          \"concept_id\": \"57130002\",\n          \"label\": \"Myopathy of extraocular muscles\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"79191007\",\n          \"label\": \"Congenital anomaly of muscle AND/OR tendon\"\n        },\n        {\n          \"concept_id\": \"66091009\",\n          \"label\": \"Congenital disease\"\n        },\n        {\n          \"concept_id\": \"362975008\",\n          \"label\": \"Degenerative disorder\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        },\n        {\n          \"concept_id\": \"106030000\",\n          \"label\": \"Muscle finding\"\n        },\n        {\n          \"concept_id\": \"106028002\",\n          \"label\": \"Musculoskeletal finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"73573004\",\n          \"label\": \"Congenital anomaly of musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"1899006\",\n          \"label\": \"Autosomal hereditary disorder\"\n        },\n        {\n          \"concept_id\": \"69518005\",\n          \"label\": \"Congenital anomaly of digestive system\"\n        },\n        {\n          \"concept_id\": \"95470009\",\n          \"label\": \"Congenital anomaly of digestive tract\"\n        },\n        {\n          \"concept_id\": \"89886004\",\n          \"label\": \"Congenital anomaly of skeletal muscle\"\n        },\n        {\n          \"concept_id\": \"276654001\",\n          \"label\": \"Congenital malformation\"\n        },\n        {\n          \"concept_id\": \"275260000\",\n          \"label\": \"Congenital malformation of the respiratory system\"\n        },\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"371409005\",\n          \"label\": \"Disorder of eye region\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"129565002\",\n          \"label\": \"Disorder of muscle\"\n        },\n        {\n          \"concept_id\": \"928000\",\n          \"label\": \"Disorder of musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"118235002\",\n          \"label\": \"Eye / vision finding\"\n        },\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        },\n        {\n          \"concept_id\": \"363212003\",\n          \"label\": \"Hereditary disorder of musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"73297009\",\n          \"label\": \"Muscular dystrophy\"\n        },\n        {\n          \"concept_id\": \"246912006\",\n          \"label\": \"Orbit finding\"\n        },\n        {\n          \"concept_id\": \"116338005\",\n          \"label\": \"Pharyngeal finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"11164009\",\n          \"label\": \"Autosomal dominant hereditary disorder\"\n        },\n        {\n          \"concept_id\": \"128332003\",\n          \"label\": \"Congenital anomaly of digestive organ\"\n        },\n        {\n          \"concept_id\": \"87290003\",\n          \"label\": \"Congenital anomaly of head\"\n        },\n        {\n          \"concept_id\": \"4160001\",\n          \"label\": \"Congenital anomaly of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"127329003\",\n          \"label\": \"Congenital anomaly of visual system\"\n        },\n        {\n          \"concept_id\": \"111501005\",\n          \"label\": \"Congenital hereditary muscular dystrophy\"\n        },\n        {\n          \"concept_id\": \"275262008\",\n          \"label\": \"Congenital malformation of upper alimentary tract\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"371436007\",\n          \"label\": \"Disorder of orbit proper\"\n        },\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"75047002\",\n          \"label\": \"Disorder of skeletal muscle\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        },\n        {\n          \"concept_id\": \"240070002\",\n          \"label\": \"Muscular dystrophy not predominantly limb girdle in distribution\"\n        },\n        {\n          \"concept_id\": \"128127008\",\n          \"label\": \"Visual system disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"184091000\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 1,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 3,\n      \"exclusion_trials\": 6\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"184087005\",\n          \"label\": \"Patient temporarily left\"\n        },\n        {\n          \"concept_id\": \"184087005\",\n          \"label\": \"Patient temporarily left\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"307827002\",\n          \"label\": \"Registration status\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"307824009\",\n          \"label\": \"Administrative statuses\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"184061005\",\n          \"label\": \"Patient registration status\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"23968004\",\n    \"features\": {\n      \"depth_from_root\": 9,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"82874003\",\n          \"label\": \"Operation on colon\"\n        },\n        {\n          \"concept_id\": \"82874003\",\n          \"label\": \"Operation on colon\"\n        },\n        {\n          \"concept_id\": \"27010001\",\n          \"label\": \"Partial excision of large intestine\"\n        },\n        {\n          \"concept_id\": \"27010001\",\n          \"label\": \"Partial excision of large intestine\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"442285009\",\n          \"label\": \"Excision of intestinal structure\"\n        },\n        {\n          \"concept_id\": \"34853001\",\n          \"label\": \"Operation on intestine\"\n        },\n        {\n          \"concept_id\": \"118838009\",\n          \"label\": \"Procedure on large intestine\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"118673008\",\n          \"label\": \"Procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118826000\",\n          \"label\": \"Procedure on digestive tract\"\n        },\n        {\n          \"concept_id\": \"118717007\",\n          \"label\": \"Procedure on organ\"\n        },\n        {\n          \"concept_id\": \"118694006\",\n          \"label\": \"Procedure on trunk\"\n        },\n        {\n          \"concept_id\": \"387713003\",\n          \"label\": \"Surgical procedure\"\n        },\n        {\n          \"concept_id\": \"128303001\",\n          \"label\": \"Surgical removal\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"108189003\",\n          \"label\": \"Abdomen excision\"\n        },\n        {\n          \"concept_id\": \"118150001\",\n          \"label\": \"Gastrointestinal tract excision\"\n        },\n        {\n          \"concept_id\": \"174035000\",\n          \"label\": \"Lower gastrointestinal procedure\"\n        },\n        {\n          \"concept_id\": \"21371007\",\n          \"label\": \"Operation on abdominal region\"\n        },\n        {\n          \"concept_id\": \"386621005\",\n          \"label\": \"Operation on gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"107957009\",\n          \"label\": \"Operative procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"118831003\",\n          \"label\": \"Procedure on intestine\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"65801008\",\n          \"label\": \"Excision\"\n        },\n        {\n          \"concept_id\": \"37661000\",\n          \"label\": \"Operation on digestive tract\"\n        },\n        {\n          \"concept_id\": \"74943008\",\n          \"label\": \"Operation on trunk\"\n        },\n        {\n          \"concept_id\": \"107907001\",\n          \"label\": \"Operative procedure on digestive system\"\n        },\n        {\n          \"concept_id\": \"118698009\",\n          \"label\": \"Procedure on abdomen\"\n        },\n        {\n          \"concept_id\": \"118821005\",\n          \"label\": \"Procedure on digestive organ\"\n        },\n        {\n          \"concept_id\": \"384719006\",\n          \"label\": \"Procedure on gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"119583009\",\n          \"label\": \"Trunk excision\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"107944001\",\n          \"label\": \"Large intestine excision\"\n        },\n        {\n          \"concept_id\": \"41141002\",\n          \"label\": \"Operative procedure on large intestine\"\n        },\n        {\n          \"concept_id\": \"118839001\",\n          \"label\": \"Procedure on colon\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"363402007\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 7,\n      \"exclusion_trials\": 3\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"428905002\",\n          \"label\": \"Malignant neoplasm of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"428905002\",\n          \"label\": \"Malignant neoplasm of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"255077007\",\n          \"label\": \"Malignant tumor of digestive organ\"\n        },\n        {\n          \"concept_id\": \"255077007\",\n          \"label\": \"Malignant tumor of digestive organ\"\n        },\n        {\n          \"concept_id\": \"126817006\",\n          \"label\": \"Neoplasm of esophagus\"\n        },\n        {\n          \"concept_id\": \"126817006\",\n          \"label\": \"Neoplasm of esophagus\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"37657006\",\n          \"label\": \"Disorder of esophagus\"\n        },\n        {\n          \"concept_id\": \"300287006\",\n          \"label\": \"Esophageal mass\"\n        },\n        {\n          \"concept_id\": \"448675008\",\n          \"label\": \"Malignant neoplasm of digestive system\"\n        },\n        {\n          \"concept_id\": \"254532005\",\n          \"label\": \"Neoplasm of digestive organ\"\n        },\n        {\n          \"concept_id\": \"126768004\",\n          \"label\": \"Neoplasm of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"254533000\",\n          \"label\": \"Tumor of esophagus, stomach and duodenum\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"386618008\",\n          \"label\": \"Gastrointestinal tract finding\"\n        },\n        {\n          \"concept_id\": \"300848003\",\n          \"label\": \"Mass of body structure\"\n        },\n        {\n          \"concept_id\": \"127331007\",\n          \"label\": \"Neoplasm by body site\"\n        },\n        {\n          \"concept_id\": \"55342001\",\n          \"label\": \"Neoplastic disease\"\n        },\n        {\n          \"concept_id\": \"406123005\",\n          \"label\": \"Viscus structure finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"399981008\",\n          \"label\": \"Neoplasm and/or hamartoma\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"119292006\",\n          \"label\": \"Disorder of gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"119291004\",\n          \"label\": \"Disorder of upper gastrointestinal tract\"\n        },\n        {\n          \"concept_id\": \"300284004\",\n          \"label\": \"Finding of esophagus\"\n        },\n        {\n          \"concept_id\": \"300286002\",\n          \"label\": \"Lesion of esophagus\"\n        },\n        {\n          \"concept_id\": \"363346000\",\n          \"label\": \"Malignant neoplastic disease\"\n        },\n        {\n          \"concept_id\": \"300855001\",\n          \"label\": \"Mass of digestive structure\"\n        },\n        {\n          \"concept_id\": \"128348002\",\n          \"label\": \"Neoplasm of digestive system\"\n        },\n        {\n          \"concept_id\": \"128415001\",\n          \"label\": \"Neoplasm of digestive tract\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"13645005\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 0.5,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 4,\n      \"exclusion_trials\": 5\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"68917000\",\n          \"label\": \"Bronchiolar disease\"\n        },\n        {\n          \"concept_id\": \"68917000\",\n          \"label\": \"Bronchiolar disease\"\n        },\n        {\n          \"concept_id\": \"17097001\",\n          \"label\": \"Chronic disease of respiratory system\"\n        },\n        {\n          \"concept_id\": \"17097001\",\n          \"label\": \"Chronic disease of respiratory system\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"128121009\",\n          \"label\": \"Disorder of trunk\"\n        },\n        {\n          \"concept_id\": \"609623002\",\n          \"label\": \"Finding of upper trunk\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"128272009\",\n          \"label\": \"Disorder of lower respiratory system\"\n        },\n        {\n          \"concept_id\": \"609622007\",\n          \"label\": \"Disorder of thoracic segment of trunk\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"298705000\",\n          \"label\": \"Finding of region of thorax\"\n        },\n        {\n          \"concept_id\": \"301226008\",\n          \"label\": \"Lower respiratory tract finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"301229001\",\n          \"label\": \"Bronchial finding\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"118946009\",\n          \"label\": \"Disorder of thorax\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        },\n        {\n          \"concept_id\": \"233776003\",\n          \"label\": \"Tracheobronchial disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"302292003\",\n          \"label\": \"Finding of trunk structure\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"27624003\",\n          \"label\": \"Chronic disease\"\n        },\n        {\n          \"concept_id\": \"41427001\",\n          \"label\": \"Disorder of bronchus\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"77097004\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 6,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"240075007\",\n          \"label\": \"Autosomal dominant muscular dystrophy not predominantly limb girdle\"\n        },\n        {\n          \"concept_id\": \"240075007\",\n          \"label\": \"Autosomal dominant muscular dystrophy not predominantly limb girdle\"\n        },\n        {\n          \"concept_id\": \"54873004\",\n          \"label\": \"Congenital anomaly of orbit\"\n        },\n        {\n          \"concept_id\": \"54873004\",\n          \"label\": \"Congenital anomaly of orbit\"\n        },\n        {\n          \"concept_id\": \"11223009\",\n          \"label\": \"Congenital anomaly of pharynx\"\n        },\n        {\n          \"concept_id\": \"11223009\",\n          \"label\": \"Congenital anomaly of pharynx\"\n        },\n        {\n          \"concept_id\": \"363080007\",\n          \"label\": \"Digestive system hereditary disorder\"\n        },\n        {\n          \"concept_id\": \"363080007\",\n          \"label\": \"Digestive system hereditary disorder\"\n        },\n        {\n          \"concept_id\": \"363343008\",\n          \"label\": \"Hereditary disorder of the visual system\"\n        },\n        {\n          \"concept_id\": \"363343008\",\n          \"label\": \"Hereditary disorder of the visual system\"\n        },\n        {\n          \"concept_id\": \"57130002\",\n          \"label\": \"Myopathy of extraocular muscles\"\n        },\n        {\n          \"concept_id\": \"57130002\",\n          \"label\": \"Myopathy of extraocular muscles\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"79191007\",\n          \"label\": \"Congenital anomaly of muscle AND/OR tendon\"\n        },\n        {\n          \"concept_id\": \"66091009\",\n          \"label\": \"Congenital disease\"\n        },\n        {\n          \"concept_id\": \"362975008\",\n          \"label\": \"Degenerative disorder\"\n        },\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"84410009\",\n          \"label\": \"Disorder of digestive tract\"\n        },\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"248402002\",\n          \"label\": \"General finding of soft tissue\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        },\n        {\n          \"concept_id\": \"249376008\",\n          \"label\": \"Mouth and/or pharynx finding\"\n        },\n        {\n          \"concept_id\": \"106030000\",\n          \"label\": \"Muscle finding\"\n        },\n        {\n          \"concept_id\": \"106028002\",\n          \"label\": \"Musculoskeletal finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"73573004\",\n          \"label\": \"Congenital anomaly of musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"1899006\",\n          \"label\": \"Autosomal hereditary disorder\"\n        },\n        {\n          \"concept_id\": \"69518005\",\n          \"label\": \"Congenital anomaly of digestive system\"\n        },\n        {\n          \"concept_id\": \"95470009\",\n          \"label\": \"Congenital anomaly of digestive tract\"\n        },\n        {\n          \"concept_id\": \"89886004\",\n          \"label\": \"Congenital anomaly of skeletal muscle\"\n        },\n        {\n          \"concept_id\": \"276654001\",\n          \"label\": \"Congenital malformation\"\n        },\n        {\n          \"concept_id\": \"275260000\",\n          \"label\": \"Congenital malformation of the respiratory system\"\n        },\n        {\n          \"concept_id\": \"386617003\",\n          \"label\": \"Digestive system finding\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"76712006\",\n          \"label\": \"Disorder of digestive organ\"\n        },\n        {\n          \"concept_id\": \"371409005\",\n          \"label\": \"Disorder of eye region\"\n        },\n        {\n          \"concept_id\": \"118934005\",\n          \"label\": \"Disorder of head\"\n        },\n        {\n          \"concept_id\": \"129565002\",\n          \"label\": \"Disorder of muscle\"\n        },\n        {\n          \"concept_id\": \"928000\",\n          \"label\": \"Disorder of musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"19660004\",\n          \"label\": \"Disorder of soft tissue\"\n        },\n        {\n          \"concept_id\": \"50410009\",\n          \"label\": \"Disorder of upper digestive tract\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"118235002\",\n          \"label\": \"Eye / vision finding\"\n        },\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        },\n        {\n          \"concept_id\": \"363212003\",\n          \"label\": \"Hereditary disorder of musculoskeletal system\"\n        },\n        {\n          \"concept_id\": \"73297009\",\n          \"label\": \"Muscular dystrophy\"\n        },\n        {\n          \"concept_id\": \"246912006\",\n          \"label\": \"Orbit finding\"\n        },\n        {\n          \"concept_id\": \"116338005\",\n          \"label\": \"Pharyngeal finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"11164009\",\n          \"label\": \"Autosomal dominant hereditary disorder\"\n        },\n        {\n          \"concept_id\": \"128332003\",\n          \"label\": \"Congenital anomaly of digestive organ\"\n        },\n        {\n          \"concept_id\": \"87290003\",\n          \"label\": \"Congenital anomaly of head\"\n        },\n        {\n          \"concept_id\": \"4160001\",\n          \"label\": \"Congenital anomaly of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"127329003\",\n          \"label\": \"Congenital anomaly of visual system\"\n        },\n        {\n          \"concept_id\": \"111501005\",\n          \"label\": \"Congenital hereditary muscular dystrophy\"\n        },\n        {\n          \"concept_id\": \"275262008\",\n          \"label\": \"Congenital malformation of upper alimentary tract\"\n        },\n        {\n          \"concept_id\": \"53619000\",\n          \"label\": \"Disorder of digestive system\"\n        },\n        {\n          \"concept_id\": \"371436007\",\n          \"label\": \"Disorder of orbit proper\"\n        },\n        {\n          \"concept_id\": \"75860007\",\n          \"label\": \"Disorder of pharynx\"\n        },\n        {\n          \"concept_id\": \"75047002\",\n          \"label\": \"Disorder of skeletal muscle\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        },\n        {\n          \"concept_id\": \"240070002\",\n          \"label\": \"Muscular dystrophy not predominantly limb girdle in distribution\"\n        },\n        {\n          \"concept_id\": \"128127008\",\n          \"label\": \"Visual system disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  }\n]\n"
+}

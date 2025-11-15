@@ -1,0 +1,56 @@
+=== TASK ===
+You are a clinician-calibrated ontology filtering module inside a formal ontology–based patient-trial matching system.
+For each trial-side requirement concept (the root_label), you will choose a concise allow-list of its ancestor concepts that are acceptable “documentation-level alternatives” when matching against root patient facts.
+
+=== Core principle (the thing you are optimizing for) ===
+
+Do not blindly accept all ancestors.
+Accept an ancestor A of a trial concept Y only if this is a realistic and common underspecification pattern in the patient-fact source:
+
+If a patient truly has Y, may they often be documented (or self-report) at their most specific available level as A instead of Y?
+- If yes, A can be kept (it prevents false negatives due to underspecification).
+- If no, A should be rejected (it will create spurious matches by being too generic).
+
+Think of each hop upward as a loss of specificity. Only keep ancestors where that loss is clinically sensible and commonly observed in documentation.
+
+Example intuition (do not output examples):
+1. “Subclinical hypothyroidism” → “hypothyroidism” is often how it’s recorded -- keep.
+2. “Traumatic brain injury” → “traumatic injury” is usually too broad to stand in for TBI at typical documentation granularity -- reject.
+
+=== Goal ===
+Return a concise allow-list of clinically relevant ancestors per concept.
+
+# === Inputs ===
+For each case below, you are given ONLY the ancestor labels grouped by hop,
+each ancestor being identified by an index like "1.a", "2.c", etc.
+
+Each case:
+{
+  "case_id": "c<batch>_<index>",            // opaque id you MUST echo back
+  "root_label": "<preferred term of the requirement>",  // provided for context, echo it back
+  "ancestors_by_hop": {
+    "1": [{"idx":"1.a","label":"..."}, {"idx":"1.b","label":"..."}],
+    "2": [{"idx":"2.a","label":"..."}],
+    "3": [...],
+    ...
+  }
+}
+
+
+# === Output (JSON array only; no prose) ===
+Return one element per input case (order does not matter). Each element:
+{
+  "case_id": "c<batch>_<index>",            // echo exactly
+  "root_label": "<echo the root label verbatim>",       // for human readability
+  "keep": [
+    {
+      "alt_idx":"<one of the provided indices>",        // required (we key by this)
+      "alt_label":"<echo the chosen ancestor label>",   // for readability only
+      "reason":"<=25 words"
+    },
+    ...
+  ]
+}
+
+# === CASES ===
+{cases}

@@ -1,0 +1,632 @@
+{
+  "batch_index": 36,
+  "offset": 175,
+  "size": 5,
+  "cases": [
+    {
+      "concept_id": "363478007",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 3,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "371982006",
+            "label": "Malignant neoplasm of endocrine gland"
+          },
+          {
+            "concept_id": "371982006",
+            "label": "Malignant neoplasm of endocrine gland"
+          },
+          {
+            "concept_id": "363489000",
+            "label": "Malignant tumor of neck"
+          },
+          {
+            "concept_id": "363489000",
+            "label": "Malignant tumor of neck"
+          },
+          {
+            "concept_id": "127018007",
+            "label": "Neoplasm of thyroid gland"
+          },
+          {
+            "concept_id": "127018007",
+            "label": "Neoplasm of thyroid gland"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "298378000",
+            "label": "Finding of neck region"
+          },
+          {
+            "concept_id": "298397000",
+            "label": "Lesion of neck"
+          },
+          {
+            "concept_id": "274751001",
+            "label": "Mass in head or neck"
+          },
+          {
+            "concept_id": "399981008",
+            "label": "Neoplasm and/or hamartoma"
+          },
+          {
+            "concept_id": "127331007",
+            "label": "Neoplasm by body site"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "362969004",
+            "label": "Disorder of endocrine system"
+          },
+          {
+            "concept_id": "118939000",
+            "label": "Disorder of neck"
+          },
+          {
+            "concept_id": "299703001",
+            "label": "Mass of neck"
+          },
+          {
+            "concept_id": "387927001",
+            "label": "Neoplasm of endocrine system"
+          },
+          {
+            "concept_id": "255055008",
+            "label": "Neoplasm of head and neck"
+          },
+          {
+            "concept_id": "55342001",
+            "label": "Neoplastic disease"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "14304000",
+            "label": "Disorder of thyroid gland"
+          },
+          {
+            "concept_id": "363346000",
+            "label": "Malignant neoplastic disease"
+          },
+          {
+            "concept_id": "255056009",
+            "label": "Malignant tumor of head and neck"
+          },
+          {
+            "concept_id": "237557003",
+            "label": "Mass of thyroid gland"
+          },
+          {
+            "concept_id": "387922007",
+            "label": "Neoplasm of endocrine gland"
+          },
+          {
+            "concept_id": "126635000",
+            "label": "Neoplasm of neck"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "300862005",
+            "label": "Mass of body region"
+          },
+          {
+            "concept_id": "300848003",
+            "label": "Mass of body structure"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "68235000",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "118237005",
+            "label": "Nose finding"
+          },
+          {
+            "concept_id": "118237005",
+            "label": "Nose finding"
+          },
+          {
+            "concept_id": "301186004",
+            "label": "Upper respiratory tract finding"
+          },
+          {
+            "concept_id": "301186004",
+            "label": "Upper respiratory tract finding"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          },
+          {
+            "concept_id": "406122000",
+            "label": "Head finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "297268004",
+            "label": "Ear, nose and throat finding"
+          },
+          {
+            "concept_id": "301310005",
+            "label": "Finding of face"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          },
+          {
+            "concept_id": "298364001",
+            "label": "Finding of head region"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "54150009",
+      "features": {
+        "depth_from_root": 6,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 2,
+        "exclusion_trials": 6
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "201060008",
+            "label": "Disorder of upper respiratory system"
+          },
+          {
+            "concept_id": "201060008",
+            "label": "Disorder of upper respiratory system"
+          },
+          {
+            "concept_id": "275498002",
+            "label": "Respiratory tract infection"
+          },
+          {
+            "concept_id": "275498002",
+            "label": "Respiratory tract infection"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "301857004",
+            "label": "Finding of body region"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "40733004",
+            "label": "Disorder due to infection"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "297268004",
+            "label": "Ear, nose and throat finding"
+          },
+          {
+            "concept_id": "106048009",
+            "label": "Respiratory finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "50043002",
+            "label": "Disorder of respiratory system"
+          },
+          {
+            "concept_id": "232208008",
+            "label": "Ear, nose and throat disorder"
+          },
+          {
+            "concept_id": "301810000",
+            "label": "Infection by site"
+          },
+          {
+            "concept_id": "301186004",
+            "label": "Upper respiratory tract finding"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "118254002",
+            "label": "Finding of head and neck region"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "127040003",
+      "features": {
+        "depth_from_root": 5,
+        "parent_count": 6,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "14514008",
+            "label": "Anemia due to disturbance of hemoglobin synthesis"
+          },
+          {
+            "concept_id": "14514008",
+            "label": "Anemia due to disturbance of hemoglobin synthesis"
+          },
+          {
+            "concept_id": "323666000",
+            "label": "Anemia due to intrinsic red cell abnormality"
+          },
+          {
+            "concept_id": "323666000",
+            "label": "Anemia due to intrinsic red cell abnormality"
+          },
+          {
+            "concept_id": "424988008",
+            "label": "Anemia due to substance"
+          },
+          {
+            "concept_id": "424988008",
+            "label": "Anemia due to substance"
+          },
+          {
+            "concept_id": "63565007",
+            "label": "Congenital anemia"
+          },
+          {
+            "concept_id": "63565007",
+            "label": "Congenital anemia"
+          },
+          {
+            "concept_id": "123772008",
+            "label": "Homozygous hemoglobinopathy"
+          },
+          {
+            "concept_id": "123772008",
+            "label": "Homozygous hemoglobinopathy"
+          },
+          {
+            "concept_id": "417357006",
+            "label": "Sickling disorder due to hemoglobin S"
+          },
+          {
+            "concept_id": "417357006",
+            "label": "Sickling disorder due to hemoglobin S"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "762656009",
+            "label": "Abnormal blood cell count"
+          },
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "106200001",
+            "label": "Hematopoietic system finding"
+          },
+          {
+            "concept_id": "363137000",
+            "label": "Hereditary disorder by system"
+          },
+          {
+            "concept_id": "442096005",
+            "label": "Measurement finding outside reference range"
+          },
+          {
+            "concept_id": "365799007",
+            "label": "Protein level - finding"
+          },
+          {
+            "concept_id": "165427000",
+            "label": "RBC count abnormal"
+          },
+          {
+            "concept_id": "138875005",
+            "label": "SNOMED CT Concept"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "50820005",
+            "label": "Cytopenia"
+          },
+          {
+            "concept_id": "441793007",
+            "label": "Hemoglobin level outside reference range"
+          },
+          {
+            "concept_id": "414393003",
+            "label": "Hereditary disorder of cellular element of blood"
+          },
+          {
+            "concept_id": "442686002",
+            "label": "Measurement finding below reference range"
+          },
+          {
+            "concept_id": "165423001",
+            "label": "RBC count low"
+          },
+          {
+            "concept_id": "38292009",
+            "label": "Red blood cell disorder"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "441742003",
+            "label": "Evaluation finding"
+          },
+          {
+            "concept_id": "32895009",
+            "label": "Hereditary disease"
+          },
+          {
+            "concept_id": "118245000",
+            "label": "Measurement finding"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "271737000",
+            "label": "Anemia"
+          },
+          {
+            "concept_id": "66091009",
+            "label": "Congenital disease"
+          },
+          {
+            "concept_id": "416417002",
+            "label": "Hereditary hemoglobin S"
+          },
+          {
+            "concept_id": "427306008",
+            "label": "Hereditary hemoglobinopathy"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "414022008",
+            "label": "Disorder of cellular component of blood"
+          },
+          {
+            "concept_id": "62574001",
+            "label": "Erythropenia"
+          },
+          {
+            "concept_id": "165397008",
+            "label": "Hemoglobin low"
+          },
+          {
+            "concept_id": "80141007",
+            "label": "Hemoglobinopathy"
+          },
+          {
+            "concept_id": "127038008",
+            "label": "Hereditary hemoglobinopathy due to globin chain mutation"
+          },
+          {
+            "concept_id": "414394009",
+            "label": "Hereditary red blood cell disorder"
+          }
+        ]
+      }
+    },
+    {
+      "concept_id": "35434009",
+      "features": {
+        "depth_from_root": 7,
+        "parent_count": 2,
+        "timeframe_tight_ratio": 1.0,
+        "avg_clause_size": 1.0,
+        "inclusion_trials": 1,
+        "exclusion_trials": 0
+      },
+      "lineage": {
+        "1": [
+          {
+            "concept_id": "23269001",
+            "label": "Double heterozygous sickling disorder"
+          },
+          {
+            "concept_id": "23269001",
+            "label": "Double heterozygous sickling disorder"
+          },
+          {
+            "concept_id": "38589006",
+            "label": "Mixed hemoglobin disorder"
+          },
+          {
+            "concept_id": "38589006",
+            "label": "Mixed hemoglobin disorder"
+          }
+        ],
+        "5": [
+          {
+            "concept_id": "64572001",
+            "label": "Disease"
+          },
+          {
+            "concept_id": "123946008",
+            "label": "Disorder by body site"
+          },
+          {
+            "concept_id": "427306008",
+            "label": "Hereditary hemoglobinopathy"
+          }
+        ],
+        "2": [
+          {
+            "concept_id": "80141007",
+            "label": "Hemoglobinopathy"
+          },
+          {
+            "concept_id": "417357006",
+            "label": "Sickling disorder due to hemoglobin S"
+          }
+        ],
+        "3": [
+          {
+            "concept_id": "416417002",
+            "label": "Hereditary hemoglobin S"
+          },
+          {
+            "concept_id": "38292009",
+            "label": "Red blood cell disorder"
+          }
+        ],
+        "6": [
+          {
+            "concept_id": "404684003",
+            "label": "Clinical finding"
+          },
+          {
+            "concept_id": "66091009",
+            "label": "Congenital disease"
+          },
+          {
+            "concept_id": "118234003",
+            "label": "Finding by site"
+          },
+          {
+            "concept_id": "414394009",
+            "label": "Hereditary red blood cell disorder"
+          }
+        ],
+        "4": [
+          {
+            "concept_id": "362965005",
+            "label": "Disorder of body system"
+          },
+          {
+            "concept_id": "414022008",
+            "label": "Disorder of cellular component of blood"
+          },
+          {
+            "concept_id": "127038008",
+            "label": "Hereditary hemoglobinopathy due to globin chain mutation"
+          }
+        ]
+      }
+    }
+  ],
+  "prompt_chars": 32826,
+  "prompt": "You will choose, for each requirement concept, the *most-general-but-still-relevant* ancestor (MGSR) to accept for inclusion matching.\n\n### Why\nPatients may not have the specific diagnosis but may have a relevant higher-level diagnosis. We want the most general ancestor the patient might plausibly and specifically have such that the trial would still be meaningfully relevant. Avoid ancestors so generic they make almost anyone “eligible”.\n\n### Inputs (JSON list below as [\n  {\n    \"concept_id\": \"363478007\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"371982006\",\n          \"label\": \"Malignant neoplasm of endocrine gland\"\n        },\n        {\n          \"concept_id\": \"371982006\",\n          \"label\": \"Malignant neoplasm of endocrine gland\"\n        },\n        {\n          \"concept_id\": \"363489000\",\n          \"label\": \"Malignant tumor of neck\"\n        },\n        {\n          \"concept_id\": \"363489000\",\n          \"label\": \"Malignant tumor of neck\"\n        },\n        {\n          \"concept_id\": \"127018007\",\n          \"label\": \"Neoplasm of thyroid gland\"\n        },\n        {\n          \"concept_id\": \"127018007\",\n          \"label\": \"Neoplasm of thyroid gland\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"298378000\",\n          \"label\": \"Finding of neck region\"\n        },\n        {\n          \"concept_id\": \"298397000\",\n          \"label\": \"Lesion of neck\"\n        },\n        {\n          \"concept_id\": \"274751001\",\n          \"label\": \"Mass in head or neck\"\n        },\n        {\n          \"concept_id\": \"399981008\",\n          \"label\": \"Neoplasm and/or hamartoma\"\n        },\n        {\n          \"concept_id\": \"127331007\",\n          \"label\": \"Neoplasm by body site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"362969004\",\n          \"label\": \"Disorder of endocrine system\"\n        },\n        {\n          \"concept_id\": \"118939000\",\n          \"label\": \"Disorder of neck\"\n        },\n        {\n          \"concept_id\": \"299703001\",\n          \"label\": \"Mass of neck\"\n        },\n        {\n          \"concept_id\": \"387927001\",\n          \"label\": \"Neoplasm of endocrine system\"\n        },\n        {\n          \"concept_id\": \"255055008\",\n          \"label\": \"Neoplasm of head and neck\"\n        },\n        {\n          \"concept_id\": \"55342001\",\n          \"label\": \"Neoplastic disease\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"14304000\",\n          \"label\": \"Disorder of thyroid gland\"\n        },\n        {\n          \"concept_id\": \"363346000\",\n          \"label\": \"Malignant neoplastic disease\"\n        },\n        {\n          \"concept_id\": \"255056009\",\n          \"label\": \"Malignant tumor of head and neck\"\n        },\n        {\n          \"concept_id\": \"237557003\",\n          \"label\": \"Mass of thyroid gland\"\n        },\n        {\n          \"concept_id\": \"387922007\",\n          \"label\": \"Neoplasm of endocrine gland\"\n        },\n        {\n          \"concept_id\": \"126635000\",\n          \"label\": \"Neoplasm of neck\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"300862005\",\n          \"label\": \"Mass of body region\"\n        },\n        {\n          \"concept_id\": \"300848003\",\n          \"label\": \"Mass of body structure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"68235000\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"118237005\",\n          \"label\": \"Nose finding\"\n        },\n        {\n          \"concept_id\": \"118237005\",\n          \"label\": \"Nose finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"301310005\",\n          \"label\": \"Finding of face\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"298364001\",\n          \"label\": \"Finding of head region\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"54150009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 6\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"275498002\",\n          \"label\": \"Respiratory tract infection\"\n        },\n        {\n          \"concept_id\": \"275498002\",\n          \"label\": \"Respiratory tract infection\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"127040003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 6,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"14514008\",\n          \"label\": \"Anemia due to disturbance of hemoglobin synthesis\"\n        },\n        {\n          \"concept_id\": \"14514008\",\n          \"label\": \"Anemia due to disturbance of hemoglobin synthesis\"\n        },\n        {\n          \"concept_id\": \"323666000\",\n          \"label\": \"Anemia due to intrinsic red cell abnormality\"\n        },\n        {\n          \"concept_id\": \"323666000\",\n          \"label\": \"Anemia due to intrinsic red cell abnormality\"\n        },\n        {\n          \"concept_id\": \"424988008\",\n          \"label\": \"Anemia due to substance\"\n        },\n        {\n          \"concept_id\": \"424988008\",\n          \"label\": \"Anemia due to substance\"\n        },\n        {\n          \"concept_id\": \"63565007\",\n          \"label\": \"Congenital anemia\"\n        },\n        {\n          \"concept_id\": \"63565007\",\n          \"label\": \"Congenital anemia\"\n        },\n        {\n          \"concept_id\": \"123772008\",\n          \"label\": \"Homozygous hemoglobinopathy\"\n        },\n        {\n          \"concept_id\": \"123772008\",\n          \"label\": \"Homozygous hemoglobinopathy\"\n        },\n        {\n          \"concept_id\": \"417357006\",\n          \"label\": \"Sickling disorder due to hemoglobin S\"\n        },\n        {\n          \"concept_id\": \"417357006\",\n          \"label\": \"Sickling disorder due to hemoglobin S\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"762656009\",\n          \"label\": \"Abnormal blood cell count\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"106200001\",\n          \"label\": \"Hematopoietic system finding\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        },\n        {\n          \"concept_id\": \"442096005\",\n          \"label\": \"Measurement finding outside reference range\"\n        },\n        {\n          \"concept_id\": \"365799007\",\n          \"label\": \"Protein level - finding\"\n        },\n        {\n          \"concept_id\": \"165427000\",\n          \"label\": \"RBC count abnormal\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"50820005\",\n          \"label\": \"Cytopenia\"\n        },\n        {\n          \"concept_id\": \"441793007\",\n          \"label\": \"Hemoglobin level outside reference range\"\n        },\n        {\n          \"concept_id\": \"414393003\",\n          \"label\": \"Hereditary disorder of cellular element of blood\"\n        },\n        {\n          \"concept_id\": \"442686002\",\n          \"label\": \"Measurement finding below reference range\"\n        },\n        {\n          \"concept_id\": \"165423001\",\n          \"label\": \"RBC count low\"\n        },\n        {\n          \"concept_id\": \"38292009\",\n          \"label\": \"Red blood cell disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"441742003\",\n          \"label\": \"Evaluation finding\"\n        },\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        },\n        {\n          \"concept_id\": \"118245000\",\n          \"label\": \"Measurement finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"271737000\",\n          \"label\": \"Anemia\"\n        },\n        {\n          \"concept_id\": \"66091009\",\n          \"label\": \"Congenital disease\"\n        },\n        {\n          \"concept_id\": \"416417002\",\n          \"label\": \"Hereditary hemoglobin S\"\n        },\n        {\n          \"concept_id\": \"427306008\",\n          \"label\": \"Hereditary hemoglobinopathy\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"414022008\",\n          \"label\": \"Disorder of cellular component of blood\"\n        },\n        {\n          \"concept_id\": \"62574001\",\n          \"label\": \"Erythropenia\"\n        },\n        {\n          \"concept_id\": \"165397008\",\n          \"label\": \"Hemoglobin low\"\n        },\n        {\n          \"concept_id\": \"80141007\",\n          \"label\": \"Hemoglobinopathy\"\n        },\n        {\n          \"concept_id\": \"127038008\",\n          \"label\": \"Hereditary hemoglobinopathy due to globin chain mutation\"\n        },\n        {\n          \"concept_id\": \"414394009\",\n          \"label\": \"Hereditary red blood cell disorder\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"35434009\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"23269001\",\n          \"label\": \"Double heterozygous sickling disorder\"\n        },\n        {\n          \"concept_id\": \"23269001\",\n          \"label\": \"Double heterozygous sickling disorder\"\n        },\n        {\n          \"concept_id\": \"38589006\",\n          \"label\": \"Mixed hemoglobin disorder\"\n        },\n        {\n          \"concept_id\": \"38589006\",\n          \"label\": \"Mixed hemoglobin disorder\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"427306008\",\n          \"label\": \"Hereditary hemoglobinopathy\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"80141007\",\n          \"label\": \"Hemoglobinopathy\"\n        },\n        {\n          \"concept_id\": \"417357006\",\n          \"label\": \"Sickling disorder due to hemoglobin S\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"416417002\",\n          \"label\": \"Hereditary hemoglobin S\"\n        },\n        {\n          \"concept_id\": \"38292009\",\n          \"label\": \"Red blood cell disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"66091009\",\n          \"label\": \"Congenital disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"414394009\",\n          \"label\": \"Hereditary red blood cell disorder\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"414022008\",\n          \"label\": \"Disorder of cellular component of blood\"\n        },\n        {\n          \"concept_id\": \"127038008\",\n          \"label\": \"Hereditary hemoglobinopathy due to globin chain mutation\"\n        }\n      ]\n    }\n  }\n])\nEach case:\n{\n  \"concept_id\": \"<SNOMED numeric id of requirement>\",\n  \"features\": {\n    \"depth_from_root\": <int>,          // smaller = more general\n    \"parent_count\": <int>,             // poly-hierarchy fan-out\n    \"timeframe_tight_ratio\": <0..1>,   // share of literals using 'now' or 'past<=30d'\n    \"avg_clause_size\": <float>,        // typical #members in clauses using this concept\n    \"inclusion_trials\": <int>, \"exclusion_trials\": <int>\n  },\n  \"lineage\": {\n    \"1\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // parents\n    \"2\": [{\"concept_id\":\"...\", \"label\":\"...\"}],       // grandparents\n    \"3\": [...], \"4\": [...], ...\n  }\n}\n\n### Decision\nFor each case, choose a hop H in {0,1,2,3} and a single ancestor at hop H (or H=0 for “no generalization”). Interpret:\n- H=0 → stay at requirement.\n- H=1 → accept parent.\n- H=2 → accept grandparent.\n- H=3 → great-grandparent (rare; only if still clinically specific).\n\n### MGSR rule (what “still relevant” means)\nPick the shallowest ancestor that remains clinically specific enough to:\n- preserve organ system / mechanism / program intent,\n- avoid near-universal categories,\n- keep assessments/interventions coherent.\n\n### Strong don’ts (deny-list; case-insensitive substrings)\nNever stop at labels matching any of:\n[\"clinical finding\",\"disorder\",\"disease\",\"finding by site\",\"symptom\",\"procedure\",\"event\",\"abnormal morphology\",\"physical object\",\"situation\",\"observable entity\",\"body structure\",\"organism\",\"substance\"]\nIf every ancestor at a hop is generic by this rule, choose a more specific hop (lower number) or return H=0.\n\n### Heuristics (guidance)\n- Prefer H=1 if a parent preserves the same clinical program (e.g., “bacterial pneumonia”→“pneumonia”), esp. when timeframe_tight_ratio ≥ 0.5 or avg_clause_size ≤ 2.\n- Consider H=2 only if hop-1 parents are too specific, but hop-2 retains organ-system + mechanism (e.g., “pneumonia”→“lower respiratory tract infection”), and is not generic.\n- Use H=3 extremely rarely; reject “infectious disease”, “disorder”, etc.\n- If exclusion_trials > inclusion_trials, be conservative (smaller H).\n- If parent_count ≥ 3 or depth_from_root ≤ 3 (very general), be conservative.\n\n### Output (JSON array only; no prose)\nEach element:\n{\n  \"concept_id\": \"<requirement id>\",\n  \"hops\": 0|1|2|3,\n  \"stop_at_concept_id\": \"<id of chosen ancestor or same as concept if hops=0>\",\n  \"stop_at_label\": \"<label>\",\n  \"rationale\": \"<=40 words>\"\n}\n\nCASES:\n[\n  {\n    \"concept_id\": \"363478007\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 3,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"371982006\",\n          \"label\": \"Malignant neoplasm of endocrine gland\"\n        },\n        {\n          \"concept_id\": \"371982006\",\n          \"label\": \"Malignant neoplasm of endocrine gland\"\n        },\n        {\n          \"concept_id\": \"363489000\",\n          \"label\": \"Malignant tumor of neck\"\n        },\n        {\n          \"concept_id\": \"363489000\",\n          \"label\": \"Malignant tumor of neck\"\n        },\n        {\n          \"concept_id\": \"127018007\",\n          \"label\": \"Neoplasm of thyroid gland\"\n        },\n        {\n          \"concept_id\": \"127018007\",\n          \"label\": \"Neoplasm of thyroid gland\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"298378000\",\n          \"label\": \"Finding of neck region\"\n        },\n        {\n          \"concept_id\": \"298397000\",\n          \"label\": \"Lesion of neck\"\n        },\n        {\n          \"concept_id\": \"274751001\",\n          \"label\": \"Mass in head or neck\"\n        },\n        {\n          \"concept_id\": \"399981008\",\n          \"label\": \"Neoplasm and/or hamartoma\"\n        },\n        {\n          \"concept_id\": \"127331007\",\n          \"label\": \"Neoplasm by body site\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"362969004\",\n          \"label\": \"Disorder of endocrine system\"\n        },\n        {\n          \"concept_id\": \"118939000\",\n          \"label\": \"Disorder of neck\"\n        },\n        {\n          \"concept_id\": \"299703001\",\n          \"label\": \"Mass of neck\"\n        },\n        {\n          \"concept_id\": \"387927001\",\n          \"label\": \"Neoplasm of endocrine system\"\n        },\n        {\n          \"concept_id\": \"255055008\",\n          \"label\": \"Neoplasm of head and neck\"\n        },\n        {\n          \"concept_id\": \"55342001\",\n          \"label\": \"Neoplastic disease\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"14304000\",\n          \"label\": \"Disorder of thyroid gland\"\n        },\n        {\n          \"concept_id\": \"363346000\",\n          \"label\": \"Malignant neoplastic disease\"\n        },\n        {\n          \"concept_id\": \"255056009\",\n          \"label\": \"Malignant tumor of head and neck\"\n        },\n        {\n          \"concept_id\": \"237557003\",\n          \"label\": \"Mass of thyroid gland\"\n        },\n        {\n          \"concept_id\": \"387922007\",\n          \"label\": \"Neoplasm of endocrine gland\"\n        },\n        {\n          \"concept_id\": \"126635000\",\n          \"label\": \"Neoplasm of neck\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"300862005\",\n          \"label\": \"Mass of body region\"\n        },\n        {\n          \"concept_id\": \"300848003\",\n          \"label\": \"Mass of body structure\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"68235000\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"118237005\",\n          \"label\": \"Nose finding\"\n        },\n        {\n          \"concept_id\": \"118237005\",\n          \"label\": \"Nose finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        },\n        {\n          \"concept_id\": \"406122000\",\n          \"label\": \"Head finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"301310005\",\n          \"label\": \"Finding of face\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        },\n        {\n          \"concept_id\": \"298364001\",\n          \"label\": \"Finding of head region\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"54150009\",\n    \"features\": {\n      \"depth_from_root\": 6,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 2,\n      \"exclusion_trials\": 6\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"201060008\",\n          \"label\": \"Disorder of upper respiratory system\"\n        },\n        {\n          \"concept_id\": \"275498002\",\n          \"label\": \"Respiratory tract infection\"\n        },\n        {\n          \"concept_id\": \"275498002\",\n          \"label\": \"Respiratory tract infection\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"301857004\",\n          \"label\": \"Finding of body region\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"40733004\",\n          \"label\": \"Disorder due to infection\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"297268004\",\n          \"label\": \"Ear, nose and throat finding\"\n        },\n        {\n          \"concept_id\": \"106048009\",\n          \"label\": \"Respiratory finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"50043002\",\n          \"label\": \"Disorder of respiratory system\"\n        },\n        {\n          \"concept_id\": \"232208008\",\n          \"label\": \"Ear, nose and throat disorder\"\n        },\n        {\n          \"concept_id\": \"301810000\",\n          \"label\": \"Infection by site\"\n        },\n        {\n          \"concept_id\": \"301186004\",\n          \"label\": \"Upper respiratory tract finding\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"118254002\",\n          \"label\": \"Finding of head and neck region\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"127040003\",\n    \"features\": {\n      \"depth_from_root\": 5,\n      \"parent_count\": 6,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"14514008\",\n          \"label\": \"Anemia due to disturbance of hemoglobin synthesis\"\n        },\n        {\n          \"concept_id\": \"14514008\",\n          \"label\": \"Anemia due to disturbance of hemoglobin synthesis\"\n        },\n        {\n          \"concept_id\": \"323666000\",\n          \"label\": \"Anemia due to intrinsic red cell abnormality\"\n        },\n        {\n          \"concept_id\": \"323666000\",\n          \"label\": \"Anemia due to intrinsic red cell abnormality\"\n        },\n        {\n          \"concept_id\": \"424988008\",\n          \"label\": \"Anemia due to substance\"\n        },\n        {\n          \"concept_id\": \"424988008\",\n          \"label\": \"Anemia due to substance\"\n        },\n        {\n          \"concept_id\": \"63565007\",\n          \"label\": \"Congenital anemia\"\n        },\n        {\n          \"concept_id\": \"63565007\",\n          \"label\": \"Congenital anemia\"\n        },\n        {\n          \"concept_id\": \"123772008\",\n          \"label\": \"Homozygous hemoglobinopathy\"\n        },\n        {\n          \"concept_id\": \"123772008\",\n          \"label\": \"Homozygous hemoglobinopathy\"\n        },\n        {\n          \"concept_id\": \"417357006\",\n          \"label\": \"Sickling disorder due to hemoglobin S\"\n        },\n        {\n          \"concept_id\": \"417357006\",\n          \"label\": \"Sickling disorder due to hemoglobin S\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"762656009\",\n          \"label\": \"Abnormal blood cell count\"\n        },\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"106200001\",\n          \"label\": \"Hematopoietic system finding\"\n        },\n        {\n          \"concept_id\": \"363137000\",\n          \"label\": \"Hereditary disorder by system\"\n        },\n        {\n          \"concept_id\": \"442096005\",\n          \"label\": \"Measurement finding outside reference range\"\n        },\n        {\n          \"concept_id\": \"365799007\",\n          \"label\": \"Protein level - finding\"\n        },\n        {\n          \"concept_id\": \"165427000\",\n          \"label\": \"RBC count abnormal\"\n        },\n        {\n          \"concept_id\": \"138875005\",\n          \"label\": \"SNOMED CT Concept\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"50820005\",\n          \"label\": \"Cytopenia\"\n        },\n        {\n          \"concept_id\": \"441793007\",\n          \"label\": \"Hemoglobin level outside reference range\"\n        },\n        {\n          \"concept_id\": \"414393003\",\n          \"label\": \"Hereditary disorder of cellular element of blood\"\n        },\n        {\n          \"concept_id\": \"442686002\",\n          \"label\": \"Measurement finding below reference range\"\n        },\n        {\n          \"concept_id\": \"165423001\",\n          \"label\": \"RBC count low\"\n        },\n        {\n          \"concept_id\": \"38292009\",\n          \"label\": \"Red blood cell disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"441742003\",\n          \"label\": \"Evaluation finding\"\n        },\n        {\n          \"concept_id\": \"32895009\",\n          \"label\": \"Hereditary disease\"\n        },\n        {\n          \"concept_id\": \"118245000\",\n          \"label\": \"Measurement finding\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"271737000\",\n          \"label\": \"Anemia\"\n        },\n        {\n          \"concept_id\": \"66091009\",\n          \"label\": \"Congenital disease\"\n        },\n        {\n          \"concept_id\": \"416417002\",\n          \"label\": \"Hereditary hemoglobin S\"\n        },\n        {\n          \"concept_id\": \"427306008\",\n          \"label\": \"Hereditary hemoglobinopathy\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"414022008\",\n          \"label\": \"Disorder of cellular component of blood\"\n        },\n        {\n          \"concept_id\": \"62574001\",\n          \"label\": \"Erythropenia\"\n        },\n        {\n          \"concept_id\": \"165397008\",\n          \"label\": \"Hemoglobin low\"\n        },\n        {\n          \"concept_id\": \"80141007\",\n          \"label\": \"Hemoglobinopathy\"\n        },\n        {\n          \"concept_id\": \"127038008\",\n          \"label\": \"Hereditary hemoglobinopathy due to globin chain mutation\"\n        },\n        {\n          \"concept_id\": \"414394009\",\n          \"label\": \"Hereditary red blood cell disorder\"\n        }\n      ]\n    }\n  },\n  {\n    \"concept_id\": \"35434009\",\n    \"features\": {\n      \"depth_from_root\": 7,\n      \"parent_count\": 2,\n      \"timeframe_tight_ratio\": 1.0,\n      \"avg_clause_size\": 1.0,\n      \"inclusion_trials\": 1,\n      \"exclusion_trials\": 0\n    },\n    \"lineage\": {\n      \"1\": [\n        {\n          \"concept_id\": \"23269001\",\n          \"label\": \"Double heterozygous sickling disorder\"\n        },\n        {\n          \"concept_id\": \"23269001\",\n          \"label\": \"Double heterozygous sickling disorder\"\n        },\n        {\n          \"concept_id\": \"38589006\",\n          \"label\": \"Mixed hemoglobin disorder\"\n        },\n        {\n          \"concept_id\": \"38589006\",\n          \"label\": \"Mixed hemoglobin disorder\"\n        }\n      ],\n      \"5\": [\n        {\n          \"concept_id\": \"64572001\",\n          \"label\": \"Disease\"\n        },\n        {\n          \"concept_id\": \"123946008\",\n          \"label\": \"Disorder by body site\"\n        },\n        {\n          \"concept_id\": \"427306008\",\n          \"label\": \"Hereditary hemoglobinopathy\"\n        }\n      ],\n      \"2\": [\n        {\n          \"concept_id\": \"80141007\",\n          \"label\": \"Hemoglobinopathy\"\n        },\n        {\n          \"concept_id\": \"417357006\",\n          \"label\": \"Sickling disorder due to hemoglobin S\"\n        }\n      ],\n      \"3\": [\n        {\n          \"concept_id\": \"416417002\",\n          \"label\": \"Hereditary hemoglobin S\"\n        },\n        {\n          \"concept_id\": \"38292009\",\n          \"label\": \"Red blood cell disorder\"\n        }\n      ],\n      \"6\": [\n        {\n          \"concept_id\": \"404684003\",\n          \"label\": \"Clinical finding\"\n        },\n        {\n          \"concept_id\": \"66091009\",\n          \"label\": \"Congenital disease\"\n        },\n        {\n          \"concept_id\": \"118234003\",\n          \"label\": \"Finding by site\"\n        },\n        {\n          \"concept_id\": \"414394009\",\n          \"label\": \"Hereditary red blood cell disorder\"\n        }\n      ],\n      \"4\": [\n        {\n          \"concept_id\": \"362965005\",\n          \"label\": \"Disorder of body system\"\n        },\n        {\n          \"concept_id\": \"414022008\",\n          \"label\": \"Disorder of cellular component of blood\"\n        },\n        {\n          \"concept_id\": \"127038008\",\n          \"label\": \"Hereditary hemoglobinopathy due to globin chain mutation\"\n        }\n      ]\n    }\n  }\n]\n"
+}

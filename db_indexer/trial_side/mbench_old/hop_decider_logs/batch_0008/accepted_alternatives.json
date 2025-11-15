@@ -1,0 +1,58 @@
+[
+  {
+    "concept_id": "162397003",
+    "alt_concept_id": "301365009",
+    "hop": 1,
+    "alt_label": "Pain of head and neck region",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:07:52"
+  },
+  {
+    "concept_id": "279039007",
+    "alt_concept_id": "161891005",
+    "hop": 1,
+    "alt_label": "Backache",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:07:52"
+  },
+  {
+    "concept_id": "279039007",
+    "alt_concept_id": "609627001",
+    "hop": 1,
+    "alt_label": "Finding of abdominal segment of trunk",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:07:52"
+  },
+  {
+    "concept_id": "279039007",
+    "alt_concept_id": "301366005",
+    "hop": 1,
+    "alt_label": "Pain of truncal structure",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:07:52"
+  },
+  {
+    "concept_id": "304058009",
+    "alt_concept_id": "116634000",
+    "hop": 1,
+    "alt_label": "Bacterial antigen",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 19:07:52"
+  },
+  {
+    "concept_id": "64572001",
+    "alt_concept_id": "64572001",
+    "hop": 0,
+    "alt_label": "Disease",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:07:52"
+  },
+  {
+    "concept_id": "71922006",
+    "alt_concept_id": "71922006",
+    "hop": 0,
+    "alt_label": "Immune defect",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 19:07:52"
+  }
+]

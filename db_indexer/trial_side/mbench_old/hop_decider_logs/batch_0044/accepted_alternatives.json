@@ -1,0 +1,122 @@
+[
+  {
+    "concept_id": "187734007",
+    "alt_concept_id": "187724003",
+    "hop": 1,
+    "alt_label": "Malignant tumor of abdominal part of esophagus",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "187734007",
+    "alt_concept_id": "187732006",
+    "hop": 1,
+    "alt_label": "Malignant tumor of cardia",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "238356005",
+    "alt_concept_id": "241031001",
+    "hop": 1,
+    "alt_label": "Removal of drain",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "238356005",
+    "alt_concept_id": "19154003",
+    "hop": 1,
+    "alt_label": "Removal of tube from pleural cavity",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "62201009",
+    "alt_concept_id": "128289001",
+    "hop": 1,
+    "alt_label": "Chronic metabolic disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "62201009",
+    "alt_concept_id": "128283000",
+    "hop": 1,
+    "alt_label": "Chronic nervous system disorder",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "62201009",
+    "alt_concept_id": "190794006",
+    "hop": 1,
+    "alt_label": "Gaucher's disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "62201009",
+    "alt_concept_id": "27624003",
+    "hop": 2,
+    "alt_label": "Chronic disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "62201009",
+    "alt_concept_id": "118940003",
+    "hop": 2,
+    "alt_label": "Disorder of nervous system",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "62201009",
+    "alt_concept_id": "75934005",
+    "hop": 2,
+    "alt_label": "Metabolic disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "62201009",
+    "alt_concept_id": "238028008",
+    "hop": 2,
+    "alt_label": "Sphingolipidosis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "65275009",
+    "alt_concept_id": "6215006",
+    "hop": 1,
+    "alt_label": "Acute cholangitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "65275009",
+    "alt_concept_id": "128482007",
+    "hop": 1,
+    "alt_label": "Acute inflammatory disease",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "65275009",
+    "alt_concept_id": "76581006",
+    "hop": 1,
+    "alt_label": "Cholecystitis",
+    "reason": "path_to_stop",
+    "decided_at": "2025-10-13 20:06:53"
+  },
+  {
+    "concept_id": "85057007",
+    "alt_concept_id": "85057007",
+    "hop": 0,
+    "alt_label": "Liver cyst",
+    "reason": "explicit",
+    "decided_at": "2025-10-13 20:06:53"
+  }
+]
