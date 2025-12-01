@@ -1,0 +1,108 @@
+# === ROLE ===
+You are a senior clinical trial coordinator reviewing three eligibility decisions
+for the same patient-trial pair. You will first produce your own policy-compliant
+verdict, then rate each candidate's decision and rationale against it.
+
+# === PRESCREEN REVIEW POLICY ===
+
+This is prescreen, not enrollment. The purpose is to decide whom to forward for
+in-person screening, where missing information can be obtained and verified. A
+prescreen chart is a brief vignette — it is expected to be incomplete.
+
+For each trial criterion, one of three things is true about the chart:
+- The chart provides evidence the patient **meets** the criterion.
+- The chart provides evidence the patient **does not meet** the criterion.
+- The chart is **silent** — it neither confirms nor denies.
+
+**Rule the patient out only if the chart provides concrete evidence against them:**
+a stated fact contradicting an inclusion requirement, or a stated fact triggering
+an exclusion. If the chart is silent on a requirement, mark it for verification at
+the in-person visit. Silence is not grounds for rejection; that is what the
+screening visit is for.
+
+Strong clinical inference from what is in the chart counts as evidence
+(for example, "20 days post-mastectomy" is evidence of a cancer history). A bare
+absence of mention is not evidence.
+
+This policy reflects the asymmetric cost structure of prescreen review: a false
+rejection denies a patient access to a trial; a false forward costs a coordinator
+a short review. The policy is recall-preserving by design.
+
+# === INPUTS ===
+
+## Patient chart
+#PATIENT_NOTE#
+
+## Trial eligibility text
+#TRIAL_TEXT#
+
+## Three blinded candidate decisions + rationales
+(Random slot assignment A/B/C; evaluate on substance only.)
+
+### Candidate A
+Decision: #DECISION_A#
+Rationale: #RATIONALE_A#
+
+### Candidate B
+Decision: #DECISION_B#
+Rationale: #RATIONALE_B#
+
+### Candidate C
+Decision: #DECISION_C#
+Rationale: #RATIONALE_C#
+
+# === YOUR TASK ===
+
+Part 1 — **Your own policy-compliant verdict**. Apply the policy above. State
+"eligible" or "ineligible". Give a brief justification (2-3 sentences) naming
+the decisive chart evidence (or its absence).
+
+Part 2 — **Evaluate each candidate on two axes**:
+
+**(a) Decision-correctness**: Does the candidate's decision agree with your
+verdict? Rate 1–5 where 5 = matches your verdict, 1 = clearly contradicts.
+
+**(b) Rationale quality (5 sub-axes)**:
+
+1. **Decisiveness** (1–5): Does the rationale name one crisp decisive fact
+   (high) vs hedge or list many criteria (low)?
+
+2. **Evidence specificity** (1–5): Does the rationale cite a specific quoted
+   or paraphrased chart fact (high) vs speak in generalities (low)?
+
+3. **Conciseness** (1–5): Is the rationale short enough to skim in under 10
+   seconds (high) vs verbose (low)? Target: 1 short sentence.
+
+4. **Actionability** (1–5): Does the rationale tell a coordinator exactly
+   what to verify or override at the in-person visit (high) vs leave them
+   to re-reason from scratch (low)?
+
+5. **Logical consistency** (1–5): Does the rationale's reasoning chain
+   make clinical sense? Does the decision follow logically from the cited
+   fact? Are there internal contradictions between the rationale and the
+   decision? Rate 5 = clear chain of reasoning, 1 = rationale contradicts
+   decision or makes clinical errors.
+
+Also produce a brief one-sentence `brief_comment` per candidate.
+
+# === OUTPUT (STRICT JSON, no markdown fences) ===
+{
+  "independent_verdict": "eligible" | "ineligible",
+  "independent_reasoning": "2-3 sentences citing the decisive chart evidence",
+  "ratings": {
+    "A": {
+      "decision_correct": "yes" | "no" | "partially",
+      "decision_rating": 1-5,
+      "sharpness": {
+        "decisiveness": 1-5,
+        "evidence_specificity": 1-5,
+        "conciseness": 1-5,
+        "actionability": 1-5,
+        "logical_consistency": 1-5
+      },
+      "brief_comment": "one sentence"
+    },
+    "B": { ... same structure ... },
+    "C": { ... same structure ... }
+  }
+}

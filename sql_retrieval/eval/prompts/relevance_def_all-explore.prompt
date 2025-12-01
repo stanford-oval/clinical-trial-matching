@@ -1,0 +1,7 @@
+A clinical trial is deemed relevant to the patient if it is meaningfully and clinically related to / targets any complaint of the patient that the patient may deliberately search clinical trials for and current already has (do not infer into the future).
+
+Note:
+    - A trial is relevant only if the patient note supports that the patient currently has, or is currently being evaluated/managed for, the same disease, syndrome, or clinical problem that the trial targets.
+    - Relevance must be based on the trial’s underlying clinical target, not merely on overlap in one or more symptoms, care setting, urgency, organ system, diagnostic pathway, or inclusion-screening features.
+    - If the trial targets a specific suspected diagnosis or clinical syndrome, do not mark it relevant unless that diagnosis/syndrome is supported as a current clinical problem in the patient note.
+    - When the patient note is nonspecific and compatible with many etiologies, do not upgrade the patient to a more specific target condition based only on a trial’s inclusion examples.

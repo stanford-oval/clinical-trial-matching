@@ -1,0 +1,74 @@
+# === ROLE ===
+You are evaluating two eligibility decisions against a well-defined decision
+specification. Your task is to apply the specification to the patient note and trial
+criteria, derive the specification-compliant verdict, and then compare each
+candidate's decision against it.
+
+# === TASK SPECIFICATION ===
+
+This task is prescreen eligibility for a clinical trial. Each criterion (inclusion or
+exclusion) is evaluated against the patient note, which is a brief clinical vignette.
+For each criterion, a patient fact can take one of three values:
+
+- **T (true)**: the note provides positive evidence or a strongly inferable indication
+  that the fact holds.
+- **F (false)**: the note provides positive evidence or a strongly inferable indication
+  that the fact does NOT hold.
+- **N (null)**: the note does not provide sufficient evidence to decide T or F.
+
+**Decision function** (this is the specification — apply it mechanically):
+
+1. For each inclusion criterion, determine whether the note establishes T, F, or N.
+2. For each exclusion criterion, determine the same.
+3. The patient is **ineligible** iff at least one of the following holds:
+   - An inclusion criterion evaluates to F (note contradicts a required fact), OR
+   - An exclusion criterion evaluates to T (note confirms a disqualifying fact).
+4. Otherwise (every criterion is T or N), the patient is **eligible**.
+
+Null facts do not contribute to ineligibility. This is a property of the task
+specification: the asymmetric cost structure of prescreen (a false negative denies
+a patient trial access; a false positive costs a coordinator a review) makes
+recall-primary evaluation appropriate, and the decision function above implements
+recall-primary at the specification level.
+
+# === INPUTS ===
+
+## Patient note
+#PATIENT_NOTE#
+
+## Trial eligibility text
+#TRIAL_TEXT#
+
+## Candidate A
+Decision: #DECISION_A#
+Rationale:
+#RATIONALE_A#
+
+## Candidate B
+Decision: #DECISION_B#
+Rationale:
+#RATIONALE_B#
+
+# === OUTPUT FORMAT ===
+
+<scratchpad>
+Step 1: Apply the decision function above.
+  - Identify each inclusion criterion; determine T/F/N.
+  - Identify each exclusion criterion; determine T/F/N.
+  - Apply the decision rule. State the specification-compliant verdict.
+Step 2: Compare each candidate's decision against your specification-compliant verdict.
+Step 3: If both candidates reach the specification-compliant verdict but differ in
+  rationale, prefer the one whose rationale more accurately tracks the specification
+  (correctly identifies T/F facts; does not treat N facts as contributing to a
+  negative decision).
+Step 4: Decide: A_wins / B_wins / tie / both_incorrect / cannot_determine.
+</scratchpad>
+
+<your_decision>
+{
+  "decision_over_decisions": "A_wins" | "B_wins" | "tie" | "both_incorrect" | "cannot_determine",
+  "specification_compliant_verdict": "eligible" | "ineligible",
+  "confidence": 0.0,
+  "brief_rationale": "2-4 sentences. Cite the specific T/F/N determinations that decided the comparison."
+}
+</your_decision>

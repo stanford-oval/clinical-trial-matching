@@ -1,0 +1,86 @@
+# === ROLE ===
+You are evaluating three eligibility decisions against a well-defined decision
+specification. Compute the specification-compliant verdict, then rate each candidate.
+
+# === TASK SPECIFICATION ===
+
+This task is prescreen eligibility for a clinical trial. For each criterion (inclusion
+or exclusion), a patient fact takes one of three values:
+
+- **T (true)**: the note provides positive or strongly inferable evidence the fact holds.
+- **F (false)**: the note provides positive or strongly inferable evidence the fact does NOT hold.
+- **N (null)**: the note does not provide sufficient evidence to decide T or F.
+
+**Decision function**:
+
+1. For each inclusion criterion, determine T/F/N.
+2. For each exclusion criterion, determine T/F/N.
+3. The patient is **ineligible** iff an inclusion criterion evaluates to F or an
+   exclusion criterion evaluates to T.
+4. Otherwise the patient is **eligible**.
+
+Null facts do not contribute to ineligibility. This is a property of the task
+specification, derived from its asymmetric cost structure (a false negative denies
+a patient trial access; a false positive costs a coordinator a review), which makes
+recall-primary evaluation appropriate.
+
+# === INPUTS ===
+
+## Patient note
+#PATIENT_NOTE#
+
+## Trial eligibility text
+#TRIAL_TEXT#
+
+## Three blinded candidate decisions + rationales
+(The candidates have been randomly shuffled into slots A, B, C. Evaluate on
+substance only; do not attempt to infer which method produced which.)
+
+### Candidate A
+Decision: #DECISION_A#
+Rationale: #RATIONALE_A#
+
+### Candidate B
+Decision: #DECISION_B#
+Rationale: #RATIONALE_B#
+
+### Candidate C
+Decision: #DECISION_C#
+Rationale: #RATIONALE_C#
+
+# === YOUR TASK ===
+
+Part 1 — **Specification-compliant verdict**. Apply the decision function above to
+the patient note and trial criteria. State your verdict: "eligible" or "ineligible".
+Give a brief justification (2-3 sentences) naming the determining T/F/N facts.
+
+Part 2 — **Evaluate each candidate on two axes** (separately):
+(a) **Decision-correctness**: does the candidate's decision agree with the
+    specification-compliant verdict? Rate 1-5 where 5 = decision matches, 1 =
+    decision contradicts.
+(b) **Rationale quality (sharpness)**: does the rationale (i) identify one decisive
+    fact, (ii) cite specific clinical evidence from the note, (iii) stay concise, and
+    (iv) give an actionable basis for trial review? Rate 1-5 per sub-axis. Do NOT
+    penalize a rationale for including "deferred" or "null" fact disclosures; do NOT
+    penalize a rationale for deferring when the specification says defer.
+
+# === OUTPUT (STRICT JSON, no markdown fences) ===
+{
+  "independent_verdict": "eligible" | "ineligible",
+  "independent_reasoning": "2-3 sentences citing the determining T/F/N facts",
+  "ratings": {
+    "A": {
+      "decision_correct": "yes" | "no" | "partially",
+      "decision_rating": 1-5,
+      "sharpness": {
+        "decisiveness": 1-5,
+        "evidence_specificity": 1-5,
+        "conciseness": 1-5,
+        "actionability": 1-5
+      },
+      "brief_comment": "one sentence"
+    },
+    "B": { ... same structure ... },
+    "C": { ... same structure ... }
+  }
+}
