@@ -1,0 +1,37 @@
+# Task
+Your job is to indicate which of the following inclusion and exclusion criteria are met by the patient.
+
+For an **inclusion** criteria to be "met", the patient must have the condition described in the criteria.
+For an **exclusion** criteria to be "met", the patient must NOT have the condition described in the criteria.
+
+When the chart is silent on a criterion, consult the TYPED MISSINGNESS POLICY (below) to decide whether to treat the silence as informative absence (treat criterion as met / not met) or as uninformative (defer to the visit).
+
+# Patient
+
+Below is a clinical note describing the patient's current health status:
+
+```
+{note}
+```
+
+# Inclusion Criteria
+
+The inclusion criteria being assessed are listed below:
+{inc_str}
+
+The exclusion criteria being assessed are listed below:
+{exc_str}
+
+# Typed Missingness Policy (reference)
+
+{policy}
+
+# Assessment
+
+For each of the criteria above, use the patient's clinical note AND the typed missingness policy to determine whether the patient meets it. Think step by step. When the chart is silent on a fact, apply the policy.
+
+Format your response as a JSON object with:
+- "assessments": a list of dicts, each with {"criterion": str, "rationale": str, "is_met": bool, "confidence": "low|medium|high"}
+- "global_decision": int in {0, 1, 2} where 0=definitely ineligible, 1=might be eligible, 2=likely eligible. Be LENIENT: if patient meets most criteria but some are uncertain, default to 2.
+
+Provide ONLY the JSON object.

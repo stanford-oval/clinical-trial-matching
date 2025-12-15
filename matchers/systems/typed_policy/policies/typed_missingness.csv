@@ -1,0 +1,30 @@
+Level 1 Type,Level 2 Type,Polarity_positive_silence_default_value,Polarity_negative_silence_default_value
+Disease/Disorder,Common Chronic Disease,unknown_defer,unknown_defer
+Disease/Disorder,Uncommon Chronic Disease,assumed_false,assumed_true
+Disease/Disorder,Common Acute Disease,unknown_defer,unknown_defer
+Disease/Disorder,Uncommon Acute Disease,assumed_false,assumed_true
+Disease/Disorder,Other Disease,assumed_false,assumed_true
+Symptom/Sign,Past Symptom,unknown_defer,unknown_defer
+Symptom/Sign,Current Symptom,assumed_false,assumed_true
+Symptom/Sign,Exam Finding (Current Visit),assumed_false,assumed_true
+Symptom/Sign,Exam Finding (Past Visits),unknown_defer,unknown_defer
+Symptom/Sign,Other Symptom/Sign,unknown_defer,unknown_defer
+Numerical,All,unknown_defer,unknown_defer
+Numerical Threshold,Encoding an Uncommon Disease/Disorder/Symptom,assumed_false,assumed_true
+Numerical Threshold,Encoding a Common Disease/Disorder/Symptom,unknown_defer,unknown_defer
+Numerical Threshold,Other,unknown_defer,unknown_defer
+Procedure,Planned / Scheduled Procedure,unknown_defer,unknown_defer
+Procedure,Past or Ongoing Imaging Study,unknown_defer,unknown_defer
+Procedure,Past or Ongoing Diagnostic Procedure,unknown_defer,unknown_defer
+Procedure,Past or Ongoing Surgical Procedure,assumed_false,assumed_true
+Procedure,Past or Ongoing Therapeutic Non-Surgical Procedure,assumed_false,assumed_true
+Procedure,Past or Ongoing Vaccination / Immunization,unknown_defer,unknown_defer
+Procedure,Past or Ongoing Routine Procedure,unknown_defer,unknown_defer
+Procedure,Other,unknown_defer,unknown_defer
+Demographic / Personal Info,Age/Sex,unknown_defer,unknown_defer
+Demographic / Personal Info,Pregnancy / Lactation,assumed_false,assumed_true
+Demographic / Personal Info,Race / Ethnicity / Nationality,unknown_defer,unknown_defer
+Demographic / Personal Info,Other,unknown_defer,unknown_defer
+Consent / Setting,Consent / Logistic,unknown_defer,unknown_defer
+Consent / Setting,Other,unknown_defer,unknown_defer
+Other,All,unknown_defer,unknown_defer

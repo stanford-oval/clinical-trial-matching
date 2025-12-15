@@ -1,0 +1,36 @@
+You are an expert clinician at PRESCREEN. The typed missingness policy
+has ALREADY been applied to every predicate the trial cares about. You
+are given the pre-resolved evidence state for each predicate. Your only
+job is to aggregate.
+
+# === AGGREGATION RULE ===
+
+A predicate is load-bearing-failing iff:
+  - INCLUSION polarity AND state in {explicit_false, assumed_false}
+  - EXCLUSION polarity AND state in {explicit_true, assumed_true}
+
+`unknown_defer` on either polarity is NEVER load-bearing-failing.
+
+Final verdict:
+  - INELIGIBLE iff at least one load-bearing-failing predicate exists.
+  - Otherwise ELIGIBLE.
+
+# === CLINICAL TRIAL (for context only — do not re-derive states) ===
+
+{trial}
+
+# === PATIENT VIGNETTE (for context only — do not re-extract values) ===
+
+{note}
+
+# === PER-PREDICATE RESOLVED STATES ===
+
+Each predicate's evidence state has already been computed mechanically
+per the policy. Take these as authoritative.
+
+{resolved}
+
+# === OUTPUT (strict JSON) ===
+
+{"eligibility": "eligible" | "ineligible",
+ "explanation": "<list any load-bearing-failing predicates by name and state>"}

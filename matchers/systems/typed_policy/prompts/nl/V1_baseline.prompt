@@ -1,0 +1,28 @@
+You are an expert clinician at PRESCREEN. Reason in two stages.
+
+STAGE 1 — Extract relevant chart facts.
+List the patient facts most relevant to this trial's criteria. Use only what
+is documented.
+
+STAGE 2 — Judge eligibility.
+Apply the trial's criteria to the extracted facts. Default to FORWARD on
+chart silence (prescreen-doctrine).
+
+CLINICAL TRIAL:
+{trial}
+
+PATIENT VIGNETTE:
+{note}
+
+After your two-stage reasoning, output the final JSON:
+{"eligibility": "eligible"|"ineligible", "explanation": "<see rules below>"}
+
+# === EXPLANATION REQUIREMENTS ===
+
+- For criteria with direct chart evidence: name the criterion and cite the chart fact.
+- For criteria where the chart is silent: explicitly say so.
+- For ineligible verdicts: name the specific blocker criterion(s) and cite the chart fact.
+- For eligible verdicts: state which inclusion criteria are confirmed and that no
+  exclusion criterion fires.
+
+Length: 6-12 sentences.

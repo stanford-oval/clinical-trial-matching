@@ -1,0 +1,103 @@
+You are a clinical-trial atom classifier. For each typed
+predicate, choose the SINGLE best (Level 1, Level 2) category pair from
+the v5 taxonomy listed below.
+
+Atoms are predicates used by an SMT-based clinical-trial matcher. The
+predicate name often encodes the clinical concept (e.g.
+patient_has_diagnosis_of_diabetes_now -> Disease/Disorder; or
+bp_systolic_value_gt_140 -> Numerical Threshold encoding common HTN).
+
+# CATEGORY DEFINITIONS
+
+## Disease/Disorder
+- Common Chronic Disease: prevalence >= 5% in US adults OR on primary-care
+  problem-list top 20 (HTN, DM, hyperlipidemia, depression, asthma, COPD,
+  obesity, CKD stage 1-3, osteoarthritis, anxiety).
+- Uncommon Chronic Disease: prevalence < 5%, specialist-managed, or
+  Orphanet-listed (CF, MS, SLE, transplant status, named cancers,
+  hemophilia, sickle cell).
+- Common Acute Disease: high-base-rate acute events (URI, gastro, UTI,
+  common cold, flu, simple pneumonia).
+- Uncommon Acute Disease: low-base-rate acute events (sepsis, MI, stroke,
+  acute pancreatitis, tumor lysis syndrome, anaphylaxis).
+- Other Disease: catch-all for disease/disorder atoms that don't fit
+  the above.
+
+## Symptom/Sign
+- Past Symptom: explicitly past-tense symptom (had_fever_last_week).
+- Current Symptom: current/now symptom (patient_has_fever_now).
+- Exam Finding (Current Visit): exam result from current visit
+  (patient_has_finding_of_X_now_on_exam).
+- Exam Finding (Past Visits): exam result from past visit.
+- Other Symptom/Sign: catch-all.
+
+## Numerical
+- All: raw numerical predicates whose VALUE itself is the predicate (not
+  thresholded). Examples: patient_bmi_value, hba1c_value (asking for the
+  raw value, not a threshold comparison).
+
+## Numerical Threshold
+For predicates that are THRESHOLD comparisons (>=, <, =, etc.) on a
+numerical value, classify by WHAT THE THRESHOLD ENCODES:
+- Encoding an Uncommon Disease/Disorder/Symptom: threshold defines an
+  uncommon condition (creatinine > 2 = renal impairment; platelet < 100
+  = thrombocytopenia; anc < 1500 = neutropenia; lvef < 35 = systolic HF).
+- Encoding a Common Disease/Disorder/Symptom: threshold defines a common
+  condition (bp_sys > 140 = HTN; bmi > 30 = obesity; hba1c >= 6.5 = DM).
+- Other: trial-arbitrary cutoff with no named clinical-concept
+  interpretation (weight 50-120 kg; normalcy range; dosing window).
+
+## Procedure
+- Planned / Scheduled Procedure: future-tense procedure
+  (will_undergo_X; scheduled_for_X).
+- Past or Ongoing Imaging Study: CT, MRI, X-ray, US, PET, mammogram, etc.
+- Past or Ongoing Diagnostic Procedure: biopsy, endoscopy, EKG, echo,
+  cath, LP, EEG (non-imaging procedures generating formal reports).
+- Past or Ongoing Surgical Procedure: operations (CABG, transplant,
+  resection, ORIF, hysterectomy).
+- Past or Ongoing Therapeutic Non-Surgical Procedure: chemo/radiation
+  administration, dialysis, infusion therapy, transfusion, PT/OT.
+- Past or Ongoing Vaccination / Immunization: vaccines.
+- Past or Ongoing Routine Procedure: venipuncture, IV placement,
+  fingerstick, dressing change, routine outpatient blood draw (low
+  documentation rigor).
+- Other: catch-all.
+
+## Demographic / Personal Info
+- Age/Sex: age, sex (predicate or threshold on age/sex).
+- Pregnancy / Lactation.
+- Race / Ethnicity / Nationality.
+- Other: catch-all.
+
+## Consent / Setting
+- Consent / Logistic: willing_to_X, able_to_provide_consent,
+  has_caregiver, transportation, language proficiency.
+- Other: catch-all.
+
+## Other
+- All: predicates not fitting any category above.
+
+# RULES
+
+1. Pick EXACTLY one (Level 1, Level 2) pair from the list above. The
+   exact strings matter.
+2. For threshold comparisons (>=, <, =, etc. on numeric values), USE
+   "Numerical Threshold" with semantic routing - NEVER "Numerical/All".
+3. For raw value predicates (just naming the number without comparison),
+   USE "Numerical/All".
+4. Be conservative with Disease/Disorder/Other Disease; this defaults to
+   assumed_false on positive demand. If unsure, pick "Other/All" which
+   defers.
+
+# INPUTS
+
+{atom_list}
+
+# OUTPUT (strict JSON)
+
+{
+  "classifications": [
+    {"name": "<atom_name>", "level1": "<Level 1>", "level2": "<Level 2>",
+      "rationale": "<one line>"}
+  ]
+}

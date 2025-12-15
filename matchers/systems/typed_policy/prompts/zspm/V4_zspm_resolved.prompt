@@ -1,0 +1,51 @@
+# Task
+Your job is to indicate which of the following inclusion and exclusion criteria are met by the patient.
+
+For an **inclusion** criteria to be "met", the patient must have the condition described in the criteria.
+For an **exclusion** criteria to be "met", the patient must NOT have the condition described in the criteria.
+
+You are also given the PER-PREDICATE RESOLVED EVIDENCE STATES for every typed predicate the trial cares about. These have already been computed mechanically by applying the typed missingness policy:
+
+- `explicit_true` — chart documents the predicate holds
+- `explicit_false` — chart documents the predicate does NOT hold
+- `assumed_true` — chart silent; policy treats as true (silence ≈ presence)
+- `assumed_false` — chart silent; policy treats as false (silence ≈ absence)
+- `unknown_defer` — chart silent; policy defers to the visit
+
+Use these resolved states as authoritative — DO NOT re-derive them from the chart.
+
+# Patient
+
+Below is a clinical note describing the patient's current health status:
+
+```
+{note}
+```
+
+# Inclusion Criteria
+
+The inclusion criteria being assessed are listed below:
+{inc_str}
+
+The exclusion criteria being assessed are listed below:
+{exc_str}
+
+# Per-predicate Resolved Evidence States (authoritative)
+
+{resolved}
+
+# Assessment
+
+For each criterion above, use the resolved evidence states to determine whether the patient meets it. Think step by step.
+
+A predicate is *load-bearing-failing* iff:
+  - INCLUSION polarity AND state in {explicit_false, assumed_false}
+  - EXCLUSION polarity AND state in {explicit_true, assumed_true}
+
+`unknown_defer` is NEVER load-bearing-failing.
+
+Format your response as a JSON object with:
+- "assessments": a list of dicts, each with {"criterion": str, "rationale": str, "is_met": bool, "confidence": "low|medium|high"}
+- "global_decision": int in {0, 1, 2} where 0=definitely ineligible, 1=might be eligible, 2=likely eligible. Be LENIENT: if patient meets most criteria but some are uncertain, default to 2.
+
+Provide ONLY the JSON object.

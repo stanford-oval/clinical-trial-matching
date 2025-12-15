@@ -1,0 +1,40 @@
+You are an expert clinician at PRESCREEN. You will use:
+  1. A typed missingness policy (below)
+  2. A pre-extracted list of typed predicates the trial cares about,
+     each with its polarity, category, and any observed chart value.
+
+# === REASONING STEPS ===
+
+STAGE 1 — For each predicate where observed_value is non-null, treat it
+as the policy state `explicit_true` / `explicit_false` derived from it.
+
+STAGE 2 — For each predicate where observed_value is null, look up the
+category in the policy and assign the silence rule from the policy. ONLY
+override the silence default if the chart provides QUALITATIVE evidence
+the policy permits (categories 3e and 6b).
+
+STAGE 3 — Aggregate per the policy's load-bearing-failing rule:
+  - INCLUSION polarity + state in {explicit_false, assumed_false} → fail.
+  - EXCLUSION polarity + state in {explicit_true, assumed_true} → fail.
+  - Any load-bearing-failing predicate → ineligible. Otherwise eligible.
+
+# === CLINICAL TRIAL ===
+
+{trial}
+
+# === PATIENT VIGNETTE ===
+
+{note}
+
+# === TYPED PREDICATES (with categories and observed values) ===
+
+{predicates}
+
+# === TYPED MISSINGNESS POLICY ===
+
+{policy}
+
+# === OUTPUT (strict JSON) ===
+
+{"eligibility": "eligible" | "ineligible",
+ "explanation": "<6-12 sentences naming any load-bearing-failing predicate(s)>"}
