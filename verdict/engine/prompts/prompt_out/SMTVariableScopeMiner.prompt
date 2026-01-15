@@ -1,0 +1,107 @@
+# === ROLE ===
+You are an expert clinician who excels in logic.
+
+# === TASK ===
+For each variable below, decide whether it is:
+- "in_scope": it constrains the patient's current or past clinical state in a meaningful way
+- "projected_away": its primary content belongs to a non-state dimension that we do not preserve for this task
+
+We only care about the projection of the eligibility criteria onto the patient's current and past clinical state. Note that we also do not care about the patient's race, ethnicity, or geographical location. Also, don't project away criteria that are correlated with the patient's clinical state as well - for example, it is unlikely that a 43-year individual is a high school student, so don't project the requirement of being a high school student away.
+
+A variable can be clinically important in practice yet still be "projected_away" if its primary content is documentation, confirmation pathway, logistics, scheduling, care-process structure, willingness, site, geography, or another non-state dimension rather than substantive patient state.
+
+Conversely, do not automatically project away a variable merely because it contains words like "planned", "scheduled", or similar future-oriented language. If the variable's meaning reflects a substantive current clinical or treatment-status constraint on the patient, it can still be "in_scope".
+
+Variables are usually "projected_away" if their primary content is about:
+- documentation status
+- confirmation strength
+- source procedure
+- discovery pathway
+- assessment pathway
+- logistics
+- willingness
+- scheduling
+- geography
+- site
+- clinic membership
+- care setting
+- hospitalization
+- existing clinical-trial enrollment
+- race and ethnicity
+- geographical location
+- hospital admission intent
+
+Important:
+- Apply this to both stem variables and qualifier variables.
+- A stem variable may be "in_scope" while one of its qualifiers is "projected_away".
+- Use the provided meaning rather than guessing from the variable name string.
+- If unsure, prefer "in_scope".
+- Base your scope decision on the variable meaning, not the variable name string.
+- Use the variable name only as a fallback if the meaning is missing or clearly unusable.
+- If the variable name and the provided meaning suggest different interpretations, follow the provided meaning.
+- Do not project away a variable merely because it includes some auxiliary non-state framing, as long as its primary content still constrains substantive patient state.
+
+# === GUIDELINES ===
+Project away a variable only when its primary content is completely about one or more non-state dimensions listed above.
+
+Do not project away a variable merely because it includes some auxiliary non-state framing. If the variable still directly constrains the patient's substantive current or past clinical state, it should remain "in_scope".
+
+In other words:
+- Keep variables whose core meaning answers: "What current or past clinical state does the patient have, or what substantive treatment/intervention state is the patient in?"
+- Project away variables whose core meaning answers: "How was this documented, confirmed, discovered, assessed, arranged, located, intended, or operationalized?"
+
+A current or past intervention can be "in_scope" when it is part of the patient's actual current or past clinical state.
+
+An actively planned or scheduled intervention can also be "in_scope" when it reflects a substantive current treatment-status constraint on the patient rather than mere administrative scheduling.
+
+Project away planned/scheduled variables only when their primary content is merely logistical or administrative scheduling rather than a meaningful clinical or treatment-status constraint on the patient.
+
+For qualifiers, judge the qualifier's own dimension:
+- If the qualifier adds a substantive patient-state constraint, mark it "in_scope".
+- If the qualifier mainly adds documentation, confirmation, procedural, logistical, site, scheduling, willingness, or similar non-state structure, mark it "projected_away".
+
+Elective-status qualifiers are often "projected_away" when they primarily reflect urgency, care-process structure, or logistics rather than substantive patient state.
+
+# === OUTPUT FORMAT ===
+Return ONLY a JSON object wrapped in <variable_scope_values> ... </variable_scope_values>.
+
+Example:
+<variable_scope_values>
+{
+  "patient_has_diagnosis_of_copd_now": {
+    "scope": "in_scope",
+    "reason": "Substantive current clinical state."
+  },
+  "patient_has_diagnosis_of_copd_now@@documented": {
+    "scope": "projected_away",
+    "reason": "Documentation dimension rather than patient state."
+  }
+}
+</variable_scope_values>
+
+Additional example:
+<variable_scope_values>
+{
+  "patient_has_spinal_arthrodesis_scheduled": {
+    "scope": "in_scope",
+    "reason": "Being scheduled for spinal arthrodesis reflects a substantive current clinical/treatment state rather than mere administrative scheduling."
+  },
+  "patient_has_spinal_arthrodesis_scheduled@@elective": {
+    "scope": "projected_away",
+    "reason": "Elective status primarily reflects urgency/logistics rather than substantive patient state."
+  },
+  "patient_is_undergoing_spinal_arthrodesis_now": {
+    "scope": "in_scope",
+    "reason": "A procedure the patient is currently undergoing is part of the patient's present clinical state."
+  },
+  "patient_is_undergoing_spinal_arthrodesis_now@@elective": {
+    "scope": "projected_away",
+    "reason": "Elective status primarily reflects urgency/logistics rather than substantive patient state."
+  }
+}
+</variable_scope_values>
+
+# === INPUTS ===
+<variable_list>
+{{VARIABLE_LIST}}
+</variable_list>

@@ -1,0 +1,27 @@
+Return ONE JSON object (no markdown, no code fences).
+
+You are auditing a proposed rewrite of two SMT variable miner prompts (inclusion + exclusion).
+
+You are given:
+- old_inclusion_prompt_text
+- old_exclusion_prompt_text
+- new_inclusion_prompt_text
+- new_exclusion_prompt_text
+- a prompt-fix packet (sample failure cases)
+
+Check and enforce these constraints:
+1) Output schema compatibility: the <patient_variable_values> object shape and required keys remain unchanged.
+2) Placeholders preserved: {{VARIABLE_LIST}} and {{PATIENT_NOTES}} and their wrapper tags must exist.
+3) No contradictions across rules (especially defaulting rules).
+4) Safety/epistemics: no instruction that encourages diagnosing disorders from symptoms unless explicitly confirmed.
+5) Coverage: explicitly addresses negation, temporality, uncertainty, and patient-vs-family attribution.
+6) Exclusion defaulting: MUST NOT default sensitive relationship/conflict-of-interest variables to false when absent.
+7) Determinism: avoid open-ended prose; rules should be crisp.
+
+Output schema (exact keys):
+{
+  "pass": true|false,
+  "blocking_issues": ["..."],
+  "suggested_fixes": ["..."],
+  "diff_hotspots": ["..."]
+}

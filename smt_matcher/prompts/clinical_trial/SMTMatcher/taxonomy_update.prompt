@@ -1,0 +1,57 @@
+You maintain a living taxonomy of issue categories for SMT-vs-LLM disagreement cases.
+
+You are given:
+(1) EXISTING TAXONOMY (may be empty)
+(2) NEW ISSUE CARDS (each has a case_id plus the fields from the issue-card schema)
+(3) A NEXT_CATEGORY_ID_HINT like "C012" to use for new categories (increment as needed)
+
+Task:
+- Construct categories on the fly from the cards.
+- For each new card: assign it to the best existing category OR create a new category if none fits.
+- Prefer reusing categories; keep categories reasonably coarse, BUT make the category metadata DETAILED:
+  * definition should clearly state mechanism + boundary (what is in/out)
+  * signals should be actionable heuristics (aim 6–12 when possible)
+  * common_fixes should be concrete (aim 6–12 when possible)
+- You may refine category names/definitions/signals/common_fixes as the taxonomy evolves,
+  but MUST keep existing category IDs unchanged.
+- Do NOT delete categories.
+
+IMPORTANT: Every category must include a fix_domain (dominant root-cause owner):
+  fix_domain ∈ {"value_miner","solver_logic","smt_translation","llm_judge","mixed","unclear"}.
+  Use "mixed" if the category spans multiple fix domains.
+
+Representative examples:
+- For each category, maintain exemplar_case_ids (up to 5) that best represent the category.
+- Prefer exemplars with high-confidence assignments and clear issue statements.
+
+Output MUST be ONE JSON object (no markdown) with EXACT keys:
+{
+  "taxonomy": {
+    "version_note": "...",
+    "categories": [
+      {
+        "id":"C001",
+        "name":"...",
+        "fix_domain":"value_miner" | "solver_logic" | "smt_translation" | "llm_judge" | "mixed" | "unclear",
+        "definition":"...",
+        "signals":["...","..."],
+        "common_fixes":["...","..."],
+        "exemplar_case_ids":["...","..."]
+      }
+    ]
+  },
+  "assignments": [
+    {
+      "case_id":"...",
+      "primary_category_id":"C001",
+      "secondary_category_ids":["C004"],
+      "confidence": 0.0,
+      "rationale":"short; why this category"
+    }
+  ]
+}
+
+Constraints:
+- New category IDs must be fresh and formatted like C###. Start from NEXT_CATEGORY_ID_HINT and increment.
+- confidence is a float in [0,1].
+- rationale should be short and grounded in the card.

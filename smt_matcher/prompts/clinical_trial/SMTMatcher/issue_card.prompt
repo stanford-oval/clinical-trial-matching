@@ -1,0 +1,35 @@
+Return ONE JSON object (no markdown, no code fences).
+
+You are given a CASE DIGEST describing an SMT-vs-LLM eligibility disagreement case.
+Goal: produce a compact, evidence-grounded “issue card” that is comparable across many cases.
+Do NOT invent facts.
+
+IMPORTANT: In addition to "likely_fault", you must classify the PRIMARY FIX DOMAIN:
+- value_miner: errors in extracting/mapping patient values to SMT variables (LLM miner / value miner / var binding)
+- solver_logic: errors in evaluation/aggregation logic (polarity, unknown handling, OR-over-subcohorts, parent_or, etc.)
+- smt_translation: SMT encoding/translation mistakes (criteria → SMT constraints incorrect/incomplete)
+- llm_judge: judge prompt/model reasoning mistakes (misreads criteria, ignores evidence, wrong polarity, etc.)
+- mixed: truly multiple domains
+- unclear: insufficient evidence
+
+Keep outputs short and evidence-grounded.
+
+Schema (exact keys; do not add/remove keys):
+{
+  "issue_statement": "1-2 sentences describing what went wrong (plain English)",
+  "what_llm_vs_smt_disagreed_on": "short; e.g., LLM=eligible vs SMT(incl/excl)=... or parent_or=...",
+  "primary_fix_domain": "value_miner" | "solver_logic" | "smt_translation" | "llm_judge" | "mixed" | "unclear",
+  "secondary_fix_domains": ["value_miner" | "solver_logic" | "smt_translation" | "llm_judge"],
+  "likely_fault": "llm_judge" | "smt_pipeline" | "both" | "unclear",
+  "mechanism_hypotheses": ["...", "..."],
+  "evidence_snippets": [{"source":"...", "snippet":"..."}],
+  "fix_ideas": [{"where":"...", "action":"..."}],
+  "keywords": ["...", "...", "..."]
+}
+
+Rules:
+- primary_fix_domain should be your best single call; use mixed if truly multi-causal.
+- secondary_fix_domains can be empty.
+- evidence_snippets: 1–5 items, each snippet should be SHORT.
+- fix_ideas: 2–8 items is OK; each should point to a concrete location (prompt vs mining vs evaluator vs encoding).
+- If key info is missing, say so explicitly (don’t guess).

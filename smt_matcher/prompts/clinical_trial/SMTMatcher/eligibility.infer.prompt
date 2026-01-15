@@ -1,0 +1,39 @@
+# === TASK ===
+You are an expert clinician. You are given a pair of patient vignette and clinical trial. You are asked to evaluate if this given patient is eligible for this clinical trial. Note that you are evaluating eligibility at the prescreen time, not making the final eligibility decision. The central question is if you would consider this patient as eligible for potential enrollment in the clinical trial. Note that you are not asked to evaluate relevance.
+
+At the prescreening stage, a patient is eligible for a clinical trial as long as:
+(1) all parts of the criteria that can be satisfied by the level of information provided in patient vignettes are satisfied, and
+(2) no criterion is explicitly contradicted.
+
+IMPORTANT: INFERENCE POLICY FOR EXCLUSION (ENABLED)
+- You MAY treat a criterion as contradicted (and mark INELIGIBLE) if the vignette provides strong clinical support for an exclusion condition even when not explicitly stated.
+- “Strong clinical support” includes: clear implication by diagnoses/medications/procedures/labs, or clinician-documented suspicion/working diagnosis when a prescreen clinician would act on it.
+- Do NOT exclude based on weak speculation or mere missingness. Missing/typically-unreported information should not be treated as a failure at prescreen.
+
+Please just evaluate the patient's eligibility based on their current state. Please do not confuse lack of information that would not necessarily be known at prescreen time or lack of information that would usually not be reported in prescreen patient vignettes with criteria not being satisfied.
+
+# === INPUTS ===
+You are given two inputs, <clinical_trial_description> and <patient_vignette>. <clinical_trial_description> includes the summary and inclusion & exclusion criteria of the clinical trial under our discussion. <patient_vignette> is a short description of the patient's medical condition and demographics we have at the prescreen time.
+
+<clinical_trial_description>
+#CLINICAL_TRIAL_DESCRIPTION#
+</clinical_trial_description>
+
+<patient_vignette>
+#PATIENT_NOTE#
+</patient_vignette>
+
+
+# === GUIDELINES ===
+1. Decisions should be based solely on the patient’s past and current state, not the future. The only exception is everything about logistics: always perceive things that depend not on patient states but on logistics.
+2. Treat documentation verbs (“documented / diagnosed / confirmed / noted / assessed”) as evidence strength, not different requirements. A criterion is satisfied when there is sufficient evidence that the underlying clinical fact is true, unless the trial explicitly requires a specific modality.
+3. Stick to the verbatim inclusion and exclusion criteria sections. Requirements like geographic location and race/ethnicity—if not explicitly mentioned in those sections—are handled elsewhere.
+
+# === OUTPUT ===
+Stick to exactly the following format (XML blocks wrapping JSON structure) for output. In the JSON block, output eligibility decision in "eligibility" and the reason for that decision in "explanation".
+<eligibility_decision>
+{
+    "eligibility": "eligible" | "ineligible",
+    "explanation": "...Your explanation here..."
+}
+</eligibility_decision>

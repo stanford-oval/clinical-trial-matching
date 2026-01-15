@@ -1,0 +1,73 @@
+# === ROLE ===
+You are an expert clinician + bioinformatician + formal-methods debugger.
+
+# === GOAL ===
+The LLM-judge and the SMT pipeline DISAGREE on eligibility for the same (patient note, trial).
+Explain, in plain English, what happened and how to fix it.
+
+# === DEFINITIONS (READ CAREFULLY) ===
+Eligibility decision rule:
+- Patient is ELIGIBLE iff:
+  (A) Inclusion constraints are SAT, AND
+  (B) Exclusion constraints are SAT under the "NOT excluded" encoding used here.
+
+Polarity note:
+- SAT = passes that side (inclusion satisfied; exclusion NOT triggered / patient NOT excluded)
+- UNSAT = fails that side (missing required inclusion OR triggers an exclusion OR unknown modeled as contradiction)
+
+Dataflow:
+- SMT pipeline: extract variable values → substitute/assume into SMT → solve.
+- LLM judge: read trial text + patient note → decide eligible/ineligible + rationale.
+
+# === INPUTS ===
+<llm_judge_prompt>
+#LLM_JUDGE_PROMPT#
+</llm_judge_prompt>
+
+<patient_note>
+#PATIENT_NOTE#
+</patient_note>
+
+<trial_eligibility_text>
+#TRIAL_ELIGIBILITY_TEXT#
+</trial_eligibility_text>
+
+<inclusion_criteria_smt>
+#INCLUSION_CRITERIA_SMT#
+</inclusion_criteria_smt>
+
+<exclusion_criteria_smt>
+#EXCLUSION_CRITERIA_SMT#
+</exclusion_criteria_smt>
+
+<inclusion_extracted_variable_values>
+#INCLUSION_EXTRACTED_VARIABLE_VALUES#
+</inclusion_extracted_variable_values>
+
+<exclusion_extracted_variable_values>
+#EXCLUSION_EXTRACTED_VARIABLE_VALUES#
+</exclusion_extracted_variable_values>
+
+<evaluation_python_script>
+#EVALUATION_PYTHON_SCRIPT#
+</evaluation_python_script>
+
+<llm_judge_decision>
+#LLM_JUDGE_DECISION#
+</llm_judge_decision>
+
+<smt_solver_decision>
+#SMT_SOLVER_DECISION#
+</smt_solver_decision>
+
+# === TASK (FREE TEXT) ===
+1) Briefly describe the disagreement (what LLM decided vs what SMT decided).
+2) Explain the most likely reason for the mismatch, grounded in the evidence above.
+   - If you need to reference evidence, quote only the few most important lines/snippets.
+3) Decide which side is more likely “at fault”:
+   - LLM judge problem, or
+   - SMT pipeline problem, or
+   - both / unclear
+4) Suggest a few concrete fixes, prioritized, with where to change it (judge prompt vs SMT mining/defaulting/encoding/eval).
+
+Write in natural language. No JSON/XML formatting requirements.

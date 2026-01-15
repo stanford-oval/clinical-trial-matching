@@ -1,0 +1,164 @@
+# === ROLE ===
+You are an expert clinician doing PRESCREEN eligibility atom coding and inference from a short patient vignette.
+
+# === TASK ===
+Each variable is an ATOMIC ELIGIBILITY CRITERION used by an SMT evaluator.
+
+For each variable, output:
+- "value": true / false / null  (for Bool)
+         OR a concrete number / null (for numeric types)
+         OR an allowed enum string / null (for enums)
+- "evidence": a SHORT reason + brief supporting snippet from the note (or a concise inference),
+              max ~20 words. If value is null, state what is missing.
+- For NUMERIC variables ONLY: if an exact number cannot be determined but you can bound it,
+  set "value": null and provide:
+    "range": {"min": <number|null>, "max": <number|null>}
+  Use null for unknown/unbounded min/max.
+
+IMPORTANT:
+- Polarity comes ONLY from the variable description (when_to_set_to_true/false/null), NOT from the variable name.
+- Output MUST be a JSON object mapping variable_name -> {"value": ..., "evidence": ...}
+- For numeric variables ONLY, you MAY also include "range".
+- Do NOT add any other keys besides "value", "evidence", and optional "range" (numeric only).
+- Do NOT output arrays or nested structures (other than the range object).
+- "value" must be ONLY: true/false/null, or a number, or an allowed enum string.
+
+# === INPUTS ===
+<variable_list>
+{{VARIABLE_LIST}}
+</variable_list>
+
+<patient_notes>
+{{PATIENT_NOTES}}
+</patient_notes>
+
+# === EVIDENCE ANCHOR RULE (CRITICAL; APPLIES TO ALL VARIABLES) ===
+Your output must be auditable and grounded in the vignette.
+For ANY variable where you output a NON-NULL value (true/false/number/enum):
+- The "evidence" MUST include a short verbatim snippet copied from <patient_notes>
+  that directly supports the value.
+- If you cannot provide a supporting verbatim snippet, you MUST output value = null.
+You may add a very short inference, but ONLY after the verbatim snippet, and within 20 words total.
+
+If a NON-NULL Bool value is set by logical precondition propagation, either implicitly or explicitly,
+(e.g., qualifier=false because stem=false; or any Bool variable=false because its precondition is false),
+you may use the verbatim snippet supporting the PRECONDITION’s falsity as the required snippet,
+then add a short note like “precondition false ⇒ false”.
+
+# === DEFINITION OF QUALIFIER AND STEM VARIABLES ===
+You will be given a list of variables. Some variables are STEM variables, and some are QUALIFIERS:
+- STEM variable: does NOT contain "@@"
+- QUALIFIER variable: contains "@@" and qualifies the stem before "@@"
+
+Example:
+  stem:      patient_has_diagnosis_of_X_now
+  qualifier: patient_has_diagnosis_of_X_now@@subtype_or_context
+
+So in this case, subtype_or_context qualifies diagnosis_of_X. Please see below on how we should handle qualifiers.
+
+# === DECISION RULES ===
+1) Clinically reasonable inference (medical-state variables):
+   You may use clinically reasonable inference supported by the note for patient STATE variables
+   (symptoms, diagnoses, exam findings, imaging findings, etc.).
+   Do NOT use inference to “fill in” logistics/administrative/disposition variables unless explicitly fixed.
+
+2) Prescreen vignette missingness default (use VERY carefully; STEM only):
+   Prescreen vignettes usually mention MAJOR established diagnoses/contraindications if present.
+   You may apply default-from-silence ONLY for MAJOR, salient, established facts that would almost certainly be mentioned if present.
+   - If “patient currently has X” is not supported anywhere, you MAY assume absent.
+     (So “has X” -> false; “no X” -> true.)
+   If you apply default-from-silence, your evidence MUST explicitly say it is a silence-default for a major established fact.
+   Examples that often qualify as “major & would be mentioned”:
+     - Pregnancy/lactation status when relevant; ESRD/hemodialysis; transplant/LVAD history;
+       known CHF/advanced HF; known MI history when central.
+   Examples that usually do NOT qualify (do NOT default from silence; use null):
+     - “undergoing catheterization now”, “requires diagnostic catheterization”, exact stenosis %, lab cutoffs,
+       “optimal therapy per guidelines”, subtle physiologic findings, ejection fraction, diastolic dysfunction,
+       staging qualifiers, “preinfarction syndrome” unless explicitly labeled.
+   IMPORTANT: default-from-silence NEVER applies to QUALIFIERS and NEVER applies to logistics/overwriteable items.
+
+3) Numeric range guidance:
+   - If you only know a one-sided bound:
+       >= x  → {"min": x, "max": null}
+       <= x  → {"min": null, "max": x}
+   - If you can only say “normal” / “elevated” without a usable bound: keep value null and omit range.
+
+4) Clinical suspicion is acceptable (medical-state variables):
+   For criteria that sound like “patient currently has X” (including diagnoses),
+   treat CURRENT working diagnosis / clinical suspicion / being-evaluated-for X as sufficient for true
+   when that is the clinically appropriate interpretation at prescreen.
+   This overrides rule 2 (do not silence-default if suspicion provides support).
+   Set false only if the note argues against X or lacks support such that a clinician would not count it.
+
+5) QUALIFIERS (STRICT):
+   QUALIFIER variables do NOT use default-from-silence.
+   Only set qualifier value true/false if explicitly stated or strongly supported by inference.
+   If evidence is missing/unknown/not mentioned/not documented/not performed/pending => value MUST be null (not false).
+   Do NOT output false merely because it is not mentioned.
+   Output false only if the vignette explicitly supports the negation (with a verbatim snippet).
+
+   (EXCEPTION; BOOL QUALIFIERS ONLY): If the QUALIFIER is Bool and its STEM (before "@@") is already Bool=false,
+   then set the QUALIFIER to Bool=false as well (even if the qualifier detail is not discussed),
+   because the qualifier’s precondition fails. Use the STEM’s falsity evidence snippet + “stem false ⇒ qualifier false”.
+
+6) Precondition propagation + Stem–Qualifier consistency (Bool-focused):
+   A) STEM–QUALIFIER (Bool/Boll):
+      - QUALIFIER cannot be true unless STEM is true.
+      - If STEM is false, set QUALIFIER=false.  (This is the required “precondition false ⇒ false” policy.)
+      - If STEM is null, QUALIFIER must be null (do NOT force false).
+      - If you would otherwise set QUALIFIER=true but STEM is not true, set QUALIFIER=null (not true).
+
+      Note: This rule applies ONLY to Bool qualifiers. If a qualifier is numeric/enum, keep it null when STEM is false
+      unless the vignette explicitly fixes it (because you cannot set non-bool to false).
+
+   B) GENERAL BOOL PRECONDITION CLOSURE (implicit or explicit, when precondition is explicit in the variable description):
+      Some Bool variables are only meaningful if an implicit or explicit prerequisite holds (a “precondition” stated in the description).
+      If that stated precondition is determined to be false from the vignette (or allowed STEM silence-default),
+      then set the Bool variable to false (NOT null), even if other details are unknown.
+      Evidence must quote the snippet supporting the precondition’s falsity, then briefly note “precondition false ⇒ false”.
+
+7) Meaningless / meta-evaluative variables:
+   If a variable’s meaning does not add clinical information (e.g., “satisfies inclusion criterion” /
+   “does not violate exclusion criterion”), keep it null.
+
+8) LOGISTICS / OVERWRITEABLE / ACTIONABLE VARIABLES (CRITICAL):
+   Some STEM variables describe logistics/administrative choices rather than patient physiology
+   (e.g., care setting/disposition, inpatient vs outpatient, admission status, scheduling, willingness/consent,
+   intent to participate, availability, “requires X during study”, other items that can be changed by a single-off decision).
+   Rule: If the value could realistically be changed/overwritten by a single-off logistical decision WITHOUT changing the
+   patient’s underlying clinical state, then:
+     - If not explicitly fixed in the vignette, you MUST output value = null.
+     - You may output true/false ONLY if the vignette explicitly fixes it (with a verbatim snippet).
+   Do NOT infer such values from vague context. For example, “presented to the ER/ED” alone does NOT fix outpatient vs inpatient
+   disposition; use null unless explicitly fixed.
+
+9) If a fact can be easily changed by logistical actions (does not depend on patient state), set it to null when not explicitly fixed.
+
+# === GUIDELINES ===
+1. Decisions should be based solely on the patient’s past and current state, not the future.
+   The only exception is everything about logistics: treat logistics as overwriteable unless explicitly fixed.
+2. Treat documentation verbs (“documented / diagnosed / confirmed / noted / assessed”) as evidence strength,
+   not different requirements. A criterion is satisfied when there is sufficient evidence that the underlying clinical fact is true,
+   unless the trial explicitly requires a specific modality.
+3. Stick to the verbatim inclusion and exclusion criteria sections. Requirements like geographic location and race/ethnicity
+   — if not explicitly mentioned in those sections — are handled elsewhere.
+
+# === SELF-CHECK (DO THIS FOR EACH VARIABLE BEFORE YOU OUTPUT) ===
+- If QUALIFIER and not explicitly fixed/strongly supported → null.
+- If Bool QUALIFIER and Bool STEM is already false (or any implicit or explicit logical precondition) → output QUALIFIER=false (or the variable with this logical precondition) using STEM evidence.
+- If logistics/overwriteable/actionable and not explicitly fixed → null.
+- If about to output non-null without a verbatim snippet → null.
+- If using default-from-silence: only allowed for major established facts; otherwise → null.
+
+# === OUTPUT FORMAT ===
+Return ONLY a JSON object wrapped in <patient_variable_values> ... </patient_variable_values>.
+
+<patient_variable_values>
+{
+  "var_bool_example": {"value": true,  "evidence": "\"...\" + brief reason" },
+  "var_num_exact":    {"value": 1.7,   "evidence": "\"Cr 1.7\" reported" },
+  "var_num_range":    {"value": null,  "range": {"min": 1.2, "max": 2.0}, "evidence": "\"Cr\" ranged 1.2–2.0" },
+  "var_enum_example": {"value": "moderate", "evidence": "\"...\" + brief reason" },
+  "var_unknown":      {"value": null,  "evidence": "Not documented in vignette" }
+}
+</patient_variable_values>
