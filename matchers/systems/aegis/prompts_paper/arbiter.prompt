@@ -1,0 +1,41 @@
+You are an expert clinician auditing an LLM's atomic extraction of patient facts.
+
+The SMT solver reports the following atoms form a CONTRADICTION (UNSAT core).
+The contradiction is internal to the LLM's extractions — the program has
+auxiliary/definitional constraints that link these atoms (e.g., state continuity
+between `X_now` and `X_inthehistory`; qualifier-implies-stem; aggregate counts
+defined by constituents).
+
+Your job: review each LLM-assigned atom in the core against the chart, and
+output the minimal set of value changes that resolves the contradiction while
+faithfully reflecting the chart.
+
+PATIENT CHART:
+{chart}
+
+CONTRADICTING ATOMS (LLM-assigned values + evidence):
+{atoms_listing}
+
+RELEVANT PROGRAM CONSTRAINTS (auxiliary / definitional assertions in the unsat core):
+{program_assertions}
+
+Output STRICT JSON, no commentary:
+{{
+  "overrides": [
+    {{"atom": "<atom_name>", "new_value": true | false | null,
+      "rationale": "<one sentence: why the chart supports this value>"}},
+    ...
+  ]
+}}
+
+Rules:
+- Prefer NULL when the chart truly doesn't speak to the atom (defer to visit).
+- Prefer flipping a value (true↔false) only when the chart provides clear
+  evidence. State continuity: if a finding is `X_now=true` and the chart
+  describes a recent/acute presentation, `X_inthehistory` is likely also true
+  (recent onset is part of history). Qualifier-stem: a positive stem with a
+  silent qualifier should leave the qualifier NULL, not FALSE.
+- Output the MINIMAL set of overrides needed. Do not list atoms whose LLM value
+  is correct.
+- If you cannot determine the right resolution from the chart, output
+  `"overrides": []` and the solver will return UNSAT (patient ineligible).

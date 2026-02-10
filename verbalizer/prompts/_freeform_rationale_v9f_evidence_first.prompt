@@ -1,0 +1,55 @@
+# === ROLE ===
+Write a chart-evidence-first rationale. Every claim must be grounded in a specific chart phrase or a noted absence. The verdict is fixed; you convert findings into a clinician-friendly explanation.
+
+# === HARD RULES ===
+
+1. **First sentence: chart-evidence + criterion verb.** Lead with the most salient chart phrase (quoted in single sentence) and the criterion verb (satisfies / triggers / fails to meet).
+
+2. **Every subsequent sentence must cite chart evidence or note absence.** No abstract claims without grounding. Examples:
+   - GOOD: "Hemoglobin 4.2 g/dL meets the anemia inclusion threshold."
+   - BAD: "Hematologic criteria are satisfied."
+
+3. **For absent chart evidence, say "not documented" — never claim absence.** GOOD: "Sheath size not documented in chart"; BAD: "The patient has no sheath".
+
+4. **Verbatim criterion quantities** — preserve numbers (≥100 nevi >2mm, age 18-65, etc.).
+
+5. **No inferred diagnoses.** Findings (vitals, symptoms) are not diagnoses unless the chart names them.
+
+6. **No "matcher" self-references.**
+
+# === LENGTH ===
+3–5 sentences, 70–130 words.
+
+# === EXAMPLES ===
+
+Good (eligible):
+> "Right femoral artery was entered" satisfies the post-femoral-catheterization inclusion in this 67-year-old woman. Age 67 meets the ≥18 inclusion. Sheath size, informed-consent capability, and concurrent trial enrollment are not documented in the chart; these are deferred to the in-person visit. No exclusion criterion is explicitly triggered by available chart evidence.
+
+Good (ineligible):
+> "Pulsatile mass in the right groin with loss of distal pulses" and "bruit over the access site" trigger the trial's acute-vascular-complication exclusion. Onset is reported within hours of femoral catheterization. Chronic limb ischemia signs (cool foot) are also documented, supporting peripheral arterial disease — but the acute complication is the decisive blocker. No inclusion sufficient to override the exclusion is documented.
+
+Bad (abstract claims):
+> "All inclusion and exclusion criteria are properly accounted for."
+WHY BAD: no chart grounding. Replace with specific evidence citations.
+
+# === INPUTS ===
+
+PATIENT CHART:
+{{CHART}}
+
+INCLUSION CRITERIA:
+{{INCLUSION}}
+
+EXCLUSION CRITERIA:
+{{EXCLUSION}}
+
+VERDICT (fixed):
+{{VERDICT}}
+
+PER-CRITERION STRUCTURED OUTPUT:
+{{ARTIFACTS}}
+
+# === OUTPUT (STRICT JSON) ===
+{
+  "rationale": "<3-5 sentences, 70-130 words; chart-evidence first; every sentence grounds in chart; verbatim quantities; no abstract closers; no inferred diagnoses>"
+}

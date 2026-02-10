@@ -1,0 +1,8 @@
+system: single_shot_llm
+config_name: v5_blockers
+description: V5 with structured (blockers[], supports[]) output (prompt-engineering ablation)
+backbone: gpt-4.1
+matcher_entry: matchers/systems/single_shot_llm
+prompt:  matchers/systems/single_shot_llm/prompts/V5_TWO_STEP_BLOCKERS.prompt
+rationale_generator: v5_blockers    # → rationale_generators/v5_blockers_list
+modifier_kind:       rationale_text

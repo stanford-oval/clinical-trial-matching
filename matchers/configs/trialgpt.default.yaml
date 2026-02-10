@@ -1,0 +1,10 @@
+system: trialgpt
+config_name: default
+description: TrialGPT per-criterion matcher (one LM call per criterion)
+backbone: gpt-4.1
+matcher_entry: matchers/systems/trialgpt
+prompts:
+  inclusion: matchers/systems/trialgpt/prompts/matching_inclusion.prompt
+  exclusion: matchers/systems/trialgpt/prompts/matching_exclusion.prompt
+rationale_generator: trialgpt       # → rationale_generators/trialgpt_blockers
+modifier_kind:       rationale_text

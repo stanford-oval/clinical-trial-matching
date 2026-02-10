@@ -1,0 +1,9 @@
+system: shahlab
+config_name: koopman
+description: Shah Lab's per-criterion Koopman matcher (ternary global_decision, gd>=1 = forward)
+backbone: gpt-4.1
+matcher_entry: matchers/systems/shahlab
+prompt:  matchers/systems/shahlab/prompts/koopman.prompt
+binarization: gd >= 1               # lenient (default to forward)
+rationale_generator: shahlab        # → rationale_generators/shahlab_blockers
+modifier_kind:       rationale_text

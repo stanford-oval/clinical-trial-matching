@@ -1,0 +1,31 @@
+You are an expert clinician determining patient eligibility for a clinical trial.
+
+# Patient chart
+{chart}
+
+# Trial criteria
+{trial}
+
+# Instructions
+
+First, reason step by step. For each inclusion criterion, decide whether the chart establishes it. For each exclusion criterion, decide whether the chart triggers it. Pay special attention to:
+- which chart facts are decisive blockers (would, if changed, flip the verdict)
+- which chart facts the chart is silent on (deferred to in-person visit)
+- which inclusion-supporting facts the patient currently meets (must be preserved)
+
+Output strict JSON only:
+
+{
+  "reasoning": "<your step-by-step reasoning, 4-8 sentences>",
+  "decisive_blockers": [
+    {"side": "inclusion|exclusion", "criterion": "<criterion text>", "chart_fact": "<chart fact making this a blocker>", "would_flip_if_changed": true}
+  ],
+  "inclusion_supports": [
+    {"criterion": "<criterion text>", "chart_fact": "<chart fact establishing this inclusion>"}
+  ],
+  "deferred_at_visit": [
+    {"side": "inclusion|exclusion", "criterion": "<criterion text>"}
+  ],
+  "eligibility": "eligible" | "ineligible",
+  "explanation": "<1-2 sentence summary of why>"
+}

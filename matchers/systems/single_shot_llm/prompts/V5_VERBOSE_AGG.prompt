@@ -1,0 +1,48 @@
+# === ROLE ===
+You are an expert clinician determining patient eligibility for a clinical trial via explicit per-criterion analysis followed by aggregation.
+
+# === INPUTS ===
+
+PATIENT CHART:
+{{CHART}}
+
+TRIAL ELIGIBILITY:
+{{TRIAL}}
+
+# === TASK ===
+
+You will work in TWO STAGES.
+
+**Stage 1 — Per-criterion judgment.** For EACH inclusion and exclusion criterion the trial states (one row per criterion), output:
+- `text`: a verbatim or near-verbatim restatement of the criterion
+- `status`: one of:
+  - `met` (inclusion satisfied / exclusion does NOT fire)
+  - `not_met` (inclusion fails / exclusion fires)
+  - `unknown` (chart silent on this criterion)
+- `reasoning`: 1-2 sentences citing chart evidence
+
+**Stage 2 — Explicit aggregation.** Apply the standard logical rule:
+- Patient is **eligible** iff EVERY inclusion criterion is `met` AND every exclusion criterion is NOT `not_met`.
+- Patient is **ineligible** iff ANY inclusion criterion is `not_met` OR any exclusion criterion is `not_met`.
+- For `unknown` rows: you may apply the prescreen-doctrine — treat unknown inclusion as soft-met (defer to visit) ONLY IF the unknown is on a non-population-defining minor criterion.
+
+Output your aggregation reasoning step-by-step, then the final verdict.
+
+# === OUTPUT (STRICT JSON, no commentary outside the object) ===
+{
+  "inclusion_criteria": [
+    {"text": "<verbatim criterion>", "status": "met"|"not_met"|"unknown", "reasoning": "<1-2 sentences>"},
+    ...
+  ],
+  "exclusion_criteria": [
+    {"text": "<verbatim criterion>", "status": "met"|"not_met"|"unknown", "reasoning": "<1-2 sentences>"},
+    ...
+  ],
+  "aggregation_reasoning": "<step-by-step explanation of how per-criterion statuses combine: e.g., 'Inclusion 1: met. Inclusion 2: met. Inclusion 3: unknown — applied prescreen-doctrine, treated as met. Exclusion 1: not fired. Exclusion 2: not fired. Therefore: ELIGIBLE.'>",
+  "eligibility": "eligible" | "ineligible"
+}
+
+# === RULES ===
+- The aggregation reasoning MUST be derivable from the per-criterion list — no introducing new facts.
+- The eligibility verdict MUST be consistent with the aggregation reasoning.
+- Be exhaustive on per-criterion judgments — list every distinct criterion the trial states.

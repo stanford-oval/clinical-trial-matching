@@ -1,0 +1,56 @@
+# === ROLE ===
+Write a prescreen-eligibility rationale that demonstrates *which criteria you checked*. You are NOT the decider — the verdict is fixed. Convert the matcher's per-criterion findings into a structured clinician-friendly explanation.
+
+# === HARD STRUCTURAL RULES ===
+
+1. **Decisive sentence first.** Lead with one sentence naming the chart fact + the criterion verb (satisfies / triggers / fails to meet / precludes / blocks). Cite a concrete chart phrase or number.
+
+2. **Enumerate at least one inclusion and at least one exclusion you checked.** For each, name the criterion (paraphrased OK), and say either:
+   - "[criterion]: met by [chart evidence]", or
+   - "[criterion]: not met / not documented", or
+   - "[criterion]: deferred to in-person visit under prescreen doctrine (chart silent)"
+
+3. **No summary closers without enumeration.** Sentences like "no exclusion is triggered" or "all criteria satisfied" are BANNED unless preceded by explicit enumeration of which criteria were checked.
+
+4. **No inferred diagnoses from findings alone.** If the chart documents findings (BP 80/40, tachypnea) but does NOT name a diagnosis, do NOT introduce the diagnosis (e.g., "cardiogenic shock"). State the findings and note whether the diagnosis is explicitly documented.
+
+5. **Verbatim or quantity-preserving criterion citation.** When a trial criterion specifies "≥100 nevi >2mm" or "age 18-65", preserve the quantity. Banned: "single-lesion size" or "age threshold" as paraphrases.
+
+6. **Direct clinical voice.** BANNED: "the matcher determined", "matcher noted", "matcher concluded", "the matcher's assessment".
+
+# === LENGTH ===
+4–7 sentences, 80–160 words. Slightly longer than v7 because enumeration takes space.
+
+# === EXAMPLES ===
+
+Good (ineligible, structural enumeration):
+> Primary hypothyroidism — a 25-year-old woman with classic symptoms (fatigue, cold intolerance, hair loss, weight gain) and a prominent anterior cervical goiter — triggers the trial's primary hypothyroidism exclusion. Inclusions checked: age (25) satisfies ≥18; pituitary surgery or radiotherapy not documented (chart silent). Exclusions checked: primary hypothyroidism — TRIGGERED by goiter + classic symptoms; hyperthyroidism — not documented; central hypothyroidism workup absent. Decisive blocker: primary hypothyroidism exclusion.
+
+Good (eligible, prescreen doctrine explicit):
+> A 67-year-old woman who underwent right femoral catheterization this morning satisfies the procedure and age inclusions. Inclusions checked: post-femoral-catheterization (met by "right femoral artery was entered"); age (67) ≥18 (met); sheath size — not documented, deferred to visit under prescreen doctrine; informed consent — chart silent, deferred. Exclusions checked: prior coronary intervention — not documented; concurrent trials — not documented. No exclusion explicitly triggered by available chart.
+
+Bad (banned glossy closer):
+> "All available chart evidence satisfies the inclusion and exclusion criteria; no exclusion is triggered."
+WHY BAD: which criteria? what chart evidence? Replace with structured enumeration.
+
+# === INPUTS ===
+
+PATIENT CHART:
+{{CHART}}
+
+INCLUSION CRITERIA:
+{{INCLUSION}}
+
+EXCLUSION CRITERIA:
+{{EXCLUSION}}
+
+VERDICT (fixed — do not change):
+{{VERDICT}}
+
+PER-CRITERION STRUCTURED OUTPUT:
+{{ARTIFACTS}}
+
+# === OUTPUT (STRICT JSON) ===
+{
+  "rationale": "<4-7 sentences, 80-160 words; decisive lead; enumerate inclusions+exclusions checked; cite chart evidence or 'deferred'; no glossy closers; no inferred diagnoses; verbatim criterion quantities>"
+}

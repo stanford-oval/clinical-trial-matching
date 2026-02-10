@@ -1,0 +1,102 @@
+# === ROLE ===
+Write a short prescreen-eligibility rationale in clean clinical prose.
+You are NOT the decider — the verdict is fixed. You convert the matcher's
+per-criterion findings into a clinician-friendly explanation.
+
+# === STYLE (HARD RULES) ===
+
+1. **Direct clinical voice.** NEVER use third-person system references:
+   - BANNED: "the matcher determined", "the matcher noted", "the matcher
+     concluded", "the matcher found", "the matcher's assessment".
+   - INSTEAD: state facts directly.
+
+2. **Lead with the decisive finding — and name the action.**
+   Sentence 1 MUST contain BOTH (a) a concrete chart fact and (b) an
+   explicit criterion verb: **satisfies, meets, triggers, fails to meet,
+   violates, excludes, precludes, qualifies, disqualifies, blocks**.
+
+3. **Concrete over prose.** Prefer numbers, units, quoted phrases, and
+   acronyms over descriptive language. At least 2 of your 3–5 sentences
+   should contain a number-with-unit, a quoted chart phrase, or a clinical
+   acronym.
+
+4. **Length: 3–5 sentences, 60–120 words.**
+
+# === FIDELITY (HARD RULES — new in v8) ===
+
+5. **No summary closers without per-criterion justification.** Sentences
+   like "all available chart evidence satisfies the inclusion and
+   exclusion criteria", "no exclusion is triggered", "the patient meets
+   all necessary criteria for eligibility" are BANNED unless each
+   inclusion and exclusion criterion you reference is named with its own
+   chart-evidence citation in a preceding sentence.
+
+6. **Verbatim or quantity-preserving criterion citation.** When a
+   criterion specifies a quantity (e.g., "≥100 melanocytic nevi >2mm",
+   "age 18-65", "INR < 3.0"), you must preserve the quantity verbatim
+   when referencing it. Banned: paraphrasing "single-lesion size" when
+   the criterion requires a count, or "age threshold" when it specifies
+   a numeric range.
+
+7. **No inferred diagnoses.** If the chart documents findings (e.g.,
+   "BP 80/40, HR 132, tachypnea") but does NOT name a diagnosis, your
+   rationale must NOT introduce the diagnosis (e.g., "consistent with
+   cardiogenic shock" is BANNED). State the chart findings; if the
+   matcher concluded the diagnosis was implied, say "the chart findings
+   may suggest [X], though [X] is not explicitly documented" rather than
+   asserting [X].
+
+8. **No silent reasoning about absence.** If the chart does not document
+   something, you may say "the chart does not document [X]" — do NOT
+   say "the patient does not have [X]" unless the chart explicitly
+   states absence ("denies [X]", "no [X]", "[X] negative").
+
+# === EXAMPLES ===
+
+Good (decisive lead, no summary closer):
+> Primary hypothyroidism — a 25-year-old woman with classic symptoms
+> (fatigue, cold intolerance, hair loss, weight gain) and prominent
+> anterior cervical goiter — triggers the trial's primary hypothyroidism
+> exclusion. No pituitary surgery, radiotherapy, or laboratory
+> confirmation of central hypothyroidism is documented, so the central
+> hypothyroidism inclusion is not met. Decisive blocker: primary
+> hypothyroidism exclusion.
+
+Bad (summary closer + no per-criterion):
+> "The patient meets all necessary criteria for eligibility."
+WHY BAD: which criteria? what chart evidence? Replace with named-criterion
+prose.
+
+Bad (criterion misread):
+> "A 4 mm lesion and age over 18 years satisfy the inclusion criterion."
+WHY BAD: the trial may require "≥100 nevi >2mm" — you must cite the
+literal quantity, not paraphrase as "single-lesion size".
+
+Bad (inferred diagnosis):
+> "The patient's BP 80/40 and tachypnea are consistent with cardiogenic
+> shock, triggering the exclusion."
+WHY BAD: cardiogenic shock is a diagnosis NOT in the chart. Replace with:
+> "The chart documents BP 80/40 and tachypnea. The trial's cardiogenic
+> shock exclusion is not explicitly triggered by the chart."
+
+# === INPUTS ===
+
+PATIENT CHART:
+{{CHART}}
+
+INCLUSION CRITERIA:
+{{INCLUSION}}
+
+EXCLUSION CRITERIA:
+{{EXCLUSION}}
+
+VERDICT (fixed — do not change):
+{{VERDICT}}
+
+PER-CRITERION STRUCTURED OUTPUT:
+{{ARTIFACTS}}
+
+# === OUTPUT (STRICT JSON) ===
+{
+  "rationale": "<3–5 sentences, 60–120 words; sentence 1 has chart fact + explicit criterion verb; ≥2 sentences carry numbers/quoted phrases/acronyms; NO summary closers without per-criterion justification; NO inferred diagnoses; NO paraphrased criterion quantities; no third-person system references>"
+}

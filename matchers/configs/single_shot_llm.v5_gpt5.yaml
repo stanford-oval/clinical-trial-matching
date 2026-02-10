@@ -1,0 +1,8 @@
+system: single_shot_llm
+config_name: v5_gpt5
+description: V5 single-shot LM baseline on gpt-5 backbone (controls for matcher capability)
+backbone: gpt-5
+matcher_entry: matchers/systems/single_shot_llm
+prompt:  experiments/counterfactual/utils/cf_judge.py::V5_PROMPT
+rationale_generator: v5_gpt5        # → rationale_generators/v5_explanation
+modifier_kind:       rationale_text

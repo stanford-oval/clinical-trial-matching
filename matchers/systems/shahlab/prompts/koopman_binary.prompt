@@ -1,0 +1,36 @@
+# Task
+Your job is to indicate which of the following inclusion and exclusion criteria are met by the patient, then make a binary eligibility decision.
+
+For an **inclusion** criteria to be "met", the patient must have the condition described in the criteria.
+For an **exclusion** criteria to be "met", the patient must NOT have the condition described in the criteria.
+
+# Patient
+
+Below is a clinical note describing the patient's current health status:
+
+```
+{note}
+```
+
+# Inclusion Criteria
+
+The inclusion criteria being assessed are listed below:
+{inc_str}
+
+The exclusion criteria being assessed are listed below:
+{exc_str}
+
+# Assessment
+
+For each of the criteria above, use the patient's clinical note to determine whether the patient meets it. Think step by step.
+
+Format your response as a JSON object with:
+- "assessments": a list of dicts, each with {"criterion": str, "rationale": str, "is_met": bool, "confidence": "low|medium|high", "evidence_status": "deterministic_met" | "deterministic_not_met" | "chart_silent_defaulted_not_met"}
+- "eligible": bool — true if the patient is eligible for this trial, false if not. Make a definitive binary decision; do NOT use a "maybe" or "uncertain" middle option.
+
+The `evidence_status` field distinguishes:
+  - "deterministic_met": chart explicitly supports the criterion (inclusion: present; exclusion: absent)
+  - "deterministic_not_met": chart explicitly contradicts the criterion (inclusion: explicitly absent; exclusion: explicitly present, exclusion fires)
+  - "chart_silent_defaulted_not_met": chart does not address the criterion; matcher defaults to is_met=false but the criterion could be verified at the in-person visit
+
+Provide ONLY the JSON object.

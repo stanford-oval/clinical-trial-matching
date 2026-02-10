@@ -1,0 +1,49 @@
+# === ROLE ===
+Write a thorough prescreen-eligibility rationale. The verdict is fixed. Show your work by walking through inclusion and exclusion criteria systematically.
+
+# === HARD RULES ===
+
+1. **Decisive lead.** Sentence 1: the chart fact + criterion verb that drives the verdict.
+
+2. **Walk through inclusions.** ≥1 sentence enumerating inclusion criteria with chart evidence — at least 2 specific inclusions named.
+
+3. **Walk through exclusions.** ≥1 sentence enumerating exclusion criteria checked — at least 2 exclusions named, each either chart-supported or chart-silent.
+
+4. **Prescreen doctrine sentence when deferring.** If any criterion is chart-silent and forwarded to visit, include: "Per prescreen doctrine, chart-silent [atoms] are deferred to in-person workup rather than blocked."
+
+5. **Closing one-line verdict label.** End with: "Decisive [blocker / supporting evidence]: [name]."
+
+6. **No glossy closers** without enumeration. No inferred diagnoses. Verbatim quantities. No matcher self-references.
+
+# === LENGTH ===
+5–8 sentences, 120–200 words. Thoroughness is the feature.
+
+# === EXAMPLES ===
+
+Good (ineligible, thorough):
+> Primary hypothyroidism — documented goiter, fatigue, cold intolerance, hair loss, weight gain in a 25-year-old woman — triggers the trial's primary hypothyroidism exclusion. Inclusions: central hypothyroidism inclusion is unmet (no pituitary surgery, radiotherapy, or laboratory confirmation documented); age ≥18 is met (age 25); informed consent is chart-silent. Exclusions: primary hypothyroidism is TRIGGERED by goiter + symptom cluster; hyperthyroidism not documented; concurrent thyroid medications not noted; recent biopsy not documented. Per prescreen doctrine, the chart-silent items (consent, recent biopsy) would be deferred — but the decisive blocker overrides deferral. Decisive blocker: primary hypothyroidism exclusion is explicitly supported by chart evidence.
+
+Good (eligible, thorough):
+> A 67-year-old woman who underwent "right femoral artery" catheterization this morning satisfies the post-femoral-cath procedure inclusion. Inclusions: post-femoral-cath is met by chart quote; age ≥18 is met (age 67); willingness-to-comply is chart-silent. Exclusions: prior coronary intervention not documented; concurrent trial enrollment not documented; severe renal impairment not documented; acute vascular complication not documented. Per prescreen doctrine, the chart-silent items (sheath size, consent capability, prior intervention) are deferred to the in-person visit rather than blocked. Decisive supporting evidence: post-femoral-catheterization with documented chart language.
+
+# === INPUTS ===
+
+PATIENT CHART:
+{{CHART}}
+
+INCLUSION CRITERIA:
+{{INCLUSION}}
+
+EXCLUSION CRITERIA:
+{{EXCLUSION}}
+
+VERDICT (fixed):
+{{VERDICT}}
+
+PER-CRITERION STRUCTURED OUTPUT:
+{{ARTIFACTS}}
+
+# === OUTPUT (STRICT JSON) ===
+{
+  "rationale": "<5-8 sentences, 120-200 words; decisive lead; explicit walk-through of inclusions then exclusions; prescreen-doctrine sentence when deferring; closing decisive label; verbatim quantities; no glossy closers; no inferred diagnoses>"
+}

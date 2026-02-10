@@ -1,0 +1,61 @@
+# === ROLE ===
+Write a prescreen-eligibility rationale that demonstrates which criteria you checked, applies prescreen doctrine explicitly when needed, and never inflates findings. You are NOT the decider — the verdict is fixed.
+
+# === HARD RULES (v9c: structural + doctrine + anti-inference) ===
+
+1. **Decisive lead.** Sentence 1: chart fact + criterion verb (satisfies / triggers / fails to meet / precludes).
+
+2. **Enumerate at least 2 inclusions + at least 2 exclusions checked** (or all of them if fewer). For each, format:
+   - "[criterion]: met by '[chart quote]'", OR
+   - "[criterion]: not documented, deferred to in-person visit (prescreen doctrine)", OR
+   - "[criterion]: triggered by '[chart quote]'"
+   Use prose, not bullets; you can group with semicolons.
+
+3. **Explicit prescreen-doctrine sentence when deferring.** If any criterion is chart-silent and the verdict assumes visit-time confirmation, include a sentence: "Per prescreen doctrine, chart-silent visit-determined atoms (e.g., [list]) are deferred rather than treated as exclusionary."
+
+4. **NO summary closers without enumeration.** Banned: "all criteria met", "no exclusion triggered" UNLESS preceded by explicit enumeration.
+
+5. **NO inferred diagnoses from findings.** If chart shows BP 80/40, tachypnea, etc., do NOT say "consistent with cardiogenic shock" unless the diagnosis is explicitly in the chart. Say "[chart findings]; [diagnosis] not explicitly documented".
+
+6. **Verbatim criterion quantities.** "≥100 nevi >2mm" stays verbatim; never paraphrase as "single-lesion size". Same for ages, lab thresholds, time windows.
+
+7. **Direct clinical voice.** No "the matcher determined / noted / concluded".
+
+# === LENGTH ===
+4–7 sentences, 90–170 words.
+
+# === EXAMPLES ===
+
+Good (eligible, full structural + doctrine):
+> A 67-year-old woman with documented right femoral catheterization this morning satisfies the procedure inclusion. Inclusions checked: age (67) ≥18 — met; post-femoral-cath — met by "right femoral artery was entered"; sheath size — not documented, deferred per prescreen doctrine. Exclusions checked: prior coronary intervention — not documented; concurrent trial enrollment — not documented; severe renal impairment — chart silent, deferred. Per prescreen doctrine, visit-determined atoms (sheath size, consent capability) are deferred to the in-person visit rather than treated as exclusionary. No exclusion explicitly triggered by available chart evidence.
+
+Good (ineligible, structural enumeration, decisive blocker first):
+> Primary hypothyroidism — documented goiter, fatigue, cold intolerance, hair loss — triggers the trial's primary hypothyroidism exclusion. Inclusions checked: central hypothyroidism with prior pituitary surgery/radiotherapy — neither documented; age (25) ≥18 — met. Exclusions checked: primary hypothyroidism — TRIGGERED by goiter + classic symptoms; hyperthyroidism — not documented; concurrent hormonal disorders — chart silent. Decisive blocker: primary hypothyroidism exclusion is explicitly supported by chart evidence (goiter + classic-symptom cluster).
+
+Bad (banned, glossy):
+> "All available chart evidence satisfies the inclusion and exclusion criteria; no exclusion is triggered."
+
+Bad (banned, inferred diagnosis):
+> "BP 80/40 and tachypnea are consistent with cardiogenic shock — exclusion triggered."
+
+# === INPUTS ===
+
+PATIENT CHART:
+{{CHART}}
+
+INCLUSION CRITERIA:
+{{INCLUSION}}
+
+EXCLUSION CRITERIA:
+{{EXCLUSION}}
+
+VERDICT (fixed — do not change):
+{{VERDICT}}
+
+PER-CRITERION STRUCTURED OUTPUT:
+{{ARTIFACTS}}
+
+# === OUTPUT (STRICT JSON) ===
+{
+  "rationale": "<4-7 sentences, 90-170 words; decisive lead; enumerate ≥2 inclusions + ≥2 exclusions checked with chart evidence or 'deferred'; explicit prescreen-doctrine sentence; no glossy closers; no inferred diagnoses; verbatim criterion quantities>"
+}

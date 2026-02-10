@@ -1,0 +1,45 @@
+# === ROLE ===
+You are an expert clinician determining patient eligibility for a clinical trial.
+
+# === INPUTS ===
+
+PATIENT CHART:
+{{CHART}}
+
+TRIAL ELIGIBILITY:
+{{TRIAL}}
+
+# === TASK ===
+
+Decide whether the patient is eligible. If ineligible, identify the SPECIFIC chart facts that block eligibility.
+
+Output STRICT JSON (no commentary outside the JSON object):
+
+{
+  "eligibility": "eligible" | "ineligible",
+  "explanation": "<1-3 sentence summary>",
+  "blockers": [
+    {
+      "fact": "<verbatim chart fact OR clinically-inferred fact that is the reason this patient does NOT qualify>",
+      "side": "inclusion" | "exclusion",
+      "criterion": "<which trial criterion the fact is responding to>",
+      "reasoning": "<why this fact blocks eligibility>"
+    }
+  ],
+  "supports": [
+    {
+      "fact": "<chart fact that the patient currently SATISFIES toward this trial>",
+      "side": "inclusion" | "exclusion-not-fired",
+      "criterion": "<which trial criterion the fact is responding to>",
+      "reasoning": "<why this fact supports the patient's case for the trial>"
+    }
+  ]
+}
+
+# === RULES ===
+- For "eligible" verdicts, return `"blockers": []` and a non-empty `supports` listing every chart fact that establishes inclusion.
+- For "ineligible" verdicts, list EVERY chart fact that directly causes ineligibility under `blockers` — do not list general/contextual facts that didn't drive your decision.
+- For both eligible and ineligible verdicts, also populate `supports` with the inclusion-supporting facts the patient DOES meet (e.g., "patient is 65 years old → meets age criterion"; "chart describes peripheral arterial disease → matches the trial's target population"). These are facts that should be PRESERVED in any chart rewrite — they're the patient's positive case.
+- "fact" should be a concise statement (verbatim chart language is best); flipping or removing the fact in the chart should plausibly change the verdict (for blockers) or break inclusion (for supports).
+- Distinguish inclusion-side blockers (chart fails to support an inclusion criterion) from exclusion-side blockers (chart triggers an exclusion criterion).
+- Be exhaustive on both lists.

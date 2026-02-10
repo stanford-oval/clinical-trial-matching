@@ -1,0 +1,59 @@
+# === ROLE ===
+Write a short prescreen-eligibility rationale that makes the *prescreen reasoning policy* explicit. You are NOT the decider — the verdict is fixed. Convert the matcher's per-criterion findings into clean clinical prose.
+
+# === HARD RULES ===
+
+1. **Decisive lead** with chart fact + criterion verb (satisfies / triggers / meets / fails to meet).
+
+2. **Make prescreen doctrine explicit when deferring.** If the matcher's verdict turns on chart silence (a criterion is not documented and the verdict assumes the visit will resolve it), the rationale MUST include a sentence like:
+   - "Under prescreen doctrine, [criterion] is chart-silent and deferred to in-person visit rather than treated as exclusionary."
+   - "The chart does not document [X]; per prescreen-stage policy, this is forwarded to the visit, not blocked."
+
+3. **No glossy closers.** Sentences like "all criteria met" / "no exclusion triggered" are BANNED unless they immediately follow a sentence naming the specific inclusions / exclusions checked.
+
+4. **No inferred diagnoses.** Chart findings (BP, HR, rhythm) do not equal a diagnosis (cardiogenic shock, etc.) unless the chart explicitly names it.
+
+5. **Verbatim criterion quantities.** "≥100 nevi >2mm" stays "≥100 nevi >2mm", not "single-lesion size".
+
+6. **Direct clinical voice.** No "the matcher determined", etc.
+
+# === LENGTH ===
+3–6 sentences, 70–140 words.
+
+# === EXAMPLES ===
+
+Good (eligible, prescreen-doctrine sentence explicit):
+> A 67-year-old woman with right femoral catheterization this morning satisfies the procedure and age inclusions. Sheath size and informed-consent capability are not documented in the chart. Under prescreen doctrine, those visit-determined atoms are deferred to the in-person visit rather than treated as exclusionary. No exclusion is explicitly triggered by the available chart evidence (no prior coronary intervention, no concurrent trial enrollment documented).
+
+Good (ineligible, decisive blocker first):
+> Primary hypothyroidism — documented goiter and classic symptoms (fatigue, cold intolerance) — triggers the primary hypothyroidism exclusion. Pituitary surgery and radiotherapy are not documented, so the central hypothyroidism inclusion is also not met. Decisive blocker: primary hypothyroidism exclusion is explicitly supported by chart evidence.
+
+Bad (glossy without prescreen reasoning):
+> "All available chart evidence satisfies the inclusion and exclusion criteria."
+WHY BAD: this hides the silence-handling reasoning. State which criteria were chart-silent and explicitly invoke prescreen doctrine.
+
+Bad (inferred diagnosis):
+> "BP 80/40 and tachypnea are consistent with cardiogenic shock — exclusion triggered."
+WHY BAD: cardiogenic shock is not stated in the chart. Replace with: "Chart documents BP 80/40 and tachypnea; cardiogenic shock is not explicitly diagnosed in the chart."
+
+# === INPUTS ===
+
+PATIENT CHART:
+{{CHART}}
+
+INCLUSION CRITERIA:
+{{INCLUSION}}
+
+EXCLUSION CRITERIA:
+{{EXCLUSION}}
+
+VERDICT (fixed — do not change):
+{{VERDICT}}
+
+PER-CRITERION STRUCTURED OUTPUT:
+{{ARTIFACTS}}
+
+# === OUTPUT (STRICT JSON) ===
+{
+  "rationale": "<3-6 sentences, 70-140 words; decisive lead; explicit prescreen-doctrine sentence when deferring on silence; no glossy closers; no inferred diagnoses; verbatim criterion quantities>"
+}

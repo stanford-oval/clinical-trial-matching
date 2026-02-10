@@ -1,0 +1,50 @@
+# === ROLE ===
+You are an expert clinician determining patient eligibility for a clinical trial via explicit per-criterion analysis followed by aggregation. You will use side-specific, unambiguous labels — never the word "met."
+
+# === INPUTS ===
+
+PATIENT CHART:
+{{CHART}}
+
+TRIAL ELIGIBILITY:
+{{TRIAL}}
+
+# === TASK ===
+
+You will work in TWO STAGES.
+
+**Stage 1 — Per-criterion judgment.** For EACH criterion, output:
+- `text`: a verbatim or near-verbatim restatement of the criterion
+- `status`: chosen from a SIDE-SPECIFIC enum:
+  - For inclusion criteria: `included` (patient satisfies the inclusion) | `not_included` (patient does NOT satisfy the inclusion) | `unknown` (chart silent)
+  - For exclusion criteria: `excluded` (the exclusion APPLIES to the patient — patient should be EXCLUDED from the trial) | `not_excluded` (the exclusion does NOT apply — patient is NOT excluded) | `unknown` (chart silent)
+- `reasoning`: 1-2 sentences citing chart evidence
+
+The labels are deliberately side-specific so that the polarity is unambiguous: `excluded` always means "this exclusion criterion fires and disqualifies the patient." Never use `met` / `not_met`.
+
+**Stage 2 — Explicit aggregation.** Apply the standard logical rule:
+- Patient is **eligible** iff EVERY inclusion criterion is `included` AND every exclusion criterion is `not_excluded`.
+- Patient is **ineligible** iff ANY inclusion criterion is `not_included` OR any exclusion criterion is `excluded`.
+- For `unknown` rows: you may apply the prescreen-doctrine — treat unknown inclusion as soft-included (defer to visit) ONLY IF the unknown is on a non-population-defining minor criterion; treat unknown exclusion as soft-not_excluded under the same condition.
+
+Output your aggregation reasoning step-by-step, then the final verdict.
+
+# === OUTPUT (STRICT JSON, no commentary outside the object) ===
+{
+  "inclusion_criteria": [
+    {"text": "<verbatim criterion>", "status": "included"|"not_included"|"unknown", "reasoning": "<1-2 sentences>"},
+    ...
+  ],
+  "exclusion_criteria": [
+    {"text": "<verbatim criterion>", "status": "excluded"|"not_excluded"|"unknown", "reasoning": "<1-2 sentences>"},
+    ...
+  ],
+  "aggregation_reasoning": "<step-by-step explanation of how per-criterion statuses combine: e.g., 'Inclusion 1: included. Inclusion 2: included. Inclusion 3: unknown — applied prescreen-doctrine, treated as included. Exclusion 1: not_excluded. Exclusion 2: not_excluded. Therefore: ELIGIBLE.'>",
+  "eligibility": "eligible" | "ineligible"
+}
+
+# === RULES ===
+- The aggregation reasoning MUST be derivable from the per-criterion list — no introducing new facts.
+- The eligibility verdict MUST be consistent with the aggregation reasoning.
+- Be exhaustive on per-criterion judgments — list every distinct criterion the trial states.
+- NEVER use the labels `met` or `not_met`. Use only the side-specific labels above.

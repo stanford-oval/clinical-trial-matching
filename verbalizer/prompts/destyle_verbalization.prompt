@@ -1,0 +1,104 @@
+# === ROLE ===
+You are a careful clinical trial eligibility explainer and editor.
+
+# === TASK ===
+We have three systems that use different methods to decide whether a patient is eligible for a clinical trial. For each system, we previously generated a rationale explaining how it reached its decision.
+However, these rationales are written using evidence and intermediate artifacts produced by each system’s internal workflow. As a result, the writing often contains identifiable “fingerprints” that make it possible to infer which system produced which rationale.
+Your task is to rewrite any system-identifying fingerprint phrasing into neutral, non-system-identifying language, while preserving the original decision and evidence-grounded meaning, so that downstream evaluators can compare the systems fairly without being able to tell which system a rationale came from.
+
+# === CONTEXT YOU WILL RECEIVE ===
+You will be given:
+- a patient note
+- a trial eligibility text
+- for each of the 3 systems: the exact prompt used to generate its rationale (including the evidence sources and rules that system was instructed to use to justify its decision)
+- for each of the 3 systems: the system’s produced rationale text
+
+# === GOAL ===
+For each system rationale, produce a de-styled version that:
+Rewrite system-identifying fingerprints (internal labels, pipeline/mechanism talk, solver/retriever artifacts, explicit OR/AND mechanism narration, etc.) into neutral, non-system-identifying language.
+Keeps the meaning, evidence, uncertainty, and final conclusion exactly the same.
+You are NOT judging correctness and you must NOT agree/disagree with any decision. Only rewrite style fingerprints.
+
+=== WHAT COUNTS AS A “FINGERPRINT” ===
+A fingerprint is any phrasing that reveals the system’s internal evidence representation or mechanism, such as:
+Internal status labels or tags (e.g., “included/excluded/not included/insufficient information”, “met/unmet flags”, “support score”)
+Mechanism narration (e.g., “parent-level OR across arms”)
+If a label appears verbatim in the patient note or the trial criteria text (e.g., a category number), then do NOT treat it as a system fingerprint—even if only one system mentions it. These labels are considered source text, and any system could legitimately use them.
+
+# === Example rewrites (keep semantics, rewrite fingerprints) ===
+Before: were both marked "not included"
+After: Based on the note, neither requirement is considered met.
+
+Before: Eligibility was marked true at the trial’s parent level using an OR across multiple predefined arms
+After: The overall conclusion is positive because meeting one acceptable option is enough under the trial’s setup.
+
+# === OUTPUT REQUIREMENTS ===
+Return a SINGLE valid JSON object (no markdown fences) with exactly these top-level keys:
+{
+  "system 1": { ... },
+  "system 2": { ... },
+  "system 3": { ... }
+}
+
+Each system object MUST have exactly these keys:
+- "scratchpad": short working notes used for thinking (e.g., which statements contain fingerprints and why, and the planned neutral paraphrases). Keep the sentence meaning exactly the same, but rewrite any system-identifying fingerprint phrasing into neutral, non-system-identifying language.
+- "rewrite_rationale": the full rewritten rationale in neutral plain English
+
+Use this exact inner schema:
+{
+  "scratchpad": "...",
+  "rewrite_rationale": "..."
+}
+
+# === INPUTS (Part 0) ===
+<patient_note>
+#PATIENT_NOTE#
+</patient_note>
+
+<trial_eligibility_text>
+#TRIAL_ELIGIBILITY_TEXT#
+</trial_eligibility_text>
+
+# === INPUTS (Part 1) ===
+<prompt_used_by_system_1>
+#PROMPT_USED_BY_SYSTEM_1#
+</prompt_used_by_system_1>
+
+<output_system_1>
+#OUTPUT_SYSTEM_1#
+</output_system_1>
+
+# === INPUTS (Part 2) ===
+<prompt_used_by_system_2>
+#PROMPT_USED_BY_SYSTEM_2#
+</prompt_used_by_system_2>
+
+<output_system_2>
+#OUTPUT_SYSTEM_2#
+</output_system_2>
+
+# === INPUTS (Part 3) ===
+<prompt_used_by_system_3>
+#PROMPT_USED_BY_SYSTEM_3#
+</prompt_used_by_system_3>
+
+<output_system_3>
+#OUTPUT_SYSTEM_3#
+</output_system_3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

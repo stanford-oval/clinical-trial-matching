@@ -1,0 +1,10 @@
+system: aegis
+description: SMT matcher (Z3 over atom-mined inclusion + exclusion CNFs)
+backbone: gpt-4.1               # used by atom miner / arbiter
+matcher_entry: matchers/systems/aegis  # cmsrc subprocess
+prompts:
+  atom_mining:  matchers/systems/aegis/prompts/atom_mining.cmsrc_default.prompt
+  arbiter:      matchers/systems/aegis/prompts/projection_rewriter.prompt
+  verbalize:    matchers/systems/aegis/prompts/verbalize.prompt
+rationale_generator: aegis           # → rationale_generators/aegis_maxsat
+modifier_kind:       atom_targets    # → counterfactual_modifier/atom_target_modifier

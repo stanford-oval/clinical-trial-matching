@@ -1,0 +1,355 @@
+# === ROLE ===
+Convert a structured list of mined eligibility atoms into a clinical
+bullet rationale. The verdict is FIXED. You are NOT adding clinical
+reasoning; you are restating each atom's status in plain clinical voice,
+one bullet per atom.
+
+# === INPUT ===
+
+You are given:
+- The patient chart (for chart-evidence quotes only)
+- The trial criteria text (for criterion-number ordering reference)
+- The fixed VERDICT
+- A COHORT_NOTE — single-cohort, or multi-cohort with eligibility rule
+- A structured ATOM LIST:
+    - SINGLE-cohort trials: one line per atom with side|description|value
+    - MULTI-cohort trials: atoms are grouped under "## Cohort <variant_id>"
+      headers; each cohort is tagged QUALIFYING or FAILING
+- For ineligible verdicts: a MIN_FLIP_SET listing decisive atoms (per
+  cohort for multi-cohort)
+
+# === MULTI-COHORT RULES ===
+
+A trial may compile into multiple cohort variants (arms). The
+pair-level verdict aggregates them by **disjunction**: the patient is
+eligible if at least one cohort is SAT.
+
+- **VERDICT = Eligible, multi-cohort:** the patient qualifies for at
+  least one arm. Use the QUALIFYING cohort's atoms for the bullet
+  enumeration. Name the qualifying arm in the prose lead, e.g.,
+  "qualifies for Cohort A (urgent-laparotomy arm)." Do NOT enumerate the
+  failing arms' atoms — the patient only needs one.
+- **VERDICT = Ineligible, multi-cohort:** every arm failed. Show why
+  each arm fails, but **deduplicate shared blockers**. Group blockers
+  into two sections:
+
+  **(A) Why ineligible across all arms (shared blockers):**
+      A single chart finding that triggers an exclusion (or fails an
+      inclusion) in multiple cohorts is reported ONCE here, with a
+      compact list of which cohorts it disqualifies.
+      - Example:
+        - Liver surgery during current admission (chart: "exploratory
+          laparotomy revealed a ruptured liver abscess, then surgically
+          drained") — triggers Exclusion 1 in cohort B and Exclusion 1+3
+          in cohorts C, D.
+
+  **(B) Cohort-specific blockers (only blockers unique to one arm):**
+      Blockers that appear in only one cohort go here, grouped per
+      cohort. If a cohort has no unique blocker (all of its blockers
+      are already covered by the shared list), omit that cohort header.
+      - Example:
+        *Cohort A (elective-surgery arm):*
+        - Inclusion 1 — not met: surgery was urgent, not elective.
+
+  Rules of thumb for grouping:
+   - If a blocker's chart-evidence quote is the same (or near-same)
+     across cohorts, it's shared — put it in (A).
+   - If two atoms describe semantically equivalent criteria (e.g.,
+     "liver surgery during admission" vs "current index operation was
+     liver surgery"), treat as ONE shared blocker.
+   - Omit section (B) entirely if all blockers are shared.
+   - Omit section (A) entirely if no shared blockers.
+
+  Use cohort names from the trial criteria text where available
+  (e.g., "Cohort A (elective)", "Cohort B (urgent laparotomy)").
+  Fallback to the variant id (NCT...a, NCT...b).
+
+# === COHORT CONTEXT FOR THIS PAIR ===
+
+{{COHORT_NOTE}}
+
+# === HOW TO INTERPRET MISSINGNESS (null values) ===
+
+This is a **prescreen** task, not enrollment. The matcher follows a
+specific missingness policy you must convey faithfully:
+
+- **null value (chart-silent):** the chart does not address this
+  criterion. This does NOT make the patient ineligible. Operational and
+  routine items the chart does not document (informed consent,
+  scheduling, routine workup details, lab values not yet ordered) are
+  forwarded to the in-person visit and **handled there**. Always place
+  these in the **To confirm at the in-person visit:** section, never in
+  "Why ineligible".
+- **true on inclusion side:** the chart positively supports this
+  inclusion. Place in **Inclusions met:**.
+- **false on inclusion side:** the chart positively states this
+  inclusion is NOT met (e.g., chart says "no prior MI" for a
+  "history of MI required" inclusion). For an ineligible verdict this
+  is a decisive ground; place in **Why ineligible:**. For an eligible
+  verdict (rare), it would still be reported in **Inclusions met:** as
+  "not satisfied per chart" — but in practice the verdict would not be
+  Eligible if a required inclusion is false.
+- **true on exclusion side:** the exclusion fires; decisive ground for
+  ineligibility. Place in **Why ineligible:**.
+- **false on exclusion side:** the chart positively rules out this
+  exclusion. Place in **No exclusions apply:** ("no documented X").
+
+Never recast a null as a disqualifier. Never recast a documented
+positive finding as "to confirm at visit". The atom's value is the
+ground truth from the matcher's policy and must drive section
+placement.
+
+# === ASSUMPTIONS AND WITNESSES (HARD) ===
+
+Conditions the chart never settles (UNRESOLVED) are not left blank: the
+MaxSMT solver assigns each one a value so the decision can be reached.
+Those assigned values are the **assumptions** (rho). They are the paper's
+accountability ledger -- every one is a claim the reader is entitled to
+override.
+
+**A witness is not a finding.** The value the solver picks for a numeric
+unresolved condition is arbitrary within the satisfying region: if the trial
+needs creatinine clearance >= 60, the solver may return 60, 72 or 500, and
+none of those is a fact about this patient. Therefore:
+
+- For a numeric condition in the assumptions or the pivotal conditions,
+  state **the requirement the trial imposes**, never the solver's witness.
+    RIGHT: "creatinine clearance >= 60 mL/min -- not documented; assumed met"
+    WRONG: "creatinine clearance 72"            <- invents a lab value
+- For a boolean condition the assigned value IS the assumption, so state it
+  directly: "no prior platinum therapy -- not documented; assumed absent".
+- Never present an assumption as observed evidence. Every assumed condition
+  must carry an explicit marker ("not documented", "assumed") so a clinician
+  can see what to verify.
+- If an assumption came from a policy (IMPUTED rather than UNRESOLVED), name
+  the policy realization rather than calling it an assumption.
+
+**Pivotal conditions** (delta) are the conditions whose change would flip the
+verdict -- what would have to become true for an INELIGIBLE patient to
+qualify, or false for an ELIGIBLE one to stop qualifying. State them in the
+same requirement form, and do not conflate them with assumptions: an
+assumption is what was taken for granted, a pivotal condition is what the
+verdict turns on.
+
+# === OUTPUT STRUCTURE (HARD) ===
+
+A 2-sentence clinical prose lead. **Sentence 1 MUST be a decisive
+clinical statement of the verdict's load-bearing reason**, not a
+descriptive narrative. State the patient demographics + the SINGLE
+most consequential criterion fact that drives the verdict, and use one
+of these verbs: \emph{satisfies / meets / triggers / fails to meet /
+is decisive / blocks}.
+
+  GOOD (ineligible): "A 17-year-old patient fails to meet the trial's
+    minimum age of 18, which is decisive; no exclusion is triggered."
+  GOOD (eligible): "A 67-year-old woman with documented femoral-cath
+    procedure satisfies the post-femoral-cath inclusion; no exclusion
+    is triggered."
+  BAD (descriptive narrative): "A 58-year-old woman presents with
+    new-onset chest pain and elevated troponin and was admitted to the
+    cardiology service for further workup."
+
+Sentence 2 is a one-line synopsis of the inclusion/exclusion balance
+and what is deferred to the visit.
+
+Then:
+
+**Verdict:** <Eligible / Ineligible>
+
+Then bullet sections. Headers verbatim. Omit a section with zero atoms.
+
+  **Why ineligible:** — ineligible verdicts only. One bullet per atom
+    in MIN_FLIP_SET. Format:
+      - Inclusion <N> — not met: <criterion description>, chart evidence.
+      - Exclusion <N> — applies: <criterion description>, chart evidence.
+
+  **Inclusions met:** — one bullet per inclusion atom with value=true:
+      - Inclusion <N> — met: <criterion description>, chart evidence.
+
+  **No exclusions apply:** — one bullet per exclusion atom with value=false:
+      - Exclusion <N> — not applicable: <criterion description>,
+        chart evidence of non-occurrence.
+
+  **To confirm at the in-person visit:** — chart-silent atoms
+    (value=null) handled by prescreen doctrine. Compress unless there
+    are very few (≤4) chart-silent items:
+      - If **≤4 silent atoms total**: list each as a bullet, e.g.,
+          - Inclusion <N>: <criterion> — not documented in the chart.
+      - If **≥5 silent atoms total**: emit ONE summary line and a
+        short list of the most clinically important ones (the rest are
+        routine and don't merit individual bullets), e.g.,
+          - **<K> additional inclusion/exclusion items are not
+            documented and will be confirmed at the in-person visit
+            (consent, scheduling, routine workup, etc.).** Key items
+            include: <2-3 clinically salient bullet criteria>.
+
+This compression rule applies to PRESCREEN-doctrine deferrals only.
+Decisive blockers (Why ineligible), met inclusions, and cleared
+exclusions are NEVER compressed — every relevant atom there gets its
+own bullet.
+
+# === HARD RULES ===
+
+0. **CLINICAL SYNTHESIS BEFORE ENUMERATION.** Open the rationale with
+   the prose lead (sentence 1 + sentence 2). Then, BEFORE the bullet
+   sections, write ONE short paragraph (2-3 sentences max) that links
+   the patient's clinical picture to the trial's intent: which
+   diagnostic criteria the chart satisfies, what the clinical
+   interpretation is. Bullets afterwards back this up.
+   Example: "The chart picture is consistent with active Kawasaki
+   disease: documented fever ≥5 days plus four of the five principal
+   features (rash, conjunctivitis, lymphadenopathy, oral changes,
+   extremity changes), satisfying CDC diagnostic criteria. The trial's
+   inclusion criteria align directly with these findings."
+
+1. **DEDUPE + COMPRESS BEFORE BULLETING.** Multiple atoms in the list
+   often describe the SAME underlying criterion (e.g., one atom for
+   "patient currently has DVT", another for "current DVT confirmed by
+   ultrasound", another for "current DVT confirmed by CT" — these are
+   all aspects of one criterion). Merge them into ONE bullet that
+   names the criterion concisely. Aim for one bullet per logical
+   criterion, not one bullet per raw atom.
+2. **REWRITE TO CLINICAL VOICE.** Atom descriptions are machine-style.
+   Compress to clinician phrasing.
+     - BAD:  "Numeric value (in years) of the patient's current age at
+              the time of screening/admission."
+       GOOD: "Age ≥ 18 years."
+     - BAD:  "Indicates whether the patient currently has an acute
+              deep venous thrombosis (DVT) at the time of
+              evaluation/screening."
+       GOOD: "Current acute DVT."
+     - BAD:  "Boolean indicating whether the bleeding event within the
+              past 30 days meets the GUSTO criteria."
+       GOOD: "Major bleeding within 30 days (GUSTO criteria)."
+3. **NUMBER MATCHING THE TRIAL TEXT.** Use the trial's inclusion /
+   exclusion criteria text above as the canonical ordering. Number
+   bullets `Inclusion 1`, `Inclusion 2`, ... and `Exclusion 1`,
+   `Exclusion 2`, ... reflecting the trial's own numbering.
+4. **DO NOT SHOW RAW ATOM NAMES** like `patient_has_finding_of_X@@qual`.
+5. **DO NOT INVENT** atoms not in the input list.
+6. **DO NOT SKIP** criteria that have at least one atom in the input
+   list. Every criterion mentioned in the input must appear in the
+   output (in some section).
+7. **Chart evidence:** for true/false atoms with chart support, quote
+   a short fragment. For null atoms: "not documented in the chart".
+8. **No emojis. No system self-references** ("the matcher", "the system
+   noted"). State facts directly.
+9. **No closing summary paragraph.**
+
+10. **HARD STRUCTURED COMPRESSION FOR THE "To confirm at visit" SECTION.**
+    This rule OVERRIDES any "one bullet per atom" instruction below.
+
+    - If chart-silent items ≤ 3: list each as its own bullet.
+    - If chart-silent items ≥ 4: emit a **structured bulleted list**
+      where each bullet is a clinical category (in **bold**), followed
+      by a colon and a short comma-separated list of the items in that
+      category.
+
+    **NEVER print a count of items.** No "54 additional items", no
+    "K additional criteria". Counts are the wrong unit.
+
+    **The output must be STRUCTURED, not a paragraph in parentheses.**
+
+    Required form (each line is one bullet):
+
+      **To confirm at the in-person visit:**
+      - **<Category 1>:** <item, item, item>.
+      - **<Category 2>:** <item, item, item>.
+      - **<Category 3>:** <item, item>.
+      - ...
+
+    Pick 3–6 categories. Use natural clinical groupings appropriate to
+    the trial. Common categories:
+
+      - **Diagnostic imaging / findings** (CT, ultrasound, MRI, echocardiography)
+      - **Laboratory values / biomarkers** (creatinine, troponin, INR, GFR)
+      - **Procedural history / timing** (angioplasty, thrombolysis, device history, anticipated discharge)
+      - **Hemodynamics** (blood pressure thresholds, shock, segmental dysfunction)
+      - **Comorbidities** (hematologic, liver, renal, malignancy)
+      - **Pregnancy / contraception / substance use**
+      - **Operational / consent / follow-up logistics** (consent capability, scheduling, ability to attend follow-up)
+      - **Allergies / hypersensitivity**
+      - **Medication history** (concurrent therapies, recent washout)
+
+    Examples:
+
+      DVT/PE trial:
+        **To confirm at the in-person visit:**
+        - **Diagnostic imaging:** confirmation of acute DVT/PE on ultrasound or CT.
+        - **Procedural timing:** anticipated discharge within 72 hours of admission.
+        - **Comorbidities:** recurrent DVT/PE history, life expectancy <30 days.
+        - **Allergies:** hypersensitivity to heparin or pork products.
+        - **Operational:** informed consent, follow-up appointment availability.
+
+      Cardiac surgery / STEMI trial:
+        **To confirm at the in-person visit:**
+        - **Diagnostic / imaging:** STEMI confirmation details, segmental dysfunction, ejection fraction, coronary anatomy, mechanical complications.
+        - **Procedural history:** angioplasty and thrombolysis timing, prior device implantation.
+        - **Hemodynamics:** intraoperative values, valve disease.
+        - **Comorbidities / labs:** hematologic, liver disease, immunosuppression, laboratory values.
+        - **Substance & medication:** substance use history.
+        - **Operational:** consent, follow-up logistics.
+
+    Total bullets in this section: 3–6. NEVER more than 6.
+    NEVER a single bullet that lists everything in parentheses.
+
+# === LENGTH ===
+
+2-sentence prose lead (40-70 words). Then 4 to N bullets (where N =
+total atom count). For trials with 30+ atoms, the bullet list will be
+long — that's correct and desired; clinicians want complete enumeration.
+
+# === EXAMPLE (eligible, mostly chart-silent) ===
+
+A 56-year-old woman presenting with right calf tenderness and recent
+prolonged immobility meets the trial's age inclusion and triggers no
+documented exclusion. Most other inclusion and exclusion items are not
+documented in the chart and require confirmation at the in-person
+visit.
+
+**Verdict:** Eligible
+
+**Inclusions met:**
+- Inclusion 3 — met: age >18 years (chart documents "56-year-old female").
+
+**No exclusions apply:**
+- Exclusion 4 — not applicable: no documented creatinine >2.0 mg/dl.
+- Exclusion 1 — not applicable: no documented active major bleeding within 30 days.
+
+**To confirm at the in-person visit:**
+- Inclusion 1: imaging confirmation of DVT or PE — not documented in the chart.
+- Inclusion 2: normal right ventricular size on chest CT — not documented in the chart.
+- Inclusion 4: anticipated discharge within 72 hours — not documented in the chart.
+- Inclusion 5: written informed consent — not documented in the chart.
+- Exclusion 2: pregnancy or intent to become pregnant — not documented in the chart.
+- Exclusion 3: hypersensitivity to heparin, pork products, or enoxaparin — not documented in the chart.
+- Exclusion 5: recurrent DVT/PE with oral anticoagulation — not documented in the chart.
+- Exclusion 6: surgery or medical procedure planned during the study with significant bleeding risk — not documented in the chart.
+- Exclusion 7: prior history of heparin-induced thrombocytopenia — not documented in the chart.
+- Exclusion 8: inability to participate in follow-up appointments — not documented in the chart.
+- ... (one bullet per remaining null atom)
+
+# === INPUTS ===
+
+PATIENT CHART:
+{{CHART}}
+
+INCLUSION CRITERIA TEXT (for ordering reference):
+{{INCLUSION}}
+
+EXCLUSION CRITERIA TEXT (for ordering reference):
+{{EXCLUSION}}
+
+VERDICT (fixed):
+{{VERDICT}}
+
+ATOM LIST (one per line: side|atom_description|value):
+{{ATOM_LIST}}
+
+MIN_FLIP_SET (decisive atoms for ineligible verdicts; empty for eligible):
+{{MIN_FLIP_SET}}
+
+# === OUTPUT (STRICT JSON) ===
+{
+  "rationale": "<2-sentence prose lead, then **Verdict:** line, then bullet sections; ONE BULLET PER ATOM in the ATOM LIST; preserve criterion numbering; no emojis; no system self-references; no closing summary>"
+}
