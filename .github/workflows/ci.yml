@@ -1,0 +1,59 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  invariants:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install (no heavy deps -- CI exercises packaging + hygiene)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e . --no-deps
+
+      - name: Console script is installed and runs
+        run: |
+          which verdict
+          verdict systems
+          verdict --help > /dev/null
+
+      - name: Unknown pair must be refused, never given a verdict
+        run: |
+          if verdict match FAKE__NCT0; then
+            echo "FAIL: CLI returned success for a nonexistent pair"; exit 1
+          fi
+          verdict match FAKE__NCT0 2>&1 | grep -qiE 'unknown pair|no pair data'
+
+      - name: Unit tests
+        run: |
+          pip install pytest "z3-solver>=4.12"
+          pytest
+
+      - name: Examples must run
+        run: |
+          python examples/03_add_your_own_matcher.py > /dev/null
+          python examples/02_read_the_artifacts.py > /dev/null
+
+      - name: Invariants
+        # Data-dependent checks SKIP on a runner (no local artifacts); the
+        # hygiene, packaging and CLI checks must still pass.
+        run: python scripts/check_invariants.py
+
+      - name: No secret may be committed
+        run: |
+          ! git ls-files | grep -E '(^|/)\.env$' || { echo "FAIL: .env is tracked"; exit 1; }
+          ! git grep -nIE 'sk-[A-Za-z0-9]{20,}' -- . || { echo "FAIL: API key in tree"; exit 1; }

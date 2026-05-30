@@ -1,0 +1,47 @@
+# SatIR Configuration
+# -------------------
+# Central config for all SatIR components. Environment variables override these values.
+# Copy this file and edit for your environment.
+
+[api]
+# Azure OpenAI endpoint for primary model (gpt-4.1 recommended for most stages)
+endpoint = "https://<your-resource>.openai.azure.com/openai/deployments/gpt-4.1"
+# Azure OpenAI endpoint for GPT-5 (used by IR finalizer/repair pipeline only)
+endpoint_gpt5 = "https://<your-resource>.openai.azure.com/openai/deployments/gpt-5"
+# API key (or set OPENAI_API_KEY / AZURE_OPENAI_API_KEY env var)
+api_key = ""
+# Model name (auto-detected from endpoint if not set)
+model = "gpt-4.1"
+
+[services]
+# SNOMED-CT Snowstorm terminology server
+snowstorm_url = "http://localhost:8080"
+snowstorm_branch = "MAIN"
+# Elasticsearch for vector-based concept search
+elasticsearch_url = "http://localhost:9200"
+elasticsearch_index = "snomed_vectors"
+
+[paths]
+# Build artifact directory (trial IRs, symtabs, database)
+build_dir = "./build"
+# Clinical trial corpus and patient data
+data_dir = "./dataset/clinical_trial"
+patient_data_dir = "./dataset/patient_notes"
+
+[retrieval]
+# Default retrieval parameters
+scope = "any"              # "any" (all timeframes) or "now" (current only)
+important_mode = "all"     # "chief" | "ccr" | "all"
+alt_mode = "act"           # "act" (active) or "nonact" (non-active)
+parallel = 8               # Number of parallel workers
+enable_prevention = true   # Include prevention constraint satisfaction
+
+[compiler]
+# Maximum LLM retries per stage
+max_retries = 3
+# Enable profiling (writes timing data to JSONL)
+enable_profile = true
+
+[keys]
+# UMLS API key (for medical concept definitions)
+umls_api_key = ""

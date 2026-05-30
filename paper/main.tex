@@ -1,0 +1,96 @@
+% SMT — main paper file
+% EMNLP 2026 submission
+% Compile with: pdflatex main.tex
+%
+% Required: standard LaTeX2e + the packages below. Drop `acl_natbib` and
+% `EMNLP2023` shims if not building under the official EMNLP class.
+
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Allow TeX extra stretch to avoid overfull hboxes from long \texttt paths
+\setlength{\emergencystretch}{3em}
+
+% Convenience commands
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO:} #1}}
+\newcommand{\name}{\textsc{SMT}}
+
+\title{\textsc{SMT}: Hybrid LLM-SMT clinical-trial eligibility matching\\
+       with auditability and counterfactual faithfulness}
+
+\author{Anonymous (under review at EMNLP\,2026)}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+% --- Abstract ---
+\input{abstract}
+
+% --- Main body ---
+\input{sections/introduction}
+\input{architecture}
+\input{sections/logical_aggregation}
+
+% Headline accuracy
+\input{tables/t1_accuracy}
+
+% Counterfactual faithfulness
+\input{sections/counterfactual}
+\input{tables/t2_counterfactual}
+
+% Pairwise rationale preference (table only; prose tied into intro/concl)
+\input{tables/t3_pairwise}
+
+% Clinician validation
+\input{sections/clinician_validation}
+\input{tables/t4_clinician}
+
+% Conclusion
+\input{sections/conclusion}
+
+% --- Appendix ---
+\appendix
+
+% Logical-reasoning audit
+\input{tables/a1_logic_audit}
+
+% Counterfactual robustness
+\input{tables/a3_cf_robustness}
+
+% Coverage
+\input{tables/a4_coverage}
+
+% Context-import taxonomy
+\input{tables/a5_context_import}
+
+% Cross-backbone results
+\input{tables/a6_cross_backbone}
+
+% gpt-5 prompt tuning
+\input{sections/gpt5_tuning}
+
+% Atom-mining prompts
+\input{sections/appendix_prompts}
+
+% Clinician verbatim notes
+\input{sections/appendix_clinician_notes}
+
+\bibliographystyle{plain}
+\bibliography{main}
+
+\end{document}
