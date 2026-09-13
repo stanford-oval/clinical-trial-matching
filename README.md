@@ -1,9 +1,10 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/icons/umbrella-mono-white.svg">
-  <img src="assets/icons/umbrella-display.svg" alt="" width="72" align="left" hspace="12" vspace="4">
-</picture>
-
-# Stanford OVAL Clinical Trial Matcher
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/icons/umbrella-mono-white.svg">
+    <img src="assets/icons/umbrella-display.svg" alt="" height="64" align="middle">
+  </picture>
+  &nbsp;Stanford OVAL Clinical Trial Matcher
+</h1>
 
 Software that finds clinical trials a patient might qualify for, decides
 whether they actually meet the criteria, and shows its reasoning so a
@@ -49,10 +50,10 @@ verdict systems          # decide a patient-trial pair
 
 ## Papers
 
-| System | Description | Paper |
-| --- | --- | --- |
-| <img src="assets/icons/satir-display.svg" width="32" alt=""> SatIR | Scalable, high-recall constraint-satisfaction-based retrieval for clinical trial matching | [arXiv:2604.08849](https://arxiv.org/abs/2604.08849) |
-| <img src="assets/icons/verdict-display.svg" width="32" alt=""> VERDICT | Accountable eligibility decisions with grounded, faithful, consistent, actionable rationales | [arXiv:2609.03366](https://arxiv.org/abs/2609.03366) |
+| | System | Description | Paper |
+| :-: | --- | --- | --- |
+| <img src="assets/icons/satir-display.svg" width="48" alt=""> | SatIR | Scalable, high-recall constraint-satisfaction-based retrieval for clinical trial matching | [arXiv:2604.08849](https://arxiv.org/abs/2604.08849) |
+| <img src="assets/icons/verdict-display.svg" width="48" alt=""> | VERDICT | Accountable eligibility decisions with grounded, faithful, consistent, actionable rationales | [arXiv:2609.03366](https://arxiv.org/abs/2609.03366) |
 
 ## Citation
 
