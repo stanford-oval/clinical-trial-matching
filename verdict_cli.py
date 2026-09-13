@@ -146,6 +146,19 @@ def cmd_run(a):
     return engine.main(argv)
 
 
+def _decision_text(d, system):
+    """A decision of None means the matcher had no stored inputs for this pair.
+
+    Printing `d.decision.upper()` raised AttributeError, which reads like a
+    crash rather than the ordinary "this system has nothing for this pair".
+    """
+    if d.decision is None:
+        return ("UNAVAILABLE -- the '" + system + "' system found no stored "
+                "inputs for this pair (it reads cached LM outputs). Try "
+                "--system smt-only, which needs only the trial program.")
+    return d.decision.upper()
+
+
 def cmd_match(a):
     d = run(a.system, a.pair_id)
     if a.json:
@@ -155,7 +168,7 @@ def cmd_match(a):
     else:
         print(f'pair    : {a.pair_id}')
         print(f'system  : {a.system}')
-        print(f'decision: {d.decision.upper()}')
+        print(f'decision: {_decision_text(d, a.system)}')
         print(f'why     : {d.reasoning}')
 
 
@@ -163,7 +176,7 @@ def cmd_explain(a):
     d = run(a.system, a.pair_id)
     print(f'pair    : {a.pair_id}')
     print(f'system  : {a.system}')
-    print(f'decision: {d.decision.upper()}')
+    print(f'decision: {_decision_text(d, a.system)}')
     print(f'why     : {d.reasoning}\n')
     print(f'audit trail ({len(d.audit_trail)} steps)')
     print('-' * 60)

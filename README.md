@@ -48,6 +48,38 @@ verdict systems          # decide a patient-trial pair
 > and point the tool at them. Everything needed to compile a trial and decide a
 > patient is in this repository.
 
+## Try it
+
+No corpus, no API key, no compiled trial — a synthetic patient and trial ship
+with the repository:
+
+```bash
+pip install -e '.[llm]'
+export VERDICT_PAIR_DATA=data/demo/pairs
+
+verdict match demo-patient-01__NCT00000000 --system smt-only   # INELIGIBLE
+verdict match demo-patient-01__NCT00000000 --system lm-only    # ELIGIBLE
+python examples/05_the_demo_pair.py
+```
+
+The note gives age, performance status and histology, and rules out brain
+metastases. It never mentions renal function, and the trial requires
+eGFR >= 60. The language model reads that silence as "unremarkable" and
+answers eligible; the solver will not supply a value the chart never gave and
+answers ineligible.
+
+The tool's contribution is not picking a side. It is that the disagreement
+resolves to one named condition:
+
+```
+- Assumed: renal function (eGFR) is at least 60. Not found in the chart.
+    Confirm renal function (eGFR) when convenient.
+```
+
+Note the phrasing: the **requirement** the trial imposes, not a number the
+solver happened to pick. Reporting "eGFR 60" would invent a lab result.
+See [data/demo/README.md](data/demo/README.md).
+
 ## Papers
 
 | Icon | System | Description | Paper |
