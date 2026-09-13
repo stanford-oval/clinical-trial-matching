@@ -80,6 +80,27 @@ Note the phrasing: the **requirement** the trial imposes, not a number the
 solver happened to pick. Reporting "eGFR 60" would invent a lab result.
 See [data/demo/README.md](data/demo/README.md).
 
+
+### SatIR, on the retrieval side
+
+With a clause index in place (not shipped — see [docs/DATA.md](docs/DATA.md)):
+
+```bash
+export VERDICT_BUILD=/path/containing/trial.db
+python examples/06_satir_retrieval.py
+```
+
+```
+   3,963  trials in the index
+      87  considered
+      62  survivor
+      22  eliminated
+```
+
+Pure SQL, no LLM and no services. Its recall is checkable against TREC 2022,
+where the published numbers reproduce exactly:
+[docs/REPRODUCE_SATIR.md](docs/REPRODUCE_SATIR.md).
+
 ## Papers
 
 | Icon | System | Description | Paper |
