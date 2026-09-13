@@ -33,6 +33,9 @@ trialgptref/
 # prompt snapshot the matcher loads is silently absent from a clone.
 !verdict/engine/prompts/prompt_out/
 !verdict/engine/prompts/prompt_out/**
+# ...and the bundled demo pair, which is input the tool loads, not output
+!data/demo/
+!data/demo/**
 .ipynb_checkpoints/
 
 # === Large directories (artifacts that don't belong in the GitHub repo) ===

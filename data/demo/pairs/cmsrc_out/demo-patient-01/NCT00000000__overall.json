@@ -1,0 +1,10 @@
+{
+  "trial_id": "NCT00000000",
+  "patient_id": "demo-patient-01",
+  "eligible": false,
+  "llm_eligible": true,
+  "llm_reasoning": "Every criterion the note speaks to is met. Renal function is not reported; in a prescreen note that usually means it was unremarkable.",
+  "llm_explanation": "Age, performance status and histology all qualify, and no exclusion is evidenced.",
+  "patient_note": "58-year-old with biopsy-confirmed non-small-cell lung carcinoma, ambulatory and self-caring but limited in strenuous activity. Brain MRI on admission showed no intracranial disease. No renal function testing is reported, and prior systemic therapy is not described.",
+  "_demo": "Synthetic. Invented patient, invented trial. Not from any corpus."
+}

@@ -365,14 +365,24 @@ def _():
     a clone whose matcher had no prompts -- green locally, broken in CI.
     """
     import subprocess as _sp
+    # Everything the shipped tool READS at runtime, not just the prompts.
+    # .gitignore carries a broad `*_out/` rule for run artifacts, which has now
+    # twice matched input directories -- prompts/prompt_out/ and the demo's
+    # cmsrc_out/ -- producing a clone whose tool had no data. Green locally,
+    # broken for everyone else.
+    watched = []
     pkg = ROOT / 'verdict' / 'engine'
-    on_disk = {str(f.relative_to(ROOT)) for f in pkg.rglob('*.prompt')}
-    assert on_disk, 'no vendored prompts on disk'
-    out = _sp.run(['git', 'ls-files', 'verdict/engine'], cwd=ROOT,
+    watched += [f for f in pkg.rglob('*.prompt')]
+    demo = ROOT / 'data' / 'demo'
+    if demo.exists():
+        watched += [f for f in demo.rglob('*') if f.is_file()]
+    assert watched, 'no runtime data on disk to check'
+    on_disk = {str(f.relative_to(ROOT)) for f in watched}
+    out = _sp.run(['git', 'ls-files', 'verdict/engine', 'data/demo'], cwd=ROOT,
                   capture_output=True, text=True)
     tracked = set(out.stdout.split())
     missing = sorted(on_disk - tracked)
-    assert not missing, 'vendored files not tracked by git: ' + ', '.join(missing)
+    assert not missing, 'runtime data not tracked by git: ' + ', '.join(missing[:6])
 
 
 @check('artifacts:no-raw-witness-surfaced')

@@ -1,0 +1,78 @@
+{
+  "inclusion": {
+    "sat_like": false,
+    "raw": {
+      "smt_program_lines": [
+        "(declare-fun patient_age_in_years () Int)",
+        "(declare-fun egfr_ml_min () Real)",
+        "(declare-fun ecog_performance_status () Int)",
+        "(declare-fun histologically_confirmed_nsclc () Bool)",
+        "(assert (>= patient_age_in_years 18))",
+        "(assert (>= egfr_ml_min 60))",
+        "(assert (<= ecog_performance_status 2))",
+        "(assert histologically_confirmed_nsclc)"
+      ],
+      "patient_var_values": {
+        "patient_age_in_years": 58,
+        "ecog_performance_status": 1,
+        "histologically_confirmed_nsclc": true,
+        "egfr_ml_min": null
+      },
+      "patient_var_values_rich": {
+        "patient_age_in_years": {
+          "assessment": "The note describes a 58-year-old.",
+          "value": 58
+        },
+        "ecog_performance_status": {
+          "assessment": "Ambulatory, self-caring, restricted in strenuous activity -- ECOG 1.",
+          "value": 1
+        },
+        "histologically_confirmed_nsclc": {
+          "assessment": "Biopsy confirmed non-small-cell lung carcinoma.",
+          "value": true
+        },
+        "egfr_ml_min": {
+          "assessment": "No renal function testing is reported anywhere in the note."
+        }
+      }
+    },
+    "side": "inclusion",
+    "summary": {
+      "status": "unsat_like",
+      "note": "egfr_ml_min is required at >= 60 but the chart never states it."
+    }
+  },
+  "exclusion": {
+    "sat_like": true,
+    "raw": {
+      "smt_program_lines": [
+        "(declare-fun active_cns_metastases () Bool)",
+        "(declare-fun prior_immunotherapy () Bool)",
+        "(assert (not active_cns_metastases))",
+        "(assert (not prior_immunotherapy))"
+      ],
+      "patient_var_values": {
+        "active_cns_metastases": false,
+        "prior_immunotherapy": null
+      },
+      "patient_var_values_rich": {
+        "active_cns_metastases": {
+          "assessment": "Brain MRI on admission showed no intracranial disease.",
+          "value": false
+        },
+        "prior_immunotherapy": {
+          "assessment": "Prior systemic therapy is not described."
+        }
+      }
+    },
+    "side": "exclusion",
+    "summary": {
+      "status": "sat_like",
+      "note": "No exclusion is met on the evidence present."
+    }
+  },
+  "_demo": "Synthetic. Invented patient, invented trial. Not from any corpus.",
+  "patient_note": "58-year-old with biopsy-confirmed non-small-cell lung carcinoma, ambulatory and self-caring but limited in strenuous activity. Brain MRI on admission showed no intracranial disease. No renal function testing is reported, and prior systemic therapy is not described.",
+  "inclusion_criteria": "Age >= 18. eGFR >= 60 mL/min. ECOG <= 2. Histologically confirmed NSCLC.",
+  "exclusion_criteria": "Active CNS metastases. Prior immunotherapy."
+}
