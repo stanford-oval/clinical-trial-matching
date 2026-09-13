@@ -50,7 +50,7 @@ verdict systems          # decide a patient-trial pair
 
 ## Papers
 
-| | System | Description | Paper |
+| <img src="assets/icons/umbrella-display.svg" width="32" alt=""> | System | Description | Paper |
 | :-: | --- | --- | --- |
 | <img src="assets/icons/satir-display.svg" width="48" alt=""> | SatIR | Scalable, high-recall constraint-satisfaction-based retrieval for clinical trial matching | [arXiv:2604.08849](https://arxiv.org/abs/2604.08849) |
 | <img src="assets/icons/verdict-display.svg" width="48" alt=""> | VERDICT | Accountable eligibility decisions with grounded, faithful, consistent, actionable rationales | [arXiv:2609.03366](https://arxiv.org/abs/2609.03366) |
