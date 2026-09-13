@@ -21,8 +21,21 @@ retrieval depth for that mode, so each baseline is given the same budget.
 
 ## What you need
 
-- the TREC clause index (`trial.db`, 172 MB, 3,963 trials, 50 TREC-2022
-  patients) — see [DATA.md](DATA.md)
+The clause index is published as a release asset:
+
+```bash
+curl -L -O https://github.com/stanford-oval/clinical-trial-matching/releases/download/satir-index-trec2022/trec_trial.db.gz
+curl -L -O https://github.com/stanford-oval/clinical-trial-matching/releases/download/satir-index-trec2022/trec_trial.db.gz.sha256
+shasum -a 256 -c trec_trial.db.gz.sha256
+mkdir -p build && gunzip -c trec_trial.db.gz > build/trial.db
+export VERDICT_BUILD="$PWD/build"
+```
+
+31 MB compressed, 172 MB unpacked; 3,963 trials, 50 TREC-2022 patients.
+Retrieval over this exact artifact was checked against the table above: all 18
+rows, maximum absolute difference 0.
+
+You also need:
 - TREC 2022 qrels, padded subset: `dataset/clinical_trial/trec_2022_subset_padded/qrels/test.tsv`
 - the BM25 and TrialGPT-Retrieve baseline retrievals
 

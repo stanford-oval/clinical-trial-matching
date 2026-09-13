@@ -52,3 +52,22 @@ Not all results are reproducible from this checkout alone.
 API credentials are read from `.env`, which is gitignored. `.env.example` is
 committed and contains placeholders only — no keys, and no internal hostnames.
 Never commit `.env`.
+
+## SatIR clause index (published)
+
+| | |
+|---|---|
+| asset | [`trec_trial.db.gz`](https://github.com/stanford-oval/clinical-trial-matching/releases/tag/satir-index-trec2022) |
+| size | 31 MB compressed, 172 MB unpacked |
+| sha256 (gz) | `de9a18f2e669e79422a6e91a3bfbfab1980da644fc08f3090af23873d73b8016` |
+| sha256 (db) | `c9b6215889287a93c9f1299d595f08e59e6d06a4ad5a130ab33672cd0c85df48` |
+| contents | 3,963 trials, 50 TREC-2022 patients, 37 tables |
+
+Unpack to `$VERDICT_BUILD/trial.db`. See
+[REPRODUCE_SATIR.md](REPRODUCE_SATIR.md).
+
+**There is more than one `trial.db` in a development checkout and they are not
+interchangeable.** The published one is the TREC index. A SIGIR index also
+exists (2.3 GB), and at least one older build lacks the tables retrieval
+queries — pointing at it produces no error, just wrong or empty results. Check
+the sha256 above rather than the filename.
