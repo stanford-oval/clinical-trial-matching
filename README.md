@@ -101,6 +101,36 @@ Pure SQL, no LLM and no services. Its recall is checkable against TREC 2022,
 where the published numbers reproduce exactly:
 [docs/REPRODUCE_SATIR.md](docs/REPRODUCE_SATIR.md).
 
+## Accuracy
+
+Matching accuracy is reported on **TREC 2021**, a 363-pair held-out test set
+(190 eligible / 173 ineligible). Train and test share no NCT, so there is no
+trial leakage. TREC is used because its relevance judgements are freely
+available and the numbers reproduce from this checkout.
+
+| system | P | R | F1 | Acc |
+|---|---|---|---|---|
+| GPT-5-mini VERDICT | 0.928 | 0.747 | **0.828** | 0.837 |
+| Qwen2.5-7B VERDICT | 0.674 | 0.816 | 0.738 | 0.697 |
+| Qwen2.5-7B VERDICT + distillation | 0.911 | 0.758 | **0.828** | 0.835 |
+| Qwen2.5-7B CoT (end-to-end) | 0.674 | 0.653 | 0.663 | 0.653 |
+| Qwen2.5-7B oracle reader | 0.878 | 0.758 | 0.814 | 0.818 |
+
+Reproduce with:
+
+```bash
+python scripts/tables/table2_trec2021_f1.py --svpo /path/to/svpo-rl
+```
+
+The script prints the paper's reference values beside what it computed. Rollout
+data lives outside this repository; see [docs/DATA.md](docs/DATA.md).
+
+A 7B model with distillation reaches the same F1 as GPT-5-mini (0.828), and
+beats its own end-to-end chain-of-thought by 16.5 points.
+
+Retrieval accuracy is reported separately, on TREC 2022:
+[docs/REPRODUCE_SATIR.md](docs/REPRODUCE_SATIR.md).
+
 ## Papers
 
 | Icon | System | Description | Paper |
@@ -615,11 +645,14 @@ Each `matchers/systems/<name>/` is a self-contained bundle:
 
 Tune any system by editing its `prompts/<name>.prompt` and re-running `run.py`.
 
+Per-system figures on the SIGIR 5-system gold, for comparison across
+matchers. Reproduction status for this set is tracked in
+[Known gaps](#known-gaps).
+
 | System | Model | F1 (5-system gold) |
 |---|---|---|
 | **VERDICT** | gpt-4.1 atom mining + Z3 solve | 0.873 |
 | **single_shot_llm** (LLM-only) | gpt-4.1 two-step | **0.904** |
-| **trialgpt** | gpt-4.1 per-criterion | 0.804 |
 | **shahlab** | gpt-4.1 Koopman prompt | 0.836 |
 
 | Hybrid | F1 |
